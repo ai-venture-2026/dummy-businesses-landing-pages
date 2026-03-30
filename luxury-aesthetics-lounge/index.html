@@ -1,0 +1,1814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Aesthetics Lounge | Ultra-Premium Medical Spa</title>
+    <meta name="description" content="The ultimate aesthetic experience. Platinum facials, caviar treatments, private suites. By appointment only. Where luxury meets science.">
+    <meta name="keywords" content="luxury medspa, platinum facial, caviar treatment, private suites, VIP membership, aesthetic lounge">
+    <meta property="og:title" content="Luxury Aesthetics Lounge | Ultra-Premium Medical Spa">
+    <meta property="og:description" content="The ultimate aesthetic experience. Platinum facials, caviar treatments, private suites. By appointment only.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        /* ===== RESET & BASE ===== */
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --primary: #000000;
+            --secondary: #FFD700;
+            --accent: #1A1A1A;
+            --bg: #0A0A0A;
+            --text-light: #F5F5F5;
+            --gold-dim: #B8960C;
+            --gold-bright: #FFE44D;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            font-family: 'Jost', sans-serif;
+            font-weight: 300;
+            background: var(--bg);
+            color: var(--text-light);
+            overflow-x: hidden;
+            line-height: 1.7;
+        }
+
+        /* ===== SCROLLBAR ===== */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: var(--bg); }
+        ::-webkit-scrollbar-thumb { background: var(--secondary); border-radius: 3px; }
+
+        /* ===== TYPOGRAPHY ===== */
+        h1, h2, h3, h4 {
+            font-family: 'Cormorant', serif;
+            font-weight: 300;
+            line-height: 1.1;
+        }
+
+        /* ===== UTILITY ===== */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .gold-line {
+            width: 60px;
+            height: 1px;
+            background: var(--secondary);
+            display: block;
+        }
+
+        .section-label {
+            font-family: 'Jost', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.4em;
+            text-transform: uppercase;
+            color: var(--secondary);
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+        }
+
+        /* ===== GOLD SHIMMER KEYFRAMES ===== */
+        @keyframes shimmer {
+            0% { background-position: -200% center; }
+            100% { background-position: 200% center; }
+        }
+
+        @keyframes goldGlow {
+            0%, 100% { box-shadow: 0 0 20px rgba(255, 215, 0, 0.15), inset 0 0 20px rgba(255, 215, 0, 0.05); }
+            50% { box-shadow: 0 0 40px rgba(255, 215, 0, 0.3), inset 0 0 40px rgba(255, 215, 0, 0.1); }
+        }
+
+        @keyframes borderDraw {
+            0% { clip-path: inset(0 100% 100% 0); }
+            50% { clip-path: inset(0 0 100% 0); }
+            100% { clip-path: inset(0 0 0 0); }
+        }
+
+        @keyframes kenBurns {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.08); }
+        }
+
+        @keyframes textReveal {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        @keyframes sparkle {
+            0%, 100% { opacity: 0; }
+            50% { opacity: 1; }
+        }
+
+        /* ===== NAVIGATION ===== */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1.5rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.5s ease, padding 0.5s ease;
+        }
+
+        .nav.scrolled {
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding: 1rem 3rem;
+            border-bottom: 1px solid rgba(255, 215, 0, 0.1);
+        }
+
+        .nav-logo {
+            font-family: 'Cormorant', serif;
+            font-size: 1.3rem;
+            font-weight: 400;
+            letter-spacing: 0.15em;
+            color: var(--secondary);
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .nav-reserve {
+            font-family: 'Jost', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--bg);
+            background: var(--secondary);
+            border: none;
+            padding: 0.8rem 2rem;
+            cursor: pointer;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .nav-reserve::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 200%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .nav-reserve:hover::before {
+            left: 100%;
+        }
+
+        .nav-reserve:hover {
+            background: var(--gold-bright);
+            transform: translateY(-1px);
+        }
+
+        .menu-toggle {
+            width: 28px;
+            height: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            cursor: pointer;
+            position: relative;
+            z-index: 1001;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 100%;
+            height: 1px;
+            background: var(--secondary);
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            transform-origin: center;
+        }
+
+        .menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(7px, 7px);
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        /* ===== FULLSCREEN MENU ===== */
+        .fullscreen-menu {
+            position: fixed;
+            inset: 0;
+            background: rgba(10, 10, 10, 0.98);
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.6s ease;
+        }
+
+        .fullscreen-menu.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .fullscreen-menu nav {
+            text-align: center;
+        }
+
+        .fullscreen-menu a {
+            display: block;
+            font-family: 'Cormorant', serif;
+            font-size: clamp(2rem, 5vw, 4rem);
+            font-weight: 300;
+            color: var(--text-light);
+            text-decoration: none;
+            padding: 0.5rem 0;
+            transition: color 0.3s ease, transform 0.3s ease;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .fullscreen-menu.active a {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .fullscreen-menu a:nth-child(1) { transition-delay: 0.1s; }
+        .fullscreen-menu a:nth-child(2) { transition-delay: 0.15s; }
+        .fullscreen-menu a:nth-child(3) { transition-delay: 0.2s; }
+        .fullscreen-menu a:nth-child(4) { transition-delay: 0.25s; }
+        .fullscreen-menu a:nth-child(5) { transition-delay: 0.3s; }
+        .fullscreen-menu a:nth-child(6) { transition-delay: 0.35s; }
+        .fullscreen-menu a:nth-child(7) { transition-delay: 0.4s; }
+
+        .fullscreen-menu a:hover {
+            color: var(--secondary);
+            transform: translateX(10px);
+        }
+
+        .menu-contact {
+            margin-top: 3rem;
+            font-size: 0.75rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: rgba(245, 245, 245, 0.4);
+        }
+
+        .menu-contact a {
+            font-family: 'Jost', sans-serif !important;
+            font-size: 0.75rem !important;
+            letter-spacing: 0.3em !important;
+            color: var(--secondary) !important;
+            display: inline !important;
+            padding: 0 !important;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            position: relative;
+            height: 100vh;
+            min-height: 700px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background: url('https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=1920&q=80') center/cover no-repeat;
+            transform: scale(1.05);
+            transition: transform 8s ease-out;
+        }
+
+        .hero.loaded .hero-bg {
+            transform: scale(1);
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                180deg,
+                rgba(10, 10, 10, 0.7) 0%,
+                rgba(10, 10, 10, 0.5) 40%,
+                rgba(10, 10, 10, 0.8) 100%
+            );
+        }
+
+        .hero-shimmer {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                105deg,
+                transparent 40%,
+                rgba(255, 215, 0, 0.03) 45%,
+                rgba(255, 215, 0, 0.06) 50%,
+                rgba(255, 215, 0, 0.03) 55%,
+                transparent 60%
+            );
+            background-size: 200% 100%;
+            animation: shimmer 6s ease-in-out infinite;
+        }
+
+        /* Sparkle particles */
+        .sparkle {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: var(--secondary);
+            border-radius: 50%;
+            animation: sparkle 3s ease-in-out infinite;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 800px;
+            padding: 0 2rem;
+        }
+
+        .hero-tagline {
+            font-family: 'Jost', sans-serif;
+            font-size: 0.65rem;
+            letter-spacing: 0.6em;
+            text-transform: uppercase;
+            color: var(--secondary);
+            margin-bottom: 2.5rem;
+            opacity: 0;
+            animation: textReveal 1s ease forwards 0.5s;
+        }
+
+        .hero-title {
+            font-size: clamp(3rem, 8vw, 7rem);
+            font-weight: 300;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            line-height: 1;
+        }
+
+        .hero-title .word {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .hero-subtitle {
+            font-family: 'Cormorant', serif;
+            font-size: clamp(1rem, 2vw, 1.4rem);
+            font-weight: 300;
+            font-style: italic;
+            color: rgba(245, 245, 245, 0.6);
+            margin-bottom: 3rem;
+            opacity: 0;
+            animation: textReveal 1s ease forwards 1.8s;
+        }
+
+        .hero-cta {
+            display: inline-block;
+            font-family: 'Jost', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.4em;
+            text-transform: uppercase;
+            color: var(--bg);
+            background: var(--secondary);
+            padding: 1.2rem 3.5rem;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+            opacity: 0;
+            animation: textReveal 1s ease forwards 2.2s;
+            transition: all 0.4s ease;
+        }
+
+        .hero-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 200%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            animation: shimmer 3s ease-in-out infinite;
+        }
+
+        .hero-cta:hover {
+            background: var(--gold-bright);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 40px rgba(255, 215, 0, 0.3);
+        }
+
+        .hero-scroll {
+            position: absolute;
+            bottom: 3rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.8rem;
+            opacity: 0;
+            animation: textReveal 1s ease forwards 2.8s;
+        }
+
+        .hero-scroll span {
+            font-size: 0.6rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: rgba(245, 245, 245, 0.3);
+        }
+
+        .scroll-line {
+            width: 1px;
+            height: 40px;
+            background: linear-gradient(to bottom, var(--secondary), transparent);
+            animation: float 2s ease-in-out infinite;
+        }
+
+        /* ===== THE EXPERIENCE ===== */
+        .experience {
+            padding: 10rem 0;
+        }
+
+        .experience-intro {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 0 2rem;
+            margin-bottom: 8rem;
+        }
+
+        .experience-intro h2 {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+
+        .experience-intro h2 em {
+            color: var(--secondary);
+            font-style: italic;
+        }
+
+        .experience-intro p {
+            font-size: 1rem;
+            color: rgba(245, 245, 245, 0.5);
+            line-height: 2;
+        }
+
+        .experience-block {
+            display: flex;
+            align-items: center;
+            min-height: 80vh;
+            position: relative;
+        }
+
+        .experience-block:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+
+        .experience-image {
+            flex: 1;
+            height: 80vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .experience-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 8s ease-out;
+        }
+
+        .experience-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .experience-text {
+            flex: 1;
+            padding: 4rem 6rem;
+        }
+
+        .experience-text h3 {
+            font-size: clamp(2rem, 3vw, 3rem);
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+        }
+
+        .experience-text p {
+            font-size: 0.95rem;
+            color: rgba(245, 245, 245, 0.5);
+            line-height: 2;
+            max-width: 400px;
+        }
+
+        .experience-text .gold-line {
+            margin-bottom: 2rem;
+        }
+
+        /* ===== FEATURED IN ===== */
+        .featured-in {
+            padding: 4rem 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(255, 215, 0, 0.08);
+            border-bottom: 1px solid rgba(255, 215, 0, 0.08);
+        }
+
+        .featured-in p {
+            font-size: 0.65rem;
+            letter-spacing: 0.5em;
+            text-transform: uppercase;
+            color: rgba(245, 245, 245, 0.25);
+        }
+
+        .featured-in span {
+            color: var(--secondary);
+            opacity: 0.5;
+        }
+
+        /* ===== SIGNATURE TREATMENTS ===== */
+        .treatments {
+            padding: 10rem 0;
+        }
+
+        .treatments-header {
+            text-align: center;
+            padding: 0 2rem;
+            margin-bottom: 6rem;
+        }
+
+        .treatments-header h2 {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            color: var(--text-light);
+        }
+
+        .treatment-card {
+            display: flex;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto 8rem;
+            padding: 0 3rem;
+            gap: 4rem;
+            position: relative;
+        }
+
+        .treatment-card:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .treatment-image-wrap {
+            flex: 0 0 45%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .treatment-image-wrap::before {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            border: 1px solid var(--secondary);
+            z-index: 2;
+            opacity: 0;
+            transition: opacity 0.8s ease;
+        }
+
+        .treatment-image-wrap.visible::before {
+            opacity: 1;
+            animation: borderDraw 1.2s ease forwards;
+        }
+
+        .treatment-image-wrap img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            display: block;
+            transition: transform 6s ease-out;
+        }
+
+        .treatment-image-wrap:hover img {
+            transform: scale(1.05);
+        }
+
+        .treatment-info {
+            flex: 1;
+        }
+
+        .treatment-number {
+            font-family: 'Cormorant', serif;
+            font-size: 5rem;
+            font-weight: 300;
+            color: rgba(255, 215, 0, 0.1);
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+
+        .treatment-info h3 {
+            font-size: clamp(1.8rem, 3vw, 2.8rem);
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        .treatment-info p {
+            font-size: 0.95rem;
+            color: rgba(245, 245, 245, 0.45);
+            line-height: 2;
+            margin-bottom: 2rem;
+            max-width: 400px;
+        }
+
+        .treatment-price {
+            font-family: 'Cormorant', serif;
+            font-size: 1.3rem;
+            color: var(--secondary);
+            font-style: italic;
+        }
+
+        /* ===== PRIVATE SUITES ===== */
+        .suites {
+            padding: 10rem 0;
+            overflow: hidden;
+        }
+
+        .suites-header {
+            text-align: center;
+            padding: 0 2rem;
+            margin-bottom: 5rem;
+        }
+
+        .suites-header h2 {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+        }
+
+        .suites-header p {
+            font-size: 0.95rem;
+            color: rgba(245, 245, 245, 0.4);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .suites-gallery {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 3rem;
+        }
+
+        .suite-item {
+            position: relative;
+            overflow: hidden;
+            height: 500px;
+        }
+
+        .suite-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            animation: kenBurns 20s ease-in-out alternate infinite;
+        }
+
+        .suite-item:nth-child(2) img {
+            animation-delay: -10s;
+        }
+
+        .suite-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(0deg, rgba(10,10,10,0.8) 0%, transparent 50%);
+            display: flex;
+            align-items: flex-end;
+            padding: 2.5rem;
+        }
+
+        .suite-overlay h4 {
+            font-size: 1.5rem;
+            color: var(--text-light);
+            font-weight: 300;
+        }
+
+        .suite-overlay span {
+            display: block;
+            font-family: 'Jost', sans-serif;
+            font-size: 0.65rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .suites-note {
+            text-align: center;
+            margin-top: 3rem;
+            font-family: 'Cormorant', serif;
+            font-size: 1.2rem;
+            font-style: italic;
+            color: rgba(245, 245, 245, 0.3);
+        }
+
+        /* ===== VIP MEMBERSHIP ===== */
+        .vip {
+            padding: 10rem 2rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        .vip-card {
+            max-width: 700px;
+            width: 100%;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            padding: 5rem 4rem;
+            text-align: center;
+            position: relative;
+            background: linear-gradient(135deg, rgba(26,26,26,0.8), rgba(10,10,10,0.9));
+            animation: goldGlow 4s ease-in-out infinite;
+        }
+
+        .vip-card::before,
+        .vip-card::after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            border-color: var(--secondary);
+            border-style: solid;
+        }
+
+        .vip-card::before {
+            top: -1px;
+            left: -1px;
+            border-width: 1px 0 0 1px;
+        }
+
+        .vip-card::after {
+            bottom: -1px;
+            right: -1px;
+            border-width: 0 1px 1px 0;
+        }
+
+        .vip-tier {
+            font-family: 'Jost', sans-serif;
+            font-size: 0.65rem;
+            letter-spacing: 0.6em;
+            text-transform: uppercase;
+            color: var(--secondary);
+            margin-bottom: 2rem;
+        }
+
+        .vip-card h2 {
+            font-size: clamp(2.5rem, 4vw, 3.5rem);
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        .vip-price {
+            font-family: 'Cormorant', serif;
+            font-size: 3rem;
+            font-weight: 300;
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .vip-price-label {
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: rgba(245, 245, 245, 0.3);
+            margin-bottom: 3rem;
+        }
+
+        .vip-features {
+            list-style: none;
+            margin-bottom: 3rem;
+        }
+
+        .vip-features li {
+            font-size: 0.9rem;
+            color: rgba(245, 245, 245, 0.6);
+            padding: 0.8rem 0;
+            border-bottom: 1px solid rgba(255, 215, 0, 0.06);
+        }
+
+        .vip-features li::before {
+            content: '\2022';
+            color: var(--secondary);
+            margin-right: 1rem;
+        }
+
+        .vip-cta {
+            display: inline-block;
+            font-family: 'Jost', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.4em;
+            text-transform: uppercase;
+            color: var(--bg);
+            background: var(--secondary);
+            padding: 1.2rem 3.5rem;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .vip-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 200%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .vip-cta:hover::before { left: 100%; }
+        .vip-cta:hover {
+            background: var(--gold-bright);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 40px rgba(255, 215, 0, 0.3);
+        }
+
+        /* ===== CURATED RESULTS ===== */
+        .results {
+            padding: 10rem 0;
+        }
+
+        .results-header {
+            text-align: center;
+            padding: 0 2rem;
+            margin-bottom: 5rem;
+        }
+
+        .results-header h2 {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+        }
+
+        .results-showcase {
+            display: flex;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto 6rem;
+            padding: 0 3rem;
+            gap: 5rem;
+        }
+
+        .results-image {
+            flex: 0 0 50%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .results-image img {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .testimonials {
+            flex: 1;
+        }
+
+        .testimonial {
+            margin-bottom: 3rem;
+            padding-bottom: 3rem;
+            border-bottom: 1px solid rgba(255, 215, 0, 0.08);
+        }
+
+        .testimonial:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .testimonial blockquote {
+            font-family: 'Cormorant', serif;
+            font-size: 1.3rem;
+            font-style: italic;
+            color: rgba(245, 245, 245, 0.7);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial cite {
+            font-family: 'Jost', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--secondary);
+            font-style: normal;
+        }
+
+        /* ===== EXCLUSIVE EVENTS ===== */
+        .events {
+            padding: 8rem 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(255, 215, 0, 0.08);
+            border-bottom: 1px solid rgba(255, 215, 0, 0.08);
+        }
+
+        .events h2 {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+
+        .events > p {
+            font-size: 0.95rem;
+            color: rgba(245, 245, 245, 0.4);
+            max-width: 600px;
+            margin: 0 auto 4rem;
+            line-height: 2;
+        }
+
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .event-item {
+            border: 1px solid rgba(255, 215, 0, 0.1);
+            padding: 3rem 2rem;
+            transition: all 0.5s ease;
+        }
+
+        .event-item:hover {
+            border-color: rgba(255, 215, 0, 0.4);
+            background: rgba(255, 215, 0, 0.02);
+        }
+
+        .event-item h4 {
+            font-size: 1.4rem;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        .event-item p {
+            font-size: 0.85rem;
+            color: rgba(245, 245, 245, 0.35);
+            line-height: 1.8;
+        }
+
+        .event-item .section-label {
+            margin-bottom: 1rem;
+        }
+
+        /* ===== RESERVE FORM ===== */
+        .reserve {
+            padding: 10rem 2rem;
+            text-align: center;
+        }
+
+        .reserve h2 {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        .reserve > p {
+            font-size: 0.95rem;
+            color: rgba(245, 245, 245, 0.3);
+            margin-bottom: 4rem;
+        }
+
+        .reserve-form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.65rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: rgba(245, 245, 245, 0.4);
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem 0;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid rgba(255, 215, 0, 0.15);
+            color: var(--text-light);
+            font-family: 'Jost', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 300;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-bottom-color: var(--secondary);
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: rgba(245, 245, 245, 0.2);
+        }
+
+        .form-group select {
+            -webkit-appearance: none;
+            appearance: none;
+            cursor: pointer;
+        }
+
+        .form-group select option {
+            background: var(--accent);
+            color: var(--text-light);
+        }
+
+        .form-group textarea {
+            resize: none;
+            height: 80px;
+        }
+
+        .form-submit {
+            display: inline-block;
+            font-family: 'Jost', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.4em;
+            text-transform: uppercase;
+            color: var(--bg);
+            background: var(--secondary);
+            border: none;
+            padding: 1.2rem 4rem;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            margin-top: 2rem;
+        }
+
+        .form-submit::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 200%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .form-submit:hover::before { left: 100%; }
+        .form-submit:hover {
+            background: var(--gold-bright);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 40px rgba(255, 215, 0, 0.3);
+        }
+
+        .form-note {
+            margin-top: 2rem;
+            font-size: 0.75rem;
+            color: rgba(245, 245, 245, 0.2);
+            font-style: italic;
+        }
+
+        .champagne-note {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 215, 0, 0.08);
+            font-family: 'Cormorant', serif;
+            font-size: 1.1rem;
+            font-style: italic;
+            color: var(--secondary);
+            opacity: 0.7;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            padding: 3rem;
+            text-align: center;
+            border-top: 1px solid rgba(255, 215, 0, 0.06);
+        }
+
+        .footer-logo {
+            font-family: 'Cormorant', serif;
+            font-size: 1rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--secondary);
+            opacity: 0.5;
+            margin-bottom: 1rem;
+        }
+
+        .footer-phone {
+            font-family: 'Jost', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.3em;
+            color: rgba(245, 245, 245, 0.25);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-phone:hover {
+            color: var(--secondary);
+        }
+
+        .footer-address {
+            font-size: 0.7rem;
+            letter-spacing: 0.2em;
+            color: rgba(245, 245, 245, 0.15);
+            margin-bottom: 1rem;
+        }
+
+        .footer-copy {
+            font-size: 0.65rem;
+            letter-spacing: 0.2em;
+            color: rgba(245, 245, 245, 0.12);
+        }
+
+        /* ===== PARALLAX IMAGES ===== */
+        .parallax-wrap {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .parallax-img {
+            will-change: transform;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .experience-block {
+                flex-direction: column !important;
+                min-height: auto;
+            }
+
+            .experience-image {
+                width: 100%;
+                height: 50vh;
+            }
+
+            .experience-text {
+                padding: 3rem 2rem;
+            }
+
+            .treatment-card {
+                flex-direction: column !important;
+                padding: 0 2rem;
+                gap: 2rem;
+            }
+
+            .treatment-image-wrap {
+                flex: none;
+                width: 100%;
+            }
+
+            .treatment-image-wrap img {
+                height: 400px;
+            }
+
+            .results-showcase {
+                flex-direction: column;
+                gap: 3rem;
+            }
+
+            .results-image {
+                flex: none;
+                width: 100%;
+            }
+
+            .results-image img {
+                height: 400px;
+            }
+
+            .events-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav {
+                padding: 1rem 1.5rem;
+            }
+
+            .nav.scrolled {
+                padding: 0.8rem 1.5rem;
+            }
+
+            .nav-logo {
+                font-size: 1rem;
+            }
+
+            .hero-content {
+                padding: 0 1.5rem;
+            }
+
+            .suites-gallery {
+                grid-template-columns: 1fr;
+                padding: 0 1.5rem;
+            }
+
+            .suite-item {
+                height: 350px;
+            }
+
+            .vip-card {
+                padding: 3rem 2rem;
+            }
+
+            .vip-price {
+                font-size: 2.5rem;
+            }
+
+            .experience-text {
+                padding: 2.5rem 1.5rem;
+            }
+
+            .treatments {
+                padding: 6rem 0;
+            }
+
+            .suites {
+                padding: 6rem 0;
+            }
+
+            .results {
+                padding: 6rem 0;
+            }
+
+            .reserve {
+                padding: 6rem 2rem;
+            }
+
+            .experience {
+                padding: 6rem 0;
+            }
+
+            .vip {
+                padding: 6rem 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-reserve {
+                padding: 0.6rem 1.2rem;
+                font-size: 0.6rem;
+            }
+
+            .treatment-image-wrap img {
+                height: 300px;
+            }
+
+            .results-image img {
+                height: 300px;
+            }
+        }
+
+        /* ===== ACCESSIBILITY ===== */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+
+            .hero-bg {
+                transform: scale(1) !important;
+            }
+
+            .suite-item img {
+                animation: none !important;
+            }
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0,0,0,0);
+            white-space: nowrap;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <header class="nav" role="banner">
+        <a href="#" class="nav-logo" aria-label="Luxury Aesthetics Lounge Home">Luxury Aesthetics</a>
+        <div class="nav-right">
+            <a href="#reserve" class="nav-reserve">Reserve</a>
+            <div class="menu-toggle" role="button" aria-label="Open navigation menu" aria-expanded="false" tabindex="0">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- FULLSCREEN MENU -->
+    <div class="fullscreen-menu" role="dialog" aria-label="Navigation menu" aria-hidden="true">
+        <nav>
+            <a href="#experience">The Experience</a>
+            <a href="#treatments">Signature Treatments</a>
+            <a href="#suites">Private Suites</a>
+            <a href="#vip">VIP Membership</a>
+            <a href="#results">Curated Results</a>
+            <a href="#events">Exclusive Events</a>
+            <a href="#reserve">Reserve Your Suite</a>
+            <div class="menu-contact">
+                <p>Private Inquiries: <a href="tel:+15556780000">+1 (555) 678-0000</a></p>
+            </div>
+        </nav>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero" role="img" aria-label="Luxury spa interior">
+        <div class="hero-bg" aria-hidden="true"></div>
+        <div class="hero-overlay" aria-hidden="true"></div>
+        <div class="hero-shimmer" aria-hidden="true"></div>
+        <!-- Sparkle particles -->
+        <div class="sparkle" style="top:20%;left:15%;animation-delay:0s;" aria-hidden="true"></div>
+        <div class="sparkle" style="top:35%;left:75%;animation-delay:1s;" aria-hidden="true"></div>
+        <div class="sparkle" style="top:60%;left:25%;animation-delay:2s;" aria-hidden="true"></div>
+        <div class="sparkle" style="top:45%;left:85%;animation-delay:0.5s;" aria-hidden="true"></div>
+        <div class="sparkle" style="top:75%;left:55%;animation-delay:1.5s;" aria-hidden="true"></div>
+
+        <div class="hero-content">
+            <p class="hero-tagline">By Appointment Only</p>
+            <h1 class="hero-title" aria-label="Where Luxury Meets Science">
+                <span class="word">Where</span>
+                <span class="word">Luxury</span>
+                <span class="word">Meets</span>
+                <span class="word">Science</span>
+            </h1>
+            <p class="hero-subtitle">The most exclusive, ultra-premium aesthetic experience</p>
+            <a href="#reserve" class="hero-cta">Reserve Your Experience</a>
+        </div>
+        <div class="hero-scroll" aria-hidden="true">
+            <span>Discover</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- THE EXPERIENCE -->
+    <section class="experience" id="experience">
+        <div class="experience-intro fade-in">
+            <span class="section-label">The Experience</span>
+            <span class="gold-line" style="margin: 0 auto 2rem;"></span>
+            <h2>Redefining <em>Aesthetic</em> Excellence</h2>
+            <p>Step into a world where every detail has been meticulously curated for the discerning few. Private suites. Champagne service. Unparalleled results. This is not a spa. This is a sanctuary.</p>
+        </div>
+
+        <div class="experience-block fade-in">
+            <div class="experience-image parallax-wrap">
+                <img class="parallax-img" src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1200&q=80" alt="Luxury beauty treatment in progress" loading="lazy">
+            </div>
+            <div class="experience-text">
+                <span class="gold-line"></span>
+                <h3>Absolute Privacy</h3>
+                <p>Each guest is enveloped in their own private suite, designed with acoustic isolation and dedicated attendants. No waiting rooms. No shared spaces. Complete discretion for our distinguished clientele.</p>
+            </div>
+        </div>
+
+        <div class="experience-block fade-in">
+            <div class="experience-image parallax-wrap">
+                <img class="parallax-img" src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1200&q=80" alt="Luxury spa treatment" loading="lazy">
+            </div>
+            <div class="experience-text">
+                <span class="gold-line"></span>
+                <h3>Champagne Upon Arrival</h3>
+                <p>Your experience begins the moment you step through our doors. A glass of vintage champagne, a warm towel infused with essential oils, and a personalized treatment plan crafted exclusively for you.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURED IN -->
+    <div class="featured-in fade-in">
+        <p>Featured in <span>Vogue</span> &nbsp;&bull;&nbsp; <span>Robb Report</span> &nbsp;&bull;&nbsp; <span>Town & Country</span></p>
+    </div>
+
+    <!-- SIGNATURE TREATMENTS -->
+    <section class="treatments" id="treatments">
+        <div class="treatments-header fade-in">
+            <span class="section-label">Signature Treatments</span>
+            <span class="gold-line" style="margin: 0 auto 2rem;"></span>
+            <h2>Artistry in Aesthetics</h2>
+        </div>
+
+        <div class="treatment-card fade-in">
+            <div class="treatment-image-wrap">
+                <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=1000&q=80" alt="Platinum facial treatment" loading="lazy">
+            </div>
+            <div class="treatment-info">
+                <div class="treatment-number">01</div>
+                <span class="section-label">Signature</span>
+                <h3>The Platinum Facial</h3>
+                <p>A 90-minute ritual combining colloidal platinum infusion, diamond microdermabrasion, and 24-karat gold mask application. The pinnacle of facial rejuvenation, delivering luminous, ageless skin.</p>
+                <span class="treatment-price">From $1,200</span>
+            </div>
+        </div>
+
+        <div class="treatment-card fade-in">
+            <div class="treatment-image-wrap">
+                <img src="https://images.unsplash.com/photo-1612817288484-6f916006741a?w=1000&q=80" alt="Caviar treatment experience" loading="lazy">
+            </div>
+            <div class="treatment-info">
+                <div class="treatment-number">02</div>
+                <span class="section-label">Exclusive</span>
+                <h3>Caviar Rejuvenation</h3>
+                <p>Harnessing the restorative power of rare Beluga caviar extract, this full-body treatment delivers deep cellular nourishment. Rich in omega fatty acids and marine collagen for transformative results.</p>
+                <span class="treatment-price">From $2,500</span>
+            </div>
+        </div>
+
+        <div class="treatment-card fade-in">
+            <div class="treatment-image-wrap">
+                <img src="https://images.unsplash.com/photo-1519824145371-296894a0daa9?w=1000&q=80" alt="Full-body rejuvenation treatment" loading="lazy">
+            </div>
+            <div class="treatment-info">
+                <div class="treatment-number">03</div>
+                <span class="section-label">Transformative</span>
+                <h3>Full-Body Rejuvenation</h3>
+                <p>A comprehensive four-hour immersive experience combining cryotherapy, infrared therapy, lymphatic massage, and our proprietary cellular renewal protocol. Complete transformation, redefined.</p>
+                <span class="treatment-price">From $5,000</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRIVATE SUITES -->
+    <section class="suites" id="suites">
+        <div class="suites-header fade-in">
+            <span class="section-label">Private Suites</span>
+            <span class="gold-line" style="margin: 0 auto 2rem;"></span>
+            <h2>Your Personal Sanctuary</h2>
+            <p>Each suite is a world unto itself. Designed by award-winning architects, equipped with the most advanced aesthetic technology, and attended by your dedicated team.</p>
+        </div>
+
+        <div class="suites-gallery fade-in">
+            <div class="suite-item">
+                <img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=800&q=80" alt="The Grand Suite - luxury treatment room" loading="lazy">
+                <div class="suite-overlay">
+                    <div>
+                        <span>Suite One</span>
+                        <h4>The Grand Suite</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="suite-item">
+                <img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?w=800&q=80" alt="The Penthouse Suite - spa retreat" loading="lazy">
+                <div class="suite-overlay">
+                    <div>
+                        <span>Suite Two</span>
+                        <h4>The Penthouse Suite</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <p class="suites-note fade-in">Private suites for complete discretion</p>
+    </section>
+
+    <!-- VIP MEMBERSHIP -->
+    <section class="vip" id="vip">
+        <div class="vip-card fade-in">
+            <p class="vip-tier">Platinum Tier</p>
+            <h2>VIP Membership</h2>
+            <div class="vip-price">$500</div>
+            <p class="vip-price-label">Per Month</p>
+            <ul class="vip-features">
+                <li>Monthly signature treatment of your choice</li>
+                <li>Priority booking &amp; same-day availability</li>
+                <li>Access to exclusive members-only events</li>
+                <li>Complimentary champagne with every visit</li>
+                <li>Dedicated personal aesthetics concierge</li>
+                <li>Private suite guaranteed on every visit</li>
+                <li>Complimentary skincare collection quarterly</li>
+            </ul>
+            <a href="#reserve" class="vip-cta">Apply for Membership</a>
+        </div>
+    </section>
+
+    <!-- CURATED RESULTS -->
+    <section class="results" id="results">
+        <div class="results-header fade-in">
+            <span class="section-label">Curated Results</span>
+            <span class="gold-line" style="margin: 0 auto 2rem;"></span>
+            <h2>Voices of Distinction</h2>
+        </div>
+
+        <div class="results-showcase fade-in">
+            <div class="results-image parallax-wrap">
+                <img class="parallax-img" src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=800&q=80" alt="Radiant skin results from treatments" loading="lazy">
+            </div>
+            <div class="testimonials">
+                <div class="testimonial">
+                    <blockquote>"The only place I trust with my skin. The level of privacy and the results speak for themselves. Nothing else compares."</blockquote>
+                    <cite>A-List Celebrity</cite>
+                </div>
+                <div class="testimonial">
+                    <blockquote>"After traveling the world for the finest treatments, I found everything I need here. The Platinum Facial is transformative."</blockquote>
+                    <cite>Fortune 500 CEO</cite>
+                </div>
+                <div class="testimonial">
+                    <blockquote>"Discretion, luxury, and results that my dermatologist cannot explain. This is the gold standard of aesthetic care."</blockquote>
+                    <cite>International Fashion Icon</cite>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXCLUSIVE EVENTS -->
+    <section class="events" id="events">
+        <div class="fade-in">
+            <span class="section-label">Members Only</span>
+            <span class="gold-line" style="margin: 0 auto 2rem;"></span>
+            <h2>Exclusive Events</h2>
+            <p>Our VIP members enjoy access to intimate gatherings curated for the most discerning individuals. Where beauty, science, and society converge.</p>
+        </div>
+
+        <div class="events-grid fade-in">
+            <div class="event-item">
+                <span class="section-label">Quarterly</span>
+                <h4>The Gold Gala</h4>
+                <p>An invitation-only evening of live demonstrations, product launches, and champagne-paired aesthetic consultations.</p>
+            </div>
+            <div class="event-item">
+                <span class="section-label">Monthly</span>
+                <h4>Science & Skin</h4>
+                <p>Intimate seminars with world-renowned dermatologists and aesthetic scientists. Limited to twelve guests.</p>
+            </div>
+            <div class="event-item">
+                <span class="section-label">Annual</span>
+                <h4>The Retreat</h4>
+                <p>A three-day wellness retreat at an undisclosed luxury destination. Full aesthetic transformation included.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- RESERVE YOUR SUITE -->
+    <section class="reserve" id="reserve">
+        <div class="fade-in">
+            <span class="section-label">By Appointment Only</span>
+            <span class="gold-line" style="margin: 0 auto 2rem;"></span>
+            <h2>Reserve Your Suite</h2>
+            <p>Begin your transformation. All inquiries are handled with complete discretion.</p>
+        </div>
+
+        <form class="reserve-form fade-in" onsubmit="handleReserve(event)" aria-label="Reservation form">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required autocomplete="name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="your@email.com" required autocomplete="email">
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000" autocomplete="tel">
+            </div>
+            <div class="form-group">
+                <label for="service">Service of Interest</label>
+                <select id="service" name="service" required>
+                    <option value="" disabled selected>Select a treatment</option>
+                    <option value="platinum-facial">The Platinum Facial</option>
+                    <option value="caviar-rejuvenation">Caviar Rejuvenation</option>
+                    <option value="full-body">Full-Body Rejuvenation</option>
+                    <option value="vip-membership">VIP Membership Inquiry</option>
+                    <option value="consultation">Private Consultation</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="message">Private Notes</label>
+                <textarea id="message" name="message" placeholder="Any special requests or preferences"></textarea>
+            </div>
+            <button type="submit" class="form-submit">Reserve Your Experience</button>
+            <p class="form-note">All inquiries receive a response within 24 hours.</p>
+            <p class="champagne-note">Complimentary champagne with every visit</p>
+        </form>
+
+        <div style="margin-top: 3rem; text-align: center;" class="fade-in">
+            <p style="font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase; color: rgba(245,245,245,0.25); margin-bottom: 0.5rem;">Private Inquiries</p>
+            <a href="tel:+15556780000" style="font-family: 'Cormorant', serif; font-size: 1.5rem; color: var(--secondary); text-decoration: none; opacity: 0.8;">+1 (555) 678-0000</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" role="contentinfo">
+        <p class="footer-logo">Luxury Aesthetics</p>
+        <a href="tel:+15556780000" class="footer-phone">+1 (555) 678-0000</a>
+        <p class="footer-address">Penthouse Level, One Park Avenue</p>
+        <p class="footer-copy">&copy; 2026 Luxury Aesthetics Lounge. All rights reserved.</p>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // ===== MENU TOGGLE =====
+        const menuToggle = document.querySelector('.menu-toggle');
+        const fullscreenMenu = document.querySelector('.fullscreen-menu');
+
+        menuToggle.addEventListener('click', () => {
+            const isActive = menuToggle.classList.toggle('active');
+            fullscreenMenu.classList.toggle('active');
+            menuToggle.setAttribute('aria-expanded', isActive);
+            fullscreenMenu.setAttribute('aria-hidden', !isActive);
+            document.body.style.overflow = isActive ? 'hidden' : '';
+        });
+
+        menuToggle.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                menuToggle.click();
+            }
+        });
+
+        // Close menu on link click
+        fullscreenMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                fullscreenMenu.classList.remove('active');
+                menuToggle.setAttribute('aria-expanded', 'false');
+                fullscreenMenu.setAttribute('aria-hidden', 'true');
+                document.body.style.overflow = '';
+            });
+        });
+
+        // ===== NAVBAR SCROLL =====
+        const nav = document.querySelector('.nav');
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            nav.classList.toggle('scrolled', currentScroll > 80);
+            lastScroll = currentScroll;
+        }, { passive: true });
+
+        // ===== HERO LOAD =====
+        window.addEventListener('load', () => {
+            document.querySelector('.hero').classList.add('loaded');
+
+            // Word-by-word reveal
+            const words = document.querySelectorAll('.hero-title .word');
+            words.forEach((word, i) => {
+                setTimeout(() => {
+                    word.style.opacity = '1';
+                    word.style.transform = 'translateY(0)';
+                    word.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                }, 800 + i * 200);
+            });
+        });
+
+        // ===== INTERSECTION OBSERVER - FADE IN =====
+        const observerOptions = {
+            threshold: 0.15,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // ===== TREATMENT BORDER DRAW =====
+        const treatmentObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    treatmentObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.3 });
+
+        document.querySelectorAll('.treatment-image-wrap').forEach(el => treatmentObserver.observe(el));
+
+        // ===== PARALLAX EFFECT =====
+        const parallaxElements = document.querySelectorAll('.parallax-img');
+
+        window.addEventListener('scroll', () => {
+            const scrollY = window.pageYOffset;
+
+            parallaxElements.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                const speed = 0.05;
+                const yPos = (rect.top - window.innerHeight / 2) * speed;
+
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    el.style.transform = `translateY(${yPos}px)`;
+                }
+            });
+        }, { passive: true });
+
+        // ===== FORM HANDLER =====
+        function handleReserve(e) {
+            e.preventDefault();
+            const form = e.target;
+            const btn = form.querySelector('.form-submit');
+            const formData = new FormData(form);
+            const values = Object.fromEntries(formData.entries());
+            alert(JSON.stringify(values, null, 2)); // For demonstration, replace with actual form submission logic
+            const originalText = btn.textContent;
+
+            btn.textContent = 'Request Received';
+            btn.style.background = 'transparent';
+            btn.style.border = '1px solid var(--secondary)';
+            btn.style.color = 'var(--secondary)';
+
+            setTimeout(() => {
+                btn.textContent = originalText;
+                btn.style.background = '';
+                btn.style.border = '';
+                btn.style.color = '';
+                form.reset();
+            }, 3000);
+        }
+
+        // ===== SMOOTH SCROLL FOR ANCHOR LINKS =====
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    const offset = 0;
+                    const top = target.getBoundingClientRect().top + window.pageYOffset + offset;
+                    window.scrollTo({ top, behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+
+    <!-- STRUCTURED DATA -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MedicalBusiness",
+        "name": "Luxury Aesthetics Lounge",
+        "description": "The ultimate aesthetic experience. Platinum facials, caviar treatments, private suites. By appointment only.",
+        "url": "https://luxuryaestheticslounge.com",
+        "telephone": "+15556780000",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Penthouse Level, One Park Avenue"
+        },
+        "openingHours": "By Appointment Only",
+        "priceRange": "$$$$"
+    }
+    </script>
+</body>
+</html>
