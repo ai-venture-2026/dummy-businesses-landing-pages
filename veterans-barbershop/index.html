@@ -1,0 +1,1502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veterans Barbershop | Veteran-Owned Military &amp; Classic Cuts</title>
+    <meta name="description" content="Veteran-owned barbershop serving the military community. Military cuts, flat tops, and classic styles with 20% veteran discount. Walk-ins welcome.">
+    <meta name="keywords" content="veteran barbershop, military haircuts, flat top, classic cuts, veteran discount, barber near me">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.veteransbarbershop.com">
+    <meta property="og:title" content="Veterans Barbershop | Veteran-Owned Military & Classic Cuts">
+    <meta property="og:description" content="Veteran-owned barbershop serving the military community. Military cuts, flat tops, and classic styles with 20% veteran discount. Walk-ins welcome.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* ===== RESET & BASE ===== */
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --charcoal: #2F4F4F;
+            --copper: #B87333;
+            --copper-light: #D4955A;
+            --copper-dark: #8B5A2B;
+            --cream: #F0EDE5;
+            --text: #1A1A1A;
+            --white: #FFFFFF;
+            --bg-pattern: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%232F4F4F' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Source Sans 3', 'Source Sans Pro', sans-serif;
+            color: var(--text);
+            background: var(--cream);
+            background-image: var(--bg-pattern);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Roboto Condensed', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            line-height: 1.2;
+        }
+
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; height: auto; display: block; }
+        button, input, textarea { font-family: inherit; }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Fade-in animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Section divider */
+        .section-divider {
+            width: 80px;
+            height: 3px;
+            background: var(--copper);
+            margin: 0 auto 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        .section-divider::after {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
+            animation: dividerShine 3s infinite;
+        }
+        @keyframes dividerShine {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        .section-title {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            color: var(--charcoal);
+            text-align: center;
+            margin-bottom: 8px;
+        }
+        .section-subtitle {
+            text-align: center;
+            color: #666;
+            font-size: 1.05rem;
+            margin-bottom: 48px;
+        }
+
+        /* ===== NAVIGATION ===== */
+        .nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            background: var(--charcoal);
+            box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+            transition: background 0.3s ease;
+        }
+        .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+            height: 68px;
+        }
+        .nav-logo {
+            font-family: 'Roboto Condensed', sans-serif;
+            font-weight: 900;
+            font-size: 1.3rem;
+            color: var(--white);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .nav-logo .star {
+            color: var(--copper);
+            font-size: 1.1rem;
+        }
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 32px;
+            align-items: center;
+        }
+        .nav-links a {
+            color: var(--cream);
+            font-family: 'Roboto Condensed', sans-serif;
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            position: relative;
+            padding-bottom: 4px;
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0;
+            width: 0; height: 2px;
+            background: var(--copper);
+            transition: width 0.35s ease;
+        }
+        .nav-links a:hover::after,
+        .nav-links a:focus::after { width: 100%; }
+        .nav-cta {
+            background: var(--copper);
+            color: var(--white) !important;
+            padding: 10px 22px !important;
+            border-radius: 2px;
+            font-weight: 700;
+            transition: background 0.3s ease, box-shadow 0.3s ease;
+        }
+        .nav-cta::after { display: none !important; }
+        .nav-cta:hover {
+            background: var(--copper-light);
+            box-shadow: 0 0 16px rgba(184,115,51,0.4);
+        }
+        .nav-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 4px;
+        }
+        .nav-toggle span {
+            width: 26px; height: 2px;
+            background: var(--cream);
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+        .nav-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .nav-toggle.active span:nth-child(2) { opacity: 0; }
+        .nav-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+        /* ===== HERO ===== */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background: var(--charcoal);
+        }
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background: url('https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=1920&q=80') center/cover no-repeat;
+            transform: translateZ(0);
+            will-change: transform;
+        }
+        .hero-bg::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(47,79,79,0.92) 0%, rgba(47,79,79,0.7) 50%, rgba(47,79,79,0.5) 100%);
+        }
+        /* American flag accent stripe */
+        .hero-stripe {
+            position: absolute;
+            top: 0; left: 0;
+            width: 8px;
+            height: 100%;
+            z-index: 2;
+            background: repeating-linear-gradient(
+                180deg,
+                #B22234 0px, #B22234 20px,
+                #FFFFFF 20px, #FFFFFF 35px,
+                #B22234 35px, #B22234 55px,
+                #FFFFFF 55px, #FFFFFF 70px,
+                #3C3B6E 70px, #3C3B6E 130px,
+                #B22234 130px, #B22234 150px,
+                #FFFFFF 150px, #FFFFFF 165px
+            );
+        }
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            max-width: 650px;
+            padding: 120px 0 80px 48px;
+        }
+        .hero-badge {
+            display: inline-block;
+            background: var(--copper);
+            color: var(--white);
+            font-family: 'Roboto Condensed', sans-serif;
+            font-weight: 700;
+            font-size: 0.8rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            padding: 8px 18px;
+            margin-bottom: 24px;
+            border-left: 4px solid #B22234;
+        }
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.2rem);
+            color: var(--white);
+            margin-bottom: 12px;
+            font-weight: 900;
+        }
+        .hero h1 span { color: var(--copper); }
+        .hero-tagline {
+            font-size: clamp(1rem, 2.5vw, 1.3rem);
+            color: rgba(240,237,229,0.85);
+            margin-bottom: 32px;
+            font-weight: 300;
+            max-width: 500px;
+        }
+        .hero-actions {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--copper);
+            color: var(--white);
+            font-family: 'Roboto Condensed', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            padding: 16px 36px;
+            border: 2px solid var(--copper);
+            border-radius: 2px;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border: 2px solid var(--copper-light);
+            border-radius: 2px;
+            opacity: 0;
+            transform: scale(1.1);
+            transition: all 0.4s ease;
+        }
+        .btn-primary:hover::before {
+            opacity: 1;
+            transform: scale(1);
+        }
+        .btn-primary:hover {
+            background: var(--copper-light);
+            box-shadow: 0 4px 20px rgba(184,115,51,0.5);
+            transform: translateY(-2px);
+        }
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: transparent;
+            color: var(--white);
+            font-family: 'Roboto Condensed', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            padding: 16px 36px;
+            border: 2px solid rgba(240,237,229,0.4);
+            border-radius: 2px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .btn-secondary:hover {
+            border-color: var(--copper);
+            color: var(--copper);
+        }
+        .hero-info {
+            display: flex;
+            gap: 32px;
+            flex-wrap: wrap;
+        }
+        .hero-info-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: rgba(240,237,229,0.7);
+            font-size: 0.9rem;
+        }
+        .hero-info-item svg { flex-shrink: 0; }
+        .hero-discount {
+            position: absolute;
+            top: 120px;
+            right: 48px;
+            z-index: 3;
+            background: rgba(178,34,52,0.95);
+            color: var(--white);
+            padding: 20px 24px;
+            text-align: center;
+            border: 2px solid rgba(255,255,255,0.2);
+            max-width: 200px;
+        }
+        .hero-discount strong {
+            display: block;
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 900;
+            line-height: 1;
+        }
+        .hero-discount span {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            opacity: 0.9;
+        }
+
+        /* ===== WALK-IN BANNER ===== */
+        .walkin-banner {
+            background: var(--copper);
+            color: var(--white);
+            text-align: center;
+            padding: 14px 24px;
+            font-family: 'Roboto Condensed', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+        .walkin-banner svg {
+            vertical-align: middle;
+            margin-right: 8px;
+        }
+
+        /* ===== BENEFITS ===== */
+        .benefits {
+            padding: 80px 0;
+            background: var(--white);
+            background-image: var(--bg-pattern);
+        }
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+        .benefit-card {
+            display: flex;
+            gap: 20px;
+            padding: 32px;
+            background: var(--cream);
+            border: 1px solid #E0DDD5;
+            border-left: 4px solid var(--copper);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .benefit-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+        }
+        .benefit-icon {
+            flex-shrink: 0;
+            width: 56px;
+            height: 56px;
+            background: var(--charcoal);
+            border-radius: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .benefit-icon svg { width: 28px; height: 28px; }
+        .benefit-card h3 {
+            font-size: 1.1rem;
+            color: var(--charcoal);
+            margin-bottom: 6px;
+        }
+        .benefit-card p {
+            font-size: 0.95rem;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        /* ===== SERVICES ===== */
+        .services {
+            padding: 80px 0;
+            background: var(--charcoal);
+            position: relative;
+        }
+        .services::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=800&q=80') center/cover no-repeat;
+            opacity: 0.06;
+        }
+        .services .section-title { color: var(--cream); }
+        .services .section-subtitle { color: rgba(240,237,229,0.6); }
+        .services .section-divider { background: var(--copper); }
+        .accordion-list {
+            max-width: 720px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        .accordion-item {
+            border-bottom: 1px solid rgba(240,237,229,0.1);
+        }
+        .accordion-header {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 24px 0;
+            background: none;
+            border: none;
+            cursor: pointer;
+            text-align: left;
+            color: var(--cream);
+            font-family: 'Roboto Condensed', sans-serif;
+            font-weight: 700;
+            font-size: 1.15rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            transition: color 0.3s ease;
+        }
+        .accordion-header:hover { color: var(--copper); }
+        .accordion-header .price {
+            font-family: 'Source Sans 3', sans-serif;
+            color: var(--copper);
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-left: auto;
+            margin-right: 20px;
+            letter-spacing: 0;
+            text-transform: none;
+        }
+        .accordion-icon {
+            width: 24px; height: 24px;
+            position: relative;
+            flex-shrink: 0;
+        }
+        .accordion-icon::before,
+        .accordion-icon::after {
+            content: '';
+            position: absolute;
+            background: var(--copper);
+            transition: transform 0.3s ease;
+        }
+        .accordion-icon::before {
+            width: 16px; height: 2px;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .accordion-icon::after {
+            width: 2px; height: 16px;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .accordion-item.active .accordion-icon::after {
+            transform: translate(-50%, -50%) rotate(90deg);
+        }
+        .accordion-body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+        }
+        .accordion-body-inner {
+            padding: 0 0 24px;
+            color: rgba(240,237,229,0.7);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* ===== ABOUT ===== */
+        .about {
+            padding: 80px 0;
+            background: var(--cream);
+            background-image: var(--bg-pattern);
+        }
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+        .about-image {
+            position: relative;
+        }
+        .about-image img {
+            width: 100%;
+            height: 420px;
+            object-fit: cover;
+            border: 3px solid var(--copper);
+        }
+        .about-image::before {
+            content: '';
+            position: absolute;
+            top: -12px; left: -12px;
+            width: 80px; height: 80px;
+            border-top: 4px solid var(--copper);
+            border-left: 4px solid var(--copper);
+        }
+        .about-image::after {
+            content: '';
+            position: absolute;
+            bottom: -12px; right: -12px;
+            width: 80px; height: 80px;
+            border-bottom: 4px solid var(--copper);
+            border-right: 4px solid var(--copper);
+        }
+        .about-content h2 {
+            font-size: clamp(1.6rem, 3vw, 2.2rem);
+            color: var(--charcoal);
+            margin-bottom: 8px;
+        }
+        .about-copper-line {
+            width: 60px; height: 3px;
+            background: var(--copper);
+            margin-bottom: 20px;
+        }
+        .about-content p {
+            color: #444;
+            margin-bottom: 16px;
+            line-height: 1.7;
+        }
+        .trust-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--charcoal);
+            color: var(--cream);
+            padding: 14px 24px;
+            margin-top: 12px;
+            font-family: 'Roboto Condensed', sans-serif;
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        .trust-badge svg { flex-shrink: 0; }
+
+        /* ===== TESTIMONIALS ===== */
+        .testimonials {
+            padding: 80px 0;
+            background: var(--charcoal);
+            position: relative;
+            overflow: hidden;
+        }
+        .testimonials::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url('https://images.unsplash.com/photo-1512690459411-b9245aed614b?w=1200&q=80') center/cover no-repeat;
+            opacity: 0.08;
+        }
+        .testimonials .section-title { color: var(--cream); }
+        .testimonials .section-subtitle { color: rgba(240,237,229,0.5); }
+        .testimonial-track-wrapper {
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+            margin-top: 16px;
+        }
+        .testimonial-track {
+            display: flex;
+            gap: 24px;
+            animation: marquee 30s linear infinite;
+            width: max-content;
+        }
+        .testimonial-track:hover { animation-play-state: paused; }
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .testimonial-card {
+            flex-shrink: 0;
+            width: 380px;
+            background: rgba(240,237,229,0.07);
+            border: 1px solid rgba(184,115,51,0.3);
+            border-top: 3px solid var(--copper);
+            padding: 32px;
+            backdrop-filter: blur(4px);
+        }
+        .testimonial-stars {
+            color: var(--copper);
+            font-size: 1rem;
+            margin-bottom: 16px;
+            letter-spacing: 2px;
+        }
+        .testimonial-card blockquote {
+            color: rgba(240,237,229,0.85);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .testimonial-author-info strong {
+            display: block;
+            color: var(--cream);
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+        }
+        .testimonial-author-info span {
+            color: var(--copper);
+            font-size: 0.8rem;
+        }
+
+        /* ===== COMMUNITY ===== */
+        .community {
+            padding: 80px 0;
+            background: var(--white);
+            background-image: var(--bg-pattern);
+        }
+        .community-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+        .community-content h2 {
+            font-size: clamp(1.6rem, 3vw, 2.2rem);
+            color: var(--charcoal);
+            margin-bottom: 8px;
+        }
+        .community-copper-line {
+            width: 60px; height: 3px;
+            background: var(--copper);
+            margin-bottom: 20px;
+        }
+        .community-content p {
+            color: #444;
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+        .community-list {
+            list-style: none;
+            margin: 20px 0;
+        }
+        .community-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 10px 0;
+            color: #444;
+            font-size: 0.95rem;
+        }
+        .community-list li svg { flex-shrink: 0; margin-top: 2px; }
+        .community-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border: 3px solid var(--copper);
+        }
+
+        /* ===== CONTACT ===== */
+        .contact {
+            padding: 80px 0;
+            background: var(--charcoal);
+            position: relative;
+        }
+        .contact .section-title { color: var(--cream); }
+        .contact .section-subtitle { color: rgba(240,237,229,0.5); }
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            position: relative;
+            z-index: 1;
+        }
+        .contact-info { color: var(--cream); }
+        .contact-info h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: var(--copper);
+        }
+        .contact-detail {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+        .contact-detail-icon {
+            width: 44px; height: 44px;
+            background: rgba(184,115,51,0.15);
+            border: 1px solid rgba(184,115,51,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .contact-detail strong {
+            display: block;
+            font-family: 'Roboto Condensed', sans-serif;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 0.1em;
+            color: rgba(240,237,229,0.5);
+            margin-bottom: 4px;
+        }
+        .contact-detail span, .contact-detail a {
+            color: var(--cream);
+            font-size: 1rem;
+        }
+        .contact-detail a:hover { color: var(--copper); }
+        .contact-hours {
+            margin-top: 32px;
+            padding: 24px;
+            background: rgba(240,237,229,0.05);
+            border: 1px solid rgba(184,115,51,0.2);
+        }
+        .contact-hours h4 {
+            font-size: 0.9rem;
+            color: var(--copper);
+            margin-bottom: 12px;
+            letter-spacing: 0.1em;
+        }
+        .contact-hours p {
+            color: rgba(240,237,229,0.7);
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+
+        .contact-form { width: 100%; }
+        .form-group { margin-bottom: 24px; }
+        .form-group label {
+            display: block;
+            color: rgba(240,237,229,0.6);
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 8px;
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px 16px;
+            background: rgba(240,237,229,0.06);
+            border: none;
+            border-bottom: 2px solid rgba(240,237,229,0.15);
+            color: var(--cream);
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.3s ease, background 0.3s ease;
+        }
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-bottom-color: var(--copper);
+            background: rgba(240,237,229,0.1);
+        }
+        .form-group select { cursor: pointer; }
+        .form-group select option { background: var(--charcoal); color: var(--cream); }
+        .form-group textarea { min-height: 100px; resize: vertical; }
+        .form-submit {
+            width: 100%;
+            padding: 16px;
+            background: var(--copper);
+            color: var(--white);
+            font-family: 'Roboto Condensed', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            border: 2px solid var(--copper);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .form-submit:hover {
+            background: var(--copper-light);
+            box-shadow: 0 4px 20px rgba(184,115,51,0.4);
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: #1A2828;
+            padding: 40px 0 24px;
+            color: rgba(240,237,229,0.5);
+        }
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        .footer-brand {
+            font-family: 'Roboto Condensed', sans-serif;
+            font-weight: 900;
+            font-size: 1.1rem;
+            color: var(--cream);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+        .footer-links {
+            display: flex;
+            gap: 24px;
+            list-style: none;
+        }
+        .footer-links a {
+            color: rgba(240,237,229,0.5);
+            font-size: 0.85rem;
+            transition: color 0.3s;
+        }
+        .footer-links a:hover { color: var(--copper); }
+        .footer-bottom {
+            text-align: center;
+            margin-top: 24px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(240,237,229,0.08);
+            font-size: 0.8rem;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 992px) {
+            .hero-discount { display: none; }
+            .about-grid, .community-grid, .contact-wrapper { grid-template-columns: 1fr; }
+            .community-image { order: -1; }
+            .about-image img, .community-image img { height: 320px; }
+        }
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 68px; left: 0; right: 0;
+                background: var(--charcoal);
+                flex-direction: column;
+                padding: 20px 24px;
+                gap: 16px;
+                transform: translateY(-120%);
+                transition: transform 0.3s ease;
+                box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            }
+            .nav-links.open { transform: translateY(0); }
+            .nav-toggle { display: flex; }
+            .hero-content { padding: 120px 24px 60px; }
+            .hero-stripe { width: 5px; }
+            .benefits-grid { grid-template-columns: 1fr; }
+            .benefit-card { padding: 24px; }
+            .testimonial-card { width: 300px; }
+            .hero-actions { flex-direction: column; }
+            .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
+        }
+        @media (max-width: 480px) {
+            .hero h1 { font-size: 2rem; }
+            .hero-info { flex-direction: column; gap: 12px; }
+        }
+
+        /* Accessibility */
+        .sr-only {
+            position: absolute; width: 1px; height: 1px;
+            padding: 0; margin: -1px; overflow: hidden;
+            clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+        }
+        :focus-visible {
+            outline: 2px solid var(--copper);
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+        <div class="nav-inner">
+            <a href="#" class="nav-logo" aria-label="Veterans Barbershop Home">
+                <span class="star">&#9733;</span> Veterans Barbershop
+            </a>
+            <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" role="menubar">
+                <li role="none"><a href="#benefits" role="menuitem">Why Us</a></li>
+                <li role="none"><a href="#services" role="menuitem">Services</a></li>
+                <li role="none"><a href="#about" role="menuitem">About</a></li>
+                <li role="none"><a href="#testimonials" role="menuitem">Reviews</a></li>
+                <li role="none"><a href="#community" role="menuitem">Community</a></li>
+                <li role="none"><a href="#contact" role="menuitem">Contact</a></li>
+                <li role="none"><a href="tel:+15552345678" class="nav-cta" role="menuitem">Call Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <header class="hero" id="home">
+        <div class="hero-bg" id="heroBg" aria-hidden="true"></div>
+        <div class="hero-stripe" aria-hidden="true"></div>
+        <div class="hero-content">
+            <div class="hero-badge">Veteran-Owned &amp; Operated</div>
+            <h1>Proud to Serve<br>Those Who <span>Serve</span></h1>
+            <p class="hero-tagline">No-frills precision cuts from barbers who understand discipline, respect, and the standards you live by. Serving the military community since 2010.</p>
+            <div class="hero-actions">
+                <a href="#contact" class="btn-primary">Get Your Cut</a>
+                <a href="tel:+15552345678" class="btn-secondary">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                    Call Now
+                </a>
+            </div>
+            <div class="hero-info">
+                <div class="hero-info-item">
+                    <svg width="16" height="16" fill="none" stroke="#B87333" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                    Mon-Sat 7AM-6PM
+                </div>
+                <div class="hero-info-item">
+                    <svg width="16" height="16" fill="none" stroke="#B87333" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    301 Freedom Boulevard
+                </div>
+                <div class="hero-info-item">
+                    <svg width="16" height="16" fill="#B87333" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    Walk-Ins Welcome
+                </div>
+            </div>
+        </div>
+        <div class="hero-discount" aria-label="Veterans and Active Military get 20 percent off">
+            <strong>20%</strong>
+            <span>Off for Veterans<br>&amp; Active Military</span>
+        </div>
+    </header>
+
+    <!-- ===== WALK-IN BANNER ===== -->
+    <div class="walkin-banner" role="banner">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
+        Walk-Ins Always Welcome &mdash; No Appointment Necessary
+    </div>
+
+    <!-- ===== BENEFITS ===== -->
+    <section class="benefits" id="benefits" aria-labelledby="benefits-title">
+        <div class="container">
+            <h2 class="section-title" id="benefits-title">Why Veterans Choose Us</h2>
+            <div class="section-divider" aria-hidden="true"></div>
+            <p class="section-subtitle">Built on military values of discipline, precision, and respect.</p>
+            <div class="benefits-grid">
+                <div class="benefit-card fade-in">
+                    <div class="benefit-icon" aria-hidden="true">
+                        <svg width="28" height="28" fill="none" stroke="#B87333" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <div>
+                        <h3>Veteran-Owned</h3>
+                        <p>Founded and operated by military veterans who understand the standards and values of those who serve.</p>
+                    </div>
+                </div>
+                <div class="benefit-card fade-in">
+                    <div class="benefit-icon" aria-hidden="true">
+                        <svg width="28" height="28" fill="none" stroke="#B87333" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                    </div>
+                    <div>
+                        <h3>Efficient Service</h3>
+                        <p>In and out with a sharp cut. We respect your time with zero wait-time culture and early morning hours starting at 0700.</p>
+                    </div>
+                </div>
+                <div class="benefit-card fade-in">
+                    <div class="benefit-icon" aria-hidden="true">
+                        <svg width="28" height="28" fill="none" stroke="#B87333" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+                    </div>
+                    <div>
+                        <h3>Community Focused</h3>
+                        <p>More than a barbershop. We are a gathering place for veterans, active duty, and military families to connect.</p>
+                    </div>
+                </div>
+                <div class="benefit-card fade-in">
+                    <div class="benefit-icon" aria-hidden="true">
+                        <svg width="28" height="28" fill="none" stroke="#B87333" stroke-width="2" viewBox="0 0 24 24"><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+                    </div>
+                    <div>
+                        <h3>Military-Grade Precision</h3>
+                        <p>Regulation cuts, flat tops, high and tights done right. Our barbers know every branch's grooming standards.</p>
+                    </div>
+                </div>
+                <div class="benefit-card fade-in">
+                    <div class="benefit-icon" aria-hidden="true">
+                        <svg width="28" height="28" fill="none" stroke="#B87333" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <div>
+                        <h3>20% Military Discount</h3>
+                        <p>Active duty, veterans, and military families receive 20% off every service, every visit. No exceptions.</p>
+                    </div>
+                </div>
+                <div class="benefit-card fade-in">
+                    <div class="benefit-icon" aria-hidden="true">
+                        <svg width="28" height="28" fill="none" stroke="#B87333" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+                    </div>
+                    <div>
+                        <h3>Walk-Ins Welcome</h3>
+                        <p>No appointment needed. Walk in any time during business hours and get a clean, sharp cut without the hassle.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SERVICES ===== -->
+    <section class="services" id="services" aria-labelledby="services-title">
+        <div class="container">
+            <h2 class="section-title" id="services-title">Our Services</h2>
+            <div class="section-divider" aria-hidden="true"></div>
+            <p class="section-subtitle">Clean cuts, no-nonsense service. Every cut meets military standards.</p>
+            <div class="accordion-list">
+                <div class="accordion-item fade-in">
+                    <button class="accordion-header" aria-expanded="false">
+                        <span>Military Regulation Cut</span>
+                        <span class="price">$18</span>
+                        <span class="accordion-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="accordion-body" role="region">
+                        <div class="accordion-body-inner">
+                            Precision-cut to meet all branch grooming standards. Includes consultation to ensure your cut passes inspection. Available for Army, Navy, Air Force, Marines, and Coast Guard regs. Clippers and shears finish.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item fade-in">
+                    <button class="accordion-header" aria-expanded="false">
+                        <span>Flat Top</span>
+                        <span class="price">$22</span>
+                        <span class="accordion-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="accordion-body" role="region">
+                        <div class="accordion-body-inner">
+                            The classic flat top, done right. Squared off with precision using our flat-top comb technique. Perfect edges, level top deck. A signature military look that never goes out of style.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item fade-in">
+                    <button class="accordion-header" aria-expanded="false">
+                        <span>High &amp; Tight</span>
+                        <span class="price">$18</span>
+                        <span class="accordion-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="accordion-body" role="region">
+                        <div class="accordion-body-inner">
+                            The quintessential Marine Corps cut. Sides and back taken close with a clean fade up top. Sharp, clean, and battle-ready. Optional skin fade for an even sharper look.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item fade-in">
+                    <button class="accordion-header" aria-expanded="false">
+                        <span>Classic Gentleman's Cut</span>
+                        <span class="price">$25</span>
+                        <span class="accordion-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="accordion-body" role="region">
+                        <div class="accordion-body-inner">
+                            A timeless side-part or crew cut styled with precision. Includes a hot towel finish, shampoo, and styling. Perfect for veterans transitioning to civilian life or anyone who appreciates a clean, classic look.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item fade-in">
+                    <button class="accordion-header" aria-expanded="false">
+                        <span>Buzz Cut</span>
+                        <span class="price">$12</span>
+                        <span class="accordion-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="accordion-body" role="region">
+                        <div class="accordion-body-inner">
+                            Quick, clean, and efficient. One guard length all around or a tapered buzz for a slightly more styled look. In and out in 15 minutes. The no-fuss choice.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item fade-in">
+                    <button class="accordion-header" aria-expanded="false">
+                        <span>Beard Trim &amp; Shape</span>
+                        <span class="price">$15</span>
+                        <span class="accordion-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="accordion-body" role="region">
+                        <div class="accordion-body-inner">
+                            Professional beard shaping with clippers and straight razor edge-up. Clean neckline, defined cheek lines, and trimmed to your preferred length. Includes beard oil conditioning.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item fade-in">
+                    <button class="accordion-header" aria-expanded="false">
+                        <span>Father &amp; Son Combo</span>
+                        <span class="price">$30</span>
+                        <span class="accordion-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="accordion-body" role="region">
+                        <div class="accordion-body-inner">
+                            Bring the family. One adult cut and one child's cut (12 and under) at a bundled price. Because strong families are built together. Military families receive an additional discount.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="about" id="about" aria-labelledby="about-title">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image fade-in">
+                    <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=800&q=80" alt="Inside Veterans Barbershop, showing vintage barber chairs and a warm, welcoming interior" loading="lazy" width="800" height="533">
+                </div>
+                <div class="about-content fade-in">
+                    <h2 id="about-title">Our Story</h2>
+                    <div class="about-copper-line" aria-hidden="true"></div>
+                    <p>Veterans Barbershop was founded in 2010 by two Army veterans who saw a need in their community. After years of service, they wanted to create a space where military members, veterans, and their families could feel at home.</p>
+                    <p>What started as a two-chair shop on Freedom Boulevard has grown into a cornerstone of the military community. Our barbers are trained in every regulation cut across all branches, and many are veterans themselves.</p>
+                    <p>We believe in the same values we served under: discipline, respect, precision, and brotherhood. Every cut is delivered with that standard, and every customer leaves looking sharp and feeling respected.</p>
+                    <div class="trust-badge">
+                        <svg width="24" height="24" fill="none" stroke="#B87333" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        Veteran-Owned &amp; Operated Since 2010
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section class="testimonials" id="testimonials" aria-labelledby="testimonials-title">
+        <div class="container">
+            <h2 class="section-title" id="testimonials-title">What Our Brothers &amp; Sisters Say</h2>
+            <div class="section-divider" aria-hidden="true"></div>
+            <p class="section-subtitle">Real reviews from real service members.</p>
+        </div>
+        <div class="testimonial-track-wrapper" aria-label="Customer testimonials carousel">
+            <div class="testimonial-track" id="testimonialTrack">
+                <!-- Set 1 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <blockquote>"Best reg cut I've gotten outside of base. These guys know exactly what passes inspection. I've been coming here every two weeks for three years. Fast, clean, and they understand military standards. No explanation needed."</blockquote>
+                    <div class="testimonial-author">
+                        <div class="testimonial-author-info">
+                            <strong>SGT Michael Torres</strong>
+                            <span>U.S. Army, Active Duty</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <blockquote>"I bring my whole family here. My husband gets his high and tight, my son gets his first haircut, and I know we're supporting fellow veterans. The discount is great, but the respect and camaraderie is what keeps us coming back."</blockquote>
+                    <div class="testimonial-author">
+                        <div class="testimonial-author-info">
+                            <strong>Sarah Mitchell</strong>
+                            <span>Navy Spouse &amp; Veteran Family</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <blockquote>"After 22 years in the Corps, I was worried about finding a barber who got it. These guys are the real deal. Walk in, sit down, get a perfect flat top, and swap stories. It's like being back in the unit. Outstanding."</blockquote>
+                    <div class="testimonial-author">
+                        <div class="testimonial-author-info">
+                            <strong>GySgt (Ret.) David Park</strong>
+                            <span>U.S. Marine Corps, Retired</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Set 2 (duplicate for seamless loop) -->
+                <div class="testimonial-card">
+                    <div class="testimonial-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <blockquote>"Best reg cut I've gotten outside of base. These guys know exactly what passes inspection. I've been coming here every two weeks for three years. Fast, clean, and they understand military standards. No explanation needed."</blockquote>
+                    <div class="testimonial-author">
+                        <div class="testimonial-author-info">
+                            <strong>SGT Michael Torres</strong>
+                            <span>U.S. Army, Active Duty</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <blockquote>"I bring my whole family here. My husband gets his high and tight, my son gets his first haircut, and I know we're supporting fellow veterans. The discount is great, but the respect and camaraderie is what keeps us coming back."</blockquote>
+                    <div class="testimonial-author">
+                        <div class="testimonial-author-info">
+                            <strong>Sarah Mitchell</strong>
+                            <span>Navy Spouse &amp; Veteran Family</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <blockquote>"After 22 years in the Corps, I was worried about finding a barber who got it. These guys are the real deal. Walk in, sit down, get a perfect flat top, and swap stories. It's like being back in the unit. Outstanding."</blockquote>
+                    <div class="testimonial-author">
+                        <div class="testimonial-author-info">
+                            <strong>GySgt (Ret.) David Park</strong>
+                            <span>U.S. Marine Corps, Retired</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== COMMUNITY ===== -->
+    <section class="community" id="community" aria-labelledby="community-title">
+        <div class="container">
+            <div class="community-grid">
+                <div class="community-content fade-in">
+                    <h2 id="community-title">Serving Our Community</h2>
+                    <div class="community-copper-line" aria-hidden="true"></div>
+                    <p>Veterans Barbershop is more than a place to get a haircut. We are a hub for the military community, dedicated to giving back to those who have given so much.</p>
+                    <ul class="community-list">
+                        <li>
+                            <svg width="20" height="20" fill="none" stroke="#B87333" stroke-width="2" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
+                            Free haircuts for homeless veterans on the first Saturday of every month
+                        </li>
+                        <li>
+                            <svg width="20" height="20" fill="none" stroke="#B87333" stroke-width="2" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
+                            Annual fundraiser for local VA hospital programs
+                        </li>
+                        <li>
+                            <svg width="20" height="20" fill="none" stroke="#B87333" stroke-width="2" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
+                            Partnership with veteran transition and employment programs
+                        </li>
+                        <li>
+                            <svg width="20" height="20" fill="none" stroke="#B87333" stroke-width="2" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
+                            Sponsor of local VFW post and Memorial Day events
+                        </li>
+                        <li>
+                            <svg width="20" height="20" fill="none" stroke="#B87333" stroke-width="2" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
+                            Back-to-school cuts for military children every August
+                        </li>
+                    </ul>
+                </div>
+                <div class="community-image fade-in">
+                    <img src="https://images.unsplash.com/photo-1493256338651-d82f7acb2b38?w=800&q=80" alt="Professional barber tools arranged on a clean workspace" loading="lazy" width="800" height="533">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+        <div class="container">
+            <h2 class="section-title" id="contact-title">Get in Touch</h2>
+            <div class="section-divider" aria-hidden="true"></div>
+            <p class="section-subtitle">Stop by, call, or send us a message. We are ready when you are.</p>
+            <div class="contact-wrapper">
+                <div class="contact-info fade-in">
+                    <h3>Veterans Barbershop</h3>
+                    <div class="contact-detail">
+                        <div class="contact-detail-icon" aria-hidden="true">
+                            <svg width="20" height="20" fill="none" stroke="#B87333" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </div>
+                        <div>
+                            <strong>Address</strong>
+                            <span>301 Freedom Boulevard</span>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <div class="contact-detail-icon" aria-hidden="true">
+                            <svg width="20" height="20" fill="none" stroke="#B87333" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                        </div>
+                        <div>
+                            <strong>Phone</strong>
+                            <a href="tel:+15552345678">(555) 234-5678</a>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <div class="contact-detail-icon" aria-hidden="true">
+                            <svg width="20" height="20" fill="none" stroke="#B87333" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+                        </div>
+                        <div>
+                            <strong>Email</strong>
+                            <a href="mailto:info@veteransbarbershop.com">info@veteransbarbershop.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-hours">
+                        <h4>Business Hours</h4>
+                        <p>
+                            Monday - Friday: 7:00 AM - 6:00 PM<br>
+                            Saturday: 7:00 AM - 6:00 PM<br>
+                            Sunday: Closed
+                        </p>
+                    </div>
+                </div>
+                <form class="contact-form fade-in" aria-label="Contact form" onsubmit="handleSubmit(event)">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your name" required autocomplete="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000" autocomplete="tel">
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Service Interested In</label>
+                        <select id="service" name="service">
+                            <option value="">Select a service</option>
+                            <option value="military-reg">Military Regulation Cut - $18</option>
+                            <option value="flat-top">Flat Top - $22</option>
+                            <option value="high-tight">High &amp; Tight - $18</option>
+                            <option value="classic">Classic Gentleman's Cut - $25</option>
+                            <option value="buzz">Buzz Cut - $12</option>
+                            <option value="beard">Beard Trim &amp; Shape - $15</option>
+                            <option value="father-son">Father &amp; Son Combo - $30</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Any questions or special requests..." rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="form-submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">&#9733; Veterans Barbershop</div>
+                <ul class="footer-links">
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="tel:+15552345678">(555) 234-5678</a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Veterans Barbershop. All rights reserved. 301 Freedom Boulevard. Veteran-Owned &amp; Operated.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+        // Mobile nav toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        navToggle.addEventListener('click', () => {
+            const isOpen = navLinks.classList.toggle('open');
+            navToggle.classList.toggle('active');
+            navToggle.setAttribute('aria-expanded', isOpen);
+        });
+        // Close nav on link click
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('open');
+                navToggle.classList.remove('active');
+                navToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // Intersection Observer for fade-in
+        const fadeEls = document.querySelectorAll('.fade-in');
+        const fadeObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, i) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add('visible');
+                    }, i * 80);
+                    fadeObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+        fadeEls.forEach(el => fadeObserver.observe(el));
+
+        // Accordion
+        document.querySelectorAll('.accordion-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const item = header.parentElement;
+                const body = item.querySelector('.accordion-body');
+                const isActive = item.classList.contains('active');
+
+                // Close all
+                document.querySelectorAll('.accordion-item').forEach(i => {
+                    i.classList.remove('active');
+                    i.querySelector('.accordion-header').setAttribute('aria-expanded', 'false');
+                    i.querySelector('.accordion-body').style.maxHeight = null;
+                });
+
+                // Open clicked (if wasn't active)
+                if (!isActive) {
+                    item.classList.add('active');
+                    header.setAttribute('aria-expanded', 'true');
+                    body.style.maxHeight = body.scrollHeight + 'px';
+                }
+            });
+        });
+
+        // Parallax hero
+        const heroBg = document.getElementById('heroBg');
+        let ticking = false;
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    const scrollY = window.pageYOffset;
+                    if (scrollY < window.innerHeight) {
+                        heroBg.style.transform = `translateY(${scrollY * 0.3}px)`;
+                    }
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
+
+        // Form handler
+        function handleSubmit(e) {
+            e.preventDefault();
+            const btn = e.target.querySelector('.form-submit');
+            btn.textContent = 'Message Sent!';
+            btn.style.background = '#2F4F4F';
+            btn.style.borderColor = '#2F4F4F';
+            setTimeout(() => {
+                btn.textContent = 'Send Message';
+                btn.style.background = '';
+                btn.style.borderColor = '';
+                e.target.reset();
+            }, 3000);
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offset = 68; // nav height
+                    const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                    window.scrollTo({ top, behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BarberShop",
+        "name": "Veterans Barbershop",
+        "description": "Veteran-owned barbershop serving the military community. Military cuts, flat tops, and classic styles with 20% veteran discount.",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "301 Freedom Boulevard"
+        },
+        "telephone": "+15552345678",
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+                "opens": "07:00",
+                "closes": "18:00"
+            }
+        ],
+        "priceRange": "$12-$30",
+        "url": "https://www.veteransbarbershop.com"
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,1453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Family Cuts &amp; Color | Affordable Salon for the Whole Family</title>
+  <meta name="description" content="Affordable cuts and color for women, men, and kids. Walk-ins welcome. Family packages starting at $60. Quality service at reasonable prices.">
+  <meta name="keywords" content="family salon, affordable haircuts, kids haircuts, women's cuts, men's cuts, hair color, walk-in salon">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://familycutsandcolor.com">
+  <meta property="og:title" content="Family Cuts & Color | Affordable Salon for the Whole Family">
+  <meta property="og:description" content="Affordable cuts and color for women, men, and kids. Walk-ins welcome. Family packages starting at $60.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Mulish:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Mulish', sans-serif;
+      color: #001F3F;
+      background: #FFF5F7;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    h1, h2, h3, h4, h5, h6 { font-family: 'Quicksand', sans-serif; font-weight: 700; }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+    ul { list-style: none; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+    /* ===== ANIMATIONS ===== */
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    @keyframes bounceIn {
+      0% { opacity: 0; transform: translateY(60px) scale(0.9); }
+      60% { transform: translateY(-10px) scale(1.02); }
+      100% { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes waveMotion {
+      0%, 100% { transform: translateX(0); }
+      50% { transform: translateX(-20px); }
+    }
+
+    .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    .bounce-in { opacity: 0; }
+    .bounce-in.visible { animation: bounceIn 0.8s ease forwards; }
+    .slide-up { opacity: 0; transform: translateY(40px); }
+    .slide-up.visible { animation: slideUp 0.6s ease forwards; }
+
+    /* ===== INLINE SVG ICON HELPERS ===== */
+    .icon-svg { display: inline-flex; align-items: center; justify-content: center; vertical-align: middle; flex-shrink: 0; }
+    .icon-svg svg { display: block; }
+
+    /* ===== WAVE DIVIDERS ===== */
+    .wave-divider {
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+      position: relative;
+    }
+    .wave-divider svg {
+      display: block;
+      width: calc(100% + 40px);
+      margin-left: -20px;
+      height: 60px;
+      animation: waveMotion 6s ease-in-out infinite;
+    }
+    .wave-divider.flip { transform: scaleY(-1); }
+
+    /* ===== NAVIGATION ===== */
+    .navbar {
+      background: #001F3F;
+      padding: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 2px 20px rgba(0,31,63,0.3);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .nav-logo {
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 700;
+      font-size: 1.4rem;
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .nav-logo span { color: #FFB6C1; }
+    .nav-links { display: flex; gap: 28px; align-items: center; }
+    .nav-links a {
+      color: #FFFFFF;
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: color 0.3s ease;
+      position: relative;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #FFB6C1;
+      transition: width 0.3s ease;
+      border-radius: 2px;
+    }
+    .nav-links a:hover { color: #FFB6C1; }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-cta-btn {
+      background: #FFB6C1;
+      color: #001F3F;
+      padding: 10px 24px;
+      border-radius: 50px;
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .nav-cta-btn:hover { background: #fff; transform: translateY(-2px); box-shadow: 0 4px 15px rgba(255,182,193,0.4); }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 5px;
+    }
+    .hamburger span {
+      display: block;
+      width: 26px;
+      height: 3px;
+      background: #fff;
+      border-radius: 3px;
+      transition: all 0.3s ease;
+    }
+    .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 6px); }
+    .hamburger.active span:nth-child(2) { opacity: 0; }
+    .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -6px); }
+
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 120px 20px 80px;
+      overflow: hidden;
+      background: linear-gradient(135deg, #001F3F 0%, #002a57 50%, #001F3F 100%);
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: url('https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1920&q=80') center/cover no-repeat;
+      opacity: 0.15;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(0,31,63,0.85) 0%, rgba(0,31,63,0.7) 100%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      max-width: 800px;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,182,193,0.2);
+      border: 2px solid rgba(255,182,193,0.4);
+      color: #FFB6C1;
+      padding: 10px 24px;
+      border-radius: 50px;
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 24px;
+      backdrop-filter: blur(10px);
+    }
+    .hero h1 {
+      font-size: clamp(2.5rem, 6vw, 4.2rem);
+      color: #FFFFFF;
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+    .hero h1 .pink { color: #FFB6C1; }
+    .hero-subtitle {
+      font-size: clamp(1.05rem, 2.5vw, 1.3rem);
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 36px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      font-weight: 500;
+    }
+    .hero-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .btn-primary {
+      background: #FFB6C1;
+      color: #001F3F;
+      padding: 16px 36px;
+      border-radius: 50px;
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 700;
+      font-size: 1.05rem;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: none;
+      cursor: pointer;
+      animation: pulse 2.5s ease-in-out infinite;
+    }
+    .btn-primary:hover { background: #fff; transform: translateY(-3px); box-shadow: 0 8px 30px rgba(255,182,193,0.4); animation: none; }
+    .btn-secondary {
+      background: transparent;
+      color: #FFFFFF;
+      padding: 16px 36px;
+      border-radius: 50px;
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 700;
+      font-size: 1.05rem;
+      border: 2px solid rgba(255,255,255,0.4);
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+    }
+    .btn-secondary:hover { border-color: #FFB6C1; color: #FFB6C1; transform: translateY(-3px); }
+    .hero-trust {
+      margin-top: 40px;
+      display: flex;
+      gap: 32px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .hero-trust-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: rgba(255,255,255,0.7);
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+    .hero-trust-item .icon-svg { color: #FFB6C1; }
+
+    /* ===== PROMO STRIPE ===== */
+    .promo-stripe {
+      background: #FFB6C1;
+      padding: 14px 0;
+      overflow: hidden;
+      position: relative;
+    }
+    .promo-track {
+      display: flex;
+      animation: marquee 20s linear infinite;
+      width: max-content;
+    }
+    .promo-item {
+      white-space: nowrap;
+      padding: 0 40px;
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: #001F3F;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .promo-item .sep { color: rgba(0,31,63,0.3); }
+
+    /* ===== SECTIONS COMMON ===== */
+    .section { padding: 80px 0; }
+    .section-header { text-align: center; margin-bottom: 50px; }
+    .section-header h2 {
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      color: #001F3F;
+      margin-bottom: 12px;
+    }
+    .section-header p {
+      font-size: 1.1rem;
+      color: #556;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .section-header .underline {
+      width: 60px;
+      height: 4px;
+      background: #FFB6C1;
+      border-radius: 4px;
+      margin: 16px auto 0;
+    }
+
+    /* ===== SERVICES & PRICING ===== */
+    .services-section { background: #FFFFFF; }
+    .services-images-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      max-width: 700px;
+      margin: 0 auto 2.5rem;
+    }
+    .services-images-row img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,31,63,0.1);
+    }
+    .pricing-table {
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 40px rgba(0,31,63,0.08);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .pricing-table-header {
+      background: #001F3F;
+      color: #fff;
+      padding: 20px 30px;
+      display: flex;
+      justify-content: space-between;
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+    .pricing-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 30px;
+      border-bottom: 1px solid #f0e8ea;
+      transition: all 0.3s ease;
+      background: #fff;
+    }
+    .pricing-row:nth-child(even) { background: #FFF5F7; }
+    .pricing-row:hover { background: #FFB6C1; transform: translateX(5px); }
+    .pricing-row:hover .pricing-price { color: #001F3F; }
+    .pricing-row:last-child { border-bottom: none; }
+    .pricing-service {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 600;
+      font-size: 1.05rem;
+    }
+    .pricing-service .icon-svg { color: #001F3F; }
+    .pricing-price {
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: #FFB6C1;
+    }
+    .pricing-note {
+      text-align: center;
+      margin-top: 20px;
+      padding: 16px;
+      background: rgba(255,182,193,0.15);
+      border-radius: 12px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .pricing-note strong { color: #001F3F; }
+
+    /* ===== WHOLE FAMILY SECTION ===== */
+    .family-section { background: #FFF5F7; }
+    .family-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+    .family-card {
+      background: #fff;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 8px 30px rgba(0,31,63,0.06);
+      transition: all 0.4s ease;
+      text-align: center;
+    }
+    .family-card:hover { transform: translateY(-8px); box-shadow: 0 16px 50px rgba(0,31,63,0.12); }
+    .family-card-img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+    .family-card-body { padding: 28px 24px; }
+    .family-card-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: #FFF5F7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: -50px auto 16px;
+      position: relative;
+      z-index: 2;
+      border: 4px solid #fff;
+      box-shadow: 0 4px 15px rgba(0,31,63,0.1);
+      color: #001F3F;
+    }
+    .family-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 8px;
+      color: #001F3F;
+    }
+    .family-card p { color: #556; font-size: 0.95rem; }
+    .family-card .price-tag {
+      display: inline-block;
+      margin-top: 14px;
+      background: #FFB6C1;
+      color: #001F3F;
+      padding: 8px 20px;
+      border-radius: 50px;
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+
+    /* ===== WHY FAMILIES CHOOSE US ===== */
+    .why-section { background: #FFFFFF; }
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .why-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      background: #FFF5F7;
+      padding: 32px 24px;
+      border-radius: 20px;
+      transition: all 0.3s ease;
+    }
+    .why-item:hover { transform: translateY(-6px); box-shadow: 0 12px 30px rgba(0,31,63,0.1); }
+    .why-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 16px;
+      background: #001F3F;
+      color: #FFB6C1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+    }
+    .why-text h4 {
+      font-size: 1.1rem;
+      color: #001F3F;
+      margin-bottom: 8px;
+    }
+    .why-text p { color: #556; font-size: 0.9rem; line-height: 1.6; }
+
+    /* ===== TESTIMONIALS ===== */
+    .testimonials-section {
+      background: linear-gradient(135deg, #001F3F 0%, #002a57 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .testimonials-section .section-header h2 { color: #fff; }
+    .testimonials-section .section-header p { color: rgba(255,255,255,0.7); }
+    .testimonials-bg {
+      position: absolute;
+      inset: 0;
+      background: url('https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=1200&q=80') center/cover no-repeat;
+      opacity: 0.07;
+    }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      position: relative;
+      z-index: 2;
+    }
+    .testimonial-card {
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(15px);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 20px;
+      padding: 30px;
+      transition: all 0.3s ease;
+    }
+    .testimonial-card:hover { transform: rotate(-1deg) translateY(-4px); background: rgba(255,255,255,0.12); }
+    .testimonial-card:nth-child(2):hover { transform: rotate(1deg) translateY(-4px); }
+    .testimonial-card:nth-child(3):hover { transform: rotate(1deg) translateY(-4px); }
+    .testimonial-card:nth-child(4):hover { transform: rotate(-1deg) translateY(-4px); }
+    .testimonial-stars { color: #FFB6C1; display: flex; gap: 4px; margin-bottom: 14px; }
+    .testimonial-text {
+      color: rgba(255,255,255,0.9);
+      font-size: 1rem;
+      line-height: 1.7;
+      margin-bottom: 18px;
+      font-style: italic;
+    }
+    .testimonial-author { display: flex; align-items: center; gap: 12px; }
+    .testimonial-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #FFB6C1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 700;
+      color: #001F3F;
+      font-size: 1rem;
+    }
+    .testimonial-name { color: #fff; font-weight: 700; font-size: 0.95rem; }
+    .testimonial-role { color: rgba(255,255,255,0.5); font-size: 0.85rem; }
+
+    /* ===== WALK-IN INFO ===== */
+    .walkin-section { background: #FFF5F7; }
+    .walkin-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+    .walkin-card {
+      background: #fff;
+      border-radius: 24px;
+      padding: 36px;
+      box-shadow: 0 8px 30px rgba(0,31,63,0.06);
+    }
+    .walkin-card h3 {
+      font-size: 1.4rem;
+      color: #001F3F;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .hours-list { display: flex; flex-direction: column; gap: 12px; }
+    .hours-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 12px 16px;
+      border-radius: 12px;
+      background: #FFF5F7;
+      font-weight: 500;
+    }
+    .hours-row .day { font-weight: 600; color: #001F3F; }
+    .hours-row .time { color: #556; }
+    .walkin-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 20px;
+      background: #001F3F;
+      color: #FFB6C1;
+      padding: 12px 24px;
+      border-radius: 50px;
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+    .map-placeholder {
+      width: 100%;
+      height: 280px;
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 20px;
+      background: #e8e0e2;
+    }
+    .map-placeholder iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      border-radius: 16px;
+    }
+    .address-info { display: flex; flex-direction: column; gap: 12px; }
+    .address-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 500;
+      color: #556;
+    }
+    .address-icon {
+      min-width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: #FFB6C1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #001F3F;
+    }
+
+    /* ===== CONTACT FORM ===== */
+    .contact-section { background: #FFFFFF; }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+    .contact-info-side h3 {
+      font-size: 1.6rem;
+      color: #001F3F;
+      margin-bottom: 16px;
+    }
+    .contact-info-side p { color: #556; margin-bottom: 24px; font-size: 1.05rem; }
+    .contact-quick-links { display: flex; flex-direction: column; gap: 16px; }
+    .quick-link {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 16px 20px;
+      background: #FFF5F7;
+      border-radius: 14px;
+      transition: all 0.3s ease;
+      font-weight: 600;
+    }
+    .quick-link:hover { background: #FFB6C1; transform: translateX(5px); }
+    .quick-link .ql-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: #001F3F;
+      color: #FFB6C1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .contact-form-card {
+      background: #FFF5F7;
+      padding: 40px;
+      border-radius: 24px;
+      box-shadow: 0 10px 40px rgba(0,31,63,0.06);
+    }
+    .contact-form-card h3 {
+      font-size: 1.3rem;
+      color: #001F3F;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+    .form-group { margin-bottom: 18px; }
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: #001F3F;
+      font-size: 0.9rem;
+    }
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 14px 18px;
+      border: 2px solid #e8e0e2;
+      border-radius: 12px;
+      font-family: 'Mulish', sans-serif;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+      background: #fff;
+      color: #001F3F;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: #FFB6C1;
+      box-shadow: 0 0 0 3px rgba(255,182,193,0.2);
+    }
+    .form-group textarea { resize: vertical; min-height: 100px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-submit {
+      width: 100%;
+      padding: 16px;
+      background: #001F3F;
+      color: #fff;
+      border: none;
+      border-radius: 12px;
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 700;
+      font-size: 1.05rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .form-submit:hover { background: #FFB6C1; color: #001F3F; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,31,63,0.2); }
+
+    /* ===== FOOTER ===== */
+    .footer-wave {
+      position: relative;
+      overflow: hidden;
+      line-height: 0;
+      background: #FFF5F7;
+    }
+    .footer-wave svg {
+      display: block;
+      width: calc(100% + 40px);
+      margin-left: -20px;
+      height: 80px;
+    }
+    .footer {
+      background: #001F3F;
+      padding: 50px 0 24px;
+      color: rgba(255,255,255,0.7);
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+    .footer-brand h3 {
+      font-family: 'Quicksand', sans-serif;
+      font-size: 1.5rem;
+      color: #fff;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .footer-brand h3 span { color: #FFB6C1; }
+    .footer-brand p { font-size: 0.95rem; line-height: 1.7; }
+    .footer-col h4 {
+      font-family: 'Quicksand', sans-serif;
+      color: #FFB6C1;
+      font-size: 1rem;
+      margin-bottom: 16px;
+    }
+    .footer-col ul li { margin-bottom: 10px; }
+    .footer-col ul li a {
+      color: rgba(255,255,255,0.6);
+      transition: color 0.3s ease;
+      font-size: 0.9rem;
+    }
+    .footer-col ul li a:hover { color: #FFB6C1; }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 24px;
+      text-align: center;
+      font-size: 0.85rem;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      .family-grid { grid-template-columns: 1fr 1fr; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .why-grid { grid-template-columns: 1fr 1fr; }
+      .walkin-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .services-images-row { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #001F3F;
+        flex-direction: column;
+        padding: 20px;
+        gap: 16px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      }
+      .nav-links.open { display: flex; }
+      .hamburger { display: flex; }
+      .hero { padding: 100px 20px 60px; }
+      .hero h1 { font-size: 2.2rem; }
+      .section { padding: 60px 0; }
+    }
+    @media (max-width: 600px) {
+      .family-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
+      .why-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
+      .services-images-row { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto 2rem; }
+    }
+    @media (max-width: 480px) {
+      .hero-btns { flex-direction: column; align-items: center; }
+      .hero-trust { flex-direction: column; align-items: center; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .pricing-row { padding: 16px 20px; }
+    }
+
+    /* ===== ACCESSIBILITY ===== */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+    :focus-visible {
+      outline: 3px solid #FFB6C1;
+      outline-offset: 2px;
+      border-radius: 4px;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo" aria-label="Family Cuts and Color home">
+        <span class="icon-svg"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M9.64 7.64c.23-.5.36-1.05.36-1.64 0-2.21-1.79-4-4-4S2 3.79 2 6s1.79 4 4 4c.59 0 1.14-.13 1.64-.36L10 12l-2.36 2.36C7.14 14.13 6.59 14 6 14c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4c0-.59-.13-1.14-.36-1.64L12 14l7 7h3v-1L9.64 7.64zM6 8c-1.1 0-2-.89-2-2s.9-2 2-2 2 .89 2 2-.9 2-2 2zm0 12c-1.1 0-2-.89-2-2s.9-2 2-2 2 .89 2 2-.9 2-2 2zm6-7.5c-.28 0-.5-.22-.5-.5s.22-.5.5-.5.5.22.5.5-.22.5-.5.5zM19 3l-6 6 2 2 7-7V3h-3z"/></svg></span> Family Cuts <span>&amp; Color</span>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="navLinks" role="menubar">
+        <a href="#services" role="menuitem">Services</a>
+        <a href="#family" role="menuitem">For the Family</a>
+        <a href="#why" role="menuitem">Why Us</a>
+        <a href="#reviews" role="menuitem">Reviews</a>
+        <a href="#hours" role="menuitem">Hours</a>
+        <a href="#contact" role="menuitem">Contact</a>
+        <a href="tel:+15559012345" class="nav-cta-btn" role="menuitem"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg> Call Now</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <header class="hero" id="home">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-overlay" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <div class="hero-badge fade-in"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Walk-Ins Always Welcome</div>
+      <h1 class="fade-in">Great Hair for the <span class="pink">Whole Family</span></h1>
+      <p class="hero-subtitle fade-in">Affordable cuts and color for women, men, and kids. No appointment needed &mdash; just walk in and feel at home.</p>
+      <div class="hero-btns fade-in">
+        <a href="#hours" class="btn-primary"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M9.64 7.64c.23-.5.36-1.05.36-1.64 0-2.21-1.79-4-4-4S2 3.79 2 6s1.79 4 4 4c.59 0 1.14-.13 1.64-.36L10 12l-2.36 2.36C7.14 14.13 6.59 14 6 14c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4c0-.59-.13-1.14-.36-1.64L12 14l7 7h3v-1L9.64 7.64zM6 8c-1.1 0-2-.89-2-2s.9-2 2-2 2 .89 2 2-.9 2-2 2zm0 12c-1.1 0-2-.89-2-2s.9-2 2-2 2 .89 2 2-.9 2-2 2zm6-7.5c-.28 0-.5-.22-.5-.5s.22-.5.5-.5.5.22.5.5-.22.5-.5.5zM19 3l-6 6 2 2 7-7V3h-3z"/></svg> Walk In Today</a>
+        <a href="tel:+15559012345" class="btn-secondary"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg> Call (555) 901-2345</a>
+      </div>
+      <div class="hero-trust fade-in">
+        <div class="hero-trust-item"><span class="icon-svg"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span> 4.6 Stars on Google</div>
+        <div class="hero-trust-item"><span class="icon-svg"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></span> Serving Families Since 2008</div>
+        <div class="hero-trust-item"><span class="icon-svg"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></span> Affordable Prices</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== PROMO STRIPE ===== -->
+  <div class="promo-stripe" role="marquee" aria-label="Promotional offers">
+    <div class="promo-track">
+      <span class="promo-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 9l1.25-2.75L23 5l-2.75-1.25L19 1l-1.25 2.75L15 5l2.75 1.25L19 9zm-7.5.5L9 4 6.5 9.5 1 12l5.5 2.5L9 20l2.5-5.5L17 12l-5.5-2.5z"/></svg> Family Package: 4 Cuts for $60 <span class="sep">|</span></span>
+      <span class="promo-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9.64 7.64c.23-.5.36-1.05.36-1.64 0-2.21-1.79-4-4-4S2 3.79 2 6s1.79 4 4 4c.59 0 1.14-.13 1.64-.36L10 12l-2.36 2.36C7.14 14.13 6.59 14 6 14c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4c0-.59-.13-1.14-.36-1.64L12 14l7 7h3v-1L9.64 7.64zM6 8c-1.1 0-2-.89-2-2s.9-2 2-2 2 .89 2 2-.9 2-2 2zm0 12c-1.1 0-2-.89-2-2s.9-2 2-2 2 .89 2 2-.9 2-2 2zm6-7.5c-.28 0-.5-.22-.5-.5s.22-.5.5-.5.5.22.5.5-.22.5-.5.5zM19 3l-6 6 2 2 7-7V3h-3z"/></svg> Kids Under 5 Cut FREE with Adult Service <span class="sep">|</span></span>
+      <span class="promo-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Walk-Ins Always Welcome <span class="sep">|</span></span>
+      <span class="promo-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg> 4.6 Stars on Google <span class="sep">|</span></span>
+      <span class="promo-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg> Serving Families Since 2008 <span class="sep">|</span></span>
+      <span class="promo-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 9l1.25-2.75L23 5l-2.75-1.25L19 1l-1.25 2.75L15 5l2.75 1.25L19 9zm-7.5.5L9 4 6.5 9.5 1 12l5.5 2.5L9 20l2.5-5.5L17 12l-5.5-2.5z"/></svg> Family Package: 4 Cuts for $60 <span class="sep">|</span></span>
+      <span class="promo-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9.64 7.64c.23-.5.36-1.05.36-1.64 0-2.21-1.79-4-4-4S2 3.79 2 6s1.79 4 4 4c.59 0 1.14-.13 1.64-.36L10 12l-2.36 2.36C7.14 14.13 6.59 14 6 14c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4c0-.59-.13-1.14-.36-1.64L12 14l7 7h3v-1L9.64 7.64zM6 8c-1.1 0-2-.89-2-2s.9-2 2-2 2 .89 2 2-.9 2-2 2zm0 12c-1.1 0-2-.89-2-2s.9-2 2-2 2 .89 2 2-.9 2-2 2zm6-7.5c-.28 0-.5-.22-.5-.5s.22-.5.5-.5.5.22.5.5-.22.5-.5.5zM19 3l-6 6 2 2 7-7V3h-3z"/></svg> Kids Under 5 Cut FREE with Adult Service <span class="sep">|</span></span>
+      <span class="promo-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Walk-Ins Always Welcome <span class="sep">|</span></span>
+      <span class="promo-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg> 4.6 Stars on Google <span class="sep">|</span></span>
+      <span class="promo-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg> Serving Families Since 2008 <span class="sep">|</span></span>
+    </div>
+  </div>
+
+  <!-- ===== WAVE DIVIDER ===== -->
+  <div class="wave-divider" aria-hidden="true">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+      <path d="M0,30 C360,60 720,0 1080,30 C1260,45 1380,25 1440,30 L1440,60 L0,60 Z" fill="#FFFFFF"/>
+    </svg>
+  </div>
+
+  <!-- ===== SERVICES & PRICING ===== -->
+  <section class="section services-section" id="services" aria-labelledby="services-heading">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 id="services-heading">Services &amp; Pricing</h2>
+        <p>Quality salon services at prices that work for the whole family</p>
+        <div class="underline"></div>
+      </div>
+
+      <div class="services-images-row fade-in">
+        <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=600&q=80" alt="Professional hair styling at our family salon" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?w=600&q=80" alt="Beautiful styled hair result" loading="lazy">
+      </div>
+
+      <div class="pricing-table fade-in">
+        <div class="pricing-table-header">
+          <span>Service</span>
+          <span>Price</span>
+        </div>
+        <div class="pricing-row slide-up">
+          <div class="pricing-service"><span class="icon-svg"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg></span> Women's Cut</div>
+          <div class="pricing-price">$28</div>
+        </div>
+        <div class="pricing-row slide-up">
+          <div class="pricing-service"><span class="icon-svg"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg></span> Men's Cut</div>
+          <div class="pricing-price">$22</div>
+        </div>
+        <div class="pricing-row slide-up">
+          <div class="pricing-service"><span class="icon-svg"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg></span> Kids Cut</div>
+          <div class="pricing-price">$15</div>
+        </div>
+        <div class="pricing-row slide-up">
+          <div class="pricing-service"><span class="icon-svg"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9c.83 0 1.5-.67 1.5-1.5 0-.39-.15-.74-.39-1.01-.23-.26-.38-.61-.38-1 0-.83.67-1.5 1.5-1.5H16c2.76 0 5-2.24 5-5 0-4.42-4.03-8-9-8zm-5.5 9c-.83 0-1.5-.67-1.5-1.5S5.67 9 6.5 9 8 9.67 8 10.5 7.33 12 6.5 12zm3-4C8.67 8 8 7.33 8 6.5S8.67 5 9.5 5s1.5.67 1.5 1.5S10.33 8 9.5 8zm5 0c-.83 0-1.5-.67-1.5-1.5S13.67 5 14.5 5s1.5.67 1.5 1.5S15.33 8 14.5 8zm3 4c-.83 0-1.5-.67-1.5-1.5S16.67 9 17.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg></span> Basic Color</div>
+          <div class="pricing-price">$55</div>
+        </div>
+        <div class="pricing-row slide-up">
+          <div class="pricing-service"><span class="icon-svg"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 9l1.25-2.75L23 5l-2.75-1.25L19 1l-1.25 2.75L15 5l2.75 1.25L19 9zm-7.5.5L9 4 6.5 9.5 1 12l5.5 2.5L9 20l2.5-5.5L17 12l-5.5-2.5z"/></svg></span> Perm</div>
+          <div class="pricing-price">$65</div>
+        </div>
+      </div>
+
+      <div class="pricing-note fade-in">
+        <strong><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-right:4px;"><path d="M19 9l1.25-2.75L23 5l-2.75-1.25L19 1l-1.25 2.75L15 5l2.75 1.25L19 9zm-7.5.5L9 4 6.5 9.5 1 12l5.5 2.5L9 20l2.5-5.5L17 12l-5.5-2.5z"/></svg> Special Offer:</strong> Kids Under 5 Cut FREE with Any Adult Service!
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WAVE DIVIDER ===== -->
+  <div class="wave-divider" aria-hidden="true">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+      <path d="M0,30 C360,0 720,60 1080,30 C1260,15 1380,35 1440,30 L1440,60 L0,60 Z" fill="#FFF5F7"/>
+    </svg>
+  </div>
+
+  <!-- ===== FOR THE WHOLE FAMILY ===== -->
+  <section class="section family-section" id="family" aria-labelledby="family-heading">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 id="family-heading">For the Whole Family</h2>
+        <p>Everyone gets the star treatment at Family Cuts &amp; Color</p>
+        <div class="underline"></div>
+      </div>
+
+      <div class="family-grid">
+        <div class="family-card bounce-in">
+          <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&q=80" alt="Woman getting a professional haircut at our salon" class="family-card-img" loading="lazy">
+          <div class="family-card-body">
+            <div class="family-card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg></div>
+            <h3>Women</h3>
+            <p>From classic trims to full color transformations, our stylists deliver beautiful results every time.</p>
+            <span class="price-tag">From $28</span>
+          </div>
+        </div>
+
+        <div class="family-card bounce-in" style="animation-delay: 0.15s;">
+          <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=600&q=80" alt="Man getting a clean professional haircut" class="family-card-img" loading="lazy">
+          <div class="family-card-body">
+            <div class="family-card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg></div>
+            <h3>Men</h3>
+            <p>Sharp, clean cuts that look great. Walk in during lunch or after work &mdash; we keep it quick and precise.</p>
+            <span class="price-tag">From $22</span>
+          </div>
+        </div>
+
+        <div class="family-card bounce-in" style="animation-delay: 0.3s;">
+          <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600&q=80" alt="Happy child getting a kids haircut" class="family-card-img" loading="lazy">
+          <div class="family-card-body">
+            <div class="family-card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg></div>
+            <h3>Kids</h3>
+            <p>A fun, friendly experience for little ones. Patient stylists who know how to make haircut time enjoyable.</p>
+            <span class="price-tag">From $15</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WAVE DIVIDER ===== -->
+  <div class="wave-divider" aria-hidden="true">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+      <path d="M0,30 C360,60 720,0 1080,30 C1260,45 1380,25 1440,30 L1440,60 L0,60 Z" fill="#FFFFFF"/>
+    </svg>
+  </div>
+
+  <!-- ===== WHY FAMILIES CHOOSE US ===== -->
+  <section class="section why-section" id="why" aria-labelledby="why-heading">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 id="why-heading">Why Families Choose Us</h2>
+        <p>Here's what makes Family Cuts &amp; Color the neighborhood favorite</p>
+        <div class="underline"></div>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-item fade-in">
+          <div class="why-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></div>
+          <div class="why-text">
+            <h4>Walk-Ins Always Welcome</h4>
+            <p>No appointment? No problem. Just stop by whenever it works for your family's schedule.</p>
+          </div>
+        </div>
+        <div class="why-item fade-in">
+          <div class="why-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg></div>
+          <div class="why-text">
+            <h4>Affordable Family Pricing</h4>
+            <p>Quality haircare without breaking the bank. Family package: 4 cuts for just $60.</p>
+          </div>
+        </div>
+        <div class="why-item fade-in">
+          <div class="why-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg></div>
+          <div class="why-text">
+            <h4>Kid-Friendly Environment</h4>
+            <p>Patient stylists and a welcoming atmosphere make haircuts fun for even the littlest clients.</p>
+          </div>
+        </div>
+        <div class="why-item fade-in">
+          <div class="why-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg></div>
+          <div class="why-text">
+            <h4>Convenient Hours</h4>
+            <p>Open 7 days a week with extended hours to fit every family's busy schedule.</p>
+          </div>
+        </div>
+        <div class="why-item fade-in">
+          <div class="why-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+          <div class="why-text">
+            <h4>Experienced Stylists</h4>
+            <p>Our team has been serving families since 2008 with reliable, classic styles you'll love.</p>
+          </div>
+        </div>
+        <div class="why-item fade-in">
+          <div class="why-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
+          <div class="why-text">
+            <h4>Trusted by the Community</h4>
+            <p>4.6 stars on Google with hundreds of happy family reviews. See why families keep coming back.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="section testimonials-section" id="reviews" aria-labelledby="reviews-heading">
+    <div class="testimonials-bg" aria-hidden="true"></div>
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 id="reviews-heading">Happy Families</h2>
+        <p>Hear what our families have to say about their experience</p>
+        <div class="underline"></div>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card fade-in">
+          <div class="testimonial-stars" aria-label="5 out of 5 stars"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+          <p class="testimonial-text">"We bring all four kids here every month. The stylists are so patient and friendly, and the family package deal saves us a fortune. Best salon for families in town!"</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">SM</div>
+            <div>
+              <div class="testimonial-name">Sarah M.</div>
+              <div class="testimonial-role">Mom of 4</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card fade-in">
+          <div class="testimonial-stars" aria-label="5 out of 5 stars"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+          <p class="testimonial-text">"I've been coming here for my cuts for years. Quick, affordable, and they always get it right. Walk-in convenience is a huge plus for my busy schedule."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">JR</div>
+            <div>
+              <div class="testimonial-name">James R.</div>
+              <div class="testimonial-role">Regular since 2015</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card fade-in">
+          <div class="testimonial-stars" aria-label="5 out of 5 stars"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+          <p class="testimonial-text">"My daughter used to cry at every haircut. Not here! The stylist made it into a game and now she actually asks to go. The free under-5 cut is wonderful too."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">LP</div>
+            <div>
+              <div class="testimonial-name">Linda P.</div>
+              <div class="testimonial-role">Mom of 2</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card fade-in">
+          <div class="testimonial-stars" aria-label="4 out of 5 stars"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" opacity="0.3"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+          <p class="testimonial-text">"Got my color done here and it turned out beautifully. At $55, it's way more affordable than other salons. The staff treats you like family from the moment you walk in."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">DK</div>
+            <div>
+              <div class="testimonial-name">Diana K.</div>
+              <div class="testimonial-role">Color client</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WAVE DIVIDER ===== -->
+  <div class="wave-divider" aria-hidden="true">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+      <path d="M0,0 L0,30 C360,0 720,60 1080,30 C1260,15 1380,35 1440,30 L1440,0 Z" fill="#001F3F"/>
+    </svg>
+  </div>
+
+  <!-- ===== WALK-IN INFO ===== -->
+  <section class="section walkin-section" id="hours" aria-labelledby="hours-heading">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 id="hours-heading">Visit Us Today</h2>
+        <p>Walk in anytime during our hours &mdash; no appointment necessary</p>
+        <div class="underline"></div>
+      </div>
+
+      <div class="walkin-grid">
+        <div class="walkin-card fade-in">
+          <h3><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg> Business Hours</h3>
+          <div class="hours-list">
+            <div class="hours-row">
+              <span class="day">Monday &ndash; Saturday</span>
+              <span class="time">9:00 AM &ndash; 7:00 PM</span>
+            </div>
+            <div class="hours-row">
+              <span class="day">Sunday</span>
+              <span class="time">10:00 AM &ndash; 5:00 PM</span>
+            </div>
+          </div>
+          <div class="walkin-badge"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Walk-Ins Always Welcome</div>
+        </div>
+
+        <div class="walkin-card fade-in">
+          <h3><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg> Find Us</h3>
+          <div class="map-placeholder">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.2!2d-73.98!3d40.75!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z!5e0!3m2!1sen!2sus!4v1" allowfullscreen loading="lazy" title="Map showing salon location at 320 Maple Avenue"></iframe>
+          </div>
+          <div class="address-info">
+            <div class="address-item">
+              <div class="address-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg></div>
+              <span>320 Maple Avenue</span>
+            </div>
+            <div class="address-item">
+              <div class="address-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></div>
+              <a href="tel:+15559012345">(555) 901-2345</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WAVE DIVIDER ===== -->
+  <div class="wave-divider" aria-hidden="true">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+      <path d="M0,30 C360,60 720,0 1080,30 C1260,45 1380,25 1440,30 L1440,60 L0,60 Z" fill="#FFFFFF"/>
+    </svg>
+  </div>
+
+  <!-- ===== CONTACT FORM ===== -->
+  <section class="section contact-section" id="contact" aria-labelledby="contact-heading">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 id="contact-heading">Get in Touch</h2>
+        <p>Have a question or want to book ahead? Drop us a line!</p>
+        <div class="underline"></div>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info-side fade-in">
+          <h3>We'd Love to Hear From You</h3>
+          <p>Whether you have a question about services, pricing, or just want to say hello &mdash; we're here for you and your family.</p>
+          <div class="contact-quick-links">
+            <a href="tel:+15559012345" class="quick-link">
+              <div class="ql-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></div>
+              <div>
+                <strong>Call Us</strong><br>
+                <span style="color:#556;font-size:0.9rem;">(555) 901-2345</span>
+              </div>
+            </a>
+            <a href="#hours" class="quick-link">
+              <div class="ql-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg></div>
+              <div>
+                <strong>Walk In</strong><br>
+                <span style="color:#556;font-size:0.9rem;">Mon-Sat 9-7, Sun 10-5</span>
+              </div>
+            </a>
+            <a href="#" class="quick-link">
+              <div class="ql-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div>
+              <div>
+                <strong>Visit Us</strong><br>
+                <span style="color:#556;font-size:0.9rem;">320 Maple Avenue</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-form-card fade-in">
+          <h3>Send Us a Message</h3>
+          <form action="#" method="POST" aria-label="Contact form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" placeholder="Your first name" required>
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Your last name" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="you@email.com" required>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="service">Service Interest</label>
+              <select id="service" name="service">
+                <option value="">Select a service...</option>
+                <option value="womens-cut">Women's Cut - $28</option>
+                <option value="mens-cut">Men's Cut - $22</option>
+                <option value="kids-cut">Kids Cut - $15</option>
+                <option value="basic-color">Basic Color - $55</option>
+                <option value="perm">Perm - $65</option>
+                <option value="family-package">Family Package - 4 Cuts for $60</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="How can we help you?"></textarea>
+            </div>
+            <button type="submit" class="form-submit"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg> Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER WAVE ===== -->
+  <div class="footer-wave" aria-hidden="true">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+      <path d="M0,40 C240,80 480,0 720,40 C960,80 1200,0 1440,40 L1440,80 L0,80 Z" fill="#001F3F"/>
+    </svg>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3><svg width="20" height="20" viewBox="0 0 24 24" fill="#FFB6C1"><path d="M9.64 7.64c.23-.5.36-1.05.36-1.64 0-2.21-1.79-4-4-4S2 3.79 2 6s1.79 4 4 4c.59 0 1.14-.13 1.64-.36L10 12l-2.36 2.36C7.14 14.13 6.59 14 6 14c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4c0-.59-.13-1.14-.36-1.64L12 14l7 7h3v-1L9.64 7.64zM6 8c-1.1 0-2-.89-2-2s.9-2 2-2 2 .89 2 2-.9 2-2 2zm0 12c-1.1 0-2-.89-2-2s.9-2 2-2 2 .89 2 2-.9 2-2 2zm6-7.5c-.28 0-.5-.22-.5-.5s.22-.5.5-.5.5.22.5.5-.22.5-.5.5zM19 3l-6 6 2 2 7-7V3h-3z"/></svg> Family Cuts <span>&amp; Color</span></h3>
+          <p>Your neighborhood family salon since 2008. Affordable, reliable, and welcoming &mdash; for every member of the family.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Women's Cuts</a></li>
+            <li><a href="#services">Men's Cuts</a></li>
+            <li><a href="#services">Kids Cuts</a></li>
+            <li><a href="#services">Basic Color</a></li>
+            <li><a href="#services">Perms</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#family">For the Family</a></li>
+            <li><a href="#why">Why Us</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:+15559012345">(555) 901-2345</a></li>
+            <li><a href="#hours">320 Maple Avenue</a></li>
+            <li><a href="#hours">Mon-Sat 9AM-7PM</a></li>
+            <li><a href="#hours">Sun 10AM-5PM</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Family Cuts &amp; Color. All rights reserved. | Serving families with love since 2008.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== JAVASCRIPT ===== -->
+  <script>
+    // Mobile navigation toggle
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('open');
+      const isOpen = navLinks.classList.contains('open');
+      hamburger.setAttribute('aria-expanded', isOpen);
+    });
+
+    // Close mobile nav when a link is clicked
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Intersection Observer for scroll animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          const parent = entry.target.parentElement;
+          const siblings = parent ? Array.from(parent.children).filter(
+            el => el.classList.contains('fade-in') || el.classList.contains('bounce-in') || el.classList.contains('slide-up')
+          ) : [];
+          const siblingIndex = siblings.indexOf(entry.target);
+          const delay = siblingIndex >= 0 ? siblingIndex * 100 : 0;
+
+          setTimeout(() => {
+            entry.target.classList.add('visible');
+          }, delay);
+
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.fade-in, .bounce-in, .slide-up').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Navbar background on scroll
+    const navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.style.boxShadow = '0 4px 30px rgba(0,31,63,0.4)';
+      } else {
+        navbar.style.boxShadow = '0 2px 20px rgba(0,31,63,0.3)';
+      }
+    });
+
+    // Simple form handling
+    const form = document.querySelector('form');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const submitBtn = form.querySelector('.form-submit');
+      const originalText = submitBtn.innerHTML;
+      submitBtn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Message Sent!';
+      submitBtn.style.background = '#28a745';
+      submitBtn.style.color = '#fff';
+
+      setTimeout(() => {
+        submitBtn.innerHTML = originalText;
+        submitBtn.style.background = '';
+        submitBtn.style.color = '';
+        form.reset();
+      }, 3000);
+    });
+  </script>
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HairSalon",
+    "name": "Family Cuts & Color",
+    "description": "Affordable cuts and color for women, men, and kids. Walk-ins welcome. Family packages starting at $60.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "320 Maple Avenue"
+    },
+    "telephone": "+15559012345",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        "opens": "09:00",
+        "closes": "19:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Sunday",
+        "opens": "10:00",
+        "closes": "17:00"
+      }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.6",
+      "bestRating": "5"
+    },
+    "priceRange": "$"
+  }
+  </script>
+</body>
+</html>

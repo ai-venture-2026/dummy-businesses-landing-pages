@@ -1,0 +1,1442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zen Wellness Retreat | Thai Massage, Hot Stone & Meditation</title>
+<meta name="description" content="Holistic Eastern wellness at Zen Wellness Retreat. Thai massage, hot stone therapy, reflexology & meditation classes. Memberships from $79/mo. Find your peace.">
+<meta name="keywords" content="zen wellness, thai massage, hot stone therapy, reflexology, meditation classes, holistic healing, eastern wellness">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Serif:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+/* ===== RESET & BASE ===== */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y proximity;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+body {
+  font-family: 'Noto Serif', Georgia, serif;
+  color: #1A1A2E;
+  background: #F8F5FF;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3, h4, h5, h6 { font-family: 'Philosopher', serif; }
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; display: block; }
+ul { list-style: none; }
+button, input, textarea, select { font-family: inherit; }
+
+/* ===== CSS VARIABLES ===== */
+:root {
+  --primary: #4B0082;
+  --secondary: #E6E6FA;
+  --accent: #C9A96E;
+  --bg: #F8F5FF;
+  --text: #1A1A2E;
+  --white: #FFFFFF;
+  --primary-light: rgba(75, 0, 130, 0.08);
+  --accent-light: rgba(201, 169, 110, 0.15);
+}
+
+/* ===== SCROLL ANIMATIONS ===== */
+.zen-reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.zen-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+.zen-reveal-delay-1 { transition-delay: 0.15s; }
+.zen-reveal-delay-2 { transition-delay: 0.3s; }
+.zen-reveal-delay-3 { transition-delay: 0.45s; }
+.zen-reveal-delay-4 { transition-delay: 0.6s; }
+
+/* ===== MANDALA PATTERN (reduced opacity to avoid readability issues) ===== */
+.mandala {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  animation: mandala-spin 60s linear infinite;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.12;
+}
+.mandala::before, .mandala::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+}
+.mandala::before {
+  border: 1px solid rgba(201, 169, 110, 0.15);
+  background:
+    repeating-conic-gradient(from 0deg, transparent 0deg 10deg, rgba(201, 169, 110, 0.03) 10deg 20deg),
+    radial-gradient(circle at center, transparent 30%, rgba(201, 169, 110, 0.04) 50%, transparent 70%);
+}
+.mandala::after {
+  border: 1px solid rgba(201, 169, 110, 0.08);
+  inset: 40px;
+  background: repeating-conic-gradient(from 15deg, transparent 0deg 15deg, rgba(230, 230, 250, 0.05) 15deg 30deg);
+}
+.mandala-inner {
+  position: absolute;
+  inset: 80px;
+  border-radius: 50%;
+  border: 1px solid rgba(201, 169, 110, 0.1);
+  background: repeating-conic-gradient(from 30deg, transparent 0deg 20deg, rgba(75, 0, 130, 0.02) 20deg 40deg);
+}
+.mandala-core {
+  position: absolute;
+  inset: 130px;
+  border-radius: 50%;
+  border: 1px solid rgba(201, 169, 110, 0.06);
+  background: radial-gradient(circle, rgba(201, 169, 110, 0.05) 0%, transparent 70%);
+}
+@keyframes mandala-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ===== BREATHING ANIMATION ===== */
+@keyframes breathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+}
+
+/* ===== SMOKE / MIST EFFECT (reduced opacity to avoid text overlap) ===== */
+.smoke-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+.smoke {
+  position: absolute;
+  bottom: -50px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0;
+  animation: smoke-rise 8s ease-in-out infinite;
+}
+.smoke-1 {
+  left: 20%;
+  background: rgba(230, 230, 250, 0.1);
+  animation-delay: 0s;
+}
+.smoke-2 {
+  left: 50%;
+  background: rgba(201, 169, 110, 0.06);
+  animation-delay: 2.5s;
+  width: 160px;
+  height: 160px;
+}
+.smoke-3 {
+  left: 75%;
+  background: rgba(230, 230, 250, 0.08);
+  animation-delay: 5s;
+  width: 180px;
+  height: 180px;
+}
+@keyframes smoke-rise {
+  0% { opacity: 0; transform: translateY(0) scale(1); }
+  30% { opacity: 0.3; }
+  70% { opacity: 0.15; }
+  100% { opacity: 0; transform: translateY(-180px) scale(1.8); }
+}
+
+/* ===== INLINE SVG ICON STYLING ===== */
+.icon-svg {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.1em;
+  fill: currentColor;
+}
+
+/* ===== SHIMMER ===== */
+@keyframes shimmer {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+.gold-shimmer {
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+/* ===== RADIAL NAV ===== */
+.zen-nav-toggle {
+  position: fixed;
+  top: 28px;
+  right: 28px;
+  z-index: 1000;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--primary);
+  border: 2px solid var(--accent);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(75, 0, 130, 0.3);
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+}
+.zen-nav-toggle:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 30px rgba(75, 0, 130, 0.4);
+}
+.zen-nav-toggle svg {
+  width: 26px;
+  height: 26px;
+  fill: var(--accent);
+  transition: transform 0.5s ease;
+}
+.zen-nav-toggle.active svg {
+  transform: rotate(45deg);
+}
+.zen-nav-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(26, 26, 46, 0.92);
+  backdrop-filter: blur(10px);
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.zen-nav-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+.radial-menu {
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+.radial-menu a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  color: var(--secondary);
+  font-family: 'Philosopher', serif;
+  font-size: 1.15rem;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  transition: transform 0.4s ease, opacity 0.4s ease, color 0.3s ease;
+  opacity: 0;
+}
+.radial-menu a:hover { color: var(--accent); }
+.zen-nav-overlay.active .radial-menu a {
+  opacity: 1;
+}
+.zen-nav-overlay.active .radial-menu a:nth-child(1) { transform: translate(-50%, -180px) scale(1); transition-delay: 0.05s; }
+.zen-nav-overlay.active .radial-menu a:nth-child(2) { transform: translate(100px, -140px) scale(1); transition-delay: 0.1s; }
+.zen-nav-overlay.active .radial-menu a:nth-child(3) { transform: translate(160px, -30px) scale(1); transition-delay: 0.15s; }
+.zen-nav-overlay.active .radial-menu a:nth-child(4) { transform: translate(120px, 90px) scale(1); transition-delay: 0.2s; }
+.zen-nav-overlay.active .radial-menu a:nth-child(5) { transform: translate(10px, 160px) scale(1); transition-delay: 0.25s; }
+.zen-nav-overlay.active .radial-menu a:nth-child(6) { transform: translate(-130px, 130px) scale(1); transition-delay: 0.3s; }
+.zen-nav-overlay.active .radial-menu a:nth-child(7) { transform: translate(-180px, 20px) scale(1); transition-delay: 0.35s; }
+.zen-nav-overlay.active .radial-menu a:nth-child(8) { transform: translate(-140px, -100px) scale(1); transition-delay: 0.4s; }
+.radial-center-lotus {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--accent);
+  opacity: 0.4;
+  width: 48px;
+  height: 48px;
+}
+
+/* ===== HERO ===== */
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-align: center;
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1920&q=80') center/cover no-repeat;
+  animation: breathe 8s ease-in-out infinite;
+  will-change: transform;
+}
+.hero-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(75, 0, 130, 0.55) 0%,
+    rgba(26, 26, 46, 0.65) 50%,
+    rgba(75, 0, 130, 0.7) 100%
+  );
+}
+.hero .mandala {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.hero-content {
+  position: relative;
+  z-index: 3;
+  color: var(--white);
+  max-width: 700px;
+  padding: 0 24px;
+}
+.hero-content .tagline {
+  font-family: 'Noto Serif', serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 24px;
+  font-weight: 300;
+}
+.hero-content h1 {
+  font-size: clamp(2.6rem, 6vw, 4.5rem);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+.hero-content .subtitle {
+  font-size: 1.1rem;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.6;
+  opacity: 0.85;
+  margin-bottom: 40px;
+}
+.hero-cta {
+  display: inline-block;
+  padding: 16px 44px;
+  background: var(--accent);
+  color: var(--primary);
+  font-family: 'Philosopher', serif;
+  font-size: 1rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  font-weight: 700;
+}
+.hero-cta:hover {
+  background: var(--white);
+  color: var(--primary);
+  box-shadow: 0 0 40px rgba(201, 169, 110, 0.4);
+}
+.hero-scroll-hint {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  animation: float-down 2s ease-in-out infinite;
+}
+@keyframes float-down {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(8px); }
+}
+.hero-trust {
+  margin-top: 28px;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+
+/* ===== SECTION COMMON ===== */
+.section { padding: 120px 24px; position: relative; }
+.section-label {
+  font-family: 'Noto Serif', serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 16px;
+  display: block;
+}
+.section-heading {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 400;
+  color: var(--primary);
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+}
+.section-divider {
+  width: 60px;
+  height: 1px;
+  background: var(--accent);
+  margin: 28px auto;
+  display: block;
+}
+.container { max-width: 1100px; margin: 0 auto; }
+
+/* ===== PHILOSOPHY ===== */
+.philosophy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  text-align: center;
+  background: var(--bg);
+  position: relative;
+}
+.philosophy-inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.philosophy-text {
+  font-family: 'Philosopher', serif;
+  font-size: clamp(1.6rem, 3.5vw, 2.8rem);
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.55;
+  color: var(--primary);
+  letter-spacing: 0.02em;
+}
+.philosophy-text .accent-word {
+  color: var(--accent);
+}
+.philosophy-badge {
+  margin-top: 40px;
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--accent);
+  opacity: 0.7;
+}
+
+/* ===== HEALING PRACTICES (even grid) ===== */
+.practices {
+  padding: 100px 24px;
+  background: var(--primary);
+  color: var(--white);
+}
+.practices-header {
+  text-align: center;
+  padding: 0 0 60px;
+}
+.practices-header .section-heading { color: var(--secondary); }
+.practices-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.practice-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(201, 169, 110, 0.15);
+  overflow: hidden;
+  transition: transform 0.4s ease, border-color 0.4s ease;
+}
+.practice-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent);
+}
+.practice-img-wrap {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16/10;
+}
+.practice-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+.practice-card:hover .practice-img-wrap img { transform: scale(1.04); }
+.practice-img-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(201, 169, 110, 0.3);
+  pointer-events: none;
+}
+.practice-info {
+  padding: 32px;
+}
+.practice-info h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  margin-bottom: 14px;
+  color: var(--accent);
+}
+.practice-info p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  opacity: 0.8;
+  font-weight: 300;
+  margin-bottom: 16px;
+}
+.practice-tag {
+  display: inline-block;
+  padding: 6px 16px;
+  border: 1px solid rgba(201, 169, 110, 0.4);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+/* ===== MEDITATION & CLASSES ===== */
+.classes { background: var(--bg); }
+.classes-header { text-align: center; margin-bottom: 60px; }
+.schedule-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.schedule-item {
+  background: var(--white);
+  padding: 32px;
+  border-left: 3px solid var(--accent);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.schedule-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(75, 0, 130, 0.08);
+}
+.schedule-day {
+  font-family: 'Philosopher', serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+.schedule-class {
+  font-family: 'Philosopher', serif;
+  font-size: 1.25rem;
+  color: var(--primary);
+  margin-bottom: 6px;
+}
+.schedule-time {
+  font-size: 0.85rem;
+  color: #666;
+  font-weight: 300;
+}
+.classes-offer {
+  text-align: center;
+  margin-top: 50px;
+  padding: 32px;
+  background: linear-gradient(135deg, rgba(75, 0, 130, 0.06), rgba(201, 169, 110, 0.08));
+  border: 1px solid rgba(201, 169, 110, 0.2);
+}
+.classes-offer p {
+  font-family: 'Philosopher', serif;
+  font-size: 1.3rem;
+  color: var(--primary);
+}
+.classes-offer .highlight { color: var(--accent); font-weight: 700; }
+
+/* ===== MEMBERSHIP TIERS (even 3-column grid) ===== */
+.membership {
+  background: linear-gradient(180deg, var(--primary) 0%, #2D004D 100%);
+  color: var(--white);
+}
+.membership-header { text-align: center; margin-bottom: 70px; }
+.membership-header .section-heading { color: var(--secondary); }
+.tiers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.tier {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(201, 169, 110, 0.15);
+  padding: 50px 36px;
+  text-align: center;
+  position: relative;
+  transition: transform 0.4s ease, border-color 0.4s ease;
+}
+.tier:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent);
+}
+.tier.featured {
+  border-color: var(--accent);
+  background: rgba(201, 169, 110, 0.06);
+}
+.tier.featured::before {
+  content: 'Most Chosen';
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--accent);
+  color: var(--primary);
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 4px 16px;
+  font-weight: 700;
+}
+.tier-name {
+  font-family: 'Philosopher', serif;
+  font-size: 1.6rem;
+  letter-spacing: 0.08em;
+  margin-bottom: 6px;
+  color: var(--accent);
+}
+.tier-price {
+  font-size: 2.8rem;
+  font-weight: 300;
+  margin: 16px 0 6px;
+}
+.tier-price span { font-size: 0.9rem; opacity: 0.5; }
+.tier-period {
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  opacity: 0.4;
+  margin-bottom: 28px;
+}
+.tier ul { margin-bottom: 36px; }
+.tier li {
+  padding: 10px 0;
+  font-size: 0.9rem;
+  font-weight: 300;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  opacity: 0.8;
+}
+.tier-cta {
+  display: inline-block;
+  padding: 14px 36px;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  font-family: 'Philosopher', serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background: transparent;
+}
+.tier-cta:hover {
+  background: var(--accent);
+  color: var(--primary);
+}
+.tier.featured .tier-cta {
+  background: var(--accent);
+  color: var(--primary);
+}
+.tier.featured .tier-cta:hover {
+  background: var(--white);
+}
+
+/* ===== THE JOURNEY ===== */
+.journey { background: var(--bg); }
+.journey-header { text-align: center; margin-bottom: 80px; }
+.journey-path {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+  padding-left: 60px;
+}
+.journey-path::before {
+  content: '';
+  position: absolute;
+  left: 24px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--accent), var(--primary), var(--accent));
+  transform-origin: top;
+  transform: scaleY(0);
+  transition: transform 1.5s ease;
+}
+.journey-path.line-drawn::before {
+  transform: scaleY(1);
+}
+.journey-stop {
+  position: relative;
+  padding: 30px 0;
+}
+.journey-stop::before {
+  content: '';
+  position: absolute;
+  left: -43px;
+  top: 36px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 3px solid var(--bg);
+  box-shadow: 0 0 0 2px var(--accent);
+}
+.journey-step-num {
+  font-family: 'Philosopher', serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+.journey-stop h3 {
+  font-family: 'Philosopher', serif;
+  font-size: 1.35rem;
+  color: var(--primary);
+  margin-bottom: 8px;
+  font-weight: 400;
+}
+.journey-stop p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #555;
+  font-weight: 300;
+}
+
+/* ===== WISDOM WALL ===== */
+.wisdom {
+  background: var(--primary);
+  color: var(--white);
+  text-align: center;
+}
+.wisdom-header { margin-bottom: 70px; }
+.wisdom-header .section-heading { color: var(--secondary); }
+.wisdom-quotes {
+  max-width: 800px;
+  margin: 0 auto;
+  display: grid;
+  gap: 50px;
+}
+.wisdom-quote {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.wisdom-quote.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.wisdom-quote blockquote {
+  font-family: 'Philosopher', serif;
+  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  font-style: italic;
+  line-height: 1.6;
+  color: var(--secondary);
+  position: relative;
+  padding: 0 20px;
+  margin-bottom: 20px;
+}
+.wisdom-quote blockquote::before {
+  content: '\201C';
+  position: absolute;
+  top: -20px;
+  left: -10px;
+  font-size: 4rem;
+  color: var(--accent);
+  opacity: 0.3;
+  font-family: Georgia, serif;
+}
+.wisdom-author {
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  opacity: 0.7;
+}
+
+/* ===== SACRED SPACE GALLERY (even 4-column grid) ===== */
+.gallery { background: var(--bg); }
+.gallery-header { text-align: center; margin-bottom: 50px; }
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.gallery-item {
+  position: relative;
+  aspect-ratio: 1;
+  overflow: hidden;
+}
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease, filter 0.8s ease;
+  filter: saturate(0.7);
+}
+.gallery-item:hover img {
+  transform: scale(1.08);
+  filter: saturate(1);
+}
+.gallery-item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(75, 0, 130, 0.15);
+  transition: opacity 0.4s ease;
+}
+.gallery-item:hover::after { opacity: 0; }
+
+/* ===== CONTACT FORM ===== */
+.contact {
+  background: linear-gradient(180deg, var(--bg) 0%, var(--secondary) 100%);
+}
+.contact-inner {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+.contact-header { margin-bottom: 50px; }
+.contact-form { display: grid; gap: 20px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.form-field {
+  background: var(--white);
+  border: 1px solid rgba(75, 0, 130, 0.1);
+  padding: 16px 20px;
+  font-size: 0.95rem;
+  font-family: 'Noto Serif', serif;
+  color: var(--text);
+  width: 100%;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+.form-field::placeholder { color: #aaa; font-weight: 300; }
+.form-field:focus { border-color: var(--accent); }
+textarea.form-field { min-height: 120px; resize: vertical; }
+select.form-field { -webkit-appearance: none; appearance: none; cursor: pointer; }
+.form-submit {
+  display: inline-block;
+  padding: 18px 50px;
+  background: var(--primary);
+  color: var(--accent);
+  font-family: 'Philosopher', serif;
+  font-size: 1rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border: 2px solid var(--accent);
+  cursor: pointer;
+  transition: all 0.4s ease;
+  font-weight: 700;
+  margin-top: 10px;
+}
+.form-submit:hover {
+  background: var(--accent);
+  color: var(--primary);
+  box-shadow: 0 0 40px rgba(201, 169, 110, 0.3);
+}
+.contact-details {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  font-size: 0.85rem;
+  color: #666;
+}
+.contact-details a { color: var(--primary); transition: color 0.3s; }
+.contact-details a:hover { color: var(--accent); }
+.contact-details span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 50px 24px;
+  background: var(--primary);
+  color: rgba(230, 230, 250, 0.3);
+}
+.footer-lotus {
+  margin-bottom: 16px;
+  color: var(--accent);
+  opacity: 0.4;
+  display: flex;
+  justify-content: center;
+}
+.footer-lotus svg {
+  width: 36px;
+  height: 36px;
+  fill: var(--accent);
+}
+.footer-contact {
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  line-height: 2;
+}
+.footer-contact a {
+  color: rgba(230, 230, 250, 0.5);
+  transition: color 0.3s;
+}
+.footer-contact a:hover { color: var(--accent); }
+.footer-copy {
+  margin-top: 16px;
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  opacity: 0.3;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .practices-grid {
+    grid-template-columns: 1fr;
+    max-width: 540px;
+    margin: 0 auto;
+  }
+  .tiers { grid-template-columns: 1fr; max-width: 380px; }
+  .schedule-grid { grid-template-columns: repeat(2, 1fr); }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  .radial-menu { width: 300px; height: 300px; }
+  .zen-nav-overlay.active .radial-menu a:nth-child(1) { transform: translate(-50%, -130px) scale(1); }
+  .zen-nav-overlay.active .radial-menu a:nth-child(2) { transform: translate(70px, -100px) scale(1); }
+  .zen-nav-overlay.active .radial-menu a:nth-child(3) { transform: translate(110px, -10px) scale(1); }
+  .zen-nav-overlay.active .radial-menu a:nth-child(4) { transform: translate(80px, 80px) scale(1); }
+  .zen-nav-overlay.active .radial-menu a:nth-child(5) { transform: translate(-10px, 120px) scale(1); }
+  .zen-nav-overlay.active .radial-menu a:nth-child(6) { transform: translate(-100px, 80px) scale(1); }
+  .zen-nav-overlay.active .radial-menu a:nth-child(7) { transform: translate(-120px, -10px) scale(1); }
+  .zen-nav-overlay.active .radial-menu a:nth-child(8) { transform: translate(-80px, -90px) scale(1); }
+}
+@media (max-width: 600px) {
+  .section { padding: 80px 20px; }
+  .form-row { grid-template-columns: 1fr; }
+  .contact-details { flex-direction: column; align-items: center; gap: 16px; }
+  .hero-cta { padding: 14px 32px; font-size: 0.85rem; }
+  .schedule-grid { grid-template-columns: 1fr; }
+  .mandala { width: 350px; height: 350px; }
+  .radial-menu a { font-size: 0.95rem; }
+}
+
+/* ===== ACCESSIBILITY ===== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+</style>
+</head>
+<body>
+
+<!-- ===== ZEN RADIAL NAVIGATION ===== -->
+<button class="zen-nav-toggle" id="navToggle" aria-label="Open navigation menu" aria-expanded="false">
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <circle cx="12" cy="12" r="3" />
+    <circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="0.8" />
+    <circle cx="12" cy="12" r="11" fill="none" stroke="currentColor" stroke-width="0.4" />
+  </svg>
+</button>
+<nav class="zen-nav-overlay" id="navOverlay" role="navigation" aria-label="Main navigation">
+  <div class="radial-menu">
+    <div class="radial-center-lotus" aria-hidden="true">
+      <svg viewBox="0 0 48 48" fill="currentColor"><path d="M24 4c-2 6-6 10-10 14 4 1 8 1 10 4 2-3 6-3 10-4C30 14 26 10 24 4zM14 20c-4 4-8 10-8 16 4-2 10-4 14-2-2-4-2-10-6-14zM34 20c4 4 8 10 8 16-4-2-10-4-14-2 2-4 2-10 6-14zM24 26c-2 4-4 10-2 16 2-4 4-8 2-16zM24 26c2 4 4 10 2 16-2-4-4-8-2-16z"/></svg>
+    </div>
+    <a href="#philosophy">Philosophy</a>
+    <a href="#practices">Healing Practices</a>
+    <a href="#classes">Meditation</a>
+    <a href="#membership">Membership</a>
+    <a href="#journey">The Journey</a>
+    <a href="#wisdom">Wisdom</a>
+    <a href="#gallery">Sacred Space</a>
+    <a href="#contact">Begin Your Journey</a>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="hero" aria-label="Welcome to Zen Wellness Retreat">
+  <div class="hero-bg" role="img" aria-label="Serene meditation scene at golden hour"></div>
+  <div class="mandala" aria-hidden="true">
+    <div class="mandala-inner"></div>
+    <div class="mandala-core"></div>
+  </div>
+  <div class="smoke-container" aria-hidden="true">
+    <div class="smoke smoke-1"></div>
+    <div class="smoke smoke-2"></div>
+    <div class="smoke smoke-3"></div>
+  </div>
+  <div class="hero-content">
+    <p class="tagline gold-shimmer">A Sanctuary for Mind, Body & Spirit</p>
+    <h1>Zen Wellness Retreat</h1>
+    <p class="subtitle">Where Eastern healing traditions meet modern serenity.<br>Discover the path to holistic well-being.</p>
+    <a href="#contact" class="hero-cta">Begin Your Journey</a>
+    <p class="hero-trust">Holistic Healing Since 2013</p>
+  </div>
+  <div class="hero-scroll-hint" aria-hidden="true">Scroll to Discover</div>
+</section>
+
+<!-- ===== PHILOSOPHY ===== -->
+<section class="section philosophy" id="philosophy" aria-label="Our Philosophy">
+  <div class="philosophy-inner zen-reveal">
+    <span class="section-label">Our Philosophy</span>
+    <p class="philosophy-text">
+      True healing begins when we honor the <span class="accent-word">wholeness</span> of being &mdash;
+      where ancient Eastern wisdom meets the quiet courage of
+      <span class="accent-word">self-discovery</span>, and the body becomes
+      a <span class="accent-word">sacred vessel</span> for spiritual awakening.
+    </p>
+    <span class="section-divider"></span>
+    <p class="philosophy-badge">Holistic Eastern Wellness &bull; Spiritual & Physical Healing Combined</p>
+  </div>
+</section>
+
+<!-- ===== HEALING PRACTICES (even grid) ===== -->
+<section class="section practices" id="practices" aria-label="Our Healing Practices">
+  <div class="practices-header">
+    <span class="section-label" style="color: rgba(201,169,110,0.6)">Healing Practices</span>
+    <h2 class="section-heading">Ancient Arts of Restoration</h2>
+  </div>
+  <div class="practices-grid">
+    <!-- Card 1: Thai Massage -->
+    <div class="practice-card zen-reveal zen-reveal-delay-1">
+      <div class="practice-img-wrap">
+        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1000&q=80" alt="Thai massage treatment in a tranquil setting" loading="lazy">
+      </div>
+      <div class="practice-info">
+        <h3>Thai Massage</h3>
+        <p>An ancient practice combining acupressure, energy work, and assisted yoga postures. Our certified Thai practitioners guide your body through a meditative dance of release and renewal, restoring the flow of vital energy.</p>
+        <span class="practice-tag">Energy Work</span>
+        <span class="practice-tag">Acupressure</span>
+        <span class="practice-tag">Flexibility</span>
+      </div>
+    </div>
+    <!-- Card 2: Hot Stone -->
+    <div class="practice-card zen-reveal zen-reveal-delay-2">
+      <div class="practice-img-wrap">
+        <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=1000&q=80" alt="Hot stone therapy with smooth heated stones" loading="lazy">
+      </div>
+      <div class="practice-info">
+        <h3>Hot Stone Therapy</h3>
+        <p>Heated basalt stones become conduits of the earth's warmth, placed upon energy meridians to dissolve tension and invite deep muscular surrender. A ritual of grounding that connects you to the elemental forces of nature.</p>
+        <span class="practice-tag">Deep Relaxation</span>
+        <span class="practice-tag">Meridian Work</span>
+        <span class="practice-tag">Grounding</span>
+      </div>
+    </div>
+    <!-- Card 3: Reflexology -->
+    <div class="practice-card zen-reveal zen-reveal-delay-3">
+      <div class="practice-img-wrap">
+        <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=1000&q=80" alt="Reflexology foot treatment" loading="lazy">
+      </div>
+      <div class="practice-info">
+        <h3>Reflexology</h3>
+        <p>Through precise pressure applied to reflex points of the feet, our practitioners unlock the body's innate healing intelligence. Each point is a gateway to organ health, emotional balance, and renewed vitality throughout your entire being.</p>
+        <span class="practice-tag">Reflex Points</span>
+        <span class="practice-tag">Organ Health</span>
+        <span class="practice-tag">Balance</span>
+      </div>
+    </div>
+    <!-- Card 4: Meditation -->
+    <div class="practice-card zen-reveal zen-reveal-delay-4">
+      <div class="practice-img-wrap">
+        <img src="https://images.unsplash.com/photo-1508672019048-805c876b67e2?w=1000&q=80" alt="Group meditation class at sunset" loading="lazy">
+      </div>
+      <div class="practice-info">
+        <h3>Meditation Classes</h3>
+        <p>Guided journeys into stillness led by experienced practitioners. From mindfulness and breathwork to transcendental and loving-kindness meditation &mdash; discover the practice that speaks to your spirit and brings lasting inner peace.</p>
+        <span class="practice-tag">Mindfulness</span>
+        <span class="practice-tag">Breathwork</span>
+        <span class="practice-tag">Inner Peace</span>
+      </div>
+    </div>
+  </div>
+  <p style="text-align:center; margin-top:32px; font-size:0.75rem; letter-spacing:0.15em; opacity:0.4; color:var(--secondary);">Certified Practitioners in Thai, Shiatsu & Reflexology</p>
+</section>
+
+<!-- ===== MEDITATION & CLASSES ===== -->
+<section class="section classes" id="classes" aria-label="Meditation and Classes Schedule">
+  <div class="container">
+    <div class="classes-header zen-reveal">
+      <span class="section-label">Meditation & Classes</span>
+      <h2 class="section-heading">Weekly Meditation Classes</h2>
+      <span class="section-divider"></span>
+    </div>
+    <div class="schedule-grid">
+      <div class="schedule-item zen-reveal zen-reveal-delay-1">
+        <p class="schedule-day">Monday & Wednesday</p>
+        <p class="schedule-class">Morning Mindfulness</p>
+        <p class="schedule-time">8:00 AM - 9:00 AM</p>
+      </div>
+      <div class="schedule-item zen-reveal zen-reveal-delay-2">
+        <p class="schedule-day">Tuesday & Thursday</p>
+        <p class="schedule-class">Breathwork & Pranayama</p>
+        <p class="schedule-time">10:00 AM - 11:00 AM</p>
+      </div>
+      <div class="schedule-item zen-reveal zen-reveal-delay-3">
+        <p class="schedule-day">Wednesday & Friday</p>
+        <p class="schedule-class">Guided Visualization</p>
+        <p class="schedule-time">6:00 PM - 7:00 PM</p>
+      </div>
+      <div class="schedule-item zen-reveal zen-reveal-delay-1">
+        <p class="schedule-day">Saturday</p>
+        <p class="schedule-class">Sound Bath Meditation</p>
+        <p class="schedule-time">9:00 AM - 10:30 AM</p>
+      </div>
+      <div class="schedule-item zen-reveal zen-reveal-delay-2">
+        <p class="schedule-day">Sunday</p>
+        <p class="schedule-class">Loving-Kindness Circle</p>
+        <p class="schedule-time">10:00 AM - 11:00 AM</p>
+      </div>
+      <div class="schedule-item zen-reveal zen-reveal-delay-3">
+        <p class="schedule-day">Daily</p>
+        <p class="schedule-class">Silent Sitting (Drop-in)</p>
+        <p class="schedule-time">7:00 AM - 7:30 AM</p>
+      </div>
+    </div>
+    <div class="classes-offer zen-reveal">
+      <p>Your <span class="highlight">First Meditation Class is Free</span> &mdash; come as you are.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MEMBERSHIP TIERS ===== -->
+<section class="section membership" id="membership" aria-label="Membership Plans">
+  <div class="container">
+    <div class="membership-header zen-reveal">
+      <span class="section-label" style="color: rgba(201,169,110,0.6)">Membership</span>
+      <h2 class="section-heading">Choose Your Path</h2>
+      <span class="section-divider" style="margin-left:auto;margin-right:auto;"></span>
+    </div>
+    <div class="tiers">
+      <!-- Lotus -->
+      <div class="tier zen-reveal zen-reveal-delay-1">
+        <h3 class="tier-name">Lotus</h3>
+        <p class="tier-price">$79<span>/mo</span></p>
+        <p class="tier-period">Monthly Membership</p>
+        <ul>
+          <li>2 Treatments per month</li>
+          <li>Unlimited meditation classes</li>
+          <li>Access to relaxation lounge</li>
+          <li>Herbal tea service</li>
+        </ul>
+        <a href="#contact" class="tier-cta">Choose Lotus</a>
+      </div>
+      <!-- Bamboo -->
+      <div class="tier featured zen-reveal zen-reveal-delay-2">
+        <h3 class="tier-name">Bamboo</h3>
+        <p class="tier-price">$139<span>/mo</span></p>
+        <p class="tier-period">Monthly Membership</p>
+        <ul>
+          <li>4 Treatments per month</li>
+          <li>Unlimited meditation classes</li>
+          <li>Hot stone add-on included</li>
+          <li>Priority scheduling</li>
+          <li>Guest pass (1/month)</li>
+        </ul>
+        <a href="#contact" class="tier-cta">Choose Bamboo</a>
+      </div>
+      <!-- Enlightenment -->
+      <div class="tier zen-reveal zen-reveal-delay-3">
+        <h3 class="tier-name">Enlightenment</h3>
+        <p class="tier-price">$199<span>/mo</span></p>
+        <p class="tier-period">Monthly Membership</p>
+        <ul>
+          <li>Unlimited treatments</li>
+          <li>All classes & workshops</li>
+          <li>Private meditation sessions</li>
+          <li>Exclusive retreat events</li>
+          <li>Wellness concierge</li>
+        </ul>
+        <a href="#contact" class="tier-cta">Choose Enlightenment</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== THE JOURNEY ===== -->
+<section class="section journey" id="journey" aria-label="Your Wellness Journey">
+  <div class="container">
+    <div class="journey-header zen-reveal">
+      <span class="section-label">The Journey</span>
+      <h2 class="section-heading">Your Path to Wholeness</h2>
+      <span class="section-divider"></span>
+    </div>
+    <div class="journey-path" id="journeyPath">
+      <div class="journey-stop zen-reveal">
+        <p class="journey-step-num">Step One</p>
+        <h3>Arrival & Intention</h3>
+        <p>Enter our sanctuary and leave the outer world behind. Share your intentions with your guide over a cup of sacred herbal tea.</p>
+      </div>
+      <div class="journey-stop zen-reveal zen-reveal-delay-1">
+        <p class="journey-step-num">Step Two</p>
+        <h3>Assessment & Alignment</h3>
+        <p>Our practitioners assess your energy, posture, and emotional state to create a personalized healing protocol unique to your needs.</p>
+      </div>
+      <div class="journey-stop zen-reveal zen-reveal-delay-2">
+        <p class="journey-step-num">Step Three</p>
+        <h3>Healing & Restoration</h3>
+        <p>Experience the transformative power of our Eastern healing practices. Each session is a sacred ceremony of body and spirit.</p>
+      </div>
+      <div class="journey-stop zen-reveal zen-reveal-delay-3">
+        <p class="journey-step-num">Step Four</p>
+        <h3>Integration & Reflection</h3>
+        <p>Rest in our meditation garden. Journal your experience. Receive guidance for continuing your practice at home.</p>
+      </div>
+      <div class="journey-stop zen-reveal zen-reveal-delay-4">
+        <p class="journey-step-num">Ongoing</p>
+        <h3>Continued Awakening</h3>
+        <p>Your membership ensures this journey never ends. Regular practice deepens your connection to inner peace and radiant health.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WISDOM WALL ===== -->
+<section class="section wisdom" id="wisdom" aria-label="Testimonials">
+  <div class="container">
+    <div class="wisdom-header zen-reveal">
+      <span class="section-label" style="color: rgba(201,169,110,0.6)">Wisdom Wall</span>
+      <h2 class="section-heading">Words from Fellow Seekers</h2>
+      <span class="section-divider" style="margin-left:auto;margin-right:auto;"></span>
+    </div>
+    <div class="wisdom-quotes">
+      <div class="wisdom-quote">
+        <blockquote>Zen Wellness Retreat did not just relieve my pain &mdash; it awakened something within me I had forgotten existed. Every visit feels like coming home to myself.</blockquote>
+        <p class="wisdom-author">Aria M. &bull; Enlightenment Member</p>
+      </div>
+      <div class="wisdom-quote">
+        <blockquote>The Thai massage here transcends technique. It is a spiritual experience. I leave each session feeling lighter in body and clearer in mind.</blockquote>
+        <p class="wisdom-author">David L. &bull; Bamboo Member</p>
+      </div>
+      <div class="wisdom-quote">
+        <blockquote>I came for the meditation classes and discovered a community of souls on the same path. The weekly sound bath has become my anchor.</blockquote>
+        <p class="wisdom-author">Mei C. &bull; Lotus Member</p>
+      </div>
+      <div class="wisdom-quote">
+        <blockquote>In twelve years of seeking wellness, nothing has compared to this place. The practitioners here do not just treat &mdash; they truly heal.</blockquote>
+        <p class="wisdom-author">James R. &bull; Enlightenment Member</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SACRED SPACE GALLERY ===== -->
+<section class="section gallery" id="gallery" aria-label="Gallery of our sacred space">
+  <div class="container">
+    <div class="gallery-header zen-reveal">
+      <span class="section-label">Sacred Space</span>
+      <h2 class="section-heading">Our Sanctuary</h2>
+      <span class="section-divider"></span>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item zen-reveal zen-reveal-delay-1">
+        <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&q=80" alt="Zen meditation space with natural elements" loading="lazy">
+      </div>
+      <div class="gallery-item zen-reveal zen-reveal-delay-2">
+        <img src="https://images.unsplash.com/photo-1596178065887-1198b6148b2b?w=600&q=80" alt="Warm candlelit relaxation area" loading="lazy">
+      </div>
+      <div class="gallery-item zen-reveal zen-reveal-delay-3">
+        <img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?w=600&q=80" alt="Serene spa environment" loading="lazy">
+      </div>
+      <div class="gallery-item zen-reveal zen-reveal-delay-4">
+        <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&q=80" alt="Zen meditation space" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT / BEGIN YOUR JOURNEY ===== -->
+<section class="section contact" id="contact" aria-label="Contact us to begin your journey">
+  <div class="contact-inner">
+    <div class="contact-header zen-reveal">
+      <span class="section-label">Begin Your Journey</span>
+      <h2 class="section-heading">Inquire Within</h2>
+      <span class="section-divider"></span>
+      <p style="margin-top: 16px; font-size: 0.95rem; font-weight: 300; line-height: 1.7; color: #666;">
+        Take the first step toward holistic well-being. Reach out and we will guide you to the path that resonates with your spirit.
+      </p>
+    </div>
+    <form class="contact-form zen-reveal" onsubmit="return handleFormSubmit(event)" aria-label="Inquiry form">
+      <div class="form-row">
+        <input type="text" class="form-field" placeholder="Your Name" aria-label="Your name" required>
+        <input type="email" class="form-field" placeholder="Your Email" aria-label="Your email" required>
+      </div>
+      <input type="tel" class="form-field" placeholder="Phone (optional)" aria-label="Phone number">
+      <select class="form-field" aria-label="Select your interest">
+        <option value="" disabled selected>What calls to you?</option>
+        <option value="thai-massage">Thai Massage</option>
+        <option value="hot-stone">Hot Stone Therapy</option>
+        <option value="reflexology">Reflexology</option>
+        <option value="meditation">Meditation Classes</option>
+        <option value="lotus">Lotus Membership ($79/mo)</option>
+        <option value="bamboo">Bamboo Membership ($139/mo)</option>
+        <option value="enlightenment">Enlightenment Membership ($199/mo)</option>
+        <option value="general">General Inquiry</option>
+      </select>
+      <textarea class="form-field" placeholder="Share your intentions..." aria-label="Your message"></textarea>
+      <button type="submit" class="form-submit">Begin Your Journey</button>
+    </form>
+    <div class="contact-details zen-reveal">
+      <span><a href="tel:+15553344556">+1 (555) 334-4556</a></span>
+      <span>108 Lotus Lane</span>
+      <span>Daily 8AM - 9PM</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-lotus" aria-hidden="true">
+    <svg viewBox="0 0 48 48" fill="currentColor"><path d="M24 4c-2 6-6 10-10 14 4 1 8 1 10 4 2-3 6-3 10-4C30 14 26 10 24 4zM14 20c-4 4-8 10-8 16 4-2 10-4 14-2-2-4-2-10-6-14zM34 20c4 4 8 10 8 16-4-2-10-4-14-2 2-4 2-10 6-14zM24 26c-2 4-4 10-2 16 2-4 4-8 2-16zM24 26c2 4 4 10 2 16-2-4-4-8-2-16z"/></svg>
+  </div>
+  <div class="footer-contact">
+    <a href="tel:+15553344556">+1 (555) 334-4556</a> &nbsp;&bull;&nbsp; 108 Lotus Lane &nbsp;&bull;&nbsp; Daily 8AM - 9PM
+  </div>
+  <p class="footer-copy">&copy; 2026 Zen Wellness Retreat. All rights reserved.</p>
+</footer>
+
+<script>
+/* ===== RADIAL NAVIGATION ===== */
+const navToggle = document.getElementById('navToggle');
+const navOverlay = document.getElementById('navOverlay');
+
+navToggle.addEventListener('click', () => {
+  const isActive = navOverlay.classList.toggle('active');
+  navToggle.classList.toggle('active');
+  navToggle.setAttribute('aria-expanded', isActive);
+  document.body.style.overflow = isActive ? 'hidden' : '';
+});
+
+navOverlay.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    navOverlay.classList.remove('active');
+    navToggle.classList.remove('active');
+    navToggle.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  });
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && navOverlay.classList.contains('active')) {
+    navOverlay.classList.remove('active');
+    navToggle.classList.remove('active');
+    navToggle.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+    navToggle.focus();
+  }
+});
+
+/* ===== SCROLL REVEAL ===== */
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('revealed');
+    }
+  });
+}, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.zen-reveal').forEach(el => revealObserver.observe(el));
+
+/* ===== WISDOM QUOTES REVEAL ===== */
+const quoteObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.2 });
+
+document.querySelectorAll('.wisdom-quote').forEach(el => quoteObserver.observe(el));
+
+/* ===== JOURNEY PATH LINE DRAW ===== */
+const journeyPath = document.getElementById('journeyPath');
+const journeyObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('line-drawn');
+    }
+  });
+}, { threshold: 0.1 });
+
+if (journeyPath) journeyObserver.observe(journeyPath);
+
+/* ===== NAV BACKGROUND ON SCROLL ===== */
+let lastScroll = 0;
+window.addEventListener('scroll', () => {
+  const current = window.scrollY;
+  if (current > 100) {
+    navToggle.style.background = 'rgba(75, 0, 130, 0.95)';
+  } else {
+    navToggle.style.background = 'var(--primary)';
+  }
+  lastScroll = current;
+}, { passive: true });
+
+/* ===== FORM HANDLER ===== */
+function handleFormSubmit(e) {
+  e.preventDefault();
+  const btn = e.target.querySelector('.form-submit');
+  const originalText = btn.textContent;
+  btn.textContent = 'Namaste. We will reach out soon.';
+  btn.style.background = 'var(--accent)';
+  btn.style.color = 'var(--primary)';
+  btn.disabled = true;
+  setTimeout(() => {
+    btn.textContent = originalText;
+    btn.style.background = '';
+    btn.style.color = '';
+    btn.disabled = false;
+    e.target.reset();
+  }, 4000);
+  return false;
+}
+
+/* ===== SMOOTH SCROLL POLYFILL FOR ANCHOR LINKS ===== */
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,1518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Cuts Express | Fast Salon Services - No Appointment Needed</title>
+    <meta name="description" content="Quality salon services in 30 minutes or less. Walk in for blowouts, trims, and color touch-ups at affordable prices. No appointment needed.">
+    <meta name="keywords" content="quick haircut, express salon, walk-in salon, affordable haircut, blowout, trim, bang cut, color touch-up">
+    <meta property="og:title" content="Quick Cuts Express | Fast Salon Services">
+    <meta property="og:description" content="Quality salon services in 30 minutes or less. No appointment needed.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* ===== RESET & BASE ===== */
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; font-size: 16px; }
+        body {
+            font-family: 'Work Sans', sans-serif;
+            color: #1a1a1a;
+            background: #F5FAFA;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; font-weight: 800; line-height: 1.15; }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+        img { max-width: 100%; display: block; }
+        button, input, select, textarea { font-family: inherit; font-size: inherit; border: none; outline: none; }
+
+        /* ===== VARIABLES ===== */
+        :root {
+            --teal: #008080;
+            --teal-dark: #006666;
+            --coral: #FF6F61;
+            --coral-dark: #E5554D;
+            --white: #FFFFFF;
+            --bg: #F5FAFA;
+            --text: #1a1a1a;
+            --text-light: #555;
+            --section-pad: 80px 0;
+        }
+
+        /* ===== UTILITY ===== */
+        .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+        .section-label {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--coral);
+            margin-bottom: 8px;
+        }
+        .section-title {
+            font-size: clamp(2rem, 5vw, 2.8rem);
+            color: var(--teal-dark);
+            margin-bottom: 16px;
+        }
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 600px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.2s;
+            text-align: center;
+        }
+        .btn-coral {
+            background: var(--coral);
+            color: var(--white);
+        }
+        .btn-coral:hover { background: var(--coral-dark); transform: translateY(-1px); }
+        .btn-teal {
+            background: var(--teal);
+            color: var(--white);
+        }
+        .btn-teal:hover { background: var(--teal-dark); transform: translateY(-1px); }
+        .btn-outline {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+        .btn-outline:hover { background: var(--white); color: var(--teal); }
+
+        /* ===== ANIMATIONS ===== */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .slide-left {
+            opacity: 0;
+            transform: translateX(-40px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+        .slide-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .slide-right {
+            opacity: 0;
+            transform: translateX(40px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+        .slide-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* ===== NAV ===== */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: var(--teal);
+            padding: 0 24px;
+            transition: box-shadow 0.3s;
+        }
+        .nav.scrolled {
+            box-shadow: 0 2px 20px rgba(0,0,0,0.15);
+        }
+        .nav-inner {
+            max-width: 1140px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 64px;
+        }
+        .nav-logo {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 1.3rem;
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .nav-logo svg { flex-shrink: 0; }
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+        .nav-links a {
+            color: rgba(255,255,255,0.85);
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover { color: var(--white); }
+        .nav-cta {
+            background: var(--coral) !important;
+            color: var(--white) !important;
+            padding: 8px 20px;
+            font-weight: 600 !important;
+            transition: background 0.2s;
+        }
+        .nav-cta:hover { background: var(--coral-dark) !important; }
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 4px;
+        }
+        .nav-toggle span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--white);
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background: var(--teal);
+        }
+        .hero-bg-diagonal {
+            position: absolute;
+            inset: 0;
+            clip-path: polygon(0 0, 100% 0, 100% 65%, 0 100%);
+            background: var(--coral);
+            z-index: 1;
+        }
+        .hero-bg-image {
+            position: absolute;
+            inset: 0;
+            z-index: 2;
+            background: url('https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1920&q=80') center/cover no-repeat;
+            opacity: 0.15;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 120px 24px 80px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+        .hero-text { color: var(--white); }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(4px);
+            padding: 8px 16px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            color: var(--white);
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .hero-badge svg { flex-shrink: 0; }
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.2rem);
+            font-weight: 900;
+            line-height: 1.05;
+            margin-bottom: 20px;
+        }
+        .hero h1 span { color: var(--coral); display: inline; }
+        .hero-tagline {
+            font-size: 1.2rem;
+            color: rgba(255,255,255,0.85);
+            margin-bottom: 32px;
+            max-width: 480px;
+        }
+        .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
+        .hero-trust {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 28px;
+            color: rgba(255,255,255,0.8);
+            font-size: 0.95rem;
+        }
+        .hero-trust-stars { display: inline-flex; align-items: center; gap: 2px; }
+        .hero-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .hero-clock {
+            width: 280px;
+            height: 280px;
+            border: 6px solid var(--white);
+            border-radius: 50%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255,255,255,0.08);
+            backdrop-filter: blur(8px);
+        }
+        .hero-clock-center {
+            width: 12px;
+            height: 12px;
+            background: var(--coral);
+            border-radius: 50%;
+            position: absolute;
+            z-index: 2;
+        }
+        .hero-clock-hand-min {
+            position: absolute;
+            width: 4px;
+            height: 90px;
+            background: var(--white);
+            bottom: 50%;
+            left: calc(50% - 2px);
+            transform-origin: bottom center;
+            animation: clockSpin 4s ease-in-out infinite;
+        }
+        .hero-clock-hand-hr {
+            position: absolute;
+            width: 5px;
+            height: 65px;
+            background: var(--coral);
+            bottom: 50%;
+            left: calc(50% - 2.5px);
+            transform-origin: bottom center;
+            transform: rotate(60deg);
+        }
+        .hero-clock-label {
+            position: absolute;
+            bottom: -50px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: var(--white);
+            white-space: nowrap;
+        }
+        @keyframes clockSpin {
+            0% { transform: rotate(0deg); }
+            50% { transform: rotate(180deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .clock-marker {
+            position: absolute;
+            width: 3px;
+            height: 14px;
+            background: rgba(255,255,255,0.4);
+        }
+
+        /* ===== SPEED PROMISE ===== */
+        .speed-promise {
+            padding: 80px 0;
+            background: var(--white);
+            position: relative;
+        }
+        .speed-promise::before {
+            content: '';
+            position: absolute;
+            top: -60px;
+            left: 0;
+            right: 0;
+            height: 60px;
+            background: var(--white);
+            clip-path: polygon(0 100%, 100% 0, 100% 100%);
+        }
+        .speed-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .speed-timer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .timer-circle {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .timer-circle svg {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            transform: rotate(-90deg);
+        }
+        .timer-track {
+            fill: none;
+            stroke: #e0f0f0;
+            stroke-width: 8;
+        }
+        .timer-progress {
+            fill: none;
+            stroke: var(--teal);
+            stroke-width: 8;
+            stroke-linecap: butt;
+            stroke-dasharray: 628;
+            stroke-dashoffset: 628;
+            transition: stroke-dashoffset 2s ease-out;
+        }
+        .timer-progress.animated {
+            stroke-dashoffset: 100;
+        }
+        .timer-number {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 4rem;
+            color: var(--teal);
+            z-index: 1;
+            line-height: 1;
+        }
+        .timer-unit {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            z-index: 1;
+        }
+        .speed-text h2 {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            color: var(--teal-dark);
+            margin-bottom: 16px;
+        }
+        .speed-text p {
+            color: var(--text-light);
+            font-size: 1.05rem;
+            margin-bottom: 24px;
+        }
+        .speed-guarantee {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--bg);
+            padding: 14px 24px;
+            border-left: 4px solid var(--coral);
+            font-weight: 600;
+            color: var(--teal-dark);
+        }
+
+        /* ===== SERVICES ===== */
+        .services {
+            padding: var(--section-pad);
+            background: var(--bg);
+        }
+        .services-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        .services-header .section-subtitle { margin: 0 auto; }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+        .service-card {
+            background: var(--white);
+            overflow: hidden;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+        .service-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+        }
+        .service-card-image {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+        }
+        .service-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s;
+        }
+        .service-card:hover .service-card-image img {
+            transform: scale(1.05);
+        }
+        .service-card-time {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: var(--teal);
+            color: var(--white);
+            padding: 4px 12px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .service-card-time svg { width: 14px; height: 14px; }
+        .service-card-body {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .service-card-body h3 {
+            font-size: 1.1rem;
+            color: var(--teal-dark);
+            margin-bottom: 6px;
+        }
+        .service-card-body p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 16px;
+            flex: 1;
+        }
+        .service-card-price {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 1.8rem;
+            color: var(--coral);
+        }
+
+        /* ===== HOW IT WORKS ===== */
+        .how-it-works {
+            padding: var(--section-pad);
+            background: var(--teal);
+            position: relative;
+            overflow: hidden;
+        }
+        .how-it-works::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url('https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=1200&q=80') center/cover no-repeat;
+            opacity: 0.08;
+        }
+        .how-header {
+            text-align: center;
+            margin-bottom: 56px;
+            position: relative;
+            z-index: 1;
+        }
+        .how-header .section-label { color: rgba(255,255,255,0.7); }
+        .how-header .section-title { color: var(--white); }
+        .how-header .section-subtitle { color: rgba(255,255,255,0.7); margin: 0 auto; }
+        .how-steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            position: relative;
+            z-index: 1;
+        }
+        .how-step {
+            text-align: center;
+            padding: 40px 24px;
+            background: rgba(255,255,255,0.07);
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(255,255,255,0.12);
+            position: relative;
+        }
+        .step-number {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 3.5rem;
+            color: var(--coral);
+            line-height: 1;
+            margin-bottom: 16px;
+        }
+        .step-icon {
+            width: 64px;
+            height: 64px;
+            background: var(--coral);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+        }
+        .step-icon svg { width: 28px; height: 28px; }
+        .how-step h3 {
+            font-size: 1.2rem;
+            color: var(--white);
+            margin-bottom: 8px;
+        }
+        .how-step p {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.95rem;
+        }
+        .step-connector {
+            display: none;
+        }
+
+        /* ===== WHY CHOOSE US ===== */
+        .why-us {
+            padding: var(--section-pad);
+            background: var(--white);
+        }
+        .why-header {
+            text-align: center;
+            margin-bottom: 56px;
+        }
+        .why-header .section-subtitle { margin: 0 auto; }
+        .why-rows {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+        .why-row {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 32px;
+            align-items: center;
+            padding: 28px 24px;
+            border-bottom: 1px solid #eef4f4;
+            transition: background 0.2s;
+        }
+        .why-row:hover { background: var(--bg); }
+        .why-row:nth-child(even) { direction: ltr; }
+        .why-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .why-icon svg { width: 28px; height: 28px; }
+        .why-content h3 {
+            font-size: 1.1rem;
+            color: var(--teal-dark);
+            margin-bottom: 4px;
+        }
+        .why-content p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* ===== GALLERY ===== */
+        .gallery {
+            padding: var(--section-pad);
+            background: var(--bg);
+        }
+        .gallery-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        .gallery-header .section-subtitle { margin: 0 auto; }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            height: 300px;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.06);
+        }
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 24px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.7));
+            color: var(--white);
+            transform: translateY(100%);
+            transition: transform 0.4s;
+        }
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+        .gallery-overlay h3 {
+            font-size: 1.1rem;
+            margin-bottom: 4px;
+        }
+        .gallery-overlay p {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.8);
+        }
+
+        /* ===== REVIEWS ===== */
+        .reviews {
+            padding: var(--section-pad);
+            background: var(--white);
+        }
+        .reviews-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        .reviews-header .section-subtitle { margin: 0 auto; }
+        .reviews-trust {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--teal);
+            color: var(--white);
+            padding: 10px 24px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.95rem;
+            margin-bottom: 32px;
+        }
+        .reviews-trust .stars { display: inline-flex; align-items: center; gap: 2px; }
+        .review-list {
+            max-width: 720px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .review-item {
+            background: var(--bg);
+            padding: 24px 28px;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 20px;
+            align-items: start;
+            border-left: 4px solid var(--teal);
+        }
+        .review-stars {
+            display: flex;
+            gap: 2px;
+            margin-bottom: 6px;
+        }
+        .review-star {
+            width: 18px;
+            height: 18px;
+            color: #FFD700;
+        }
+        .review-star.empty { color: #ddd; }
+        .review-avatar {
+            width: 48px;
+            height: 48px;
+            background: var(--teal);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+        .review-text {
+            font-size: 0.95rem;
+            color: var(--text);
+            margin-bottom: 6px;
+            font-style: italic;
+        }
+        .review-author {
+            font-weight: 600;
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        /* ===== LOCATION ===== */
+        .location {
+            padding: var(--section-pad);
+            background: var(--bg);
+        }
+        .location-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        .location-header .section-subtitle { margin: 0 auto; }
+        .location-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            overflow: hidden;
+        }
+        .location-image {
+            position: relative;
+            min-height: 400px;
+        }
+        .location-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            inset: 0;
+        }
+        .location-info {
+            background: var(--teal);
+            color: var(--white);
+            padding: 48px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .location-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 24px;
+        }
+        .location-detail {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+        .location-detail svg {
+            width: 22px;
+            height: 22px;
+            flex-shrink: 0;
+            margin-top: 2px;
+            color: var(--coral);
+        }
+        .location-detail-text strong {
+            display: block;
+            font-size: 0.95rem;
+            margin-bottom: 4px;
+        }
+        .location-detail-text span {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.75);
+        }
+        .hours-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin-top: 8px;
+        }
+        .hours-item {
+            font-size: 0.9rem;
+        }
+        .hours-item strong {
+            color: var(--coral);
+            display: block;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* ===== QUICK BOOK ===== */
+        .quick-book {
+            padding: var(--section-pad);
+            background: var(--white);
+            position: relative;
+        }
+        .quick-book-inner {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .quick-book-inner .section-subtitle { margin: 0 auto 36px; }
+        .book-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+        .form-group {
+            position: relative;
+        }
+        .form-group.full { grid-column: 1 / -1; }
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 14px 16px;
+            background: var(--bg);
+            border: none;
+            border-bottom: 3px solid #dce8e8;
+            font-size: 0.95rem;
+            color: var(--text);
+            transition: border-color 0.3s;
+        }
+        .form-group input:focus,
+        .form-group select:focus {
+            border-bottom-color: var(--teal);
+        }
+        .form-group input::placeholder { color: #aaa; }
+        .form-group select { cursor: pointer; appearance: none; -webkit-appearance: none; }
+        .form-submit {
+            grid-column: 1 / -1;
+            margin-top: 8px;
+        }
+        .form-submit .btn {
+            width: 100%;
+            padding: 16px;
+            font-size: 1.1rem;
+        }
+        .form-note {
+            grid-column: 1 / -1;
+            font-size: 0.8rem;
+            color: var(--text-light);
+            margin-top: 4px;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: #003c3c;
+            color: rgba(255,255,255,0.7);
+            padding: 40px 0 24px;
+        }
+        .footer-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        .footer-brand {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 1.1rem;
+            color: var(--white);
+        }
+        .footer-links {
+            display: flex;
+            gap: 24px;
+        }
+        .footer-links a {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.6);
+            transition: color 0.2s;
+        }
+        .footer-links a:hover { color: var(--white); }
+        .footer-copy {
+            width: 100%;
+            text-align: center;
+            font-size: 0.8rem;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* ===== MOBILE ===== */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 64px;
+                left: 0;
+                right: 0;
+                background: var(--teal-dark);
+                flex-direction: column;
+                padding: 20px 24px;
+                gap: 16px;
+            }
+            .nav-links.open { display: flex; }
+            .nav-toggle { display: block; }
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                padding-top: 100px;
+            }
+            .hero-tagline { margin: 0 auto 32px; }
+            .hero-buttons { justify-content: center; }
+            .hero-trust { justify-content: center; }
+            .hero-visual { order: -1; margin-bottom: 16px; }
+            .hero-clock { width: 180px; height: 180px; }
+            .hero-clock-hand-min { height: 55px; }
+            .hero-clock-hand-hr { height: 40px; }
+            .hero-clock-label { font-size: 1.1rem; bottom: -40px; }
+            .speed-inner { grid-template-columns: 1fr; text-align: center; }
+            .speed-guarantee { justify-content: center; }
+            .services-grid { grid-template-columns: 1fr 1fr; }
+            .how-steps { grid-template-columns: 1fr; }
+            .gallery-grid { grid-template-columns: 1fr; }
+            .gallery-item { height: 240px; }
+            .location-grid { grid-template-columns: 1fr; }
+            .location-image { min-height: 250px; }
+            .book-form { grid-template-columns: 1fr; }
+            .form-group.full { grid-column: auto; }
+            .form-submit { grid-column: auto; }
+            .form-note { grid-column: auto; }
+            .footer-inner { justify-content: center; text-align: center; }
+        }
+
+        @media (max-width: 480px) {
+            :root { --section-pad: 56px 0; }
+            .hero h1 { font-size: 2.2rem; }
+            .hero-buttons { flex-direction: column; align-items: center; }
+            .hero-buttons .btn { width: 100%; }
+            .services-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+        <a href="#" class="nav-logo" aria-label="Quick Cuts Express Home">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            QUICK CUTS
+        </a>
+        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="nav-links">
+            <a href="#services">Services</a>
+            <a href="#how-it-works">How It Works</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#location">Location</a>
+            <a href="#book" class="nav-cta">Walk In Now</a>
+        </div>
+    </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<header class="hero" id="hero">
+    <div class="hero-bg-diagonal"></div>
+    <div class="hero-bg-image" role="img" aria-label="Modern salon interior"></div>
+    <div class="hero-content">
+        <div class="hero-text">
+            <div class="hero-badge">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                No Appointment Needed
+            </div>
+            <h1>Affordable Quality,<br><span>Zero Wait</span></h1>
+            <p class="hero-tagline">Fast, professional salon services for busy people. Walk in, look great, get back to your day &mdash; all in 30 minutes or less.</p>
+            <div class="hero-buttons">
+                <a href="#book" class="btn btn-coral">Walk In Now</a>
+                <a href="tel:+15550123456" class="btn btn-outline">Call Ahead</a>
+            </div>
+            <div class="hero-trust">
+                <span class="hero-trust-stars" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="#FFD700"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#FFD700"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#FFD700"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#FFD700"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#FFD700"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+                <span>4.7 Stars &mdash; 800+ Reviews</span>
+            </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+            <div class="hero-clock">
+                <div class="hero-clock-hand-hr"></div>
+                <div class="hero-clock-hand-min"></div>
+                <div class="hero-clock-center"></div>
+                <span class="hero-clock-label">30 Min or Less</span>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- ===== SPEED PROMISE ===== -->
+<section class="speed-promise" id="speed-promise">
+    <div class="container">
+        <div class="speed-inner">
+            <div class="speed-timer fade-in">
+                <div class="timer-circle">
+                    <svg viewBox="0 0 200 200">
+                        <circle class="timer-track" cx="100" cy="100" r="90"/>
+                        <circle class="timer-progress" cx="100" cy="100" r="90"/>
+                    </svg>
+                    <span class="timer-number" data-target="30">0</span>
+                </div>
+                <span class="timer-unit">Minutes Guaranteed</span>
+            </div>
+            <div class="speed-text fade-in">
+                <p class="section-label">Our Speed Promise</p>
+                <h2>In the Chair &amp; Out the Door &mdash; Fast</h2>
+                <p>We respect your time. Every service at Quick Cuts Express is designed to deliver professional results in 30 minutes or less. Our streamlined process means no waiting, no wasted time, and no compromise on quality.</p>
+                <div class="speed-guarantee">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FF6F61" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+                    30 Minutes or Less &mdash; Guaranteed
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section class="services" id="services">
+    <div class="container">
+        <div class="services-header fade-in">
+            <p class="section-label">Services &amp; Pricing</p>
+            <h2 class="section-title">Express Services, Honest Prices</h2>
+            <p class="section-subtitle">No hidden fees, no upsells. Just quality service at a fair price, done fast.</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card fade-in" style="transition-delay:0.1s">
+                <div class="service-card-image">
+                    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&q=80" alt="Professional blowout styling" loading="lazy">
+                    <div class="service-card-time">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        20 MIN
+                    </div>
+                </div>
+                <div class="service-card-body">
+                    <h3>Blowout</h3>
+                    <p>Wash, style, and finish for any hair type</p>
+                    <div class="service-card-price">$25</div>
+                </div>
+            </div>
+            <div class="service-card fade-in" style="transition-delay:0.2s">
+                <div class="service-card-image">
+                    <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=600&q=80" alt="Quick trim hair cutting" loading="lazy">
+                    <div class="service-card-time">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        15 MIN
+                    </div>
+                </div>
+                <div class="service-card-body">
+                    <h3>Quick Trim</h3>
+                    <p>Clean up, shape, and style in minutes</p>
+                    <div class="service-card-price">$18</div>
+                </div>
+            </div>
+            <div class="service-card fade-in" style="transition-delay:0.3s">
+                <div class="service-card-image">
+                    <img src="https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?w=600&q=80" alt="Bang cut women's styling" loading="lazy">
+                    <div class="service-card-time">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        10 MIN
+                    </div>
+                </div>
+                <div class="service-card-body">
+                    <h3>Bang Cut</h3>
+                    <p>Quick bang trim, perfectly shaped</p>
+                    <div class="service-card-price">$12</div>
+                </div>
+            </div>
+            <div class="service-card fade-in" style="transition-delay:0.4s">
+                <div class="service-card-image">
+                    <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=600&q=80" alt="Express color touch-up service" loading="lazy">
+                    <div class="service-card-time" style="background:var(--coral)">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        30 MIN
+                    </div>
+                </div>
+                <div class="service-card-body">
+                    <h3>Color Touch-Up</h3>
+                    <p>Root coverage and color refresh</p>
+                    <div class="service-card-price">$35</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== HOW IT WORKS ===== -->
+<section class="how-it-works" id="how-it-works">
+    <div class="container">
+        <div class="how-header">
+            <p class="section-label">How It Works</p>
+            <h2 class="section-title">Three Steps. Zero Hassle.</h2>
+            <p class="section-subtitle">Getting a great look has never been this easy or this fast.</p>
+        </div>
+        <div class="how-steps">
+            <div class="how-step fade-in" style="transition-delay:0.1s">
+                <div class="step-number">01</div>
+                <div class="step-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><line x1="12" y1="3" x2="12" y2="15"/><polyline points="8 11 12 15 16 11"/></svg>
+                </div>
+                <h3>Walk In</h3>
+                <p>No appointment, no app, no waiting list. Just walk through our door whenever it suits your schedule.</p>
+            </div>
+            <div class="how-step fade-in" style="transition-delay:0.3s">
+                <div class="step-number">02</div>
+                <div class="step-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+                </div>
+                <h3>Get Styled</h3>
+                <p>Our expert stylists get to work immediately. Quality results, done right, done fast.</p>
+            </div>
+            <div class="how-step fade-in" style="transition-delay:0.5s">
+                <div class="step-number">03</div>
+                <div class="step-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"><polyline points="13 17 18 12 13 7"/><polyline points="6 17 11 12 6 7"/></svg>
+                </div>
+                <h3>Get Going</h3>
+                <p>Look amazing and get back to your busy day. The whole thing takes 30 minutes or less.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== WHY CHOOSE US ===== -->
+<section class="why-us" id="why-us">
+    <div class="container">
+        <div class="why-header fade-in">
+            <p class="section-label">Why Quick Cuts</p>
+            <h2 class="section-title">Built for Busy People</h2>
+            <p class="section-subtitle">Everything about us is designed to save you time without cutting corners on quality.</p>
+        </div>
+        <div class="why-rows">
+            <div class="why-row slide-left" style="transition-delay:0.1s">
+                <div class="why-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#008080" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <div class="why-content">
+                    <h3>30-Minute Guarantee</h3>
+                    <p>Every service is designed to be completed in 30 minutes or less. We value your time as much as you do.</p>
+                </div>
+            </div>
+            <div class="why-row slide-right" style="transition-delay:0.2s">
+                <div class="why-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#008080" stroke-width="2" stroke-linecap="round"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                </div>
+                <div class="why-content">
+                    <h3>Transparent Pricing</h3>
+                    <p>What you see is what you pay. No hidden charges, no surprise add-ons, no tipping pressure.</p>
+                </div>
+            </div>
+            <div class="why-row slide-left" style="transition-delay:0.3s">
+                <div class="why-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#008080" stroke-width="2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                </div>
+                <div class="why-content">
+                    <h3>Expert Stylists</h3>
+                    <p>Our team is trained specifically in express techniques. Speed does not mean sacrifice.</p>
+                </div>
+            </div>
+            <div class="why-row slide-right" style="transition-delay:0.4s">
+                <div class="why-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#008080" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                </div>
+                <div class="why-content">
+                    <h3>Open 7 Days a Week</h3>
+                    <p>Early mornings to late evenings, seven days a week. We fit your schedule, not the other way around.</p>
+                </div>
+            </div>
+            <div class="why-row slide-left" style="transition-delay:0.5s">
+                <div class="why-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#008080" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <div class="why-content">
+                    <h3>Clean &amp; Sanitized</h3>
+                    <p>Every station is cleaned between clients. Fresh tools, fresh cape, fresh start every time.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== GALLERY ===== -->
+<section class="gallery" id="gallery">
+    <div class="container">
+        <div class="gallery-header fade-in">
+            <p class="section-label">Our Salon</p>
+            <h2 class="section-title">See the Quick Cuts Experience</h2>
+            <p class="section-subtitle">A look inside our salon and the talented team that keeps you looking great.</p>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item fade-in" style="transition-delay:0.1s">
+                <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=600&q=80" alt="Professional stylist at Quick Cuts Express" loading="lazy">
+                <div class="gallery-overlay">
+                    <h3>Expert Stylists</h3>
+                    <p>Trained in express techniques for flawless results, fast</p>
+                </div>
+            </div>
+            <div class="gallery-item fade-in" style="transition-delay:0.2s">
+                <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=600&q=80" alt="Confident professional after a Quick Cuts visit" loading="lazy">
+                <div class="gallery-overlay">
+                    <h3>Busy Professionals Love Us</h3>
+                    <p>Walk in on your lunch break and walk out looking amazing</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== REVIEWS ===== -->
+<section class="reviews" id="reviews">
+    <div class="container">
+        <div class="reviews-header fade-in">
+            <p class="section-label">What People Say</p>
+            <h2 class="section-title">Real Reviews, Real Fast</h2>
+            <div class="reviews-trust">
+                <span class="stars" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="#FFD700"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#FFD700"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#FFD700"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#FFD700"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#FFD700"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+                4.7 Stars &mdash; 800+ Reviews
+            </div>
+        </div>
+        <div class="review-list">
+            <div class="review-item fade-in" style="transition-delay:0.1s">
+                <div class="review-avatar">MK</div>
+                <div>
+                    <div class="review-stars" aria-label="5 out of 5 stars">
+                        <svg class="review-star" viewBox="0 0 24 24" fill="#FFD700"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg class="review-star" viewBox="0 0 24 24" fill="#FFD700"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg class="review-star" viewBox="0 0 24 24" fill="#FFD700"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg class="review-star" viewBox="0 0 24 24" fill="#FFD700"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg class="review-star" viewBox="0 0 24 24" fill="#FFD700"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    </div>
+                    <p class="review-text">"Lunch break blowout in 18 minutes. Looked amazing for my afternoon meeting. This place is a game-changer."</p>
+                    <span class="review-author">Monica K. &mdash; Marketing Director</span>
+                </div>
+            </div>
+            <div class="review-item fade-in" style="transition-delay:0.2s">
+                <div class="review-avatar">JR</div>
+                <div>
+                    <div class="review-stars" aria-label="5 out of 5 stars">
+                        <svg class="review-star" viewBox="0 0 24 24" fill="#FFD700"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg class="review-star" viewBox="0 0 24 24" fill="#FFD700"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg class="review-star" viewBox="0 0 24 24" fill="#FFD700"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg class="review-star" viewBox="0 0 24 24" fill="#FFD700"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg class="review-star" viewBox="0 0 24 24" fill="#FFD700"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    </div>
+                    <p class="review-text">"$18 trim that looks like I paid $60. I come here every two weeks. In and out, no fuss, always great."</p>
+                    <span class="review-author">James R. &mdash; Software Engineer</span>
+                </div>
+            </div>
+            <div class="review-item fade-in" style="transition-delay:0.3s">
+                <div class="review-avatar">SP</div>
+                <div>
+                    <div class="review-stars" aria-label="5 out of 5 stars">
+                        <svg class="review-star" viewBox="0 0 24 24" fill="#FFD700"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg class="review-star" viewBox="0 0 24 24" fill="#FFD700"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg class="review-star" viewBox="0 0 24 24" fill="#FFD700"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg class="review-star" viewBox="0 0 24 24" fill="#FFD700"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg class="review-star" viewBox="0 0 24 24" fill="#FFD700"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    </div>
+                    <p class="review-text">"Color touch-up before a date night. Done in exactly 30 minutes and my roots looked flawless. Love it!"</p>
+                    <span class="review-author">Sarah P. &mdash; Nurse Practitioner</span>
+                </div>
+            </div>
+            <div class="review-item fade-in" style="transition-delay:0.4s">
+                <div class="review-avatar">DL</div>
+                <div>
+                    <div class="review-stars" aria-label="4 out of 5 stars">
+                        <svg class="review-star" viewBox="0 0 24 24" fill="#FFD700"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg class="review-star" viewBox="0 0 24 24" fill="#FFD700"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg class="review-star" viewBox="0 0 24 24" fill="#FFD700"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg class="review-star" viewBox="0 0 24 24" fill="#FFD700"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg class="review-star empty" viewBox="0 0 24 24" fill="#ddd"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    </div>
+                    <p class="review-text">"Got my bangs trimmed during my kid's piano lesson. $12 and 10 minutes. Can't beat it anywhere else."</p>
+                    <span class="review-author">Diana L. &mdash; Working Mom</span>
+                </div>
+            </div>
+            <div class="review-item fade-in" style="transition-delay:0.5s">
+                <div class="review-avatar">AT</div>
+                <div>
+                    <div class="review-stars" aria-label="5 out of 5 stars">
+                        <svg class="review-star" viewBox="0 0 24 24" fill="#FFD700"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg class="review-star" viewBox="0 0 24 24" fill="#FFD700"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg class="review-star" viewBox="0 0 24 24" fill="#FFD700"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg class="review-star" viewBox="0 0 24 24" fill="#FFD700"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg class="review-star" viewBox="0 0 24 24" fill="#FFD700"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    </div>
+                    <p class="review-text">"Open at 7AM on weekdays. I get a trim before work and nobody at the office even knows I was at a salon."</p>
+                    <span class="review-author">Alex T. &mdash; Financial Analyst</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== LOCATION ===== -->
+<section class="location" id="location">
+    <div class="container">
+        <div class="location-header fade-in">
+            <p class="section-label">Find Us</p>
+            <h2 class="section-title">Location &amp; Hours</h2>
+            <p class="section-subtitle">Conveniently located with extended hours to fit your busy schedule.</p>
+        </div>
+        <div class="location-grid fade-in">
+            <div class="location-image">
+                <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=800&q=80" alt="Quick Cuts Express salon interior" loading="lazy">
+            </div>
+            <div class="location-info">
+                <h3>Quick Cuts Express</h3>
+                <div class="location-detail">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    <div class="location-detail-text">
+                        <strong>Address</strong>
+                        <span>1500 Commerce Parkway</span>
+                    </div>
+                </div>
+                <div class="location-detail">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    <div class="location-detail-text">
+                        <strong>Phone</strong>
+                        <span><a href="tel:+15550123456" style="color:rgba(255,255,255,0.75);text-decoration:underline">(555) 012-3456</a></span>
+                    </div>
+                </div>
+                <div class="location-detail">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    <div class="location-detail-text">
+                        <strong>Hours</strong>
+                        <div class="hours-grid">
+                            <div class="hours-item">
+                                <strong>Mon - Fri</strong>
+                                7:00 AM - 9:00 PM
+                            </div>
+                            <div class="hours-item">
+                                <strong>Sat - Sun</strong>
+                                8:00 AM - 7:00 PM
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== QUICK BOOK ===== -->
+<section class="quick-book" id="book">
+    <div class="container">
+        <div class="quick-book-inner">
+            <p class="section-label">Quick Book</p>
+            <h2 class="section-title fade-in">Save Your Spot</h2>
+            <p class="section-subtitle fade-in">Walk-ins are always welcome. Or reserve your spot and skip even the short wait.</p>
+            <form class="book-form fade-in" onsubmit="event.preventDefault(); this.innerHTML='<div style=\'grid-column:1/-1;text-align:center;padding:40px 0\'><svg width=\'48\' height=\'48\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'#008080\' stroke-width=\'2.5\' stroke-linecap=\'round\'><path d=\'M22 11.08V12a10 10 0 1 1-5.93-9.14\'/><polyline points=\'22 4 12 14.01 9 11.01\'/></svg><h3 style=\'margin-top:16px;color:#006666;font-family:Montserrat,sans-serif\'>You\\\'re All Set!</h3><p style=\'color:#555;margin-top:8px\'>We\\\'ll see you soon. Walk right in!</p></div>';" aria-label="Quick booking form">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Your Name" required aria-label="Your name">
+                </div>
+                <div class="form-group">
+                    <input type="tel" name="phone" placeholder="Phone Number" required aria-label="Phone number">
+                </div>
+                <div class="form-group full">
+                    <select name="service" required aria-label="Select a service">
+                        <option value="" disabled selected>Select a Service</option>
+                        <option value="blowout">Blowout - $25 (20 min)</option>
+                        <option value="trim">Quick Trim - $18 (15 min)</option>
+                        <option value="bangs">Bang Cut - $12 (10 min)</option>
+                        <option value="color">Color Touch-Up - $35 (30 min)</option>
+                    </select>
+                </div>
+                <div class="form-submit">
+                    <button type="submit" class="btn btn-coral">Reserve My Spot</button>
+                </div>
+                <p class="form-note">No payment required. Walk-ins are always welcome too.</p>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-inner">
+            <span class="footer-brand">Quick Cuts Express</span>
+            <div class="footer-links">
+                <a href="#services">Services</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#location">Location</a>
+                <a href="tel:+15550123456">(555) 012-3456</a>
+            </div>
+            <p class="footer-copy">&copy; 2026 Quick Cuts Express. All rights reserved. | 1500 Commerce Parkway</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+(function() {
+    'use strict';
+
+    // ===== NAV SCROLL =====
+    const nav = document.querySelector('.nav');
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    window.addEventListener('scroll', function() {
+        nav.classList.toggle('scrolled', window.scrollY > 40);
+    });
+
+    navToggle.addEventListener('click', function() {
+        const open = navLinks.classList.toggle('open');
+        navToggle.setAttribute('aria-expanded', open);
+    });
+
+    // Close mobile nav on link click
+    navLinks.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function() {
+            navLinks.classList.remove('open');
+            navToggle.setAttribute('aria-expanded', 'false');
+        });
+    });
+
+    // ===== INTERSECTION OBSERVER =====
+    var observerOptions = { threshold: 0.15, rootMargin: '0px 0px -40px 0px' };
+    var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.fade-in, .slide-left, .slide-right').forEach(function(el) {
+        observer.observe(el);
+    });
+
+    // ===== TIMER COUNTDOWN ANIMATION =====
+    var timerNumber = document.querySelector('.timer-number');
+    var timerProgress = document.querySelector('.timer-progress');
+    var timerAnimated = false;
+
+    var timerObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting && !timerAnimated) {
+                timerAnimated = true;
+                timerProgress.classList.add('animated');
+
+                var target = 30;
+                var current = 0;
+                var step = Math.ceil(target / 40);
+                var interval = setInterval(function() {
+                    current += step;
+                    if (current >= target) {
+                        current = target;
+                        clearInterval(interval);
+                    }
+                    timerNumber.textContent = current;
+                }, 50);
+
+                timerObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.3 });
+
+    if (timerNumber) timerObserver.observe(timerNumber.closest('.speed-timer'));
+
+    // ===== SMOOTH SCROLL FOR ANCHOR LINKS =====
+    document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+        anchor.addEventListener('click', function(e) {
+            var target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                e.preventDefault();
+                var offset = nav.offsetHeight + 10;
+                var top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                window.scrollTo({ top: top, behavior: 'smooth' });
+            }
+        });
+    });
+
+})();
+</script>
+
+</body>
+</html>

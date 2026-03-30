@@ -1,0 +1,1393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxe Hair Studio | Premium Balayage &amp; Color Specialists</title>
+    <meta name="description" content="Transform your hair at Luxe Hair Studio. Expert balayage, extensions, and bridal styling. Instagram-worthy results from certified color specialists.">
+    <meta name="keywords" content="balayage, hair color, extensions, bridal hair, color correction, luxury salon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nunito+Sans:ital,opsz,wght@0,6..12,300;0,6..12,400;0,6..12,600;0,6..12,700;1,6..12,400&display=swap" rel="stylesheet">
+    <style>
+        /* ===== RESET & BASE ===== */
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; font-size: 16px; }
+        body {
+            font-family: 'Nunito Sans', sans-serif;
+            color: #36454F;
+            background: #FDF6F7;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+        h1, h2, h3, h4, h5 { font-family: 'Libre Baskerville', serif; font-weight: 400; }
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; display: block; }
+        button { cursor: pointer; border: none; font-family: inherit; }
+        ul { list-style: none; }
+
+        /* ===== UTILITY ===== */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        .section-label {
+            font-family: 'Nunito Sans', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: 0.75rem;
+            color: #E8B4B8;
+            margin-bottom: 12px;
+        }
+        .section-title {
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            color: #36454F;
+            margin-bottom: 16px;
+        }
+        .section-subtitle {
+            font-size: 1.05rem;
+            color: #6b7b86;
+            max-width: 560px;
+            margin: 0 auto 48px;
+        }
+        .text-center { text-align: center; }
+        .rose-divider {
+            width: 60px;
+            height: 1px;
+            background: #E8B4B8;
+            margin: 0 auto 24px;
+        }
+        .thin-line {
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #E8B4B8, transparent);
+        }
+
+        /* ===== CTA BUTTON ===== */
+        .cta-btn {
+            display: inline-block;
+            padding: 16px 40px;
+            background: linear-gradient(135deg, #E8B4B8, #d4929a);
+            color: #fff;
+            font-family: 'Nunito Sans', sans-serif;
+            font-weight: 600;
+            font-size: 0.95rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-radius: 50px;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        .cta-btn::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, #d4929a, #c07a82);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            z-index: -1;
+            border-radius: 50px;
+        }
+        .cta-btn:hover::before { opacity: 1; }
+        .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(232,180,184,0.4); }
+
+        .cta-btn-outline {
+            display: inline-block;
+            padding: 14px 36px;
+            border: 1px solid #E8B4B8;
+            color: #36454F;
+            font-family: 'Nunito Sans', sans-serif;
+            font-weight: 600;
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            background: transparent;
+        }
+        .cta-btn-outline:hover {
+            background: #E8B4B8;
+            color: #fff;
+        }
+
+        /* ===== FADE-IN ANIMATION ===== */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ===== ROSE PETALS (hero only) ===== */
+        .petal {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background: rgba(232,180,184,0.5);
+            border-radius: 50% 0 50% 50%;
+            pointer-events: none;
+            animation: petalFall linear infinite;
+            z-index: 2;
+        }
+        @keyframes petalFall {
+            0% { transform: translateY(-10vh) rotate(0deg) translateX(0); opacity: 0.7; }
+            25% { transform: translateY(25vh) rotate(90deg) translateX(30px); opacity: 0.6; }
+            50% { transform: translateY(50vh) rotate(180deg) translateX(-20px); opacity: 0.5; }
+            75% { transform: translateY(75vh) rotate(270deg) translateX(25px); opacity: 0.3; }
+            100% { transform: translateY(105vh) rotate(360deg) translateX(-10px); opacity: 0; }
+        }
+
+        /* ===== NAV ===== */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 20px 0;
+            transition: all 0.4s ease;
+        }
+        .nav.scrolled {
+            background: rgba(255,255,255,0.97);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 2px 20px rgba(54,69,79,0.08);
+            padding: 14px 0;
+        }
+        .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            position: relative;
+        }
+        .nav-left, .nav-right {
+            display: flex;
+            gap: 32px;
+            flex: 1;
+        }
+        .nav-left { justify-content: flex-end; }
+        .nav-right { justify-content: flex-start; }
+        .nav-logo {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.4rem;
+            color: #fff;
+            padding: 0 40px;
+            white-space: nowrap;
+            transition: color 0.4s ease;
+        }
+        .nav.scrolled .nav-logo { color: #36454F; }
+        .nav-link {
+            font-family: 'Nunito Sans', sans-serif;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.9);
+            transition: color 0.3s ease;
+            white-space: nowrap;
+        }
+        .nav.scrolled .nav-link { color: #36454F; }
+        .nav-link:hover { color: #E8B4B8; }
+
+        .nav-mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            padding: 8px;
+            cursor: pointer;
+            position: absolute;
+            right: 24px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .nav-mobile-toggle span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: #fff;
+            margin: 5px 0;
+            transition: all 0.3s ease;
+        }
+        .nav.scrolled .nav-mobile-toggle span { background: #36454F; }
+
+        /* ===== HERO ===== */
+        .hero {
+            position: relative;
+            height: 100vh;
+            min-height: 700px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+        }
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background: url('https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1920&q=80') center/cover no-repeat;
+        }
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(54,69,79,0.55) 0%, rgba(54,69,79,0.35) 40%, rgba(232,180,184,0.3) 100%);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            color: #fff;
+            max-width: 700px;
+            padding: 0 24px;
+        }
+        .hero-label {
+            font-family: 'Nunito Sans', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 6px;
+            font-size: 0.8rem;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+        .hero-title {
+            font-size: clamp(2.4rem, 6vw, 4rem);
+            line-height: 1.15;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+        .hero-title em {
+            font-style: italic;
+            color: #E8B4B8;
+        }
+        .hero-desc {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            opacity: 0.9;
+            margin-bottom: 36px;
+            font-weight: 300;
+        }
+        .hero-cta-group {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .hero-trust {
+            margin-top: 48px;
+            font-size: 0.75rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            opacity: 0.7;
+        }
+        .hero-scroll {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
+            animation: scrollBounce 2s infinite;
+        }
+        .hero-scroll svg { width: 24px; height: 24px; stroke: #fff; opacity: 0.6; }
+        @keyframes scrollBounce {
+            0%,100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(8px); }
+        }
+
+        /* ===== OFFER BAR ===== */
+        .offer-bar {
+            background: #36454F;
+            color: #fff;
+            text-align: center;
+            padding: 14px 24px;
+            font-size: 0.85rem;
+            letter-spacing: 1.5px;
+        }
+        .offer-bar strong { color: #E8B4B8; }
+
+        /* ===== TRANSFORMATIONS GALLERY ===== */
+        .transformations {
+            padding: 100px 0;
+        }
+        .transformations-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 48px;
+        }
+        .transformation-card {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(54,69,79,0.08);
+            background: #fff;
+        }
+        .transformation-card img {
+            width: 100%;
+            aspect-ratio: 4/5;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .transformation-card:hover img {
+            transform: scale(1.03);
+        }
+        .transformation-card-info {
+            padding: 20px 24px;
+        }
+        .transformation-card-info h3 {
+            font-size: 1rem;
+            margin-bottom: 4px;
+            color: #36454F;
+        }
+        .transformation-card-info span {
+            font-size: 0.8rem;
+            color: #6b7b86;
+            letter-spacing: 1px;
+        }
+        .transformation-stats {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin-top: 48px;
+        }
+        .transformation-stat-item { text-align: center; }
+        .transformation-stat-num {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 2.2rem;
+            color: #E8B4B8;
+        }
+        .transformation-stat-label {
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #6b7b86;
+            margin-top: 4px;
+        }
+
+        /* ===== SERVICES ===== */
+        .services {
+            padding: 100px 0;
+            background: #fff;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            margin-top: 48px;
+        }
+        .service-card {
+            border-radius: 8px;
+            overflow: hidden;
+            background: #FDF6F7;
+            box-shadow: 0 4px 20px rgba(54,69,79,0.06);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(54,69,79,0.12);
+        }
+        .service-card img {
+            width: 100%;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+        }
+        .service-card-body {
+            padding: 24px;
+        }
+        .service-card-body h3 {
+            font-size: 1.1rem;
+            color: #36454F;
+            margin-bottom: 6px;
+        }
+        .service-card-body .service-price {
+            display: block;
+            color: #E8B4B8;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+        .service-card-body .service-desc {
+            color: #6b7b86;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+
+        /* ===== STYLISTS ===== */
+        .stylists {
+            padding: 100px 0;
+        }
+        .stylists-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 48px;
+            max-width: 960px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .stylist-card {
+            perspective: 800px;
+            height: 420px;
+            cursor: pointer;
+        }
+        .stylist-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.7s ease;
+            transform-style: preserve-3d;
+        }
+        .stylist-card:hover .stylist-card-inner {
+            transform: rotateY(180deg);
+        }
+        .stylist-front, .stylist-back {
+            position: absolute;
+            inset: 0;
+            backface-visibility: hidden;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .stylist-front img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .stylist-front-name {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 20px;
+            background: linear-gradient(0deg, rgba(54,69,79,0.8), transparent);
+            color: #fff;
+        }
+        .stylist-front-name h3 { font-size: 1.1rem; }
+        .stylist-front-name span {
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #E8B4B8;
+        }
+        .stylist-back {
+            transform: rotateY(180deg);
+            background: #36454F;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 32px;
+            text-align: center;
+            color: #fff;
+        }
+        .stylist-back h3 { font-size: 1.2rem; margin-bottom: 4px; }
+        .stylist-back .stylist-role {
+            color: #E8B4B8;
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        .stylist-back p {
+            font-size: 0.9rem;
+            line-height: 1.7;
+            opacity: 0.85;
+            margin-bottom: 20px;
+        }
+        .stylist-back .stylist-specialties {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .stylist-back .stylist-specialties span {
+            padding: 4px 14px;
+            border: 1px solid rgba(232,180,184,0.5);
+            border-radius: 50px;
+            font-size: 0.7rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #E8B4B8;
+        }
+
+        /* ===== TESTIMONIALS ===== */
+        .testimonials {
+            padding: 100px 0;
+            background: #fff;
+            overflow: hidden;
+        }
+        .testimonial-carousel {
+            position: relative;
+            max-width: 800px;
+            margin: 48px auto 0;
+            min-height: 280px;
+        }
+        .testimonial-slide {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            transition: opacity 0.8s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 0 24px;
+        }
+        .testimonial-slide.active { opacity: 1; }
+        .testimonial-stars {
+            color: #E8B4B8;
+            display: flex;
+            gap: 4px;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .testimonial-quote {
+            font-family: 'Libre Baskerville', serif;
+            font-size: clamp(1.05rem, 2.5vw, 1.3rem);
+            font-style: italic;
+            line-height: 1.8;
+            color: #36454F;
+            margin-bottom: 28px;
+        }
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+        .testimonial-author img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #E8B4B8;
+        }
+        .testimonial-author-name {
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        .testimonial-author-detail {
+            font-size: 0.78rem;
+            color: #6b7b86;
+        }
+        .testimonial-dots {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 36px;
+        }
+        .testimonial-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #ddd;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .testimonial-dot.active { background: #E8B4B8; transform: scale(1.3); }
+
+        /* ===== BRIDAL ===== */
+        .bridal {
+            position: relative;
+            padding: 0;
+            min-height: 550px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+        .bridal-bg {
+            position: absolute;
+            inset: 0;
+            background: url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=1200&q=80') center/cover no-repeat;
+        }
+        .bridal-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, rgba(54,69,79,0.88) 0%, rgba(54,69,79,0.5) 60%, transparent 100%);
+        }
+        .bridal-content {
+            position: relative;
+            z-index: 2;
+            max-width: 540px;
+            padding: 80px 24px 80px 0;
+            color: #fff;
+        }
+        .bridal-content .section-label { color: #E8B4B8; }
+        .bridal-content h2 {
+            font-size: clamp(1.8rem, 4vw, 2.6rem);
+            margin-bottom: 16px;
+            color: #fff;
+        }
+        .bridal-content p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            opacity: 0.9;
+            margin-bottom: 12px;
+        }
+        .bridal-features {
+            margin: 24px 0 32px;
+        }
+        .bridal-features li {
+            padding: 6px 0;
+            font-size: 0.95rem;
+            opacity: 0.85;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .bridal-features li svg {
+            flex-shrink: 0;
+        }
+
+        /* ===== INSTAGRAM / GALLERY ===== */
+        .instagram {
+            padding: 80px 0;
+        }
+        .insta-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 4px;
+            margin-top: 48px;
+        }
+        .insta-item {
+            position: relative;
+            aspect-ratio: 1;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .insta-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .insta-item:hover img { transform: scale(1.1); }
+        .insta-item-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(54,69,79,0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .insta-item:hover .insta-item-overlay { opacity: 1; }
+        .insta-item-overlay svg { width: 28px; height: 28px; fill: #fff; }
+        .insta-handle {
+            text-align: center;
+            margin-top: 24px;
+            font-size: 1rem;
+            color: #6b7b86;
+        }
+        .insta-handle a { color: #E8B4B8; font-weight: 600; }
+
+        /* ===== CONTACT MODAL ===== */
+        .modal-backdrop {
+            position: fixed;
+            inset: 0;
+            background: rgba(54,69,79,0.5);
+            backdrop-filter: blur(8px);
+            z-index: 9999;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s ease;
+        }
+        .modal-backdrop.open { opacity: 1; pointer-events: all; }
+        .modal {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.95);
+            background: #fff;
+            border-radius: 12px;
+            max-width: 520px;
+            width: 92%;
+            padding: 48px 40px;
+            z-index: 10000;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.4s ease;
+        }
+        .modal.open { opacity: 1; pointer-events: all; transform: translate(-50%, -50%) scale(1); }
+        .modal-close {
+            position: absolute;
+            top: 16px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 1.6rem;
+            color: #6b7b86;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        .modal-close:hover { color: #36454F; }
+        .modal h2 { font-size: 1.6rem; margin-bottom: 8px; }
+        .modal p { font-size: 0.9rem; color: #6b7b86; margin-bottom: 28px; }
+        .modal-form { display: flex; flex-direction: column; gap: 16px; }
+        .modal-form input, .modal-form select, .modal-form textarea {
+            width: 100%;
+            padding: 14px 18px;
+            border: 1px solid #e8e0e1;
+            border-radius: 8px;
+            font-family: 'Nunito Sans', sans-serif;
+            font-size: 0.9rem;
+            transition: border-color 0.3s;
+            background: #FDF6F7;
+        }
+        .modal-form input:focus, .modal-form select:focus, .modal-form textarea:focus {
+            outline: none;
+            border-color: #E8B4B8;
+        }
+        .modal-form textarea { resize: vertical; min-height: 80px; }
+        .modal-info {
+            margin-top: 24px;
+            padding-top: 20px;
+            border-top: 1px solid #f0e8e9;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            font-size: 0.85rem;
+            color: #6b7b86;
+        }
+        .modal-info-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .modal-info-row svg {
+            flex-shrink: 0;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: #36454F;
+            color: #fff;
+            padding: 60px 0 30px;
+        }
+        .footer-top-line {
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, #36454F, #E8B4B8, #36454F);
+            margin-bottom: 60px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 48px;
+        }
+        .footer-brand h3 {
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+        }
+        .footer-brand p {
+            font-size: 0.85rem;
+            line-height: 1.7;
+            opacity: 0.7;
+            max-width: 280px;
+        }
+        .footer h4 {
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+            color: #E8B4B8;
+            font-family: 'Nunito Sans', sans-serif;
+            font-weight: 600;
+        }
+        .footer ul li { margin-bottom: 8px; }
+        .footer ul li a {
+            font-size: 0.85rem;
+            opacity: 0.7;
+            transition: opacity 0.3s, color 0.3s;
+        }
+        .footer ul li a:hover { opacity: 1; color: #E8B4B8; }
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.78rem;
+            opacity: 0.5;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .services-grid { grid-template-columns: repeat(2, 1fr); }
+            .transformations-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 768px) {
+            .nav-left, .nav-right { display: none; }
+            .nav-mobile-toggle { display: block; }
+            .nav-logo { padding: 0; }
+            .nav-mobile-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(255,255,255,0.98);
+                backdrop-filter: blur(12px);
+                padding: 24px;
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+            .nav-mobile-menu.open { display: flex; }
+            .nav-mobile-menu .nav-link { color: #36454F; }
+            .transformations-grid { grid-template-columns: repeat(2, 1fr); }
+            .services-grid { grid-template-columns: 1fr 1fr; }
+            .stylists-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
+            .stylist-card { height: 380px; }
+            .bridal-content { max-width: 100%; padding: 60px 0; }
+            .insta-grid { grid-template-columns: repeat(2, 1fr); }
+            .transformation-stats { gap: 30px; flex-wrap: wrap; }
+            .footer-grid { grid-template-columns: 1fr; gap: 30px; }
+        }
+        @media (max-width: 480px) {
+            .services-grid { grid-template-columns: 1fr; }
+            .transformations-grid { grid-template-columns: 1fr; }
+            .stylists-grid { grid-template-columns: 1fr; max-width: 320px; }
+            .hero-title { font-size: 2rem; }
+            .hero-cta-group { flex-direction: column; align-items: center; }
+            .modal { padding: 32px 24px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+        <div class="nav-inner">
+            <div class="nav-left">
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#stylists" class="nav-link">Stylists</a>
+                <a href="#testimonials" class="nav-link">Reviews</a>
+            </div>
+            <a href="#" class="nav-logo" aria-label="Luxe Hair Studio home">Luxe Hair Studio</a>
+            <div class="nav-right">
+                <a href="#bridal" class="nav-link">Bridal</a>
+                <a href="#instagram" class="nav-link">Gallery</a>
+                <a href="javascript:void(0)" class="nav-link" onclick="openModal()">Contact</a>
+            </div>
+            <button class="nav-mobile-toggle" aria-label="Toggle menu" onclick="toggleMobileMenu()">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <div class="nav-mobile-menu" id="mobileMenu">
+            <a href="#services" class="nav-link" onclick="closeMobileMenu()">Services</a>
+            <a href="#stylists" class="nav-link" onclick="closeMobileMenu()">Stylists</a>
+            <a href="#testimonials" class="nav-link" onclick="closeMobileMenu()">Reviews</a>
+            <a href="#bridal" class="nav-link" onclick="closeMobileMenu()">Bridal</a>
+            <a href="#instagram" class="nav-link" onclick="closeMobileMenu()">Gallery</a>
+            <a href="javascript:void(0)" class="nav-link" onclick="openModal(); closeMobileMenu();">Contact</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+        <div class="hero-bg" role="img" aria-label="Luxurious hair salon interior"></div>
+        <div class="hero-overlay"></div>
+        <!-- Petals generated by JS -->
+        <div class="hero-content">
+            <p class="hero-label">Premium Color Specialists</p>
+            <h1 class="hero-title">Your Hair Deserves <em>Luxe</em> Treatment</h1>
+            <p class="hero-desc">Expert balayage, stunning extensions, and Instagram-worthy color transformations from San Francisco's most sought-after stylists.</p>
+            <div class="hero-cta-group">
+                <a href="javascript:void(0)" class="cta-btn" onclick="openModal()">Book Your Transformation</a>
+                <a href="tel:+15556789012" class="cta-btn-outline" style="border-color:rgba(255,255,255,0.5); color:#fff;">Call Now</a>
+            </div>
+            <p class="hero-trust">Featured in Vogue &amp; Elle &nbsp;&bull;&nbsp; 500+ Color Transformations</p>
+        </div>
+        <div class="hero-scroll" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+        </div>
+    </section>
+
+    <!-- OFFER BAR -->
+    <div class="offer-bar">
+        <strong>New Clients:</strong> 20% Off Your First Color Service &mdash; <a href="javascript:void(0)" onclick="openModal()" style="color:#E8B4B8; text-decoration:underline;">Book Today</a>
+    </div>
+
+    <!-- TRANSFORMATIONS GALLERY -->
+    <section class="transformations" id="transformations">
+        <div class="container text-center">
+            <div class="fade-in">
+                <p class="section-label">The Proof</p>
+                <h2 class="section-title">Transformations Gallery</h2>
+                <div class="rose-divider"></div>
+                <p class="section-subtitle">Real clients, real results. Browse our favorite color transformations.</p>
+            </div>
+            <div class="transformations-grid fade-in">
+                <div class="transformation-card">
+                    <img src="https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?w=600&q=80" alt="Balayage color transformation" loading="lazy">
+                    <div class="transformation-card-info">
+                        <h3>Dimensional Balayage</h3>
+                        <span>Color by Olivia Chen</span>
+                    </div>
+                </div>
+                <div class="transformation-card">
+                    <img src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?w=600&q=80" alt="Blonde styling transformation" loading="lazy">
+                    <div class="transformation-card-info">
+                        <h3>Platinum Refresh</h3>
+                        <span>Color by Olivia Chen</span>
+                    </div>
+                </div>
+                <div class="transformation-card">
+                    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&q=80" alt="Sun-kissed highlights" loading="lazy">
+                    <div class="transformation-card-info">
+                        <h3>Sun-Kissed Highlights</h3>
+                        <span>Color by Maya Rodriguez</span>
+                    </div>
+                </div>
+                <div class="transformation-card">
+                    <img src="https://images.unsplash.com/photo-1526047932273-341f2a7631f9?w=600&q=80" alt="Rich brunette color" loading="lazy">
+                    <div class="transformation-card-info">
+                        <h3>Rich Brunette Gloss</h3>
+                        <span>Color by Sophie Laurent</span>
+                    </div>
+                </div>
+                <div class="transformation-card">
+                    <img src="https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?w=600&q=80" alt="Creative color work" loading="lazy">
+                    <div class="transformation-card-info">
+                        <h3>Copper Tones</h3>
+                        <span>Color by Olivia Chen</span>
+                    </div>
+                </div>
+                <div class="transformation-card">
+                    <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&q=80" alt="Color correction result" loading="lazy">
+                    <div class="transformation-card-info">
+                        <h3>Color Correction</h3>
+                        <span>Color by Maya Rodriguez</span>
+                    </div>
+                </div>
+            </div>
+            <div class="transformation-stats fade-in">
+                <div class="transformation-stat-item">
+                    <div class="transformation-stat-num">500+</div>
+                    <div class="transformation-stat-label">Transformations</div>
+                </div>
+                <div class="transformation-stat-item">
+                    <div class="transformation-stat-num">98%</div>
+                    <div class="transformation-stat-label">Client Satisfaction</div>
+                </div>
+                <div class="transformation-stat-item">
+                    <div class="transformation-stat-num">12+</div>
+                    <div class="transformation-stat-label">Years Experience</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="thin-line"></div>
+
+    <!-- SERVICES -->
+    <section class="services" id="services">
+        <div class="container text-center">
+            <div class="fade-in">
+                <p class="section-label">What We Do</p>
+                <h2 class="section-title">Our Services</h2>
+                <div class="rose-divider"></div>
+                <p class="section-subtitle">Each service is a tailored experience designed to bring out your unique beauty.</p>
+            </div>
+            <div class="services-grid fade-in">
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=600&q=80" alt="Balayage hair coloring service" loading="lazy">
+                    <div class="service-card-body">
+                        <h3>Balayage</h3>
+                        <span class="service-price">From $250</span>
+                        <p class="service-desc">Hand-painted highlights for a natural, sun-kissed look. Our signature technique creates seamless, dimensional color that grows out beautifully.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=600&q=80" alt="Hair extensions service" loading="lazy">
+                    <div class="service-card-body">
+                        <h3>Extensions</h3>
+                        <span class="service-price">From $400</span>
+                        <p class="service-desc">Premium hand-tied and tape-in extensions for effortless volume and length. Custom color-matched for an undetectable blend.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=600&q=80" alt="Color correction service" loading="lazy">
+                    <div class="service-card-body">
+                        <h3>Color Correction</h3>
+                        <span class="service-price">From $300</span>
+                        <p class="service-desc">Expert color restoration and correction. We specialize in fixing brassy tones, uneven color, and damage from at-home treatments.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80" alt="Bridal hair styling service" loading="lazy">
+                    <div class="service-card-body">
+                        <h3>Bridal Styling</h3>
+                        <span class="service-price">From $350</span>
+                        <p class="service-desc">Picture-perfect wedding day hair. Includes trial run, day-of styling, and touch-up kit. On-location services available.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STYLISTS -->
+    <section class="stylists" id="stylists">
+        <div class="container text-center">
+            <div class="fade-in">
+                <p class="section-label">Meet the Team</p>
+                <h2 class="section-title">Our Stylists</h2>
+                <div class="rose-divider"></div>
+                <p class="section-subtitle">Hover to learn more about the artists behind your transformation.</p>
+            </div>
+            <div class="stylists-grid fade-in">
+                <div class="stylist-card" role="button" tabindex="0" aria-label="Learn more about Olivia Chen, Senior Colorist">
+                    <div class="stylist-card-inner">
+                        <div class="stylist-front">
+                            <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=400&q=80" alt="Olivia Chen, Senior Colorist" loading="lazy">
+                            <div class="stylist-front-name">
+                                <h3>Olivia Chen</h3>
+                                <span>Senior Colorist</span>
+                            </div>
+                        </div>
+                        <div class="stylist-back">
+                            <h3>Olivia Chen</h3>
+                            <span class="stylist-role">Senior Colorist &bull; 10 Years</span>
+                            <p>Trained at Vidal Sassoon Academy. Olivia's balayage technique has earned features in Vogue and Elle. She specializes in creating lived-in, dimensional color.</p>
+                            <div class="stylist-specialties">
+                                <span>Balayage</span>
+                                <span>Vivid Color</span>
+                                <span>Blonding</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stylist-card" role="button" tabindex="0" aria-label="Learn more about Maya Rodriguez, Extension Specialist">
+                    <div class="stylist-card-inner">
+                        <div class="stylist-front">
+                            <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=400&q=80" alt="Maya Rodriguez, Extension Specialist" loading="lazy">
+                            <div class="stylist-front-name">
+                                <h3>Maya Rodriguez</h3>
+                                <span>Extension Specialist</span>
+                            </div>
+                        </div>
+                        <div class="stylist-back">
+                            <h3>Maya Rodriguez</h3>
+                            <span class="stylist-role">Extension Specialist &bull; 8 Years</span>
+                            <p>Certified in hand-tied, tape-in, and keratin extensions. Maya creates seamless, natural-looking results that will have everyone asking "is that real?"</p>
+                            <div class="stylist-specialties">
+                                <span>Hand-Tied</span>
+                                <span>Tape-In</span>
+                                <span>Keratin</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stylist-card" role="button" tabindex="0" aria-label="Learn more about Sophie Laurent, Bridal Director">
+                    <div class="stylist-card-inner">
+                        <div class="stylist-front">
+                            <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&q=80" alt="Sophie Laurent, Bridal Director" loading="lazy">
+                            <div class="stylist-front-name">
+                                <h3>Sophie Laurent</h3>
+                                <span>Bridal Director</span>
+                            </div>
+                        </div>
+                        <div class="stylist-back">
+                            <h3>Sophie Laurent</h3>
+                            <span class="stylist-role">Bridal Director &bull; 12 Years</span>
+                            <p>With over 300 weddings styled, Sophie brings calm expertise to your big day. Her editorial work has graced the pages of Martha Stewart Weddings and The Knot.</p>
+                            <div class="stylist-specialties">
+                                <span>Bridal</span>
+                                <span>Updos</span>
+                                <span>Editorial</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="thin-line"></div>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials" id="testimonials">
+        <div class="container text-center">
+            <div class="fade-in">
+                <p class="section-label">Client Love</p>
+                <h2 class="section-title">What They Say</h2>
+                <div class="rose-divider"></div>
+            </div>
+            <div class="testimonial-carousel fade-in" aria-label="Client testimonials">
+                <div class="testimonial-slide active" role="group" aria-label="Testimonial 1 of 4">
+                    <div class="testimonial-stars" aria-label="5 stars"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+                    <p class="testimonial-quote">"Olivia completely transformed my hair. I went from box-dye disaster to the most gorgeous balayage I've ever seen. I get compliments literally every day."</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80" alt="Jessica M.">
+                        <div>
+                            <div class="testimonial-author-name">Jessica M.</div>
+                            <div class="testimonial-author-detail">Balayage &amp; Color Correction</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-slide" role="group" aria-label="Testimonial 2 of 4">
+                    <div class="testimonial-stars" aria-label="5 stars"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+                    <p class="testimonial-quote">"Maya did my hand-tied extensions and they are absolutely undetectable. The volume and length I always dreamed of, and they look completely natural."</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80" alt="Amanda K.">
+                        <div>
+                            <div class="testimonial-author-name">Amanda K.</div>
+                            <div class="testimonial-author-detail">Hand-Tied Extensions</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-slide" role="group" aria-label="Testimonial 3 of 4">
+                    <div class="testimonial-stars" aria-label="5 stars"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+                    <p class="testimonial-quote">"Sophie made me feel like a queen on my wedding day. My hair stayed perfect from ceremony through the last dance. Worth every penny."</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&q=80" alt="Rachel T.">
+                        <div>
+                            <div class="testimonial-author-name">Rachel T.</div>
+                            <div class="testimonial-author-detail">Bridal Styling</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-slide" role="group" aria-label="Testimonial 4 of 4">
+                    <div class="testimonial-stars" aria-label="5 stars"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+                    <p class="testimonial-quote">"I've been to many salons, but Luxe is truly on another level. The attention to detail, the luxurious atmosphere, and the results speak for themselves."</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80" alt="Priya S.">
+                        <div>
+                            <div class="testimonial-author-name">Priya S.</div>
+                            <div class="testimonial-author-detail">Balayage &amp; Toner</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-dots" aria-label="Testimonial navigation">
+                <button class="testimonial-dot active" aria-label="Go to testimonial 1" onclick="goToSlide(0)"></button>
+                <button class="testimonial-dot" aria-label="Go to testimonial 2" onclick="goToSlide(1)"></button>
+                <button class="testimonial-dot" aria-label="Go to testimonial 3" onclick="goToSlide(2)"></button>
+                <button class="testimonial-dot" aria-label="Go to testimonial 4" onclick="goToSlide(3)"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- BRIDAL -->
+    <section class="bridal" id="bridal">
+        <div class="bridal-bg" role="img" aria-label="Bride with elegant hairstyle"></div>
+        <div class="bridal-overlay"></div>
+        <div class="container">
+            <div class="bridal-content fade-in">
+                <p class="section-label">Say "I Do" in Style</p>
+                <h2>The Luxe Bridal Experience</h2>
+                <p>Your wedding day hair deserves the same level of care and artistry as every other detail. Our dedicated bridal team ensures you look and feel extraordinary.</p>
+                <ul class="bridal-features">
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="#E8B4B8"><path d="M12 2l2.09 6.26L20 9.27l-4.5 3.87 1.68 6.88L12 16.77l-5.18 3.25L8.5 13.14 4 9.27l5.91-1.01L12 2z"/></svg> Complimentary consultation &amp; style planning</li>
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="#E8B4B8"><path d="M12 2l2.09 6.26L20 9.27l-4.5 3.87 1.68 6.88L12 16.77l-5.18 3.25L8.5 13.14 4 9.27l5.91-1.01L12 2z"/></svg> Full trial run 2-4 weeks before the day</li>
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="#E8B4B8"><path d="M12 2l2.09 6.26L20 9.27l-4.5 3.87 1.68 6.88L12 16.77l-5.18 3.25L8.5 13.14 4 9.27l5.91-1.01L12 2z"/></svg> Day-of styling with emergency touch-up kit</li>
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="#E8B4B8"><path d="M12 2l2.09 6.26L20 9.27l-4.5 3.87 1.68 6.88L12 16.77l-5.18 3.25L8.5 13.14 4 9.27l5.91-1.01L12 2z"/></svg> On-location services for your venue</li>
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="#E8B4B8"><path d="M12 2l2.09 6.26L20 9.27l-4.5 3.87 1.68 6.88L12 16.77l-5.18 3.25L8.5 13.14 4 9.27l5.91-1.01L12 2z"/></svg> Bridesmaid &amp; mother-of-the-bride packages</li>
+                </ul>
+                <a href="javascript:void(0)" class="cta-btn" onclick="openModal()">Book Your Free Bridal Trial</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- INSTAGRAM -->
+    <section class="instagram" id="instagram">
+        <div class="container text-center">
+            <div class="fade-in">
+                <p class="section-label">On the Gram</p>
+                <h2 class="section-title">Follow Our Work</h2>
+                <div class="rose-divider"></div>
+            </div>
+            <div class="insta-grid fade-in">
+                <div class="insta-item">
+                    <img src="https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?w=400&q=80" alt="Creative hair portrait" loading="lazy">
+                    <div class="insta-item-overlay"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></div>
+                </div>
+                <div class="insta-item">
+                    <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=400&q=80" alt="Hair color transformation" loading="lazy">
+                    <div class="insta-item-overlay"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></div>
+                </div>
+                <div class="insta-item">
+                    <img src="https://images.unsplash.com/photo-1520635360276-79f3dbd809f6?w=400&q=80" alt="Woman portrait hair styling" loading="lazy">
+                    <div class="insta-item-overlay"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></div>
+                </div>
+                <div class="insta-item">
+                    <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=400&q=80" alt="Styled woman portrait" loading="lazy">
+                    <div class="insta-item-overlay"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></div>
+                </div>
+            </div>
+            <p class="insta-handle">Follow us <a href="https://instagram.com" target="_blank" rel="noopener">@luxehairstudio</a></p>
+        </div>
+    </section>
+
+    <!-- CONTACT MODAL -->
+    <div class="modal-backdrop" id="modalBackdrop" onclick="closeModal()"></div>
+    <div class="modal" id="contactModal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <button class="modal-close" onclick="closeModal()" aria-label="Close contact form">&times;</button>
+        <h2 id="modal-title">Book Your Visit</h2>
+        <p>Fill out the form below and we'll confirm your appointment within 24 hours.</p>
+        <form class="modal-form" onsubmit="event.preventDefault(); closeModal(); alert('Thank you! We will confirm your appointment shortly.');">
+            <input type="text" placeholder="Full Name" required aria-label="Full name">
+            <input type="email" placeholder="Email Address" required aria-label="Email address">
+            <input type="tel" placeholder="Phone Number" aria-label="Phone number">
+            <select aria-label="Select service" required>
+                <option value="" disabled selected>Select Service</option>
+                <option>Balayage</option>
+                <option>Extensions</option>
+                <option>Color Correction</option>
+                <option>Bridal Styling</option>
+                <option>Other</option>
+            </select>
+            <textarea placeholder="Any special requests or notes?" aria-label="Special requests"></textarea>
+            <button type="submit" class="cta-btn" style="width:100%; text-align:center;">Confirm Booking</button>
+        </form>
+        <div class="modal-info">
+            <span class="modal-info-row"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg> <a href="tel:+15556789012">+1 (555) 678-9012</a></span>
+            <span class="modal-info-row"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg> 2100 Willow Creek Drive, Suite 201</span>
+            <span class="modal-info-row"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg> Tue&ndash;Sat 9AM&ndash;7PM &nbsp;|&nbsp; Closed Sun&ndash;Mon</span>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-top-line"></div>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>Luxe Hair Studio</h3>
+                    <p>Premium color specialists creating Instagram-worthy transformations. Where artistry meets luxury in every strand.</p>
+                </div>
+                <div>
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Balayage</a></li>
+                        <li><a href="#services">Extensions</a></li>
+                        <li><a href="#services">Color Correction</a></li>
+                        <li><a href="#bridal">Bridal Styling</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Studio</h4>
+                    <ul>
+                        <li><a href="#stylists">Our Stylists</a></li>
+                        <li><a href="#testimonials">Reviews</a></li>
+                        <li><a href="#instagram">Gallery</a></li>
+                        <li><a href="javascript:void(0)" onclick="openModal()">Book Now</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Visit Us</h4>
+                    <ul>
+                        <li><a href="#">2100 Willow Creek Dr,<br>Suite 201</a></li>
+                        <li><a href="tel:+15556789012">(555) 678-9012</a></li>
+                        <li><a href="#">Tue&ndash;Sat: 9AM&ndash;7PM</a></li>
+                        <li><a href="#">Closed Sun&ndash;Mon</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 Luxe Hair Studio. All rights reserved.</span>
+                <span>Designed with care.</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // ===== NAV SCROLL =====
+        const nav = document.getElementById('nav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 60);
+        });
+
+        // ===== MOBILE MENU =====
+        function toggleMobileMenu() {
+            document.getElementById('mobileMenu').classList.toggle('open');
+        }
+        function closeMobileMenu() {
+            document.getElementById('mobileMenu').classList.remove('open');
+        }
+
+        // ===== ROSE PETALS =====
+        (function createPetals() {
+            const hero = document.querySelector('.hero');
+            for (let i = 0; i < 15; i++) {
+                const petal = document.createElement('div');
+                petal.classList.add('petal');
+                petal.style.left = Math.random() * 100 + '%';
+                petal.style.animationDuration = (6 + Math.random() * 8) + 's';
+                petal.style.animationDelay = (Math.random() * 10) + 's';
+                petal.style.width = (8 + Math.random() * 10) + 'px';
+                petal.style.height = petal.style.width;
+                petal.style.opacity = 0.3 + Math.random() * 0.4;
+                hero.appendChild(petal);
+            }
+        })();
+
+        // ===== FADE-IN ON SCROLL =====
+        const fadeEls = document.querySelectorAll('.fade-in');
+        const fadeObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    fadeObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+        fadeEls.forEach(el => fadeObserver.observe(el));
+
+        // ===== TESTIMONIAL CAROUSEL =====
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.testimonial-slide');
+        const dots = document.querySelectorAll('.testimonial-dot');
+        let autoPlay;
+
+        function goToSlide(n) {
+            slides[currentSlide].classList.remove('active');
+            dots[currentSlide].classList.remove('active');
+            currentSlide = n;
+            slides[currentSlide].classList.add('active');
+            dots[currentSlide].classList.add('active');
+            resetAutoPlay();
+        }
+
+        function nextSlide() {
+            goToSlide((currentSlide + 1) % slides.length);
+        }
+
+        function resetAutoPlay() {
+            clearInterval(autoPlay);
+            autoPlay = setInterval(nextSlide, 5000);
+        }
+        resetAutoPlay();
+
+        // ===== CONTACT MODAL =====
+        function openModal() {
+            document.getElementById('modalBackdrop').classList.add('open');
+            document.getElementById('contactModal').classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeModal() {
+            document.getElementById('modalBackdrop').classList.remove('open');
+            document.getElementById('contactModal').classList.remove('open');
+            document.body.style.overflow = '';
+        }
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeModal();
+        });
+
+        // ===== SMOOTH SCROLL =====
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

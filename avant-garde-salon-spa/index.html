@@ -1,0 +1,1880 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avant-Garde Salon & Spa | Creative Hair Artistry & Styling</title>
+    <meta name="description" content="Discover bold, artistic hair design at Avant-Garde Salon & Spa. Award-winning stylists, creative color, and styling classes. Book your consultation.">
+    <meta name="keywords" content="avant-garde salon, creative hair color, precision cuts, keratin treatments, styling classes, award-winning stylists">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://avantgardesalonspa.com">
+    <meta property="og:title" content="Avant-Garde Salon & Spa | Creative Hair Artistry & Styling">
+    <meta property="og:description" content="Discover bold, artistic hair design at Avant-Garde Salon & Spa. Award-winning stylists, creative color, and styling classes.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        /* ===== RESET & BASE ===== */
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; font-size: 16px; }
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: #F8F5FF;
+            color: #1A1A2E;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Space Grotesk', sans-serif; line-height: 1.1; }
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; display: block; }
+        ul { list-style: none; }
+        button, input, textarea { font-family: inherit; border: none; outline: none; }
+
+        /* ===== UTILITY ===== */
+        .sr-only {
+            position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+            overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+        }
+        .fade-in { opacity: 0; transform: translateY(40px); transition: opacity 0.8s ease, transform 0.8s ease; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        .slide-left { opacity: 0; transform: translateX(-80px); transition: opacity 0.8s ease, transform 0.8s ease; }
+        .slide-right { opacity: 0; transform: translateX(80px); transition: opacity 0.8s ease, transform 0.8s ease; }
+        .slide-left.visible, .slide-right.visible { opacity: 1; transform: translateX(0); }
+        .scale-in { opacity: 0; transform: scale(0.85); transition: opacity 0.6s ease, transform 0.6s ease; }
+        .scale-in.visible { opacity: 1; transform: scale(1); }
+
+        /* ===== FLOATING SHAPES ===== */
+        .shape {
+            position: absolute;
+            pointer-events: none;
+            z-index: 0;
+        }
+        .shape-circle {
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(107,70,193,0.12), rgba(230,230,250,0.2));
+        }
+        .shape-triangle {
+            width: 0; height: 0;
+            background: none;
+        }
+        @keyframes floatA {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            33% { transform: translate(20px, -30px) rotate(15deg); }
+            66% { transform: translate(-15px, 20px) rotate(-10deg); }
+        }
+        @keyframes floatB {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            50% { transform: translate(-25px, -20px) rotate(20deg); }
+        }
+        @keyframes floatC {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-40px) rotate(-15deg); }
+        }
+
+        /* ===== NAVIGATION ===== */
+        .main-nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            transform: translateY(-100%);
+            transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+            background: rgba(26, 26, 46, 0.92);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding: 0 2rem;
+        }
+        .main-nav.visible { transform: translateY(0); }
+        .nav-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 70px;
+        }
+        .nav-logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #E6E6FA;
+            letter-spacing: -0.02em;
+        }
+        .nav-logo span { color: #6B46C1; }
+        .nav-links { display: flex; gap: 2rem; align-items: center; }
+        .nav-links a {
+            color: #E6E6FA;
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.03em;
+            transition: color 0.3s;
+            position: relative;
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px; left: 0;
+            width: 0; height: 2px;
+            background: #6B46C1;
+            transition: width 0.3s;
+        }
+        .nav-links a:hover { color: #fff; }
+        .nav-links a:hover::after { width: 100%; }
+        .nav-cta {
+            background: linear-gradient(135deg, #6B46C1, #8B5CF6);
+            color: #fff !important;
+            padding: 0.6rem 1.4rem;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s, background 0.3s !important;
+        }
+        .nav-cta::after { display: none !important; }
+        .nav-cta:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 20px rgba(107,70,193,0.4);
+            background: linear-gradient(135deg, #7C3AED, #A78BFA) !important;
+        }
+        .mobile-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            padding: 5px;
+        }
+        .mobile-toggle span {
+            display: block;
+            width: 28px; height: 2px;
+            background: #E6E6FA;
+            transition: transform 0.3s, opacity 0.3s;
+        }
+        .mobile-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .mobile-toggle.active span:nth-child(2) { opacity: 0; }
+        .mobile-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 2rem;
+            overflow: hidden;
+            background: #1A1A2E;
+        }
+        .hero-bg-gradient {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 30% 50%, rgba(107,70,193,0.25) 0%, transparent 60%),
+                        radial-gradient(ellipse at 80% 20%, rgba(139,92,246,0.15) 0%, transparent 50%);
+            z-index: 1;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        .hero-text { padding-right: 2rem; }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(107,70,193,0.2);
+            border: 1px solid rgba(107,70,193,0.4);
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            color: #E6E6FA;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+            backdrop-filter: blur(10px);
+        }
+        .hero-badge svg { width: 18px; height: 18px; fill: #A78BFA; }
+        .hero-title {
+            font-size: clamp(3rem, 7vw, 6.5rem);
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: -0.04em;
+            margin-bottom: 1.5rem;
+        }
+        .hero-title .accent {
+            background: linear-gradient(135deg, #A78BFA, #E6E6FA);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero-subtitle {
+            font-size: 1.15rem;
+            color: rgba(230,230,250,0.7);
+            max-width: 480px;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+        .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, #6B46C1, #8B5CF6);
+            color: #fff;
+            padding: 1rem 2.2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s, background 0.5s;
+            border: none;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(107,70,193,0.5);
+            background: linear-gradient(135deg, #7C3AED, #A78BFA);
+        }
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #E6E6FA;
+            padding: 1rem 1.5rem;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+        .btn-secondary:hover { color: #A78BFA; }
+        .btn-secondary svg { width: 20px; height: 20px; }
+
+        /* Hero Collage */
+        .hero-collage {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1.2fr 1fr;
+            gap: 1rem;
+            height: 550px;
+            position: relative;
+        }
+        .collage-img {
+            overflow: hidden;
+            border-radius: 16px;
+            position: relative;
+            opacity: 0;
+            transform: scale(0.8);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .collage-img.loaded { opacity: 1; transform: scale(1); }
+        .collage-img:nth-child(1) { transition-delay: 0.1s; grid-row: 1 / 3; border-radius: 16px 4px 4px 16px; }
+        .collage-img:nth-child(2) { transition-delay: 0.35s; border-radius: 4px 16px 4px 4px; }
+        .collage-img:nth-child(3) { transition-delay: 0.6s; border-radius: 4px 4px 16px 4px; transform: scale(0.8) translateY(10px); }
+        .collage-img:nth-child(3).loaded { transform: scale(1) translateY(0); }
+        .collage-img img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+        .collage-img:hover img { transform: scale(1.05); }
+        .collage-overlay {
+            position: absolute;
+            bottom: 12px; right: 12px;
+            background: linear-gradient(135deg, #6B46C1, #7C3AED);
+            color: #fff;
+            padding: 1.2rem 1.8rem;
+            border-radius: 12px;
+            z-index: 5;
+            box-shadow: 0 10px 40px rgba(107,70,193,0.4);
+        }
+        .collage-overlay .number {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+        .collage-overlay .label { font-size: 0.8rem; opacity: 0.85; }
+
+        /* ===== AWARD MARQUEE ===== */
+        .award-marquee {
+            background: linear-gradient(135deg, #6B46C1, #4C1D95);
+            padding: 1.2rem 0;
+            overflow: hidden;
+            position: relative;
+        }
+        .marquee-track {
+            display: flex;
+            animation: marqueeScroll 30s linear infinite;
+            width: max-content;
+        }
+        .marquee-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 0 3rem;
+            color: #E6E6FA;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            white-space: nowrap;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .marquee-item svg { width: 20px; height: 20px; fill: #E6E6FA; flex-shrink: 0; }
+        @keyframes marqueeScroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* ===== SECTIONS COMMON ===== */
+        .section { padding: 6rem 2rem; position: relative; }
+        .section-label {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #6B46C1;
+            margin-bottom: 1rem;
+        }
+        .section-title {
+            font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            color: #1A1A2E;
+            margin-bottom: 1.5rem;
+        }
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: #555;
+            max-width: 600px;
+            line-height: 1.7;
+        }
+
+        /* ===== SERVICES CARD GRID ===== */
+        .services { background: #F8F5FF; }
+        .services-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 4rem;
+        }
+        .services-header .section-subtitle { margin: 0 auto; }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .service-card {
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid rgba(107,70,193,0.08);
+            transition: transform 0.4s, box-shadow 0.4s;
+            display: flex;
+            flex-direction: column;
+        }
+        .service-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 60px rgba(107,70,193,0.12);
+        }
+        .service-card-image {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 4/3;
+        }
+        .service-card-image img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+        .service-card:hover .service-card-image img { transform: scale(1.05); }
+        .service-card-image::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 50%, rgba(26,26,46,0.3) 100%);
+        }
+        .service-card-body {
+            padding: 2rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .service-number {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: rgba(107,70,193,0.1);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+        .service-card-body h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+        .service-card-body p {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+            flex: 1;
+        }
+        .service-tags { margin-top: auto; }
+        .service-tag {
+            display: inline-block;
+            background: rgba(107,70,193,0.1);
+            color: #6B46C1;
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* ===== ARTISTS CAROUSEL ===== */
+        .artists {
+            background: #1A1A2E;
+            padding: 6rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .artists .section-label { color: #A78BFA; padding-left: 2rem; }
+        .artists .section-title { color: #fff; padding-left: 2rem; }
+        .artists .section-subtitle { color: rgba(230,230,250,0.6); padding-left: 2rem; margin-bottom: 3rem; }
+        .artists-track {
+            display: flex;
+            gap: 2rem;
+            padding: 0 2rem 2rem;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            cursor: grab;
+        }
+        .artists-track::-webkit-scrollbar { display: none; }
+        .artist-card {
+            flex: 0 0 320px;
+            scroll-snap-align: start;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(107,70,193,0.2);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: transform 0.4s, border-color 0.4s;
+        }
+        .artist-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(107,70,193,0.5);
+        }
+        .artist-photo {
+            height: 350px;
+            overflow: hidden;
+            position: relative;
+        }
+        .artist-photo img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s;
+        }
+        .artist-card:hover .artist-photo img { transform: scale(1.05); }
+        .artist-photo::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            height: 50%;
+            background: linear-gradient(transparent, rgba(26,26,46,0.8));
+        }
+        .artist-details { padding: 1.5rem; }
+        .artist-details h4 {
+            color: #fff;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+        .artist-details .role {
+            color: #A78BFA;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 0.8rem;
+        }
+        .artist-details p {
+            color: rgba(230,230,250,0.5);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        .carousel-nav {
+            display: flex;
+            gap: 1rem;
+            padding: 2rem 2rem 0;
+        }
+        .carousel-btn {
+            width: 48px; height: 48px;
+            border-radius: 50%;
+            background: rgba(107,70,193,0.2);
+            border: 1px solid rgba(107,70,193,0.4);
+            color: #E6E6FA;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+        }
+        .carousel-btn:hover {
+            background: #6B46C1;
+            transform: scale(1.1);
+        }
+        .carousel-btn svg { width: 20px; height: 20px; }
+
+        /* ===== CLASSES & EVENTS ===== */
+        .classes { background: #F8F5FF; }
+        .classes-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+        }
+        .classes-header .section-subtitle { margin: 0 auto; }
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .event-card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 2rem;
+            border: 1px solid rgba(107,70,193,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        .event-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 60px rgba(107,70,193,0.12);
+        }
+        .event-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #6B46C1, #A78BFA);
+        }
+        .event-date {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            background: linear-gradient(135deg, #6B46C1, #7C3AED);
+            color: #fff;
+            padding: 0.8rem 1.2rem;
+            border-radius: 12px;
+            margin-bottom: 1.2rem;
+            align-self: flex-start;
+        }
+        .event-date .month {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: 600;
+        }
+        .event-date .day {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            line-height: 1;
+        }
+        .event-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 0.6rem;
+            letter-spacing: -0.01em;
+        }
+        .event-card p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 1.2rem;
+            flex: 1;
+        }
+        .event-meta {
+            display: flex;
+            gap: 1.5rem;
+            font-size: 0.85rem;
+            color: #888;
+        }
+        .event-meta span { display: flex; align-items: center; gap: 0.3rem; }
+        .event-meta svg { width: 16px; height: 16px; fill: #6B46C1; }
+        .event-enroll {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            margin-top: 1rem;
+            color: #6B46C1;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+        .event-enroll:hover { color: #7C3AED; }
+        .event-enroll svg { width: 16px; height: 16px; }
+
+        /* ===== GALLERY EVEN GRID ===== */
+        .gallery { background: #fff; }
+        .gallery-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+        }
+        .gallery-header .section-subtitle { margin: 0 auto; }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .gallery-item {
+            border-radius: 16px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            aspect-ratio: 1 / 1;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.6s ease;
+        }
+        .gallery-item:hover img { transform: scale(1.05); }
+        .gallery-caption {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 40%, rgba(26,26,46,0.85) 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 1.5rem;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        .gallery-item:hover .gallery-caption { opacity: 1; }
+        .gallery-caption h4 {
+            color: #fff;
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+        }
+        .gallery-caption p {
+            color: rgba(230,230,250,0.7);
+            font-size: 0.85rem;
+        }
+
+        /* ===== TESTIMONIALS ===== */
+        .testimonials {
+            background: #F8F5FF;
+            position: relative;
+        }
+        .testimonials-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+        }
+        .testimonials-header .section-subtitle { margin: 0 auto; }
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .testimonial-card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 2.5rem;
+            position: relative;
+            border: 1px solid rgba(107,70,193,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 50px rgba(107,70,193,0.1);
+        }
+        .testimonial-quote {
+            font-size: 3rem;
+            font-family: 'Space Grotesk', sans-serif;
+            color: #6B46C1;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+        .testimonial-card blockquote {
+            font-size: 1.05rem;
+            color: #444;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+            flex: 1;
+        }
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-top: auto;
+        }
+        .testimonial-avatar {
+            width: 48px; height: 48px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #6B46C1, #A78BFA);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-weight: 700;
+            font-family: 'Space Grotesk', sans-serif;
+            flex-shrink: 0;
+        }
+        .testimonial-author .name {
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: #1A1A2E;
+        }
+        .testimonial-author .title {
+            font-size: 0.85rem;
+            color: #888;
+        }
+
+        /* ===== PRESS ===== */
+        .press { background: #fff; }
+        .press-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+        }
+        .press-header .section-subtitle { margin: 0 auto; }
+        .press-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 4rem;
+            flex-wrap: wrap;
+            max-width: 1000px;
+            margin: 0 auto 3rem;
+        }
+        .press-logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: rgba(26,26,46,0.2);
+            letter-spacing: -0.02em;
+            transition: color 0.3s;
+            cursor: default;
+        }
+        .press-logo:hover { color: #6B46C1; }
+        .press-quotes {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .press-quote-item {
+            font-size: 1.3rem;
+            color: #444;
+            line-height: 1.7;
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+        .press-quote-source {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #6B46C1;
+        }
+
+        /* ===== CONTACT ===== */
+        .contact {
+            background: linear-gradient(135deg, #1A1A2E 0%, #2D1B69 40%, #6B46C1 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .contact::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            background: rgba(107,70,193,0.15);
+            animation: floatC 12s ease-in-out infinite;
+        }
+        .contact::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background: rgba(167,139,250,0.1);
+            animation: floatA 15s ease-in-out infinite;
+        }
+        .contact-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            position: relative;
+            z-index: 2;
+        }
+        .contact .section-label { color: #A78BFA; }
+        .contact .section-title { color: #fff; }
+        .contact .section-subtitle { color: rgba(230,230,250,0.6); margin-bottom: 2rem; }
+        .contact-info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .contact-icon {
+            width: 48px; height: 48px;
+            border-radius: 12px;
+            background: rgba(107,70,193,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .contact-icon svg { width: 22px; height: 22px; fill: #A78BFA; }
+        .contact-info-item h4 {
+            color: #fff;
+            font-size: 1rem;
+            margin-bottom: 0.2rem;
+        }
+        .contact-info-item p {
+            color: rgba(230,230,250,0.6);
+            font-size: 0.95rem;
+        }
+        .contact-info-item a { color: rgba(230,230,250,0.6); transition: color 0.3s; }
+        .contact-info-item a:hover { color: #A78BFA; }
+        .contact-form {
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(107,70,193,0.2);
+            border-radius: 24px;
+            padding: 2.5rem;
+            backdrop-filter: blur(20px);
+        }
+        .form-group { margin-bottom: 1.5rem; }
+        .form-group label {
+            display: block;
+            color: #E6E6FA;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(107,70,193,0.3);
+            border-radius: 12px;
+            padding: 0.9rem 1.2rem;
+            color: #fff;
+            font-size: 0.95rem;
+            transition: border-color 0.3s, background 0.3s;
+        }
+        .form-group input::placeholder,
+        .form-group textarea::placeholder { color: rgba(230,230,250,0.3); }
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: #6B46C1;
+            background: rgba(107,70,193,0.1);
+        }
+        .form-group select { cursor: pointer; }
+        .form-group select option { background: #1A1A2E; color: #fff; }
+        .form-group textarea { min-height: 120px; resize: vertical; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+        .form-submit {
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(135deg, #6B46C1, #8B5CF6);
+            color: #fff;
+            border: none;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s, background 0.5s;
+        }
+        .form-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(107,70,193,0.4);
+            background: linear-gradient(135deg, #7C3AED, #A78BFA);
+        }
+        .form-note {
+            text-align: center;
+            margin-top: 1rem;
+            font-size: 0.85rem;
+            color: rgba(230,230,250,0.4);
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: #0D0D1A;
+            position: relative;
+            overflow: hidden;
+            padding: 4rem 2rem 2rem;
+        }
+        .footer-shapes .shape-1 {
+            position: absolute;
+            top: -50px; right: 10%;
+            width: 120px; height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(107,70,193,0.15), transparent);
+            animation: floatB 10s ease-in-out infinite;
+        }
+        .footer-shapes .shape-2 {
+            position: absolute;
+            bottom: 20px; left: 5%;
+            width: 0; height: 0;
+            border-left: 40px solid transparent;
+            border-right: 40px solid transparent;
+            border-bottom: 70px solid rgba(107,70,193,0.08);
+            animation: floatA 12s ease-in-out infinite;
+        }
+        .footer-shapes .shape-3 {
+            position: absolute;
+            top: 30%; right: 30%;
+            width: 60px; height: 60px;
+            border: 2px solid rgba(107,70,193,0.1);
+            border-radius: 12px;
+            transform: rotate(45deg);
+            animation: floatC 8s ease-in-out infinite;
+        }
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+        .footer-top {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            padding-bottom: 3rem;
+            border-bottom: 1px solid rgba(107,70,193,0.1);
+        }
+        .footer-brand h3 {
+            font-size: 1.5rem;
+            color: #E6E6FA;
+            margin-bottom: 1rem;
+        }
+        .footer-brand h3 span { color: #6B46C1; }
+        .footer-brand p {
+            color: rgba(230,230,250,0.4);
+            font-size: 0.9rem;
+            line-height: 1.7;
+            max-width: 300px;
+            margin-bottom: 1.5rem;
+        }
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+        }
+        .footer-social a {
+            width: 40px; height: 40px;
+            border-radius: 10px;
+            background: rgba(107,70,193,0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s, transform 0.3s;
+        }
+        .footer-social a:hover {
+            background: #6B46C1;
+            transform: translateY(-3px);
+        }
+        .footer-social a svg { width: 18px; height: 18px; fill: #E6E6FA; }
+        .footer-col h4 {
+            color: #E6E6FA;
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 1.2rem;
+            letter-spacing: 0.03em;
+        }
+        .footer-col a {
+            display: block;
+            color: rgba(230,230,250,0.4);
+            font-size: 0.9rem;
+            margin-bottom: 0.8rem;
+            transition: color 0.3s;
+        }
+        .footer-col a:hover { color: #A78BFA; }
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 2rem;
+            font-size: 0.85rem;
+            color: rgba(230,230,250,0.3);
+        }
+
+        /* ===== OFFER BANNER ===== */
+        .offer-float {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 999;
+            background: linear-gradient(135deg, #6B46C1, #7C3AED);
+            color: #fff;
+            padding: 1rem 1.5rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(107,70,193,0.4);
+            max-width: 300px;
+            transform: translateY(150%);
+            transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .offer-float.show { transform: translateY(0); }
+        .offer-float-close {
+            position: absolute;
+            top: 0.5rem; right: 0.8rem;
+            background: none; border: none;
+            color: rgba(255,255,255,0.6);
+            cursor: pointer;
+            line-height: 1;
+            padding: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .offer-float-close svg { width: 18px; height: 18px; }
+        .offer-float h4 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1rem;
+            margin-bottom: 0.3rem;
+        }
+        .offer-float p {
+            font-size: 0.85rem;
+            opacity: 0.85;
+            margin-bottom: 0.8rem;
+        }
+        .offer-float a {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            color: #fff;
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        .offer-float a:hover { background: rgba(255,255,255,0.3); }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .hero-content { grid-template-columns: 1fr; text-align: center; }
+            .hero-text { padding-right: 0; }
+            .hero-subtitle { margin-left: auto; margin-right: auto; }
+            .hero-actions { justify-content: center; }
+            .hero-collage { height: 400px; max-width: 600px; margin: 0 auto; }
+            .services-grid { grid-template-columns: 1fr 1fr; }
+            .contact-inner { grid-template-columns: 1fr; }
+            .footer-top { grid-template-columns: 1fr 1fr; }
+            .press-logos { gap: 2rem; }
+            .testimonials-grid { grid-template-columns: 1fr 1fr; }
+            .events-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .nav-links.open {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 70px; left: 0; right: 0;
+                background: rgba(26,26,46,0.98);
+                padding: 2rem;
+                gap: 1.5rem;
+            }
+            .mobile-toggle { display: flex; }
+            .hero-collage { height: 300px; }
+            .hero-title { font-size: clamp(2.5rem, 8vw, 4rem); }
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+            .collage-overlay { bottom: 8px; right: 8px; padding: 0.8rem 1.2rem; }
+            .collage-overlay .number { font-size: 1.5rem; }
+            .section { padding: 4rem 1.5rem; }
+            .footer-top { grid-template-columns: 1fr; }
+            .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
+            .form-row { grid-template-columns: 1fr; }
+            .testimonials-grid { grid-template-columns: 1fr; }
+            .events-grid { grid-template-columns: 1fr; }
+            .services-grid { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 480px) {
+            .hero-collage { grid-template-columns: 1fr; grid-template-rows: auto; height: auto; }
+            .collage-img:nth-child(1) { grid-row: auto; }
+            .collage-img { aspect-ratio: 4/3; }
+            .gallery-grid { grid-template-columns: 1fr; }
+            .press-logos { gap: 1.5rem; }
+            .press-logo { font-size: 1.5rem; }
+            .artist-card { flex: 0 0 280px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav" aria-label="Main navigation" role="navigation">
+        <div class="nav-inner">
+            <a href="#" class="nav-logo" aria-label="Avant-Garde Salon & Spa home">AVANT<span>-</span>GARDE</a>
+            <div class="nav-links" id="navLinks">
+                <a href="#services">Services</a>
+                <a href="#artists">Artists</a>
+                <a href="#classes">Classes</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#press">Press</a>
+                <a href="#contact">Contact</a>
+                <a href="#contact" class="nav-cta">Book Your Look</a>
+            </div>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle mobile menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="hero">
+        <div class="hero-bg-gradient" aria-hidden="true"></div>
+
+        <!-- Floating shapes -->
+        <div class="shape shape-circle" style="width:200px;height:200px;top:10%;left:-5%;animation:floatA 12s ease-in-out infinite;" aria-hidden="true"></div>
+        <div class="shape shape-circle" style="width:100px;height:100px;bottom:15%;right:5%;animation:floatB 10s ease-in-out infinite;" aria-hidden="true"></div>
+
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="hero-badge">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    Award-Winning Artistic Stylists
+                </div>
+                <h1 class="hero-title">
+                    Where Hair Becomes <span class="accent">Art</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Bold vision meets precision craft. Our nationally competitive stylists transform your look into a statement that turns heads and defines trends.
+                </p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn-primary" role="button">
+                        Book Your Look
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                    <a href="tel:+15551237890" class="btn-secondary">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                        Call Our Studio
+                    </a>
+                </div>
+            </div>
+            <div class="hero-collage" aria-label="Creative hair artistry showcase">
+                <div class="collage-img">
+                    <img src="https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?w=800&q=80" alt="Creative avant-garde hair styling" loading="eager">
+                </div>
+                <div class="collage-img">
+                    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=80" alt="Beautifully styled editorial hair" loading="eager">
+                </div>
+                <div class="collage-img">
+                    <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800&q=80" alt="Modern artistic salon interior" loading="eager">
+                </div>
+                <div class="collage-overlay" aria-label="50+ national competition awards">
+                    <div class="number">50+</div>
+                    <div class="label">National Awards</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Award Marquee -->
+    <div class="award-marquee" aria-label="Achievements and accolades">
+        <div class="marquee-track" aria-hidden="true">
+            <span class="marquee-item">
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                50+ National Competition Awards
+            </span>
+            <span class="marquee-item">
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                Featured in Vogue, Allure & Bazaar
+            </span>
+            <span class="marquee-item">
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                Award-Winning Artistic Stylists
+            </span>
+            <span class="marquee-item">
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                Nationally Competitive Team
+            </span>
+            <span class="marquee-item">
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                Trend-Forward Creative Vision
+            </span>
+            <!-- Duplicate for seamless loop -->
+            <span class="marquee-item">
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                50+ National Competition Awards
+            </span>
+            <span class="marquee-item">
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                Featured in Vogue, Allure & Bazaar
+            </span>
+            <span class="marquee-item">
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                Award-Winning Artistic Stylists
+            </span>
+            <span class="marquee-item">
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                Nationally Competitive Team
+            </span>
+            <span class="marquee-item">
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                Trend-Forward Creative Vision
+            </span>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <section class="section services" id="services">
+        <!-- Floating shapes -->
+        <div class="shape shape-circle" style="width:250px;height:250px;top:-80px;right:-100px;animation:floatA 15s ease-in-out infinite;" aria-hidden="true"></div>
+        <div class="shape shape-circle" style="width:150px;height:150px;bottom:10%;left:-60px;animation:floatB 12s ease-in-out infinite;" aria-hidden="true"></div>
+
+        <div class="services-header fade-in">
+            <p class="section-label">Our Craft</p>
+            <h2 class="section-title">Services That Define Trends</h2>
+            <p class="section-subtitle">Every service is an artistic collaboration between you and our nationally acclaimed stylists. We don't follow trends -- we create them.</p>
+        </div>
+
+        <div class="services-grid">
+            <!-- Service 1: Creative Color -->
+            <article class="service-card fade-in">
+                <div class="service-card-image">
+                    <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=800&q=80" alt="Creative color hair transformation" loading="lazy">
+                </div>
+                <div class="service-card-body">
+                    <div class="service-number">01</div>
+                    <h3>Creative Color</h3>
+                    <p>From hand-painted balayage to vivid fantasy shades, our color artists use proprietary techniques developed through years of competition. Every application is a unique masterpiece.</p>
+                    <div class="service-tags">
+                        <span class="service-tag">Balayage</span>
+                        <span class="service-tag">Fantasy Color</span>
+                        <span class="service-tag">Color Correction</span>
+                        <span class="service-tag">Dimensional</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Service 2: Precision Cuts -->
+            <article class="service-card fade-in">
+                <div class="service-card-image">
+                    <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=800&q=80" alt="Precision cut styling" loading="lazy">
+                </div>
+                <div class="service-card-body">
+                    <div class="service-number">02</div>
+                    <h3>Precision Cuts</h3>
+                    <p>Architecture for your hair. Our cutting techniques draw from editorial and runway influences, creating shapes that move with intention and define your aesthetic.</p>
+                    <div class="service-tags">
+                        <span class="service-tag">Razor Cuts</span>
+                        <span class="service-tag">Textured Layers</span>
+                        <span class="service-tag">Editorial</span>
+                        <span class="service-tag">Bespoke</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Service 3: Keratin & Treatments -->
+            <article class="service-card fade-in">
+                <div class="service-card-image">
+                    <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=800&q=80" alt="Keratin treatment process" loading="lazy">
+                </div>
+                <div class="service-card-body">
+                    <div class="service-number">03</div>
+                    <h3>Keratin Treatments</h3>
+                    <p>Luxury restoration meets science. Our keratin treatments use advanced bonding technology to deliver mirror-finish smoothness while preserving natural body and bounce.</p>
+                    <div class="service-tags">
+                        <span class="service-tag">Keratin Smoothing</span>
+                        <span class="service-tag">Bond Repair</span>
+                        <span class="service-tag">Deep Conditioning</span>
+                        <span class="service-tag">Gloss</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Artists Section -->
+    <section class="section artists" id="artists">
+        <p class="section-label fade-in">The Visionaries</p>
+        <h2 class="section-title fade-in">Meet Our Artists</h2>
+        <p class="section-subtitle fade-in">A collective of nationally competitive stylists whose passion, precision, and bold creativity have earned them recognition on the industry's biggest stages.</p>
+
+        <div class="artists-track" id="artistsTrack" role="region" aria-label="Stylist profiles carousel">
+            <article class="artist-card">
+                <div class="artist-photo">
+                    <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=400&q=80" alt="Salon artist portrait" loading="lazy">
+                </div>
+                <div class="artist-details">
+                    <h4>Serena Voss</h4>
+                    <p class="role">Lead Color Artist & Creative Director</p>
+                    <p>3x National Color Champion. Known for sculptural vivids and hand-painted color architecture.</p>
+                </div>
+            </article>
+            <article class="artist-card">
+                <div class="artist-photo">
+                    <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=400&q=80" alt="Salon artist portrait" loading="lazy">
+                </div>
+                <div class="artist-details">
+                    <h4>Mika Chen</h4>
+                    <p class="role">Senior Cutting Specialist</p>
+                    <p>Editorial precision meets wearable artistry. Featured at NYFW and London Fashion Week backstage teams.</p>
+                </div>
+            </article>
+            <article class="artist-card">
+                <div class="artist-photo">
+                    <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&q=80" alt="Salon artist portrait" loading="lazy">
+                </div>
+                <div class="artist-details">
+                    <h4>Aria Laurent</h4>
+                    <p class="role">Texture & Treatment Director</p>
+                    <p>Master of keratin science and curl artistry. Trained in Paris and Milan's top restoration studios.</p>
+                </div>
+            </article>
+            <article class="artist-card">
+                <div class="artist-photo">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80" alt="Salon artist portrait" loading="lazy">
+                </div>
+                <div class="artist-details">
+                    <h4>Zara Kim</h4>
+                    <p class="role">Styling & Education Lead</p>
+                    <p>Platform artist and educator. Heads our masterclass program and mentors the next generation of talent.</p>
+                </div>
+            </article>
+        </div>
+
+        <div class="carousel-nav" aria-label="Carousel navigation">
+            <button class="carousel-btn" id="carouselPrev" aria-label="Previous artist">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            </button>
+            <button class="carousel-btn" id="carouselNext" aria-label="Next artist">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+        </div>
+    </section>
+
+    <!-- Classes & Events Section -->
+    <section class="section classes" id="classes">
+        <div class="classes-header fade-in">
+            <p class="section-label">Learn & Create</p>
+            <h2 class="section-title">Classes & Events</h2>
+            <p class="section-subtitle">Elevate your craft or discover your creative side. From professional masterclasses to styling workshops, learn from the industry's best.</p>
+        </div>
+
+        <div class="events-grid">
+            <article class="event-card fade-in">
+                <div class="event-date">
+                    <span class="month">Apr</span>
+                    <span class="day">12</span>
+                </div>
+                <h4>Advanced Color Masterclass</h4>
+                <p>Deep-dive into competition-level color techniques. Learn hand-painting, foil placement strategies, and formulation secrets from our award-winning team.</p>
+                <div class="event-meta">
+                    <span>
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.2 3.2.8-1.3-4.5-2.7V7z"/></svg>
+                        10AM - 4PM
+                    </span>
+                    <span>
+                        <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                        8 Spots Left
+                    </span>
+                </div>
+                <a href="#contact" class="event-enroll">Now Enrolling <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            </article>
+
+            <article class="event-card fade-in">
+                <div class="event-date">
+                    <span class="month">Apr</span>
+                    <span class="day">26</span>
+                </div>
+                <h4>Editorial Styling Workshop</h4>
+                <p>Learn runway and editorial techniques used backstage at Fashion Week. Master updos, wet looks, and textured waves for high-impact styling.</p>
+                <div class="event-meta">
+                    <span>
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.2 3.2.8-1.3-4.5-2.7V7z"/></svg>
+                        11AM - 3PM
+                    </span>
+                    <span>
+                        <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                        12 Spots Left
+                    </span>
+                </div>
+                <a href="#contact" class="event-enroll">Register Now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            </article>
+
+            <article class="event-card fade-in">
+                <div class="event-date">
+                    <span class="month">May</span>
+                    <span class="day">10</span>
+                </div>
+                <h4>Curl & Texture Intensive</h4>
+                <p>Celebrate natural texture with expert techniques for curls, coils, and waves. Includes product formulation workshop and hands-on practice.</p>
+                <div class="event-meta">
+                    <span>
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.2 3.2.8-1.3-4.5-2.7V7z"/></svg>
+                        10AM - 5PM
+                    </span>
+                    <span>
+                        <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                        6 Spots Left
+                    </span>
+                </div>
+                <a href="#contact" class="event-enroll">Save Your Spot <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            </article>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="section gallery" id="gallery">
+        <div class="gallery-header fade-in">
+            <p class="section-label">Our Work</p>
+            <h2 class="section-title">The Gallery</h2>
+            <p class="section-subtitle">A curated showcase of transformations, editorial shoots, and competition entries from our artistic team.</p>
+        </div>
+
+        <div class="gallery-grid">
+            <div class="gallery-item scale-in">
+                <img src="https://images.unsplash.com/photo-1526047932273-341f2a7631f9?w=600&q=80" alt="Artistic hair creation" loading="lazy">
+                <div class="gallery-caption">
+                    <h4>Vivid Color Story</h4>
+                    <p>Competition entry by Serena Voss</p>
+                </div>
+            </div>
+            <div class="gallery-item scale-in">
+                <img src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?w=600&q=80" alt="Editorial styled hair" loading="lazy">
+                <div class="gallery-caption">
+                    <h4>Editorial Elegance</h4>
+                    <p>Styled for Bazaar feature</p>
+                </div>
+            </div>
+            <div class="gallery-item scale-in">
+                <img src="https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?w=600&q=80" alt="Avant-garde creative hair" loading="lazy">
+                <div class="gallery-caption">
+                    <h4>Avant-Garde Vision</h4>
+                    <p>National competition finalist</p>
+                </div>
+            </div>
+            <div class="gallery-item scale-in">
+                <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&q=80" alt="Salon creative space" loading="lazy">
+                <div class="gallery-caption">
+                    <h4>Our Creative Space</h4>
+                    <p>Where artistry comes to life</p>
+                </div>
+            </div>
+            <div class="gallery-item scale-in">
+                <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=600&q=80" alt="Color technique showcase" loading="lazy">
+                <div class="gallery-caption">
+                    <h4>Color Architecture</h4>
+                    <p>Hand-painted dimension</p>
+                </div>
+            </div>
+            <div class="gallery-item scale-in">
+                <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80" alt="Precision cut result" loading="lazy">
+                <div class="gallery-caption">
+                    <h4>Precision Geometry</h4>
+                    <p>Sharp lines, soft movement</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section testimonials" id="testimonials">
+        <div class="shape shape-circle" style="width:180px;height:180px;top:10%;right:-60px;animation:floatC 10s ease-in-out infinite;" aria-hidden="true"></div>
+
+        <div class="testimonials-header fade-in">
+            <p class="section-label">Client Love</p>
+            <h2 class="section-title">What They Say</h2>
+            <p class="section-subtitle">Trusted by fashion-industry professionals, influencers, and creative individuals who demand the extraordinary.</p>
+        </div>
+
+        <div class="testimonials-grid">
+            <article class="testimonial-card fade-in">
+                <div class="testimonial-quote">"</div>
+                <blockquote>Avant-Garde completely transformed how I think about my hair. Serena created a color that gets me stopped on the street daily. I've never felt more like myself -- they understand that hair is personal art.</blockquote>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">JM</div>
+                    <div>
+                        <div class="name">Jade Martinez</div>
+                        <div class="title">Fashion Stylist, NYC</div>
+                    </div>
+                </div>
+            </article>
+            <article class="testimonial-card fade-in">
+                <div class="testimonial-quote">"</div>
+                <blockquote>I've worked with salons across three continents for editorial shoots. The team at Avant-Garde is on an entirely different level. Their technical precision combined with creative fearlessness is rare.</blockquote>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">RL</div>
+                    <div>
+                        <div class="name">Ren Liu</div>
+                        <div class="title">Creative Director, Vogue Asia</div>
+                    </div>
+                </div>
+            </article>
+            <article class="testimonial-card fade-in">
+                <div class="testimonial-quote">"</div>
+                <blockquote>The masterclass I took here changed my career trajectory. Zara is an incredible educator. Six months later, I placed in my first regional competition. This team invests in your growth.</blockquote>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">DK</div>
+                    <div>
+                        <div class="name">Dani Kowalski</div>
+                        <div class="title">Independent Stylist & Educator</div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Press Section -->
+    <section class="section press" id="press">
+        <div class="press-header fade-in">
+            <p class="section-label">In The Press</p>
+            <h2 class="section-title">Featured In</h2>
+            <p class="section-subtitle">Our work has been recognized by the world's leading fashion and beauty publications.</p>
+        </div>
+
+        <div class="press-logos fade-in">
+            <span class="press-logo">VOGUE</span>
+            <span class="press-logo">ALLURE</span>
+            <span class="press-logo">BAZAAR</span>
+            <span class="press-logo">ELLE</span>
+            <span class="press-logo">W</span>
+        </div>
+
+        <div class="press-quotes fade-in">
+            <p class="press-quote-item">"A salon that doesn't just keep up with trends -- it sets them. Avant-Garde's team brings competition-level artistry to every client who sits in their chair."</p>
+            <p class="press-quote-source">-- Allure Magazine</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="contact-inner">
+            <div>
+                <p class="section-label fade-in">Get In Touch</p>
+                <h2 class="section-title fade-in">Let's Create Something Bold</h2>
+                <p class="section-subtitle fade-in">Ready for a look that makes a statement? Book your complimentary style consultation and let our artists bring your vision to life.</p>
+
+                <div class="contact-info-item fade-in">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                    </div>
+                    <div>
+                        <h4>Visit Our Studio</h4>
+                        <p>777 Arts District Boulevard</p>
+                    </div>
+                </div>
+                <div class="contact-info-item fade-in">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                    </div>
+                    <div>
+                        <h4>Call Our Studio</h4>
+                        <p><a href="tel:+15551237890">(555) 123-7890</a></p>
+                    </div>
+                </div>
+                <div class="contact-info-item fade-in">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+                    </div>
+                    <div>
+                        <h4>Studio Hours</h4>
+                        <p>Tue - Fri: 10AM - 8PM<br>Sat: 9AM - 6PM</p>
+                    </div>
+                </div>
+            </div>
+
+            <form class="contact-form fade-in" action="#" method="post" aria-label="Book a consultation">
+                <h3 style="color:#fff;font-size:1.4rem;margin-bottom:0.3rem;">Book Your Consultation</h3>
+                <p style="color:rgba(230,230,250,0.5);font-size:0.9rem;margin-bottom:1.5rem;">New clients receive a complimentary style consultation</p>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" name="firstName" placeholder="Your first name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" name="lastName" placeholder="Your last name" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="you@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="service">Service Interest</label>
+                    <select id="service" name="service" required>
+                        <option value="" disabled selected>Select a service</option>
+                        <option value="creative-color">Creative Color</option>
+                        <option value="precision-cut">Precision Cut</option>
+                        <option value="keratin">Keratin Treatment</option>
+                        <option value="styling-class">Styling Class</option>
+                        <option value="consultation">General Consultation</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Tell Us Your Vision</label>
+                    <textarea id="message" name="message" placeholder="Describe your dream look or any inspiration..."></textarea>
+                </div>
+                <button type="submit" class="form-submit">Book Your Look</button>
+                <p class="form-note">We'll respond within 24 hours to confirm your consultation.</p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer-shapes" aria-hidden="true">
+            <div class="shape-1"></div>
+            <div class="shape-2"></div>
+            <div class="shape-3"></div>
+        </div>
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <h3>AVANT<span>-</span>GARDE</h3>
+                    <p>Trend-forward salon with an artistic focus. Our nationally competitive stylists are dedicated to creating looks that push boundaries and define individuality.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                        </a>
+                        <a href="#" aria-label="TikTok">
+                            <svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 0010.86 4.46V13a8.28 8.28 0 005.58 2.16v-3.44a4.85 4.85 0 01-3.59-1.47V6.69h3.59z"/></svg>
+                        </a>
+                        <a href="#" aria-label="Pinterest">
+                            <svg viewBox="0 0 24 24"><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 01.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12.017 24c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641 0 12.017 0z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <a href="#services">Creative Color</a>
+                    <a href="#services">Precision Cuts</a>
+                    <a href="#services">Keratin Treatments</a>
+                    <a href="#classes">Styling Classes</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Studio</h4>
+                    <a href="#artists">Our Artists</a>
+                    <a href="#gallery">Gallery</a>
+                    <a href="#press">Press</a>
+                    <a href="#classes">Events</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Connect</h4>
+                    <a href="#contact">Book Consultation</a>
+                    <a href="tel:+15551237890">(555) 123-7890</a>
+                    <a href="#">777 Arts District Blvd</a>
+                    <a href="#">Gift Cards</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p><svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" style="display:inline-block;vertical-align:-2px;margin-right:4px;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1.41 16.09V16.1c-2.02-.26-3.62-1.53-3.62-3.47h1.8c.04.98.77 1.71 1.82 1.87v-3.56c-2.14-.52-3.22-1.42-3.22-3.12 0-1.74 1.41-2.98 3.22-3.2V3.15h1.23v1.48c1.88.24 3.16 1.39 3.28 3.07h-1.8c-.09-.82-.65-1.48-1.48-1.66v3.38c2.19.53 3.35 1.35 3.35 3.2 0 1.87-1.44 3.14-3.35 3.36v1.49h-1.23zM10.6 8.77c0 .76.54 1.2 1.59 1.5V7.16c-1.01.16-1.59.72-1.59 1.61zm2.82 6.54c1.09-.16 1.72-.78 1.72-1.68 0-.82-.55-1.27-1.72-1.58v3.26z"/></svg> 2026 Avant-Garde Salon & Spa. All rights reserved.</p>
+                <p>Designed with artistic intent.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Offer -->
+    <div class="offer-float" id="offerFloat" role="complementary" aria-label="Special offer">
+        <button class="offer-float-close" id="offerClose" aria-label="Close offer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+        <h4>New Client Special</h4>
+        <p>Complimentary Style Consultation for first-time guests.</p>
+        <a href="#contact">Claim Offer</a>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // ===== NAV: Slide down on scroll past hero =====
+            const nav = document.querySelector('.main-nav');
+            const hero = document.getElementById('hero');
+            const heroHeight = hero.offsetHeight;
+            let lastScroll = 0;
+
+            window.addEventListener('scroll', () => {
+                const currentScroll = window.pageYOffset;
+                if (currentScroll > heroHeight * 0.7) {
+                    nav.classList.add('visible');
+                } else {
+                    nav.classList.remove('visible');
+                }
+                lastScroll = currentScroll;
+            }, { passive: true });
+
+            // ===== MOBILE MENU =====
+            const mobileToggle = document.getElementById('mobileToggle');
+            const navLinks = document.getElementById('navLinks');
+            mobileToggle.addEventListener('click', () => {
+                mobileToggle.classList.toggle('active');
+                navLinks.classList.toggle('open');
+                const isOpen = navLinks.classList.contains('open');
+                mobileToggle.setAttribute('aria-expanded', isOpen);
+            });
+            // Close on link click
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileToggle.classList.remove('active');
+                    navLinks.classList.remove('open');
+                    mobileToggle.setAttribute('aria-expanded', 'false');
+                });
+            });
+
+            // ===== HERO COLLAGE: Staggered zoom-in =====
+            const collageImages = document.querySelectorAll('.collage-img');
+            setTimeout(() => {
+                collageImages.forEach(img => img.classList.add('loaded'));
+            }, 300);
+
+            // ===== INTERSECTION OBSERVER: Fade/Slide/Scale animations =====
+            const observerOptions = { threshold: 0.15, rootMargin: '0px 0px -50px 0px' };
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in, .slide-left, .slide-right, .scale-in').forEach(el => {
+                observer.observe(el);
+            });
+
+            // ===== ARTIST CAROUSEL =====
+            const track = document.getElementById('artistsTrack');
+            const prevBtn = document.getElementById('carouselPrev');
+            const nextBtn = document.getElementById('carouselNext');
+            const scrollAmount = 340;
+
+            prevBtn.addEventListener('click', () => {
+                track.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            });
+            nextBtn.addEventListener('click', () => {
+                track.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            });
+
+            // Drag scroll for carousel
+            let isDragging = false, startX, scrollLeft;
+            track.addEventListener('mousedown', (e) => {
+                isDragging = true;
+                track.style.cursor = 'grabbing';
+                startX = e.pageX - track.offsetLeft;
+                scrollLeft = track.scrollLeft;
+            });
+            track.addEventListener('mouseleave', () => { isDragging = false; track.style.cursor = 'grab'; });
+            track.addEventListener('mouseup', () => { isDragging = false; track.style.cursor = 'grab'; });
+            track.addEventListener('mousemove', (e) => {
+                if (!isDragging) return;
+                e.preventDefault();
+                const x = e.pageX - track.offsetLeft;
+                const walk = (x - startX) * 1.5;
+                track.scrollLeft = scrollLeft - walk;
+            });
+
+            // ===== FLOATING OFFER =====
+            const offerFloat = document.getElementById('offerFloat');
+            const offerClose = document.getElementById('offerClose');
+            let offerShown = false;
+
+            window.addEventListener('scroll', () => {
+                if (!offerShown && window.pageYOffset > heroHeight * 1.5) {
+                    offerFloat.classList.add('show');
+                    offerShown = true;
+                }
+            }, { passive: true });
+
+            offerClose.addEventListener('click', () => {
+                offerFloat.classList.remove('show');
+            });
+
+            // ===== SMOOTH SCROLL =====
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href === '#') return;
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        const offsetTop = target.offsetTop - 80;
+                        window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+                    }
+                });
+            });
+
+            // ===== FORM SUBMISSION (demo) =====
+            const form = document.querySelector('.contact-form');
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const submitBtn = form.querySelector('.form-submit');
+                submitBtn.textContent = 'Booking Confirmed!';
+                submitBtn.style.background = 'linear-gradient(135deg, #059669, #10B981)';
+                setTimeout(() => {
+                    submitBtn.textContent = 'Book Your Look';
+                    submitBtn.style.background = '';
+                    form.reset();
+                }, 3000);
+            });
+
+        });
+    </script>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BeautySalon",
+        "name": "Avant-Garde Salon & Spa",
+        "description": "Discover bold, artistic hair design at Avant-Garde Salon & Spa. Award-winning stylists, creative color, and styling classes.",
+        "url": "https://avantgardesalonspa.com",
+        "telephone": "+15551237890",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "777 Arts District Boulevard"
+        },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "10:00",
+                "closes": "20:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Saturday",
+                "opens": "09:00",
+                "closes": "18:00"
+            }
+        ],
+        "priceRange": "$$$",
+        "image": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=600&q=80",
+        "sameAs": []
+    }
+    </script>
+</body>
+</html>

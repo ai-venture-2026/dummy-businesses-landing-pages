@@ -1,0 +1,2037 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Cosmetic Dental | Veneers, Whitening &amp; Smile Makeovers</title>
+    <meta name="description" content="Transform your smile with Elite Cosmetic Dental. Veneers, whitening, Invisalign & complete smile makeovers. Free virtual preview. 0% financing available.">
+    <meta name="keywords" content="cosmetic dentist, veneers, teeth whitening, Invisalign, smile makeover, Beverly Hills dentist">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://elitecosmeticdental.com">
+    <meta property="og:title" content="Elite Cosmetic Dental | Veneers, Whitening & Smile Makeovers">
+    <meta property="og:description" content="Transform your smile with Elite Cosmetic Dental. Veneers, whitening, Invisalign & complete smile makeovers.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* ========== RESET & BASE ========== */
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; font-size: 16px; }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: #1A1A2E;
+            background: #FFFFFF;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Outfit', sans-serif; }
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; display: block; }
+        ul { list-style: none; }
+        button, input, textarea, select { font-family: inherit; border: none; outline: none; }
+
+        /* ========== UTILITY ========== */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        .section-label {
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #26C6DA;
+            margin-bottom: 12px;
+        }
+        .section-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            line-height: 1.15;
+            margin-bottom: 16px;
+        }
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 600px;
+            line-height: 1.7;
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .fade-in-left {
+            opacity: 0;
+            transform: translateX(-40px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+        .fade-in-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .fade-in-right {
+            opacity: 0;
+            transform: translateX(40px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+        .fade-in-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* ========== BUTTONS ========== */
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 16px 36px;
+            background: #26C6DA;
+            color: #fff;
+            font-weight: 600;
+            font-size: 1rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            box-shadow: 0 4px 25px rgba(38, 198, 218, 0.35);
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%; width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
+        }
+        .btn-primary:hover::before { left: 100%; }
+        .btn-primary:hover {
+            background: #00ACC1;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 35px rgba(0, 172, 193, 0.5);
+        }
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 32px;
+            background: transparent;
+            color: #fff;
+            font-weight: 600;
+            font-size: 1rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255,255,255,0.4);
+        }
+        .btn-secondary:hover {
+            border-color: #26C6DA;
+            background: rgba(38, 198, 218, 0.1);
+        }
+        .btn-dark {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 16px 36px;
+            background: #1A1A2E;
+            color: #fff;
+            font-weight: 600;
+            font-size: 1rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+        }
+        .btn-dark:hover {
+            background: #12121F;
+            transform: translateY(-2px);
+        }
+
+        /* ========== NAVIGATION ========== */
+        .navbar {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            padding: 20px 0;
+            transition: all 0.4s ease;
+        }
+        .navbar.scrolled {
+            background: rgba(26, 26, 46, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding: 12px 0;
+            box-shadow: 0 4px 30px rgba(0,0,0,0.2);
+        }
+        .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        .nav-logo {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .nav-logo span { color: #26C6DA; }
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+        .nav-links a {
+            color: rgba(255,255,255,0.8);
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        .nav-links a:hover { color: #26C6DA; }
+        .nav-cta {
+            padding: 10px 24px !important;
+            background: #26C6DA !important;
+            color: #fff !important;
+            border-radius: 50px !important;
+            font-weight: 600 !important;
+            font-size: 0.85rem !important;
+            opacity: 1 !important;
+        }
+        .nav-cta:hover { background: #00ACC1 !important; box-shadow: 0 4px 20px rgba(0, 172, 193, 0.4); }
+        .mobile-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 4px;
+        }
+        .mobile-toggle span {
+            width: 24px;
+            height: 2px;
+            background: #fff;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(26, 26, 46, 0.98);
+            z-index: 999;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 32px;
+        }
+        .mobile-menu.active { display: flex; }
+        .mobile-menu a {
+            color: #fff;
+            font-size: 1.4rem;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 500;
+        }
+        .mobile-menu a:hover { color: #26C6DA; }
+        .mobile-close {
+            position: absolute;
+            top: 24px; right: 24px;
+            background: none; border: none;
+            color: #fff; font-size: 2rem;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .mobile-toggle { display: flex; }
+        }
+
+        /* ========== HERO ========== */
+        .hero {
+            position: relative;
+            height: 100vh;
+            min-height: 700px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background: #1A1A2E;
+        }
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+        }
+        .hero-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .hero-bg::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(26,26,46,0.85) 0%, rgba(26,26,46,0.5) 100%);
+            z-index: 1;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 20;
+            max-width: 700px;
+            padding: 0 24px;
+            margin-left: 8%;
+        }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 20px;
+            background: rgba(38, 198, 218, 0.15);
+            border: 1px solid rgba(38, 198, 218, 0.3);
+            border-radius: 50px;
+            color: #26C6DA;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+            backdrop-filter: blur(10px);
+        }
+        .hero h1 {
+            font-size: clamp(2.5rem, 5.5vw, 4.2rem);
+            font-weight: 800;
+            color: #fff;
+            line-height: 1.08;
+            margin-bottom: 20px;
+        }
+        .hero h1 em {
+            font-style: normal;
+            color: #26C6DA;
+            position: relative;
+        }
+        .hero p {
+            font-size: 1.15rem;
+            color: rgba(255,255,255,0.75);
+            line-height: 1.7;
+            margin-bottom: 36px;
+            max-width: 520px;
+        }
+        .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
+        .hero-stats-bar {
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            z-index: 20;
+            background: rgba(26, 26, 46, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-top: 1px solid rgba(38, 198, 218, 0.2);
+        }
+        .hero-stats-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 24px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .hero-stat {
+            text-align: center;
+            color: #fff;
+        }
+        .hero-stat-number {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #26C6DA;
+        }
+        .hero-stat-label {
+            font-size: 0.78rem;
+            color: rgba(255,255,255,0.6);
+            margin-top: 4px;
+            letter-spacing: 0.5px;
+        }
+        .hero-stat-divider {
+            width: 1px;
+            height: 40px;
+            background: rgba(255,255,255,0.15);
+        }
+
+        @media (max-width: 768px) {
+            .hero { min-height: 100vh; }
+            .hero-content { margin-left: 0; text-align: center; max-width: 100%; }
+            .hero-content p { margin-left: auto; margin-right: auto; }
+            .hero-buttons { justify-content: center; }
+            .hero-stats-inner { flex-wrap: wrap; gap: 16px; }
+            .hero-stat-divider { display: none; }
+            .hero-stat { flex: 1; min-width: 100px; }
+        }
+
+        /* ========== RESULTS COUNTER STATS ========== */
+        .stats-section {
+            padding: 80px 0;
+            background: #1A1A2E;
+            position: relative;
+        }
+        .stats-section::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #26C6DA, transparent);
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+        }
+        .stat-card {
+            text-align: center;
+            padding: 32px 20px;
+            border-radius: 16px;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(38, 198, 218, 0.1);
+            transition: all 0.3s ease;
+        }
+        .stat-card:hover {
+            background: rgba(38, 198, 218, 0.05);
+            border-color: rgba(38, 198, 218, 0.3);
+            transform: translateY(-4px);
+        }
+        .stat-icon {
+            width: 56px;
+            height: 56px;
+            margin: 0 auto 16px;
+            background: linear-gradient(135deg, rgba(38,198,218,0.15), rgba(38,198,218,0.05));
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #26C6DA;
+        }
+        .stat-number {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: #26C6DA;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+        .stat-label {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.6);
+            line-height: 1.4;
+        }
+        @media (max-width: 768px) {
+            .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+        }
+        @media (max-width: 480px) {
+            .stats-grid { grid-template-columns: 1fr; }
+        }
+
+        /* ========== RESULTS GALLERY ========== */
+        .gallery-section {
+            padding: 100px 0;
+            background: #F5F5F5;
+        }
+        .gallery-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .gallery-header .section-subtitle { margin: 0 auto; }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+        .gallery-card {
+            border-radius: 16px;
+            overflow: hidden;
+            background: #fff;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            transition: all 0.4s ease;
+            border: 1px solid #eee;
+        }
+        .gallery-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 48px rgba(0,0,0,0.1);
+        }
+        .gallery-card-image {
+            aspect-ratio: 4/3;
+            overflow: hidden;
+        }
+        .gallery-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .gallery-card:hover .gallery-card-image img {
+            transform: scale(1.05);
+        }
+        .gallery-card-body {
+            padding: 20px 24px;
+        }
+        .gallery-card-body h3 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: #1A1A2E;
+        }
+        .gallery-card-body p {
+            font-size: 0.88rem;
+            color: #888;
+            line-height: 1.5;
+        }
+        @media (max-width: 768px) {
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 480px) {
+            .gallery-grid { grid-template-columns: 1fr; }
+        }
+
+        /* ========== SERVICES ========== */
+        .services-section {
+            padding: 100px 0;
+            background: #fff;
+        }
+        .services-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .services-header .section-subtitle { margin: 0 auto; }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .service-card {
+            border-radius: 20px;
+            overflow: hidden;
+            background: #F5F5F5;
+            border: 1px solid #eee;
+            transition: all 0.4s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            border-color: rgba(38, 198, 218, 0.3);
+            background: rgba(255,255,255,0.8);
+            backdrop-filter: blur(20px);
+        }
+        .service-card-image {
+            height: 220px;
+            overflow: hidden;
+        }
+        .service-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .service-card:hover .service-card-image img {
+            transform: scale(1.05);
+        }
+        .service-card-body { padding: 32px; }
+        .service-card-popular {
+            display: inline-block;
+            padding: 4px 12px;
+            background: #26C6DA;
+            color: #fff;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-radius: 4px;
+            margin-bottom: 12px;
+        }
+        .service-card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .service-card p {
+            font-size: 0.95rem;
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+        .service-price {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #1A1A2E;
+            margin-bottom: 8px;
+        }
+        .service-price span {
+            font-size: 0.85rem;
+            font-weight: 400;
+            color: #999;
+        }
+        .service-features {
+            margin: 16px 0 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .service-features li {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.88rem;
+            color: #555;
+        }
+        .service-features li .check-icon {
+            flex-shrink: 0;
+            color: #26C6DA;
+        }
+        .service-card-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: #26C6DA;
+            transition: gap 0.3s ease;
+        }
+        .service-card-link:hover { gap: 12px; }
+        @media (max-width: 768px) {
+            .services-grid { grid-template-columns: 1fr; }
+        }
+
+        /* ========== PROCESS / TIMELINE ========== */
+        .process-section {
+            padding: 100px 0;
+            background: #1A1A2E;
+            position: relative;
+        }
+        .process-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .process-header .section-title { color: #fff; }
+        .process-header .section-subtitle { color: rgba(255,255,255,0.6); margin: 0 auto; }
+        .timeline {
+            position: relative;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 32px;
+            top: 0; bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, #26C6DA, rgba(38,198,218,0.1));
+        }
+        .timeline-item {
+            display: flex;
+            gap: 32px;
+            margin-bottom: 48px;
+            align-items: flex-start;
+            opacity: 0;
+            transform: translateX(-20px);
+            transition: all 0.6s ease;
+        }
+        .timeline-item.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .timeline-icon {
+            flex-shrink: 0;
+            width: 64px;
+            height: 64px;
+            background: rgba(38, 198, 218, 0.1);
+            border: 2px solid #26C6DA;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #26C6DA;
+            position: relative;
+            z-index: 2;
+        }
+        .timeline-content h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 8px;
+        }
+        .timeline-content p {
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.55);
+            line-height: 1.7;
+        }
+        .timeline-step {
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: #26C6DA;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+        @media (max-width: 768px) {
+            .timeline::before { left: 24px; }
+            .timeline-icon { width: 48px; height: 48px; }
+        }
+
+        /* ========== DOCTOR ========== */
+        .doctor-section {
+            position: relative;
+            overflow: hidden;
+            background: #FFFFFF;
+        }
+        .doctor-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 600px;
+        }
+        .doctor-image {
+            position: relative;
+            overflow: hidden;
+        }
+        .doctor-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 8s ease;
+        }
+        .doctor-section:hover .doctor-image img {
+            transform: scale(1.05);
+        }
+        .doctor-content {
+            padding: 80px 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .doctor-credentials {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 24px;
+            margin-bottom: 32px;
+        }
+        .doctor-credential {
+            padding: 8px 16px;
+            background: rgba(38, 198, 218, 0.08);
+            border: 1px solid rgba(38, 198, 218, 0.2);
+            border-radius: 8px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #26C6DA;
+        }
+        .doctor-content p {
+            font-size: 1.05rem;
+            color: #666;
+            line-height: 1.8;
+        }
+        .doctor-content blockquote {
+            margin-top: 24px;
+            padding-left: 20px;
+            border-left: 3px solid #26C6DA;
+            font-style: italic;
+            color: #555;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+        @media (max-width: 768px) {
+            .doctor-grid { grid-template-columns: 1fr; }
+            .doctor-image { height: 400px; }
+            .doctor-content { padding: 48px 24px; }
+        }
+
+        /* ========== PRESS BAR ========== */
+        .press-bar {
+            padding: 40px 0;
+            background: #fff;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+        }
+        .press-inner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 48px;
+            flex-wrap: wrap;
+        }
+        .press-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #999;
+        }
+        .press-logos {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .press-logo {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #ccc;
+            transition: color 0.3s ease;
+            letter-spacing: -0.5px;
+        }
+        .press-logo:hover { color: #26C6DA; }
+
+        /* ========== TESTIMONIALS ========== */
+        .testimonials-section {
+            padding: 100px 0;
+            background: #F5F5F5;
+        }
+        .testimonials-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .testimonials-header .section-subtitle { margin: 0 auto; }
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .testimonial-card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 36px;
+            border: 1px solid #eee;
+            transition: all 0.4s ease;
+            position: relative;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+        }
+        .testimonial-video-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            background: rgba(38,198,218,0.08);
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #26C6DA;
+            margin-bottom: 20px;
+        }
+        .testimonial-stars {
+            color: #FFD700;
+            display: flex;
+            gap: 2px;
+            margin-bottom: 16px;
+        }
+        .testimonial-text {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.75;
+            margin-bottom: 24px;
+            font-style: italic;
+        }
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .testimonial-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: #26C6DA;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+        .testimonial-name {
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+        .testimonial-role {
+            font-size: 0.8rem;
+            color: #999;
+            margin-top: 2px;
+        }
+        @media (max-width: 768px) {
+            .testimonials-grid { grid-template-columns: 1fr; }
+        }
+
+        /* ========== FINANCING ========== */
+        .financing-section {
+            padding: 80px 0;
+            background: #1A1A2E;
+            position: relative;
+            overflow: hidden;
+        }
+        .financing-section::before {
+            content: '';
+            position: absolute;
+            top: -200px; right: -200px;
+            width: 500px; height: 500px;
+            background: radial-gradient(circle, rgba(38,198,218,0.08), transparent 70%);
+            border-radius: 50%;
+        }
+        .financing-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .financing-content h2 {
+            font-size: clamp(2rem, 3.5vw, 2.8rem);
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 16px;
+        }
+        .financing-content p {
+            font-size: 1.05rem;
+            color: rgba(255,255,255,0.6);
+            line-height: 1.7;
+            margin-bottom: 32px;
+        }
+        .financing-options {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .financing-option {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 20px 24px;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+        .financing-option:hover {
+            background: rgba(38,198,218,0.05);
+            border-color: rgba(38,198,218,0.2);
+        }
+        .financing-option-icon {
+            width: 48px;
+            height: 48px;
+            flex-shrink: 0;
+            background: rgba(38,198,218,0.1);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #26C6DA;
+        }
+        .financing-option h4 {
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        .financing-option p {
+            color: rgba(255,255,255,0.5);
+            font-size: 0.85rem;
+            margin: 0;
+        }
+        .financing-badge-area {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 24px;
+        }
+        .financing-big-badge {
+            width: 260px;
+            height: 260px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(38,198,218,0.1), rgba(38,198,218,0.03));
+            border: 2px solid rgba(38,198,218,0.25);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .financing-big-badge .big-number {
+            font-family: 'Outfit', sans-serif;
+            font-size: 4rem;
+            font-weight: 800;
+            color: #26C6DA;
+            line-height: 1;
+        }
+        .financing-big-badge .big-percent {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #26C6DA;
+        }
+        .financing-big-badge .big-label {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.7);
+            font-weight: 600;
+            margin-top: 4px;
+        }
+        .financing-sub {
+            color: rgba(255,255,255,0.5);
+            font-size: 0.9rem;
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            .financing-grid { grid-template-columns: 1fr; }
+            .financing-badge-area { order: -1; }
+            .financing-big-badge { width: 200px; height: 200px; }
+            .financing-big-badge .big-number { font-size: 3rem; }
+        }
+
+        /* ========== BOOKING FORM ========== */
+        .booking-section {
+            padding: 100px 0;
+            background: #FFFFFF;
+        }
+        .booking-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .booking-info { max-width: 480px; }
+        .booking-info h2 {
+            font-size: clamp(2rem, 3.5vw, 2.8rem);
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+        .booking-info p {
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 32px;
+        }
+        .booking-perks {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .booking-perk {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        .booking-perk-icon {
+            width: 44px;
+            height: 44px;
+            flex-shrink: 0;
+            background: rgba(38,198,218,0.08);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #26C6DA;
+        }
+        .booking-perk span {
+            font-size: 0.95rem;
+            color: #555;
+        }
+        .booking-form-card {
+            background: #fff;
+            border-radius: 24px;
+            padding: 48px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.06);
+            border: 1px solid #eee;
+        }
+        .booking-form-card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .booking-form-card > p {
+            font-size: 0.9rem;
+            color: #999;
+            margin-bottom: 32px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #1A1A2E;
+            margin-bottom: 8px;
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px 18px;
+            background: #F5F5F5;
+            border: 2px solid transparent;
+            border-radius: 12px;
+            font-size: 0.95rem;
+            color: #1A1A2E;
+            transition: all 0.3s ease;
+        }
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: #26C6DA;
+            background: #fff;
+            box-shadow: 0 0 0 4px rgba(38,198,218,0.1);
+        }
+        .form-group textarea { resize: vertical; min-height: 100px; }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+        .form-submit {
+            width: 100%;
+            padding: 16px;
+            margin-top: 8px;
+        }
+        .form-note {
+            text-align: center;
+            font-size: 0.8rem;
+            color: #999;
+            margin-top: 16px;
+        }
+        @media (max-width: 768px) {
+            .booking-grid { grid-template-columns: 1fr; }
+            .booking-form-card { padding: 32px 24px; }
+            .form-row { grid-template-columns: 1fr; }
+        }
+
+        /* ========== FOOTER ========== */
+        .footer {
+            background: #1A1A2E;
+            padding: 60px 0 0;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 48px;
+            padding-bottom: 48px;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+        .footer-brand .nav-logo { margin-bottom: 16px; }
+        .footer-brand p {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.5);
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+        .footer-social {
+            display: flex;
+            gap: 12px;
+        }
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255,255,255,0.5);
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        .footer-social a:hover {
+            background: rgba(38,198,218,0.1);
+            border-color: #26C6DA;
+            color: #26C6DA;
+        }
+        .footer-col h4 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+        .footer-col a {
+            display: block;
+            font-size: 0.88rem;
+            color: rgba(255,255,255,0.45);
+            padding: 6px 0;
+            transition: color 0.3s ease;
+        }
+        .footer-col a:hover { color: #26C6DA; }
+        .footer-bottom {
+            padding: 24px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        .footer-bottom p {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.3);
+        }
+        .footer-bottom a { color: #26C6DA; }
+        @media (max-width: 768px) {
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+            .footer-bottom { justify-content: center; text-align: center; }
+        }
+        @media (max-width: 480px) {
+            .footer-grid { grid-template-columns: 1fr; }
+        }
+
+        /* ========== FLOATING CTA ========== */
+        .floating-cta {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 900;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.4s ease;
+            pointer-events: none;
+        }
+        .floating-cta.visible {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: all;
+        }
+        .floating-cta a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 28px;
+            background: #26C6DA;
+            color: #fff;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border-radius: 50px;
+            box-shadow: 0 8px 30px rgba(38, 198, 218, 0.4);
+            transition: all 0.3s ease;
+        }
+        .floating-cta a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px rgba(0, 172, 193, 0.5);
+        }
+
+        /* ========== VIRTUAL PREVIEW BANNER ========== */
+        .preview-banner {
+            background: #26C6DA;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .preview-banner-inner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+        .preview-banner p {
+            color: #fff;
+            font-weight: 600;
+            font-size: 1.05rem;
+        }
+        .preview-banner a {
+            padding: 10px 24px;
+            background: #fff;
+            color: #26C6DA;
+            font-weight: 700;
+            font-size: 0.9rem;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        .preview-banner a:hover {
+            background: #1A1A2E;
+            color: #fff;
+        }
+
+        /* ========== SCROLL TOP ========== */
+        .scroll-top {
+            position: fixed;
+            bottom: 24px;
+            left: 24px;
+            z-index: 900;
+            width: 44px;
+            height: 44px;
+            background: #1A1A2E;
+            color: #26C6DA;
+            border: 1px solid rgba(38,198,218,0.3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.4s ease;
+            pointer-events: none;
+        }
+        .scroll-top.visible {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: all;
+        }
+        .scroll-top:hover {
+            background: #26C6DA;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-inner">
+            <a href="#" class="nav-logo" aria-label="Elite Cosmetic Dental home">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 2C7.4 2 2 7.4 2 14s5.4 12 12 12 12-5.4 12-12S20.6 2 14 2zm0 20c-1.5 0-2.8-.4-4-1.2 1.6-1.8 4-2.8 4-2.8s2.4 1 4 2.8c-1.2.8-2.5 1.2-4 1.2zm6-3.6c-2-1.8-4.5-2.8-4.5-2.8l-1.5.8-1.5-.8s-2.5 1-4.5 2.8C5.8 16.8 5 15 5 14c0-5 4-9 9-9s9 4 9 9c0 1-.3 2.4-1 3.6z" fill="#26C6DA"/><circle cx="10.5" cy="12" r="1.5" fill="#26C6DA"/><circle cx="17.5" cy="12" r="1.5" fill="#26C6DA"/></svg>
+                Elite<span>Dental</span>
+            </a>
+            <div class="nav-links">
+                <a href="#gallery">Gallery</a>
+                <a href="#services">Services</a>
+                <a href="#process">Process</a>
+                <a href="#doctor">Doctor</a>
+                <a href="#testimonials">Reviews</a>
+                <a href="#booking" class="nav-cta">Book Now</a>
+            </div>
+            <button class="mobile-toggle" aria-label="Open menu" onclick="document.querySelector('.mobile-menu').classList.add('active')">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" role="dialog" aria-label="Mobile navigation">
+        <button class="mobile-close" aria-label="Close menu" onclick="this.parentElement.classList.remove('active')">&times;</button>
+        <a href="#gallery" onclick="this.parentElement.classList.remove('active')">Gallery</a>
+        <a href="#services" onclick="this.parentElement.classList.remove('active')">Services</a>
+        <a href="#process" onclick="this.parentElement.classList.remove('active')">Process</a>
+        <a href="#doctor" onclick="this.parentElement.classList.remove('active')">Doctor</a>
+        <a href="#testimonials" onclick="this.parentElement.classList.remove('active')">Reviews</a>
+        <a href="#booking" onclick="this.parentElement.classList.remove('active')" style="color:#26C6DA">Book Consultation</a>
+    </div>
+
+    <!-- HERO -->
+    <header class="hero" id="hero">
+        <div class="hero-bg">
+            <img src="https://images.unsplash.com/photo-1571772996211-2f02c9727629?w=1200&q=80" alt="Beautiful confident smile" loading="eager">
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">Board-Certified Cosmetic Dentist</div>
+            <h1>Design Your <em>Perfect Smile</em></h1>
+            <p>Luxury cosmetic dentistry for professionals and influencers who demand aesthetic perfection. Veneers, whitening, and complete smile makeovers.</p>
+            <div class="hero-buttons">
+                <a href="#booking" class="btn-primary">Design Your Smile <span aria-hidden="true">&rarr;</span></a>
+                <a href="tel:+15553334444" class="btn-secondary">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                    Schedule Call
+                </a>
+            </div>
+        </div>
+        <div class="hero-stats-bar">
+            <div class="hero-stats-inner">
+                <div class="hero-stat">
+                    <div class="hero-stat-number" data-count="500">0+</div>
+                    <div class="hero-stat-label">Smile Makeovers</div>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <div class="hero-stat-number" data-count="15">0+</div>
+                    <div class="hero-stat-label">Years Experience</div>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <div class="hero-stat-number" data-count="4.9" data-decimal="true">0</div>
+                    <div class="hero-stat-label">Patient Rating</div>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <div class="hero-stat-number">0%</div>
+                    <div class="hero-stat-label">Financing Available</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- STATS -->
+    <section class="stats-section" aria-label="Practice statistics">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card fade-in">
+                    <div class="stat-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+                    <div class="stat-number" data-count="500">0</div>
+                    <div class="stat-label">Smile Makeovers Completed</div>
+                </div>
+                <div class="stat-card fade-in">
+                    <div class="stat-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
+                    <div class="stat-number" data-count="98">0</div>
+                    <div class="stat-label">Patient Satisfaction Rate</div>
+                </div>
+                <div class="stat-card fade-in">
+                    <div class="stat-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l4.59-4.58L18 11l-6 6z"/></svg></div>
+                    <div class="stat-number" data-count="15">0</div>
+                    <div class="stat-label">Years of Excellence</div>
+                </div>
+                <div class="stat-card fade-in">
+                    <div class="stat-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></div>
+                    <div class="stat-number" data-count="50">0</div>
+                    <div class="stat-label">Celebrity Clients</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RESULTS GALLERY -->
+    <section class="gallery-section" id="gallery" aria-label="Results gallery">
+        <div class="container">
+            <div class="gallery-header fade-in">
+                <div class="section-label">Results</div>
+                <h2 class="section-title">Results Gallery</h2>
+                <p class="section-subtitle">Real patients, real results. Browse our gallery of stunning smile transformations.</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-card fade-in">
+                    <div class="gallery-card-image">
+                        <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=600&q=80" alt="Smile transformation result - porcelain veneers" loading="lazy">
+                    </div>
+                    <div class="gallery-card-body">
+                        <h3>Porcelain Veneers</h3>
+                        <p>Full smile restoration with 10 custom veneers</p>
+                    </div>
+                </div>
+                <div class="gallery-card fade-in">
+                    <div class="gallery-card-image">
+                        <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=600&q=80" alt="Smile transformation result - whitening" loading="lazy">
+                    </div>
+                    <div class="gallery-card-body">
+                        <h3>Professional Whitening</h3>
+                        <p>8 shades brighter in a single session</p>
+                    </div>
+                </div>
+                <div class="gallery-card fade-in">
+                    <div class="gallery-card-image">
+                        <img src="https://images.unsplash.com/photo-1629909615184-74f495363b67?w=600&q=80" alt="Smile transformation result - complete makeover" loading="lazy">
+                    </div>
+                    <div class="gallery-card-body">
+                        <h3>Complete Makeover</h3>
+                        <p>Veneers, whitening, and gum contouring</p>
+                    </div>
+                </div>
+                <div class="gallery-card fade-in">
+                    <div class="gallery-card-image">
+                        <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=600&q=80" alt="Smile transformation result - Invisalign" loading="lazy">
+                    </div>
+                    <div class="gallery-card-body">
+                        <h3>Invisalign Results</h3>
+                        <p>Perfectly aligned smile in just 14 months</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services-section" id="services" aria-label="Our services">
+        <div class="container">
+            <div class="services-header fade-in">
+                <div class="section-label">Services</div>
+                <h2 class="section-title">Premium Cosmetic Treatments</h2>
+                <p class="section-subtitle">Each treatment is customized to your facial structure, skin tone, and personal aesthetic goals.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="service-card-image">
+                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&q=80" alt="Porcelain veneers treatment" loading="lazy">
+                    </div>
+                    <div class="service-card-body">
+                        <span class="service-card-popular">Most Popular</span>
+                        <h3>Porcelain Veneers</h3>
+                        <p>Ultra-thin, custom-crafted porcelain shells that transform your smile. Natural-looking, stain-resistant, and built to last a lifetime.</p>
+                        <div class="service-price">From $1,500/tooth <span>| Payment plans available</span></div>
+                        <ul class="service-features">
+                            <li><svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Custom shade matching</li>
+                            <li><svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Minimal prep technique</li>
+                            <li><svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> 15-25 year lifespan</li>
+                            <li><svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Same-day digital preview</li>
+                        </ul>
+                        <a href="#booking" class="service-card-link">Book Consultation <span aria-hidden="true">&rarr;</span></a>
+                    </div>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-card-image">
+                        <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=600&q=80" alt="Professional teeth whitening" loading="lazy">
+                    </div>
+                    <div class="service-card-body">
+                        <h3>Professional Whitening</h3>
+                        <p>In-office and take-home whitening systems that deliver up to 8 shades brighter. Safe, effective, and long-lasting results.</p>
+                        <div class="service-price">From $500 <span>| Single session</span></div>
+                        <ul class="service-features">
+                            <li><svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Up to 8 shades whiter</li>
+                            <li><svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Zero sensitivity formula</li>
+                            <li><svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Results in 60 minutes</li>
+                            <li><svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Take-home kit included</li>
+                        </ul>
+                        <a href="#booking" class="service-card-link">Book Consultation <span aria-hidden="true">&rarr;</span></a>
+                    </div>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-card-image">
+                        <img src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?w=600&q=80" alt="Invisalign clear aligners" loading="lazy">
+                    </div>
+                    <div class="service-card-body">
+                        <h3>Invisalign</h3>
+                        <p>Virtually invisible clear aligners that straighten your teeth without metal brackets. Perfect for professionals who need a discreet solution.</p>
+                        <div class="service-price">From $4,500 <span>| Full treatment</span></div>
+                        <ul class="service-features">
+                            <li><svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Nearly invisible aligners</li>
+                            <li><svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Removable for eating</li>
+                            <li><svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Average 12-18 months</li>
+                            <li><svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> 3D treatment preview</li>
+                        </ul>
+                        <a href="#booking" class="service-card-link">Book Consultation <span aria-hidden="true">&rarr;</span></a>
+                    </div>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-card-image">
+                        <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=600&q=80" alt="Complete smile makeover consultation" loading="lazy">
+                    </div>
+                    <div class="service-card-body">
+                        <span class="service-card-popular">Premium</span>
+                        <h3>Complete Smile Makeover</h3>
+                        <p>A comprehensive transformation combining multiple treatments tailored to achieve your dream smile. Our signature service.</p>
+                        <div class="service-price">Custom Quote <span>| Complimentary consultation</span></div>
+                        <ul class="service-features">
+                            <li><svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Comprehensive treatment plan</li>
+                            <li><svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Digital smile design</li>
+                            <li><svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Multiple treatment options</li>
+                            <li><svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Dedicated care coordinator</li>
+                        </ul>
+                        <a href="#booking" class="service-card-link">Book Consultation <span aria-hidden="true">&rarr;</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="process-section" id="process" aria-label="Our process">
+        <div class="container">
+            <div class="process-header fade-in">
+                <div class="section-label">The Process</div>
+                <h2 class="section-title">Your Journey to a Perfect Smile</h2>
+                <p class="section-subtitle">A seamless, luxury experience from your first consultation to your final reveal.</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/></svg></div>
+                    <div class="timeline-content">
+                        <div class="timeline-step">Step 01</div>
+                        <h3>Consultation & Smile Analysis</h3>
+                        <p>We begin with an in-depth consultation and digital smile analysis. Using advanced 3D imaging, we map your facial proportions and design a smile that is uniquely yours.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22C6.49 22 2 17.51 2 12S6.49 2 12 2s10 4.49 10 10-4.49 10-10 10zm0-18c-4.41 0-8 3.59-8 8s3.59 8 8 8 8-3.59 8-8-3.59-8-8-8zm-2 11l-4-4 1.41-1.41L10 12.17l6.59-6.59L18 7l-8 8z"/></svg></div>
+                    <div class="timeline-content">
+                        <div class="timeline-step">Step 02</div>
+                        <h3>Digital Smile Design</h3>
+                        <p>See your new smile before any treatment begins. Our digital design process lets you preview and refine every detail until you are completely satisfied.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58a.49.49 0 00.12-.61l-1.92-3.32a.49.49 0 00-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54a.484.484 0 00-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96a.49.49 0 00-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.07.62-.07.94s.02.64.07.94l-2.03 1.58a.49.49 0 00-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg></div>
+                    <div class="timeline-content">
+                        <div class="timeline-step">Step 03</div>
+                        <h3>Custom Treatment Plan</h3>
+                        <p>Your personalized treatment plan is crafted to deliver optimal results with minimal appointments. We coordinate every detail so you can focus on the excitement.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
+                    <div class="timeline-content">
+                        <div class="timeline-step">Step 04</div>
+                        <h3>Transformation Day</h3>
+                        <p>Experience the transformation in our luxury suite. Relax with complimentary amenities while we craft your perfect smile with precision artistry.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
+                    <div class="timeline-content">
+                        <div class="timeline-step">Step 05</div>
+                        <h3>Reveal & Aftercare</h3>
+                        <p>The moment you have been waiting for. See your stunning new smile and receive a personalized aftercare plan to keep it flawless for years to come.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DOCTOR -->
+    <section class="doctor-section" id="doctor" aria-label="Meet your doctor">
+        <div class="doctor-grid">
+            <div class="doctor-image fade-in-left">
+                <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=800&q=80" alt="Dr. Alexander Reeves, Board-Certified Cosmetic Dentist" loading="lazy">
+            </div>
+            <div class="doctor-content fade-in-right">
+                <div class="section-label">Your Doctor</div>
+                <h2 class="section-title">Dr. Alexander Reeves</h2>
+                <div class="doctor-credentials">
+                    <span class="doctor-credential">Board-Certified</span>
+                    <span class="doctor-credential">AACD Fellow</span>
+                    <span class="doctor-credential">DDS, Harvard</span>
+                    <span class="doctor-credential">15+ Years</span>
+                </div>
+                <p>Dr. Reeves is one of the most sought-after cosmetic dentists in the country, trusted by celebrities, executives, and influencers alike. His artistic eye and technical mastery have earned him recognition from leading publications and a devoted patient following.</p>
+                <blockquote>"Every smile I create is a work of art. I don't just fix teeth -- I design confidence."</blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRESS BAR -->
+    <div class="press-bar fade-in" aria-label="Featured in press">
+        <div class="container">
+            <div class="press-inner">
+                <span class="press-label">As Seen On</span>
+                <div class="press-logos">
+                    <span class="press-logo">NBC</span>
+                    <span class="press-logo">ABC</span>
+                    <span class="press-logo">Forbes</span>
+                    <span class="press-logo">Vogue</span>
+                    <span class="press-logo">GQ</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials-section" id="testimonials" aria-label="Patient testimonials">
+        <div class="container">
+            <div class="testimonials-header fade-in">
+                <div class="section-label">Testimonials</div>
+                <h2 class="section-title">What Our Patients Say</h2>
+                <p class="section-subtitle">Hear from professionals and influencers who trusted us with their smiles.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card fade-in">
+                    <div class="testimonial-video-badge">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                        Video Review
+                    </div>
+                    <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <p class="testimonial-text">"Dr. Reeves completely transformed my confidence. My veneers look so natural that everyone thinks it is my real smile. Best investment I have ever made in myself."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">JK</div>
+                        <div>
+                            <div class="testimonial-name">Jessica Kim</div>
+                            <div class="testimonial-role">Lifestyle Influencer, 2.1M followers</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card fade-in">
+                    <div class="testimonial-video-badge">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                        Video Review
+                    </div>
+                    <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <p class="testimonial-text">"As a corporate attorney, appearance matters. The Invisalign treatment was completely discreet, and the results exceeded every expectation. World-class care."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">MR</div>
+                        <div>
+                            <div class="testimonial-name">Marcus Rivera</div>
+                            <div class="testimonial-role">Corporate Attorney, Partner at Rivera & Associates</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card fade-in">
+                    <div class="testimonial-video-badge">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                        Video Review
+                    </div>
+                    <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <p class="testimonial-text">"I flew in from New York specifically for Dr. Reeves. The complete smile makeover was life-changing. The office is stunning and the entire team made me feel like a VIP."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">SL</div>
+                        <div>
+                            <div class="testimonial-name">Sophia Laurent</div>
+                            <div class="testimonial-role">Fashion Editor, Vogue</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINANCING -->
+    <section class="financing-section" id="financing" aria-label="Financing options">
+        <div class="container">
+            <div class="financing-grid">
+                <div class="financing-content fade-in-left">
+                    <div class="section-label">Financing</div>
+                    <h2>Your Dream Smile, Made Affordable</h2>
+                    <p>We believe everyone deserves the smile of their dreams. That is why we offer flexible financing options to fit any budget.</p>
+                    <div class="financing-options">
+                        <div class="financing-option">
+                            <div class="financing-option-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/></svg></div>
+                            <div>
+                                <h4>0% Interest Plans</h4>
+                                <p>Up to 24 months interest-free with approved credit.</p>
+                            </div>
+                        </div>
+                        <div class="financing-option">
+                            <div class="financing-option-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg></div>
+                            <div>
+                                <h4>Flexible Monthly Payments</h4>
+                                <p>Payments as low as $99/month for qualifying treatments.</p>
+                            </div>
+                        </div>
+                        <div class="financing-option">
+                            <div class="financing-option-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"/></svg></div>
+                            <div>
+                                <h4>Insurance Coordination</h4>
+                                <p>We work with your insurance to maximize your benefits.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="financing-badge-area fade-in-right">
+                    <div class="financing-big-badge">
+                        <span class="big-number">0</span>
+                        <span class="big-percent">%</span>
+                        <span class="big-label">Financing</span>
+                    </div>
+                    <p class="financing-sub">No hidden fees. No surprises. Just beautiful smiles.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FREE PREVIEW BANNER -->
+    <div class="preview-banner" aria-label="Free virtual smile preview offer">
+        <div class="container">
+            <div class="preview-banner-inner">
+                <p>Get a Free Virtual Smile Preview -- See your new smile before committing!</p>
+                <a href="#booking">Claim Your Free Preview</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- BOOKING -->
+    <section class="booking-section" id="booking" aria-label="Book a consultation">
+        <div class="container">
+            <div class="booking-grid">
+                <div class="booking-info fade-in-left">
+                    <div class="section-label">Book Now</div>
+                    <h2>Start Your Smile Transformation</h2>
+                    <p>Take the first step toward the smile you have always wanted. Schedule your complimentary consultation today and discover what is possible.</p>
+                    <div class="booking-perks">
+                        <div class="booking-perk">
+                            <div class="booking-perk-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+                            <span>Complimentary consultation valued at $250</span>
+                        </div>
+                        <div class="booking-perk">
+                            <div class="booking-perk-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M21 6h-3.17L16 4h-8l-1.83 2H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-9 13c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"/></svg></div>
+                            <span>Free digital smile preview included</span>
+                        </div>
+                        <div class="booking-perk">
+                            <div class="booking-perk-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM9 10H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2z"/></svg></div>
+                            <span>Mon-Fri 9AM-6PM, Sat by appointment</span>
+                        </div>
+                        <div class="booking-perk">
+                            <div class="booking-perk-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div>
+                            <span>8800 Beverly Hills Drive, Penthouse Suite</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="booking-form-card fade-in-right">
+                    <h3>Book Your Consultation</h3>
+                    <p>Fill in your details and we will reach out within 24 hours.</p>
+                    <form id="bookingForm" onsubmit="handleFormSubmit(event)">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" required placeholder="Your first name" autocomplete="given-name">
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" required placeholder="Your last name" autocomplete="family-name">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required placeholder="you@email.com" autocomplete="email">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone *</label>
+                                <input type="tel" id="phone" name="phone" required placeholder="(555) 333-4444" autocomplete="tel">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service of Interest</label>
+                            <select id="service" name="service">
+                                <option value="">Select a service</option>
+                                <option value="veneers">Porcelain Veneers</option>
+                                <option value="whitening">Professional Whitening</option>
+                                <option value="invisalign">Invisalign</option>
+                                <option value="makeover">Complete Smile Makeover</option>
+                                <option value="other">Other / Not Sure</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Tell Us About Your Dream Smile</label>
+                            <textarea id="message" name="message" placeholder="What would you like to achieve?"></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary form-submit">Design Your Smile <span aria-hidden="true">&rarr;</span></button>
+                        <p class="form-note">Your information is secure and will never be shared. We respond within 24 hours.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="nav-logo">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 2C7.4 2 2 7.4 2 14s5.4 12 12 12 12-5.4 12-12S20.6 2 14 2zm0 20c-1.5 0-2.8-.4-4-1.2 1.6-1.8 4-2.8 4-2.8s2.4 1 4 2.8c-1.2.8-2.5 1.2-4 1.2zm6-3.6c-2-1.8-4.5-2.8-4.5-2.8l-1.5.8-1.5-.8s-2.5 1-4.5 2.8C5.8 16.8 5 15 5 14c0-5 4-9 9-9s9 4 9 9c0 1-.3 2.4-1 3.6z" fill="#26C6DA"/><circle cx="10.5" cy="12" r="1.5" fill="#26C6DA"/><circle cx="17.5" cy="12" r="1.5" fill="#26C6DA"/></svg>
+                        Elite<span>Dental</span>
+                    </div>
+                    <p>High-end cosmetic dentistry for professionals and influencers seeking aesthetic perfection. Crafting confidence, one smile at a time.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Instagram">IG</a>
+                        <a href="#" aria-label="TikTok">TK</a>
+                        <a href="#" aria-label="Facebook">FB</a>
+                        <a href="#" aria-label="YouTube">YT</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <a href="#services">Porcelain Veneers</a>
+                    <a href="#services">Teeth Whitening</a>
+                    <a href="#services">Invisalign</a>
+                    <a href="#services">Smile Makeovers</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <a href="#gallery">Gallery</a>
+                    <a href="#process">Our Process</a>
+                    <a href="#doctor">Meet the Doctor</a>
+                    <a href="#testimonials">Reviews</a>
+                    <a href="#financing">Financing</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <a href="tel:+15553334444">(555) 333-4444</a>
+                    <a href="mailto:info@elitecosmeticdental.com">info@elitecosmeticdental.com</a>
+                    <a href="#">8800 Beverly Hills Drive<br>Penthouse Suite</a>
+                    <a href="#">Mon-Fri 9AM-6PM<br>Sat by Appointment</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Elite Cosmetic Dental. All rights reserved.</p>
+                <p>Designed with precision. Built for <a href="#hero">perfection</a>.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING CTA -->
+    <div class="floating-cta" id="floatingCta">
+        <a href="#booking">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            Book Consultation
+        </a>
+    </div>
+
+    <!-- SCROLL TOP -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg>
+    </button>
+
+    <!-- ========== JAVASCRIPT ========== -->
+    <script>
+        // ===== NAVBAR SCROLL =====
+        const navbar = document.querySelector('.navbar');
+        const floatingCta = document.getElementById('floatingCta');
+        const scrollTopBtn = document.getElementById('scrollTop');
+
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+            if (scrollY > 80) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+            if (scrollY > 600) {
+                floatingCta.classList.add('visible');
+                scrollTopBtn.classList.add('visible');
+            } else {
+                floatingCta.classList.remove('visible');
+                scrollTopBtn.classList.remove('visible');
+            }
+        });
+
+        // ===== INTERSECTION OBSERVER (FADE IN + TIMELINE) =====
+        const observerOptions = { threshold: 0.15, rootMargin: '0px 0px -50px 0px' };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    const delay = entry.target.classList.contains('timeline-item')
+                        ? Array.from(entry.target.parentElement.children).indexOf(entry.target) * 200
+                        : 0;
+                    setTimeout(() => {
+                        entry.target.classList.add('visible');
+                    }, delay);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right, .timeline-item').forEach(el => {
+            observer.observe(el);
+        });
+
+        // ===== ANIMATED COUNTERS =====
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters(entry.target);
+                    counterObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.3 });
+
+        document.querySelectorAll('.stats-section, .hero-stats-bar').forEach(el => {
+            counterObserver.observe(el);
+        });
+
+        function animateCounters(container) {
+            container.querySelectorAll('[data-count]').forEach(el => {
+                const target = parseFloat(el.getAttribute('data-count'));
+                const isDecimal = el.hasAttribute('data-decimal');
+                const duration = 2000;
+                const startTime = performance.now();
+
+                function update(currentTime) {
+                    const elapsed = currentTime - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+                    const eased = 1 - Math.pow(1 - progress, 3);
+                    const current = target * eased;
+
+                    if (isDecimal) {
+                        el.textContent = current.toFixed(1);
+                    } else {
+                        el.textContent = Math.floor(current) + (el.textContent.includes('+') || el.getAttribute('data-count') === '500' ? '+' : el.getAttribute('data-count') === '98' ? '%' : '+');
+                    }
+                    if (progress < 1) requestAnimationFrame(update);
+                }
+                requestAnimationFrame(update);
+            });
+        }
+
+        // Also animate .stat-number inside stats-section
+        const statCounterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.querySelectorAll('.stat-number[data-count]').forEach(el => {
+                        const target = parseFloat(el.getAttribute('data-count'));
+                        const duration = 2000;
+                        const startTime = performance.now();
+                        const suffix = target === 98 ? '%' : '+';
+
+                        function update(currentTime) {
+                            const elapsed = currentTime - startTime;
+                            const progress = Math.min(elapsed / duration, 1);
+                            const eased = 1 - Math.pow(1 - progress, 3);
+                            el.textContent = Math.floor(target * eased) + suffix;
+                            if (progress < 1) requestAnimationFrame(update);
+                        }
+                        requestAnimationFrame(update);
+                    });
+                    statCounterObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.3 });
+
+        document.querySelectorAll('.stats-section').forEach(el => statCounterObserver.observe(el));
+
+        // ===== FORM HANDLING =====
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const btn = e.target.querySelector('button[type="submit"]');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = 'Request Sent! We\'ll Be In Touch';
+            btn.style.background = '#1A1A2E';
+            btn.disabled = true;
+            setTimeout(() => {
+                btn.innerHTML = originalText;
+                btn.style.background = '';
+                btn.disabled = false;
+                e.target.reset();
+            }, 3000);
+        }
+
+        // ===== SMOOTH SCROLL FOR ANCHOR LINKS =====
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    const offset = 80;
+                    const top = target.getBoundingClientRect().top + window.scrollY - offset;
+                    window.scrollTo({ top, behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+
+    <!-- STRUCTURED DATA -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Dentist",
+        "name": "Elite Cosmetic Dental",
+        "description": "Transform your smile with Elite Cosmetic Dental. Veneers, whitening, Invisalign & complete smile makeovers.",
+        "url": "https://elitecosmeticdental.com",
+        "telephone": "+15553334444",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "8800 Beverly Hills Drive, Penthouse Suite",
+            "addressLocality": "Beverly Hills",
+            "addressRegion": "CA",
+            "postalCode": "90210"
+        },
+        "openingHours": ["Mo-Fr 09:00-18:00", "Sa by appointment"],
+        "priceRange": "$$$$",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "500"
+        }
+    }
+    </script>
+</body>
+</html>

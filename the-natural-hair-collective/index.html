@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Natural Hair Collective | Natural Hair Care &amp; Protective Styles</title>
+    <meta name="description" content="Specialized natural hair care at The Natural Hair Collective. Certified stylists for locs, protective styles, and texture consultations. Free consultation for new clients.">
+    <meta name="keywords" content="natural hair care, locs, protective styles, texture consultation, natural hair salon, certified natural hair stylists">
+    <meta property="og:title" content="The Natural Hair Collective | Natural Hair Care & Protective Styles">
+    <meta property="og:description" content="Specialized natural hair care. Certified stylists for locs, protective styles, and texture consultations.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* ===== RESET & BASE ===== */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #1C1C1C;
+            background: #FFFDF5;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Josefin Sans', sans-serif; line-height: 1.2; }
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; display: block; }
+        ul { list-style: none; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+        /* ===== ANIMATIONS ===== */
+        .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        .fade-left { opacity: 0; transform: translateX(-40px); transition: opacity 0.8s ease, transform 0.8s ease; }
+        .fade-left.visible { opacity: 1; transform: translateX(0); }
+        .fade-right { opacity: 0; transform: translateX(40px); transition: opacity 0.8s ease, transform 0.8s ease; }
+        .fade-right.visible { opacity: 1; transform: translateX(0); }
+        .scale-in { opacity: 0; transform: scale(0.8); transition: opacity 0.7s ease, transform 0.7s ease; }
+        .scale-in.visible { opacity: 1; transform: scale(1); }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-12px); }
+        }
+        @keyframes waveMove {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        @keyframes leafSway {
+            0%, 100% { transform: rotate(-5deg) scale(1); }
+            50% { transform: rotate(5deg) scale(1.05); }
+        }
+        @keyframes pulse { 0%, 100% { opacity: 0.6; } 50% { opacity: 1; } }
+        @keyframes spinSlow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+        /* ===== NAV ===== */
+        .navbar {
+            position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;
+            background: #228B22; padding: 12px 0;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.15);
+            transition: padding 0.3s ease;
+        }
+        .navbar.scrolled { padding: 8px 0; }
+        .navbar .container { display: flex; align-items: center; justify-content: space-between; }
+        .nav-logo {
+            font-family: 'Josefin Sans', sans-serif; font-weight: 700; font-size: 1.3rem;
+            color: #F7E7CE; letter-spacing: 0.5px;
+        }
+        .nav-logo span { color: #fff; }
+        .nav-links { display: flex; gap: 6px; align-items: center; }
+        .nav-links a {
+            color: #F7E7CE; font-size: 0.85rem; font-weight: 500;
+            padding: 8px 18px; border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        .nav-links a:hover, .nav-links a:focus { background: rgba(247,231,206,0.2); color: #fff; }
+        .nav-cta {
+            background: #F7E7CE !important; color: #228B22 !important;
+            font-weight: 600 !important;
+        }
+        .nav-cta:hover { background: #fff !important; transform: scale(1.05); }
+        .nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 5px; background: none; border: none; }
+        .nav-toggle span { width: 26px; height: 2.5px; background: #F7E7CE; border-radius: 2px; transition: 0.3s; }
+
+        /* ===== HERO ===== */
+        .hero {
+            padding: 140px 0 100px; position: relative; overflow: hidden;
+            background: linear-gradient(135deg, #FFFDF5 0%, #f0f7e8 50%, #FFFDF5 100%);
+            min-height: 100vh; display: flex; align-items: center;
+        }
+        .hero-bg-circles {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;
+        }
+        .hero-bg-circles .circle {
+            position: absolute; border-radius: 50%; border: 2px solid rgba(34,139,34,0.1);
+        }
+        .hero-bg-circles .circle:nth-child(1) { width: 400px; height: 400px; top: -100px; left: -100px; animation: pulse 6s ease infinite; }
+        .hero-bg-circles .circle:nth-child(2) { width: 300px; height: 300px; top: 20%; right: -80px; border-color: rgba(247,231,206,0.5); animation: pulse 8s ease infinite 1s; }
+        .hero-bg-circles .circle:nth-child(3) { width: 200px; height: 200px; bottom: 10%; left: 15%; border-color: rgba(34,139,34,0.08); animation: pulse 7s ease infinite 2s; }
+        .hero-bg-circles .circle:nth-child(4) { width: 150px; height: 150px; top: 30%; left: 40%; background: rgba(34,139,34,0.03); animation: pulse 5s ease infinite 0.5s; }
+
+        /* Leaf decorations */
+        .leaf-deco {
+            position: absolute; font-size: 2rem; opacity: 0.15; color: #228B22;
+            animation: leafSway 4s ease-in-out infinite;
+        }
+        .leaf-deco:nth-child(1) { top: 15%; left: 5%; animation-delay: 0s; }
+        .leaf-deco:nth-child(2) { top: 60%; right: 8%; animation-delay: 1s; font-size: 1.5rem; }
+        .leaf-deco:nth-child(3) { bottom: 20%; left: 35%; animation-delay: 2s; font-size: 1.8rem; }
+
+        .hero .container { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; position: relative; z-index: 2; }
+        .hero-image-wrap { position: relative; display: flex; justify-content: center; }
+        .hero-image-frame {
+            width: 420px; height: 420px; border-radius: 50%; overflow: hidden;
+            border: 6px solid #228B22; position: relative; z-index: 2;
+            box-shadow: 0 20px 60px rgba(34,139,34,0.2);
+        }
+        .hero-image-frame img { width: 100%; height: 100%; object-fit: cover; }
+        .hero-overlap-circle {
+            position: absolute; width: 200px; height: 200px; border-radius: 50%;
+            background: #F7E7CE; z-index: 1;
+        }
+        .hero-overlap-circle:nth-child(2) { top: -30px; left: -20px; opacity: 0.7; }
+        .hero-overlap-circle:nth-child(3) { bottom: -20px; right: -10px; opacity: 0.5; background: #228B22; }
+
+        .hero-content { position: relative; z-index: 2; }
+        .hero-badge {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: rgba(34,139,34,0.1); color: #228B22;
+            padding: 8px 20px; border-radius: 50px; font-size: 0.85rem; font-weight: 500;
+            margin-bottom: 20px; border: 1px solid rgba(34,139,34,0.2);
+        }
+        .hero-badge svg { width: 16px; height: 16px; }
+        .hero h1 {
+            font-size: 3.2rem; font-weight: 700; color: #1C1C1C;
+            margin-bottom: 16px; line-height: 1.15;
+        }
+        .hero h1 span { color: #228B22; position: relative; }
+        .hero h1 span::after {
+            content: ''; position: absolute; bottom: 2px; left: 0; width: 100%; height: 8px;
+            background: rgba(247,231,206,0.8); z-index: -1; border-radius: 4px;
+        }
+        .hero-text { font-size: 1.1rem; color: #555; margin-bottom: 32px; max-width: 480px; }
+        .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 32px; }
+        .btn-primary {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: #228B22; color: #fff; padding: 16px 36px;
+            border-radius: 50px; font-weight: 600; font-size: 1rem;
+            transition: all 0.3s ease; border: none; cursor: pointer;
+            box-shadow: 0 4px 20px rgba(34,139,34,0.3);
+        }
+        .btn-primary:hover { transform: scale(1.05); box-shadow: 0 6px 30px rgba(34,139,34,0.45); }
+        .btn-secondary {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: transparent; color: #228B22; padding: 16px 36px;
+            border-radius: 50px; font-weight: 600; font-size: 1rem;
+            border: 2px solid #228B22; transition: all 0.3s ease; cursor: pointer;
+        }
+        .btn-secondary:hover { background: #228B22; color: #fff; }
+        .hero-trust { display: flex; gap: 24px; flex-wrap: wrap; }
+        .hero-trust-item { display: flex; align-items: center; gap: 8px; font-size: 0.85rem; color: #666; }
+        .hero-trust-item svg { width: 20px; height: 20px; color: #228B22; flex-shrink: 0; }
+
+        /* ===== WAVE DIVIDER ===== */
+        .wave-divider { position: relative; overflow: hidden; height: 80px; }
+        .wave-divider svg { position: absolute; bottom: 0; width: 200%; height: 100%; animation: waveMove 8s linear infinite; }
+        .wave-divider.green svg path { fill: #228B22; }
+        .wave-divider.champagne svg path { fill: #F7E7CE; }
+        .wave-divider.ivory svg path { fill: #FFFDF5; }
+        .wave-divider.green-bg { background: #FFFDF5; }
+        .wave-divider.champagne-bg { background: #228B22; }
+
+        /* ===== PHILOSOPHY ===== */
+        .philosophy {
+            background: #228B22; color: #F7E7CE; padding: 100px 0;
+            position: relative; overflow: hidden;
+        }
+        .philosophy::before {
+            content: ''; position: absolute; width: 500px; height: 500px;
+            border-radius: 50%; border: 2px solid rgba(247,231,206,0.1);
+            top: -200px; right: -200px;
+        }
+        .philosophy .container { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .philosophy-text h2 { font-size: 2.8rem; margin-bottom: 24px; color: #fff; }
+        .philosophy-text .manifesto {
+            font-size: 1.3rem; line-height: 1.8; font-weight: 300;
+            margin-bottom: 24px; color: rgba(247,231,206,0.9);
+        }
+        .philosophy-text .manifesto strong { color: #fff; font-weight: 600; }
+        .philosophy-highlight {
+            background: rgba(247,231,206,0.15); border-left: 4px solid #F7E7CE;
+            padding: 20px 24px; border-radius: 0 12px 12px 0; margin-top: 24px;
+            font-size: 1.1rem; font-style: italic;
+        }
+        .philosophy-image { position: relative; }
+        .philosophy-image img {
+            border-radius: 50% 50% 50% 0; width: 100%; height: 450px;
+            object-fit: cover; border: 4px solid rgba(247,231,206,0.3);
+        }
+        .philosophy-badge {
+            position: absolute; bottom: -20px; right: 20px;
+            background: #F7E7CE; color: #2D5016; padding: 16px 28px;
+            border-radius: 50px; font-weight: 700; font-size: 0.95rem;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+            font-family: 'Josefin Sans', sans-serif;
+        }
+
+        /* ===== SERVICES ===== */
+        .services { padding: 100px 0; background: #FFFDF5; position: relative; }
+        .section-header { text-align: center; margin-bottom: 60px; }
+        .section-header .label {
+            display: inline-block; background: rgba(34,139,34,0.1); color: #228B22;
+            padding: 6px 20px; border-radius: 50px; font-size: 0.85rem; font-weight: 500;
+            margin-bottom: 12px;
+        }
+        .section-header h2 { font-size: 2.5rem; color: #1C1C1C; margin-bottom: 12px; }
+        .section-header p { color: #666; max-width: 600px; margin: 0 auto; font-size: 1.05rem; }
+
+        .services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; }
+        .service-card {
+            background: #fff; border-radius: 24px; overflow: hidden;
+            border: 2px solid #f0ebe0; transition: all 0.4s ease;
+            position: relative;
+        }
+        .service-card:hover { transform: translateY(-8px); border-color: #228B22; box-shadow: 0 16px 40px rgba(34,139,34,0.12); }
+        .service-card-img { height: 200px; overflow: hidden; position: relative; }
+        .service-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+        .service-card:hover .service-card-img img { transform: scale(1.08); }
+        .service-card-icon {
+            position: absolute; bottom: -24px; left: 24px;
+            width: 48px; height: 48px; background: #228B22; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            color: #fff; z-index: 2; box-shadow: 0 4px 12px rgba(34,139,34,0.3);
+        }
+        .service-card-icon svg { width: 22px; height: 22px; }
+        .service-card-body { padding: 36px 24px 24px; }
+        .service-card-body h3 { font-size: 1.2rem; margin-bottom: 8px; color: #1C1C1C; }
+        .service-card-body p { font-size: 0.9rem; color: #666; margin-bottom: 16px; }
+        .service-card-price { font-weight: 600; color: #228B22; font-size: 0.95rem; }
+
+        /* ===== TEXTURE GUIDE ===== */
+        .texture-guide {
+            padding: 100px 0; background: #F7E7CE; position: relative;
+        }
+        .texture-tabs { display: flex; justify-content: center; gap: 12px; margin-bottom: 40px; flex-wrap: wrap; }
+        .texture-tab {
+            padding: 12px 28px; border-radius: 50px; border: 2px solid #228B22;
+            background: transparent; color: #228B22; font-weight: 600;
+            cursor: pointer; transition: all 0.3s ease; font-family: 'Poppins', sans-serif;
+            font-size: 0.95rem;
+        }
+        .texture-tab:hover, .texture-tab.active { background: #228B22; color: #fff; }
+        .texture-content { max-width: 800px; margin: 0 auto; }
+        .texture-panel {
+            display: none; background: #fff; border-radius: 24px; padding: 40px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+            animation: slideIn 0.4s ease;
+        }
+        .texture-panel.active { display: grid; grid-template-columns: auto 1fr; gap: 32px; align-items: center; }
+        @keyframes slideIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .texture-visual {
+            width: 120px; height: 120px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 3rem; background: rgba(34,139,34,0.1);
+        }
+        .texture-info h3 { font-size: 1.5rem; margin-bottom: 8px; color: #228B22; }
+        .texture-info p { color: #555; margin-bottom: 12px; }
+        .texture-info ul { display: flex; flex-wrap: wrap; gap: 8px; }
+        .texture-info ul li {
+            background: rgba(34,139,34,0.08); color: #2D5016; padding: 6px 16px;
+            border-radius: 50px; font-size: 0.85rem; font-weight: 500;
+        }
+
+        /* ===== STYLISTS ===== */
+        .stylists { padding: 100px 0; background: #FFFDF5; }
+        .stylists-grid { display: flex; justify-content: center; gap: 48px; flex-wrap: wrap; }
+        .stylist-card { text-align: center; max-width: 260px; }
+        .stylist-photo {
+            width: 200px; height: 200px; border-radius: 50%; overflow: hidden;
+            margin: 0 auto 20px; border: 4px solid #228B22;
+            transition: transform 0.5s ease;
+            box-shadow: 0 8px 24px rgba(34,139,34,0.15);
+        }
+        .stylist-photo:hover { transform: rotate(5deg) scale(1.05); }
+        .stylist-photo img { width: 100%; height: 100%; object-fit: cover; }
+        .stylist-card h3 { font-size: 1.2rem; color: #1C1C1C; margin-bottom: 4px; }
+        .stylist-card .role { color: #228B22; font-weight: 500; font-size: 0.9rem; margin-bottom: 8px; }
+        .stylist-card .cert {
+            display: inline-flex; align-items: center; gap: 4px;
+            font-size: 0.8rem; color: #666; background: rgba(34,139,34,0.08);
+            padding: 4px 12px; border-radius: 50px;
+        }
+
+        /* ===== COMMUNITY ===== */
+        .community { padding: 100px 0; background: #228B22; color: #fff; position: relative; overflow: hidden; }
+        .community::before {
+            content: ''; position: absolute; width: 600px; height: 600px;
+            border-radius: 50%; border: 2px solid rgba(247,231,206,0.08);
+            bottom: -300px; left: -200px;
+        }
+        .community .container { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .community-content h2 { font-size: 2.5rem; margin-bottom: 16px; }
+        .community-content p { color: rgba(255,255,255,0.85); font-size: 1.05rem; margin-bottom: 32px; }
+        .event-list { display: flex; flex-direction: column; gap: 16px; }
+        .event-item {
+            background: rgba(247,231,206,0.12); border-radius: 16px; padding: 20px;
+            border: 1px solid rgba(247,231,206,0.15); transition: all 0.3s ease;
+        }
+        .event-item:hover { background: rgba(247,231,206,0.2); }
+        .event-item h4 { font-size: 1.05rem; margin-bottom: 4px; }
+        .event-item p { font-size: 0.9rem; color: rgba(255,255,255,0.7); margin: 0; }
+        .event-date {
+            font-size: 0.8rem; color: #F7E7CE; font-weight: 600;
+            display: inline-block; margin-bottom: 8px;
+            background: rgba(247,231,206,0.15); padding: 4px 12px; border-radius: 50px;
+        }
+        .community-image { position: relative; }
+        .community-image img {
+            border-radius: 24px; width: 100%; height: 400px; object-fit: cover;
+            border: 3px solid rgba(247,231,206,0.3);
+        }
+
+        /* ===== TESTIMONIALS ===== */
+        .testimonials { padding: 100px 0; background: #FFFDF5; }
+        .testimonials-chat { max-width: 700px; margin: 0 auto; display: flex; flex-direction: column; gap: 24px; }
+        .chat-bubble {
+            max-width: 80%; padding: 24px 28px; border-radius: 24px;
+            position: relative; font-size: 0.95rem; line-height: 1.6;
+        }
+        .chat-bubble.left {
+            align-self: flex-start; background: #fff;
+            border: 2px solid #f0ebe0; border-bottom-left-radius: 6px;
+        }
+        .chat-bubble.right {
+            align-self: flex-end; background: #228B22; color: #fff;
+            border-bottom-right-radius: 6px;
+        }
+        .chat-bubble .author {
+            font-weight: 600; font-size: 0.85rem; margin-top: 12px;
+            display: flex; align-items: center; gap: 8px;
+        }
+        .chat-bubble.left .author { color: #228B22; }
+        .chat-bubble.right .author { color: #F7E7CE; }
+        .chat-bubble .stars { color: #f4c430; font-size: 0.9rem; }
+        .chat-bubble.right .stars { color: #F7E7CE; }
+
+        /* ===== CONTACT ===== */
+        .contact { padding: 100px 0; background: #F7E7CE; }
+        .contact .container { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+        .contact-info h2 { font-size: 2.5rem; margin-bottom: 16px; color: #1C1C1C; }
+        .contact-info > p { color: #555; margin-bottom: 32px; font-size: 1.05rem; }
+        .contact-detail {
+            display: flex; gap: 16px; align-items: flex-start; margin-bottom: 24px;
+        }
+        .contact-detail .icon {
+            width: 48px; height: 48px; border-radius: 50%; background: #228B22;
+            display: flex; align-items: center; justify-content: center;
+            color: #fff; flex-shrink: 0;
+        }
+        .contact-detail .icon svg { width: 20px; height: 20px; }
+        .contact-detail h4 { font-size: 1rem; margin-bottom: 2px; }
+        .contact-detail p { color: #555; font-size: 0.9rem; }
+        .contact-form {
+            background: #fff; border-radius: 24px; padding: 40px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+        }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; font-weight: 500; margin-bottom: 6px; font-size: 0.9rem; }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%; padding: 14px 18px; border: 2px solid #e8e0d0;
+            border-radius: 12px; font-family: 'Poppins', sans-serif;
+            font-size: 0.95rem; transition: border-color 0.3s; background: #FFFDF5;
+        }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            outline: none; border-color: #228B22;
+        }
+        .form-group textarea { resize: vertical; min-height: 100px; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        .btn-submit {
+            width: 100%; padding: 16px; background: #228B22; color: #fff;
+            border: none; border-radius: 50px; font-size: 1rem; font-weight: 600;
+            cursor: pointer; transition: all 0.3s ease; font-family: 'Poppins', sans-serif;
+        }
+        .btn-submit:hover { background: #2D5016; box-shadow: 0 6px 25px rgba(34,139,34,0.35); transform: scale(1.02); }
+        .free-consult-badge {
+            text-align: center; margin-top: 16px; font-size: 0.85rem; color: #228B22; font-weight: 500;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer { background: #1C1C1C; color: #aaa; padding: 60px 0 24px; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+        .footer h4 { color: #F7E7CE; font-size: 1.1rem; margin-bottom: 16px; }
+        .footer-brand p { line-height: 1.8; font-size: 0.9rem; margin-bottom: 16px; }
+        .footer-socials { display: flex; gap: 12px; }
+        .footer-socials a {
+            width: 40px; height: 40px; border-radius: 50%; background: rgba(247,231,206,0.1);
+            display: flex; align-items: center; justify-content: center;
+            color: #F7E7CE; transition: all 0.3s;
+        }
+        .footer-socials a:hover { background: #228B22; }
+        .footer ul li { margin-bottom: 10px; }
+        .footer ul li a { color: #aaa; font-size: 0.9rem; transition: color 0.3s; }
+        .footer ul li a:hover { color: #F7E7CE; }
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1); padding-top: 24px;
+            display: flex; justify-content: space-between; align-items: center;
+            font-size: 0.85rem; flex-wrap: wrap; gap: 12px;
+        }
+
+        /* ===== TRUST STRIP ===== */
+        .trust-strip {
+            background: #2D5016; color: #F7E7CE; padding: 16px 0;
+            text-align: center; font-size: 0.9rem;
+        }
+        .trust-strip .container {
+            display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;
+        }
+        .trust-strip-item { display: flex; align-items: center; gap: 8px; font-weight: 500; }
+        .trust-strip-item svg { width: 18px; height: 18px; }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .services-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100vh;
+                background: #228B22; flex-direction: column; align-items: center;
+                justify-content: center; gap: 16px; z-index: 999;
+            }
+            .nav-links.open { display: flex; }
+            .nav-links a { font-size: 1.2rem; padding: 12px 28px; }
+            .nav-toggle { display: flex; z-index: 1001; }
+            .nav-toggle.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+            .nav-toggle.open span:nth-child(2) { opacity: 0; }
+            .nav-toggle.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+            .hero .container { grid-template-columns: 1fr; text-align: center; gap: 40px; }
+            .hero .container > .hero-image-wrap { order: -1; }
+            .hero-image-frame { width: 300px; height: 300px; }
+            .hero h1 { font-size: 2.2rem; }
+            .hero-text { margin: 0 auto 32px; }
+            .hero-btns { justify-content: center; }
+            .hero-trust { justify-content: center; }
+
+            .philosophy .container { grid-template-columns: 1fr; }
+            .philosophy-text h2 { font-size: 2rem; }
+            .philosophy-text .manifesto { font-size: 1.1rem; }
+
+            .services-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
+
+            .texture-panel.active { grid-template-columns: 1fr; text-align: center; }
+            .texture-visual { margin: 0 auto; }
+
+            .community .container { grid-template-columns: 1fr; }
+            .community-image { order: -1; }
+
+            .chat-bubble { max-width: 90%; }
+
+            .contact .container { grid-template-columns: 1fr; }
+            .form-row { grid-template-columns: 1fr; }
+
+            .footer-grid { grid-template-columns: 1fr; }
+            .footer-bottom { justify-content: center; text-align: center; }
+
+            .trust-strip .container { flex-direction: column; gap: 12px; }
+        }
+        @media (max-width: 480px) {
+            .hero h1 { font-size: 1.8rem; }
+            .hero-image-frame { width: 240px; height: 240px; }
+            .section-header h2 { font-size: 1.8rem; }
+            .philosophy-text h2 { font-size: 1.6rem; }
+            .texture-tabs { gap: 8px; }
+            .texture-tab { padding: 10px 20px; font-size: 0.85rem; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+        <a href="#" class="nav-logo" aria-label="The Natural Hair Collective home">The Natural Hair <span>Collective</span></a>
+        <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="nav-links" role="menubar">
+            <a href="#philosophy" role="menuitem">Philosophy</a>
+            <a href="#services" role="menuitem">Services</a>
+            <a href="#texture-guide" role="menuitem">Texture Guide</a>
+            <a href="#stylists" role="menuitem">Stylists</a>
+            <a href="#community" role="menuitem">Community</a>
+            <a href="#testimonials" role="menuitem">Testimonials</a>
+            <a href="#contact" role="menuitem" class="nav-cta">Book Now</a>
+        </div>
+    </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="hero">
+    <div class="hero-bg-circles" aria-hidden="true">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+    <div class="leaf-deco" aria-hidden="true">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor"><path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66.95-2.3c.48.17.98.3 1.34.3C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75C7 8 17 8 17 8z"/></svg>
+    </div>
+    <div class="leaf-deco" aria-hidden="true">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor"><path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66.95-2.3c.48.17.98.3 1.34.3C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75C7 8 17 8 17 8z"/></svg>
+    </div>
+    <div class="leaf-deco" aria-hidden="true">
+        <svg width="35" height="35" viewBox="0 0 24 24" fill="currentColor"><path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66.95-2.3c.48.17.98.3 1.34.3C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75C7 8 17 8 17 8z"/></svg>
+    </div>
+    <div class="container">
+        <div class="hero-image-wrap fade-left">
+            <div class="hero-overlap-circle"></div>
+            <div class="hero-image-frame">
+                <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1200&q=80" alt="Woman with beautiful natural hair smiling confidently" loading="eager">
+            </div>
+            <div class="hero-overlap-circle"></div>
+        </div>
+        <div class="hero-content fade-right">
+            <div class="hero-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                Celebrating Natural Beauty Since 2016
+            </div>
+            <h1>Embrace Your <span>Natural Crown</span></h1>
+            <p class="hero-text">A specialty salon for textured and natural hair. All stylists certified in natural hair care. Welcome to your safe space for all textures and curl types.</p>
+            <div class="hero-btns">
+                <a href="#contact" class="btn-primary">
+                    Book Your Consultation
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+                <a href="tel:+15557890123" class="btn-secondary">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                    Call Us
+                </a>
+            </div>
+            <div class="hero-trust">
+                <div class="hero-trust-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    Certified Specialists
+                </div>
+                <div class="hero-trust-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                    Inclusive &amp; Welcoming
+                </div>
+                <div class="hero-trust-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                    Free First Consultation
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== TRUST STRIP ===== -->
+<div class="trust-strip">
+    <div class="container">
+        <div class="trust-strip-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            All Stylists Certified in Natural Hair Care
+        </div>
+        <div class="trust-strip-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+            Safe Space for All Textures and Curl Types
+        </div>
+        <div class="trust-strip-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            Monthly Natural Hair Workshops
+        </div>
+    </div>
+</div>
+
+<!-- Wave Divider -->
+<div class="wave-divider green-bg" aria-hidden="true">
+    <svg viewBox="0 0 2400 80" preserveAspectRatio="none"><path d="M0,40 C200,80 400,0 600,40 C800,80 1000,0 1200,40 C1400,80 1600,0 1800,40 C2000,80 2200,0 2400,40 L2400,80 L0,80 Z" fill="#228B22"/></svg>
+</div>
+
+<!-- ===== PHILOSOPHY ===== -->
+<section class="philosophy" id="philosophy">
+    <div class="container">
+        <div class="philosophy-text fade-in">
+            <h2>Our Philosophy</h2>
+            <p class="manifesto">
+                We believe that <strong>every texture tells a story</strong>. From coils to curls, from locs to waves, your hair is a living expression of your heritage, your identity, and your power.
+            </p>
+            <p class="manifesto">
+                At The Natural Hair Collective, we don't just style hair &mdash; we <strong>honor it</strong>. Our space was built on the belief that specialized care shouldn't be hard to find, and that <strong>every person deserves a stylist who truly understands their hair</strong>.
+            </p>
+            <div class="philosophy-highlight">
+                "Your natural hair is not a problem to be solved. It is a crown to be celebrated."
+            </div>
+        </div>
+        <div class="philosophy-image fade-in">
+            <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=800&q=80" alt="Natural beauty being celebrated in our salon environment" loading="lazy">
+            <div class="philosophy-badge">Est. 2016</div>
+        </div>
+    </div>
+</section>
+
+<!-- Wave Divider -->
+<div class="wave-divider champagne-bg" aria-hidden="true">
+    <svg viewBox="0 0 2400 80" preserveAspectRatio="none"><path d="M0,40 C200,80 400,0 600,40 C800,80 1000,0 1200,40 C1400,80 1600,0 1800,40 C2000,80 2200,0 2400,40 L2400,80 L0,80 Z" fill="#FFFDF5"/></svg>
+</div>
+
+<!-- ===== SERVICES ===== -->
+<section class="services" id="services">
+    <div class="container">
+        <div class="section-header fade-in">
+            <span class="label">What We Do</span>
+            <h2>Our Services</h2>
+            <p>Specialized care for every texture. Each service begins with a personalized consultation.</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card scale-in">
+                <div class="service-card-img">
+                    <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=600&q=80" alt="Beautiful loc maintenance styling" loading="lazy">
+                    <div class="service-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M8 12l3 3 5-5"/></svg>
+                    </div>
+                </div>
+                <div class="service-card-body">
+                    <h3>Loc Maintenance</h3>
+                    <p>Expert retwisting, interlocking, and styling for all stages of your loc journey.</p>
+                    <span class="service-card-price">From $85</span>
+                </div>
+            </div>
+            <div class="service-card scale-in" style="transition-delay: 0.1s;">
+                <div class="service-card-img">
+                    <img src="https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?w=600&q=80" alt="Elegant protective styling" loading="lazy">
+                    <div class="service-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                    </div>
+                </div>
+                <div class="service-card-body">
+                    <h3>Protective Styles</h3>
+                    <p>Braids, twists, updos, and creative styles that protect while you slay.</p>
+                    <span class="service-card-price">From $120</span>
+                </div>
+            </div>
+            <div class="service-card scale-in" style="transition-delay: 0.2s;">
+                <div class="service-card-img">
+                    <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=600&q=80" alt="Natural hair care treatment" loading="lazy">
+                    <div class="service-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66.95-2.3c.48.17.98.3 1.34.3C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75C7 8 17 8 17 8z"/></svg>
+                    </div>
+                </div>
+                <div class="service-card-body">
+                    <h3>Natural Hair Care</h3>
+                    <p>Deep conditioning, trims, color, and treatments tailored to your texture.</p>
+                    <span class="service-card-price">From $65</span>
+                </div>
+            </div>
+            <div class="service-card scale-in" style="transition-delay: 0.3s;">
+                <div class="service-card-img">
+                    <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=600&q=80" alt="One-on-one texture consultation" loading="lazy">
+                    <div class="service-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 112.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+                    </div>
+                </div>
+                <div class="service-card-body">
+                    <h3>Texture Consultation</h3>
+                    <p>Personalized hair analysis and custom care plan for your unique texture.</p>
+                    <span class="service-card-price">Free for New Clients</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Wave Divider -->
+<div class="wave-divider" style="background:#FFFDF5" aria-hidden="true">
+    <svg viewBox="0 0 2400 80" preserveAspectRatio="none"><path d="M0,40 C200,80 400,0 600,40 C800,80 1000,0 1200,40 C1400,80 1600,0 1800,40 C2000,80 2200,0 2400,40 L2400,80 L0,80 Z" fill="#F7E7CE"/></svg>
+</div>
+
+<!-- ===== TEXTURE GUIDE ===== -->
+<section class="texture-guide" id="texture-guide">
+    <div class="container">
+        <div class="section-header fade-in">
+            <span class="label" style="background:rgba(34,139,34,0.15);">Know Your Hair</span>
+            <h2>Texture Guide</h2>
+            <p>Understanding your hair type is the first step to healthier, happier curls. Explore your texture below.</p>
+        </div>
+        <div class="texture-tabs fade-in">
+            <button class="texture-tab active" data-tab="type2" aria-pressed="true">Type 2 - Wavy</button>
+            <button class="texture-tab" data-tab="type3a" aria-pressed="false">Type 3A - Loose Curls</button>
+            <button class="texture-tab" data-tab="type3c" aria-pressed="false">Type 3C - Tight Curls</button>
+            <button class="texture-tab" data-tab="type4a" aria-pressed="false">Type 4A - Coily</button>
+            <button class="texture-tab" data-tab="type4c" aria-pressed="false">Type 4C - Kinky</button>
+        </div>
+        <div class="texture-content">
+            <div class="texture-panel active" id="type2">
+                <div class="texture-visual" aria-hidden="true">~</div>
+                <div class="texture-info">
+                    <h3>Type 2 - Wavy</h3>
+                    <p>S-shaped waves that range from fine to coarse. Prone to frizz and can benefit from lightweight moisture.</p>
+                    <ul>
+                        <li>Lightweight Oils</li>
+                        <li>Diffusing</li>
+                        <li>Anti-Frizz Treatments</li>
+                        <li>Gentle Cleansing</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="texture-panel" id="type3a">
+                <div class="texture-visual" aria-hidden="true">S</div>
+                <div class="texture-info">
+                    <h3>Type 3A - Loose Curls</h3>
+                    <p>Well-defined, springy curls about the width of sidewalk chalk. Can be voluminous and shiny with proper care.</p>
+                    <ul>
+                        <li>Curl Defining Cream</li>
+                        <li>Plopping Method</li>
+                        <li>Deep Conditioning</li>
+                        <li>Satin Pillowcase</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="texture-panel" id="type3c">
+                <div class="texture-visual" aria-hidden="true">@</div>
+                <div class="texture-info">
+                    <h3>Type 3C - Tight Curls</h3>
+                    <p>Densely packed, corkscrew-shaped curls about the width of a pencil. High volume with lots of personality.</p>
+                    <ul>
+                        <li>Leave-In Conditioner</li>
+                        <li>Finger Coiling</li>
+                        <li>LOC Method</li>
+                        <li>Protective Styling</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="texture-panel" id="type4a">
+                <div class="texture-visual" aria-hidden="true">O</div>
+                <div class="texture-info">
+                    <h3>Type 4A - Coily</h3>
+                    <p>Tightly coiled S-pattern curls, springy with defined coils. Benefits from generous moisture and gentle handling.</p>
+                    <ul>
+                        <li>Heavy Butters</li>
+                        <li>Twist-Outs</li>
+                        <li>Moisture Sealing</li>
+                        <li>Low Manipulation</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="texture-panel" id="type4c">
+                <div class="texture-visual" aria-hidden="true">Z</div>
+                <div class="texture-info">
+                    <h3>Type 4C - Kinky</h3>
+                    <p>Tight Z-pattern coils with less defined curl pattern. Most fragile type that thrives with consistent moisture and care.</p>
+                    <ul>
+                        <li>Shea Butter Blends</li>
+                        <li>Finger Detangling</li>
+                        <li>Hot Oil Treatments</li>
+                        <li>Protective Styles</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Wave Divider -->
+<div class="wave-divider" style="background:#F7E7CE" aria-hidden="true">
+    <svg viewBox="0 0 2400 80" preserveAspectRatio="none"><path d="M0,40 C200,80 400,0 600,40 C800,80 1000,0 1200,40 C1400,80 1600,0 1800,40 C2000,80 2200,0 2400,40 L2400,80 L0,80 Z" fill="#FFFDF5"/></svg>
+</div>
+
+<!-- ===== STYLISTS ===== -->
+<section class="stylists" id="stylists">
+    <div class="container">
+        <div class="section-header fade-in">
+            <span class="label">Our Team</span>
+            <h2>Meet Your Stylists</h2>
+            <p>Every one of our stylists is certified in natural hair care with years of specialized experience.</p>
+        </div>
+        <div class="stylists-grid">
+            <div class="stylist-card fade-in">
+                <div class="stylist-photo">
+                    <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=400&q=80" alt="Amara Johnson, Lead Stylist" loading="lazy">
+                </div>
+                <h3>Amara Johnson</h3>
+                <p class="role">Lead Stylist &amp; Founder</p>
+                <span class="cert">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#228B22" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    Certified Natural Hair Specialist
+                </span>
+            </div>
+            <div class="stylist-card fade-in" style="transition-delay: 0.15s;">
+                <div class="stylist-photo">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80" alt="Zuri Williams, Protective Styles Expert" loading="lazy">
+                </div>
+                <h3>Zuri Williams</h3>
+                <p class="role">Protective Styles Expert</p>
+                <span class="cert">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#228B22" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    Certified Loc Technician
+                </span>
+            </div>
+            <div class="stylist-card fade-in" style="transition-delay: 0.3s;">
+                <div class="stylist-photo">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80" alt="Marcus Davis, Texture Specialist" loading="lazy">
+                </div>
+                <h3>Marcus Davis</h3>
+                <p class="role">Texture Specialist</p>
+                <span class="cert">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#228B22" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    Certified Trichologist
+                </span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Wave Divider -->
+<div class="wave-divider" style="background:#FFFDF5" aria-hidden="true">
+    <svg viewBox="0 0 2400 80" preserveAspectRatio="none"><path d="M0,40 C200,80 400,0 600,40 C800,80 1000,0 1200,40 C1400,80 1600,0 1800,40 C2000,80 2200,0 2400,40 L2400,80 L0,80 Z" fill="#228B22"/></svg>
+</div>
+
+<!-- ===== COMMUNITY ===== -->
+<section class="community" id="community">
+    <div class="container">
+        <div class="community-content fade-in">
+            <h2>Join Our Community</h2>
+            <p>More than a salon, we're a gathering place. Join us for workshops, events, and celebrations of natural beauty.</p>
+            <div class="event-list">
+                <div class="event-item">
+                    <span class="event-date">Monthly Workshop</span>
+                    <h4>Natural Hair 101</h4>
+                    <p>Learn the fundamentals of caring for your natural texture. Open to all skill levels.</p>
+                </div>
+                <div class="event-item">
+                    <span class="event-date">Bi-Weekly</span>
+                    <h4>Loc Journey Circle</h4>
+                    <p>Connect with others on their loc journey. Share tips, stories, and encouragement.</p>
+                </div>
+                <div class="event-item">
+                    <span class="event-date">Quarterly</span>
+                    <h4>Crown Celebration</h4>
+                    <p>A community showcase celebrating natural hairstyles, music, food, and culture.</p>
+                </div>
+            </div>
+        </div>
+        <div class="community-image fade-in">
+            <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800&q=80" alt="Community event at The Natural Hair Collective salon" loading="lazy">
+        </div>
+    </div>
+</section>
+
+<!-- Wave Divider -->
+<div class="wave-divider champagne-bg" aria-hidden="true">
+    <svg viewBox="0 0 2400 80" preserveAspectRatio="none"><path d="M0,40 C200,80 400,0 600,40 C800,80 1000,0 1200,40 C1400,80 1600,0 1800,40 C2000,80 2200,0 2400,40 L2400,80 L0,80 Z" fill="#FFFDF5"/></svg>
+</div>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section class="testimonials" id="testimonials">
+    <div class="container">
+        <div class="section-header fade-in">
+            <span class="label">Love Notes</span>
+            <h2>What Our Community Says</h2>
+            <p>Real words from real people who found their hair home.</p>
+        </div>
+        <div class="testimonials-chat">
+            <div class="chat-bubble left fade-left">
+                <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p>"I've been natural for 5 years and this is the FIRST salon where I felt truly understood. Amara knew exactly what my 4C hair needed without me having to explain."</p>
+                <div class="author">Keisha M. &mdash; 4C Queen</div>
+            </div>
+            <div class="chat-bubble right fade-right">
+                <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p>"Marcus transformed my locs. His retwist technique is gentle yet perfect. Plus the vibe in this salon is unmatched &mdash; I always leave feeling like royalty."</p>
+                <div class="author">DeAndre T. &mdash; Loc Journey Year 3</div>
+            </div>
+            <div class="chat-bubble left fade-left" style="transition-delay: 0.15s;">
+                <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p>"The free texture consultation changed my entire hair routine. Zuri created a custom care plan and my curls have never been healthier. This place is a gem!"</p>
+                <div class="author">Jasmine R. &mdash; Curly Girl Convert</div>
+            </div>
+            <div class="chat-bubble right fade-right" style="transition-delay: 0.15s;">
+                <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p>"Finally, a salon that feels like home. I brought my daughter for her first big chop and they made it a celebration. We're clients for life."</p>
+                <div class="author">Tamika W. &mdash; Mother-Daughter Duo</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Wave Divider -->
+<div class="wave-divider" style="background:#FFFDF5" aria-hidden="true">
+    <svg viewBox="0 0 2400 80" preserveAspectRatio="none"><path d="M0,40 C200,80 400,0 600,40 C800,80 1000,0 1200,40 C1400,80 1600,0 1800,40 C2000,80 2200,0 2400,40 L2400,80 L0,80 Z" fill="#F7E7CE"/></svg>
+</div>
+
+<!-- ===== CONTACT ===== -->
+<section class="contact" id="contact">
+    <div class="container">
+        <div class="contact-info fade-in">
+            <h2>Visit Us</h2>
+            <p>Ready to start your natural hair journey? Book your free texture consultation today.</p>
+            <div class="contact-detail">
+                <div class="icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div>
+                    <h4>Location</h4>
+                    <p>445 Unity Avenue</p>
+                </div>
+            </div>
+            <div class="contact-detail">
+                <div class="icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                </div>
+                <div>
+                    <h4>Phone</h4>
+                    <p><a href="tel:+15557890123" style="color:#228B22;font-weight:500;">(555) 789-0123</a></p>
+                </div>
+            </div>
+            <div class="contact-detail">
+                <div class="icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                </div>
+                <div>
+                    <h4>Hours</h4>
+                    <p>Tue &ndash; Sat: 10AM &ndash; 7PM<br>Sun: 11AM &ndash; 4PM<br>Mon: Closed</p>
+                </div>
+            </div>
+            <div class="contact-detail">
+                <div class="icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+                <div>
+                    <h4>Email</h4>
+                    <p><a href="mailto:hello@naturalhair.co" style="color:#228B22;font-weight:500;">hello@naturalhair.co</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="contact-form fade-in">
+            <h3 style="font-size:1.5rem;margin-bottom:8px;">Book Your Consultation</h3>
+            <p style="color:#666;margin-bottom:24px;font-size:0.9rem;">Free texture consultation for all new clients.</p>
+            <form id="booking-form" action="#" method="POST" novalidate>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="first-name">First Name *</label>
+                        <input type="text" id="first-name" name="first-name" required placeholder="Your first name" autocomplete="given-name">
+                    </div>
+                    <div class="form-group">
+                        <label for="last-name">Last Name *</label>
+                        <input type="text" id="last-name" name="last-name" required placeholder="Your last name" autocomplete="family-name">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required placeholder="your@email.com" autocomplete="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000" autocomplete="tel">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="service">Service Interested In</label>
+                    <select id="service" name="service">
+                        <option value="">Select a service</option>
+                        <option value="loc-maintenance">Loc Maintenance</option>
+                        <option value="protective-styles">Protective Styles</option>
+                        <option value="natural-hair-care">Natural Hair Care</option>
+                        <option value="texture-consultation">Texture Consultation (Free)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Tell Us About Your Hair</label>
+                    <textarea id="message" name="message" placeholder="Share your hair type, goals, or any concerns..."></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Book Your Consultation</button>
+                <p class="free-consult-badge">Free Texture Consultation for New Clients</p>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h4>The Natural Hair Collective</h4>
+                <p>A specialty salon for textured and natural hair. All stylists certified in natural hair care. Inclusive, culturally-focused environment celebrating every texture since 2016.</p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Instagram">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                    </a>
+                    <a href="#" aria-label="Facebook">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+                    </a>
+                    <a href="#" aria-label="TikTok">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12a4 4 0 104 4V4a5 5 0 005 5"/></svg>
+                    </a>
+                    <a href="#" aria-label="YouTube">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.25 29 29 0 00-.46-5.43z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#services">Loc Maintenance</a></li>
+                    <li><a href="#services">Protective Styles</a></li>
+                    <li><a href="#services">Natural Hair Care</a></li>
+                    <li><a href="#services">Texture Consultation</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Community</h4>
+                <ul>
+                    <li><a href="#community">Workshops</a></li>
+                    <li><a href="#community">Events Calendar</a></li>
+                    <li><a href="#community">Loc Journey Circle</a></li>
+                    <li><a href="#texture-guide">Texture Guide</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Visit</h4>
+                <ul>
+                    <li><a href="#contact">445 Unity Avenue</a></li>
+                    <li><a href="tel:+15557890123">(555) 789-0123</a></li>
+                    <li>Tue-Sat: 10AM-7PM</li>
+                    <li>Sun: 11AM-4PM</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 The Natural Hair Collective. All rights reserved.</p>
+            <p>Celebrating every texture, honoring every crown.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- ===== JAVASCRIPT ===== -->
+<script>
+(function() {
+    'use strict';
+
+    // Mobile nav toggle
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    navToggle.addEventListener('click', function() {
+        navLinks.classList.toggle('open');
+        navToggle.classList.toggle('open');
+        const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+        navToggle.setAttribute('aria-expanded', !expanded);
+    });
+    // Close mobile nav on link click
+    navLinks.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function() {
+            navLinks.classList.remove('open');
+            navToggle.classList.remove('open');
+            navToggle.setAttribute('aria-expanded', 'false');
+        });
+    });
+
+    // Navbar scroll effect
+    const navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+
+    // Intersection Observer for animations
+    const observerOptions = { threshold: 0.15, rootMargin: '0px 0px -50px 0px' };
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.fade-in, .fade-left, .fade-right, .scale-in').forEach(function(el) {
+        observer.observe(el);
+    });
+
+    // Texture Guide tabs
+    const textureTabs = document.querySelectorAll('.texture-tab');
+    const texturePanels = document.querySelectorAll('.texture-panel');
+    textureTabs.forEach(function(tab) {
+        tab.addEventListener('click', function() {
+            textureTabs.forEach(function(t) {
+                t.classList.remove('active');
+                t.setAttribute('aria-pressed', 'false');
+            });
+            texturePanels.forEach(function(p) { p.classList.remove('active'); });
+            tab.classList.add('active');
+            tab.setAttribute('aria-pressed', 'true');
+            var target = document.getElementById(tab.dataset.tab);
+            if (target) target.classList.add('active');
+        });
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+        anchor.addEventListener('click', function(e) {
+            var targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            var target = document.querySelector(targetId);
+            if (target) {
+                e.preventDefault();
+                var offset = navbar.offsetHeight + 16;
+                var top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                window.scrollTo({ top: top, behavior: 'smooth' });
+            }
+        });
+    });
+
+    // Form submission handler
+    var form = document.getElementById('booking-form');
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        var btn = form.querySelector('.btn-submit');
+        var originalText = btn.textContent;
+        btn.textContent = 'Thank You! We\'ll Be in Touch.';
+        btn.style.background = '#2D5016';
+        setTimeout(function() {
+            btn.textContent = originalText;
+            btn.style.background = '';
+            form.reset();
+        }, 3000);
+    });
+
+})();
+</script>
+</body>
+</html>

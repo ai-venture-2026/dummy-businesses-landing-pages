@@ -1,0 +1,2217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Athletic Recovery Massage | Sports Massage & Injury Recovery</title>
+    <meta name="description" content="Performance-focused sports massage for athletes. Deep tissue, injury recovery, stretching sessions. Trusted by 200+ local athletes. Book your recovery session.">
+    <meta name="keywords" content="sports massage, athletic recovery, deep tissue massage, injury recovery, stretching sessions, athlete massage">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        /* ===== RESET & BASE ===== */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; font-size: 16px; }
+        body {
+            font-family: 'Barlow', sans-serif;
+            background: #F5F5F0;
+            color: #1A1A1A;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        img { max-width: 100%; height: auto; display: block; }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 800;
+            line-height: 1.1;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+        }
+
+        /* ===== UTILITY ===== */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        .section-label {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #E85D2A;
+            margin-bottom: 8px;
+        }
+        .section-title {
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            color: #1B3A5C;
+            margin-bottom: 16px;
+        }
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: #555;
+            max-width: 600px;
+            line-height: 1.7;
+        }
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #E85D2A;
+            color: #fff;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 700;
+            font-size: 1.05rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 16px 36px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(232, 93, 42, 0.3);
+        }
+        .btn-primary:hover {
+            background: #d14e1f;
+            transform: translateY(-2px) scale(1.03);
+            box-shadow: 0 6px 25px rgba(232, 93, 42, 0.5);
+        }
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: transparent;
+            color: #1B3A5C;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 700;
+            font-size: 1.05rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 14px 34px;
+            border: 2px solid #1B3A5C;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .btn-secondary:hover {
+            background: #1B3A5C;
+            color: #fff;
+        }
+
+        /* ===== ANIMATIONS ===== */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .slide-left {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+        .slide-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .slide-right {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+        .slide-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .pop-in {
+            opacity: 0;
+            transform: scale(0.85);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+        .pop-in.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* ===== DIAGONAL ENERGY LINES ===== */
+        .energy-lines {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            overflow: hidden;
+            pointer-events: none;
+            z-index: 0;
+        }
+        .energy-lines::before,
+        .energy-lines::after {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(232, 93, 42, 0.15), transparent);
+            animation: energyPulse 3s ease-in-out infinite;
+        }
+        .energy-lines::before {
+            top: 30%;
+            left: -50%;
+            transform: rotate(-15deg);
+        }
+        .energy-lines::after {
+            top: 65%;
+            left: -50%;
+            transform: rotate(-15deg);
+            animation-delay: 1.5s;
+        }
+        @keyframes energyPulse {
+            0%, 100% { opacity: 0.3; transform: rotate(-15deg) translateX(0); }
+            50% { opacity: 1; transform: rotate(-15deg) translateX(40px); }
+        }
+
+        /* ===== NAVIGATION ===== */
+        .nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            background: #1B3A5C;
+            padding: 0;
+            transition: box-shadow 0.3s ease;
+        }
+        .nav.scrolled {
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        .nav .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 70px;
+        }
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .nav-logo-icon {
+            width: 40px;
+            height: 40px;
+            background: #E85D2A;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: rotate(-5deg);
+        }
+        .nav-logo-icon svg { width: 24px; height: 24px; }
+        .nav-logo-text {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 800;
+            font-size: 1.2rem;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            line-height: 1.15;
+        }
+        .nav-logo-text span { color: #E85D2A; }
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+        .nav-links a {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: #B0C4DE;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover { color: #fff; }
+        .nav-cta {
+            background: #E85D2A !important;
+            color: #fff !important;
+            padding: 10px 22px;
+            border-radius: 4px;
+            font-weight: 700 !important;
+            transition: all 0.3s ease !important;
+        }
+        .nav-cta:hover {
+            background: #d14e1f !important;
+            box-shadow: 0 4px 15px rgba(232, 93, 42, 0.4);
+        }
+        .nav-phone {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .nav-phone svg { width: 16px; height: 16px; stroke: #E85D2A; }
+        .mobile-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 5px;
+        }
+        .mobile-toggle span {
+            display: block;
+            width: 28px;
+            height: 3px;
+            background: #fff;
+            border-radius: 2px;
+            transition: all 0.3s;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #1B3A5C 0%, #0e2440 60%, #1B3A5C 100%);
+            padding-top: 70px;
+            overflow: hidden;
+        }
+        .hero .energy-lines::before,
+        .hero .energy-lines::after {
+            background: linear-gradient(90deg, transparent, rgba(232, 93, 42, 0.2), transparent);
+            height: 3px;
+        }
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            min-height: calc(100vh - 70px);
+            position: relative;
+            z-index: 1;
+        }
+        .hero-content { padding: 40px 0; }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(232, 93, 42, 0.15);
+            border: 1px solid rgba(232, 93, 42, 0.3);
+            color: #E85D2A;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            padding: 8px 18px;
+            border-radius: 4px;
+            margin-bottom: 24px;
+        }
+        .hero-badge svg { width: 16px; height: 16px; }
+        .hero-title {
+            font-size: clamp(2.8rem, 6vw, 4.5rem);
+            color: #fff;
+            margin-bottom: 24px;
+            line-height: 1.05;
+        }
+        .hero-title span { color: #E85D2A; }
+        .hero-subtitle {
+            font-size: 1.15rem;
+            color: #B0C4DE;
+            line-height: 1.7;
+            margin-bottom: 16px;
+            max-width: 500px;
+        }
+        .hero-offer {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(232, 93, 42, 0.1);
+            border-left: 3px solid #E85D2A;
+            padding: 12px 20px;
+            margin-bottom: 32px;
+            border-radius: 0 4px 4px 0;
+        }
+        .hero-offer-text {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #E85D2A;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .hero-offer-sub {
+            font-size: 0.9rem;
+            color: #B0C4DE;
+        }
+        .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 40px; }
+        .hero-buttons .btn-secondary {
+            color: #B0C4DE;
+            border-color: #B0C4DE;
+        }
+        .hero-buttons .btn-secondary:hover {
+            background: #B0C4DE;
+            color: #1B3A5C;
+        }
+        .hero-credentials {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .hero-credential {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #B0C4DE;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        .hero-credential svg { width: 18px; height: 18px; stroke: #E85D2A; flex-shrink: 0; }
+        .hero-image {
+            position: relative;
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+        .hero-image-wrapper {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+        }
+        .hero-image-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(135deg, rgba(27, 58, 92, 0.2), transparent);
+            z-index: 1;
+        }
+        .hero-image-wrapper img {
+            width: 100%;
+            height: 550px;
+            object-fit: cover;
+        }
+        .hero-image-badge {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(27, 58, 92, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 16px 22px;
+            border-radius: 6px;
+            z-index: 2;
+            border-left: 3px solid #E85D2A;
+        }
+        .hero-image-badge-number {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 900;
+            font-size: 1.8rem;
+            color: #E85D2A;
+            line-height: 1;
+        }
+        .hero-image-badge-text {
+            font-size: 0.8rem;
+            color: #B0C4DE;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: 600;
+        }
+        /* Diagonal clip on hero image */
+        .hero-diagonal {
+            position: absolute;
+            top: 0;
+            right: 50%;
+            bottom: 0;
+            width: 150px;
+            background: linear-gradient(135deg, #1B3A5C 0%, transparent 100%);
+            z-index: 1;
+            transform: skewX(-5deg);
+            transform-origin: bottom;
+        }
+
+        /* ===== PERFORMANCE STATS ===== */
+        .stats {
+            position: relative;
+            background: #1B3A5C;
+            padding: 60px 0;
+            overflow: hidden;
+        }
+        .stats .energy-lines::before,
+        .stats .energy-lines::after {
+            background: linear-gradient(90deg, transparent, rgba(176, 196, 222, 0.1), transparent);
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            position: relative;
+            z-index: 1;
+        }
+        .stat-item {
+            text-align: center;
+            padding: 20px;
+            border-right: 1px solid rgba(176, 196, 222, 0.15);
+        }
+        .stat-item:last-child { border-right: none; }
+        .stat-number {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 900;
+            font-size: clamp(2.5rem, 4vw, 3.5rem);
+            color: #E85D2A;
+            line-height: 1;
+            margin-bottom: 4px;
+        }
+        .stat-suffix {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: #E85D2A;
+        }
+        .stat-label {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: #B0C4DE;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+        }
+
+        /* ===== SERVICES ===== */
+        .services {
+            position: relative;
+            padding: 100px 0;
+            overflow: hidden;
+        }
+        .services-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .services-header .section-subtitle { margin: 0 auto; }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+        .service-card {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            transition: all 0.4s ease;
+            position: relative;
+        }
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(27, 58, 92, 0.15);
+        }
+        .service-card-image {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+        }
+        .service-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .service-card:hover .service-card-image img {
+            transform: scale(1.08);
+        }
+        .service-card-image::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            height: 60px;
+            background: linear-gradient(transparent, rgba(27, 58, 92, 0.7));
+        }
+        .service-icon {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            width: 48px;
+            height: 48px;
+            background: rgba(232, 93, 42, 0.95);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+        }
+        .service-icon svg { width: 24px; height: 24px; stroke: #fff; fill: none; }
+        .service-card-body { padding: 24px; }
+        .service-card-title {
+            font-size: 1.3rem;
+            color: #1B3A5C;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+        .service-card-desc {
+            font-size: 0.92rem;
+            color: #666;
+            margin-bottom: 16px;
+            line-height: 1.6;
+        }
+        .service-metric {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 14px;
+            background: #F5F5F0;
+            border-radius: 4px;
+            border-left: 3px solid #E85D2A;
+        }
+        .service-metric-value {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 800;
+            font-size: 1.1rem;
+            color: #E85D2A;
+        }
+        .service-metric-label {
+            font-size: 0.8rem;
+            color: #777;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* ===== THE SCIENCE ===== */
+        .science {
+            position: relative;
+            padding: 100px 0;
+            background: #1B3A5C;
+            overflow: hidden;
+        }
+        .science .energy-lines::before,
+        .science .energy-lines::after {
+            background: linear-gradient(90deg, transparent, rgba(232, 93, 42, 0.12), transparent);
+        }
+        .science-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        .science-content .section-label { color: #E85D2A; }
+        .science-content .section-title { color: #fff; }
+        .science-content .section-subtitle { color: #B0C4DE; }
+        .science-steps {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        .science-step {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+        .science-step-number {
+            flex-shrink: 0;
+            width: 50px;
+            height: 50px;
+            background: rgba(232, 93, 42, 0.15);
+            border: 2px solid #E85D2A;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 900;
+            font-size: 1.3rem;
+            color: #E85D2A;
+        }
+        .science-step-content h4 {
+            font-size: 1.1rem;
+            color: #fff;
+            margin-bottom: 4px;
+            text-transform: uppercase;
+        }
+        .science-step-content p {
+            font-size: 0.9rem;
+            color: #B0C4DE;
+            line-height: 1.6;
+        }
+        .science-visual {
+            position: relative;
+        }
+        .science-image {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+        }
+        .science-image img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+        .science-float-card {
+            position: absolute;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            padding: 20px 24px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        .science-float-card.top-right {
+            top: -20px;
+            right: -20px;
+        }
+        .science-float-card.bottom-left {
+            bottom: -20px;
+            left: -20px;
+        }
+        .science-float-number {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 900;
+            font-size: 2rem;
+            color: #E85D2A;
+            line-height: 1;
+        }
+        .science-float-text {
+            font-size: 0.8rem;
+            color: #555;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* ===== FOR ATHLETES ===== */
+        .athletes {
+            position: relative;
+            padding: 100px 0;
+            overflow: hidden;
+        }
+        .athletes-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .athletes-image {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+        }
+        .athletes-image img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+        .athletes-image::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            height: 100px;
+            background: linear-gradient(transparent, rgba(27, 58, 92, 0.3));
+        }
+        .athletes-features {
+            margin-top: 32px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .athletes-feature {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+        }
+        .athletes-feature-icon {
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            background: rgba(232, 93, 42, 0.1);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .athletes-feature-icon svg { width: 20px; height: 20px; stroke: #E85D2A; fill: none; }
+        .athletes-feature h4 {
+            font-size: 0.95rem;
+            color: #1B3A5C;
+            margin-bottom: 2px;
+        }
+        .athletes-feature p {
+            font-size: 0.82rem;
+            color: #777;
+            line-height: 1.5;
+        }
+
+        /* ===== GYM PARTNERSHIPS ===== */
+        .partners {
+            position: relative;
+            padding: 60px 0;
+            background: #1B3A5C;
+            overflow: hidden;
+        }
+        .partners-header {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 1;
+        }
+        .partners-header .section-title { color: #fff; font-size: 1.8rem; }
+        .partners-marquee {
+            display: flex;
+            gap: 60px;
+            animation: marqueeScroll 20s linear infinite;
+            position: relative;
+            z-index: 1;
+        }
+        .partner-logo {
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 32px;
+            background: rgba(176, 196, 222, 0.08);
+            border: 1px solid rgba(176, 196, 222, 0.15);
+            border-radius: 8px;
+            white-space: nowrap;
+        }
+        .partner-logo-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(232, 93, 42, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .partner-logo-icon svg { width: 22px; height: 22px; stroke: #E85D2A; fill: none; }
+        .partner-logo-text {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        @keyframes marqueeScroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .marquee-wrapper {
+            overflow: hidden;
+            position: relative;
+        }
+        .marquee-wrapper::before,
+        .marquee-wrapper::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 80px;
+            z-index: 2;
+        }
+        .marquee-wrapper::before {
+            left: 0;
+            background: linear-gradient(90deg, #1B3A5C, transparent);
+        }
+        .marquee-wrapper::after {
+            right: 0;
+            background: linear-gradient(-90deg, #1B3A5C, transparent);
+        }
+
+        /* ===== TESTIMONIALS ===== */
+        .testimonials {
+            position: relative;
+            padding: 100px 0;
+            overflow: hidden;
+        }
+        .testimonials-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .testimonials-header .section-subtitle { margin: 0 auto; }
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+        .testimonial-card {
+            background: #fff;
+            border-radius: 8px;
+            padding: 32px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            position: relative;
+            transition: all 0.4s ease;
+            border-top: 3px solid transparent;
+        }
+        .testimonial-card:hover {
+            border-top-color: #E85D2A;
+            box-shadow: 0 8px 30px rgba(27, 58, 92, 0.12);
+        }
+        .testimonial-sport {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(27, 58, 92, 0.08);
+            padding: 6px 14px;
+            border-radius: 20px;
+            margin-bottom: 16px;
+        }
+        .testimonial-sport svg { width: 16px; height: 16px; stroke: #1B3A5C; fill: none; }
+        .testimonial-sport span {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 700;
+            font-size: 0.8rem;
+            color: #1B3A5C;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        .testimonial-stars {
+            display: flex;
+            gap: 3px;
+            margin-bottom: 12px;
+        }
+        .testimonial-stars svg { width: 16px; height: 16px; fill: #E85D2A; }
+        .testimonial-text {
+            font-size: 0.95rem;
+            color: #444;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .testimonial-avatar {
+            width: 44px;
+            height: 44px;
+            background: #1B3A5C;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 800;
+            font-size: 1rem;
+            color: #E85D2A;
+        }
+        .testimonial-name {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            color: #1B3A5C;
+            text-transform: uppercase;
+        }
+        .testimonial-role {
+            font-size: 0.8rem;
+            color: #888;
+        }
+
+        /* ===== PRICING ===== */
+        .pricing {
+            position: relative;
+            padding: 100px 0;
+            background: linear-gradient(135deg, #1B3A5C, #0e2440);
+            overflow: hidden;
+        }
+        .pricing .energy-lines::before,
+        .pricing .energy-lines::after {
+            background: linear-gradient(90deg, transparent, rgba(232, 93, 42, 0.1), transparent);
+        }
+        .pricing-header {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+            z-index: 1;
+        }
+        .pricing-header .section-title { color: #fff; }
+        .pricing-header .section-subtitle { color: #B0C4DE; margin: 0 auto; }
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            position: relative;
+            z-index: 1;
+        }
+        .pricing-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 40px 32px;
+            text-align: center;
+            position: relative;
+            transition: all 0.4s ease;
+        }
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        .pricing-card.featured {
+            background: #fff;
+            transform: scale(1.05);
+            box-shadow: 0 15px 50px rgba(232, 93, 42, 0.3);
+            border: 2px solid #E85D2A;
+        }
+        .pricing-card.featured:hover {
+            transform: scale(1.05) translateY(-10px);
+        }
+        .pricing-badge {
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #E85D2A;
+            color: #fff;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 700;
+            font-size: 0.8rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 6px 20px;
+            border-radius: 20px;
+        }
+        .pricing-icon {
+            width: 56px;
+            height: 56px;
+            margin: 0 auto 20px;
+            background: rgba(27, 58, 92, 0.08);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .pricing-icon svg { width: 28px; height: 28px; stroke: #1B3A5C; fill: none; }
+        .pricing-name {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 800;
+            font-size: 1.4rem;
+            color: #1B3A5C;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+        .pricing-desc {
+            font-size: 0.88rem;
+            color: #777;
+            margin-bottom: 24px;
+        }
+        .pricing-amount {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 900;
+            font-size: 3.2rem;
+            color: #1B3A5C;
+            line-height: 1;
+            margin-bottom: 4px;
+        }
+        .pricing-amount sup {
+            font-size: 1.4rem;
+            vertical-align: super;
+        }
+        .pricing-per {
+            font-size: 0.85rem;
+            color: #999;
+            margin-bottom: 24px;
+        }
+        .pricing-features {
+            text-align: left;
+            margin-bottom: 30px;
+        }
+        .pricing-features li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 0;
+            font-size: 0.9rem;
+            color: #555;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .pricing-features li:last-child { border-bottom: none; }
+        .pricing-features li svg { width: 18px; height: 18px; stroke: #E85D2A; flex-shrink: 0; }
+        .pricing-card .btn-primary { width: 100%; justify-content: center; }
+        .pricing-card:not(.featured) .btn-primary {
+            background: #1B3A5C;
+            box-shadow: 0 4px 15px rgba(27, 58, 92, 0.3);
+        }
+        .pricing-card:not(.featured) .btn-primary:hover {
+            background: #E85D2A;
+            box-shadow: 0 6px 25px rgba(232, 93, 42, 0.4);
+        }
+        .pricing-savings {
+            margin-top: 12px;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 700;
+            font-size: 0.85rem;
+            color: #E85D2A;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* ===== BOOKING FORM ===== */
+        .booking {
+            position: relative;
+            padding: 100px 0;
+            overflow: hidden;
+        }
+        .booking-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+        .booking-info {
+            padding: 20px 0;
+        }
+        .booking-details {
+            margin-top: 32px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .booking-detail {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+        .booking-detail-icon {
+            flex-shrink: 0;
+            width: 48px;
+            height: 48px;
+            background: rgba(27, 58, 92, 0.08);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .booking-detail-icon svg { width: 24px; height: 24px; stroke: #E85D2A; fill: none; }
+        .booking-detail h4 {
+            font-size: 1rem;
+            color: #1B3A5C;
+            margin-bottom: 2px;
+            text-transform: uppercase;
+        }
+        .booking-detail p {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.5;
+        }
+        .booking-detail a {
+            color: #E85D2A;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        .booking-detail a:hover { color: #d14e1f; }
+        .booking-form-wrapper {
+            background: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            border-top: 4px solid #E85D2A;
+        }
+        .booking-form-title {
+            font-size: 1.6rem;
+            color: #1B3A5C;
+            margin-bottom: 8px;
+        }
+        .booking-form-subtitle {
+            font-size: 0.9rem;
+            color: #888;
+            margin-bottom: 28px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 700;
+            font-size: 0.85rem;
+            color: #1B3A5C;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 6px;
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px 16px;
+            border: 2px solid #e0e0e0;
+            border-radius: 6px;
+            font-family: 'Barlow', sans-serif;
+            font-size: 0.95rem;
+            color: #1A1A1A;
+            background: #F5F5F0;
+            transition: border-color 0.3s;
+        }
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #E85D2A;
+            background: #fff;
+        }
+        .form-group textarea { resize: vertical; min-height: 80px; }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+        .booking-form-wrapper .btn-primary {
+            width: 100%;
+            justify-content: center;
+            padding: 18px;
+            font-size: 1.1rem;
+        }
+        .form-note {
+            text-align: center;
+            margin-top: 12px;
+            font-size: 0.82rem;
+            color: #999;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: #0e1e30;
+            padding: 60px 0 0;
+            color: #B0C4DE;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        .footer-brand .nav-logo { margin-bottom: 16px; }
+        .footer-brand p {
+            font-size: 0.9rem;
+            line-height: 1.7;
+            color: #8a9ab5;
+            margin-bottom: 20px;
+        }
+        .footer-social {
+            display: flex;
+            gap: 12px;
+        }
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            background: rgba(176, 196, 222, 0.1);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+        .footer-social a:hover { background: #E85D2A; }
+        .footer-social a svg { width: 18px; height: 18px; stroke: #B0C4DE; fill: none; }
+        .footer-col h4 {
+            font-size: 1rem;
+            color: #fff;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+        .footer-col a {
+            display: block;
+            font-size: 0.9rem;
+            color: #8a9ab5;
+            padding: 4px 0;
+            transition: color 0.3s;
+        }
+        .footer-col a:hover { color: #E85D2A; }
+        .footer-bottom {
+            border-top: 1px solid rgba(176, 196, 222, 0.1);
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.82rem;
+            color: #5a6d85;
+        }
+        .footer-partners {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .footer-partners span {
+            font-size: 0.8rem;
+            color: #5a6d85;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+        .footer-partner-logo {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 700;
+            font-size: 0.85rem;
+            color: #5a6d85;
+            padding: 4px 10px;
+            border: 1px solid rgba(176, 196, 222, 0.1);
+            border-radius: 4px;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .services-grid { grid-template-columns: repeat(2, 1fr); }
+            .hero-grid { gap: 40px; }
+            .hero-image-wrapper img { height: 450px; }
+        }
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .nav-links.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background: #1B3A5C;
+                padding: 20px 24px;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+                gap: 16px;
+            }
+            .mobile-toggle { display: flex; }
+            .hero-grid {
+                grid-template-columns: 1fr;
+                min-height: auto;
+                padding: 60px 0;
+            }
+            .hero-image { display: none; }
+            .hero-diagonal { display: none; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .stat-item { border-right: none; }
+            .services-grid { grid-template-columns: 1fr; max-width: 500px; margin: 0 auto; }
+            .science-grid,
+            .athletes-grid,
+            .booking-grid {
+                grid-template-columns: 1fr;
+            }
+            .science-visual { order: -1; }
+            .science-image img,
+            .athletes-image img { height: 350px; }
+            .testimonials-grid { grid-template-columns: 1fr; }
+            .pricing-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
+            .pricing-card.featured { transform: none; }
+            .pricing-card.featured:hover { transform: translateY(-10px); }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+            .form-row { grid-template-columns: 1fr; }
+            .athletes-features { grid-template-columns: 1fr; }
+            .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+            .booking-form-wrapper { padding: 28px 20px; }
+        }
+        @media (max-width: 480px) {
+            .stats-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .hero-buttons { flex-direction: column; }
+            .hero-buttons .btn-primary,
+            .hero-buttons .btn-secondary { width: 100%; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+        <div class="container">
+            <a href="#" class="nav-logo" aria-label="Athletic Recovery Massage - Home">
+                <div class="nav-logo-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+                </div>
+                <div class="nav-logo-text">Athletic<br><span>Recovery</span> Massage</div>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="#services">Services</a>
+                <a href="#science">Science</a>
+                <a href="#pricing">Plans</a>
+                <a href="#testimonials">Athletes</a>
+                <a href="tel:+15550112233" class="nav-phone">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                    (555) 011-2233
+                </a>
+                <a href="#booking" class="nav-cta">Book Now</a>
+            </div>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+        <div class="energy-lines"></div>
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        Certified Sports Massage Therapists
+                    </div>
+                    <h1 class="hero-title">Faster Recovery.<br><span>Better Performance.</span></h1>
+                    <p class="hero-subtitle">Performance-focused massage therapy designed for athletes and active individuals. Clinical approach. Measurable results.</p>
+                    <div class="hero-offer">
+                        <div>
+                            <div class="hero-offer-text">First Session: $49 (Save $30)</div>
+                            <div class="hero-offer-sub">Limited time introductory offer</div>
+                        </div>
+                    </div>
+                    <div class="hero-buttons">
+                        <a href="#booking" class="btn-primary">
+                            Book Recovery Session
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                        </a>
+                        <a href="tel:+15550112233" class="btn-secondary">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                            Call Now
+                        </a>
+                    </div>
+                    <div class="hero-credentials">
+                        <div class="hero-credential">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            Trusted by 200+ Athletes
+                        </div>
+                        <div class="hero-credential">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            Same-Day Appointments
+                        </div>
+                        <div class="hero-credential">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            Licensed & Insured
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1200&q=80" alt="Athlete performing a recovery stretch in a professional setting" loading="eager">
+                        <div class="hero-image-badge">
+                            <div class="hero-image-badge-number">200+</div>
+                            <div class="hero-image-badge-text">Athletes Trust Us</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PERFORMANCE STATS -->
+    <section class="stats" id="stats">
+        <div class="energy-lines"></div>
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item fade-in">
+                    <div class="stat-number"><span class="counter" data-target="47">0</span><span class="stat-suffix">%</span></div>
+                    <div class="stat-label">Faster Recovery Time</div>
+                </div>
+                <div class="stat-item fade-in">
+                    <div class="stat-number"><span class="counter" data-target="200">0</span><span class="stat-suffix">+</span></div>
+                    <div class="stat-label">Athletes Served</div>
+                </div>
+                <div class="stat-item fade-in">
+                    <div class="stat-number"><span class="counter" data-target="12">0</span><span class="stat-suffix">K+</span></div>
+                    <div class="stat-label">Sessions Completed</div>
+                </div>
+                <div class="stat-item fade-in">
+                    <div class="stat-number"><span class="counter" data-target="98">0</span><span class="stat-suffix">%</span></div>
+                    <div class="stat-label">Client Satisfaction</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="services-header">
+                <div class="section-label">What We Offer</div>
+                <h2 class="section-title">Performance Recovery Services</h2>
+                <p class="section-subtitle">Evidence-based treatments designed to accelerate recovery, prevent injury, and optimize athletic performance.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card pop-in" style="transition-delay: 0s;">
+                    <div class="service-card-image">
+                        <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=600&q=80" alt="Sports massage therapy session for athletic recovery" loading="lazy">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/></svg>
+                        </div>
+                    </div>
+                    <div class="service-card-body">
+                        <h3 class="service-card-title">Sports Massage</h3>
+                        <p class="service-card-desc">Targeted techniques to improve circulation, reduce muscle tension, and enhance athletic performance pre and post event.</p>
+                        <div class="service-metric">
+                            <span class="service-metric-value">60 min</span>
+                            <span class="service-metric-label">Session from $79</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card pop-in" style="transition-delay: 0.15s;">
+                    <div class="service-card-image">
+                        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&q=80" alt="Deep tissue massage for muscle recovery" loading="lazy">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+                        </div>
+                    </div>
+                    <div class="service-card-body">
+                        <h3 class="service-card-title">Deep Tissue</h3>
+                        <p class="service-card-desc">Intense, focused pressure targeting deep muscle layers to break adhesions, relieve chronic tension, and restore mobility.</p>
+                        <div class="service-metric">
+                            <span class="service-metric-value">90 min</span>
+                            <span class="service-metric-label">Session from $99</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card pop-in" style="transition-delay: 0.3s;">
+                    <div class="service-card-image">
+                        <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&q=80" alt="Injury recovery therapy session" loading="lazy">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 00-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 012-3.95A12.88 12.88 0 0122 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 01-4 2z"/></svg>
+                        </div>
+                    </div>
+                    <div class="service-card-body">
+                        <h3 class="service-card-title">Injury Recovery</h3>
+                        <p class="service-card-desc">Specialized rehabilitation-focused massage to accelerate healing, reduce scar tissue, and restore full range of motion.</p>
+                        <div class="service-metric">
+                            <span class="service-metric-value">45 min</span>
+                            <span class="service-metric-label">Session from $69</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card pop-in" style="transition-delay: 0.45s;">
+                    <div class="service-card-image">
+                        <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600&q=80" alt="Guided stretching session for flexibility" loading="lazy">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="3"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="21" x2="12" y2="16"/><line x1="16" y1="21" x2="12" y2="16"/><line x1="7" y1="12" x2="17" y2="12"/></svg>
+                        </div>
+                    </div>
+                    <div class="service-card-body">
+                        <h3 class="service-card-title">Stretching Sessions</h3>
+                        <p class="service-card-desc">Assisted stretching protocols to improve flexibility, prevent injury, and enhance overall athletic performance and mobility.</p>
+                        <div class="service-metric">
+                            <span class="service-metric-value">30 min</span>
+                            <span class="service-metric-label">Session from $49</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- THE SCIENCE -->
+    <section class="science" id="science">
+        <div class="energy-lines"></div>
+        <div class="container">
+            <div class="science-grid">
+                <div class="science-content">
+                    <div class="section-label">The Science</div>
+                    <h2 class="section-title">How Massage Accelerates Recovery</h2>
+                    <p class="section-subtitle">Our clinical approach is grounded in sports science, targeting the specific physiological mechanisms that drive faster recovery.</p>
+                    <div class="science-steps">
+                        <div class="science-step fade-in">
+                            <div class="science-step-number">01</div>
+                            <div class="science-step-content">
+                                <h4>Increase Blood Flow</h4>
+                                <p>Targeted pressure techniques boost circulation by up to 40%, delivering oxygen and nutrients to damaged tissue faster.</p>
+                            </div>
+                        </div>
+                        <div class="science-step fade-in">
+                            <div class="science-step-number">02</div>
+                            <div class="science-step-content">
+                                <h4>Reduce Inflammation</h4>
+                                <p>Clinical massage reduces inflammatory markers (IL-6) by 30%, mimicking the effects of anti-inflammatory medication naturally.</p>
+                            </div>
+                        </div>
+                        <div class="science-step fade-in">
+                            <div class="science-step-number">03</div>
+                            <div class="science-step-content">
+                                <h4>Break Down Scar Tissue</h4>
+                                <p>Deep tissue techniques realign collagen fibers, breaking adhesions and restoring full muscle elasticity and range of motion.</p>
+                            </div>
+                        </div>
+                        <div class="science-step fade-in">
+                            <div class="science-step-number">04</div>
+                            <div class="science-step-content">
+                                <h4>Activate Recovery Hormones</h4>
+                                <p>Massage triggers release of endorphins and serotonin while reducing cortisol, optimizing your body's natural recovery cycle.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="science-visual slide-right">
+                    <div class="science-image">
+                        <img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=800&q=80" alt="Athlete training and recovery science" loading="lazy">
+                    </div>
+                    <div class="science-float-card top-right fade-in">
+                        <div class="science-float-number">40%</div>
+                        <div class="science-float-text">Improved Circulation</div>
+                    </div>
+                    <div class="science-float-card bottom-left fade-in">
+                        <div class="science-float-number">30%</div>
+                        <div class="science-float-text">Less Inflammation</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOR ATHLETES BY ATHLETES -->
+    <section class="athletes" id="athletes">
+        <div class="container">
+            <div class="athletes-grid">
+                <div class="athletes-image slide-left">
+                    <img src="https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=800&q=80" alt="Professional athlete in training" loading="lazy">
+                </div>
+                <div class="athletes-content fade-in">
+                    <div class="section-label">For Athletes, By Athletes</div>
+                    <h2 class="section-title">We Understand the Demands of Your Sport</h2>
+                    <p class="section-subtitle">Our therapists are former athletes who understand the physical demands you face. Every session is tailored to your sport, your body, and your performance goals.</p>
+                    <div class="athletes-features">
+                        <div class="athletes-feature">
+                            <div class="athletes-feature-icon">
+                                <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            </div>
+                            <div>
+                                <h4>Sport-Specific</h4>
+                                <p>Protocols for runners, lifters, swimmers, and more</p>
+                            </div>
+                        </div>
+                        <div class="athletes-feature">
+                            <div class="athletes-feature-icon">
+                                <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            </div>
+                            <div>
+                                <h4>Certified Experts</h4>
+                                <p>Licensed sports massage therapists with clinical training</p>
+                            </div>
+                        </div>
+                        <div class="athletes-feature">
+                            <div class="athletes-feature-icon">
+                                <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            </div>
+                            <div>
+                                <h4>Flexible Hours</h4>
+                                <p>Open 6AM-9PM weekdays to fit your training schedule</p>
+                            </div>
+                        </div>
+                        <div class="athletes-feature">
+                            <div class="athletes-feature-icon">
+                                <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            </div>
+                            <div>
+                                <h4>Results-Driven</h4>
+                                <p>We track your progress with measurable outcomes</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GYM PARTNERSHIPS -->
+    <section class="partners" id="partners">
+        <div class="partners-header">
+            <div class="section-label">Trusted Partners</div>
+            <h2 class="section-title">Official Recovery Partner</h2>
+        </div>
+        <div class="marquee-wrapper">
+            <div class="partners-marquee" id="marquee">
+                <div class="partner-logo">
+                    <div class="partner-logo-icon">
+                        <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 6.5h11v11h-11z"/><path d="M3 3h18v18H3z"/></svg>
+                    </div>
+                    <span class="partner-logo-text">CrossFit Forge</span>
+                </div>
+                <div class="partner-logo">
+                    <div class="partner-logo-icon">
+                        <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12l2 2 4-4"/></svg>
+                    </div>
+                    <span class="partner-logo-text">Gold's Gym</span>
+                </div>
+                <div class="partner-logo">
+                    <div class="partner-logo-icon">
+                        <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                    </div>
+                    <span class="partner-logo-text">YMCA</span>
+                </div>
+                <div class="partner-logo">
+                    <div class="partner-logo-icon">
+                        <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+                    </div>
+                    <span class="partner-logo-text">Iron Athletics</span>
+                </div>
+                <div class="partner-logo">
+                    <div class="partner-logo-icon">
+                        <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                    </div>
+                    <span class="partner-logo-text">Endurance Lab</span>
+                </div>
+                <div class="partner-logo">
+                    <div class="partner-logo-icon">
+                        <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
+                    </div>
+                    <span class="partner-logo-text">Peak Fitness</span>
+                </div>
+                <!-- Duplicate for seamless loop -->
+                <div class="partner-logo">
+                    <div class="partner-logo-icon">
+                        <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 6.5h11v11h-11z"/><path d="M3 3h18v18H3z"/></svg>
+                    </div>
+                    <span class="partner-logo-text">CrossFit Forge</span>
+                </div>
+                <div class="partner-logo">
+                    <div class="partner-logo-icon">
+                        <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12l2 2 4-4"/></svg>
+                    </div>
+                    <span class="partner-logo-text">Gold's Gym</span>
+                </div>
+                <div class="partner-logo">
+                    <div class="partner-logo-icon">
+                        <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                    </div>
+                    <span class="partner-logo-text">YMCA</span>
+                </div>
+                <div class="partner-logo">
+                    <div class="partner-logo-icon">
+                        <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+                    </div>
+                    <span class="partner-logo-text">Iron Athletics</span>
+                </div>
+                <div class="partner-logo">
+                    <div class="partner-logo-icon">
+                        <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                    </div>
+                    <span class="partner-logo-text">Endurance Lab</span>
+                </div>
+                <div class="partner-logo">
+                    <div class="partner-logo-icon">
+                        <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
+                    </div>
+                    <span class="partner-logo-text">Peak Fitness</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="testimonials-header">
+                <div class="section-label">Athlete Reviews</div>
+                <h2 class="section-title">What Our Athletes Say</h2>
+                <p class="section-subtitle">Real results from real athletes who trust us with their recovery.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card slide-left">
+                    <div class="testimonial-sport">
+                        <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="3"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="21" x2="12" y2="16"/><line x1="16" y1="21" x2="12" y2="16"/></svg>
+                        <span>Marathon Runner</span>
+                    </div>
+                    <div class="testimonial-stars">
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    </div>
+                    <p class="testimonial-text">"After my marathon, I could barely walk. One session here and I was back on my feet the next day. The sports massage targeted exactly the muscle groups that were screaming. Absolute game-changer for my recovery protocol."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">MR</div>
+                        <div>
+                            <div class="testimonial-name">Marcus Rivera</div>
+                            <div class="testimonial-role">Marathon Runner, 3:12 PR</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card slide-right">
+                    <div class="testimonial-sport">
+                        <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 6.5h11v11h-11z"/><path d="M3 3h18v18H3z"/></svg>
+                        <span>CrossFitter</span>
+                    </div>
+                    <div class="testimonial-stars">
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    </div>
+                    <p class="testimonial-text">"I train 6 days a week and my body takes a beating. The monthly unlimited plan is worth every penny. My mobility has improved drastically and my WOD times keep getting better. They really understand what CrossFit athletes need."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">JK</div>
+                        <div>
+                            <div class="testimonial-name">Jessica Kim</div>
+                            <div class="testimonial-role">CrossFit Competitor</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card slide-left">
+                    <div class="testimonial-sport">
+                        <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+                        <span>Swimmer</span>
+                    </div>
+                    <div class="testimonial-stars">
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    </div>
+                    <p class="testimonial-text">"The shoulder work they do is incredible. As a competitive swimmer, shoulder mobility is everything. After 4 sessions, my stroke felt smoother and I shaved 2 seconds off my 200m time. Can't recommend enough."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">DT</div>
+                        <div>
+                            <div class="testimonial-name">Derek Thompson</div>
+                            <div class="testimonial-role">Competitive Swimmer</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card slide-right">
+                    <div class="testimonial-sport">
+                        <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        <span>Weekend Warrior</span>
+                    </div>
+                    <div class="testimonial-stars">
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    </div>
+                    <p class="testimonial-text">"I'm not a pro athlete, just someone who loves staying active. These sessions have been a lifesaver for my weekend basketball and hiking. No more Monday morning stiffness. The 4-pack is the perfect plan for me."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">SL</div>
+                        <div>
+                            <div class="testimonial-name">Sarah Lawson</div>
+                            <div class="testimonial-role">Recreational Athlete</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RECOVERY PLANS (PRICING) -->
+    <section class="pricing" id="pricing">
+        <div class="energy-lines"></div>
+        <div class="container">
+            <div class="pricing-header">
+                <div class="section-label">Recovery Plans</div>
+                <h2 class="section-title">Invest in Your Performance</h2>
+                <p class="section-subtitle">Flexible plans designed for every training schedule. No contracts, no hassle.</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card fade-in">
+                    <div class="pricing-icon">
+                        <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                    </div>
+                    <div class="pricing-name">Single Session</div>
+                    <div class="pricing-desc">Perfect for targeted recovery after a big event or game</div>
+                    <div class="pricing-amount"><sup>$</sup>79</div>
+                    <div class="pricing-per">per session</div>
+                    <ul class="pricing-features">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            60-minute sports massage
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Performance assessment
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Recovery plan recommendations
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Same-day booking available
+                        </li>
+                    </ul>
+                    <a href="#booking" class="btn-primary">Book Session</a>
+                </div>
+                <div class="pricing-card featured fade-in">
+                    <div class="pricing-badge">Most Popular</div>
+                    <div class="pricing-icon">
+                        <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                    </div>
+                    <div class="pricing-name">4-Pack</div>
+                    <div class="pricing-desc">Ideal for consistent training recovery over the month</div>
+                    <div class="pricing-amount"><sup>$</sup>279</div>
+                    <div class="pricing-per">4 sessions</div>
+                    <ul class="pricing-features">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            4 x 60-minute sessions
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Customized recovery protocol
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Priority scheduling
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Progress tracking
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Free stretching add-on
+                        </li>
+                    </ul>
+                    <a href="#booking" class="btn-primary">Get 4-Pack</a>
+                    <div class="pricing-savings">Save $37 vs single sessions</div>
+                </div>
+                <div class="pricing-card fade-in">
+                    <div class="pricing-icon">
+                        <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <div class="pricing-name">Monthly Unlimited</div>
+                    <div class="pricing-desc">For serious athletes who demand peak recovery</div>
+                    <div class="pricing-amount"><sup>$</sup>199</div>
+                    <div class="pricing-per">per month</div>
+                    <ul class="pricing-features">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Unlimited 30-min sessions
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Dedicated therapist
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            VIP scheduling access
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Monthly performance review
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Gym partner discounts
+                        </li>
+                    </ul>
+                    <a href="#booking" class="btn-primary">Go Unlimited</a>
+                    <div class="pricing-savings">Best value for active athletes</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOOK RECOVERY SESSION -->
+    <section class="booking" id="booking">
+        <div class="container">
+            <div class="booking-grid">
+                <div class="booking-info fade-in">
+                    <div class="section-label">Ready to Recover?</div>
+                    <h2 class="section-title">Book Your Recovery Session</h2>
+                    <p class="section-subtitle">Take the first step toward better performance. Same-day appointments available. Walk-ins welcome.</p>
+                    <div class="booking-details">
+                        <div class="booking-detail">
+                            <div class="booking-detail-icon">
+                                <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            </div>
+                            <div>
+                                <h4>Location</h4>
+                                <p>850 Performance Drive</p>
+                            </div>
+                        </div>
+                        <div class="booking-detail">
+                            <div class="booking-detail-icon">
+                                <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            </div>
+                            <div>
+                                <h4>Hours</h4>
+                                <p>Mon-Fri: 6AM - 9PM<br>Sat-Sun: 7AM - 5PM</p>
+                            </div>
+                        </div>
+                        <div class="booking-detail">
+                            <div class="booking-detail-icon">
+                                <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                            </div>
+                            <div>
+                                <h4>Phone</h4>
+                                <p><a href="tel:+15550112233">(555) 011-2233</a></p>
+                            </div>
+                        </div>
+                        <div class="booking-detail">
+                            <div class="booking-detail-icon">
+                                <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            </div>
+                            <div>
+                                <h4>Email</h4>
+                                <p><a href="mailto:info@athleticrecoverymassage.com">info@athleticrecoverymassage.com</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="booking-form-wrapper fade-in">
+                    <h3 class="booking-form-title">Schedule Your Session</h3>
+                    <p class="booking-form-subtitle">Fill out the form below and we'll confirm your appointment within 1 hour.</p>
+                    <form id="bookingForm" action="#" method="post" novalidate>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" id="firstName" name="firstName" placeholder="Your first name" required aria-required="true">
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" placeholder="Your last name" required aria-required="true">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="your@email.com" required aria-required="true">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone</label>
+                                <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000" required aria-required="true">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service</label>
+                            <select id="service" name="service" required aria-required="true">
+                                <option value="">Select a service</option>
+                                <option value="sports-massage">Sports Massage (60 min - $79)</option>
+                                <option value="deep-tissue">Deep Tissue (90 min - $99)</option>
+                                <option value="injury-recovery">Injury Recovery (45 min - $69)</option>
+                                <option value="stretching">Stretching Session (30 min - $49)</option>
+                                <option value="intro-offer">First Session Special ($49)</option>
+                            </select>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="date">Preferred Date</label>
+                                <input type="date" id="date" name="date" required aria-required="true">
+                            </div>
+                            <div class="form-group">
+                                <label for="time">Preferred Time</label>
+                                <select id="time" name="time" required aria-required="true">
+                                    <option value="">Select time</option>
+                                    <option value="6:00">6:00 AM</option>
+                                    <option value="7:00">7:00 AM</option>
+                                    <option value="8:00">8:00 AM</option>
+                                    <option value="9:00">9:00 AM</option>
+                                    <option value="10:00">10:00 AM</option>
+                                    <option value="11:00">11:00 AM</option>
+                                    <option value="12:00">12:00 PM</option>
+                                    <option value="13:00">1:00 PM</option>
+                                    <option value="14:00">2:00 PM</option>
+                                    <option value="15:00">3:00 PM</option>
+                                    <option value="16:00">4:00 PM</option>
+                                    <option value="17:00">5:00 PM</option>
+                                    <option value="18:00">6:00 PM</option>
+                                    <option value="19:00">7:00 PM</option>
+                                    <option value="20:00">8:00 PM</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="notes">Notes (optional)</label>
+                            <textarea id="notes" name="notes" placeholder="Tell us about your sport, injuries, or recovery goals..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">
+                            Book Recovery Session
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                        </button>
+                        <p class="form-note">Same-day appointments available. We'll confirm within 1 hour.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="nav-logo">
+                        <div class="nav-logo-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+                        </div>
+                        <div class="nav-logo-text">Athletic<br><span>Recovery</span> Massage</div>
+                    </div>
+                    <p>Performance-focused massage therapy for athletes and active individuals. Clinical approach, measurable results. Your body is your instrument -- keep it tuned.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg>
+                        </a>
+                        <a href="#" aria-label="YouTube">
+                            <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.4 19.1C5.12 19.56 12 19.56 12 19.56s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.25 29 29 0 00-.46-5.43z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <a href="#services">Sports Massage</a>
+                    <a href="#services">Deep Tissue</a>
+                    <a href="#services">Injury Recovery</a>
+                    <a href="#services">Stretching Sessions</a>
+                    <a href="#pricing">Recovery Plans</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="#athletes">About Us</a>
+                    <a href="#testimonials">Testimonials</a>
+                    <a href="#partners">Partnerships</a>
+                    <a href="#booking">Contact</a>
+                    <a href="#">Careers</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <a href="#">850 Performance Drive</a>
+                    <a href="tel:+15550112233">(555) 011-2233</a>
+                    <a href="mailto:info@athleticrecoverymassage.com">info@athleticrecoverymassage.com</a>
+                    <a href="#">Mon-Fri: 6AM-9PM</a>
+                    <a href="#">Sat-Sun: 7AM-5PM</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Athletic Recovery Massage. All rights reserved.</p>
+                <div class="footer-partners">
+                    <span>Partners:</span>
+                    <span class="footer-partner-logo">CrossFit</span>
+                    <span class="footer-partner-logo">Gold's Gym</span>
+                    <span class="footer-partner-logo">YMCA</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ===== MOBILE NAVIGATION =====
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileToggle.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+            const expanded = this.getAttribute('aria-expanded') === 'true';
+            this.setAttribute('aria-expanded', !expanded);
+        });
+
+        // Close mobile nav on link click
+        navLinks.querySelectorAll('a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                navLinks.classList.remove('active');
+                mobileToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // ===== NAVBAR SCROLL EFFECT =====
+        const nav = document.querySelector('.nav');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // ===== INTERSECTION OBSERVER FOR ANIMATIONS =====
+        const observerOptions = {
+            threshold: 0.15,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in, .slide-left, .slide-right, .pop-in').forEach(function(el) {
+            observer.observe(el);
+        });
+
+        // ===== COUNTER ANIMATION =====
+        const counterObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    const counters = entry.target.querySelectorAll('.counter');
+                    counters.forEach(function(counter) {
+                        const target = parseInt(counter.getAttribute('data-target'));
+                        const duration = 2000;
+                        const startTime = performance.now();
+
+                        function updateCounter(currentTime) {
+                            const elapsed = currentTime - startTime;
+                            const progress = Math.min(elapsed / duration, 1);
+                            // Ease out cubic
+                            const eased = 1 - Math.pow(1 - progress, 3);
+                            const current = Math.round(eased * target);
+                            counter.textContent = current;
+
+                            if (progress < 1) {
+                                requestAnimationFrame(updateCounter);
+                            }
+                        }
+
+                        requestAnimationFrame(updateCounter);
+                    });
+                    counterObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.3 });
+
+        const statsSection = document.getElementById('stats');
+        if (statsSection) {
+            counterObserver.observe(statsSection);
+        }
+
+        // ===== SMOOTH SCROLL FOR ANCHOR LINKS =====
+        document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href === '#') return;
+                e.preventDefault();
+                const target = document.querySelector(href);
+                if (target) {
+                    const navHeight = document.querySelector('.nav').offsetHeight;
+                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // ===== FORM HANDLING =====
+        const bookingForm = document.getElementById('bookingForm');
+        if (bookingForm) {
+            bookingForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const btn = this.querySelector('.btn-primary');
+                const originalHTML = btn.innerHTML;
+                btn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Session Requested!';
+                btn.style.background = '#28a745';
+                btn.style.boxShadow = '0 4px 15px rgba(40, 167, 69, 0.4)';
+
+                setTimeout(function() {
+                    btn.innerHTML = originalHTML;
+                    btn.style.background = '';
+                    btn.style.boxShadow = '';
+                    bookingForm.reset();
+                }, 3000);
+            });
+        }
+
+        // ===== SET MIN DATE ON DATE INPUT =====
+        const dateInput = document.getElementById('date');
+        if (dateInput) {
+            const today = new Date();
+            const yyyy = today.getFullYear();
+            const mm = String(today.getMonth() + 1).padStart(2, '0');
+            const dd = String(today.getDate()).padStart(2, '0');
+            dateInput.setAttribute('min', yyyy + '-' + mm + '-' + dd);
+        }
+    </script>
+
+</body>
+</html>

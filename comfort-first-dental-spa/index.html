@@ -1,0 +1,2085 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comfort First Dental Spa | Anxiety-Free Dentistry</title>
+    <meta name="description" content="Overcome dental anxiety at Comfort First Dental Spa. Sedation dentistry, massage chairs, aromatherapy. Your comfort is our priority. Free comfort consultation.">
+    <meta name="keywords" content="dental spa, sedation dentistry, anxiety-free dentistry, dental phobia, comfort dentistry">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://comfortfirstdentalspa.com">
+    <meta property="og:title" content="Comfort First Dental Spa | Anxiety-Free Dentistry">
+    <meta property="og:description" content="Overcome dental anxiety at Comfort First Dental Spa. Sedation dentistry, massage chairs, aromatherapy.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* ===== RESET & BASE ===== */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #0D9488;
+            --primary-dark: #0F766E;
+            --primary-light: #14B8A6;
+            --secondary: #FFF8E7;
+            --accent: #F0FDFA;
+            --text: #1E293B;
+            --text-light: #475569;
+            --white: #ffffff;
+            --bg-tint: #F0FDFA;
+            --shadow-soft: 0 4px 30px rgba(13, 148, 136, 0.07), 0 1px 3px rgba(13, 148, 136, 0.04);
+            --shadow-medium: 0 10px 40px rgba(13, 148, 136, 0.10), 0 2px 8px rgba(13, 148, 136, 0.06);
+            --shadow-glow: 0 0 30px rgba(13, 148, 136, 0.12);
+            --shadow-card-hover: 0 20px 50px rgba(13, 148, 136, 0.14), 0 4px 12px rgba(13, 148, 136, 0.08);
+            --radius: 20px;
+            --radius-sm: 12px;
+            --transition: all 0.4s ease-out;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 100px;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            color: var(--text);
+            background: var(--white);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Lora', serif;
+            line-height: 1.3;
+            font-weight: 600;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        button, input, textarea, select {
+            font-family: inherit;
+            font-size: inherit;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ===== DECORATIVE BACKGROUND SHAPES ===== */
+        .bg-shape {
+            position: absolute;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(13, 148, 136, 0.04), rgba(240, 253, 250, 0.06));
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .bg-shape-1 {
+            width: 280px;
+            height: 280px;
+            top: -80px;
+            right: -60px;
+        }
+
+        .bg-shape-2 {
+            width: 200px;
+            height: 200px;
+            bottom: -40px;
+            left: -40px;
+        }
+
+        .bg-shape-3 {
+            width: 150px;
+            height: 150px;
+            top: 40%;
+            right: -30px;
+        }
+
+        @keyframes gentlePulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(13, 148, 136, 0.2); }
+            50% { box-shadow: 0 0 20px 5px rgba(13, 148, 136, 0.15); }
+        }
+
+        @keyframes slowWave {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ===== SCROLL ANIMATIONS ===== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+        .reveal-delay-4 { transition-delay: 0.4s; }
+
+        /* ===== NAVIGATION ===== */
+        .nav {
+            position: fixed;
+            top: 16px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: calc(100% - 48px);
+            max-width: 1100px;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 60px;
+            padding: 14px 32px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid rgba(13, 148, 136, 0.1);
+            box-shadow: var(--shadow-soft);
+            transition: var(--transition);
+        }
+
+        .nav.scrolled {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            box-shadow: var(--shadow-medium);
+            top: 10px;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Lora', serif;
+            font-weight: 700;
+            font-size: 1.15rem;
+            color: var(--primary);
+            white-space: nowrap;
+        }
+
+        .nav-logo svg {
+            width: 32px;
+            height: 32px;
+            flex-shrink: 0;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-light);
+            position: relative;
+            padding: 4px 0;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            border-radius: 2px;
+            transition: var(--transition);
+            transform: translateX(-50%);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            background: var(--primary);
+            color: var(--white) !important;
+            padding: 10px 24px !important;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.88rem;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            animation: gentlePulse 3s ease-in-out infinite;
+        }
+
+        .nav-cta:hover {
+            background: var(--primary-dark);
+            transform: translateY(-1px);
+            animation: none;
+        }
+
+        .nav-cta::after {
+            display: none !important;
+        }
+
+        .mobile-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 8px;
+            background: none;
+            border: none;
+        }
+
+        .mobile-toggle span {
+            width: 24px;
+            height: 2px;
+            background: var(--text);
+            border-radius: 2px;
+            transition: var(--transition);
+        }
+
+        .mobile-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .mobile-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+        }
+
+        .hero-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                135deg,
+                rgba(13, 148, 136, 0.82) 0%,
+                rgba(15, 118, 110, 0.75) 30%,
+                rgba(30, 41, 59, 0.6) 100%
+            );
+            z-index: 1;
+        }
+
+        .hero-wave {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 200%;
+            height: 80px;
+            z-index: 2;
+            animation: slowWave 25s linear infinite;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            text-align: center;
+            padding: 120px 24px 100px;
+            max-width: 800px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.18);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            padding: 10px 22px;
+            border-radius: 50px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--white);
+            margin-bottom: 28px;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .hero-badge svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.4rem, 5.5vw, 4rem);
+            color: var(--white);
+            margin-bottom: 20px;
+            font-weight: 700;
+            animation: fadeInUp 0.8s ease-out 0.15s both;
+        }
+
+        .hero h1 em {
+            font-style: italic;
+            color: var(--secondary);
+        }
+
+        .hero-sub {
+            font-size: clamp(1.05rem, 2vw, 1.25rem);
+            color: rgba(255, 255, 255, 0.92);
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 300;
+            line-height: 1.8;
+            animation: fadeInUp 0.8s ease-out 0.3s both;
+        }
+
+        .hero-actions {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease-out 0.45s both;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--white);
+            color: var(--primary);
+            padding: 16px 36px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: transparent;
+            color: var(--white);
+            padding: 16px 36px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.12);
+            border-color: rgba(255, 255, 255, 0.7);
+        }
+
+        .hero-trust {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 32px;
+            margin-top: 50px;
+            animation: fadeInUp 0.8s ease-out 0.6s both;
+        }
+
+        .hero-trust-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 0.88rem;
+            font-weight: 500;
+        }
+
+        .hero-trust-item svg {
+            width: 18px;
+            height: 18px;
+            flex-shrink: 0;
+        }
+
+        /* ===== COMFORT PROMISE / MANIFESTO ===== */
+        .comfort-promise {
+            position: relative;
+            padding: 120px 24px;
+            background: var(--white);
+            overflow: hidden;
+        }
+
+        .manifesto {
+            max-width: 850px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .manifesto-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--accent);
+            color: var(--primary);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 32px;
+        }
+
+        .manifesto h2 {
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            color: var(--text);
+            margin-bottom: 32px;
+            line-height: 1.4;
+        }
+
+        .manifesto h2 span {
+            color: var(--primary);
+        }
+
+        .manifesto-text {
+            font-size: clamp(1.05rem, 1.8vw, 1.2rem);
+            color: var(--text-light);
+            line-height: 2;
+            margin-bottom: 24px;
+        }
+
+        .manifesto-quote {
+            font-family: 'Lora', serif;
+            font-style: italic;
+            font-size: clamp(1.2rem, 2vw, 1.5rem);
+            color: var(--primary);
+            margin-top: 40px;
+            padding: 32px 40px;
+            background: var(--accent);
+            border-radius: var(--radius);
+            position: relative;
+        }
+
+        .manifesto-quote::before {
+            content: '\201C';
+            font-size: 4rem;
+            color: var(--primary);
+            opacity: 0.2;
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            line-height: 1;
+        }
+
+        /* ===== SPA EXPERIENCE ===== */
+        .spa-experience {
+            padding: 100px 24px 120px;
+            background: linear-gradient(180deg, var(--accent) 0%, var(--white) 100%);
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 64px;
+        }
+
+        .section-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--white);
+            color: var(--primary);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 20px;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .section-header h2 {
+            font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+            margin-bottom: 16px;
+        }
+
+        .section-header p {
+            color: var(--text-light);
+            font-size: 1.05rem;
+        }
+
+        .spa-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .spa-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+            transition: var(--transition);
+            border: 1px solid rgba(13, 148, 136, 0.06);
+        }
+
+        .spa-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .spa-card-img {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .spa-card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease-out;
+        }
+
+        .spa-card:hover .spa-card-img img {
+            transform: scale(1.05);
+        }
+
+        .spa-card-body {
+            padding: 28px;
+        }
+
+        .spa-card-icon {
+            width: 52px;
+            height: 52px;
+            background: var(--accent);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 18px;
+        }
+
+        .spa-card-icon svg {
+            width: 26px;
+            height: 26px;
+            color: var(--primary);
+        }
+
+        .spa-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .spa-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* Amenities grid */
+        .amenities {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            max-width: 900px;
+            margin: 48px auto 0;
+        }
+
+        .amenity {
+            text-align: center;
+            padding: 28px 16px;
+            background: var(--white);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-soft);
+            transition: var(--transition);
+            border: 1px solid rgba(13, 148, 136, 0.06);
+        }
+
+        .amenity:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .amenity-icon {
+            width: 56px;
+            height: 56px;
+            background: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 14px;
+        }
+
+        .amenity-icon svg {
+            width: 26px;
+            height: 26px;
+            color: var(--primary);
+        }
+
+        .amenity h4 {
+            font-size: 0.95rem;
+            font-family: 'Nunito', sans-serif;
+            font-weight: 700;
+        }
+
+        /* ===== SERVICES ACCORDION ===== */
+        .services-section {
+            padding: 100px 24px 120px;
+            background: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .accordion {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .accordion-item {
+            background: var(--white);
+            border-radius: var(--radius);
+            border: 1px solid rgba(13, 148, 136, 0.1);
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+            transition: var(--transition);
+        }
+
+        .accordion-item:hover {
+            border-color: rgba(13, 148, 136, 0.25);
+        }
+
+        .accordion-item.active {
+            border-color: var(--primary);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .accordion-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 22px 28px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            width: 100%;
+            text-align: left;
+            font-family: 'Lora', serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text);
+            transition: var(--transition);
+        }
+
+        .accordion-header:hover {
+            color: var(--primary);
+        }
+
+        .accordion-header .icon-wrap {
+            width: 36px;
+            height: 36px;
+            background: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: var(--transition);
+        }
+
+        .accordion-item.active .accordion-header .icon-wrap {
+            background: var(--primary);
+            transform: rotate(180deg);
+        }
+
+        .accordion-header .icon-wrap svg {
+            width: 18px;
+            height: 18px;
+            color: var(--primary);
+            transition: var(--transition);
+        }
+
+        .accordion-item.active .accordion-header .icon-wrap svg {
+            color: var(--white);
+        }
+
+        .accordion-body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+        }
+
+        .accordion-body-inner {
+            padding: 0 28px 24px;
+            color: var(--text-light);
+            line-height: 1.8;
+            font-size: 0.98rem;
+        }
+
+        /* ===== SEDATION OPTIONS ===== */
+        .sedation-section {
+            padding: 100px 24px 120px;
+            background: linear-gradient(180deg, var(--accent) 0%, var(--white) 100%);
+        }
+
+        .sedation-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+            max-width: 1050px;
+            margin: 0 auto;
+        }
+
+        .sedation-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 36px 28px;
+            border: 1px solid rgba(13, 148, 136, 0.08);
+            box-shadow: var(--shadow-soft);
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .sedation-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .sedation-card-dot {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            margin: 0 auto 16px;
+        }
+
+        .sedation-card-dot.level-mild { background: #81D4C2; }
+        .sedation-card-dot.level-moderate { background: var(--primary); }
+        .sedation-card-dot.level-deep { background: var(--primary-dark); }
+
+        .sedation-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 6px;
+            color: var(--text);
+        }
+
+        .sedation-badge {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--primary);
+            padding: 4px 14px;
+            border-radius: 50px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            margin-bottom: 18px;
+        }
+
+        .sedation-card-detail {
+            text-align: left;
+            margin-bottom: 14px;
+        }
+
+        .sedation-card-detail-label {
+            font-weight: 700;
+            font-size: 0.82rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--primary);
+            margin-bottom: 4px;
+        }
+
+        .sedation-card-detail p {
+            color: var(--text-light);
+            font-size: 0.92rem;
+            line-height: 1.6;
+        }
+
+        /* ===== TESTIMONIALS ===== */
+        .testimonials-section {
+            padding: 100px 24px 120px;
+            background: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 28px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 36px;
+            border: 1px solid rgba(13, 148, 136, 0.08);
+            box-shadow: var(--shadow-soft);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .testimonial-card:hover {
+            box-shadow: var(--shadow-medium);
+            transform: translateY(-4px);
+        }
+
+        .testimonial-card::before {
+            content: '\201C';
+            font-family: 'Lora', serif;
+            font-size: 5rem;
+            color: var(--primary);
+            opacity: 0.08;
+            position: absolute;
+            top: 10px;
+            left: 24px;
+            line-height: 1;
+        }
+
+        .testimonial-stars {
+            display: flex;
+            gap: 3px;
+            margin-bottom: 16px;
+        }
+
+        .testimonial-stars svg {
+            width: 18px;
+            height: 18px;
+            fill: #F7C948;
+        }
+
+        .testimonial-text {
+            font-size: 0.98rem;
+            line-height: 1.8;
+            color: var(--text-light);
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .testimonial-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Lora', serif;
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+
+        .testimonial-name {
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+
+        .testimonial-note {
+            font-size: 0.82rem;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* ===== VIRTUAL TOUR ===== */
+        .tour-section {
+            padding: 100px 24px 120px;
+            background: linear-gradient(180deg, var(--accent) 0%, var(--white) 100%);
+        }
+
+        .tour-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .tour-item {
+            position: relative;
+            border-radius: var(--radius);
+            overflow: hidden;
+            aspect-ratio: 4/3;
+            cursor: pointer;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .tour-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease-out, opacity 0.4s ease-out;
+        }
+
+        .tour-item:hover img {
+            transform: scale(1.06);
+        }
+
+        .tour-item-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(13, 148, 136, 0.7), transparent 60%);
+            opacity: 0;
+            transition: opacity 0.4s ease-out;
+            display: flex;
+            align-items: flex-end;
+            padding: 20px;
+        }
+
+        .tour-item:hover .tour-item-overlay {
+            opacity: 1;
+        }
+
+        .tour-item-label {
+            color: var(--white);
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+
+        /* ===== BOOKING FORM ===== */
+        .booking-section {
+            padding: 100px 24px 120px;
+            background: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .booking-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 48px;
+            align-items: start;
+        }
+
+        .booking-info {
+            padding: 40px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border-radius: var(--radius);
+            color: var(--white);
+        }
+
+        .booking-info h3 {
+            font-size: 1.6rem;
+            margin-bottom: 16px;
+        }
+
+        .booking-info p {
+            opacity: 0.9;
+            line-height: 1.8;
+            margin-bottom: 28px;
+            font-size: 0.98rem;
+        }
+
+        .booking-info-item {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 18px;
+            font-size: 0.95rem;
+        }
+
+        .booking-info-item svg {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+            opacity: 0.85;
+        }
+
+        .booking-info-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 10px 18px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-top: 20px;
+        }
+
+        .booking-form {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 40px;
+            box-shadow: var(--shadow-medium);
+            border: 1px solid rgba(13, 148, 136, 0.08);
+        }
+
+        .booking-form h3 {
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+        }
+
+        .booking-form > p {
+            color: var(--text-light);
+            font-size: 0.92rem;
+            margin-bottom: 28px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+            color: var(--text);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px 18px;
+            border: 2px solid rgba(13, 148, 136, 0.12);
+            border-radius: var(--radius-sm);
+            font-size: 0.95rem;
+            color: var(--text);
+            background: var(--white);
+            transition: var(--transition);
+            outline: none;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(13, 148, 136, 0.1);
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: #b0bec5;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .form-reassurance {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.82rem;
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .form-reassurance svg {
+            width: 16px;
+            height: 16px;
+            flex-shrink: 0;
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 16px;
+            background: var(--primary);
+            color: var(--white);
+            border: none;
+            border-radius: 50px;
+            font-size: 1.05rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            animation: gentlePulse 3s ease-in-out infinite;
+        }
+
+        .btn-submit:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            animation: none;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            padding: 60px 24px 40px;
+            background: var(--accent);
+            text-align: center;
+        }
+
+        .footer-quote {
+            font-family: 'Lora', serif;
+            font-style: italic;
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            color: var(--primary);
+            max-width: 600px;
+            margin: 0 auto 32px;
+            line-height: 1.7;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            font-weight: 600;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+
+        .footer-info {
+            font-size: 0.88rem;
+            color: var(--text-light);
+            margin-bottom: 8px;
+        }
+
+        .footer-copy {
+            font-size: 0.82rem;
+            color: var(--text-light);
+            opacity: 0.7;
+            margin-top: 20px;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 900px) {
+            .booking-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tour-gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .amenities {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .spa-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .sedation-grid {
+                grid-template-columns: 1fr;
+                max-width: 480px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: calc(100% + 12px);
+                left: 12px;
+                right: 12px;
+                background: rgba(255, 255, 255, 0.97);
+                backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
+                border-radius: var(--radius);
+                flex-direction: column;
+                padding: 24px;
+                gap: 8px;
+                box-shadow: var(--shadow-medium);
+                border: 1px solid rgba(13, 148, 136, 0.1);
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .nav-links li {
+                width: 100%;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 12px 16px;
+                border-radius: var(--radius-sm);
+            }
+
+            .nav-links a:hover {
+                background: var(--accent);
+            }
+
+            .nav-links a::after {
+                display: none;
+            }
+
+            .nav-cta {
+                text-align: center;
+                width: 100%;
+                display: block;
+                margin-top: 8px;
+            }
+
+            .mobile-toggle {
+                display: flex;
+            }
+
+            .hero-trust {
+                flex-direction: column;
+                gap: 14px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .tour-gallery {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .amenities {
+                grid-template-columns: 1fr 1fr;
+                gap: 14px;
+            }
+
+            .spa-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav {
+                width: calc(100% - 24px);
+                padding: 12px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="nav" id="navbar" role="navigation" aria-label="Main navigation">
+        <a href="#" class="nav-logo" aria-label="Comfort First Dental Spa Home">
+            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="20" cy="20" r="18" fill="#F0FDFA"/>
+                <path d="M14 24c0-4 3-8 6-8s6 4 6 8" stroke="#0D9488" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M17 20c0-2 1.5-4 3-4s3 2 3 4" stroke="#0D9488" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="20" cy="14" r="2" fill="#0D9488" opacity="0.5"/>
+                <path d="M12 28h16" stroke="#0D9488" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            Comfort First
+        </a>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#comfort">Our Promise</a></li>
+            <li><a href="#spa">Spa Experience</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#sedation">Sedation</a></li>
+            <li><a href="#stories">Stories</a></li>
+            <li><a href="#tour">Tour</a></li>
+            <li><a href="#booking" class="nav-cta">Take the First Step</a></li>
+        </ul>
+
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <header class="hero" id="hero">
+        <div class="hero-bg">
+            <img src="https://images.unsplash.com/photo-1629909615184-74f495363b67?w=1920&q=80" alt="Modern, calming dental spa interior" loading="eager">
+        </div>
+        <div class="hero-overlay"></div>
+
+        <!-- Animated wave at bottom -->
+        <svg class="hero-wave" viewBox="0 0 2400 80" preserveAspectRatio="none">
+            <path d="M0,40 C300,80 600,0 900,40 C1200,80 1500,0 1800,40 C2100,80 2400,0 2400,40 L2400,80 L0,80 Z" fill="white" opacity="0.6"/>
+            <path d="M0,50 C300,20 600,70 900,50 C1200,20 1500,70 1800,50 C2100,20 2400,70 2400,50 L2400,80 L0,80 Z" fill="white" opacity="0.8"/>
+            <path d="M0,60 C300,40 600,80 900,60 C1200,40 1500,80 1800,60 C2100,40 2400,80 2400,60 L2400,80 L0,80 Z" fill="white"/>
+        </svg>
+
+        <div class="hero-content">
+            <div class="hero-badge">
+                <!-- Shield icon -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                Dental Anxiety? You're Not Alone
+            </div>
+
+            <h1>Dentistry That Feels Like a <em>Spa Day</em></h1>
+
+            <p class="hero-sub">A calming, judgment-free space where your comfort comes first. Experience gentle dentistry with aromatherapy, massage chairs, and personalized sedation options.</p>
+
+            <div class="hero-actions">
+                <a href="#booking" class="btn-primary">
+                    Take the First Step
+                    <!-- Arrow right icon -->
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+                <a href="tel:+15557778888" class="btn-secondary">
+                    <!-- Phone icon -->
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                    We're Here to Help
+                </a>
+            </div>
+
+            <div class="hero-trust">
+                <div class="hero-trust-item">
+                    <!-- Heart icon -->
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                    Gentle Care Since 2012
+                </div>
+                <div class="hero-trust-item">
+                    <!-- Smiley icon -->
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></svg>
+                    2,000+ Anxious Patients Helped
+                </div>
+                <div class="hero-trust-item">
+                    <!-- Star icon -->
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    4.9 Stars on Google
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== COMFORT PROMISE ===== -->
+    <section class="comfort-promise" id="comfort">
+        <div class="bg-shape bg-shape-1"></div>
+        <div class="bg-shape bg-shape-2"></div>
+
+        <div class="manifesto reveal">
+            <div class="manifesto-label">Our Comfort Promise</div>
+            <h2>Your Comfort Is Our <span>#1 Priority</span></h2>
+            <p class="manifesto-text">
+                We understand. The sounds, the smells, the vulnerability of sitting in a dental chair -- it can feel overwhelming. Maybe a past experience left you shaken, or maybe the anxiety has always been there. Whatever brought you here, please know: <strong>you are safe with us</strong>.
+            </p>
+            <p class="manifesto-text">
+                At Comfort First Dental Spa, we built every detail of our practice around one idea -- that dental care should never be something you dread. From the moment you walk through our doors, you will feel the difference. Soft lighting. Calming scents. Warm blankets. And a team that listens first, treats second, and never, ever rushes you.
+            </p>
+            <p class="manifesto-text">
+                <strong>We go at your pace. Always.</strong>
+            </p>
+            <div class="manifesto-quote reveal reveal-delay-2">
+                You deserve dental care that honors your feelings. Here, your comfort is not an afterthought -- it is the entire philosophy.
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SPA EXPERIENCE ===== -->
+    <section class="spa-experience" id="spa">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-label">The Spa Experience</div>
+                <h2>Not Your Typical Dental Office</h2>
+                <p>Step into a space designed to feel like a wellness retreat, not a clinic. Every element has been chosen to help you relax.</p>
+            </div>
+
+            <div class="spa-grid">
+                <div class="spa-card reveal reveal-delay-1">
+                    <div class="spa-card-img">
+                        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&q=80" alt="Spa-like calming atmosphere" loading="lazy">
+                    </div>
+                    <div class="spa-card-body">
+                        <div class="spa-card-icon">
+                            <!-- Calm face icon -->
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+                        </div>
+                        <h3>Calming Environment</h3>
+                        <p>Soft lighting, nature sounds, and warm earth tones create a space where tension naturally melts away before your visit even begins.</p>
+                    </div>
+                </div>
+
+                <div class="spa-card reveal reveal-delay-2">
+                    <div class="spa-card-img">
+                        <img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=600&q=80" alt="Relaxing treatment room" loading="lazy">
+                    </div>
+                    <div class="spa-card-body">
+                        <div class="spa-card-icon">
+                            <!-- Private suite / cup icon -->
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+                        </div>
+                        <h3>Private Treatment Suites</h3>
+                        <p>Each suite is your own private retreat with temperature control, adjustable lighting, and entertainment options to keep you at ease.</p>
+                    </div>
+                </div>
+
+                <div class="spa-card reveal reveal-delay-3">
+                    <div class="spa-card-img">
+                        <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=600&q=80" alt="Aromatherapy diffuser" loading="lazy">
+                    </div>
+                    <div class="spa-card-body">
+                        <div class="spa-card-icon">
+                            <!-- Leaf/layers icon for aromatherapy -->
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                        </div>
+                        <h3>Aromatherapy</h3>
+                        <p>Choose from calming lavender, refreshing eucalyptus, or soothing chamomile. Our aromatherapy diffusers transform each visit into a sensory retreat.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Amenities -->
+            <div class="amenities">
+                <div class="amenity reveal reveal-delay-1">
+                    <div class="amenity-icon">
+                        <!-- Headphones / music icon -->
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+                    </div>
+                    <h4>Noise-Canceling Headphones</h4>
+                </div>
+                <div class="amenity reveal reveal-delay-2">
+                    <div class="amenity-icon">
+                        <!-- Heart icon for weighted blankets -->
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                    </div>
+                    <h4>Weighted Blankets</h4>
+                </div>
+                <div class="amenity reveal reveal-delay-3">
+                    <div class="amenity-icon">
+                        <!-- Chair / grid icon for massage chairs -->
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="3"/><path d="M2 12h20"/><path d="M6 6v12"/><path d="M18 6v12"/></svg>
+                    </div>
+                    <h4>Massage Chairs</h4>
+                </div>
+                <div class="amenity reveal reveal-delay-4">
+                    <div class="amenity-icon">
+                        <!-- Flower/wind icon for aromatherapy -->
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 007.92 12.446A9 9 0 1112 2.992z"/><path d="M17 4a2 2 0 002 2 2 2 0 00-2 2 2 2 0 00-2-2 2 2 0 002-2"/><path d="M21 10h.01"/></svg>
+                    </div>
+                    <h4>Aromatherapy</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SERVICES ACCORDION ===== -->
+    <section class="services-section" id="services">
+        <div class="bg-shape bg-shape-1"></div>
+        <div class="bg-shape bg-shape-3"></div>
+
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-label">Our Services</div>
+                <h2>Comprehensive, Gentle Care</h2>
+                <p>Every treatment is delivered with extra care, patience, and your comfort in mind. We go at your pace -- always.</p>
+            </div>
+
+            <div class="accordion">
+                <div class="accordion-item active reveal reveal-delay-1">
+                    <button class="accordion-header" aria-expanded="true">
+                        Sedation Dentistry
+                        <span class="icon-wrap">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                        </span>
+                    </button>
+                    <div class="accordion-body" style="max-height: 200px;">
+                        <div class="accordion-body-inner">
+                            From mild relaxation to deep sedation, we offer multiple levels of comfort so you can find what feels right for you. Our sedation options are administered by experienced professionals who prioritize your safety and peace of mind throughout every procedure.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item reveal reveal-delay-2">
+                    <button class="accordion-header" aria-expanded="false">
+                        Preventive Care &amp; Cleanings
+                        <span class="icon-wrap">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                        </span>
+                    </button>
+                    <div class="accordion-body">
+                        <div class="accordion-body-inner">
+                            Our gentle hygienists specialize in working with anxious patients. We use extra-soft instruments, provide frequent breaks, and check in with you throughout every cleaning. Regular preventive care has never felt this comfortable.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item reveal reveal-delay-3">
+                    <button class="accordion-header" aria-expanded="false">
+                        Restorative Dentistry
+                        <span class="icon-wrap">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                        </span>
+                    </button>
+                    <div class="accordion-body">
+                        <div class="accordion-body-inner">
+                            Fillings, crowns, bridges, and more -- all performed with meticulous care and gentleness. We use the latest technology to minimize discomfort, and we always explain each step before we begin so there are no surprises.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item reveal reveal-delay-4">
+                    <button class="accordion-header" aria-expanded="false">
+                        Cosmetic Dentistry
+                        <span class="icon-wrap">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                        </span>
+                    </button>
+                    <div class="accordion-body">
+                        <div class="accordion-body-inner">
+                            Teeth whitening, veneers, and smile makeovers designed to boost your confidence -- all in our soothing spa environment. We take time to understand your vision and create results that make you love your smile.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item reveal">
+                    <button class="accordion-header" aria-expanded="false">
+                        Emergency &amp; Urgent Care
+                        <span class="icon-wrap">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                        </span>
+                    </button>
+                    <div class="accordion-body">
+                        <div class="accordion-body-inner">
+                            Dental emergencies are stressful enough without added anxiety. We offer same-day emergency appointments with immediate comfort measures. Call us and we will take care of you with the same gentleness we bring to every visit.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item reveal">
+                    <button class="accordion-header" aria-expanded="false">
+                        Anxiety-Free Children's Dentistry
+                        <span class="icon-wrap">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                        </span>
+                    </button>
+                    <div class="accordion-body">
+                        <div class="accordion-body-inner">
+                            We help little ones build positive associations with dental care from the start. Our kid-friendly approach includes fun distractions, gentle explanations, and a pace that respects each child's comfort level. No tears, no trauma.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SEDATION OPTIONS ===== -->
+    <section class="sedation-section" id="sedation">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-label">Sedation Options</div>
+                <h2>From Mild to Deep -- You Choose</h2>
+                <p>We offer a range of sedation levels so you can find the perfect fit for your comfort. Every option is safe, monitored, and administered with care.</p>
+            </div>
+
+            <div class="sedation-grid">
+                <div class="sedation-card reveal reveal-delay-1">
+                    <div class="sedation-card-dot level-mild"></div>
+                    <h3>Nitrous Oxide</h3>
+                    <span class="sedation-badge">Mild</span>
+                    <div class="sedation-card-detail">
+                        <div class="sedation-card-detail-label">How It Works</div>
+                        <p>Breathe in a gentle mix of nitrous oxide and oxygen through a small nose mask. Effects wear off within minutes.</p>
+                    </div>
+                    <div class="sedation-card-detail">
+                        <div class="sedation-card-detail-label">You'll Feel</div>
+                        <p>Light, floaty, and relaxed. You're fully awake and can communicate easily.</p>
+                    </div>
+                    <div class="sedation-card-detail">
+                        <div class="sedation-card-detail-label">Best For</div>
+                        <p>Mild anxiety, shorter procedures, first-time visitors wanting a gentle introduction.</p>
+                    </div>
+                </div>
+
+                <div class="sedation-card reveal reveal-delay-2">
+                    <div class="sedation-card-dot level-moderate"></div>
+                    <h3>Oral Sedation</h3>
+                    <span class="sedation-badge">Moderate</span>
+                    <div class="sedation-card-detail">
+                        <div class="sedation-card-detail-label">How It Works</div>
+                        <p>Take a prescribed pill before your appointment. You'll feel deeply relaxed while remaining conscious.</p>
+                    </div>
+                    <div class="sedation-card-detail">
+                        <div class="sedation-card-detail-label">You'll Feel</div>
+                        <p>Drowsy and calm. You may not remember much of the procedure -- and that's perfectly okay.</p>
+                    </div>
+                    <div class="sedation-card-detail">
+                        <div class="sedation-card-detail-label">Best For</div>
+                        <p>Moderate anxiety, longer procedures, patients who want minimal awareness.</p>
+                    </div>
+                </div>
+
+                <div class="sedation-card reveal reveal-delay-3">
+                    <div class="sedation-card-dot level-deep"></div>
+                    <h3>IV Sedation</h3>
+                    <span class="sedation-badge">Deep</span>
+                    <div class="sedation-card-detail">
+                        <div class="sedation-card-detail-label">How It Works</div>
+                        <p>Sedation is delivered through an IV, allowing precise control. You'll be in a deep state of relaxation throughout.</p>
+                    </div>
+                    <div class="sedation-card-detail">
+                        <div class="sedation-card-detail-label">You'll Feel</div>
+                        <p>In a dream-like state. Most patients feel as though the procedure lasted only moments.</p>
+                    </div>
+                    <div class="sedation-card-detail">
+                        <div class="sedation-card-detail-label">Best For</div>
+                        <p>Severe dental phobia, extensive treatments, patients who haven't visited a dentist in years.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align:center; margin-top:36px;" class="reveal">
+                <p style="color:var(--text-light); font-size:0.95rem; margin-bottom:20px;">Not sure which option is right for you? We will help you choose during your free comfort consultation.</p>
+                <a href="#booking" class="btn-primary" style="background:var(--primary); color:var(--white); display:inline-flex;">
+                    Book a Free Consultation
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PATIENT STORIES ===== -->
+    <section class="testimonials-section" id="stories">
+        <div class="bg-shape bg-shape-2"></div>
+        <div class="bg-shape bg-shape-3"></div>
+
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-label">Patient Stories</div>
+                <h2>From Fear to Comfort</h2>
+                <p>Real stories from patients who overcame their dental anxiety with us. Their courage inspires us every day.</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card reveal reveal-delay-1">
+                    <div class="testimonial-stars">
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    </div>
+                    <p class="testimonial-text">I hadn't been to a dentist in 12 years because of my phobia. From the moment I walked in, I felt a weight lift off my shoulders. The aromatherapy, the warm blanket, Dr. Chen explaining everything so gently -- I actually fell asleep in the chair. I never thought that was possible for me.</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">MR</div>
+                        <div>
+                            <div class="testimonial-name">Maria R.</div>
+                            <div class="testimonial-note">12 years without dental care</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card reveal reveal-delay-2">
+                    <div class="testimonial-stars">
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    </div>
+                    <p class="testimonial-text">I used to have panic attacks just thinking about the dentist. The team here let me visit just to see the office first, no pressure. When I was ready, they used oral sedation and I barely remember the procedure. I cried happy tears afterward -- that's how relieved I was.</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">JT</div>
+                        <div>
+                            <div class="testimonial-name">James T.</div>
+                            <div class="testimonial-note">Overcame severe dental phobia</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card reveal reveal-delay-3">
+                    <div class="testimonial-stars">
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    </div>
+                    <p class="testimonial-text">As someone with sensory sensitivities, dental offices have always been overwhelming. Comfort First is different -- the noise-canceling headphones, the dim lighting, the massage chair. It felt like going to a spa that happened to also fix my teeth. Truly a game-changer.</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">SP</div>
+                        <div>
+                            <div class="testimonial-name">Sarah P.</div>
+                            <div class="testimonial-note">Sensory sensitivity patient</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card reveal reveal-delay-4">
+                    <div class="testimonial-stars">
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    </div>
+                    <p class="testimonial-text">My daughter was terrified of dentists after a bad experience elsewhere. Dr. Chen spent 20 minutes just talking to her, letting her touch the instruments, no pressure at all. Now she actually asks when her next appointment is. That means the world to me as a parent.</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">LK</div>
+                        <div>
+                            <div class="testimonial-name">Linda K.</div>
+                            <div class="testimonial-note">Parent of anxious child</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== VIRTUAL TOUR ===== -->
+    <section class="tour-section" id="tour">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-label">Virtual Tour</div>
+                <h2>See Our Space Before You Visit</h2>
+                <p>We know that seeing the space beforehand can ease anxiety. Take a peek at the calming environment that awaits you.</p>
+            </div>
+
+            <div class="tour-gallery">
+                <div class="tour-item reveal reveal-delay-1">
+                    <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=600&q=80" alt="Our welcoming dental office reception" loading="lazy">
+                    <div class="tour-item-overlay">
+                        <span class="tour-item-label">Welcoming Reception</span>
+                    </div>
+                </div>
+
+                <div class="tour-item reveal reveal-delay-2">
+                    <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=600&q=80" alt="Comfortable dental chair with spa amenities" loading="lazy">
+                    <div class="tour-item-overlay">
+                        <span class="tour-item-label">Comfort Suite</span>
+                    </div>
+                </div>
+
+                <div class="tour-item reveal reveal-delay-3">
+                    <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=600&q=80" alt="Our caring dental team" loading="lazy">
+                    <div class="tour-item-overlay">
+                        <span class="tour-item-label">Your Care Team</span>
+                    </div>
+                </div>
+
+                <div class="tour-item reveal reveal-delay-1">
+                    <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=600&q=80" alt="Modern, gentle dental equipment" loading="lazy">
+                    <div class="tour-item-overlay">
+                        <span class="tour-item-label">Modern Technology</span>
+                    </div>
+                </div>
+
+                <div class="tour-item reveal reveal-delay-2">
+                    <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=600&q=80" alt="Gentle treatment in progress" loading="lazy">
+                    <div class="tour-item-overlay">
+                        <span class="tour-item-label">Gentle Treatment</span>
+                    </div>
+                </div>
+
+                <div class="tour-item reveal reveal-delay-3">
+                    <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&q=80" alt="Relaxation area with calming ambiance" loading="lazy">
+                    <div class="tour-item-overlay">
+                        <span class="tour-item-label">Relaxation Area</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== BOOKING FORM ===== -->
+    <section class="booking-section" id="booking">
+        <div class="bg-shape bg-shape-1"></div>
+        <div class="bg-shape bg-shape-2"></div>
+
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-label">Gentle Booking</div>
+                <h2>Take the First Step</h2>
+                <p>There is no pressure, no judgment -- just a kind team ready to help whenever you are ready. Your free comfort consultation is a conversation, not a commitment.</p>
+            </div>
+
+            <div class="booking-wrapper">
+                <div class="booking-info reveal reveal-delay-1">
+                    <h3>We're Here for You</h3>
+                    <p>Whether you are ready to book or just have questions, we would love to hear from you. Every journey begins with a single step, and we are honored to walk it with you.</p>
+
+                    <div class="booking-info-item">
+                        <!-- Phone icon -->
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                        <a href="tel:+15557778888" style="color:white;">(555) 777-8888</a>
+                    </div>
+
+                    <div class="booking-info-item">
+                        <!-- Map pin icon -->
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        250 Serenity Lane
+                    </div>
+
+                    <div class="booking-info-item">
+                        <!-- Clock icon -->
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        Mon-Fri: 9AM-5PM | Sat: 9AM-2PM
+                    </div>
+
+                    <div class="booking-info-badge">
+                        <!-- Shield icon -->
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        Free Comfort Consultation
+                    </div>
+                </div>
+
+                <form class="booking-form reveal reveal-delay-2" onsubmit="handleFormSubmit(event)">
+                    <h3>Request Your Visit</h3>
+                    <p>Fill out this gentle form and we will reach out to you within one business day. No surprises -- just a friendly conversation.</p>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" name="firstName" placeholder="Your first name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" name="lastName" placeholder="Your last name" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="visitType">What brings you in?</label>
+                        <select id="visitType" name="visitType">
+                            <option value="" disabled selected>Choose what feels right...</option>
+                            <option value="consultation">Free Comfort Consultation</option>
+                            <option value="cleaning">Gentle Cleaning</option>
+                            <option value="sedation">Sedation Dentistry Inquiry</option>
+                            <option value="restorative">Restorative Care</option>
+                            <option value="cosmetic">Cosmetic Dentistry</option>
+                            <option value="emergency">Urgent / Emergency Care</option>
+                            <option value="other">Just Want to Talk First</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="concerns">Anything you'd like us to know? <span style="font-weight:400; color:var(--text-light);">(optional)</span></label>
+                        <textarea id="concerns" name="concerns" placeholder="Share anything that would help us make your visit more comfortable. There are no wrong answers here."></textarea>
+                    </div>
+
+                    <div class="form-reassurance">
+                        <!-- Shield icon -->
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        We go at your pace. This is a conversation, not a commitment.
+                    </div>
+
+                    <button type="submit" class="btn-submit">Take the First Step</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-quote">"The greatest comfort we can offer is the promise that you will always be heard, always be respected, and never be rushed."</p>
+
+            <div class="footer-links">
+                <a href="#comfort">Our Promise</a>
+                <a href="#spa">Spa Experience</a>
+                <a href="#services">Services</a>
+                <a href="#sedation">Sedation</a>
+                <a href="#stories">Patient Stories</a>
+                <a href="#booking">Book a Visit</a>
+            </div>
+
+            <p class="footer-info">250 Serenity Lane &nbsp;|&nbsp; <a href="tel:+15557778888" style="color:var(--primary); font-weight:600;">(555) 777-8888</a> &nbsp;|&nbsp; Mon-Fri 9AM-5PM, Sat 9AM-2PM</p>
+
+            <p class="footer-copy">&copy; 2026 Comfort First Dental Spa. All rights reserved. Gentle Care Since 2012.</p>
+        </div>
+    </footer>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+        // ===== NAVBAR SCROLL EFFECT =====
+        const navbar = document.getElementById('navbar');
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll > 60) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+            lastScroll = currentScroll;
+        }, { passive: true });
+
+        // ===== MOBILE MENU =====
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileToggle.addEventListener('click', () => {
+            mobileToggle.classList.toggle('active');
+            navLinks.classList.toggle('open');
+            const expanded = mobileToggle.getAttribute('aria-expanded') === 'true';
+            mobileToggle.setAttribute('aria-expanded', !expanded);
+        });
+
+        // Close mobile menu on link click
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileToggle.classList.remove('active');
+                navLinks.classList.remove('open');
+                mobileToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // ===== INTERSECTION OBSERVER FOR SCROLL ANIMATIONS =====
+        const revealElements = document.querySelectorAll('.reveal');
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.12,
+            rootMargin: '0px 0px -40px 0px'
+        });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // ===== ACCORDION =====
+        const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+        accordionHeaders.forEach(header => {
+            header.addEventListener('click', () => {
+                const item = header.parentElement;
+                const body = item.querySelector('.accordion-body');
+                const inner = body.querySelector('.accordion-body-inner');
+                const isActive = item.classList.contains('active');
+
+                // Close all items
+                document.querySelectorAll('.accordion-item').forEach(ai => {
+                    ai.classList.remove('active');
+                    ai.querySelector('.accordion-header').setAttribute('aria-expanded', 'false');
+                    ai.querySelector('.accordion-body').style.maxHeight = '0';
+                });
+
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    item.classList.add('active');
+                    header.setAttribute('aria-expanded', 'true');
+                    body.style.maxHeight = inner.scrollHeight + 24 + 'px';
+                }
+            });
+        });
+
+        // Initialize first accordion item
+        const firstAccordion = document.querySelector('.accordion-item.active');
+        if (firstAccordion) {
+            const body = firstAccordion.querySelector('.accordion-body');
+            const inner = body.querySelector('.accordion-body-inner');
+            body.style.maxHeight = inner.scrollHeight + 24 + 'px';
+        }
+
+        // ===== FORM SUBMISSION =====
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const btn = e.target.querySelector('.btn-submit');
+            const originalText = btn.textContent;
+            btn.textContent = 'Thank You! We\'ll Be in Touch';
+            btn.style.background = '#1a9690';
+            btn.style.animation = 'none';
+
+            setTimeout(() => {
+                btn.textContent = originalText;
+                btn.style.background = '';
+                btn.style.animation = '';
+                e.target.reset();
+            }, 4000);
+        }
+
+        // ===== SMOOTH SCROLL FOR ANCHOR LINKS =====
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

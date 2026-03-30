@@ -1,0 +1,1944 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pediatric Dental Care Center | Fun Kids Dentistry</title>
+    <meta name="description" content="Making dental visits fun for kids! Board-certified pediatric dentists, colorful environment, toys & games. First visit free for kids under 3.">
+    <meta name="keywords" content="pediatric dentist, kids dentistry, children dental care, baby teeth, fluoride treatment, sealants, orthodontic evaluation">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* ===== RESET & BASE ===== */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Nunito', sans-serif;
+            color: #1E3A8A;
+            background: #F0FDF4;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+        h1, h2, h3, h4 { font-family: 'Fredoka One', cursive; font-weight: 400; }
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; display: block; }
+        ul { list-style: none; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+        /* ===== INLINE SVG ICON HELPER ===== */
+        .icon-svg {
+            display: inline-block;
+            width: 1em;
+            height: 1em;
+            vertical-align: -0.125em;
+            fill: currentColor;
+        }
+
+        /* ===== DECORATIVE ELEMENTS ===== */
+        .sparkle {
+            position: absolute;
+            width: 8px; height: 8px;
+            background: #FBBF24;
+            border-radius: 50%;
+            animation: sparkle 2s ease-in-out infinite;
+        }
+        @keyframes sparkle {
+            0%, 100% { opacity: 0; transform: scale(0); }
+            50% { opacity: 1; transform: scale(1); }
+        }
+
+        .floating-star {
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            animation: floatStar 4s ease-in-out infinite;
+            pointer-events: none;
+            z-index: 1;
+        }
+        .floating-star svg {
+            width: 100%;
+            height: 100%;
+        }
+        @keyframes floatStar {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(20deg); }
+        }
+
+        .cloud {
+            position: absolute;
+            background: rgba(255,255,255,0.8);
+            border-radius: 50px;
+            pointer-events: none;
+            z-index: 1;
+        }
+        .cloud::before, .cloud::after {
+            content: '';
+            position: absolute;
+            background: inherit;
+            border-radius: 50%;
+        }
+        .cloud-1 { width: 120px; height: 40px; top: 10%; left: 5%; animation: floatCloud 8s ease-in-out infinite; }
+        .cloud-1::before { width: 50px; height: 50px; top: -25px; left: 20px; }
+        .cloud-1::after { width: 70px; height: 70px; top: -35px; left: 50px; }
+        .cloud-2 { width: 100px; height: 35px; top: 20%; right: 10%; animation: floatCloud 10s ease-in-out infinite 1s; }
+        .cloud-2::before { width: 45px; height: 45px; top: -20px; left: 15px; }
+        .cloud-2::after { width: 60px; height: 60px; top: -30px; left: 40px; }
+        .cloud-3 { width: 80px; height: 30px; top: 35%; left: 15%; animation: floatCloud 7s ease-in-out infinite 2s; }
+        .cloud-3::before { width: 35px; height: 35px; top: -18px; left: 10px; }
+        .cloud-3::after { width: 50px; height: 50px; top: -25px; left: 30px; }
+        @keyframes floatCloud {
+            0%, 100% { transform: translateX(0); }
+            50% { transform: translateX(30px); }
+        }
+
+        /* Tooth shape CSS - clean modern version */
+        .tooth-icon {
+            display: inline-block;
+            width: 30px; height: 36px;
+            background: white;
+            border-radius: 50% 50% 40% 40%;
+            position: relative;
+        }
+        .tooth-icon::before, .tooth-icon::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            width: 13px; height: 16px;
+            background: white;
+            border-radius: 0 0 6px 6px;
+        }
+        .tooth-icon::before { left: 1px; transform: rotate(5deg); }
+        .tooth-icon::after { right: 1px; transform: rotate(-5deg); }
+
+        /* ===== NAVIGATION ===== */
+        nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            background: #1E3A8A;
+            padding: 12px 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(30,58,138,0.3);
+        }
+        nav .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: white;
+            font-family: 'Fredoka One', cursive;
+            font-size: 1.1rem;
+        }
+        .nav-logo .tooth-icon { width: 24px; height: 28px; }
+        .nav-logo .tooth-icon::before, .nav-logo .tooth-icon::after { width: 10px; height: 12px; bottom: -6px; }
+        .nav-links {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+        .nav-links a {
+            color: white;
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        .nav-links a:hover {
+            background: #34D399;
+            color: #1E3A8A;
+        }
+        .nav-cta {
+            background: #FBBF24 !important;
+            color: #1E3A8A !important;
+            font-weight: 800 !important;
+            padding: 10px 20px !important;
+            animation: pulse-btn 2s ease-in-out infinite;
+        }
+        @keyframes pulse-btn {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+        }
+        .hamburger span {
+            width: 28px; height: 3px;
+            background: white;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            padding: 140px 0 80px;
+            background: linear-gradient(135deg, rgba(30,58,138,0.97) 0%, rgba(30,58,138,0.90) 50%, rgba(30,58,138,0.95) 100%), linear-gradient(135deg, #1E3A8A 0%, #2563EB 50%, #1E3A8A 100%);
+            position: relative;
+            overflow: hidden;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+        }
+        .hero .cloud,
+        .hero .floating-star {
+            display: none;
+        }
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+        .hero-text { color: #FFFFFF; }
+        .hero-badge {
+            display: inline-block;
+            background: #FBBF24;
+            color: #1E3A8A;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            animation: bounce-in 1s ease;
+        }
+        .hero h1 {
+            font-size: 3.2rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: #FFFFFF;
+            font-weight: 700;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        .hero h1 span { color: #34D399; }
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 1;
+            color: #FFFFFF;
+            margin-bottom: 30px;
+            line-height: 1.7;
+            font-weight: 600;
+        }
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #34D399;
+            color: #1E3A8A;
+            padding: 16px 32px;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 1.1rem;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Nunito', sans-serif;
+        }
+        .btn-primary:hover { transform: scale(1.08); box-shadow: 0 8px 30px rgba(52,211,153,0.4); }
+        .btn-primary svg { width: 20px; height: 20px; fill: currentColor; }
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: transparent;
+            color: white;
+            padding: 16px 32px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            border: 2px solid white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Nunito', sans-serif;
+        }
+        .btn-secondary:hover { background: white; color: #1E3A8A; }
+        .btn-secondary svg { width: 20px; height: 20px; fill: currentColor; }
+        .hero-image {
+            position: relative;
+        }
+        .hero-image img {
+            border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            border: 6px solid #34D399;
+        }
+        .hero-image .badge-float {
+            position: absolute;
+            background: #F87171;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 20px;
+            font-weight: 800;
+            font-size: 0.95rem;
+            bottom: -20px;
+            left: -20px;
+            box-shadow: 0 8px 20px rgba(248,113,113,0.4);
+            animation: bob 3s ease-in-out infinite;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .badge-float svg { width: 20px; height: 20px; fill: currentColor; }
+        @keyframes bob {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .hero-offer {
+            position: absolute;
+            top: -15px; right: -15px;
+            background: #FBBF24;
+            color: #1E3A8A;
+            padding: 14px 22px;
+            border-radius: 20px;
+            font-weight: 800;
+            font-size: 0.9rem;
+            box-shadow: 0 8px 20px rgba(251,191,36,0.4);
+            animation: bob 3s ease-in-out infinite 0.5s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .hero-offer svg { width: 18px; height: 18px; fill: currentColor; }
+
+        /* ===== WAVE DIVIDER ===== */
+        .wave-divider {
+            position: relative;
+            height: 80px;
+            overflow: hidden;
+        }
+        .wave-divider svg {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 80px;
+        }
+        .wave-divider-top svg {
+            top: 0; bottom: auto;
+            transform: rotate(180deg);
+        }
+
+        /* ===== FUN FACTS ===== */
+        .fun-facts {
+            padding: 80px 0;
+            background: #F0FDF4;
+            position: relative;
+        }
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .section-header .tag {
+            display: inline-block;
+            background: #34D399;
+            color: #1E3A8A;
+            padding: 6px 18px;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 0.85rem;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: #1E3A8A;
+            margin-bottom: 12px;
+        }
+        .section-header p {
+            font-size: 1.1rem;
+            color: #4a4a8a;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Modern tooth mascot - clean, minimal */
+        .tooth-mascot {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 40px;
+            animation: bob 3s ease-in-out infinite;
+        }
+        .tooth-mascot svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .facts-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+        .fact-card {
+            background: white;
+            border-radius: 24px;
+            padding: 36px 24px;
+            text-align: center;
+            box-shadow: 0 8px 30px rgba(30,58,138,0.08);
+            border: 3px solid transparent;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .fact-card:nth-child(1) { border-color: #34D399; }
+        .fact-card:nth-child(2) { border-color: #FBBF24; }
+        .fact-card:nth-child(3) { border-color: #F87171; }
+        .fact-card:nth-child(4) { border-color: #87CEEB; }
+        .fact-card:hover { transform: translateY(-8px); }
+        .fact-icon {
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .fact-icon svg {
+            width: 48px;
+            height: 48px;
+        }
+        .fact-number {
+            font-family: 'Fredoka One', cursive;
+            font-size: 2.5rem;
+            color: #1E3A8A;
+        }
+        .fact-label {
+            font-weight: 700;
+            color: #4a4a8a;
+            font-size: 0.95rem;
+        }
+
+        /* ===== SERVICES ===== */
+        .services {
+            padding: 80px 0;
+            background: white;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+        .service-card {
+            background: #F0FDF4;
+            border-radius: 24px;
+            padding: 36px 24px;
+            text-align: center;
+            border: 3px solid transparent;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 6px;
+            border-radius: 24px 24px 0 0;
+        }
+        .service-card:nth-child(1)::before { background: #34D399; }
+        .service-card:nth-child(2)::before { background: #FBBF24; }
+        .service-card:nth-child(3)::before { background: #F87171; }
+        .service-card:nth-child(4)::before { background: #87CEEB; }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 16px 40px rgba(30,58,138,0.12);
+        }
+        .service-card:nth-child(1):hover { border-color: #34D399; }
+        .service-card:nth-child(2):hover { border-color: #FBBF24; }
+        .service-card:nth-child(3):hover { border-color: #F87171; }
+        .service-card:nth-child(4):hover { border-color: #87CEEB; }
+        .service-icon {
+            width: 80px; height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+        .service-icon svg {
+            width: 36px;
+            height: 36px;
+        }
+        .service-card:nth-child(1) .service-icon { background: rgba(52,211,153,0.3); }
+        .service-card:nth-child(1) .service-icon svg { fill: #059669; }
+        .service-card:nth-child(2) .service-icon { background: rgba(251,191,36,0.3); }
+        .service-card:nth-child(2) .service-icon svg { fill: #D97706; }
+        .service-card:nth-child(3) .service-icon { background: rgba(248,113,113,0.3); }
+        .service-card:nth-child(3) .service-icon svg { fill: #DC2626; }
+        .service-card:nth-child(4) .service-icon { background: rgba(135,206,235,0.3); }
+        .service-card:nth-child(4) .service-icon svg { fill: #0284C7; }
+        .service-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            color: #1E3A8A;
+        }
+        .service-card p {
+            color: #4a4a8a;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .service-card img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 16px;
+            margin-bottom: 16px;
+        }
+
+        /* ===== WHAT TO EXPECT ===== */
+        .expect {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #1E3A8A, #2563EB);
+            color: white;
+            position: relative;
+        }
+        .expect .section-header h2 { color: white; }
+        .expect .section-header p { color: rgba(255,255,255,0.8); }
+        .expect .section-header .tag { background: #FBBF24; color: #1E3A8A; }
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            position: relative;
+        }
+        .steps-grid::before {
+            content: '';
+            position: absolute;
+            top: 50px;
+            left: 12%;
+            right: 12%;
+            height: 3px;
+            background: rgba(52,211,153,0.3);
+            border-radius: 4px;
+        }
+        .step-card {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        .step-number {
+            width: 70px; height: 70px;
+            border-radius: 50%;
+            background: #34D399;
+            color: #1E3A8A;
+            font-family: 'Fredoka One', cursive;
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            box-shadow: 0 8px 20px rgba(52,211,153,0.3);
+        }
+        .step-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #FBBF24;
+        }
+        .step-card p {
+            font-size: 0.95rem;
+            opacity: 0.85;
+            line-height: 1.6;
+        }
+
+        /* ===== AGE GUIDE ===== */
+        .age-guide {
+            padding: 80px 0;
+            background: #F0FDF4;
+        }
+        .age-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        .age-tab {
+            padding: 14px 28px;
+            border-radius: 50px;
+            background: white;
+            border: 3px solid #e0e0e0;
+            font-family: 'Nunito', sans-serif;
+            font-weight: 800;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: #1E3A8A;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .age-tab svg {
+            width: 20px;
+            height: 20px;
+            fill: #1E3A8A;
+        }
+        .age-tab:hover { border-color: #34D399; }
+        .age-tab.active {
+            background: #1E3A8A;
+            color: white;
+            border-color: #1E3A8A;
+            transform: scale(1.05);
+        }
+        .age-tab.active svg { fill: white; }
+        .age-content {
+            display: none;
+            animation: slideUp 0.4s ease;
+        }
+        .age-content.active { display: block; }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .age-panel {
+            background: white;
+            border-radius: 24px;
+            padding: 48px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            box-shadow: 0 8px 40px rgba(30,58,138,0.08);
+        }
+        .age-panel-text h3 {
+            font-size: 1.8rem;
+            color: #1E3A8A;
+            margin-bottom: 16px;
+        }
+        .age-panel-text p {
+            color: #4a4a8a;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+        .age-checklist {
+            list-style: none;
+        }
+        .age-checklist li {
+            padding: 8px 0;
+            font-weight: 600;
+            color: #1E3A8A;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .age-checklist li .check-icon {
+            display: inline-flex;
+            width: 28px; height: 28px;
+            background: #34D399;
+            color: #1E3A8A;
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .age-checklist li .check-icon svg {
+            width: 14px;
+            height: 14px;
+            fill: #1E3A8A;
+        }
+        .age-panel-visual {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .age-visual-icon {
+            width: 120px;
+            height: 120px;
+            animation: bob 3s ease-in-out infinite;
+        }
+        .age-visual-icon svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* ===== TEAM ===== */
+        .team {
+            padding: 80px 0;
+            background: white;
+        }
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 36px;
+        }
+        .team-card {
+            text-align: center;
+            background: #F0FDF4;
+            border-radius: 24px;
+            padding: 40px 24px;
+            transition: all 0.3s ease;
+        }
+        .team-card:hover { transform: translateY(-8px); box-shadow: 0 16px 40px rgba(30,58,138,0.1); }
+        .team-photo {
+            width: 160px; height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 20px;
+            border: 5px solid #34D399;
+            transition: all 0.4s ease;
+        }
+        .team-card:hover .team-photo {
+            transform: scale(1.1);
+            border-color: #FBBF24;
+        }
+        .team-card h3 {
+            font-size: 1.3rem;
+            color: #1E3A8A;
+            margin-bottom: 4px;
+        }
+        .team-card .role {
+            color: #F87171;
+            font-weight: 700;
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+        }
+        .team-card p {
+            color: #4a4a8a;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* ===== PARENT CORNER ===== */
+        .parent-corner {
+            padding: 80px 0;
+            background: #F0FDF4;
+        }
+        .parent-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .parent-card {
+            background: white;
+            border-radius: 24px;
+            padding: 36px;
+            border-left: 6px solid;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(30,58,138,0.06);
+        }
+        .parent-card:nth-child(1) { border-color: #34D399; }
+        .parent-card:nth-child(2) { border-color: #FBBF24; }
+        .parent-card:nth-child(3) { border-color: #F87171; }
+        .parent-card:hover { transform: translateY(-6px); box-shadow: 0 12px 30px rgba(30,58,138,0.12); }
+        .parent-card .card-icon {
+            margin-bottom: 16px;
+        }
+        .parent-card .card-icon svg {
+            width: 40px;
+            height: 40px;
+        }
+        .parent-card:nth-child(1) .card-icon svg { fill: #059669; }
+        .parent-card:nth-child(2) .card-icon svg { fill: #D97706; }
+        .parent-card:nth-child(3) .card-icon svg { fill: #DC2626; }
+        .parent-card h3 {
+            font-size: 1.2rem;
+            color: #1E3A8A;
+            margin-bottom: 10px;
+        }
+        .parent-card p {
+            color: #4a4a8a;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* ===== TESTIMONIALS ===== */
+        .testimonials {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #1E3A8A, #2563EB);
+            color: white;
+        }
+        .testimonials .section-header h2 { color: white; }
+        .testimonials .section-header p { color: rgba(255,255,255,0.8); }
+        .testimonials .section-header .tag { background: #FBBF24; color: #1E3A8A; }
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+        .testimonial-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 24px;
+            padding: 36px;
+            border: 2px solid rgba(52,211,153,0.2);
+            transition: all 0.3s ease;
+        }
+        .testimonial-card:hover {
+            border-color: rgba(52,211,153,0.5);
+            transform: translateY(-4px);
+        }
+        .testimonial-stars {
+            color: #FBBF24;
+            display: flex;
+            gap: 4px;
+            margin-bottom: 16px;
+        }
+        .testimonial-stars svg {
+            width: 20px;
+            height: 20px;
+            fill: #FBBF24;
+        }
+        .testimonial-card blockquote {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            opacity: 0.95;
+            font-style: italic;
+        }
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .testimonial-avatar {
+            width: 48px; height: 48px;
+            border-radius: 50%;
+            background: #34D399;
+            color: #1E3A8A;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.1rem;
+        }
+        .testimonial-name {
+            font-weight: 800;
+        }
+        .testimonial-detail {
+            opacity: 0.7;
+            font-size: 0.85rem;
+        }
+
+        /* ===== GALLERY ===== */
+        .gallery {
+            padding: 80px 0;
+            background: white;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .gallery-item {
+            border-radius: 24px;
+            overflow: hidden;
+            position: relative;
+            transition: all 0.4s ease;
+        }
+        .gallery-item:hover { transform: scale(1.03); box-shadow: 0 16px 40px rgba(30,58,138,0.15); }
+        .gallery-item img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+        .gallery-item:hover img { transform: scale(1.08); }
+        .gallery-item .overlay {
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            background: linear-gradient(transparent, rgba(30,58,138,0.8));
+            padding: 20px;
+            color: white;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+        .gallery-item:hover .overlay { transform: translateY(0); }
+
+        /* ===== SCHEDULE ===== */
+        .schedule {
+            padding: 80px 0;
+            background: #F0FDF4;
+            position: relative;
+        }
+        .schedule-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: start;
+        }
+        .schedule-info {
+            background: #1E3A8A;
+            border-radius: 24px;
+            padding: 48px;
+            color: white;
+        }
+        .schedule-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #FBBF24;
+        }
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            margin-bottom: 24px;
+        }
+        .info-icon {
+            width: 48px; height: 48px;
+            background: rgba(52,211,153,0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .info-icon svg {
+            width: 22px;
+            height: 22px;
+            fill: #34D399;
+        }
+        .info-item h4 {
+            font-size: 1rem;
+            color: #34D399;
+            margin-bottom: 4px;
+        }
+        .info-item p {
+            opacity: 0.85;
+            font-size: 0.95rem;
+        }
+        .insurance-badge {
+            background: rgba(251,191,36,0.15);
+            border: 2px solid #FBBF24;
+            border-radius: 16px;
+            padding: 16px 24px;
+            margin-top: 24px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 700;
+        }
+        .insurance-badge svg {
+            width: 28px;
+            height: 28px;
+            fill: #FBBF24;
+            flex-shrink: 0;
+        }
+        .schedule-form {
+            background: white;
+            border-radius: 24px;
+            padding: 48px;
+            box-shadow: 0 12px 40px rgba(30,58,138,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        .schedule-form h3 {
+            font-size: 1.5rem;
+            color: #1E3A8A;
+            margin-bottom: 24px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        .schedule-form h3 svg {
+            width: 24px;
+            height: 24px;
+            fill: #1E3A8A;
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+        .form-group {
+            margin-bottom: 16px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: 700;
+            color: #1E3A8A;
+            margin-bottom: 6px;
+            font-size: 0.9rem;
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px 18px;
+            border: 3px solid #e8f5e8;
+            border-radius: 16px;
+            font-family: 'Nunito', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background: #F0FDF4;
+            color: #1E3A8A;
+        }
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #34D399;
+            box-shadow: 0 0 0 4px rgba(52,211,153,0.2);
+        }
+        .form-group textarea { resize: vertical; min-height: 100px; }
+        .form-submit {
+            width: 100%;
+            padding: 18px;
+            background: #1E3A8A;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-family: 'Fredoka One', cursive;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        .form-submit svg {
+            width: 22px;
+            height: 22px;
+            fill: currentColor;
+        }
+        .form-submit:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 30px rgba(30,58,138,0.3);
+        }
+        .tooth-decoration {
+            position: absolute;
+            opacity: 0.06;
+        }
+        .tooth-decoration svg {
+            width: 48px;
+            height: 48px;
+            fill: #1E3A8A;
+        }
+        .tooth-decoration.td1 { top: 20px; right: 20px; }
+        .tooth-decoration.td2 { bottom: 20px; left: 20px; transform: rotate(-20deg); }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: #1E3A8A;
+            color: white;
+            padding: 60px 0 30px;
+            position: relative;
+            overflow: hidden;
+        }
+        footer::before {
+            content: '';
+            position: absolute;
+            top: -40px; left: 0; right: 0;
+            height: 80px;
+            background: #F0FDF4;
+            border-radius: 0 0 50% 50%;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 36px;
+            margin-bottom: 40px;
+        }
+        .footer-brand h3 {
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+            color: #FBBF24;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .footer-brand h3 svg {
+            width: 24px;
+            height: 24px;
+            fill: #FBBF24;
+        }
+        .footer-brand p {
+            opacity: 0.8;
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+        .footer-col h4 {
+            font-size: 1.1rem;
+            margin-bottom: 16px;
+            color: #34D399;
+        }
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+        .footer-col a {
+            opacity: 0.8;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+        .footer-col a:hover { opacity: 1; color: #34D399; }
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.15);
+            padding-top: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        .footer-bottom p {
+            opacity: 0.7;
+            font-size: 0.85rem;
+        }
+        .footer-social {
+            display: flex;
+            gap: 12px;
+        }
+        .footer-social a {
+            width: 40px; height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        .footer-social a svg {
+            width: 18px;
+            height: 18px;
+            fill: white;
+        }
+        .footer-social a:hover {
+            background: #34D399;
+        }
+        .footer-social a:hover svg {
+            fill: #1E3A8A;
+        }
+
+        /* ===== ANIMATIONS ===== */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        @keyframes bounce-in {
+            0% { transform: scale(0); }
+            50% { transform: scale(1.15); }
+            100% { transform: scale(1); }
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .hero-content { grid-template-columns: 1fr; text-align: center; gap: 40px; }
+            .hero-buttons { justify-content: center; }
+            .hero h1 { font-size: 2.5rem; }
+            .facts-grid { grid-template-columns: repeat(2, 1fr); }
+            .services-grid { grid-template-columns: repeat(2, 1fr); }
+            .steps-grid { grid-template-columns: repeat(2, 1fr); }
+            .steps-grid::before { display: none; }
+            .team-grid { grid-template-columns: repeat(3, 1fr); }
+            .schedule-wrapper { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%; left: 0; right: 0;
+                background: #1E3A8A;
+                flex-direction: column;
+                padding: 20px;
+                gap: 4px;
+                box-shadow: 0 8px 20px rgba(30,58,138,0.3);
+            }
+            .nav-links.open { display: flex; }
+            .hamburger { display: flex; }
+            .hero { padding: 120px 0 60px; min-height: auto; }
+            .hero h1 { font-size: 2rem; }
+            .hero-offer, .hero-image .badge-float { display: none; }
+            .section-header h2 { font-size: 2rem; }
+            .facts-grid { grid-template-columns: 1fr 1fr; }
+            .services-grid { grid-template-columns: 1fr; }
+            .steps-grid { grid-template-columns: 1fr; }
+            .age-panel { grid-template-columns: 1fr; padding: 32px; }
+            .team-grid { grid-template-columns: 1fr; }
+            .parent-grid { grid-template-columns: 1fr; }
+            .testimonials-grid { grid-template-columns: 1fr; }
+            .gallery-grid { grid-template-columns: 1fr 1fr; }
+            .form-row { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 480px) {
+            .hero h1 { font-size: 1.7rem; }
+            .facts-grid { grid-template-columns: 1fr; }
+            .gallery-grid { grid-template-columns: 1fr; }
+            .age-tabs { gap: 8px; }
+            .age-tab { padding: 10px 18px; font-size: 0.9rem; }
+        }
+
+        /* Back to top */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px; right: 30px;
+            width: 50px; height: 50px;
+            background: #1E3A8A;
+            color: white;
+            border: 3px solid #34D399;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transform: scale(0);
+            transition: all 0.3s ease;
+            z-index: 999;
+        }
+        .back-to-top svg {
+            width: 22px;
+            height: 22px;
+            fill: white;
+        }
+        .back-to-top.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+        .back-to-top:hover {
+            background: #34D399;
+        }
+        .back-to-top:hover svg {
+            fill: #1E3A8A;
+        }
+
+        /* Sticky CTA bar mobile */
+        .mobile-cta {
+            display: none;
+            position: fixed;
+            bottom: 0; left: 0; right: 0;
+            background: #1E3A8A;
+            padding: 12px 20px;
+            z-index: 999;
+            box-shadow: 0 -4px 20px rgba(30,58,138,0.3);
+        }
+        .mobile-cta .btn-primary {
+            width: 100%;
+            justify-content: center;
+            padding: 14px;
+            font-size: 1rem;
+        }
+        @media (max-width: 768px) {
+            .mobile-cta { display: block; }
+            footer { padding-bottom: 80px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="#" class="nav-logo">
+                <div class="tooth-icon"></div>
+                Pediatric Dental Care
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="#services">Services</a>
+                <a href="#expect">First Visit</a>
+                <a href="#age-guide">Age Guide</a>
+                <a href="#team">Our Team</a>
+                <a href="#testimonials">Reviews</a>
+                <a href="#schedule" class="nav-cta">Schedule Visit</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="cloud cloud-1"></div>
+        <div class="cloud cloud-2"></div>
+        <div class="cloud cloud-3"></div>
+        <span class="floating-star" style="top:15%;left:30%;animation-delay:0s;"><svg viewBox="0 0 24 24"><path fill="white" d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg></span>
+        <span class="floating-star" style="top:60%;right:20%;animation-delay:1.5s;"><svg viewBox="0 0 24 24"><path fill="#FBBF24" d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg></span>
+        <span class="floating-star" style="top:75%;left:8%;animation-delay:2.5s;"><svg viewBox="0 0 24 24"><path fill="#F87171" d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg></span>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-badge">Making Dental Fun Since 2009</div>
+                    <h1>Where <span>Happy Smiles</span> Are Born Every Day!</h1>
+                    <p>Board-certified pediatric dentists creating positive, fun dental experiences for your little ones. Toys, games, prizes, and gentle care in a colorful environment kids actually love!</p>
+                    <div class="hero-buttons">
+                        <a href="#schedule" class="btn-primary"><svg viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V6a2 2 0 00-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"/></svg> Schedule Your Child's Visit</a>
+                        <a href="tel:+15559990000" class="btn-secondary"><svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.2 2.2z"/></svg> Call (555) 999-0000</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=1200&q=80" alt="Happy child smiling at pediatric dental office" width="600" height="400">
+                    <div class="badge-float"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg> Kid-Friendly: Toys, Games &amp; Prizes!</div>
+                    <div class="hero-offer"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg> First Visit FREE for Kids Under 3!</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wave Divider -->
+    <div class="wave-divider">
+        <svg viewBox="0 0 1440 80" preserveAspectRatio="none" fill="#F0FDF4">
+            <path d="M0,40 C360,80 720,0 1080,40 C1260,60 1380,50 1440,40 L1440,80 L0,80 Z"></path>
+        </svg>
+    </div>
+
+    <!-- Fun Facts Section -->
+    <section class="fun-facts" id="fun-facts">
+        <div class="container">
+            <!-- Clean modern tooth mascot (no face) -->
+            <div class="tooth-mascot">
+                <svg viewBox="0 0 100 120" fill="none">
+                    <path d="M50 8C28 8 12 26 12 46c0 14 6 24 12 38 4 10 8 20 12 28 2 4 4 4 6 0 4-8 6-14 8-20 2 6 4 12 8 20 2 4 4 4 6 0 4-8 8-18 12-28 6-14 12-24 12-38C88 26 72 8 50 8z" fill="white" stroke="#1E3A8A" stroke-width="3"/>
+                    <path d="M50 28c-12 0-22 8-22 18s10 18 22 18 22-8 22-18-10-18-22-18z" fill="rgba(30,58,138,0.05)"/>
+                    <path d="M38 42h24" stroke="#34D399" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M50 36v12" stroke="#34D399" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <div class="section-header">
+                <div class="tag">By The Numbers</div>
+                <h2>Spreading Smiles Every Day!</h2>
+                <p>Our little patients love visiting us, and the numbers show it!</p>
+            </div>
+            <div class="facts-grid">
+                <div class="fact-card animate-on-scroll">
+                    <div class="fact-icon"><svg viewBox="0 0 24 24" fill="#34D399"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/></svg></div>
+                    <div class="fact-number" data-count="10000">0</div>
+                    <div class="fact-label">Happy Little Smiles</div>
+                </div>
+                <div class="fact-card animate-on-scroll">
+                    <div class="fact-icon"><svg viewBox="0 0 24 24" fill="#FBBF24"><path d="M20 6h-4V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2H4a2 2 0 00-2 2v11a2 2 0 002 2h16a2 2 0 002-2V8a2 2 0 00-2-2zm-6-2v2h-4V4h4zm6 15H4v-2h16v2zm0-5H4V8h4v1a1 1 0 002 0V8h4v1a1 1 0 002 0V8h4v6z"/></svg></div>
+                    <div class="fact-number" data-count="15">0</div>
+                    <div class="fact-label">Years of Experience</div>
+                </div>
+                <div class="fact-card animate-on-scroll">
+                    <div class="fact-icon"><svg viewBox="0 0 24 24" fill="#F87171"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg></div>
+                    <div class="fact-number" data-count="4">0</div>
+                    <div class="fact-label">Board-Certified Dentists</div>
+                </div>
+                <div class="fact-card animate-on-scroll">
+                    <div class="fact-icon"><svg viewBox="0 0 24 24" fill="#87CEEB"><path d="M19 5h-2V3H7v2H5a2 2 0 00-2 2v1a5.06 5.06 0 004.2 4.92A5 5 0 0011 15.9V18H9v2h6v-2h-2v-2.1a5 5 0 003.8-2.98A5.06 5.06 0 0021 8V7a2 2 0 00-2-2zm-14 3V7h2v4.08A3.07 3.07 0 015 8zm14 0a3.07 3.07 0 01-2 3.08V7h2v1z"/></svg></div>
+                    <div class="fact-number" data-count="500">0</div>
+                    <div class="fact-label">5-Star Reviews</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <div class="tag">Our Services</div>
+                <h2>Everything Your Child's Smile Needs</h2>
+                <p>Comprehensive pediatric dental care in a fun, colorful environment!</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 2C9.24 2 7 4.24 7 7c0 2 1 3.5 2 5.5.7 1.4 1.5 3 2 5 .2.7.5 1.5 1 1.5s.8-.8 1-1.5c.5-2 1.3-3.6 2-5C16 10.5 17 9 17 7c0-2.76-2.24-5-5-5zm0 2c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z"/></svg></div>
+                    <h3>Children's Dentistry</h3>
+                    <p>Complete dental exams, cleanings, and preventive care tailored specifically for growing smiles from age 1 through 17.</p>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg></div>
+                    <h3>Dental Sealants</h3>
+                    <p>Protective coatings on back teeth to shield against cavities. Quick, painless, and highly effective for active kids.</p>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 7V3.5L18.5 9H13zM8 15h8v2H8v-2zm0-4h8v2H8v-2z"/></svg></div>
+                    <h3>Fluoride Treatments</h3>
+                    <p>Professional-strength fluoride to strengthen enamel and prevent decay. A simple treatment that makes a big difference!</p>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M20 2H4a2 2 0 00-2 2v18l4-4h14a2 2 0 002-2V4a2 2 0 00-2-2zm0 14H5.17L4 17.17V4h16v12zM7 9h2v2H7V9zm4 0h2v2h-2V9zm4 0h2v2h-2V9z"/></svg></div>
+                    <h3>Orthodontic Evaluation</h3>
+                    <p>Early evaluation for alignment and bite issues. We'll create a plan for your child's straight, healthy smile journey.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What to Expect Section -->
+    <section class="expect" id="expect">
+        <div class="container">
+            <div class="section-header">
+                <div class="tag">First Visit Guide</div>
+                <h2>What to Expect at Your First Visit</h2>
+                <p>We make every visit fun, easy, and stress-free for both kids and parents!</p>
+            </div>
+            <div class="steps-grid">
+                <div class="step-card animate-on-scroll">
+                    <div class="step-number">1</div>
+                    <h3>Warm Welcome</h3>
+                    <p>Your child is greeted by our friendly team, explores our play area, and picks a fun sticker!</p>
+                </div>
+                <div class="step-card animate-on-scroll">
+                    <div class="step-number">2</div>
+                    <h3>Fun Introduction</h3>
+                    <p>Our dentist shows your child the tools in a fun way &mdash; we call them "tooth ticklers" and "Mr. Thirsty!"</p>
+                </div>
+                <div class="step-card animate-on-scroll">
+                    <div class="step-number">3</div>
+                    <h3>Gentle Checkup</h3>
+                    <p>A thorough but gentle exam, cleaning, and any needed X-rays. Parents are welcome in the room!</p>
+                </div>
+                <div class="step-card animate-on-scroll">
+                    <div class="step-number">4</div>
+                    <h3>Prize Time!</h3>
+                    <p>Every visit ends with a trip to our prize wall! Plus, parents receive a personalized care plan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Age Guide Section -->
+    <section class="age-guide" id="age-guide">
+        <div class="container">
+            <div class="section-header">
+                <div class="tag">Age-by-Age Guide</div>
+                <h2>Dental Care at Every Stage</h2>
+                <p>Every age has unique dental needs. Here's what parents should know!</p>
+            </div>
+            <div class="age-tabs">
+                <button class="age-tab active" data-tab="babies" aria-label="View dental guide for babies"><svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0-6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm0 7c-2.67 0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4z"/></svg> Babies (0-2)</button>
+                <button class="age-tab" data-tab="toddlers" aria-label="View dental guide for toddlers"><svg viewBox="0 0 24 24"><path d="M12 2a4 4 0 014 4 4 4 0 01-4 4 4 4 0 01-4-4 4 4 0 014-4zm0 14c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4z"/></svg> Toddlers (3-5)</button>
+                <button class="age-tab" data-tab="kids" aria-label="View dental guide for kids"><svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05A4.22 4.22 0 0119 16.5V19h4v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg> Kids (6-12)</button>
+                <button class="age-tab" data-tab="teens" aria-label="View dental guide for teens"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2a7.2 7.2 0 01-6-3.22c.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08a7.2 7.2 0 01-6 3.22z"/></svg> Teens (13-17)</button>
+            </div>
+            <div class="age-content active" id="tab-babies">
+                <div class="age-panel">
+                    <div class="age-panel-text">
+                        <h3>Babies (0-2 Years)</h3>
+                        <p>Starting dental care early sets the foundation for a lifetime of healthy smiles. We recommend your baby's first visit by their first birthday!</p>
+                        <ul class="age-checklist">
+                            <li><span class="check-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>First dental visit by age 1</li>
+                            <li><span class="check-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>Gentle gum and tooth examination</li>
+                            <li><span class="check-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>Teething guidance for parents</li>
+                            <li><span class="check-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>Bottle and pacifier habit advice</li>
+                            <li><span class="check-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>Early cavity risk assessment</li>
+                        </ul>
+                    </div>
+                    <div class="age-panel-visual">
+                        <div class="age-visual-icon"><svg viewBox="0 0 24 24" fill="#1E3A8A"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0-6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm0 7c-2.67 0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4z"/></svg></div>
+                    </div>
+                </div>
+            </div>
+            <div class="age-content" id="tab-toddlers">
+                <div class="age-panel">
+                    <div class="age-panel-text">
+                        <h3>Toddlers (3-5 Years)</h3>
+                        <p>Building great brushing habits starts now! We make dental visits an adventure that your toddler will actually look forward to.</p>
+                        <ul class="age-checklist">
+                            <li><span class="check-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>Fun, interactive dental cleanings</li>
+                            <li><span class="check-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>Brushing technique coaching</li>
+                            <li><span class="check-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>Fluoride varnish treatments</li>
+                            <li><span class="check-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>Diet and snack guidance</li>
+                            <li><span class="check-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>Thumb-sucking habit support</li>
+                        </ul>
+                    </div>
+                    <div class="age-panel-visual">
+                        <div class="age-visual-icon"><svg viewBox="0 0 24 24" fill="#1E3A8A"><path d="M12 2a4 4 0 014 4 4 4 0 01-4 4 4 4 0 01-4-4 4 4 0 014-4zm0 14c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4z"/></svg></div>
+                    </div>
+                </div>
+            </div>
+            <div class="age-content" id="tab-kids">
+                <div class="age-panel">
+                    <div class="age-panel-text">
+                        <h3>Kids (6-12 Years)</h3>
+                        <p>As baby teeth make way for permanent ones, proper care is crucial. We keep kids engaged and excited about their dental health!</p>
+                        <ul class="age-checklist">
+                            <li><span class="check-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>Sealants for new permanent molars</li>
+                            <li><span class="check-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>Orthodontic monitoring and evaluation</li>
+                            <li><span class="check-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>Sports guard fitting</li>
+                            <li><span class="check-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>Cavity prevention education</li>
+                            <li><span class="check-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>Independence in oral hygiene</li>
+                        </ul>
+                    </div>
+                    <div class="age-panel-visual">
+                        <div class="age-visual-icon"><svg viewBox="0 0 24 24" fill="#1E3A8A"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05A4.22 4.22 0 0119 16.5V19h4v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg></div>
+                    </div>
+                </div>
+            </div>
+            <div class="age-content" id="tab-teens">
+                <div class="age-panel">
+                    <div class="age-panel-text">
+                        <h3>Teens (13-17 Years)</h3>
+                        <p>Teen years bring unique dental challenges. We provide age-appropriate care that respects their growing independence.</p>
+                        <ul class="age-checklist">
+                            <li><span class="check-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>Wisdom teeth monitoring</li>
+                            <li><span class="check-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>Orthodontic treatment coordination</li>
+                            <li><span class="check-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>Teeth whitening consultations</li>
+                            <li><span class="check-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>Sports injury prevention</li>
+                            <li><span class="check-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>Transition to adult dental care</li>
+                        </ul>
+                    </div>
+                    <div class="age-panel-visual">
+                        <div class="age-visual-icon"><svg viewBox="0 0 24 24" fill="#1E3A8A"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2a7.2 7.2 0 01-6-3.22c.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08a7.2 7.2 0 01-6 3.22z"/></svg></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team" id="team">
+        <div class="container">
+            <div class="section-header">
+                <div class="tag">Meet Our Team</div>
+                <h2>Friendly Faces Your Kids Will Love</h2>
+                <p>Board-certified pediatric dentists who truly love working with children!</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-card animate-on-scroll">
+                    <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&q=80" alt="Dr. Sarah Mitchell, Lead Pediatric Dentist" class="team-photo" width="400" height="400">
+                    <h3>Dr. Sarah Mitchell</h3>
+                    <div class="role">Lead Pediatric Dentist</div>
+                    <p>Board-certified with 12 years of experience. Known for her gentle touch and ability to make every child smile.</p>
+                </div>
+                <div class="team-card animate-on-scroll">
+                    <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=400&q=80" alt="Dr. Lisa Chen, Pediatric Dentist" class="team-photo" width="400" height="400">
+                    <h3>Dr. Lisa Chen</h3>
+                    <div class="role">Pediatric Dentist</div>
+                    <p>Specializes in early childhood dentistry and anxious patients. Mom of three who understands parents' concerns.</p>
+                </div>
+                <div class="team-card animate-on-scroll">
+                    <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&q=80" alt="Dr. James Rodriguez, Orthodontic Specialist" class="team-photo" width="400" height="400">
+                    <h3>Dr. James Rodriguez</h3>
+                    <div class="role">Orthodontic Specialist</div>
+                    <p>Expert in early orthodontic evaluation and treatment planning. Creates confident smiles for kids of all ages.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parent Corner -->
+    <section class="parent-corner" id="parent-corner">
+        <div class="container">
+            <div class="section-header">
+                <div class="tag">Parent Education</div>
+                <h2>Parent Corner</h2>
+                <p>Resources and tips to keep your child's smile healthy between visits!</p>
+            </div>
+            <div class="parent-grid">
+                <div class="parent-card animate-on-scroll">
+                    <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M18 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V4a2 2 0 00-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"/></svg></div>
+                    <h3>Brushing & Flossing Guide</h3>
+                    <p>Age-appropriate techniques for proper brushing and flossing. When to start, how long, and what toothpaste to use for each age group.</p>
+                </div>
+                <div class="parent-card animate-on-scroll">
+                    <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M18.06 22.99h1.66c.84 0 1.53-.64 1.63-1.46L23 5.05h-5V1h-1.97v4.05h-4.97l.3 2.34c1.71.47 3.31 1.32 4.27 2.26 1.44 1.42 2.43 2.89 2.43 5.29v8.05zM1 21.99V21h15.03v.99c0 .55-.45 1-1.01 1H2.01c-.56 0-1.01-.45-1.01-1zm15.03-7c0-4.42-5.02-8-9.02-8C5.01 6.99 1 8.54 1 11.64V19h15.03v-4.01z"/></svg></div>
+                    <h3>Nutrition for Healthy Teeth</h3>
+                    <p>Which foods help strengthen teeth and which to avoid. Snack swaps that your kids will love and their teeth will thank you for!</p>
+                </div>
+                <div class="parent-card animate-on-scroll">
+                    <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg></div>
+                    <h3>Dental Emergency Guide</h3>
+                    <p>What to do if your child knocks out a tooth, has a toothache, or chips a tooth. Quick steps every parent should know.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <div class="tag">Happy Families</div>
+                <h2>What Parents Are Saying</h2>
+                <p>Real stories from real families who love our practice!</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card animate-on-scroll">
+                    <div class="testimonial-stars"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg></div>
+                    <blockquote>"My daughter used to be terrified of the dentist. After her first visit here, she actually ASKS when her next appointment is! The staff is incredible with kids."</blockquote>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">JM</div>
+                        <div>
+                            <div class="testimonial-name">Jennifer M.</div>
+                            <div class="testimonial-detail">Parent of 6-year-old</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card animate-on-scroll">
+                    <div class="testimonial-stars"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg></div>
+                    <blockquote>"The team explained everything to both me and my son in a way we could understand. I love that they focus on educating parents too. Best pediatric dentist ever!"</blockquote>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">MT</div>
+                        <div>
+                            <div class="testimonial-name">Marcus T.</div>
+                            <div class="testimonial-detail">Parent of 4-year-old</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card animate-on-scroll">
+                    <div class="testimonial-stars"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg></div>
+                    <blockquote>"Three kids, all different ages, and they handle each one perfectly. The play area is amazing, and the prize wall is a huge hit. Wouldn't go anywhere else!"</blockquote>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">SA</div>
+                        <div>
+                            <div class="testimonial-name">Samantha A.</div>
+                            <div class="testimonial-detail">Parent of 3 kids (ages 3, 7, 12)</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card animate-on-scroll">
+                    <div class="testimonial-stars"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg></div>
+                    <blockquote>"Dr. Mitchell found an issue early that our regular dentist missed. Her expertise in pediatric dentistry made all the difference. So grateful we switched!"</blockquote>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">RP</div>
+                        <div>
+                            <div class="testimonial-name">Rachel P.</div>
+                            <div class="testimonial-detail">Parent of 9-year-old</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <div class="tag">Our Office</div>
+                <h2>Happy Smiles Gallery</h2>
+                <p>Take a peek inside our colorful, kid-friendly dental office!</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item animate-on-scroll">
+                    <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=800&q=80" alt="Colorful pediatric dental office interior" width="800" height="600">
+                    <div class="overlay">
+                        <strong>Our Colorful Office</strong>
+                        <p>Designed to make kids feel excited, not scared!</p>
+                    </div>
+                </div>
+                <div class="gallery-item animate-on-scroll">
+                    <img src="https://images.unsplash.com/photo-1571772996211-2f02c9727629?w=500&q=80" alt="Happy young patient smiling after dental visit" width="500" height="400">
+                    <div class="overlay">
+                        <strong>Happy Patients</strong>
+                        <p>Smiles that make our day!</p>
+                    </div>
+                </div>
+                <div class="gallery-item animate-on-scroll">
+                    <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=500&q=80" alt="Kid-friendly dental treatment chair" width="500" height="400">
+                    <div class="overlay">
+                        <strong>Kid-Friendly Chairs</strong>
+                        <p>Comfortable and fun treatment spaces</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section class="schedule" id="schedule">
+        <div class="container">
+            <div class="section-header">
+                <div class="tag">Book Now</div>
+                <h2>Schedule Your Child's Visit</h2>
+                <p>Getting started is easy! Fill out the form or give us a call.</p>
+            </div>
+            <div class="schedule-wrapper">
+                <div class="schedule-info">
+                    <h3>Get In Touch</h3>
+                    <div class="info-item">
+                        <div class="info-icon"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg></div>
+                        <div>
+                            <h4>Our Location</h4>
+                            <p>600 Rainbow Parkway, Suite 300</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon"><svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.2 2.2z"/></svg></div>
+                        <div>
+                            <h4>Phone Number</h4>
+                            <p><a href="tel:+15559990000" style="color:#34D399;">(555) 999-0000</a></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon"><svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg></div>
+                        <div>
+                            <h4>Office Hours</h4>
+                            <p>Mon - Fri: 8:00 AM - 5:00 PM<br>Saturday: 8:00 AM - 12:00 PM<br>Sunday: Closed</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg></div>
+                        <div>
+                            <h4>Special Offer</h4>
+                            <p>First visit FREE for kids under 3!</p>
+                        </div>
+                    </div>
+                    <div class="insurance-badge">
+                        <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.11 0-2 .89-2 2v12c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/></svg>
+                        We Accept Most Insurance &amp; Medicaid
+                    </div>
+                </div>
+                <div class="schedule-form">
+                    <div class="tooth-decoration td1"><svg viewBox="0 0 24 30"><path d="M12 2C8 2 4 6 4 11c0 4 2 7 4 11 1 2 2 4 3 6 .5 1 1.5 1 2 0 1-2 2-4 3-6 2-4 4-7 4-11 0-5-4-9-8-9z"/></svg></div>
+                    <div class="tooth-decoration td2"><svg viewBox="0 0 24 30"><path d="M12 2C8 2 4 6 4 11c0 4 2 7 4 11 1 2 2 4 3 6 .5 1 1.5 1 2 0 1-2 2-4 3-6 2-4 4-7 4-11 0-5-4-9-8-9z"/></svg></div>
+                    <h3><svg viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V6a2 2 0 00-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"/></svg> Request an Appointment</h3>
+                    <form id="appointmentForm" onsubmit="handleSubmit(event)">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="parentName">Parent/Guardian Name *</label>
+                                <input type="text" id="parentName" name="parentName" required placeholder="Your full name" aria-required="true">
+                            </div>
+                            <div class="form-group">
+                                <label for="childName">Child's Name *</label>
+                                <input type="text" id="childName" name="childName" required placeholder="Child's full name" aria-required="true">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="childAge">Child's Age *</label>
+                                <select id="childAge" name="childAge" required aria-required="true">
+                                    <option value="">Select age</option>
+                                    <option value="under1">Under 1 year</option>
+                                    <option value="1-2">1-2 years</option>
+                                    <option value="3-5">3-5 years</option>
+                                    <option value="6-9">6-9 years</option>
+                                    <option value="10-12">10-12 years</option>
+                                    <option value="13-17">13-17 years</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required placeholder="(555) 000-0000" aria-required="true">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="parent@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="visitType">Visit Type</label>
+                            <select id="visitType" name="visitType">
+                                <option value="first">First Visit / New Patient</option>
+                                <option value="cleaning">Routine Cleaning</option>
+                                <option value="checkup">Checkup & Exam</option>
+                                <option value="ortho">Orthodontic Evaluation</option>
+                                <option value="emergency">Urgent / Emergency</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Anything we should know?</label>
+                            <textarea id="message" name="message" placeholder="Special needs, dental anxiety, questions..."></textarea>
+                        </div>
+                        <button type="submit" class="form-submit"><svg viewBox="0 0 24 30"><path d="M12 2C8 2 4 6 4 11c0 4 2 7 4 11 1 2 2 4 3 6 .5 1 1.5 1 2 0 1-2 2-4 3-6 2-4 4-7 4-11 0-5-4-9-8-9z"/></svg> Schedule Visit Now</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3><svg viewBox="0 0 24 30"><path d="M12 2C8 2 4 6 4 11c0 4 2 7 4 11 1 2 2 4 3 6 .5 1 1.5 1 2 0 1-2 2-4 3-6 2-4 4-7 4-11 0-5-4-9-8-9z"/></svg> Pediatric Dental Care Center</h3>
+                    <p>Making dental visits fun for kids since 2009. Board-certified pediatric dentists dedicated to your child's healthy, happy smile.</p>
+                    <p style="margin-top:12px;"><strong style="color:#FBBF24;">Board-Certified Pediatric Dentists</strong></p>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Children's Dentistry</a></li>
+                        <li><a href="#services">Dental Sealants</a></li>
+                        <li><a href="#services">Fluoride Treatments</a></li>
+                        <li><a href="#services">Orthodontic Evaluation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>For Parents</h4>
+                    <ul>
+                        <li><a href="#expect">First Visit Guide</a></li>
+                        <li><a href="#age-guide">Age-by-Age Guide</a></li>
+                        <li><a href="#parent-corner">Parent Resources</a></li>
+                        <li><a href="#schedule">Schedule Visit</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>600 Rainbow Parkway, Suite 300</li>
+                        <li><a href="tel:+15559990000">(555) 999-0000</a></li>
+                        <li>Mon-Fri: 8AM-5PM</li>
+                        <li>Sat: 8AM-12PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Pediatric Dental Care Center. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg></a>
+                    <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 01-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 017.8 2zm-.2 2A3.6 3.6 0 004 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 003.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6zm9.65 1.5a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 2a3 3 0 100 6 3 3 0 000-6z"/></svg></a>
+                    <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M22.46 6c-.77.35-1.6.58-2.46.69a4.3 4.3 0 001.88-2.38 8.59 8.59 0 01-2.72 1.04 4.28 4.28 0 00-7.32 3.91A12.16 12.16 0 013.15 4.83a4.28 4.28 0 001.33 5.71c-.69-.02-1.34-.21-1.9-.53v.05a4.28 4.28 0 003.43 4.19c-.63.17-1.3.2-1.95.08a4.28 4.28 0 004 2.97A8.6 8.6 0 012 19.54a12.13 12.13 0 006.56 1.92c7.88 0 12.2-6.53 12.2-12.2 0-.19 0-.37-.01-.56A8.72 8.72 0 0024 5.38a8.49 8.49 0 01-2.54.7z"/></svg></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top"><svg viewBox="0 0 24 24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg></button>
+
+    <!-- Mobile CTA -->
+    <div class="mobile-cta">
+        <a href="#schedule" class="btn-primary"><svg viewBox="0 0 24 30"><path d="M12 2C8 2 4 6 4 11c0 4 2 7 4 11 1 2 2 4 3 6 .5 1 1.5 1 2 0 1-2 2-4 3-6 2-4 4-7 4-11 0-5-4-9-8-9z"/></svg> Schedule Your Child's Visit</a>
+    </div>
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Dentist",
+        "name": "Pediatric Dental Care Center",
+        "description": "Making dental visits fun for kids! Board-certified pediatric dentists, colorful environment, toys & games.",
+        "url": "#",
+        "telephone": "+15559990000",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "600 Rainbow Parkway, Suite 300"
+        },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+                "opens": "08:00",
+                "closes": "17:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Saturday",
+                "opens": "08:00",
+                "closes": "12:00"
+            }
+        ],
+        "priceRange": "$$",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "reviewCount": "500"
+        }
+    }
+    </script>
+
+    <script>
+        // ===== HAMBURGER MENU =====
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+            hamburger.classList.toggle('active');
+        });
+        // Close menu on link click
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('open');
+            });
+        });
+
+        // ===== SCROLL ANIMATIONS (Intersection Observer) =====
+        const observerOptions = {
+            threshold: 0.15,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add('animated');
+                    }, index * 100);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+        document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+
+        // ===== ANIMATED COUNTERS =====
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const el = entry.target;
+                    const target = parseInt(el.getAttribute('data-count'));
+                    const duration = 2000;
+                    const start = performance.now();
+                    const animate = (now) => {
+                        const elapsed = now - start;
+                        const progress = Math.min(elapsed / duration, 1);
+                        // Ease out cubic
+                        const eased = 1 - Math.pow(1 - progress, 3);
+                        const current = Math.floor(eased * target);
+                        el.textContent = current.toLocaleString() + (target >= 10000 ? '+' : target === 4 ? '' : '+');
+                        if (progress < 1) requestAnimationFrame(animate);
+                    };
+                    requestAnimationFrame(animate);
+                    counterObserver.unobserve(el);
+                }
+            });
+        }, { threshold: 0.5 });
+        document.querySelectorAll('.fact-number').forEach(el => counterObserver.observe(el));
+
+        // ===== AGE GUIDE TABS =====
+        const ageTabs = document.querySelectorAll('.age-tab');
+        const ageContents = document.querySelectorAll('.age-content');
+        ageTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                ageTabs.forEach(t => t.classList.remove('active'));
+                ageContents.forEach(c => c.classList.remove('active'));
+                tab.classList.add('active');
+                document.getElementById('tab-' + tab.getAttribute('data-tab')).classList.add('active');
+            });
+        });
+
+        // ===== BACK TO TOP =====
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 600) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // ===== FORM HANDLING =====
+        function handleSubmit(e) {
+            e.preventDefault();
+            const form = e.target;
+            const btn = form.querySelector('.form-submit');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Request Sent! We\'ll Call You Soon!';
+            btn.style.background = '#34D399';
+            btn.style.color = '#1E3A8A';
+            setTimeout(() => {
+                btn.innerHTML = originalText;
+                btn.style.background = '#1E3A8A';
+                btn.style.color = 'white';
+                form.reset();
+            }, 3000);
+        }
+
+        // ===== NAV BACKGROUND ON SCROLL =====
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.style.boxShadow = '0 4px 30px rgba(30,58,138,0.4)';
+            } else {
+                nav.style.boxShadow = '0 4px 20px rgba(30,58,138,0.3)';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radiance Medical Aesthetics | Board-Certified Botox & Fillers</title>
+    <meta name="description" content="Natural-looking results from board-certified physicians. Botox, fillers, laser treatments & chemical peels. Free consultation. Book your appointment today.">
+    <meta name="keywords" content="botox, dermal fillers, laser hair removal, chemical peels, medical aesthetics, medspa, natural results">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* ========== RESET & BASE ========== */
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; font-size: 16px; }
+        body {
+            font-family: 'Source Sans 3', 'Source Sans Pro', sans-serif;
+            color: #2F2F2F;
+            background: #FAFAFA;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+        img { max-width: 100%; height: auto; display: block; }
+        a { text-decoration: none; color: inherit; transition: color 0.3s; }
+        ul { list-style: none; }
+        h1, h2, h3, h4, h5 { font-family: 'Playfair Display', serif; font-weight: 500; line-height: 1.3; }
+
+        /* ========== UTILITY ========== */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        .section-pad { padding: 100px 0; }
+        .text-center { text-align: center; }
+        .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
+
+        /* ========== SECTION HEADERS ========== */
+        .section-label {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #B76E79;
+            margin-bottom: 12px;
+            display: block;
+        }
+        .section-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            color: #2F2F2F;
+            margin-bottom: 16px;
+        }
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: #6b6b6b;
+            max-width: 600px;
+            margin: 0 auto 48px;
+            font-weight: 300;
+        }
+        .divider-line {
+            width: 60px;
+            height: 1px;
+            background: linear-gradient(90deg, #B76E79, #d4a0a7);
+            margin: 20px auto 24px;
+        }
+
+        /* ========== BUTTONS ========== */
+        .btn-primary {
+            display: inline-block;
+            padding: 16px 40px;
+            background: linear-gradient(135deg, #B76E79 0%, #9a525c 100%);
+            color: #fff;
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%; width: 100%; height: 100%;
+            background: linear-gradient(135deg, #c9838e 0%, #B76E79 100%);
+            transition: left 0.4s ease;
+            z-index: 0;
+        }
+        .btn-primary:hover::before { left: 0; }
+        .btn-primary span { position: relative; z-index: 1; }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(183,110,121,0.35); }
+
+        .btn-secondary {
+            display: inline-block;
+            padding: 14px 36px;
+            background: transparent;
+            color: #fff;
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            border: 1px solid rgba(255,255,255,0.5);
+            border-radius: 2px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: #fff;
+        }
+
+        /* ========== NAV ========== */
+        .nav {
+            position: fixed;
+            top: 0; left: 0; width: 100%;
+            z-index: 1000;
+            transition: all 0.4s ease;
+            padding: 20px 0;
+        }
+        .nav.scrolled {
+            background: rgba(47,47,47,0.97);
+            backdrop-filter: blur(10px);
+            padding: 12px 0;
+            box-shadow: 0 2px 30px rgba(0,0,0,0.15);
+        }
+        .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: #fff;
+            letter-spacing: 1px;
+        }
+        .nav-logo em {
+            color: #B76E79;
+            font-style: normal;
+        }
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+        .nav-links a {
+            color: rgba(255,255,255,0.85);
+            font-size: 0.82rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover { color: #B76E79; }
+        .nav-cta {
+            padding: 10px 24px !important;
+            background: linear-gradient(135deg, #B76E79, #9a525c) !important;
+            color: #fff !important;
+            border-radius: 2px;
+            font-size: 0.8rem !important;
+        }
+        .nav-cta:hover { box-shadow: 0 4px 15px rgba(183,110,121,0.4); }
+
+        .mobile-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 4px;
+        }
+        .mobile-toggle span {
+            width: 24px; height: 2px;
+            background: #fff;
+            transition: all 0.3s;
+        }
+        .mobile-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .mobile-toggle.active span:nth-child(2) { opacity: 0; }
+        .mobile-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+        /* ========== HERO ========== */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: #2F2F2F;
+        }
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background: url('https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1920&q=80') center/cover no-repeat;
+            filter: brightness(0.4);
+            transform: scale(1.05);
+            transition: transform 8s ease;
+        }
+        .hero:hover .hero-bg { transform: scale(1); }
+
+        /* Shimmer/Particle Overlay */
+        .hero-particles {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+            z-index: 1;
+        }
+        .hero-particles::before,
+        .hero-particles::after {
+            content: '';
+            position: absolute;
+            width: 300%;
+            height: 300%;
+            top: -100%;
+            left: -100%;
+            background: radial-gradient(ellipse, rgba(183,110,121,0.08) 0%, transparent 60%);
+            animation: shimmerRotate 20s linear infinite;
+        }
+        .hero-particles::after {
+            animation-delay: -10s;
+            background: radial-gradient(ellipse, rgba(255,255,255,0.03) 0%, transparent 50%);
+        }
+        @keyframes shimmerRotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .shimmer-dots {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            background-image:
+                radial-gradient(1px 1px at 10% 20%, rgba(183,110,121,0.4) 50%, transparent 50%),
+                radial-gradient(1px 1px at 30% 60%, rgba(255,255,255,0.2) 50%, transparent 50%),
+                radial-gradient(1.5px 1.5px at 50% 30%, rgba(183,110,121,0.3) 50%, transparent 50%),
+                radial-gradient(1px 1px at 70% 70%, rgba(255,255,255,0.15) 50%, transparent 50%),
+                radial-gradient(1px 1px at 90% 40%, rgba(183,110,121,0.35) 50%, transparent 50%),
+                radial-gradient(1.5px 1.5px at 20% 80%, rgba(255,255,255,0.2) 50%, transparent 50%),
+                radial-gradient(1px 1px at 60% 10%, rgba(183,110,121,0.25) 50%, transparent 50%),
+                radial-gradient(1px 1px at 80% 90%, rgba(255,255,255,0.15) 50%, transparent 50%);
+            animation: shimmerFloat 8s ease-in-out infinite alternate;
+        }
+        @keyframes shimmerFloat {
+            from { transform: translateY(0) translateX(0); opacity: 0.6; }
+            to { transform: translateY(-20px) translateX(10px); opacity: 1; }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 0 24px;
+            max-width: 800px;
+        }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 20px;
+            background: rgba(183,110,121,0.15);
+            border: 1px solid rgba(183,110,121,0.3);
+            border-radius: 30px;
+            color: #d4a0a7;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 28px;
+        }
+        .hero-badge::before {
+            content: '';
+            width: 6px; height: 6px;
+            background: #B76E79;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.5); }
+        }
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.2rem);
+            color: #fff;
+            font-weight: 400;
+            margin-bottom: 20px;
+            line-height: 1.15;
+        }
+        .hero h1 em {
+            font-style: italic;
+            color: #B76E79;
+        }
+        .hero-text {
+            font-size: 1.15rem;
+            color: rgba(255,255,255,0.75);
+            font-weight: 300;
+            max-width: 550px;
+            margin: 0 auto 36px;
+            line-height: 1.8;
+        }
+        .hero-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 48px;
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        .hero-stat-num {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: #B76E79;
+            display: block;
+        }
+        .hero-stat-label {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.5);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* ========== TREATMENTS ========== */
+        .treatments { background: #FAFAFA; }
+        .treatment-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+        .treatment-card {
+            border-radius: 4px;
+            overflow: hidden;
+            background: #fff;
+            transition: all 0.5s ease;
+            cursor: pointer;
+            border: 1px solid #f0eded;
+            display: flex;
+            flex-direction: column;
+        }
+        .treatment-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(183,110,121,0.12);
+            border-color: #B76E79;
+        }
+        .treatment-img {
+            position: relative;
+            height: 280px;
+            overflow: hidden;
+        }
+        .treatment-img img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+        .treatment-card:hover .treatment-img img { transform: scale(1.08); }
+        .treatment-info {
+            padding: 24px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .treatment-icon {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #FBF0F0;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+        .treatment-icon svg {
+            width: 20px;
+            height: 20px;
+            fill: #B76E79;
+        }
+        .treatment-name {
+            font-size: 1.25rem;
+            margin-bottom: 6px;
+        }
+        .treatment-desc {
+            font-size: 0.88rem;
+            color: #6b6b6b;
+            font-weight: 300;
+            line-height: 1.6;
+            margin-bottom: 12px;
+            flex: 1;
+        }
+        .treatment-price {
+            font-size: 0.85rem;
+            color: #B76E79;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        .treatment-tag {
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 0.7rem;
+            color: #999;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 4px 10px;
+            border: 1px solid #e8e8e8;
+            border-radius: 2px;
+        }
+
+        /* ========== RESULTS GALLERY ========== */
+        .results { background: #2F2F2F; color: #fff; }
+        .results .section-title { color: #fff; }
+        .results .section-subtitle { color: rgba(255,255,255,0.5); }
+        .results-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .gallery-card {
+            border-radius: 4px;
+            overflow: hidden;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(183,110,121,0.2);
+            transition: all 0.4s ease;
+        }
+        .gallery-card:hover {
+            border-color: #B76E79;
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+        }
+        .gallery-card-img {
+            width: 100%;
+            aspect-ratio: 4/5;
+            overflow: hidden;
+        }
+        .gallery-card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .gallery-card:hover .gallery-card-img img {
+            transform: scale(1.04);
+        }
+        .gallery-card-info {
+            padding: 20px;
+        }
+        .gallery-card-info h3 {
+            font-size: 1.1rem;
+            color: #fff;
+            margin-bottom: 4px;
+        }
+        .gallery-card-info p {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.5);
+            font-weight: 300;
+        }
+
+        /* ========== WHY CHOOSE US ========== */
+        .why-us { background: #FAFAFA; }
+        .pillars {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+        .pillar {
+            text-align: center;
+            padding: 48px 32px;
+            background: #fff;
+            border: 1px solid #f0eded;
+            border-radius: 4px;
+            transition: all 0.4s ease;
+            position: relative;
+        }
+        .pillar::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #B76E79, #d4a0a7);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+        .pillar:hover::after { transform: scaleX(1); }
+        .pillar:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+        }
+        .pillar-icon {
+            width: 70px; height: 70px;
+            margin: 0 auto 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #FBF0F0;
+            border-radius: 50%;
+        }
+        .pillar-icon svg { width: 30px; height: 30px; fill: #B76E79; }
+        .pillar h3 { font-size: 1.3rem; margin-bottom: 12px; }
+        .pillar p { font-size: 0.95rem; color: #6b6b6b; font-weight: 300; }
+
+        /* ========== MEET THE DOCTOR ========== */
+        .doctor { background: #fff; overflow: hidden; }
+        .doctor-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .doctor-img-wrap {
+            position: relative;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .doctor-img-wrap img { border-radius: 4px; width: 100%; }
+        .doctor-img-accent {
+            position: absolute;
+            top: -20px; left: -20px;
+            width: 100px; height: 100px;
+            border: 2px solid #B76E79;
+            border-radius: 4px;
+            z-index: -1;
+        }
+        .doctor-content h2 {
+            font-size: clamp(1.8rem, 3vw, 2.4rem);
+            margin-bottom: 8px;
+        }
+        .doctor-title {
+            color: #B76E79;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        .doctor-content p {
+            color: #6b6b6b;
+            font-weight: 300;
+            margin-bottom: 16px;
+            line-height: 1.8;
+        }
+        .doctor-credentials {
+            margin-top: 24px;
+            padding-top: 24px;
+            border-top: 1px solid #f0eded;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+        .credential {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        .credential svg { width: 18px; height: 18px; fill: #B76E79; flex-shrink: 0; margin-top: 2px; }
+        .credential span { font-size: 0.9rem; color: #555; }
+
+        /* ========== PROCESS ========== */
+        .process { background: #FBF0F0; }
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+            position: relative;
+        }
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: calc(12.5% + 16px);
+            right: calc(12.5% + 16px);
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #B76E79, transparent);
+        }
+        .process-step {
+            text-align: center;
+            position: relative;
+        }
+        .step-num {
+            width: 80px; height: 80px;
+            border-radius: 50%;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: #B76E79;
+            border: 2px solid #B76E79;
+            position: relative;
+            z-index: 1;
+            transition: all 0.4s;
+        }
+        .process-step:hover .step-num {
+            background: #B76E79;
+            color: #fff;
+        }
+        .process-step h3 { font-size: 1.1rem; margin-bottom: 10px; }
+        .process-step p { font-size: 0.9rem; color: #6b6b6b; font-weight: 300; }
+        .step-line-anim {
+            position: absolute;
+            top: 40px;
+            left: calc(12.5% + 16px);
+            right: calc(12.5% + 16px);
+            height: 2px;
+            background: #B76E79;
+            transform-origin: left;
+            transform: scaleX(0);
+            transition: transform 1.5s ease;
+        }
+        .step-line-anim.animate { transform: scaleX(1); }
+
+        /* ========== REVIEWS ========== */
+        .reviews { background: #fff; }
+        .review-carousel {
+            position: relative;
+            overflow: hidden;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .review-track {
+            display: flex;
+            transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        .review-card {
+            min-width: 100%;
+            padding: 0 40px;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        .review-avatar {
+            width: 80px; height: 80px;
+            border-radius: 50%;
+            background: #FBF0F0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: #B76E79;
+            border: 2px solid #B76E79;
+        }
+        .review-stars {
+            color: #B76E79;
+            margin-bottom: 12px;
+            display: flex;
+            gap: 4px;
+        }
+        .review-stars svg {
+            width: 16px;
+            height: 16px;
+            fill: #B76E79;
+        }
+        .review-text {
+            font-size: 1.15rem;
+            font-style: italic;
+            color: #444;
+            line-height: 1.8;
+            font-weight: 300;
+            margin-bottom: 16px;
+        }
+        .review-author {
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: #2F2F2F;
+        }
+        .review-detail {
+            font-size: 0.8rem;
+            color: #999;
+        }
+        .carousel-dots {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 40px;
+        }
+        .carousel-dot {
+            width: 10px; height: 10px;
+            border-radius: 50%;
+            border: 1px solid #B76E79;
+            background: transparent;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .carousel-dot.active { background: #B76E79; }
+
+        /* ========== OFFERS ========== */
+        .offers { background: #2F2F2F; color: #fff; }
+        .offers .section-title { color: #fff; }
+        .offers .section-subtitle { color: rgba(255,255,255,0.5); }
+        .offer-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .offer-card {
+            padding: 40px;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(183,110,121,0.25);
+            border-radius: 4px;
+            text-align: center;
+            transition: all 0.4s;
+        }
+        .offer-card:hover {
+            border-color: #B76E79;
+            background: rgba(183,110,121,0.08);
+            transform: translateY(-4px);
+        }
+        .offer-icon {
+            width: 48px;
+            height: 48px;
+            margin: 0 auto 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .offer-icon svg {
+            width: 32px;
+            height: 32px;
+            fill: #B76E79;
+        }
+        .offer-card h3 { font-size: 1.3rem; margin-bottom: 8px; color: #fff; }
+        .offer-card p { color: rgba(255,255,255,0.6); font-weight: 300; font-size: 0.95rem; margin-bottom: 20px; }
+        .offer-tag {
+            display: inline-block;
+            padding: 6px 16px;
+            background: linear-gradient(135deg, #B76E79, #9a525c);
+            color: #fff;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-radius: 2px;
+        }
+
+        /* ========== CONSULTATION FORM ========== */
+        .consultation { background: #FAFAFA; }
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .form-info h3 {
+            font-size: 1.6rem;
+            margin-bottom: 16px;
+        }
+        .form-info p {
+            color: #6b6b6b;
+            font-weight: 300;
+            line-height: 1.8;
+            margin-bottom: 24px;
+        }
+        .form-contact-line {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 14px;
+        }
+        .form-contact-line svg { width: 18px; height: 18px; stroke: #B76E79; fill: none; }
+        .form-contact-line span { font-size: 0.95rem; color: #555; }
+        .form-contact-line a { color: #B76E79; }
+        .form-contact-line a:hover { text-decoration: underline; }
+        .consult-form { display: flex; flex-direction: column; gap: 20px; }
+        .form-group { position: relative; }
+        .form-group label {
+            display: block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #999;
+            margin-bottom: 8px;
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px 0;
+            border: none;
+            border-bottom: 1px solid #ddd;
+            background: transparent;
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 1rem;
+            color: #2F2F2F;
+            transition: border-color 0.3s;
+            outline: none;
+            border-radius: 0;
+            -webkit-appearance: none;
+        }
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-bottom-color: #B76E79;
+        }
+        .form-group textarea { resize: vertical; min-height: 80px; }
+        .form-group select { cursor: pointer; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+
+        /* ========== FOOTER ========== */
+        .footer {
+            background: #1a1a1a;
+            color: rgba(255,255,255,0.6);
+            padding: 80px 0 40px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+        .footer-brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: #fff;
+            margin-bottom: 16px;
+        }
+        .footer-brand em { color: #B76E79; font-style: normal; }
+        .footer p { font-size: 0.9rem; line-height: 1.8; margin-bottom: 20px; }
+        .footer h4 {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #B76E79;
+            margin-bottom: 20px;
+        }
+        .footer ul li { margin-bottom: 10px; }
+        .footer ul li a { font-size: 0.9rem; color: rgba(255,255,255,0.5); transition: color 0.3s; }
+        .footer ul li a:hover { color: #B76E79; }
+        .footer-bottom {
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        .footer-bottom p { font-size: 0.8rem; margin-bottom: 0; }
+        .footer-badges {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        .footer-badge {
+            font-size: 0.7rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.3);
+            padding: 6px 12px;
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 2px;
+        }
+
+        /* ========== ANIMATIONS ========== */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .fade-in-left {
+            opacity: 0;
+            transform: translateX(-40px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .fade-in-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .fade-in-right {
+            opacity: 0;
+            transform: translateX(40px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .fade-in-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 1024px) {
+            .treatment-grid { grid-template-columns: repeat(2, 1fr); }
+            .process-steps { grid-template-columns: repeat(2, 1fr); }
+            .process-steps::before { display: none; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%; left: 0; right: 0;
+                background: rgba(47,47,47,0.98);
+                flex-direction: column;
+                padding: 24px;
+                gap: 20px;
+            }
+            .nav-links.open { display: flex; }
+            .mobile-toggle { display: flex; }
+            .hero h1 { font-size: 2.2rem; }
+            .hero-stats { flex-direction: column; gap: 20px; align-items: center; }
+            .treatment-grid { grid-template-columns: 1fr; }
+            .results-gallery { grid-template-columns: 1fr; }
+            .pillars { grid-template-columns: 1fr; }
+            .doctor-grid { grid-template-columns: 1fr; gap: 40px; }
+            .process-steps { grid-template-columns: 1fr 1fr; }
+            .review-card { grid-template-columns: 1fr; text-align: center; padding: 0 16px; }
+            .review-avatar { margin: 0 auto; }
+            .review-stars { justify-content: center; }
+            .offer-cards { grid-template-columns: 1fr; }
+            .form-grid { grid-template-columns: 1fr; }
+            .form-row { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .footer-bottom { flex-direction: column; text-align: center; }
+            .section-pad { padding: 70px 0; }
+        }
+        @media (max-width: 480px) {
+            .hero-buttons { flex-direction: column; align-items: center; }
+            .doctor-credentials { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="nav" id="mainNav" aria-label="Main navigation">
+        <div class="nav-inner">
+            <a href="#" class="nav-logo" aria-label="Radiance Medical Aesthetics Home"><em>Radiance</em> Medical Aesthetics</a>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="nav-links" id="navLinks" role="menubar">
+                <a href="#treatments" role="menuitem">Treatments</a>
+                <a href="#results" role="menuitem">Results</a>
+                <a href="#doctor" role="menuitem">Our Doctor</a>
+                <a href="#reviews" role="menuitem">Reviews</a>
+                <a href="#consultation" role="menuitem">Contact</a>
+                <a href="tel:+15551234000" class="nav-cta" role="menuitem">Book Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <header class="hero" id="hero">
+        <div class="hero-bg" aria-hidden="true"></div>
+        <div class="hero-particles" aria-hidden="true">
+            <div class="shimmer-dots"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">Board-Certified Physicians</div>
+            <h1>Where Science Meets <em>Natural Beauty</em></h1>
+            <p class="hero-text">
+                Expert aesthetic treatments delivered by board-certified physicians. Subtle enhancements that reveal your most confident, radiant self.
+            </p>
+            <div class="hero-buttons">
+                <a href="#consultation" class="btn-primary"><span>Book Your Consultation</span></a>
+                <a href="tel:+15551234000" class="btn-secondary">Call (555) 123-4000</a>
+            </div>
+            <div class="hero-stats">
+                <div>
+                    <span class="hero-stat-num">5,000+</span>
+                    <span class="hero-stat-label">Treatments Performed</span>
+                </div>
+                <div>
+                    <span class="hero-stat-num">15+</span>
+                    <span class="hero-stat-label">Years Experience</span>
+                </div>
+                <div>
+                    <span class="hero-stat-num">98%</span>
+                    <span class="hero-stat-label">Patient Satisfaction</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== TREATMENT MENU ===== -->
+    <section class="treatments section-pad" id="treatments">
+        <div class="container text-center">
+            <span class="section-label fade-in">Our Services</span>
+            <h2 class="section-title fade-in">Treatment Menu</h2>
+            <div class="divider-line fade-in"></div>
+            <p class="section-subtitle fade-in">Curated aesthetic treatments tailored to enhance your natural beauty with precision and artistry.</p>
+            <div class="treatment-grid">
+                <div class="treatment-card fade-in">
+                    <div class="treatment-img">
+                        <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=600&q=80" alt="Botox treatment for wrinkle reduction" loading="lazy">
+                    </div>
+                    <div class="treatment-info">
+                        <div class="treatment-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14h2V8h-2v8zm0-10h2V4h-2v2z"/><path d="M12 6a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM9.5 19l2.5-5 2.5 5"/></svg>
+                        </div>
+                        <h3 class="treatment-name">Botox</h3>
+                        <p class="treatment-desc">Smooth fine lines and wrinkles with precision-placed injections for a refreshed, natural appearance.</p>
+                        <span class="treatment-price">Starting at $12/unit</span>
+                        <span class="treatment-tag">FDA Approved</span>
+                    </div>
+                </div>
+                <div class="treatment-card fade-in">
+                    <div class="treatment-img">
+                        <img src="https://images.unsplash.com/photo-1612817288484-6f916006741a?w=600&q=80" alt="Dermal filler treatment for facial volume" loading="lazy">
+                    </div>
+                    <div class="treatment-info">
+                        <div class="treatment-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><path d="M12 3c-1.5 0-2.7.4-3.6 1.2C7.5 5 7 6.2 7 7.5c0 1.8 1 3.3 2.5 4.2-.3.6-.5 1.3-.5 2 0 1.5.7 2.8 1.8 3.7C9.7 18.3 9 19.6 9 21h2c0-1.1.6-2.1 1.5-2.6.4.1.8.1 1.2 0 .4.2.7.4 1 .7.3.4.5.8.6 1.3.1.2.1.4.1.6h2c0-1.4-.7-2.7-1.8-3.6 1.1-.9 1.8-2.2 1.8-3.7 0-.7-.2-1.4-.5-2C18 10.8 19 9.3 19 7.5c0-1.3-.5-2.5-1.4-3.3C16.7 3.4 15.5 3 14 3h-2z"/></svg>
+                        </div>
+                        <h3 class="treatment-name">Dermal Fillers</h3>
+                        <p class="treatment-desc">Restore youthful volume and contour with premium hyaluronic acid fillers for lips, cheeks, and jawline.</p>
+                        <span class="treatment-price">Starting at $650/syringe</span>
+                        <span class="treatment-tag">Instant Results</span>
+                    </div>
+                </div>
+                <div class="treatment-card fade-in">
+                    <div class="treatment-img">
+                        <img src="https://images.unsplash.com/photo-1519824145371-296894a0daa9?w=600&q=80" alt="Laser hair removal treatment" loading="lazy">
+                    </div>
+                    <div class="treatment-info">
+                        <div class="treatment-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><path d="M12 2L4 7v2l8-5 8 5V7l-8-5zM4 9v2l8 5 8-5V9l-8 5-8-5zm0 4v2l8 5 8-5v-2l-8 5-8-5z"/></svg>
+                        </div>
+                        <h3 class="treatment-name">Laser Hair Removal</h3>
+                        <p class="treatment-desc">Advanced laser technology for permanent hair reduction. Safe and effective for all skin types.</p>
+                        <span class="treatment-price">Starting at $200/session</span>
+                        <span class="treatment-tag">Advanced Technology</span>
+                    </div>
+                </div>
+                <div class="treatment-card fade-in">
+                    <div class="treatment-img">
+                        <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=600&q=80" alt="Chemical peel for skin rejuvenation" loading="lazy">
+                    </div>
+                    <div class="treatment-info">
+                        <div class="treatment-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 18a8 8 0 110-16 8 8 0 010 16zm0-14a6 6 0 100 12 6 6 0 000-12zm0 10a4 4 0 110-8 4 4 0 010 8z"/></svg>
+                        </div>
+                        <h3 class="treatment-name">Chemical Peels</h3>
+                        <p class="treatment-desc">Medical-grade chemical peels to reveal smoother, more radiant skin with customized formulations.</p>
+                        <span class="treatment-price">Starting at $175/treatment</span>
+                        <span class="treatment-tag">Skin Renewal</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== RESULTS GALLERY ===== -->
+    <section class="results section-pad" id="results">
+        <div class="container text-center">
+            <span class="section-label fade-in">Real Outcomes</span>
+            <h2 class="section-title fade-in">Results Gallery</h2>
+            <div class="divider-line fade-in"></div>
+            <p class="section-subtitle fade-in">See the transformative, natural-looking results our patients achieve with our treatments.</p>
+            <div class="results-gallery">
+                <div class="gallery-card fade-in">
+                    <div class="gallery-card-img">
+                        <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&q=80" alt="Radiant skin treatment result" loading="lazy">
+                    </div>
+                    <div class="gallery-card-info">
+                        <h3>Skin Rejuvenation</h3>
+                        <p>Chemical peel series - 3 sessions</p>
+                    </div>
+                </div>
+                <div class="gallery-card fade-in">
+                    <div class="gallery-card-img">
+                        <img src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273?w=600&q=80" alt="Youthful appearance after treatment" loading="lazy">
+                    </div>
+                    <div class="gallery-card-info">
+                        <h3>Anti-Aging Treatment</h3>
+                        <p>Botox and filler combination</p>
+                    </div>
+                </div>
+                <div class="gallery-card fade-in">
+                    <div class="gallery-card-img">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&q=80" alt="Natural facial enhancement result" loading="lazy">
+                    </div>
+                    <div class="gallery-card-info">
+                        <h3>Facial Contouring</h3>
+                        <p>Dermal filler treatment</p>
+                    </div>
+                </div>
+                <div class="gallery-card fade-in">
+                    <div class="gallery-card-img">
+                        <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=600&q=80" alt="Smooth clear skin after laser treatment" loading="lazy">
+                    </div>
+                    <div class="gallery-card-info">
+                        <h3>Laser Treatment</h3>
+                        <p>Laser skin resurfacing - 4 sessions</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== WHY CHOOSE US ===== -->
+    <section class="why-us section-pad" id="why-us">
+        <div class="container text-center">
+            <span class="section-label fade-in">Why Radiance</span>
+            <h2 class="section-title fade-in">The Radiance Difference</h2>
+            <div class="divider-line fade-in"></div>
+            <p class="section-subtitle fade-in">Three pillars that set us apart in the world of medical aesthetics.</p>
+            <div class="pillars">
+                <div class="pillar fade-in">
+                    <div class="pillar-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 2a5 5 0 015 5v1a5 5 0 01-10 0V7a5 5 0 015-5zM4 21v-2a5 5 0 015-5h6a5 5 0 015 5v2H4z"/><path d="M9 11l2 2 4-4" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3>Board-Certified Physicians</h3>
+                    <p>Every treatment is performed or supervised by board-certified physicians with extensive training in facial anatomy and aesthetics.</p>
+                </div>
+                <div class="pillar fade-in">
+                    <div class="pillar-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/><path d="M8 12c0 2.21 1.79 4 4 4s4-1.79 4-4-1.79-4-4-4-4 1.79-4 4z"/></svg>
+                    </div>
+                    <h3>Natural-Looking Results</h3>
+                    <p>Our philosophy centers on subtle enhancement. We believe the best aesthetic work is the kind that no one can tell you had done.</p>
+                </div>
+                <div class="pillar fade-in">
+                    <div class="pillar-icon">
+                        <svg viewBox="0 0 24 24"><path d="M4 5a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H6a2 2 0 01-2-2V5z"/><path d="M8 21h8M12 17v4"/><circle cx="12" cy="10" r="3"/></svg>
+                    </div>
+                    <h3>Advanced Technology</h3>
+                    <p>We invest in the latest FDA-approved technology and techniques to deliver safer, more effective, and more comfortable treatments.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MEET THE DOCTOR ===== -->
+    <section class="doctor section-pad" id="doctor">
+        <div class="container">
+            <div class="doctor-grid">
+                <div class="doctor-img-wrap fade-in-left">
+                    <div class="doctor-img-accent" aria-hidden="true"></div>
+                    <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=800&q=80" alt="Dr. Sophia Chen, Medical Director at Radiance Medical Aesthetics" loading="lazy">
+                </div>
+                <div class="doctor-content fade-in-right">
+                    <span class="section-label">Meet Your Physician</span>
+                    <h2>Dr. Sophia Chen, M.D.</h2>
+                    <p class="doctor-title">Medical Director &amp; Lead Aesthetics Physician</p>
+                    <p>With over 15 years of experience in medical aesthetics, Dr. Chen combines her deep understanding of facial anatomy with an artistic eye to deliver results that are beautifully subtle and uniquely you.</p>
+                    <p>Her approach is patient-centered: every treatment plan begins with a thorough consultation to understand your goals, assess your anatomy, and craft a personalized strategy that enhances your natural features.</p>
+                    <div class="doctor-credentials">
+                        <div class="credential">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                            <span>Board-Certified Dermatologist</span>
+                        </div>
+                        <div class="credential">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                            <span>Harvard Medical School</span>
+                        </div>
+                        <div class="credential">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                            <span>5,000+ Aesthetic Procedures</span>
+                        </div>
+                        <div class="credential">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                            <span>Allergan Top Injector</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TREATMENT PROCESS ===== -->
+    <section class="process section-pad" id="process">
+        <div class="container text-center">
+            <span class="section-label fade-in">Your Journey</span>
+            <h2 class="section-title fade-in">Treatment Process</h2>
+            <div class="divider-line fade-in"></div>
+            <p class="section-subtitle fade-in">A seamless experience from your first consultation to your final follow-up.</p>
+            <div class="process-steps">
+                <div class="step-line-anim" aria-hidden="true"></div>
+                <div class="process-step fade-in">
+                    <div class="step-num">1</div>
+                    <h3>Consultation</h3>
+                    <p>Complimentary one-on-one meeting with Dr. Chen to discuss your goals and create a personalized treatment plan.</p>
+                </div>
+                <div class="process-step fade-in">
+                    <div class="step-num">2</div>
+                    <h3>Custom Plan</h3>
+                    <p>A tailored treatment strategy designed for your unique facial anatomy, lifestyle, and aesthetic aspirations.</p>
+                </div>
+                <div class="process-step fade-in">
+                    <div class="step-num">3</div>
+                    <h3>Treatment</h3>
+                    <p>Expert administration in our state-of-the-art facility. Most treatments take 30-60 minutes with minimal discomfort.</p>
+                </div>
+                <div class="process-step fade-in">
+                    <div class="step-num">4</div>
+                    <h3>Follow-Up</h3>
+                    <p>Complimentary follow-up appointment to assess results and make any refinements for optimal outcomes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PATIENT REVIEWS ===== -->
+    <section class="reviews section-pad" id="reviews">
+        <div class="container text-center">
+            <span class="section-label fade-in">Testimonials</span>
+            <h2 class="section-title fade-in">What Our Patients Say</h2>
+            <div class="divider-line fade-in"></div>
+            <p class="section-subtitle fade-in">Real stories from real patients who trust Radiance with their care.</p>
+            <div class="review-carousel fade-in" aria-label="Patient testimonials carousel">
+                <div class="review-track" id="reviewTrack">
+                    <div class="review-card" role="group" aria-label="Review 1 of 4">
+                        <div class="review-avatar" aria-hidden="true">ML</div>
+                        <div>
+                            <div class="review-stars" aria-label="5 out of 5 stars">
+                                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                            </div>
+                            <p class="review-text">"I was terrified of looking 'overdone,' but Dr. Chen completely put me at ease. My Botox results are so natural that my friends just keep telling me I look well-rested. Exactly what I wanted."</p>
+                            <p class="review-author">Margaret L.</p>
+                            <p class="review-detail">Botox Patient - Age 52</p>
+                        </div>
+                    </div>
+                    <div class="review-card" role="group" aria-label="Review 2 of 4">
+                        <div class="review-avatar" aria-hidden="true">JR</div>
+                        <div>
+                            <div class="review-stars" aria-label="5 out of 5 stars">
+                                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                            </div>
+                            <p class="review-text">"As a man, I wasn't sure if a medspa was for me. The team at Radiance made the entire experience comfortable and discreet. The filler work on my jawline took years off my appearance."</p>
+                            <p class="review-author">James R.</p>
+                            <p class="review-detail">Dermal Fillers Patient - Age 47</p>
+                        </div>
+                    </div>
+                    <div class="review-card" role="group" aria-label="Review 3 of 4">
+                        <div class="review-avatar" aria-hidden="true">SC</div>
+                        <div>
+                            <div class="review-stars" aria-label="5 out of 5 stars">
+                                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                            </div>
+                            <p class="review-text">"I've done laser hair removal at three different places before coming to Radiance. The difference in technology and expertise is night and day. Finally seeing real, permanent results."</p>
+                            <p class="review-author">Sarah C.</p>
+                            <p class="review-detail">Laser Hair Removal Patient - Age 38</p>
+                        </div>
+                    </div>
+                    <div class="review-card" role="group" aria-label="Review 4 of 4">
+                        <div class="review-avatar" aria-hidden="true">DP</div>
+                        <div>
+                            <div class="review-stars" aria-label="5 out of 5 stars">
+                                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                            </div>
+                            <p class="review-text">"The chemical peel Dr. Chen recommended transformed my skin. Years of sun damage and uneven tone - gone. The clinical environment also gave me so much confidence in the safety of the procedure."</p>
+                            <p class="review-author">Diana P.</p>
+                            <p class="review-detail">Chemical Peel Patient - Age 55</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-dots" role="tablist" aria-label="Review navigation">
+                    <button class="carousel-dot active" data-index="0" role="tab" aria-selected="true" aria-label="Review 1"></button>
+                    <button class="carousel-dot" data-index="1" role="tab" aria-selected="false" aria-label="Review 2"></button>
+                    <button class="carousel-dot" data-index="2" role="tab" aria-selected="false" aria-label="Review 3"></button>
+                    <button class="carousel-dot" data-index="3" role="tab" aria-selected="false" aria-label="Review 4"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SPECIAL OFFERS ===== -->
+    <section class="offers section-pad" id="offers">
+        <div class="container text-center">
+            <span class="section-label fade-in">Limited Time</span>
+            <h2 class="section-title fade-in">Special Offers</h2>
+            <div class="divider-line fade-in"></div>
+            <p class="section-subtitle fade-in">Exceptional value on our most popular treatments.</p>
+            <div class="offer-cards">
+                <div class="offer-card fade-in">
+                    <div class="offer-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24"><path d="M12 2L9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2z"/></svg>
+                    </div>
+                    <h3>Spring Special</h3>
+                    <p>20% off your first treatment when you book a complimentary consultation this month.</p>
+                    <span class="offer-tag">Save 20%</span>
+                </div>
+                <div class="offer-card fade-in">
+                    <div class="offer-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+                    </div>
+                    <h3>Free Consultation</h3>
+                    <p>New patients receive a complimentary consultation with Dr. Chen, including a personalized treatment plan.</p>
+                    <span class="offer-tag">New Patients</span>
+                </div>
+            </div>
+            <p style="margin-top:32px; color: rgba(255,255,255,0.4); font-size:0.85rem;" class="fade-in">Flexible financing available. Ask about our payment plans.</p>
+        </div>
+    </section>
+
+    <!-- ===== CONSULTATION FORM ===== -->
+    <section class="consultation section-pad" id="consultation">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 48px;">
+                <span class="section-label fade-in">Get Started</span>
+                <h2 class="section-title fade-in">Book Your Consultation</h2>
+                <div class="divider-line fade-in"></div>
+                <p class="section-subtitle fade-in">Take the first step toward your aesthetic goals. Consultations are always complimentary.</p>
+            </div>
+            <div class="form-grid">
+                <div class="form-info fade-in-left">
+                    <h3>Visit Radiance</h3>
+                    <p>Our welcoming, state-of-the-art facility is designed to make you feel comfortable from the moment you walk in. We look forward to meeting you.</p>
+                    <div class="form-contact-line">
+                        <svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        <span>1800 Medical Center Drive, Suite 400</span>
+                    </div>
+                    <div class="form-contact-line">
+                        <svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                        <span><a href="tel:+15551234000">(555) 123-4000</a></span>
+                    </div>
+                    <div class="form-contact-line">
+                        <svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        <span>Mon-Fri: 9AM-6PM / Sat: 9AM-3PM</span>
+                    </div>
+                    <div class="form-contact-line">
+                        <svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        <span><a href="mailto:info@radiancemedaesthetics.com">info@radiancemedaesthetics.com</a></span>
+                    </div>
+                    <div style="margin-top: 28px;">
+                        <img src="https://images.unsplash.com/photo-1629909615184-74f495363b67?w=800&q=80" alt="Radiance Medical Aesthetics office interior" loading="lazy" style="border-radius: 4px; width: 100%;">
+                    </div>
+                </div>
+                <form class="consult-form fade-in-right" id="consultForm" novalidate>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" name="firstName" required autocomplete="given-name" placeholder="Jane">
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" name="lastName" required autocomplete="family-name" placeholder="Smith">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required autocomplete="email" placeholder="jane@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone" required autocomplete="tel" placeholder="(555) 000-0000">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="treatment">Treatment of Interest</label>
+                        <select id="treatment" name="treatment" required>
+                            <option value="" disabled selected>Select a treatment</option>
+                            <option value="botox">Botox</option>
+                            <option value="fillers">Dermal Fillers</option>
+                            <option value="laser">Laser Hair Removal</option>
+                            <option value="peels">Chemical Peels</option>
+                            <option value="multiple">Multiple Treatments</option>
+                            <option value="unsure">Not Sure Yet</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Tell Us About Your Goals</label>
+                        <textarea id="message" name="message" rows="3" placeholder="Share what you'd like to achieve..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary" style="width:100%; text-align:center;"><span>Request Free Consultation</span></button>
+                    <p style="font-size: 0.78rem; color: #999; text-align: center; margin-top: 8px;">Your information is kept strictly confidential. We will respond within 24 hours.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-brand"><em>Radiance</em> Medical Aesthetics</div>
+                    <p>Board-certified physician-led medical spa committed to natural-looking aesthetic results. Where science meets beauty.</p>
+                    <p style="font-size: 0.85rem;">1800 Medical Center Drive, Suite 400<br>Mon-Fri: 9AM-6PM / Sat: 9AM-3PM</p>
+                </div>
+                <div>
+                    <h4>Treatments</h4>
+                    <ul>
+                        <li><a href="#treatments">Botox</a></li>
+                        <li><a href="#treatments">Dermal Fillers</a></li>
+                        <li><a href="#treatments">Laser Hair Removal</a></li>
+                        <li><a href="#treatments">Chemical Peels</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#doctor">Our Physician</a></li>
+                        <li><a href="#results">Results</a></li>
+                        <li><a href="#reviews">Patient Reviews</a></li>
+                        <li><a href="#offers">Special Offers</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="tel:+15551234000">(555) 123-4000</a></li>
+                        <li><a href="mailto:info@radiancemedaesthetics.com">Email Us</a></li>
+                        <li><a href="#consultation">Book Consultation</a></li>
+                        <li><a href="#">Financing Options</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Radiance Medical Aesthetics. All rights reserved.</p>
+                <div class="footer-badges">
+                    <span class="footer-badge">FDA Approved Technology</span>
+                    <span class="footer-badge">Board Certified</span>
+                    <span class="footer-badge">HIPAA Compliant</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+    (function() {
+        'use strict';
+
+        // === Sticky Nav ===
+        const nav = document.getElementById('mainNav');
+        function handleScroll() {
+            nav.classList.toggle('scrolled', window.scrollY > 60);
+        }
+        window.addEventListener('scroll', handleScroll, { passive: true });
+
+        // === Mobile Toggle ===
+        const toggle = document.getElementById('mobileToggle');
+        const navLinks = document.getElementById('navLinks');
+        toggle.addEventListener('click', function() {
+            const open = navLinks.classList.toggle('open');
+            toggle.classList.toggle('active');
+            toggle.setAttribute('aria-expanded', open);
+        });
+        navLinks.querySelectorAll('a').forEach(function(a) {
+            a.addEventListener('click', function() {
+                navLinks.classList.remove('open');
+                toggle.classList.remove('active');
+                toggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // === Intersection Observer (Fade-in) ===
+        const fadeEls = document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right');
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+        fadeEls.forEach(function(el) { observer.observe(el); });
+
+        // === Process Step Line Animation ===
+        const stepLine = document.querySelector('.step-line-anim');
+        if (stepLine) {
+            const stepObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        stepLine.classList.add('animate');
+                        stepObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.3 });
+            stepObserver.observe(stepLine.parentElement);
+        }
+
+        // === Review Carousel ===
+        var track = document.getElementById('reviewTrack');
+        var dots = document.querySelectorAll('.carousel-dot');
+        var current = 0;
+        var total = dots.length;
+        var autoTimer;
+
+        function goTo(i) {
+            current = ((i % total) + total) % total;
+            track.style.transform = 'translateX(-' + (current * 100) + '%)';
+            dots.forEach(function(d, idx) {
+                d.classList.toggle('active', idx === current);
+                d.setAttribute('aria-selected', idx === current);
+            });
+        }
+        dots.forEach(function(dot) {
+            dot.addEventListener('click', function() {
+                goTo(parseInt(this.dataset.index));
+                resetAuto();
+            });
+        });
+        function autoSlide() {
+            autoTimer = setInterval(function() { goTo(current + 1); }, 5000);
+        }
+        function resetAuto() { clearInterval(autoTimer); autoSlide(); }
+        autoSlide();
+
+        // === Form Submission ===
+        var form = document.getElementById('consultForm');
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            var btn = form.querySelector('.btn-primary');
+            btn.innerHTML = '<span>Thank You! We\'ll Be In Touch.</span>';
+            btn.style.pointerEvents = 'none';
+            btn.style.opacity = '0.8';
+            setTimeout(function() {
+                btn.innerHTML = '<span>Request Free Consultation</span>';
+                btn.style.pointerEvents = '';
+                btn.style.opacity = '';
+                form.reset();
+            }, 4000);
+        });
+
+        // === Smooth scroll for anchor links ===
+        document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+            a.addEventListener('click', function(e) {
+                var target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    var offset = nav.offsetHeight + 10;
+                    var top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                    window.scrollTo({ top: top, behavior: 'smooth' });
+                }
+            });
+        });
+
+        // === Doctor Parallax ===
+        var doctorImg = document.querySelector('.doctor-img-wrap img');
+        if (doctorImg) {
+            window.addEventListener('scroll', function() {
+                var rect = doctorImg.parentElement.getBoundingClientRect();
+                var inView = rect.top < window.innerHeight && rect.bottom > 0;
+                if (inView) {
+                    var pct = (window.innerHeight - rect.top) / (window.innerHeight + rect.height);
+                    doctorImg.style.transform = 'translateY(' + ((pct - 0.5) * 30) + 'px)';
+                }
+            }, { passive: true });
+        }
+
+    })();
+    </script>
+
+</body>
+</html>
