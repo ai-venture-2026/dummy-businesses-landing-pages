@@ -1,0 +1,1785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Compassionate Paws Veterinary | Fear-Free Certified Family Vet</title>
+<meta name="description" content="Compassionate Paws Veterinary offers full-service family veterinary care including wellness exams, vaccinations, dental care, and senior pet care. Fear-Free Certified. Accepting new patients.">
+<meta name="keywords" content="veterinary, vet clinic, fear-free certified, pet wellness, dog vet, cat vet, senior pet care, vaccinations, dental care">
+<meta property="og:title" content="Compassionate Paws Veterinary | Fear-Free Certified Family Vet">
+<meta property="og:description" content="Where Every Pet is Family. Full-service veterinary care with gentle, fear-free handling. Accepting new patients — FREE first wellness exam for new pets.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=1200&q=80">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://compassionatepawsvet.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VeterinaryCare",
+  "name": "Compassionate Paws Veterinary",
+  "description": "Full-service family veterinary clinic. Fear-Free Certified. Wellness exams, vaccinations, dental care, surgery, senior pet care, and diagnostic imaging.",
+  "url": "https://compassionatepawsvet.com",
+  "telephone": "+15550123456",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "2847 Meadowbrook Lane",
+    "addressLocality": "Maplewood",
+    "addressRegion": "CA",
+    "postalCode": "94025",
+    "addressCountry": "US"
+  },
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification","dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens": "07:30","closes": "18:00"},
+    {"@type": "OpeningHoursSpecification","dayOfWeek": "Saturday","opens": "08:00","closes": "14:00"},
+    {"@type": "OpeningHoursSpecification","dayOfWeek": "Sunday","opens": "09:00","closes": "12:00"}
+  ],
+  "priceRange": "$$",
+  "hasMap": "https://maps.google.com",
+  "image": "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=1200&q=80"
+}
+</script>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --blue: #5B9BD5;
+  --blue-dark: #4a88c2;
+  --blue-light: #d6e9f8;
+  --green: #90EE90;
+  --green-dark: #6acd6a;
+  --white: #FFFFFF;
+  --warm-bg: #FFF9F0;
+  --paw: #FF8C69;
+  --paw-light: #ffe4d6;
+  --text: #2d3748;
+  --text-light: #718096;
+  --border: #e2e8f0;
+  --shadow: 0 4px 24px rgba(91,155,213,0.10);
+  --shadow-lg: 0 8px 40px rgba(91,155,213,0.16);
+  --radius: 10px;
+  --radius-sm: 8px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Nunito', sans-serif;
+  color: var(--text);
+  background: var(--white);
+  font-size: 1rem;
+  line-height: 1.65;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+img { max-width: 100%; display: block; object-fit: cover; }
+a { text-decoration: none; color: inherit; }
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+
+/* ─── BUTTONS ─── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.75rem 1.75rem;
+  border-radius: 50px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+  max-height: 52px;
+}
+.btn-primary { background: var(--green); color: var(--text); }
+.btn-primary:hover { background: var(--green-dark); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(144,238,144,0.4); }
+.btn-blue { background: var(--blue); color: var(--white); }
+.btn-blue:hover { background: var(--blue-dark); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(91,155,213,0.4); }
+.btn-outline { background: transparent; border: 2px solid var(--white); color: var(--white); }
+.btn-outline:hover { background: var(--white); color: var(--blue); transform: translateY(-2px); }
+.btn-paw { background: var(--paw); color: var(--white); }
+.btn-paw:hover { background: #e67a57; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(255,140,105,0.4); }
+
+/* ─── SECTION HEADERS ─── */
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--blue-light);
+  color: var(--blue-dark);
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  font-family: 'Quicksand', sans-serif;
+  letter-spacing: 0.5px;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+.section-title {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  margin-bottom: 16px;
+  color: var(--text);
+}
+.section-subtitle {
+  color: var(--text-light);
+  font-size: 1rem;
+  max-width: 600px;
+}
+.section-header { text-align: center; margin-bottom: 3rem; }
+.section-header .section-subtitle { margin: 0 auto; }
+
+/* ─── SCROLL ANIMATIONS ─── */
+.reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-left { opacity: 0; transform: translateX(-40px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.reveal-left.visible { opacity: 1; transform: translateX(0); }
+.reveal-right { opacity: 0; transform: translateX(40px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.reveal-right.visible { opacity: 1; transform: translateX(0); }
+
+/* ─── NAV ─── */
+#navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--white);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+  transition: box-shadow 0.3s ease;
+}
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 66px;
+  padding: 0 2rem;
+}
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--blue);
+}
+.nav-logo span { color: var(--text); }
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  list-style: none;
+}
+.nav-links a {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text);
+  transition: color 0.2s;
+  font-family: 'Quicksand', sans-serif;
+}
+.nav-links a:hover { color: var(--blue); }
+.nav-cta { display: flex; align-items: center; gap: 12px; }
+.nav-phone {
+  font-weight: 700;
+  font-family: 'Quicksand', sans-serif;
+  color: var(--text);
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 4px;
+  background: none;
+  border: none;
+}
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 2.5px;
+  background: var(--text);
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background: var(--white);
+  border-top: 1px solid var(--border);
+  padding: 20px 24px 24px;
+  gap: 16px;
+}
+.mobile-menu.open { display: flex; }
+.mobile-menu a {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  color: var(--text);
+  font-size: 1rem;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+/* ─── HERO ─── */
+#hero {
+  background: linear-gradient(135deg, #eaf4fd 0%, var(--warm-bg) 100%);
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 60px 0;
+}
+.hero-paw-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  opacity: 0.05;
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  align-items: center;
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--white);
+  border: 2px solid var(--green);
+  color: #3a8a3a;
+  padding: 8px 18px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  font-family: 'Quicksand', sans-serif;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 12px rgba(144,238,144,0.3);
+}
+.hero-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  color: var(--text);
+}
+.hero-title .highlight { color: var(--blue); }
+.hero-desc {
+  font-size: 1.0625rem;
+  color: var(--text-light);
+  margin-bottom: 1.5rem;
+  max-width: 600px;
+}
+.hero-ctas { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 40px; }
+.hero-trust {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+.trust-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.trust-num {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: var(--blue);
+}
+.trust-label {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  text-align: center;
+  font-weight: 600;
+}
+.hero-img-wrap {
+  position: relative;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+.hero-img-wrap img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+  border-radius: 30px;
+}
+.hero-img-badge {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  background: var(--white);
+  border-radius: var(--radius-sm);
+  padding: 14px 20px;
+  box-shadow: var(--shadow);
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.hero-img-badge .badge-green { color: #3a8a3a; font-size: 0.9rem; }
+.hero-img-badge .badge-sub { color: var(--text-light); font-size: 0.78rem; font-weight: 600; }
+.new-pet-banner {
+  background: linear-gradient(90deg, var(--paw) 0%, #ff6b3d 100%);
+  color: var(--white);
+  text-align: center;
+  padding: 14px 24px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.new-pet-banner a { color: var(--white); text-decoration: underline; }
+
+/* ─── SERVICES ─── */
+#services { padding: 4rem 0; background: var(--white); }
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.service-card {
+  background: var(--warm-bg);
+  border-radius: 10px;
+  padding: 1.75rem;
+  text-align: center;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: var(--blue);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  transform-origin: left;
+}
+.service-card:hover { border-color: var(--blue-light); box-shadow: var(--shadow); transform: translateY(-4px); }
+.service-card:hover::before { transform: scaleX(1); }
+.service-icon {
+  width: 72px;
+  height: 72px;
+  background: var(--blue-light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+.service-card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 10px;
+  color: var(--text);
+}
+.service-card p { color: var(--text-light); font-size: 0.93rem; line-height: 1.6; }
+
+/* ─── FEAR FREE ─── */
+#fear-free {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, #eaf4fd 0%, #f0faf0 100%);
+}
+.fear-free-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+}
+.fear-free-img {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+.fear-free-img img { width: 100%; height: 480px; object-fit: cover; }
+.ff-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--white);
+  border: 3px solid var(--green);
+  border-radius: var(--radius-sm);
+  padding: 12px 20px;
+  margin-bottom: 28px;
+  box-shadow: 0 4px 16px rgba(144,238,144,0.2);
+}
+.ff-badge-text { font-family: 'Quicksand', sans-serif; font-weight: 700; color: #3a8a3a; font-size: 1rem; }
+.ff-badge-sub { font-size: 0.78rem; color: var(--text-light); font-weight: 600; }
+.fear-free-content .section-title { text-align: left; }
+.fear-free-content p { color: var(--text-light); margin-bottom: 20px; }
+.ff-pillars {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 28px 0;
+}
+.ff-pillar {
+  background: var(--white);
+  border-radius: var(--radius-sm);
+  padding: 16px 18px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  box-shadow: 0 2px 12px rgba(91,155,213,0.08);
+}
+.ff-pillar-icon {
+  width: 36px;
+  height: 36px;
+  background: var(--blue-light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.ff-pillar h4 { font-size: 0.9rem; margin-bottom: 4px; color: var(--text); }
+.ff-pillar p { font-size: 0.82rem; color: var(--text-light); line-height: 1.4; margin: 0; }
+
+/* ─── SPECIES ─── */
+#species { padding: 4rem 0; background: var(--white); }
+.species-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+.species-card {
+  border-radius: var(--radius);
+  overflow: hidden;
+  position: relative;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+.species-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+.species-card img { width: 100%; height: 200px; object-fit: cover; transition: transform 0.4s ease; }
+.species-card:hover img { transform: scale(1.06); }
+.species-label {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: linear-gradient(transparent, rgba(0,0,0,0.65));
+  color: var(--white);
+  padding: 30px 16px 16px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* ─── VETS ─── */
+#vets { padding: 4rem 0; background: var(--warm-bg); }
+.vets-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.vet-card {
+  background: var(--white);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.vet-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+.vet-img { width: 100%; height: 280px; object-fit: cover; object-position: top; }
+.vet-body { padding: 28px; }
+.vet-specialty {
+  display: inline-block;
+  background: var(--blue-light);
+  color: var(--blue-dark);
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 50px;
+  margin-bottom: 12px;
+  font-family: 'Quicksand', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.vet-card h3 { font-size: 1.2rem; margin-bottom: 4px; }
+.vet-card .vet-credentials { color: var(--blue); font-size: 0.88rem; font-weight: 700; margin-bottom: 12px; font-family: 'Quicksand', sans-serif; }
+.vet-card p { color: var(--text-light); font-size: 0.92rem; line-height: 1.6; }
+
+/* ─── TESTIMONIALS ─── */
+#testimonials { padding: 4rem 0; background: var(--blue); }
+#testimonials .section-label { background: rgba(255,255,255,0.2); color: var(--white); }
+#testimonials .section-title { color: var(--white); }
+#testimonials .section-subtitle { color: rgba(255,255,255,0.75); }
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+.testimonial-card {
+  background: var(--white);
+  border-radius: 10px;
+  padding: 1.75rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+.testimonial-card:hover { transform: translateY(-4px); }
+.stars { display: flex; gap: 4px; margin-bottom: 16px; }
+.star-icon { color: #FFD700; }
+.testimonial-text { color: var(--text); font-size: 1rem; line-height: 1.7; margin-bottom: 20px; font-style: italic; }
+.testimonial-author { display: flex; align-items: center; gap: 12px; }
+.author-avatar {
+  width: 48px; height: 48px;
+  background: var(--blue-light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  color: var(--blue-dark);
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+.author-name { font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 0.95rem; }
+.author-pet { font-size: 0.82rem; color: var(--text-light); }
+
+/* ─── SENIOR PET ─── */
+#senior-care { padding: 4rem 0; background: var(--warm-bg); }
+.senior-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+}
+.senior-content .section-title { text-align: left; }
+.senior-content p { color: var(--text-light); margin-bottom: 20px; }
+.senior-features { display: flex; flex-direction: column; gap: 16px; margin: 28px 0; }
+.senior-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: var(--white);
+  border-radius: var(--radius-sm);
+  padding: 16px 20px;
+  box-shadow: 0 2px 12px rgba(91,155,213,0.07);
+}
+.senior-feature-icon {
+  width: 40px; height: 40px;
+  background: var(--paw-light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.senior-feature h4 { font-size: 0.95rem; margin-bottom: 4px; }
+.senior-feature p { font-size: 0.85rem; color: var(--text-light); margin: 0; }
+.senior-img { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-lg); }
+.senior-img img { width: 100%; height: 500px; object-fit: cover; }
+
+/* ─── LOCATION ─── */
+#location { padding: 4rem 0; background: var(--white); }
+.location-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+.location-info h2 { text-align: left; margin-bottom: 32px; }
+.info-block {
+  background: var(--warm-bg);
+  border-radius: var(--radius-sm);
+  padding: 24px;
+  margin-bottom: 20px;
+}
+.info-block h3 {
+  font-size: 1rem;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.hours-row { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid var(--border); font-size: 0.92rem; }
+.hours-row:last-child { border-bottom: none; }
+.hours-row .day { font-weight: 600; }
+.emergency-block {
+  background: linear-gradient(135deg, var(--paw) 0%, #ff6b3d 100%);
+  color: var(--white);
+  border-radius: var(--radius);
+  padding: 28px;
+  text-align: center;
+}
+.emergency-block h3 { font-size: 1.2rem; margin-bottom: 8px; color: var(--white); }
+.emergency-block p { font-size: 0.9rem; opacity: 0.9; margin-bottom: 16px; }
+.emergency-phone { font-size: 1.5rem; font-family: 'Quicksand', sans-serif; font-weight: 700; color: var(--white); display: flex; align-items: center; justify-content: center; gap: 8px; }
+.map-placeholder {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  background: var(--blue-light);
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  color: var(--blue-dark);
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+}
+.map-placeholder p { font-size: 0.95rem; text-align: center; color: var(--text-light); padding: 0 24px; }
+.parking-note {
+  background: var(--green);
+  border-radius: var(--radius-sm);
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #2a6a2a;
+  margin-top: 16px;
+}
+
+/* ─── PET HEALTH TIPS ─── */
+#tips { padding: 4rem 0; background: var(--warm-bg); }
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.tip-card {
+  background: var(--white);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.tip-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+.tip-img { width: 100%; height: 260px; object-fit: cover; transition: transform 0.4s ease; overflow: hidden; }
+.tip-card:hover .tip-img img { transform: scale(1.06); }
+.tip-img img { width: 100%; height: 100%; object-fit: cover; }
+.tip-body { padding: 24px; }
+.tip-tag {
+  display: inline-block;
+  background: var(--paw-light);
+  color: var(--paw);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 50px;
+  margin-bottom: 10px;
+  font-family: 'Quicksand', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.tip-card h3 { font-size: 1.05rem; margin-bottom: 10px; color: var(--text); }
+.tip-card p { color: var(--text-light); font-size: 0.88rem; line-height: 1.6; margin-bottom: 16px; }
+.tip-link {
+  color: var(--blue);
+  font-weight: 700;
+  font-size: 0.9rem;
+  font-family: 'Quicksand', sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: gap 0.2s;
+}
+.tip-card:hover .tip-link { gap: 10px; }
+
+/* ─── FOOTER ─── */
+#footer {
+  background: var(--text);
+  color: rgba(255,255,255,0.8);
+  position: relative;
+  overflow: hidden;
+}
+.footer-paw-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.04;
+}
+.footer-main {
+  padding: 70px 0 40px;
+  position: relative;
+  z-index: 1;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 50px;
+  margin-bottom: 50px;
+}
+.footer-brand { }
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--white);
+  margin-bottom: 16px;
+}
+.footer-brand p { font-size: 0.9rem; line-height: 1.7; margin-bottom: 24px; }
+.footer-socials { display: flex; gap: 12px; }
+.social-btn {
+  width: 40px; height: 40px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+.social-btn:hover { background: var(--blue); }
+.footer-col h4 {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  color: var(--white);
+  font-size: 0.95rem;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.footer-links a { font-size: 0.88rem; transition: color 0.2s; }
+.footer-links a:hover { color: var(--white); }
+.footer-contact-item { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; font-size: 0.88rem; }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding: 24px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.82rem;
+  position: relative;
+  z-index: 1;
+}
+.footer-bottom-links { display: flex; gap: 24px; }
+.footer-bottom-links a { transition: color 0.2s; }
+.footer-bottom-links a:hover { color: var(--white); }
+.accepting-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--green);
+  color: #2a6a2a;
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  font-family: 'Quicksand', sans-serif;
+}
+.pulse-dot {
+  width: 8px; height: 8px;
+  background: #2a6a2a;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.8); }
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 1024px) {
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .vets-grid { grid-template-columns: repeat(2, 1fr); }
+  .species-grid { grid-template-columns: repeat(3, 1fr); }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
+  .hero-grid { gap: 40px; }
+}
+@media (max-width: 768px) {
+  .nav-links, .nav-cta { display: none; }
+  .hamburger { display: flex; }
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-img-wrap { order: -1; }
+  .hero-img-wrap img { height: 300px; }
+  .services-grid { grid-template-columns: 1fr; }
+  .fear-free-grid, .senior-grid, .location-grid { grid-template-columns: 1fr; }
+  .fear-free-img, .senior-img { order: -1; }
+  .fear-free-img img, .senior-img img { height: 280px; }
+  .ff-pillars { grid-template-columns: 1fr; }
+  .species-grid { grid-template-columns: repeat(2, 1fr); }
+  .vets-grid { grid-template-columns: 1fr; }
+  .testimonials-grid { grid-template-columns: 1fr; }
+  .tips-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+  .hero-trust { justify-content: center; }
+  #hero { text-align: center; padding: 60px 0; }
+  .hero-ctas { justify-content: center; }
+  .hero-desc { margin-left: auto; margin-right: auto; }
+  .fear-free-content .section-title,
+  .senior-content .section-title,
+  .location-info h2 { text-align: center; }
+}
+@media (max-width: 480px) {
+  .species-grid { grid-template-columns: repeat(2, 1fr); }
+  .tips-grid { grid-template-columns: 1fr; }
+  .btn { padding: 12px 20px; font-size: 0.92rem; }
+  .new-pet-banner { font-size: 0.88rem; flex-direction: column; gap: 6px; }
+}</style>
+  <!-- Codex UI Polish: nav readability and one-line links -->
+  <style id="codex-ui-polish-nav">
+    nav a,
+    .nav a,
+    .navbar a,
+    .nav__links a,
+    .nav-links a,
+    .menu a,
+    .menu__link,
+    .fullscreen-menu a {
+      white-space: nowrap;
+    }
+
+    @media (min-width: 1024px) {
+      nav a,
+      .nav a,
+      .navbar a,
+      .nav__links a,
+      .nav-links a,
+      .menu a,
+      .menu__link,
+      .fullscreen-menu a {
+        line-height: 1.1;
+      }
+
+      .nav__links,
+      .nav-links,
+      .navbar-links,
+      .menu-links,
+      nav ul {
+        row-gap: 0.25rem;
+      }
+
+      .nav__links,
+      .nav-links,
+      .navbar-links,
+      .menu-links,
+      nav ul {
+        align-items: center;
+      }
+
+      .nav__links a,
+      .nav-links a,
+      .navbar-links a,
+      .menu-links a,
+      nav ul a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 1.2rem;
+      }
+    }
+
+    /* Cross-page alignment normalization for common grid/card layouts */
+    .services__grid,
+    .service-grid,
+    .cards-grid,
+    .features-grid,
+    .pricing__grid,
+    .plans-grid,
+    .results__grid,
+    .reviews__grid,
+    .events-grid,
+    .coaches__grid,
+    .therapists-grid,
+    .portfolio__grid,
+    .tips-grid,
+    .testimonials-grid,
+    .grid {
+      align-items: stretch;
+    }
+
+    .service-card,
+    .card,
+    .feature-card,
+    .event-card,
+    .plan,
+    .pricing-card,
+    .testimonial,
+    .review,
+    .coach,
+    .therapist-card,
+    .project,
+    .tip-card,
+    .serve-card,
+    .info-card,
+    .stat-card {
+      height: 100%;
+    }
+
+    .service-card img,
+    .project img,
+    .tip-card img,
+    .coach img,
+    .therapist-card img,
+    .feature-card img,
+    .gallery-item img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    /* Improve readability where copy is dense without changing content */
+    section p,
+    .section p,
+    .card p,
+    .service-card p,
+    .feature-card p,
+    .testimonial p,
+    .event-card p,
+    .info-card p {
+      max-width: 66ch;
+      text-wrap: pretty;
+    }
+
+    .section__header p,
+    .hero p,
+    .footer p,
+    .map-overlay-card,
+    .location__item-value {
+      max-width: none;
+    }
+  </style>
+
+</head>
+<body>
+
+<!-- New Patient Banner -->
+<div class="new-pet-banner">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+  New Pet Special: FREE First Wellness Exam for New Clients
+  <a href="#contact">Book Now</a>
+</div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+          <circle cx="18" cy="18" r="18" fill="#5B9BD5" opacity="0.15"/>
+          <ellipse cx="12" cy="11" rx="3" ry="4" fill="#5B9BD5"/>
+          <ellipse cx="24" cy="11" rx="3" ry="4" fill="#5B9BD5"/>
+          <ellipse cx="8" cy="17" rx="2.5" ry="3.5" fill="#5B9BD5"/>
+          <ellipse cx="28" cy="17" rx="2.5" ry="3.5" fill="#5B9BD5"/>
+          <path d="M18 14C13 14 10 18 10 21C10 24 13.5 26 18 26C22.5 26 26 24 26 21C26 18 23 14 18 14Z" fill="#5B9BD5"/>
+        </svg>
+        Compassionate<span>&nbsp;Paws</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#fear-free">Fear-Free</a></li>
+        <li><a href="#vets">Our Team</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#location">Location</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="tel:+15550123456" class="nav-phone">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.01 2.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          (555) 012-3456
+        </a>
+        <a href="#contact" class="btn btn-primary" style="padding:10px 20px;font-size:0.9rem;">
+          Book Appointment
+        </a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#services">Services</a>
+    <a href="#fear-free">Fear-Free Approach</a>
+    <a href="#vets">Our Team</a>
+    <a href="#testimonials">Reviews</a>
+    <a href="#location">Location &amp; Hours</a>
+    <a href="tel:+15550123456" class="btn btn-blue" style="margin-top:8px;justify-content:center;">Call (555) 012-3456</a>
+    <a href="#contact" class="btn btn-primary" style="justify-content:center;">Book Appointment</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <!-- decorative paw background -->
+  <div class="hero-paw-bg" aria-hidden="true">
+    <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <pattern id="pawPattern" x="0" y="0" width="120" height="120" patternUnits="userSpaceOnUse">
+          <ellipse cx="30" cy="20" rx="8" ry="10" fill="#5B9BD5"/>
+          <ellipse cx="52" cy="20" rx="8" ry="10" fill="#5B9BD5"/>
+          <ellipse cx="18" cy="35" rx="6.5" ry="9" fill="#5B9BD5"/>
+          <ellipse cx="64" cy="35" rx="6.5" ry="9" fill="#5B9BD5"/>
+          <path d="M41 32C28 32 22 40 22 47C22 54 29 58 41 58C53 58 60 54 60 47C60 40 54 32 41 32Z" fill="#5B9BD5"/>
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#pawPattern)"/>
+    </svg>
+  </div>
+
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-content reveal-left">
+        <div class="hero-badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Fear-Free Certified Practice
+        </div>
+        <h1 class="hero-title">Where Every<br><span class="highlight">Pet is Family</span></h1>
+        <p class="hero-desc">Full-service veterinary care delivered with compassion, expertise, and the gentlest touch. Serving families and their beloved pets for over 20 years.</p>
+        <div class="hero-ctas">
+          <a href="#contact" class="btn btn-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            Book Appointment
+          </a>
+          <a href="tel:+15550123456" class="btn btn-blue">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.01 2.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            (555) 012-3456
+          </a>
+        </div>
+        <div class="hero-trust">
+          <div class="trust-item">
+            <span class="trust-num">20+</span>
+            <span class="trust-label">Years Serving<br>Our Community</span>
+          </div>
+          <div class="trust-item">
+            <span class="trust-num">5,000+</span>
+            <span class="trust-label">Patients<br>Treated</span>
+          </div>
+          <div class="trust-item">
+            <span class="trust-num">4.9</span>
+            <span class="trust-label">Star Rating<br>on Google</span>
+          </div>
+          <div class="trust-item">
+            <span class="trust-num">3</span>
+            <span class="trust-label">Fear-Free<br>Certified Vets</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-img-wrap reveal-right">
+        <img
+          src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=1200&q=80"
+          alt="Happy dog at Compassionate Paws Veterinary"
+          loading="eager"
+          width="580"
+          height="520"
+        >
+        <div class="hero-img-badge">
+          <svg width="28" height="28" viewBox="0 0 36 36" fill="none">
+            <ellipse cx="12" cy="10" rx="3.5" ry="4.5" fill="#90EE90"/>
+            <ellipse cx="24" cy="10" rx="3.5" ry="4.5" fill="#90EE90"/>
+            <ellipse cx="7" cy="17" rx="3" ry="4" fill="#90EE90"/>
+            <ellipse cx="29" cy="17" rx="3" ry="4" fill="#90EE90"/>
+            <path d="M18 15C12 15 9 20 9 23C9 27 12.5 29 18 29C23.5 29 27 27 27 23C27 20 24 15 18 15Z" fill="#90EE90"/>
+          </svg>
+          <div>
+            <div class="badge-green">Accepting New Patients</div>
+            <div class="badge-sub">FREE First Wellness Exam</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">
+        <svg width="14" height="14" viewBox="0 0 36 36" fill="none"><ellipse cx="12" cy="10" rx="3.5" ry="4.5" fill="currentColor"/><ellipse cx="24" cy="10" rx="3.5" ry="4.5" fill="currentColor"/><ellipse cx="7" cy="17" rx="3" ry="4" fill="currentColor"/><ellipse cx="29" cy="17" rx="3" ry="4" fill="currentColor"/><path d="M18 15C12 15 9 20 9 23C9 27 12.5 29 18 29C23.5 29 27 27 27 23C27 20 24 15 18 15Z" fill="currentColor"/></svg>
+        Our Services
+      </div>
+      <h2 class="section-title">Comprehensive Care for Every Stage of Life</h2>
+      <p class="section-subtitle">From puppy and kitten checkups to senior wellness plans, we provide expert care with a gentle, compassionate approach.</p>
+    </div>
+    <div class="services-grid">
+      <!-- Wellness Exams -->
+      <div class="service-card reveal" style="transition-delay:0.05s">
+        <div class="service-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#5B9BD5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <h3>Wellness Exams</h3>
+        <p>Annual and bi-annual nose-to-tail physical exams to keep your pet healthy at every age. Includes nutritional counseling and preventive care guidance.</p>
+      </div>
+      <!-- Vaccinations -->
+      <div class="service-card reveal" style="transition-delay:0.1s">
+        <div class="service-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#5B9BD5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        </div>
+        <h3>Vaccinations</h3>
+        <p>Core and lifestyle vaccines tailored to your pet's individual needs, age, and risk factors. We keep your companions protected and on schedule.</p>
+      </div>
+      <!-- Dental Care -->
+      <div class="service-card reveal" style="transition-delay:0.15s">
+        <div class="service-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#5B9BD5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8 2 5 5 5 8c0 2 .5 3.5 1 5l1 7h10l1-7c.5-1.5 1-3 1-5 0-3-3-6-7-6z"/></svg>
+        </div>
+        <h3>Dental Care</h3>
+        <p>Professional dental cleanings, digital dental x-rays, extractions, and at-home dental care education to prevent painful periodontal disease.</p>
+      </div>
+      <!-- Surgery -->
+      <div class="service-card reveal" style="transition-delay:0.2s">
+        <div class="service-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#5B9BD5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+        </div>
+        <h3>Surgery</h3>
+        <p>Soft tissue surgical procedures including spay/neuter, mass removals, and laceration repairs performed with advanced anesthetic monitoring and pain management.</p>
+      </div>
+      <!-- Senior Pet Care -->
+      <div class="service-card reveal" style="transition-delay:0.25s">
+        <div class="service-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#5B9BD5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        </div>
+        <h3>Senior Pet Care</h3>
+        <p>Specialized bi-annual exams, arthritis management, cognitive health monitoring, and quality-of-life assessments for pets in their golden years.</p>
+      </div>
+      <!-- Diagnostic Imaging -->
+      <div class="service-card reveal" style="transition-delay:0.3s">
+        <div class="service-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#5B9BD5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <h3>Diagnostic Imaging</h3>
+        <p>In-house digital radiography and ultrasound for rapid, accurate diagnosis. We provide same-day results so we can begin treatment without delay.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEAR FREE -->
+<section id="fear-free">
+  <div class="container">
+    <div class="fear-free-grid">
+      <div class="fear-free-img reveal-left">
+        <img
+          src="https://images.unsplash.com/photo-1548767797-d8c844163c4a?w=1200&q=80"
+          alt="Gentle veterinary exam demonstrating fear-free techniques"
+          loading="lazy"
+          width="560"
+          height="480"
+        >
+      </div>
+      <div class="fear-free-content reveal-right">
+        <div class="ff-badge">
+          <svg width="32" height="32" viewBox="0 0 36 36" fill="none">
+            <circle cx="18" cy="18" r="17" stroke="#90EE90" stroke-width="2"/>
+            <ellipse cx="12" cy="12" rx="3" ry="3.5" fill="#90EE90"/>
+            <ellipse cx="24" cy="12" rx="3" ry="3.5" fill="#90EE90"/>
+            <ellipse cx="8" cy="19" rx="2.5" ry="3" fill="#90EE90"/>
+            <ellipse cx="28" cy="19" rx="2.5" ry="3" fill="#90EE90"/>
+            <path d="M18 17C13.5 17 11 21 11 23.5C11 26 14 28 18 28C22 28 25 26 25 23.5C25 21 22.5 17 18 17Z" fill="#90EE90"/>
+          </svg>
+          <div>
+            <div class="ff-badge-text">Fear-Free Certified</div>
+            <div class="ff-badge-sub">All veterinarians &amp; staff certified</div>
+          </div>
+        </div>
+        <div class="section-label" style="display:inline-flex;">Our Approach</div>
+        <h2 class="section-title">Veterinary Care<br>Without the Fear</h2>
+        <p>Fear-Free certification is the gold standard in veterinary medicine, ensuring that every visit is as stress-free as possible for your pet. We understand that a frightened pet is harder to examine — and a stressed pet takes longer to heal.</p>
+        <p>Our entire team — from reception to exam room — is trained to read your pet's body language, move at their pace, and use positive reinforcement at every step.</p>
+        <div class="ff-pillars">
+          <div class="ff-pillar">
+            <div class="ff-pillar-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5B9BD5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div>
+              <h4>Calm Environment</h4>
+              <p>Separate dog and cat waiting areas, calming pheromones, soft lighting</p>
+            </div>
+          </div>
+          <div class="ff-pillar">
+            <div class="ff-pillar-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5B9BD5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+            </div>
+            <div>
+              <h4>Gentle Handling</h4>
+              <p>Low-stress techniques, no scruffing, patient-led pacing throughout</p>
+            </div>
+          </div>
+          <div class="ff-pillar">
+            <div class="ff-pillar-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5B9BD5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+            </div>
+            <div>
+              <h4>Positive Reinforcement</h4>
+              <p>High-value treats, praise, and reward-based associations with the clinic</p>
+            </div>
+          </div>
+          <div class="ff-pillar">
+            <div class="ff-pillar-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5B9BD5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+            </div>
+            <div>
+              <h4>Certified Team</h4>
+              <p>Every staff member trained and certified in fear-free best practices</p>
+            </div>
+          </div>
+        </div>
+        <a href="#contact" class="btn btn-primary">
+          Book a Fear-Free Visit
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPECIES WE TREAT -->
+<section id="species">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">
+        <svg width="14" height="14" viewBox="0 0 36 36" fill="none"><ellipse cx="12" cy="10" rx="3.5" ry="4.5" fill="currentColor"/><ellipse cx="24" cy="10" rx="3.5" ry="4.5" fill="currentColor"/><ellipse cx="7" cy="17" rx="3" ry="4" fill="currentColor"/><ellipse cx="29" cy="17" rx="3" ry="4" fill="currentColor"/><path d="M18 15C12 15 9 20 9 23C9 27 12.5 29 18 29C23.5 29 27 27 27 23C27 20 24 15 18 15Z" fill="currentColor"/></svg>
+        Species We Treat
+      </div>
+      <h2 class="section-title">We Welcome All Your Family Members</h2>
+      <p class="section-subtitle">From loyal dogs and independent cats to curious rabbits and colorful birds — every species receives the same compassionate, expert care.</p>
+    </div>
+    <div class="species-grid">
+      <div class="species-card reveal" style="transition-delay:0.05s">
+        <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=600&q=80" alt="Dog patient at Compassionate Paws Veterinary" loading="lazy" width="260" height="200">
+        <div class="species-label">Dogs</div>
+      </div>
+      <div class="species-card reveal" style="transition-delay:0.1s">
+        <img src="https://images.unsplash.com/photo-1574158622682-e40e69881006?w=600&q=80" alt="Cat patient at Compassionate Paws Veterinary" loading="lazy" width="260" height="200">
+        <div class="species-label">Cats</div>
+      </div>
+      <div class="species-card reveal" style="transition-delay:0.15s">
+        <img src="https://images.unsplash.com/photo-1535241749838-299277b6305f?w=600&q=80" alt="Rabbit patient at Compassionate Paws Veterinary" loading="lazy" width="260" height="200">
+        <div class="species-label">Rabbits</div>
+      </div>
+      <div class="species-card reveal" style="transition-delay:0.2s">
+        <img src="https://images.unsplash.com/photo-1552728089-57bdde30beb3?w=600&q=80" alt="Bird patient at Compassionate Paws Veterinary" loading="lazy" width="260" height="200">
+        <div class="species-label">Birds</div>
+      </div>
+      <div class="species-card reveal" style="transition-delay:0.25s">
+        <img src="https://images.unsplash.com/photo-1548767797-d8c844163c4a?w=600&q=80" alt="Small mammal patient at Compassionate Paws Veterinary" loading="lazy" width="260" height="200">
+        <div class="species-label">Small Mammals</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MEET THE VETS -->
+<section id="vets">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+        Our Team
+      </div>
+      <h2 class="section-title">Meet the Vets Who Love Your Pets</h2>
+      <p class="section-subtitle">Our doctors bring decades of combined experience, genuine compassion, and a deep love for animals to every appointment.</p>
+    </div>
+    <div class="vets-grid">
+      <div class="vet-card reveal" style="transition-delay:0.05s">
+        <img
+          class="vet-img"
+          src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=600&q=80"
+          alt="Dr. Sarah Mitchell, DVM — Medical Director"
+          loading="lazy"
+          width="380"
+          height="280"
+        >
+        <div class="vet-body">
+          <span class="vet-specialty">Medical Director</span>
+          <h3>Dr. Sarah Mitchell, DVM</h3>
+          <div class="vet-credentials">Fear-Free Certified | 18 Years Experience</div>
+          <p>Dr. Mitchell founded Compassionate Paws with a vision of veterinary care that truly puts the patient first. She specializes in internal medicine and preventive care, and is passionate about building lifelong relationships with families and their pets.</p>
+        </div>
+      </div>
+      <div class="vet-card reveal" style="transition-delay:0.1s">
+        <img
+          class="vet-img"
+          src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=600&q=80"
+          alt="Dr. James Park, DVM — Senior Veterinarian"
+          loading="lazy"
+          width="380"
+          height="280"
+        >
+        <div class="vet-body">
+          <span class="vet-specialty">Senior Veterinarian</span>
+          <h3>Dr. James Park, DVM</h3>
+          <div class="vet-credentials">Fear-Free Certified | Surgery Specialist</div>
+          <p>Dr. Park brings 12 years of surgical expertise and a remarkably calm chairside manner that puts even the most anxious patients at ease. He has a special interest in senior pet care and orthopedic surgery.</p>
+        </div>
+      </div>
+      <div class="vet-card reveal" style="transition-delay:0.15s">
+        <img
+          class="vet-img"
+          src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=600&q=80"
+          alt="Dr. Elena Torres, DVM — Associate Veterinarian"
+          loading="lazy"
+          width="380"
+          height="280"
+        >
+        <div class="vet-body">
+          <span class="vet-specialty">Associate Veterinarian</span>
+          <h3>Dr. Elena Torres, DVM</h3>
+          <div class="vet-credentials">Fear-Free Certified | Exotic Animal Care</div>
+          <p>Dr. Torres is our exotic animal specialist with a Certificate in Avian and Exotic Animal Medicine. She treats rabbits, birds, guinea pigs, and other small mammals with the same expert care we give to dogs and cats.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+        Client Stories
+      </div>
+      <h2 class="section-title">What Our Families Are Saying</h2>
+      <p class="section-subtitle">Multi-generational families have trusted Compassionate Paws with their beloved pets for over two decades.</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal" style="transition-delay:0.05s">
+        <div class="stars">
+          <svg class="star-icon" width="18" height="18" viewBox="0 0 24 24" fill="#FFD700" stroke="#FFD700" stroke-width="1"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="star-icon" width="18" height="18" viewBox="0 0 24 24" fill="#FFD700" stroke="#FFD700" stroke-width="1"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="star-icon" width="18" height="18" viewBox="0 0 24 24" fill="#FFD700" stroke="#FFD700" stroke-width="1"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="star-icon" width="18" height="18" viewBox="0 0 24 24" fill="#FFD700" stroke="#FFD700" stroke-width="1"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="star-icon" width="18" height="18" viewBox="0 0 24 24" fill="#FFD700" stroke="#FFD700" stroke-width="1"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="testimonial-text">"My golden retriever Biscuit has always been terrified of the vet — shaking in the car, refusing to go inside. After just two visits here, he actually wags his tail when we pull into the parking lot. The fear-free approach is absolutely real. Dr. Mitchell is incredible."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">M</div>
+          <div>
+            <div class="author-name">Margaret Holloway</div>
+            <div class="author-pet">Pet Parent to Biscuit — Golden Retriever</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal" style="transition-delay:0.1s">
+        <div class="stars">
+          <svg class="star-icon" width="18" height="18" viewBox="0 0 24 24" fill="#FFD700" stroke="#FFD700" stroke-width="1"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="star-icon" width="18" height="18" viewBox="0 0 24 24" fill="#FFD700" stroke="#FFD700" stroke-width="1"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="star-icon" width="18" height="18" viewBox="0 0 24 24" fill="#FFD700" stroke="#FFD700" stroke-width="1"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="star-icon" width="18" height="18" viewBox="0 0 24 24" fill="#FFD700" stroke="#FFD700" stroke-width="1"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="star-icon" width="18" height="18" viewBox="0 0 24 24" fill="#FFD700" stroke="#FFD700" stroke-width="1"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="testimonial-text">"My family has brought our cats here for 15 years now — my parents started bringing their cats before I was even born. Dr. Torres sees our Siamese, Mochi, and she's so knowledgeable and warm. It genuinely feels like she cares about Mochi the same way we do."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">D</div>
+          <div>
+            <div class="author-name">David Chen</div>
+            <div class="author-pet">Pet Parent to Mochi — Siamese Cat</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal" style="transition-delay:0.15s">
+        <div class="stars">
+          <svg class="star-icon" width="18" height="18" viewBox="0 0 24 24" fill="#FFD700" stroke="#FFD700" stroke-width="1"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="star-icon" width="18" height="18" viewBox="0 0 24 24" fill="#FFD700" stroke="#FFD700" stroke-width="1"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="star-icon" width="18" height="18" viewBox="0 0 24 24" fill="#FFD700" stroke="#FFD700" stroke-width="1"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="star-icon" width="18" height="18" viewBox="0 0 24 24" fill="#FFD700" stroke="#FFD700" stroke-width="1"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="star-icon" width="18" height="18" viewBox="0 0 24 24" fill="#FFD700" stroke="#FFD700" stroke-width="1"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="testimonial-text">"We have a Holland Lop rabbit named Clover who needed surgery. I was so nervous, but Dr. Torres walked us through every step and called us as soon as Clover was in recovery. The level of care and communication was above and beyond anything I expected. Clover is thriving!"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">R</div>
+          <div>
+            <div class="author-name">Rachel Kim</div>
+            <div class="author-pet">Pet Parent to Clover — Holland Lop Rabbit</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal" style="transition-delay:0.2s">
+        <div class="stars">
+          <svg class="star-icon" width="18" height="18" viewBox="0 0 24 24" fill="#FFD700" stroke="#FFD700" stroke-width="1"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="star-icon" width="18" height="18" viewBox="0 0 24 24" fill="#FFD700" stroke="#FFD700" stroke-width="1"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="star-icon" width="18" height="18" viewBox="0 0 24 24" fill="#FFD700" stroke="#FFD700" stroke-width="1"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="star-icon" width="18" height="18" viewBox="0 0 24 24" fill="#FFD700" stroke="#FFD700" stroke-width="1"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="star-icon" width="18" height="18" viewBox="0 0 24 24" fill="#FFD700" stroke="#FFD700" stroke-width="1"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="testimonial-text">"Our 14-year-old lab mix, Captain, has been on the senior wellness program for two years. The team catches little things early — a small heart murmur, early kidney changes — so we can manage them proactively. Thanks to this program, Captain is still chasing squirrels at 14."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">T</div>
+          <div>
+            <div class="author-name">Thomas &amp; Linda Reeves</div>
+            <div class="author-pet">Pet Parents to Captain — 14-Year-Old Lab Mix</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SENIOR PET CARE -->
+<section id="senior-care">
+  <div class="container">
+    <div class="senior-grid">
+      <div class="senior-content reveal-left">
+        <div class="section-label" style="display:inline-flex;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+          Senior Pet Care Program
+        </div>
+        <h2 class="section-title">Golden Years<br>Deserve Golden Care</h2>
+        <p>Senior pets — dogs over 7 and cats over 10 — benefit enormously from specialized care designed around their unique needs. Our Senior Pet Care Program catches age-related changes early, when they're most treatable, giving your companion the longest and most comfortable life possible.</p>
+        <p>Enrollment includes a comprehensive baseline exam, bloodwork panel, urinalysis, blood pressure check, and a personalized wellness plan updated every six months.</p>
+        <div class="senior-features">
+          <div class="senior-feature">
+            <div class="senior-feature-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF8C69" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            </div>
+            <div>
+              <h4>Bi-Annual Comprehensive Exams</h4>
+              <p>Twice-yearly nose-to-tail exams catch subtle changes before they become serious conditions.</p>
+            </div>
+          </div>
+          <div class="senior-feature">
+            <div class="senior-feature-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF8C69" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2v-4M9 21H5a2 2 0 01-2-2v-4m0 0h18"/></svg>
+            </div>
+            <div>
+              <h4>Senior Bloodwork Panel</h4>
+              <p>Full chemistry profile, CBC, thyroid, and kidney/liver function to monitor organ health over time.</p>
+            </div>
+          </div>
+          <div class="senior-feature">
+            <div class="senior-feature-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF8C69" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            </div>
+            <div>
+              <h4>Arthritis &amp; Pain Management</h4>
+              <p>Assessment and multimodal pain management plans including medications, joint supplements, and lifestyle adjustments.</p>
+            </div>
+          </div>
+          <div class="senior-feature">
+            <div class="senior-feature-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF8C69" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <div>
+              <h4>Quality-of-Life Assessments</h4>
+              <p>Ongoing conversations about your pet's happiness, comfort, and wellbeing at every stage of their senior years.</p>
+            </div>
+          </div>
+        </div>
+        <a href="#contact" class="btn btn-paw">
+          Enroll in Senior Care Program
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+      <div class="senior-img reveal-right">
+        <img
+          src="https://images.unsplash.com/photo-1517423440428-a5a00ad493e8?w=1200&q=80"
+          alt="Senior dog receiving compassionate care"
+          loading="lazy"
+          width="560"
+          height="500"
+        >
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION + HOURS -->
+<section id="location">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Find Us
+      </div>
+      <h2 class="section-title">Location, Hours &amp; Contact</h2>
+      <p class="section-subtitle">Conveniently located in Maplewood with ample free parking. Walk-ins welcome for urgent concerns during regular hours.</p>
+    </div>
+    <div class="location-grid">
+      <div class="location-info reveal-left">
+        <div class="info-block">
+          <h3>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Our Address
+          </h3>
+          <p style="font-weight:600;margin-bottom:6px;">2847 Meadowbrook Lane</p>
+          <p style="color:var(--text-light);font-size:0.92rem;">Maplewood, CA 94025</p>
+          <div class="parking-note" style="margin-top:12px;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><path d="M9 17V7h4a3 3 0 010 6H9"/></svg>
+            Free parking lot — 30+ spaces available
+          </div>
+        </div>
+        <div class="info-block">
+          <h3>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Office Hours
+          </h3>
+          <div class="hours-row"><span class="day">Monday – Friday</span><span>7:30 AM – 6:00 PM</span></div>
+          <div class="hours-row"><span class="day">Saturday</span><span>8:00 AM – 2:00 PM</span></div>
+          <div class="hours-row"><span class="day">Sunday</span><span>9:00 AM – 12:00 PM</span></div>
+        </div>
+        <div class="info-block">
+          <h3>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.01 2.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            Contact Us
+          </h3>
+          <div class="footer-contact-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.01 2.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            <a href="tel:+15550123456" style="font-weight:700;color:var(--blue);">(555) 012-3456</a>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:hello@compassionatepawsvet.com" style="color:var(--blue);">hello@compassionatepawsvet.com</a>
+          </div>
+        </div>
+        <div class="emergency-block" id="contact">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:8px;"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <h3>After-Hours Emergency</h3>
+          <p>For after-hours pet emergencies, please call our emergency line or visit the nearest 24-hour emergency animal hospital.</p>
+          <a href="tel:+15550123456" class="emergency-phone">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.01 2.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            (555) 012-3456
+          </a>
+        </div>
+      </div>
+      <div class="map-placeholder reveal-right" style="position:relative;overflow:hidden;">
+        <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1200&q=80" alt="Neighborhood around Compassionate Paws Veterinary clinic" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" />
+        <div style="position:relative;z-index:1;background:rgba(255,255,255,0.88);padding:16px;border-radius:12px;max-width:88%;text-align:center;">
+          <div style="font-size:1.1rem;font-weight:700;color:var(--text);">Compassionate Paws Veterinary</div>
+          <p>2847 Meadowbrook Lane, Maplewood, CA 94025<br>Free parking available on-site</p>
+          <a href="https://maps.google.com" target="_blank" rel="noopener" class="btn btn-blue" style="margin-top:8px;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Get Directions
+          </a>
+          <div style="margin-top:16px;">
+            <div class="accepting-badge">
+              <span class="pulse-dot"></span>
+              Accepting New Patients
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PET HEALTH TIPS -->
+<section id="tips">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+        Pet Health Tips
+      </div>
+      <h2 class="section-title">Knowledge Is the Best Preventive Care</h2>
+      <p class="section-subtitle">Expert advice from our veterinary team to keep your pets healthy, happy, and thriving between visits.</p>
+    </div>
+    <div class="tips-grid">
+      <div class="tip-card reveal" style="transition-delay:0.05s">
+        <div class="tip-img">
+          <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=800&q=80" alt="Dog wellness exam tips" loading="lazy" width="380" height="200">
+        </div>
+        <div class="tip-body">
+          <span class="tip-tag">Wellness</span>
+          <h3>Why Annual Exams Matter More Than You Think</h3>
+          <p>One year in a pet's life equals 5–7 human years. Annual exams are like your pet getting a checkup every 5–7 years — here's what we look for and why it matters.</p>
+          <span class="tip-link">
+            Read Article
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </span>
+        </div>
+      </div>
+      <div class="tip-card reveal" style="transition-delay:0.1s">
+        <div class="tip-img">
+          <img src="https://images.unsplash.com/photo-1574158622682-e40e69881006?w=800&q=80" alt="Cat dental health tips" loading="lazy" width="380" height="200">
+        </div>
+        <div class="tip-body">
+          <span class="tip-tag">Dental Health</span>
+          <h3>The Silent Epidemic: Pet Dental Disease</h3>
+          <p>By age 3, over 80% of dogs and 70% of cats show signs of dental disease. Learn how to recognize the signs early and what you can do at home to protect their teeth.</p>
+          <span class="tip-link">
+            Read Article
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </span>
+        </div>
+      </div>
+      <div class="tip-card reveal" style="transition-delay:0.15s">
+        <div class="tip-img">
+          <img src="https://images.unsplash.com/photo-1548767797-d8c844163c4a?w=800&q=80" alt="Senior pet care tips" loading="lazy" width="380" height="200">
+        </div>
+        <div class="tip-body">
+          <span class="tip-tag">Senior Care</span>
+          <h3>5 Signs Your Senior Pet May Be in Pain (And Hiding It)</h3>
+          <p>Pets are masters at hiding discomfort — it is an instinct from their wild ancestors. These subtle behavioral changes may be telling you something important about how your older pet is feeling.</p>
+          <span class="tip-link">
+            Read Article
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="footer">
+  <!-- paw print background pattern -->
+  <div class="footer-paw-bg" aria-hidden="true">
+    <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <pattern id="footerPawPattern" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+          <ellipse cx="25" cy="18" rx="6.5" ry="8" fill="#ffffff"/>
+          <ellipse cx="43" cy="18" rx="6.5" ry="8" fill="#ffffff"/>
+          <ellipse cx="15" cy="30" rx="5.5" ry="7.5" fill="#ffffff"/>
+          <ellipse cx="53" cy="30" rx="5.5" ry="7.5" fill="#ffffff"/>
+          <path d="M34 27C26 27 21 33 21 38C21 43 26 46 34 46C42 46 47 43 47 38C47 33 42 27 34 27Z" fill="#ffffff"/>
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#footerPawPattern)"/>
+    </svg>
+  </div>
+
+  <div class="footer-main">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <svg width="32" height="32" viewBox="0 0 36 36" fill="none">
+              <ellipse cx="12" cy="11" rx="3" ry="4" fill="#5B9BD5"/>
+              <ellipse cx="24" cy="11" rx="3" ry="4" fill="#5B9BD5"/>
+              <ellipse cx="8" cy="17" rx="2.5" ry="3.5" fill="#5B9BD5"/>
+              <ellipse cx="28" cy="17" rx="2.5" ry="3.5" fill="#5B9BD5"/>
+              <path d="M18 14C13 14 10 18 10 21C10 24 13.5 26 18 26C22.5 26 26 24 26 21C26 18 23 14 18 14Z" fill="#5B9BD5"/>
+            </svg>
+            Compassionate Paws Veterinary
+          </div>
+          <p>Where every pet is family. Full-service, Fear-Free Certified veterinary care for dogs, cats, rabbits, birds, and small mammals. Serving our community with compassion for over 20 years.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-btn" aria-label="Facebook">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="white" stroke="none"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="Google">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="white" stroke="none"><path d="M12 11v2h3.5c-.1.8-.7 2.4-3.5 2.4A3.9 3.9 0 018.1 12 3.9 3.9 0 0112 8.1c1.1 0 1.9.5 2.3.9l1.6-1.5A6 6 0 0012 6a6 6 0 100 12c3.5 0 5.8-2.4 5.8-5.8 0-.4 0-.7-.1-1H12z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="#services">Wellness Exams</a></li>
+            <li><a href="#services">Vaccinations</a></li>
+            <li><a href="#services">Dental Care</a></li>
+            <li><a href="#services">Surgery</a></li>
+            <li><a href="#senior-care">Senior Pet Care</a></li>
+            <li><a href="#services">Diagnostic Imaging</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Our Clinic</h4>
+          <ul class="footer-links">
+            <li><a href="#fear-free">Fear-Free Approach</a></li>
+            <li><a href="#vets">Meet the Vets</a></li>
+            <li><a href="#species">Species We Treat</a></li>
+            <li><a href="#testimonials">Client Reviews</a></li>
+            <li><a href="#tips">Pet Health Tips</a></li>
+            <li><a href="#contact">Book Appointment</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <div class="footer-contact-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>2847 Meadowbrook Lane<br>Maplewood, CA 94025</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.01 2.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            <a href="tel:+15550123456" style="color:rgba(255,255,255,0.8);">(555) 012-3456</a>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:hello@compassionatepawsvet.com" style="color:rgba(255,255,255,0.8);font-size:0.82rem;">hello@compassionatepawsvet.com</a>
+          </div>
+          <div style="margin-top:16px;">
+            <div class="accepting-badge">
+              <span class="pulse-dot"></span>
+              Accepting New Patients
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&#169; 2026 Compassionate Paws Veterinary. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Accessibility</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Hamburger menu
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+hamburger.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+});
+document.querySelectorAll('.mobile-menu a').forEach(link => {
+  link.addEventListener('click', () => mobileMenu.classList.remove('open'));
+});
+
+// Intersection Observer scroll animations
+const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+revealEls.forEach(el => observer.observe(el));
+
+// Navbar shadow on scroll
+window.addEventListener('scroll', () => {
+  const navbar = document.getElementById('navbar');
+  if (window.scrollY > 10) {
+    navbar.style.boxShadow = '0 4px 30px rgba(0,0,0,0.12)';
+  } else {
+    navbar.style.boxShadow = '0 2px 20px rgba(0,0,0,0.08)';
+  }
+});
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      const offset = 80;
+      const top = target.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,2380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sports Injury Chiropractic | Recover Faster. Perform Better.</title>
+  <meta name="description" content="Specialized chiropractic care for athletes and active individuals. Athletic adjustments, injury rehab, performance optimization. Official partner of 12 local sports teams. Same-day appointments available." />
+  <meta name="keywords" content="sports chiropractic, athletic injury, sports injury chiropractor, injury rehab, performance chiropractic, athlete chiropractic" />
+  <meta property="og:title" content="Sports Injury Chiropractic | Recover Faster. Perform Better." />
+  <meta property="og:description" content="Specialized chiropractic care for athletes. 500+ athletes treated. 48-hour recovery protocol. Official team partner." />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://sportsinjurychiropractic.com" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "name": "Sports Injury Chiropractic",
+    "description": "Specialized chiropractic practice for athletes and active individuals. Athletic adjustments, injury rehab, performance optimization, and movement assessment.",
+    "url": "https://sportsinjurychiropractic.com",
+    "telephone": "(555) 876-5432",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "2480 Athletic Drive, Suite 100",
+      "addressLocality": "Springfield",
+      "addressRegion": "IL",
+      "postalCode": "62701",
+      "addressCountry": "US"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "07:00",
+        "closes": "19:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "08:00",
+        "closes": "14:00"
+      }
+    ],
+    "medicalSpecialty": "Chiropractic",
+    "priceRange": "$$"
+  }
+  </script>
+
+  <style>
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --primary: #FF6347;
+      --primary-dark: #e04f38;
+      --primary-glow: rgba(255, 99, 71, 0.4);
+      --secondary: #000080;
+      --secondary-light: #0a0a6e;
+      --accent: #F0F0F0;
+      --bg-dark: #0A0A1A;
+      --bg-navy: #060618;
+      --text-light: #ffffff;
+      --text-muted: #a0a8c0;
+      --text-dark: #1a1a2e;
+      --card-bg: #12122a;
+      --border: rgba(255, 99, 71, 0.2);
+      --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      --transition: 0.3s ease;
+      --radius: 8px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--bg-dark);
+      color: var(--text-light);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* ===== ENERGY LINES BACKGROUND ===== */
+    .energy-lines {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .energy-lines::before,
+    .energy-lines::after {
+      content: '';
+      position: absolute;
+      width: 2px;
+      height: 200%;
+      background: linear-gradient(180deg, transparent 0%, var(--primary) 50%, transparent 100%);
+      opacity: 0.15;
+      animation: energyPulse 4s ease-in-out infinite;
+    }
+
+    .energy-lines::before {
+      left: 20%;
+      top: -50%;
+      transform: rotate(15deg);
+      animation-delay: 0s;
+    }
+
+    .energy-lines::after {
+      right: 25%;
+      top: -60%;
+      transform: rotate(-10deg);
+      animation-delay: 2s;
+    }
+
+    @keyframes energyPulse {
+      0%, 100% { opacity: 0.05; transform: rotate(15deg) translateY(0); }
+      50% { opacity: 0.2; transform: rotate(15deg) translateY(30px); }
+    }
+
+    /* ===== STICKY NAV ===== */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(6, 6, 24, 0.95);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 99, 71, 0.15);
+      transition: background var(--transition);
+    }
+
+    .nav__inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav__logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      font-size: 1.1rem;
+      letter-spacing: -0.02em;
+      color: var(--text-light);
+    }
+
+    .nav__logo-icon {
+      width: 36px;
+      height: 36px;
+      background: var(--primary);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .nav__logo-text span {
+      color: var(--primary);
+    }
+
+    .nav__links {
+      display: none;
+      list-style: none;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    @media (min-width: 768px) {
+      .nav__links { display: flex; }
+    }
+
+    .nav__links a {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      transition: color var(--transition);
+      position: relative;
+    }
+
+    .nav__links a:hover {
+      color: var(--primary);
+    }
+
+    .nav__links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--primary);
+      transform: scaleX(0);
+      transition: transform var(--transition);
+    }
+
+    .nav__links a:hover::after { transform: scaleX(1); }
+
+    .nav__cta {
+      background: var(--primary);
+      color: white;
+      padding: 0.55rem 1.25rem;
+      border-radius: var(--radius);
+      font-weight: 700;
+      font-size: 0.875rem;
+      letter-spacing: 0.02em;
+      transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+      white-space: nowrap;
+    }
+
+    .nav__cta:hover {
+      background: var(--primary-dark);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 16px var(--primary-glow);
+    }
+
+    /* Mobile menu toggle */
+    .nav__toggle {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+      background: none;
+      border: none;
+    }
+
+    @media (min-width: 768px) {
+      .nav__toggle { display: none; }
+    }
+
+    .nav__toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--text-light);
+      border-radius: 2px;
+      transition: var(--transition);
+    }
+
+    /* Mobile nav drawer */
+    .nav__mobile {
+      display: none;
+      flex-direction: column;
+      background: var(--bg-navy);
+      padding: 1rem 1.5rem 1.5rem;
+      gap: 1rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .nav__mobile.is-open { display: flex; }
+
+    .nav__mobile a {
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      padding: 0.5rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      transition: color var(--transition);
+    }
+
+    .nav__mobile a:hover { color: var(--primary); }
+
+    .nav__mobile .nav__cta {
+      text-align: center;
+      margin-top: 0.5rem;
+    }
+
+    /* ===== SCROLL ANIMATIONS ===== */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .fade-in.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .fade-in--delay-1 { transition-delay: 0.1s; }
+    .fade-in--delay-2 { transition-delay: 0.2s; }
+    .fade-in--delay-3 { transition-delay: 0.3s; }
+    .fade-in--delay-4 { transition-delay: 0.4s; }
+
+    /* ===== SECTION WRAPPER ===== */
+    .section {
+      padding: 4rem 1.5rem;
+      position: relative;
+    }
+
+    .section__inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section__label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--primary);
+      margin-bottom: 0.75rem;
+      display: block;
+    }
+
+    .section__title {
+      font-size: clamp(1.5rem, 3vw, 2.25rem);
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      color: var(--text-light);
+      margin-bottom: 1rem;
+    }
+
+    .section__subtitle {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      max-width: 580px;
+      line-height: 1.7;
+    }
+
+    .section__header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+
+    .section__header .section__subtitle {
+      margin: 0 auto;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+      padding-top: 70px;
+      position: relative;
+      overflow: hidden;
+      background: var(--bg-dark);
+    }
+
+    /* Diagonal split */
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 52%;
+      height: 100%;
+      background: var(--secondary);
+      clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+      z-index: 1;
+    }
+
+    @media (max-width: 900px) {
+      .hero::before { display: none; }
+    }
+
+    .hero__inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+      width: 100%;
+    }
+
+    @media (max-width: 900px) {
+      .hero__inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2.5rem;
+      }
+    }
+
+    .hero__image-wrap {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      aspect-ratio: 4/5;
+      max-height: 580px;
+    }
+
+    @media (max-width: 900px) {
+      .hero__image-wrap {
+        max-height: 320px;
+        aspect-ratio: 16/9;
+        border-radius: 12px;
+      }
+    }
+
+    .hero__image-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .hero__image-wrap::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(0,0,128,0.3) 0%, transparent 60%);
+    }
+
+    .hero__badge {
+      position: absolute;
+      bottom: 1.25rem;
+      left: 1.25rem;
+      background: var(--primary);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      z-index: 3;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .hero__content {
+      padding: 2rem 0 2rem 3rem;
+    }
+
+    @media (max-width: 900px) {
+      .hero__content {
+        padding: 0;
+      }
+    }
+
+    .hero__eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    .hero__eyebrow::before {
+      content: '';
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--primary);
+    }
+
+    .hero__headline {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 900;
+      line-height: 1.0;
+      letter-spacing: -0.04em;
+      margin-bottom: 1.25rem;
+      color: var(--text-light);
+    }
+
+    .hero__headline span {
+      color: var(--primary);
+      display: block;
+    }
+
+    .hero__subhead {
+      font-size: 1rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      max-width: 560px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 900px) {
+      .hero__subhead { margin: 0 auto 2rem; }
+    }
+
+    .hero__actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+      margin-bottom: 2.5rem;
+    }
+
+    @media (max-width: 900px) {
+      .hero__actions { justify-content: center; }
+    }
+
+    .btn--primary {
+      background: var(--primary);
+      color: white;
+      padding: 0.75rem 1.75rem;
+      border-radius: var(--radius);
+      font-weight: 800;
+      font-size: 1rem;
+      max-height: 52px;
+      letter-spacing: 0.01em;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+      animation: pulseCTA 3s ease-in-out infinite;
+    }
+
+    .btn--primary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px var(--primary-glow);
+      animation: none;
+    }
+
+    @keyframes pulseCTA {
+      0%, 100% { box-shadow: 0 0 0 0 var(--primary-glow); }
+      50% { box-shadow: 0 0 0 10px transparent; }
+    }
+
+    .btn--outline {
+      background: transparent;
+      color: var(--text-light);
+      padding: 0.75rem 1.75rem;
+      border-radius: var(--radius);
+      font-weight: 700;
+      font-size: 1rem;
+      max-height: 52px;
+      border: 2px solid rgba(255,255,255,0.25);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: border-color var(--transition), color var(--transition);
+    }
+
+    .btn--outline:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    .hero__stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    @media (max-width: 480px) {
+      .hero__stats { grid-template-columns: 1fr; gap: 0.75rem; }
+    }
+
+    .stat__number {
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: var(--primary);
+      letter-spacing: -0.03em;
+      line-height: 1;
+      display: block;
+    }
+
+    .stat__label {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.3;
+      margin-top: 4px;
+      display: block;
+    }
+
+    /* ===== SPORTS WE SERVE ===== */
+    .sports {
+      background: var(--card-bg);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .sports__grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: rgba(255,99,71,0.1);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    @media (max-width: 600px) {
+      .sports__grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    .sport__card {
+      background: var(--card-bg);
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+      cursor: default;
+      transition: background var(--transition), transform var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .sport__card:hover {
+      background: rgba(255, 99, 71, 0.08);
+      transform: translateY(-3px);
+    }
+
+    .sport__card:hover .sport__icon {
+      color: var(--primary);
+    }
+
+    .sport__icon {
+      width: 48px;
+      height: 48px;
+      color: var(--text-muted);
+      transition: color var(--transition);
+    }
+
+    .sport__name {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--text-light);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    /* ===== SERVICES ===== */
+    .services {
+      background: var(--bg-dark);
+    }
+
+    .services__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .service-card {
+      background: var(--card-bg);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 12px;
+      padding: 2rem;
+      transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--primary);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform var(--transition);
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px) scale(1.01);
+      border-color: var(--primary);
+      box-shadow: 0 12px 40px var(--primary-glow);
+    }
+
+    .service-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .service-card__icon {
+      width: 52px;
+      height: 52px;
+      background: rgba(255, 99, 71, 0.12);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+      color: var(--primary);
+      transition: background var(--transition);
+    }
+
+    .service-card:hover .service-card__icon {
+      background: rgba(255, 99, 71, 0.2);
+    }
+
+    .service-card__title {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--text-light);
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.01em;
+    }
+
+    .service-card__desc {
+      font-size: 0.925rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+      margin-bottom: 1.25rem;
+    }
+
+    .service-card__features {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .service-card__features li {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .service-card__features li::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--primary);
+      flex-shrink: 0;
+    }
+
+    /* ===== RECOVERY PROTOCOL ===== */
+    .protocol {
+      background: var(--secondary);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .protocol::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, #000080 0%, #0a0a6e 40%, #0A0A1A 100%);
+    }
+
+    .protocol__inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .protocol__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0;
+      position: relative;
+    }
+
+    .protocol__grid::before {
+      content: '';
+      position: absolute;
+      top: 40px;
+      left: 10%;
+      right: 10%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--primary), transparent);
+      opacity: 0.4;
+    }
+
+    @media (max-width: 600px) {
+      .protocol__grid::before { display: none; }
+      .protocol__grid { gap: 1.5rem; }
+    }
+
+    .protocol__step {
+      text-align: center;
+      padding: 2rem 1.5rem;
+      position: relative;
+    }
+
+    .protocol__step-number {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: white;
+      font-size: 1.5rem;
+      font-weight: 900;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.25rem;
+      position: relative;
+      z-index: 1;
+      box-shadow: 0 0 0 6px rgba(255,99,71,0.15);
+    }
+
+    .protocol__step-timing {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .protocol__step-title {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--text-light);
+      margin-bottom: 0.75rem;
+    }
+
+    .protocol__step-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    .protocol__arrow {
+      position: absolute;
+      right: -12px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+      color: var(--primary);
+    }
+
+    @media (max-width: 600px) {
+      .protocol__arrow { display: none; }
+    }
+
+    /* ===== TEAM PARTNERSHIPS ===== */
+    .partnerships {
+      background: var(--bg-dark);
+    }
+
+    .partnerships__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    @media (max-width: 768px) {
+      .partnerships__grid { grid-template-columns: 1fr; gap: 2rem; }
+    }
+
+    .partnerships__badges {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+
+    @media (max-width: 480px) {
+      .partnerships__badges { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    .team-badge {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.25rem 0.75rem;
+      text-align: center;
+      transition: border-color var(--transition), transform var(--transition);
+    }
+
+    .team-badge:hover {
+      border-color: var(--primary);
+      transform: translateY(-3px);
+    }
+
+    .team-badge__icon {
+      width: 44px;
+      height: 44px;
+      background: rgba(255, 99, 71, 0.12);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 0.75rem;
+      color: var(--primary);
+    }
+
+    .team-badge__name {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--text-light);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      line-height: 1.3;
+    }
+
+    .team-badge__role {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      margin-top: 3px;
+    }
+
+    .partnerships__testimonial {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2.5rem;
+      position: relative;
+    }
+
+    .partnerships__testimonial::before {
+      content: '"';
+      position: absolute;
+      top: -1.5rem;
+      left: 2rem;
+      font-size: 5rem;
+      color: var(--primary);
+      font-family: Georgia, serif;
+      line-height: 1;
+      opacity: 0.4;
+    }
+
+    .partnerships__testimonial blockquote {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: var(--text-light);
+      font-style: italic;
+      margin-bottom: 1.5rem;
+    }
+
+    .coach-profile {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .coach-avatar {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      overflow: hidden;
+      flex-shrink: 0;
+      border: 2px solid var(--primary);
+    }
+
+    .coach-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .coach-name {
+      font-weight: 800;
+      font-size: 1rem;
+      color: var(--text-light);
+    }
+
+    .coach-role {
+      font-size: 0.85rem;
+      color: var(--primary);
+    }
+
+    /* ===== TESTIMONIALS ===== */
+    .testimonials {
+      background: var(--card-bg);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .testimonials::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=1200&q=80');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.04;
+    }
+
+    .testimonials__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .testimonial-card {
+      background: rgba(10, 10, 26, 0.9);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 12px;
+      padding: 2rem;
+      transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-5px) scale(1.01);
+      border-color: var(--primary);
+      box-shadow: 0 10px 40px var(--primary-glow);
+    }
+
+    .testimonial-card__header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .testimonial-card__avatar {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      overflow: hidden;
+      flex-shrink: 0;
+      border: 2px solid var(--primary);
+      background: var(--secondary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--primary);
+    }
+
+    .testimonial-card__name {
+      font-weight: 800;
+      font-size: 1rem;
+      color: var(--text-light);
+    }
+
+    .testimonial-card__sport {
+      display: inline-block;
+      background: rgba(255, 99, 71, 0.15);
+      color: var(--primary);
+      border: 1px solid rgba(255, 99, 71, 0.3);
+      padding: 2px 10px;
+      border-radius: 20px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+
+    .testimonial-card__stars {
+      display: flex;
+      gap: 3px;
+      margin-bottom: 1rem;
+    }
+
+    .testimonial-card__stars svg {
+      color: var(--primary);
+    }
+
+    .testimonial-card__quote {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      font-style: italic;
+    }
+
+    .testimonial-card__result {
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* ===== INSURANCE BANNER ===== */
+    .insurance-banner {
+      background: linear-gradient(135deg, var(--primary) 0%, #cc4a30 100%);
+      padding: 3rem 1.5rem;
+      text-align: center;
+    }
+
+    .insurance-banner__inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .insurance-banner__title {
+      font-size: clamp(1.5rem, 3vw, 2.25rem);
+      font-weight: 900;
+      color: white;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.02em;
+    }
+
+    .insurance-banner__sub {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 2rem;
+    }
+
+    .insurance-badges {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .insurance-badge {
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+      color: white;
+      padding: 0.5rem 1.25rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      backdrop-filter: blur(4px);
+    }
+
+    .insurance-banner__cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: white;
+      color: var(--primary);
+      padding: 0.75rem 1.75rem;
+      border-radius: var(--radius);
+      font-weight: 800;
+      font-size: 1rem;
+      max-height: 52px;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+
+    .insurance-banner__cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    }
+
+    /* ===== LOCATION ===== */
+    .location {
+      background: var(--bg-dark);
+    }
+
+    .location__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    @media (max-width: 768px) {
+      .location__grid { grid-template-columns: 1fr; gap: 2rem; }
+    }
+
+    .location__info-block {
+      margin-bottom: 2rem;
+    }
+
+    .location__info-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .location__info-value {
+      font-size: 1rem;
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+
+    .location__hours table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .location__hours td {
+      padding: 0.6rem 0;
+      font-size: 0.95rem;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .location__hours td:last-child {
+      text-align: right;
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    .location__hours td:first-child {
+      color: var(--text-muted);
+    }
+
+    .location__map-wrap {
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      aspect-ratio: 1;
+      position: relative;
+      background: var(--card-bg);
+    }
+
+    .location__map-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.7;
+    }
+
+    .location__map-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: rgba(10, 10, 26, 0.6);
+      gap: 0.75rem;
+    }
+
+    .location__map-pin {
+      width: 60px;
+      height: 60px;
+      background: var(--primary);
+      border-radius: 50% 50% 50% 0;
+      transform: rotate(-45deg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px var(--primary-glow);
+    }
+
+    .location__map-pin svg {
+      transform: rotate(45deg);
+      color: white;
+    }
+
+    .location__map-text {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--text-light);
+      text-align: center;
+    }
+
+    .location__contact-cta {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+    }
+
+    .contact-btn {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem 1.5rem;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-light);
+      transition: border-color var(--transition), color var(--transition), box-shadow var(--transition);
+      cursor: pointer;
+    }
+
+    .contact-btn:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+      box-shadow: 0 4px 16px var(--primary-glow);
+    }
+
+    .contact-btn__icon {
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 99, 71, 0.12);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary);
+      flex-shrink: 0;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      background: linear-gradient(135deg, #000050 0%, #0A0A1A 40%, #1a0505 100%);
+      border-top: 1px solid rgba(255, 99, 71, 0.2);
+      padding: 4rem 1.5rem 2rem;
+    }
+
+    .footer__inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer__grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    @media (max-width: 768px) {
+      .footer__grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+    }
+
+    @media (max-width: 480px) {
+      .footer__grid { grid-template-columns: 1fr; }
+    }
+
+    .footer__brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 1rem;
+    }
+
+    .footer__brand-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--primary);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .footer__brand-name {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--text-light);
+    }
+
+    .footer__brand-name span { color: var(--primary); }
+
+    .footer__tagline {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 1.25rem;
+    }
+
+    .footer__credential {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 99, 71, 0.1);
+      border: 1px solid rgba(255, 99, 71, 0.25);
+      color: var(--primary);
+      padding: 0.4rem 0.9rem;
+      border-radius: 20px;
+      font-size: 0.78rem;
+      font-weight: 700;
+    }
+
+    .footer__col-title {
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--primary);
+      margin-bottom: 1.25rem;
+    }
+
+    .footer__col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .footer__col ul a {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      transition: color var(--transition);
+    }
+
+    .footer__col ul a:hover { color: var(--text-light); }
+
+    .footer__bottom {
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding-top: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .footer__copy {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .footer__legal {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .footer__legal a {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      transition: color var(--transition);
+    }
+
+    .footer__legal a:hover { color: var(--primary); }
+
+    /* ===== URGENCY STRIP ===== */
+    .urgency-strip {
+      background: var(--primary);
+      padding: 0.65rem 1.5rem;
+      text-align: center;
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: white;
+      letter-spacing: 0.02em;
+    }
+
+    .urgency-strip a {
+      color: white;
+      text-decoration: underline;
+    }
+
+    /* ===== UTILITIES ===== */
+    .text-orange { color: var(--primary); }
+    .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }</style>
+  <!-- Codex UI Polish: nav readability and one-line links -->
+  <style id="codex-ui-polish-nav">
+    nav a,
+    .nav a,
+    .navbar a,
+    .nav__links a,
+    .nav-links a,
+    .menu a,
+    .menu__link,
+    .fullscreen-menu a {
+      white-space: nowrap;
+    }
+
+    @media (min-width: 1024px) {
+      nav a,
+      .nav a,
+      .navbar a,
+      .nav__links a,
+      .nav-links a,
+      .menu a,
+      .menu__link,
+      .fullscreen-menu a {
+        line-height: 1.1;
+      }
+
+      .nav__links,
+      .nav-links,
+      .navbar-links,
+      .menu-links,
+      nav ul {
+        row-gap: 0.25rem;
+      }
+
+      .nav__links,
+      .nav-links,
+      .navbar-links,
+      .menu-links,
+      nav ul {
+        align-items: center;
+      }
+
+      .nav__links a,
+      .nav-links a,
+      .navbar-links a,
+      .menu-links a,
+      nav ul a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 1.2rem;
+      }
+    }
+
+    /* Cross-page alignment normalization for common grid/card layouts */
+    .services__grid,
+    .service-grid,
+    .cards-grid,
+    .features-grid,
+    .pricing__grid,
+    .plans-grid,
+    .results__grid,
+    .reviews__grid,
+    .events-grid,
+    .coaches__grid,
+    .therapists-grid,
+    .portfolio__grid,
+    .tips-grid,
+    .testimonials-grid,
+    .grid {
+      align-items: stretch;
+    }
+
+    .service-card,
+    .card,
+    .feature-card,
+    .event-card,
+    .plan,
+    .pricing-card,
+    .testimonial,
+    .review,
+    .coach,
+    .therapist-card,
+    .project,
+    .tip-card,
+    .serve-card,
+    .info-card,
+    .stat-card {
+      height: 100%;
+    }
+
+    .service-card img,
+    .project img,
+    .tip-card img,
+    .coach img,
+    .therapist-card img,
+    .feature-card img,
+    .gallery-item img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    /* Improve readability where copy is dense without changing content */
+    section p,
+    .section p,
+    .card p,
+    .service-card p,
+    .feature-card p,
+    .testimonial p,
+    .event-card p,
+    .info-card p {
+      max-width: 66ch;
+      text-wrap: pretty;
+    }
+
+    .section__header p,
+    .hero p,
+    .footer p,
+    .map-overlay-card,
+    .location__item-value {
+      max-width: none;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- Urgency Strip -->
+  <div class="urgency-strip">
+    Most Insurance Accepted &nbsp;|&nbsp; Same Day Appointments Available &nbsp;|&nbsp;
+    <a href="tel:5558765432">Call Now: (555) 876-5432</a>
+  </div>
+
+  <!-- ===== NAV ===== -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo" aria-label="Sports Injury Chiropractic home">
+        <div class="nav__logo-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
+            <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
+            <line x1="6" y1="1" x2="6" y2="4"/>
+            <line x1="10" y1="1" x2="10" y2="4"/>
+            <line x1="14" y1="1" x2="14" y2="4"/>
+          </svg>
+        </div>
+        <div class="nav__logo-text">
+          Sports Injury <span>Chiro</span>
+        </div>
+      </a>
+
+      <ul class="nav__links" role="list">
+        <li><a href="#sports">Sports</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#protocol">Protocol</a></li>
+        <li><a href="#testimonials">Athletes</a></li>
+        <li><a href="#location">Location</a></li>
+      </ul>
+
+      <a href="#contact" class="nav__cta">Book Assessment</a>
+
+      <button class="nav__toggle" aria-label="Toggle menu" id="navToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <div class="nav__mobile" id="navMobile" aria-hidden="true">
+      <a href="#sports">Sports We Serve</a>
+      <a href="#services">Services</a>
+      <a href="#protocol">Recovery Protocol</a>
+      <a href="#partnerships">Team Partnerships</a>
+      <a href="#testimonials">Athlete Stories</a>
+      <a href="#location">Location & Hours</a>
+      <a href="#contact" class="nav__cta">Book Free Assessment</a>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home" aria-label="Hero">
+    <div class="energy-lines" aria-hidden="true"></div>
+    <div class="hero__inner">
+
+      <!-- Left: athlete photo -->
+      <div class="hero__image-wrap fade-in">
+        <img
+          src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1200&q=80"
+          alt="Sports chiropractic treatment session for injury recovery"
+          width="600"
+          height="750"
+          loading="eager"
+        />
+        <div class="hero__badge" aria-hidden="true">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          Official Team Partner
+        </div>
+      </div>
+
+      <!-- Right: headline + stats -->
+      <div class="hero__content">
+        <div class="hero__eyebrow fade-in fade-in--delay-1">Certified Sports Chiropractor</div>
+
+        <h1 class="hero__headline fade-in fade-in--delay-1">
+          Recover Faster.
+          <span>Perform Better.</span>
+        </h1>
+
+        <p class="hero__subhead fade-in fade-in--delay-2">
+          Springfield's premier sports chiropractic clinic. Specialized care for athletes and active individuals — from weekend warriors to professional competitors.
+        </p>
+
+        <div class="hero__actions fade-in fade-in--delay-2">
+          <a href="#contact" class="btn--primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg>
+            Book Free Assessment
+          </a>
+          <a href="tel:5558765432" class="btn--outline">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.59 1.09h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 5.45 5.45l1.28-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            (555) 876-5432
+          </a>
+        </div>
+
+        <div class="hero__stats fade-in fade-in--delay-3">
+          <div class="hero__stat">
+            <span class="stat__number">500+</span>
+            <span class="stat__label">Athletes Treated</span>
+          </div>
+          <div class="hero__stat">
+            <span class="stat__number">48hr</span>
+            <span class="stat__label">Recovery Protocol</span>
+          </div>
+          <div class="hero__stat">
+            <span class="stat__number">12</span>
+            <span class="stat__label">Sports Teams Served</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== SPORTS WE SERVE ===== -->
+  <section class="section sports" id="sports" aria-label="Sports we serve">
+    <div class="section__inner">
+      <div class="section__header">
+        <span class="section__label fade-in">Every Sport. Every Athlete.</span>
+        <h2 class="section__title fade-in fade-in--delay-1">Sports We Treat</h2>
+        <p class="section__subtitle fade-in fade-in--delay-2">From contact sports to endurance athletics, our specialized protocols address the unique biomechanical demands of every discipline.</p>
+      </div>
+
+      <div class="sports__grid fade-in fade-in--delay-2">
+
+        <!-- Football -->
+        <div class="sport__card">
+          <svg class="sport__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <ellipse cx="12" cy="12" rx="10" ry="6" transform="rotate(45 12 12)"/>
+            <line x1="6.5" y1="6.5" x2="17.5" y2="17.5"/>
+            <line x1="8" y1="10" x2="10" y2="8"/>
+            <line x1="11" y1="13" x2="13" y2="11"/>
+            <line x1="14" y1="16" x2="16" y2="14"/>
+          </svg>
+          <span class="sport__name">Football</span>
+        </div>
+
+        <!-- Basketball -->
+        <div class="sport__card">
+          <svg class="sport__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M4.9 4.9c4.2 4.2 5.3 10.1 3.3 15.4"/>
+            <path d="M19.1 4.9c-4.2 4.2-5.3 10.1-3.3 15.4"/>
+            <line x1="2" y1="12" x2="22" y2="12"/>
+          </svg>
+          <span class="sport__name">Basketball</span>
+        </div>
+
+        <!-- Running -->
+        <div class="sport__card">
+          <svg class="sport__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="13" cy="4" r="2"/>
+            <path d="M9 9l3-2 4 4-3 3-2 5H8l2-5-3-4 2-1z"/>
+            <path d="M7 14l-2 4"/>
+            <path d="M17 11l2 4"/>
+          </svg>
+          <span class="sport__name">Running</span>
+        </div>
+
+        <!-- CrossFit -->
+        <div class="sport__card">
+          <svg class="sport__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 6h2m14 0h2M5 6a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H5zM9 6V4m6 2V4"/>
+            <line x1="12" y1="12" x2="12" y2="20"/>
+            <path d="M8 20h8"/>
+          </svg>
+          <span class="sport__name">CrossFit</span>
+        </div>
+
+        <!-- Golf -->
+        <div class="sport__card">
+          <svg class="sport__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="12" y1="2" x2="12" y2="22"/>
+            <path d="M12 2l7 4-7 4V2z"/>
+            <ellipse cx="9" cy="21" rx="4" ry="1.5"/>
+          </svg>
+          <span class="sport__name">Golf</span>
+        </div>
+
+        <!-- Soccer -->
+        <div class="sport__card">
+          <svg class="sport__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"/>
+            <polygon points="12,2 15,9 22,9 16.5,13.5 18.5,21 12,17 5.5,21 7.5,13.5 2,9 9,9"/>
+          </svg>
+          <span class="sport__name">Soccer</span>
+        </div>
+
+        <!-- Baseball -->
+        <div class="sport__card">
+          <svg class="sport__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M4.2 4.2c3.4 3 5.2 7.2 5 11.8"/>
+            <path d="M19.8 4.2c-3.4 3-5.2 7.2-5 11.8"/>
+          </svg>
+          <span class="sport__name">Baseball</span>
+        </div>
+
+        <!-- Cycling -->
+        <div class="sport__card">
+          <svg class="sport__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="5.5" cy="17.5" r="3.5"/>
+            <circle cx="18.5" cy="17.5" r="3.5"/>
+            <path d="M15 6a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" fill="currentColor"/>
+            <path d="M12 17.5l2-6 3-2-2 8"/>
+            <path d="M8 17.5l4-11h5"/>
+          </svg>
+          <span class="sport__name">Cycling</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section class="section services" id="services" aria-label="Our services">
+    <div class="section__inner">
+      <div class="section__header">
+        <span class="section__label fade-in">Specialized Care</span>
+        <h2 class="section__title fade-in fade-in--delay-1">What We Treat</h2>
+        <p class="section__subtitle fade-in fade-in--delay-2">Evidence-based chiropractic services designed around the demands of athletic performance and injury recovery.</p>
+      </div>
+
+      <div class="services__grid">
+
+        <!-- Athletic Adjustments -->
+        <article class="service-card fade-in" id="athletic-adjustments">
+          <div class="service-card__icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+            </svg>
+          </div>
+          <h3 class="service-card__title">Athletic Adjustments</h3>
+          <p class="service-card__desc">Sport-specific spinal and extremity adjustments that restore optimal joint function, improve range of motion, and support peak athletic output.</p>
+          <ul class="service-card__features">
+            <li>Sport-specific biomechanical analysis</li>
+            <li>Spinal & extremity mobilization</li>
+            <li>Pre-game preparation protocols</li>
+            <li>Post-competition recovery care</li>
+          </ul>
+        </article>
+
+        <!-- Injury Rehab -->
+        <article class="service-card fade-in fade-in--delay-1" id="injury-rehab">
+          <div class="service-card__icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/>
+              <circle cx="12" cy="12" r="10" stroke-opacity="0.2"/>
+            </svg>
+          </div>
+          <h3 class="service-card__title">Injury Rehabilitation</h3>
+          <p class="service-card__desc">Comprehensive rehab programs targeting sports injuries — from acute strains and sprains to chronic overuse conditions — getting you back in the game fast.</p>
+          <ul class="service-card__features">
+            <li>Acute injury assessment & treatment</li>
+            <li>Therapeutic exercise programming</li>
+            <li>Soft tissue therapy (ART, IASTM)</li>
+            <li>Return-to-sport clearance protocols</li>
+          </ul>
+        </article>
+
+        <!-- Performance Optimization -->
+        <article class="service-card fade-in fade-in--delay-2" id="performance-optimization">
+          <div class="service-card__icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+              <polyline points="17 6 23 6 23 12"/>
+            </svg>
+          </div>
+          <h3 class="service-card__title">Performance Optimization</h3>
+          <p class="service-card__desc">Go beyond pain relief. Our performance protocols help healthy athletes unlock greater power, speed, and endurance through optimized musculoskeletal function.</p>
+          <ul class="service-card__features">
+            <li>Functional movement screening</li>
+            <li>Neuromuscular re-education</li>
+            <li>Speed & power enhancement drills</li>
+            <li>Sport-season maintenance plans</li>
+          </ul>
+        </article>
+
+        <!-- Movement Assessment -->
+        <article class="service-card fade-in fade-in--delay-3" id="movement-assessment">
+          <div class="service-card__icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"/>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+              <line x1="11" y1="8" x2="11" y2="14"/>
+              <line x1="8" y1="11" x2="14" y2="11"/>
+            </svg>
+          </div>
+          <h3 class="service-card__title">Movement Assessment</h3>
+          <p class="service-card__desc">Full-body biomechanical screening that identifies compensations and movement dysfunctions before they become injuries — essential for every serious athlete.</p>
+          <ul class="service-card__features">
+            <li>FMS & SFMA screening</li>
+            <li>Gait & running analysis</li>
+            <li>Posture & alignment evaluation</li>
+            <li>Personalized corrective plan</li>
+          </ul>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RECOVERY PROTOCOL ===== -->
+  <section class="section protocol" id="protocol" aria-label="Recovery protocol">
+    <div class="section__inner protocol__inner">
+      <div class="section__header">
+        <span class="section__label fade-in">Proven Process</span>
+        <h2 class="section__title fade-in fade-in--delay-1">Our 48-Hour Recovery Protocol</h2>
+        <p class="section__subtitle fade-in fade-in--delay-2">A structured, time-tested pathway from injury to peak performance — built around the athlete's schedule.</p>
+      </div>
+
+      <div class="protocol__grid">
+
+        <div class="protocol__step fade-in">
+          <div class="protocol__step-number" aria-hidden="true">1</div>
+          <div class="protocol__step-timing">Day 1</div>
+          <h3 class="protocol__step-title">Assessment</h3>
+          <p class="protocol__step-desc">Comprehensive biomechanical evaluation, injury history review, and sport-specific movement screening. We identify root causes, not just symptoms.</p>
+        </div>
+
+        <div class="protocol__step fade-in fade-in--delay-1">
+          <div class="protocol__step-number" aria-hidden="true">2</div>
+          <div class="protocol__step-timing">Week 1</div>
+          <h3 class="protocol__step-title">Treatment</h3>
+          <p class="protocol__step-desc">Targeted adjustments, soft tissue therapy, and therapeutic modalities to reduce pain, restore mobility, and begin the healing cascade.</p>
+          <div class="protocol__arrow" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+          </div>
+        </div>
+
+        <div class="protocol__step fade-in fade-in--delay-2">
+          <div class="protocol__step-number" aria-hidden="true">3</div>
+          <div class="protocol__step-timing">Weeks 2–3</div>
+          <h3 class="protocol__step-title">Rehab</h3>
+          <p class="protocol__step-desc">Progressive rehabilitative exercise, neuromuscular retraining, and sport-specific movement patterns to rebuild strength and stability.</p>
+          <div class="protocol__arrow" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+          </div>
+        </div>
+
+        <div class="protocol__step fade-in fade-in--delay-3">
+          <div class="protocol__step-number" aria-hidden="true">4</div>
+          <div class="protocol__step-timing">Month 1+</div>
+          <h3 class="protocol__step-title">Performance</h3>
+          <p class="protocol__step-desc">Return to sport with optimized function. Ongoing maintenance care and performance protocols to prevent re-injury and elevate your game.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TEAM PARTNERSHIPS ===== -->
+  <section class="section partnerships" id="partnerships" aria-label="Team sports partnerships">
+    <div class="section__inner">
+      <div class="partnerships__grid">
+
+        <div>
+          <span class="section__label fade-in">Official Team Partner</span>
+          <h2 class="section__title fade-in fade-in--delay-1">Trusted By Local Sports Teams</h2>
+          <p class="section__subtitle fade-in fade-in--delay-2" style="margin-bottom:2rem;">We proudly serve as the official chiropractic partner for 12 local sports organizations — providing sideline support, pre-season screenings, and in-season care.</p>
+
+          <div class="partnerships__badges fade-in fade-in--delay-2">
+
+            <div class="team-badge">
+              <div class="team-badge__icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="12" rx="10" ry="6" transform="rotate(45 12 12)"/></svg>
+              </div>
+              <div class="team-badge__name">Springfield Falcons</div>
+              <div class="team-badge__role">Football</div>
+            </div>
+
+            <div class="team-badge">
+              <div class="team-badge__icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M4.9 4.9c4.2 4.2 5.3 10.1 3.3 15.4"/><path d="M19.1 4.9c-4.2 4.2-5.3 10.1-3.3 15.4"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
+              </div>
+              <div class="team-badge__name">River City Hoops</div>
+              <div class="team-badge__role">Basketball</div>
+            </div>
+
+            <div class="team-badge">
+              <div class="team-badge__icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="12,2 15,9 22,9 16.5,13.5 18.5,21 12,17 5.5,21 7.5,13.5 2,9 9,9"/></svg>
+              </div>
+              <div class="team-badge__name">Metro FC</div>
+              <div class="team-badge__role">Soccer</div>
+            </div>
+
+            <div class="team-badge">
+              <div class="team-badge__icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M4.2 4.2c3.4 3 5.2 7.2 5 11.8"/><path d="M19.8 4.2c-3.4 3-5.2 7.2-5 11.8"/></svg>
+              </div>
+              <div class="team-badge__name">Diamond Dogs</div>
+              <div class="team-badge__role">Baseball</div>
+            </div>
+
+            <div class="team-badge">
+              <div class="team-badge__icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="5.5" cy="17.5" r="3.5"/><circle cx="18.5" cy="17.5" r="3.5"/><path d="M15 6a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" fill="currentColor"/><path d="M12 17.5l2-6 3-2-2 8"/><path d="M8 17.5l4-11h5"/></svg>
+              </div>
+              <div class="team-badge__name">Spoke & Stride</div>
+              <div class="team-badge__role">Cycling Club</div>
+            </div>
+
+            <div class="team-badge">
+              <div class="team-badge__icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13" cy="4" r="2"/><path d="M9 9l3-2 4 4-3 3-2 5H8l2-5-3-4 2-1z"/></svg>
+              </div>
+              <div class="team-badge__name">Prairie Runners</div>
+              <div class="team-badge__role">Track & Field</div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Coach Testimonial -->
+        <div class="partnerships__testimonial fade-in fade-in--delay-2">
+          <blockquote>
+            "Sports Injury Chiropractic has transformed how our program handles injury and recovery. Our players get back on the field 40% faster than before we partnered with them. Dr. Martinez and his team understand what athletes need — not just clinically, but mentally. They're an extension of our coaching staff."
+          </blockquote>
+          <div class="coach-profile">
+            <div class="coach-avatar" aria-hidden="true">
+              <img
+                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=120&q=80"
+                alt="Coach Marcus Thompson headshot"
+                width="52"
+                height="52"
+              />
+            </div>
+            <div>
+              <div class="coach-name">Coach Marcus Thompson</div>
+              <div class="coach-role">Head Coach — Springfield Falcons Football</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="section testimonials" id="testimonials" aria-label="Athlete testimonials">
+    <div class="section__inner">
+      <div class="section__header">
+        <span class="section__label fade-in">Athlete Success Stories</span>
+        <h2 class="section__title fade-in fade-in--delay-1">Real Athletes. Real Results.</h2>
+        <p class="section__subtitle fade-in fade-in--delay-2">Hundreds of athletes have returned to peak performance through our specialized protocols. Here are a few of their stories.</p>
+      </div>
+
+      <div class="testimonials__grid">
+
+        <!-- Testimonial 1 -->
+        <article class="testimonial-card fade-in">
+          <div class="testimonial-card__header">
+            <div class="testimonial-card__avatar" aria-label="Derek M. initials">D</div>
+            <div>
+              <div class="testimonial-card__name">Derek M.</div>
+              <span class="testimonial-card__sport">Football — Wide Receiver</span>
+            </div>
+          </div>
+          <div class="testimonial-card__stars" aria-label="5 out of 5 stars">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <p class="testimonial-card__quote">
+            "I tore a hamstring during training camp and thought my season was over. Dr. Martinez put together a rehab plan that had me back practicing in three weeks — two weeks ahead of schedule. My speed actually improved from before the injury."
+          </p>
+          <div class="testimonial-card__result">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Returned to play 2 weeks ahead of schedule
+          </div>
+        </article>
+
+        <!-- Testimonial 2 -->
+        <article class="testimonial-card fade-in fade-in--delay-1">
+          <div class="testimonial-card__header">
+            <div class="testimonial-card__avatar" aria-label="Priya S. initials">P</div>
+            <div>
+              <div class="testimonial-card__name">Priya S.</div>
+              <span class="testimonial-card__sport">Running — Marathon</span>
+            </div>
+          </div>
+          <div class="testimonial-card__stars" aria-label="5 out of 5 stars">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <p class="testimonial-card__quote">
+            "IT band syndrome had me sidelined for four months before I came here. The movement assessment revealed a hip imbalance I never knew I had. After six sessions and a corrective program, I ran my first Boston qualifier — a 12-minute PR."
+          </p>
+          <div class="testimonial-card__result">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            12-minute marathon PR after treatment
+          </div>
+        </article>
+
+        <!-- Testimonial 3 -->
+        <article class="testimonial-card fade-in fade-in--delay-2">
+          <div class="testimonial-card__header">
+            <div class="testimonial-card__avatar" aria-label="James K. initials">J</div>
+            <div>
+              <div class="testimonial-card__name">James K.</div>
+              <span class="testimonial-card__sport">CrossFit — Competitive</span>
+            </div>
+          </div>
+          <div class="testimonial-card__stars" aria-label="5 out of 5 stars">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <p class="testimonial-card__quote">
+            "I had a severe lower back disc issue that two other clinics said would need surgery. Sports Injury Chiro took an entirely different approach — conservative care, targeted rehab, and a load management plan. Zero surgery, back to competing in 8 weeks."
+          </p>
+          <div class="testimonial-card__result">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Avoided surgery — competing again in 8 weeks
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== INSURANCE BANNER ===== -->
+  <div class="insurance-banner" role="complementary" aria-label="Insurance and walk-ins">
+    <div class="insurance-banner__inner">
+      <h2 class="insurance-banner__title fade-in">Insurance Accepted. Walk-Ins Welcome.</h2>
+      <p class="insurance-banner__sub fade-in fade-in--delay-1">We work with most major insurance providers and offer affordable self-pay rates. No referral needed — just book and come in.</p>
+
+      <div class="insurance-badges fade-in fade-in--delay-1">
+        <span class="insurance-badge">Blue Cross Blue Shield</span>
+        <span class="insurance-badge">Aetna</span>
+        <span class="insurance-badge">UnitedHealth</span>
+        <span class="insurance-badge">Cigna</span>
+        <span class="insurance-badge">Medicare</span>
+        <span class="insurance-badge">Workers' Comp</span>
+        <span class="insurance-badge">Personal Injury</span>
+      </div>
+
+      <a href="tel:5558765432" class="insurance-banner__cta fade-in fade-in--delay-2">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.59 1.09h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 5.45 5.45l1.28-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call Now — Same Day Available
+      </a>
+    </div>
+  </div>
+
+  <!-- ===== LOCATION + HOURS ===== -->
+  <section class="section location" id="location" aria-label="Location and hours">
+    <div class="section__inner">
+      <div class="section__header">
+        <span class="section__label fade-in">Find Us</span>
+        <h2 class="section__title fade-in fade-in--delay-1">Location &amp; Hours</h2>
+        <p class="section__subtitle fade-in fade-in--delay-2">Conveniently located in the Athletic District — easy parking, near major highways, and close to local sports facilities.</p>
+      </div>
+
+      <div class="location__grid">
+        <div class="fade-in">
+
+          <div class="location__info-block">
+            <div class="location__info-label">Address</div>
+            <div class="location__info-value">
+              2480 Athletic Drive, Suite 100<br />
+              Springfield, IL 62701
+            </div>
+          </div>
+
+          <div class="location__info-block location__hours">
+            <div class="location__info-label">Office Hours</div>
+            <table aria-label="Office hours">
+              <tbody>
+                <tr><td>Monday – Friday</td><td>7:00 AM – 7:00 PM</td></tr>
+                <tr><td>Saturday</td><td>8:00 AM – 2:00 PM</td></tr>
+                <tr><td>Sunday</td><td>Closed</td></tr>
+                <tr><td>Same-Day Appointments</td><td>Available</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="location__contact-cta" id="contact">
+            <a href="tel:5558765432" class="contact-btn">
+              <div class="contact-btn__icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.59 1.09h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 5.45 5.45l1.28-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <span>(555) 876-5432 — Click to Call</span>
+            </a>
+            <a href="mailto:info@sportsinjurychiro.com" class="contact-btn">
+              <div class="contact-btn__icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <span>info@sportsinjurychiro.com</span>
+            </a>
+            <a href="#home" class="contact-btn btn--primary" style="border:none; justify-content:center; text-align:center;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              Book Free Assessment Online
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Map placeholder with pin -->
+        <div class="location__map-wrap fade-in fade-in--delay-1">
+          <img
+            src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&q=80"
+            alt="Sports Injury Chiropractic clinic interior"
+            width="600"
+            height="600"
+            loading="lazy"
+          />
+          <div class="location__map-overlay">
+            <div class="location__map-pin" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <p class="location__map-text">
+              2480 Athletic Drive, Suite 100<br />Springfield, IL 62701
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__inner">
+      <div class="footer__grid">
+
+        <!-- Brand col -->
+        <div>
+          <div class="footer__brand">
+            <div class="footer__brand-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
+                <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
+                <line x1="6" y1="1" x2="6" y2="4"/>
+                <line x1="10" y1="1" x2="10" y2="4"/>
+                <line x1="14" y1="1" x2="14" y2="4"/>
+              </svg>
+            </div>
+            <div class="footer__brand-name">Sports Injury <span>Chiropractic</span></div>
+          </div>
+          <p class="footer__tagline">Springfield's premier sports chiropractic clinic. Specialized care for athletes at every level — from high school competitors to professional players.</p>
+          <div class="footer__credential" aria-label="Certified Sports Chiropractor credential">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Certified Sports Chiropractor (CCSP)
+          </div>
+        </div>
+
+        <!-- Services col -->
+        <div class="footer__col">
+          <h3 class="footer__col-title">Services</h3>
+          <ul>
+            <li><a href="#athletic-adjustments">Athletic Adjustments</a></li>
+            <li><a href="#injury-rehab">Injury Rehabilitation</a></li>
+            <li><a href="#performance-optimization">Performance Optimization</a></li>
+            <li><a href="#movement-assessment">Movement Assessment</a></li>
+            <li><a href="#sports">Sports We Treat</a></li>
+          </ul>
+        </div>
+
+        <!-- Info col -->
+        <div class="footer__col">
+          <h3 class="footer__col-title">Information</h3>
+          <ul>
+            <li><a href="#protocol">Recovery Protocol</a></li>
+            <li><a href="#partnerships">Team Partnerships</a></li>
+            <li><a href="#testimonials">Patient Stories</a></li>
+            <li><a href="#location">Hours &amp; Location</a></li>
+            <li><a href="#contact">Book Assessment</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact col -->
+        <div class="footer__col">
+          <h3 class="footer__col-title">Contact</h3>
+          <ul>
+            <li><a href="tel:5558765432">(555) 876-5432</a></li>
+            <li><a href="mailto:info@sportsinjurychiro.com">info@sportsinjurychiro.com</a></li>
+            <li>2480 Athletic Drive</li>
+            <li>Suite 100, Springfield, IL</li>
+            <li>Mon–Fri: 7am–7pm</li>
+            <li>Sat: 8am–2pm</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2026 Sports Injury Chiropractic. All rights reserved. Springfield, IL.</p>
+        <div class="footer__legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Accessibility</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== JAVASCRIPT ===== -->
+  <script>
+    // Mobile nav toggle
+    const toggle = document.getElementById('navToggle');
+    const mobileNav = document.getElementById('navMobile');
+
+    toggle.addEventListener('click', function() {
+      const isOpen = mobileNav.classList.toggle('is-open');
+      mobileNav.setAttribute('aria-hidden', String(!isOpen));
+      toggle.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    // Close mobile nav on link click
+    mobileNav.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        mobileNav.classList.remove('is-open');
+        mobileNav.setAttribute('aria-hidden', 'true');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Intersection Observer — scroll fade-in
+    (function() {
+      var elements = document.querySelectorAll('.fade-in');
+      if (!elements.length) return;
+
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.12,
+        rootMargin: '0px 0px -40px 0px'
+      });
+
+      elements.forEach(function(el) {
+        observer.observe(el);
+      });
+    })();
+
+    // Sticky nav background intensity on scroll
+    (function() {
+      var nav = document.querySelector('.nav');
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 80) {
+          nav.style.background = 'rgba(6, 6, 24, 0.98)';
+        } else {
+          nav.style.background = 'rgba(6, 6, 24, 0.95)';
+        }
+      }, { passive: true });
+    })();
+
+    // Animate stat numbers on first view
+    (function() {
+      var stats = document.querySelectorAll('.stat__number');
+      var animated = false;
+
+      function getTarget(el) {
+        var text = el.textContent.trim();
+        var num = parseInt(text.replace(/[^0-9]/g, ''), 10);
+        var suffix = text.replace(/[0-9]/g, '');
+        return { num: num, suffix: suffix };
+      }
+
+      function animateStat(el, target, suffix, duration) {
+        var start = 0;
+        var startTime = null;
+        function step(timestamp) {
+          if (!startTime) startTime = timestamp;
+          var progress = Math.min((timestamp - startTime) / duration, 1);
+          var eased = 1 - Math.pow(1 - progress, 3);
+          var current = Math.round(eased * target);
+          el.textContent = current + suffix;
+          if (progress < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+      }
+
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting && !animated) {
+            animated = true;
+            stats.forEach(function(stat) {
+              var t = getTarget(stat);
+              animateStat(stat, t.num, t.suffix, 1800);
+            });
+            observer.disconnect();
+          }
+        });
+      }, { threshold: 0.5 });
+
+      if (stats.length) observer.observe(stats[0].closest('.hero__stats') || stats[0]);
+    })();
+  </script>
+
+</body>
+</html>

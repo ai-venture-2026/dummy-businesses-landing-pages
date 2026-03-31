@@ -1,0 +1,2123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mobility First Physical Therapy | Geriatric Care & Fall Prevention</title>
+<meta name="description" content="Mobility First Physical Therapy specializes in senior care — geriatric therapy, fall prevention, balance training, and chronic pain management. Medicare accepted. Compassionate, experienced therapists.">
+<meta name="keywords" content="physical therapy, geriatric therapy, fall prevention, balance training, Medicare physical therapy, senior physical therapy, in-home physical therapy">
+<meta property="og:title" content="Mobility First Physical Therapy | Senior Specialists">
+<meta property="og:description" content="Specialized physical therapy for seniors. Medicare accepted. Fall prevention, balance training, chronic pain management. In-home therapy available.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalBusiness",
+  "name": "Mobility First Physical Therapy",
+  "description": "Specialized physical therapy for seniors. Geriatric therapy, fall prevention, balance training, chronic pain management. Medicare accepted.",
+  "url": "https://mobilityfirstpt.com",
+  "telephone": "(555) 678-9012",
+  "medicalSpecialty": "PhysicalTherapy",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1420 Wellness Drive, Suite 200",
+    "addressLocality": "Springfield",
+    "addressRegion": "IL",
+    "postalCode": "62701",
+    "addressCountry": "US"
+  },
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "07:00", "closes": "18:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "13:00"}
+  ],
+  "hasMap": "https://maps.google.com",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "187"
+  }
+}
+</script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --taupe: #D2B48C;
+    --taupe-dark: #b8955e;
+    --blue: #B0E0E6;
+    --blue-dark: #7ec8d0;
+    --white: #FFFFFF;
+    --dark: #3D3D3D;
+    --hero-bg: #2C4A6E;
+    --hero-bg-light: #3a5f8a;
+    --light-bg: #f9f5f0;
+    --mid-bg: #f0ebe3;
+    --border: #e0d6c8;
+    --radius: 16px;
+    --radius-sm: 10px;
+    --shadow: 0 4px 24px rgba(44,74,110,0.10);
+    --shadow-lg: 0 8px 40px rgba(44,74,110,0.15);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    line-height: 1.65;
+    color: var(--dark);
+    background: var(--white);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Merriweather', serif;
+    line-height: 1.3;
+    color: var(--hero-bg);
+  }
+
+  h1 { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 900; }
+  h2 { font-size: clamp(1.5rem, 3vw, 2.25rem); font-weight: 700; }
+  h3 { font-size: clamp(1.1rem, 2vw, 1.35rem); font-weight: 700; }
+  h4 { font-size: 1.05rem; font-weight: 700; }
+
+  p { font-size: 1rem; }
+
+  img { max-width: 100%; display: block; object-fit: cover; }
+
+  a { color: inherit; text-decoration: none; }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  .section-label {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--taupe-dark);
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  /* ── FADE-IN ANIMATION ── */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .fade-in.visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* ═══════════════════════════════════════════
+     NAV
+  ═══════════════════════════════════════════ */
+  #navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--white);
+    border-bottom: 2px solid var(--border);
+    box-shadow: 0 2px 12px rgba(44,74,110,0.08);
+  }
+
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    height: 68px;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 16px;
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+  }
+
+  .nav-logo-icon {
+    width: 44px;
+    height: 44px;
+    background: var(--hero-bg);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .nav-logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+  }
+
+  .nav-logo-text strong {
+    font-family: 'Merriweather', serif;
+    font-size: 1.05rem;
+    color: var(--hero-bg);
+    font-weight: 900;
+  }
+
+  .nav-logo-text span {
+    font-size: 0.75rem;
+    color: var(--taupe-dark);
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.75rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--dark);
+    transition: color 0.2s;
+    white-space: nowrap;
+  }
+
+  .nav-links a:hover { color: var(--hero-bg); }
+
+  .nav-cta {
+    background: var(--taupe);
+    color: var(--dark) !important;
+    padding: 0.5rem 1.25rem;
+    border-radius: 50px;
+    font-weight: 700 !important;
+    font-size: 0.875rem !important;
+    transition: background 0.2s, transform 0.15s !important;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .nav-cta:hover {
+    background: var(--taupe-dark) !important;
+    transform: translateY(-1px);
+  }
+
+  .nav-phone {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--hero-bg) !important;
+    white-space: nowrap;
+  }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 26px;
+    height: 3px;
+    background: var(--hero-bg);
+    border-radius: 3px;
+    transition: all 0.3s;
+  }
+
+  @media (max-width: 900px) {
+    .nav-links { display: none; }
+    .nav-phone-desktop { display: none; }
+    .hamburger { display: flex; }
+    .nav-mobile-open .nav-links {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0; right: 0;
+      background: var(--white);
+      padding: 20px 24px 24px;
+      border-bottom: 2px solid var(--border);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .nav-mobile-open .nav-links a { font-size: 1.1rem; }
+  }
+
+  /* ═══════════════════════════════════════════
+     HERO
+  ═══════════════════════════════════════════ */
+  #hero {
+    background: var(--hero-bg);
+    position: relative;
+    overflow: hidden;
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+  }
+
+  .hero-bg-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, rgba(44,74,110,0.97) 45%, rgba(44,74,110,0.55) 100%);
+    z-index: 1;
+  }
+
+  .hero-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 680px;
+    padding: 80px 24px;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(176,224,230,0.2);
+    border: 2px solid var(--blue);
+    color: var(--blue);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 7px 16px;
+    border-radius: 50px;
+    margin-bottom: 24px;
+  }
+
+  .hero-badge svg { flex-shrink: 0; }
+
+  #hero h1 {
+    color: var(--white);
+    margin-bottom: 20px;
+  }
+
+  .hero-sub {
+    font-size: 1.125rem;
+    color: rgba(255,255,255,0.88);
+    margin-bottom: 1.5rem;
+    max-width: 600px;
+  }
+
+  .hero-btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    background: var(--taupe);
+    color: var(--dark);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0.75rem 1.75rem;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+    text-decoration: none;
+    max-height: 52px;
+  }
+
+  .btn-primary:hover { background: var(--taupe-dark); transform: translateY(-2px); }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    background: transparent;
+    color: var(--white);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0.75rem 1.75rem;
+    border-radius: 50px;
+    border: 2px solid rgba(255,255,255,0.6);
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s, transform 0.15s;
+    text-decoration: none;
+    max-height: 52px;
+  }
+
+  .btn-secondary:hover {
+    border-color: var(--white);
+    background: rgba(255,255,255,0.1);
+    transform: translateY(-2px);
+  }
+
+  .hero-trust {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .trust-pill {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255,255,255,0.85);
+    font-size: 0.92rem;
+    font-weight: 600;
+  }
+
+  .trust-pill svg { color: var(--blue); flex-shrink: 0; }
+
+  /* ── WAVE ── */
+  .wave-divider {
+    line-height: 0;
+    overflow: hidden;
+  }
+
+  .wave-divider svg { display: block; width: 100%; }
+
+  /* ═══════════════════════════════════════════
+     WHY CHOOSE US
+  ═══════════════════════════════════════════ */
+  #why-us {
+    background: var(--light-bg);
+    padding: 4rem 0;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  .section-header p {
+    color: #5a5a5a;
+    max-width: 600px;
+    margin: 12px auto 0;
+    font-size: 1.05rem;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .feature-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 1.75rem 1.75rem;
+    text-align: center;
+    box-shadow: var(--shadow);
+    border: 2px solid transparent;
+    transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+  }
+
+  .feature-card:hover {
+    border-color: var(--taupe);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .feature-icon {
+    width: 72px;
+    height: 72px;
+    background: linear-gradient(135deg, var(--blue) 0%, #e8f7f9 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+  }
+
+  .feature-card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+    color: var(--hero-bg);
+  }
+
+  .feature-card p {
+    font-size: 0.97rem;
+    color: #5a5a5a;
+  }
+
+  /* ═══════════════════════════════════════════
+     CONDITIONS
+  ═══════════════════════════════════════════ */
+  #conditions {
+    background: var(--white);
+    padding: 4rem 0;
+  }
+
+  .conditions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .condition-card {
+    background: var(--light-bg);
+    border-radius: var(--radius);
+    padding: 1.75rem 1.75rem;
+    border-left: 5px solid var(--taupe);
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    transition: box-shadow 0.2s, transform 0.2s;
+  }
+
+  .condition-card:hover {
+    box-shadow: var(--shadow);
+    transform: translateY(-3px);
+  }
+
+  .condition-icon {
+    width: 56px;
+    height: 56px;
+    background: var(--hero-bg);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .condition-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+    color: var(--hero-bg);
+  }
+
+  .condition-card p {
+    font-size: 0.93rem;
+    color: #5a5a5a;
+  }
+
+  /* ═══════════════════════════════════════════
+     OUR APPROACH
+  ═══════════════════════════════════════════ */
+  #approach {
+    background: var(--hero-bg);
+    padding: 4rem 0;
+    position: relative;
+  }
+
+  #approach .section-header h2,
+  #approach .section-header p {
+    color: var(--white);
+  }
+
+  #approach .section-header p { color: rgba(255,255,255,0.80); }
+  #approach .section-label { color: var(--blue); }
+
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    position: relative;
+  }
+
+  .step-card {
+    background: rgba(255,255,255,0.08);
+    border: 1.5px solid rgba(176,224,230,0.3);
+    border-radius: var(--radius);
+    padding: 1.75rem 1.75rem;
+    text-align: center;
+    color: var(--white);
+    transition: background 0.2s, transform 0.2s;
+  }
+
+  .step-card:hover {
+    background: rgba(255,255,255,0.14);
+    transform: translateY(-4px);
+  }
+
+  .step-number {
+    width: 56px;
+    height: 56px;
+    background: var(--taupe);
+    color: var(--dark);
+    font-family: 'Merriweather', serif;
+    font-size: 1.4rem;
+    font-weight: 900;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+  }
+
+  .step-icon {
+    width: 64px;
+    height: 64px;
+    background: rgba(176,224,230,0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+  }
+
+  .step-card h3 { color: var(--white); margin-bottom: 10px; font-size: 1.2rem; }
+  .step-card p { color: rgba(255,255,255,0.82); font-size: 0.97rem; }
+
+  /* ═══════════════════════════════════════════
+     THERAPISTS
+  ═══════════════════════════════════════════ */
+  #therapists {
+    background: var(--light-bg);
+    padding: 4rem 0;
+  }
+
+  .therapists-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .therapist-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .therapist-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .therapist-img-wrap {
+    height: 280px;
+    overflow: hidden;
+  }
+
+  .therapist-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    transition: transform 0.4s;
+  }
+
+  .therapist-card:hover .therapist-img-wrap img { transform: scale(1.04); }
+
+  .therapist-body {
+    padding: 1.5rem;
+  }
+
+  .therapist-title {
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--taupe-dark);
+    margin-bottom: 4px;
+  }
+
+  .therapist-body h3 { margin-bottom: 8px; color: var(--hero-bg); font-size: 1.2rem; }
+  .therapist-body p { font-size: 0.95rem; color: #5a5a5a; margin-bottom: 14px; }
+
+  .therapist-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .tag {
+    background: var(--mid-bg);
+    color: var(--hero-bg);
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 50px;
+    border: 1px solid var(--border);
+  }
+
+  /* ═══════════════════════════════════════════
+     MEDICARE & INSURANCE
+  ═══════════════════════════════════════════ */
+  #medicare {
+    background: var(--white);
+    padding: 4rem 0;
+  }
+
+  .medicare-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+    align-items: center;
+  }
+
+  .medicare-content h2 { margin-bottom: 20px; }
+  .medicare-content p { color: #5a5a5a; margin-bottom: 24px; }
+
+  .medicare-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 28px;
+  }
+
+  .medicare-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 1rem;
+    color: var(--dark);
+  }
+
+  .medicare-list li svg { flex-shrink: 0; margin-top: 3px; }
+
+  .medicare-banner {
+    background: linear-gradient(135deg, var(--hero-bg) 0%, var(--hero-bg-light) 100%);
+    border-radius: var(--radius);
+    padding: 40px 36px;
+    color: var(--white);
+    text-align: center;
+    box-shadow: var(--shadow-lg);
+  }
+
+  .medicare-banner svg { color: var(--blue); margin: 0 auto 16px; display: block; }
+  .medicare-banner h3 { color: var(--white); font-size: 1.3rem; margin-bottom: 10px; }
+  .medicare-banner p { color: rgba(255,255,255,0.85); font-size: 0.97rem; margin-bottom: 20px; }
+
+  .insurance-logos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .ins-badge {
+    background: rgba(255,255,255,0.15);
+    border: 1.5px solid rgba(255,255,255,0.3);
+    color: var(--white);
+    font-size: 0.82rem;
+    font-weight: 700;
+    padding: 7px 14px;
+    border-radius: 8px;
+  }
+
+  @media (max-width: 768px) {
+    .medicare-inner { grid-template-columns: 1fr; gap: 36px; }
+  }
+
+  /* ═══════════════════════════════════════════
+     TESTIMONIALS
+  ═══════════════════════════════════════════ */
+  #testimonials {
+    background: var(--mid-bg);
+    padding: 4rem 0;
+  }
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .testimonial-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 1.75rem 1.75rem;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transition: transform 0.2s;
+  }
+
+  .testimonial-card:hover { transform: translateY(-3px); }
+
+  .stars {
+    display: flex;
+    gap: 4px;
+  }
+
+  .testimonial-text {
+    font-size: 1.02rem;
+    color: var(--dark);
+    font-style: italic;
+    line-height: 1.75;
+    flex: 1;
+  }
+
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    border-top: 1px solid var(--border);
+    padding-top: 16px;
+  }
+
+  .author-avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--taupe), var(--blue));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Merriweather', serif;
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: var(--hero-bg);
+    flex-shrink: 0;
+  }
+
+  .author-info strong { display: block; font-size: 1rem; color: var(--hero-bg); }
+  .author-info span { font-size: 0.88rem; color: #777; }
+
+  /* ═══════════════════════════════════════════
+     IN-HOME THERAPY
+  ═══════════════════════════════════════════ */
+  #in-home {
+    background: var(--white);
+    padding: 4rem 0;
+  }
+
+  .in-home-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .in-home-img-wrap {
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    height: 460px;
+  }
+
+  .in-home-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .in-home-content h2 { margin-bottom: 16px; }
+  .in-home-content > p { color: #5a5a5a; margin-bottom: 28px; }
+
+  .in-home-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  .in-home-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 1rem;
+  }
+
+  .in-home-list li svg { flex-shrink: 0; margin-top: 3px; }
+
+  .in-home-cta-box {
+    background: var(--light-bg);
+    border-radius: var(--radius-sm);
+    padding: 22px 24px;
+    border-left: 4px solid var(--taupe);
+  }
+
+  .in-home-cta-box p { font-size: 1rem; color: var(--dark); margin-bottom: 12px; font-weight: 600; }
+
+  @media (max-width: 768px) {
+    .in-home-inner { grid-template-columns: 1fr; gap: 36px; }
+    .in-home-img-wrap { height: 300px; }
+  }
+
+  /* ═══════════════════════════════════════════
+     SENIOR CARE PHOTO SECTION
+  ═══════════════════════════════════════════ */
+  #senior-care-photo {
+    padding: 0;
+    height: 380px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  #senior-care-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 40%;
+  }
+
+  .photo-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(44,74,110,0.85) 0%, rgba(44,74,110,0.4) 100%);
+    display: flex;
+    align-items: center;
+  }
+
+  .photo-overlay-content {
+    max-width: 560px;
+    padding: 0 48px;
+    color: var(--white);
+  }
+
+  .photo-overlay-content h2 { color: var(--white); margin-bottom: 14px; }
+  .photo-overlay-content p { color: rgba(255,255,255,0.88); font-size: 1.05rem; }
+
+  /* ═══════════════════════════════════════════
+     LOCATION & CONTACT
+  ═══════════════════════════════════════════ */
+  #contact {
+    background: var(--light-bg);
+    padding: 4rem 0;
+  }
+
+  .contact-inner {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 60px;
+    align-items: start;
+  }
+
+  .contact-info h2 { margin-bottom: 20px; }
+  .contact-info p { color: #5a5a5a; margin-bottom: 32px; }
+
+  .info-block {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    margin-bottom: 32px;
+  }
+
+  .info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .info-icon {
+    width: 48px;
+    height: 48px;
+    background: var(--hero-bg);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .info-item-text strong {
+    display: block;
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--taupe-dark);
+    font-weight: 700;
+    margin-bottom: 2px;
+  }
+
+  .info-item-text a,
+  .info-item-text p {
+    font-size: 1.05rem;
+    color: var(--dark);
+    font-weight: 600;
+  }
+
+  .info-item-text a:hover { color: var(--hero-bg); text-decoration: underline; }
+
+  .hours-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px 16px;
+    font-size: 0.95rem;
+  }
+
+  .hours-grid .day { color: #5a5a5a; }
+  .hours-grid .time { font-weight: 600; color: var(--dark); }
+
+  /* FORM */
+  .contact-form {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 44px 40px;
+    box-shadow: var(--shadow-lg);
+  }
+
+  .contact-form h3 { color: var(--hero-bg); margin-bottom: 8px; }
+  .contact-form > p { color: #5a5a5a; font-size: 0.97rem; margin-bottom: 28px; }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-bottom: 18px;
+  }
+
+  .form-group label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--dark);
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    color: var(--dark);
+    background: var(--light-bg);
+    border: 2px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 14px 16px;
+    width: 100%;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+    -webkit-appearance: none;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    border-color: var(--hero-bg);
+    box-shadow: 0 0 0 3px rgba(44,74,110,0.12);
+  }
+
+  .form-group textarea { resize: vertical; min-height: 110px; }
+
+  .form-submit {
+    width: 100%;
+    background: var(--hero-bg);
+    color: var(--white);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    padding: 17px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+  }
+
+  .form-submit:hover { background: var(--taupe-dark); transform: translateY(-1px); }
+
+  .form-note {
+    font-size: 0.82rem;
+    color: #888;
+    text-align: center;
+    margin-top: 12px;
+  }
+
+  @media (max-width: 768px) {
+    .contact-inner { grid-template-columns: 1fr; gap: 36px; }
+    .contact-form { padding: 28px 20px; }
+    .form-row { grid-template-columns: 1fr; }
+  }
+
+  /* ═══════════════════════════════════════════
+     FOOTER
+  ═══════════════════════════════════════════ */
+  #footer {
+    background: #1e3550;
+    color: rgba(255,255,255,0.80);
+    padding: 60px 0 30px;
+  }
+
+  .footer-inner {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 48px;
+  }
+
+  .footer-brand p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin: 14px 0 20px;
+    color: rgba(255,255,255,0.7);
+    max-width: 300px;
+  }
+
+  .footer-phone {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--blue);
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
+
+  .footer-heading {
+    font-family: 'Merriweather', serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 16px;
+  }
+
+  .footer-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-links a {
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.7);
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover { color: var(--blue); }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.12);
+    padding-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.5);
+  }
+
+  .footer-bottom a { color: rgba(255,255,255,0.6); }
+  .footer-bottom a:hover { color: var(--blue); }
+
+  @media (max-width: 860px) {
+    .footer-inner { grid-template-columns: 1fr 1fr; }
+  }
+
+  @media (max-width: 540px) {
+    .footer-inner { grid-template-columns: 1fr; }
+  }
+
+  /* ═══════════════════════════════════════════
+     ACCESSIBILITY & UTILS
+  ═══════════════════════════════════════════ */
+  :focus-visible {
+    outline: 3px solid var(--taupe);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  @media (max-width: 640px) {
+    .hero-btns { flex-direction: column; }
+    .btn-primary, .btn-secondary { justify-content: center; width: 100%; max-width: 340px; }
+    #senior-care-photo { height: 260px; }
+    .photo-overlay-content { padding: 0 24px; }
+    .photo-overlay-content h2 { font-size: 1.4rem; }
+  }</style>
+  <!-- Codex UI Polish: nav readability and one-line links -->
+  <style id="codex-ui-polish-nav">
+    nav a,
+    .nav a,
+    .navbar a,
+    .nav__links a,
+    .nav-links a,
+    .menu a,
+    .menu__link,
+    .fullscreen-menu a {
+      white-space: nowrap;
+    }
+
+    @media (min-width: 1024px) {
+      nav a,
+      .nav a,
+      .navbar a,
+      .nav__links a,
+      .nav-links a,
+      .menu a,
+      .menu__link,
+      .fullscreen-menu a {
+        line-height: 1.1;
+      }
+
+      .nav__links,
+      .nav-links,
+      .navbar-links,
+      .menu-links,
+      nav ul {
+        row-gap: 0.25rem;
+      }
+
+      .nav__links,
+      .nav-links,
+      .navbar-links,
+      .menu-links,
+      nav ul {
+        align-items: center;
+      }
+
+      .nav__links a,
+      .nav-links a,
+      .navbar-links a,
+      .menu-links a,
+      nav ul a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 1.2rem;
+      }
+    }
+
+    /* Cross-page alignment normalization for common grid/card layouts */
+    .services__grid,
+    .service-grid,
+    .cards-grid,
+    .features-grid,
+    .pricing__grid,
+    .plans-grid,
+    .results__grid,
+    .reviews__grid,
+    .events-grid,
+    .coaches__grid,
+    .therapists-grid,
+    .portfolio__grid,
+    .tips-grid,
+    .testimonials-grid,
+    .grid {
+      align-items: stretch;
+    }
+
+    .service-card,
+    .card,
+    .feature-card,
+    .event-card,
+    .plan,
+    .pricing-card,
+    .testimonial,
+    .review,
+    .coach,
+    .therapist-card,
+    .project,
+    .tip-card,
+    .serve-card,
+    .info-card,
+    .stat-card {
+      height: 100%;
+    }
+
+    .service-card img,
+    .project img,
+    .tip-card img,
+    .coach img,
+    .therapist-card img,
+    .feature-card img,
+    .gallery-item img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    /* Improve readability where copy is dense without changing content */
+    section p,
+    .section p,
+    .card p,
+    .service-card p,
+    .feature-card p,
+    .testimonial p,
+    .event-card p,
+    .info-card p {
+      max-width: 66ch;
+      text-wrap: pretty;
+    }
+
+    .section__header p,
+    .hero p,
+    .footer p,
+    .map-overlay-card,
+    .location__item-value {
+      max-width: none;
+    }
+  </style>
+
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════
+     NAVBAR
+═══════════════════════════════════════════ -->
+<header id="navbar" role="banner">
+  <nav class="nav-inner" aria-label="Main navigation">
+    <a href="#hero" class="nav-logo" aria-label="Mobility First Physical Therapy — home">
+      <div class="nav-logo-icon" aria-hidden="true">
+        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="13" cy="5" r="3" fill="#B0E0E6"/>
+          <path d="M8 10c0-2 2-3 5-3s5 1 5 3v5l2 7H6l2-7V10z" fill="#D2B48C"/>
+          <path d="M10 10v6" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M16 10v6" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M7 18h12" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="nav-logo-text">
+        <strong>Mobility First PT</strong>
+        <span>Senior Specialists</span>
+      </div>
+    </a>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#why-us">Why Us</a></li>
+      <li><a href="#conditions">Conditions</a></li>
+      <li><a href="#therapists">Our Team</a></li>
+      <li><a href="#medicare">Medicare</a></li>
+      <li><a href="#in-home">In-Home</a></li>
+      <li>
+        <a href="tel:5556789012" class="nav-phone" aria-label="Call us at 555-678-9012">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11.5a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .84h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.63a16 16 0 006.29 6.29l1.95-1.95a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          (555) 678-9012
+        </a>
+      </li>
+      <li><a href="#contact" class="nav-cta">Schedule Your Visit</a></li>
+    </ul>
+
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<!-- ═══════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════ -->
+<section id="hero" aria-label="Hero">
+  <img
+    src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1200&q=80"
+    alt="Senior patient working with a physical therapist on mobility exercises"
+    class="hero-img"
+    loading="eager"
+  >
+  <div class="hero-bg-overlay" aria-hidden="true"></div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge" aria-label="Medicare Accepted">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        Medicare Accepted
+      </div>
+      <h1>Stay Active.<br>Stay Independent.</h1>
+      <p class="hero-sub">Compassionate, specialized physical therapy for seniors — focused on restoring your movement, confidence, and quality of life.</p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          FREE Fall Risk Assessment
+        </a>
+        <a href="tel:5556789012" class="btn-secondary" aria-label="Call 555-678-9012">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11.5a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .84h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.63a16 16 0 006.29 6.29l1.95-1.95a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          Call (555) 678-9012
+        </a>
+        <a href="#in-home" class="btn-secondary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          In-Home Therapy Available
+        </a>
+      </div>
+      <div class="hero-trust" role="list" aria-label="Key features">
+        <div class="trust-pill" role="listitem">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          Medicare &amp; Most Insurance
+        </div>
+        <div class="trust-pill" role="listitem">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          Geriatric Specialists
+        </div>
+        <div class="trust-pill" role="listitem">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          In-Home &amp; Clinic Visits
+        </div>
+        <div class="trust-pill" role="listitem">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          4.9-Star Rated Care
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WAVE -->
+<div class="wave-divider" aria-hidden="true">
+  <svg viewBox="0 0 1440 64" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <path d="M0,32 C240,64 480,0 720,32 C960,64 1200,0 1440,32 L1440,64 L0,64 Z" fill="#f9f5f0"/>
+  </svg>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     WHY SENIORS CHOOSE US
+═══════════════════════════════════════════ -->
+<section id="why-us" aria-labelledby="why-us-heading">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-label">Why Choose Us</span>
+      <h2 id="why-us-heading">Care Built Around Seniors</h2>
+      <p>We understand the unique challenges that come with aging. Every program is designed with patience, expertise, and genuine compassion.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card fade-in">
+        <div class="feature-icon" aria-hidden="true">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#2C4A6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <h3>Medicare Accepted</h3>
+        <p>We accept Medicare Part B and most supplemental plans. We handle all billing so you can focus on getting better.</p>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="feature-icon" aria-hidden="true">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#2C4A6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        </div>
+        <h3>Gentle Approach</h3>
+        <p>Our therapists move at your pace. We never rush, and every session is adapted to your comfort level and abilities.</p>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="feature-icon" aria-hidden="true">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#2C4A6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <h3>In-Home Options</h3>
+        <p>Can't easily get to a clinic? Our licensed therapists come directly to your home — no transportation stress required.</p>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="feature-icon" aria-hidden="true">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#2C4A6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        </div>
+        <h3>Fall Prevention Specialists</h3>
+        <p>Board-certified fall prevention experts with proven balance training protocols that reduce fall risk by up to 40%.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WAVE -->
+<div class="wave-divider" aria-hidden="true" style="background:#f9f5f0;">
+  <svg viewBox="0 0 1440 64" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <path d="M0,32 C360,0 720,64 1080,32 C1260,16 1380,48 1440,32 L1440,64 L0,64 Z" fill="#ffffff"/>
+  </svg>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     CONDITIONS
+═══════════════════════════════════════════ -->
+<section id="conditions" aria-labelledby="conditions-heading">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-label">We Treat</span>
+      <h2 id="conditions-heading">Conditions We Specialize In</h2>
+      <p>Our therapists have advanced training in the conditions most commonly affecting older adults.</p>
+    </div>
+    <div class="conditions-grid">
+
+      <div class="condition-card fade-in">
+        <div class="condition-icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#B0E0E6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="3"/><path d="M12 8v4M9 18l3-6 3 6"/><line x1="6" y1="22" x2="18" y2="22"/></svg>
+        </div>
+        <div>
+          <h3>Balance Problems</h3>
+          <p>Personalized vestibular and proprioceptive training to restore your steadiness and walking confidence.</p>
+        </div>
+      </div>
+
+      <div class="condition-card fade-in">
+        <div class="condition-icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#B0E0E6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div>
+          <h3>Fall Prevention</h3>
+          <p>Evidence-based programs that identify your personal risk factors and strengthen the muscles that protect you from falling.</p>
+        </div>
+      </div>
+
+      <div class="condition-card fade-in">
+        <div class="condition-icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#B0E0E6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 3a3 3 0 00-3 3v12a3 3 0 006 0 3 3 0 00-3-3H6a3 3 0 00-3 3 3 3 0 006 0V6a3 3 0 00-3-3 3 3 0 00-3 3"/></svg>
+        </div>
+        <div>
+          <h3>Hip &amp; Knee Pain</h3>
+          <p>Conservative, low-impact treatment to reduce joint pain, improve range of motion, and help you move freely again.</p>
+        </div>
+      </div>
+
+      <div class="condition-card fade-in">
+        <div class="condition-icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#B0E0E6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <div>
+          <h3>Post-Surgery Recovery</h3>
+          <p>Guided rehabilitation after hip replacement, knee surgery, or cardiac procedures — restoring strength and independence.</p>
+        </div>
+      </div>
+
+      <div class="condition-card fade-in">
+        <div class="condition-icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#B0E0E6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+        </div>
+        <div>
+          <h3>Arthritis</h3>
+          <p>Specialized joint protection strategies, gentle strengthening, and pain management techniques for osteo- and rheumatoid arthritis.</p>
+        </div>
+      </div>
+
+      <div class="condition-card fade-in">
+        <div class="condition-icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#B0E0E6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <div>
+          <h3>Parkinson's Disease</h3>
+          <p>LSVT BIG-certified therapy and targeted motor training to improve gait, coordination, and daily function.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WAVE -->
+<div class="wave-divider" aria-hidden="true">
+  <svg viewBox="0 0 1440 64" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <path d="M0,48 C360,16 720,64 1080,32 C1260,16 1380,56 1440,40 L1440,64 L0,64 Z" fill="#2C4A6E"/>
+  </svg>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     OUR APPROACH
+═══════════════════════════════════════════ -->
+<section id="approach" aria-labelledby="approach-heading">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-label">Our Process</span>
+      <h2 id="approach-heading">How We Help You Thrive</h2>
+      <p>A clear, compassionate process from your very first call to your last session — and beyond.</p>
+    </div>
+    <div class="steps-grid">
+
+      <div class="step-card fade-in">
+        <div class="step-number" aria-label="Step 1">1</div>
+        <div class="step-icon" aria-hidden="true">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#B0E0E6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <h3>Comprehensive Evaluation</h3>
+        <p>We begin with a thorough assessment of your strength, balance, mobility, and pain — tailored to your specific age-related needs and goals. Your FREE fall risk assessment happens here.</p>
+      </div>
+
+      <div class="step-card fade-in">
+        <div class="step-number" aria-label="Step 2">2</div>
+        <div class="step-icon" aria-hidden="true">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#B0E0E6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <h3>Personalized Care Plan</h3>
+        <p>Your therapist creates a custom treatment program that fits your lifestyle, schedule, and health goals — with gentle exercises you can do at home between sessions.</p>
+      </div>
+
+      <div class="step-card fade-in">
+        <div class="step-number" aria-label="Step 3">3</div>
+        <div class="step-icon" aria-hidden="true">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#B0E0E6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+        </div>
+        <h3>Progress &amp; Independence</h3>
+        <p>We celebrate every milestone with you. As you improve, we gradually prepare you for confident, independent living — with ongoing support whenever you need it.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WAVE -->
+<div class="wave-divider" aria-hidden="true" style="background:#2C4A6E;">
+  <svg viewBox="0 0 1440 64" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <path d="M0,32 C240,64 480,0 720,32 C960,64 1200,0 1440,32 L1440,64 L0,64 Z" fill="#f9f5f0"/>
+  </svg>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     MEET THE THERAPISTS
+═══════════════════════════════════════════ -->
+<section id="therapists" aria-labelledby="therapists-heading">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-label">Our Team</span>
+      <h2 id="therapists-heading">Meet Your Therapists</h2>
+      <p>Experienced, board-certified physical therapists who chose to specialize in geriatric care — because they believe every senior deserves expert, compassionate attention.</p>
+    </div>
+    <div class="therapists-grid">
+
+      <article class="therapist-card fade-in">
+        <div class="therapist-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=1200&q=80"
+            alt="Dr. Margaret Chen, Doctor of Physical Therapy, geriatric specialist"
+            loading="lazy"
+          >
+        </div>
+        <div class="therapist-body">
+          <p class="therapist-title">Doctor of Physical Therapy</p>
+          <h3>Dr. Margaret Chen, DPT</h3>
+          <p>With 18 years of dedicated geriatric practice, Dr. Chen brings exceptional warmth and clinical expertise to every patient. She completed a fellowship in geriatric rehabilitation at Northwestern and is board-certified in fall prevention. Her patients call her "the therapist who never gives up on you."</p>
+          <div class="therapist-tags">
+            <span class="tag">Geriatric Specialist</span>
+            <span class="tag">Fall Prevention</span>
+            <span class="tag">Parkinson's</span>
+            <span class="tag">Medicare Expert</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="therapist-card fade-in">
+        <div class="therapist-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=1200&q=80"
+            alt="James Rivera, physical therapist specializing in post-surgical rehabilitation and balance training"
+            loading="lazy"
+            style="filter: hue-rotate(20deg) brightness(0.95);"
+          >
+        </div>
+        <div class="therapist-body">
+          <p class="therapist-title">Licensed Physical Therapist</p>
+          <h3>James Rivera, PT, GCS</h3>
+          <p>James holds the Geriatric Clinical Specialist (GCS) certification and brings 12 years of experience helping seniors recover from hip and knee replacements. He is LSVT BIG-certified for Parkinson's therapy and specializes in chronic pain management using evidence-based, non-opioid methods.</p>
+          <div class="therapist-tags">
+            <span class="tag">GCS Certified</span>
+            <span class="tag">Post-Surgical</span>
+            <span class="tag">LSVT BIG</span>
+            <span class="tag">Chronic Pain</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="therapist-card fade-in">
+        <div class="therapist-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=1200&q=80"
+            alt="Sandra Okonkwo, physical therapist and in-home therapy specialist"
+            loading="lazy"
+            style="filter: hue-rotate(-15deg) brightness(0.98) saturate(0.9);"
+          >
+        </div>
+        <div class="therapist-body">
+          <p class="therapist-title">Licensed Physical Therapist</p>
+          <h3>Sandra Okonkwo, PT, CLT</h3>
+          <p>Sandra leads our in-home therapy program and has spent 10 years bringing expert care directly to patients who cannot travel to a clinic. She specializes in balance and vestibular rehabilitation, and her gentle, reassuring manner helps even the most apprehensive patients feel safe and motivated.</p>
+          <div class="therapist-tags">
+            <span class="tag">In-Home Specialist</span>
+            <span class="tag">Balance Training</span>
+            <span class="tag">Vestibular</span>
+            <span class="tag">Arthritis</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- WAVE -->
+<div class="wave-divider" aria-hidden="true" style="background:#f9f5f0;">
+  <svg viewBox="0 0 1440 64" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <path d="M0,16 C480,64 960,0 1440,32 L1440,64 L0,64 Z" fill="#ffffff"/>
+  </svg>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     MEDICARE & INSURANCE
+═══════════════════════════════════════════ -->
+<section id="medicare" aria-labelledby="medicare-heading">
+  <div class="container">
+    <div class="medicare-inner">
+      <div class="medicare-content fade-in">
+        <span class="section-label">Insurance &amp; Billing</span>
+        <h2 id="medicare-heading">We Handle All Medicare Billing</h2>
+        <p>Navigating insurance shouldn't be a burden when you're focused on getting better. Our billing specialists take care of everything — from verification to claims to follow-up.</p>
+        <ul class="medicare-list" aria-label="Medicare coverage details">
+          <li>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2C4A6E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span>Medicare Part B covers outpatient physical therapy — we verify your benefits before your first visit</span>
+          </li>
+          <li>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2C4A6E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span>Medicare Advantage (Part C) plans accepted — including Humana, Aetna, UnitedHealthcare, and BCBS</span>
+          </li>
+          <li>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2C4A6E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span>Medigap / supplemental plans accepted — often reducing your out-of-pocket cost to $0</span>
+          </li>
+          <li>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2C4A6E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span>Medicaid dual-eligible patients welcome — our team handles all coordination</span>
+          </li>
+          <li>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2C4A6E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span>Affordable self-pay rates and payment plans available for uninsured patients</span>
+          </li>
+        </ul>
+        <a href="tel:5556789012" class="btn-primary" style="display:inline-flex;" aria-label="Call to verify your insurance: 555-678-9012">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11.5a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .84h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.63a16 16 0 006.29 6.29l1.95-1.95a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          Call to Verify Your Insurance
+        </a>
+      </div>
+      <div class="fade-in">
+        <div class="medicare-banner">
+          <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <h3>Medicare-Friendly Practice</h3>
+          <p>We are a Medicare-enrolled provider. Therapy is covered when medically necessary — most seniors pay little to nothing out of pocket.</p>
+          <div class="insurance-logos" aria-label="Accepted insurance providers">
+            <span class="ins-badge">Medicare Part B</span>
+            <span class="ins-badge">Medicare Advantage</span>
+            <span class="ins-badge">Humana</span>
+            <span class="ins-badge">Aetna</span>
+            <span class="ins-badge">UnitedHealthcare</span>
+            <span class="ins-badge">BCBS</span>
+            <span class="ins-badge">Cigna</span>
+            <span class="ins-badge">Medicaid</span>
+            <span class="ins-badge">Medigap</span>
+            <span class="ins-badge">Tricare</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WAVE -->
+<div class="wave-divider" aria-hidden="true">
+  <svg viewBox="0 0 1440 64" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <path d="M0,32 C360,64 720,0 1080,48 C1260,64 1380,24 1440,40 L1440,64 L0,64 Z" fill="#f0ebe3"/>
+  </svg>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     TESTIMONIALS
+═══════════════════════════════════════════ -->
+<section id="testimonials" aria-labelledby="testimonials-heading">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-label">Success Stories</span>
+      <h2 id="testimonials-heading">Real Results from Real Seniors</h2>
+      <p>Our patients' words mean more to us than any award.</p>
+    </div>
+    <div class="testimonials-grid">
+
+      <article class="testimonial-card fade-in">
+        <div class="stars" aria-label="5 out of 5 stars" role="img">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="#D2B48C" stroke="#D2B48C" stroke-width="1" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="#D2B48C" stroke="#D2B48C" stroke-width="1" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="#D2B48C" stroke="#D2B48C" stroke-width="1" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="#D2B48C" stroke="#D2B48C" stroke-width="1" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="#D2B48C" stroke="#D2B48C" stroke-width="1" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <blockquote class="testimonial-text">"After my hip replacement, I was terrified I'd never walk normally again. Dr. Chen's team had me walking without a cane in just 6 weeks. They were patient, kind, and never made me feel like a burden. I'm now walking a mile every morning at 78 years old."</blockquote>
+        <div class="testimonial-author">
+          <div class="author-avatar" aria-hidden="true">D</div>
+          <div class="author-info">
+            <strong>Dorothy H.</strong>
+            <span>Age 78 — Hip Replacement Recovery</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="testimonial-card fade-in">
+        <div class="stars" aria-label="5 out of 5 stars" role="img">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="#D2B48C" stroke="#D2B48C" stroke-width="1" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="#D2B48C" stroke="#D2B48C" stroke-width="1" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="#D2B48C" stroke="#D2B48C" stroke-width="1" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="#D2B48C" stroke="#D2B48C" stroke-width="1" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="#D2B48C" stroke="#D2B48C" stroke-width="1" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <blockquote class="testimonial-text">"I had fallen three times in one year and was afraid to walk around my own house. The fall prevention program at Mobility First changed everything. James assessed exactly why I was falling and fixed it. I haven't fallen once in 14 months. My family and I are so grateful."</blockquote>
+        <div class="testimonial-author">
+          <div class="author-avatar" aria-hidden="true">R</div>
+          <div class="author-info">
+            <strong>Robert M.</strong>
+            <span>Age 83 — Fall Prevention Program</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="testimonial-card fade-in">
+        <div class="stars" aria-label="5 out of 5 stars" role="img">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="#D2B48C" stroke="#D2B48C" stroke-width="1" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="#D2B48C" stroke="#D2B48C" stroke-width="1" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="#D2B48C" stroke="#D2B48C" stroke-width="1" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="#D2B48C" stroke="#D2B48C" stroke-width="1" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="#D2B48C" stroke="#D2B48C" stroke-width="1" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <blockquote class="testimonial-text">"My Parkinson's made me feel like I was losing myself. Sandra comes to my home every week and her patience is incredible. The exercises she taught me have genuinely improved my walking and my handwriting. Most importantly — she makes me feel capable, not broken."</blockquote>
+        <div class="testimonial-author">
+          <div class="author-avatar" aria-hidden="true">E</div>
+          <div class="author-info">
+            <strong>Eleanor T.</strong>
+            <span>Age 71 — Parkinson's In-Home Therapy</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- WAVE -->
+<div class="wave-divider" aria-hidden="true" style="background:#f0ebe3;">
+  <svg viewBox="0 0 1440 64" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <path d="M0,16 C360,64 720,0 1080,32 C1260,48 1380,16 1440,24 L1440,64 L0,64 Z" fill="#ffffff"/>
+  </svg>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     IN-HOME THERAPY
+═══════════════════════════════════════════ -->
+<section id="in-home" aria-labelledby="in-home-heading">
+  <div class="container">
+    <div class="in-home-inner">
+      <div class="in-home-img-wrap fade-in">
+        <img
+          src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=1200&q=80"
+          alt="Physical therapist providing in-home therapy to an elderly patient in their living room"
+          loading="lazy"
+        >
+      </div>
+      <div class="in-home-content fade-in">
+        <span class="section-label">In-Home Physical Therapy</span>
+        <h2 id="in-home-heading">We Come to You</h2>
+        <p>For patients who are homebound, recently discharged from hospital, or simply unable to travel — our licensed therapists bring the full power of our clinic directly to your home.</p>
+        <ul class="in-home-list" aria-label="In-home therapy benefits">
+          <li>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2C4A6E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span><strong>Medicare-covered</strong> in-home therapy for qualifying homebound patients</span>
+          </li>
+          <li>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2C4A6E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span>Therapy adapted to <strong>your actual home environment</strong> — stairs, bathrooms, and routines</span>
+          </li>
+          <li>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2C4A6E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span><strong>Same expert therapists</strong> — no less care because you're at home</span>
+          </li>
+          <li>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2C4A6E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span>Home safety assessments and <strong>fall hazard identification</strong> included</span>
+          </li>
+          <li>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2C4A6E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span>Flexible scheduling — <strong>mornings, afternoons, and some weekends</strong> available</span>
+          </li>
+        </ul>
+        <div class="in-home-cta-box">
+          <p>Ready to get started? Call us to find out if you qualify for in-home therapy coverage.</p>
+          <a href="tel:5556789012" class="btn-primary" aria-label="Call 555-678-9012 to ask about in-home therapy">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11.5a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .84h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.63a16 16 0 006.29 6.29l1.95-1.95a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            Ask About In-Home Therapy
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHOTO BREAK -->
+<section id="senior-care-photo" aria-label="Senior patient receiving compassionate care">
+  <img
+    src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=1200&q=80"
+    alt="Compassionate senior care — physical therapist helping an elderly patient regain mobility"
+    loading="lazy"
+  >
+  <div class="photo-overlay" aria-hidden="true">
+    <div class="photo-overlay-content">
+      <h2>Dignity, Patience, and Real Results</h2>
+      <p>We believe that getting older should not mean giving up the activities and independence you love. Our mission is to keep you moving — on your terms.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WAVE -->
+<div class="wave-divider" aria-hidden="true">
+  <svg viewBox="0 0 1440 64" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <path d="M0,32 C480,0 960,64 1440,16 L1440,64 L0,64 Z" fill="#f9f5f0"/>
+  </svg>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     LOCATION & CONTACT
+═══════════════════════════════════════════ -->
+<section id="contact" aria-labelledby="contact-heading">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-label">Location &amp; Contact</span>
+      <h2 id="contact-heading">Visit Us or Call Today</h2>
+      <p>We are accepting new patients. Schedule a FREE fall risk assessment or ask us about in-home therapy eligibility.</p>
+    </div>
+    <div class="contact-inner">
+      <div class="contact-info fade-in">
+        <h2 style="font-size:1.6rem; margin-bottom:16px;">Mobility First<br>Physical Therapy</h2>
+        <p>Compassionate senior care, close to home. Free parking. Wheelchair accessible. One-level facility.</p>
+
+        <div class="info-block">
+          <div class="info-item">
+            <div class="info-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B0E0E6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11.5a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .84h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.63a16 16 0 006.29 6.29l1.95-1.95a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            </div>
+            <div class="info-item-text">
+              <strong>Phone</strong>
+              <a href="tel:5556789012" style="font-size:1.25rem; font-weight:700;" aria-label="Call (555) 678-9012">(555) 678-9012</a>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B0E0E6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="info-item-text">
+              <strong>Address</strong>
+              <p>1420 Wellness Drive, Suite 200<br>Springfield, IL 62701</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B0E0E6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            </div>
+            <div class="info-item-text">
+              <strong>Hours of Operation</strong>
+              <div class="hours-grid" role="list" aria-label="Office hours">
+                <span class="day">Monday – Friday</span><span class="time">7:00 AM – 6:00 PM</span>
+                <span class="day">Saturday</span><span class="time">8:00 AM – 1:00 PM</span>
+                <span class="day">Sunday</span><span class="time">Closed</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <a href="tel:5556789012" class="btn-primary" style="display:inline-flex;" aria-label="Call us now: (555) 678-9012">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11.5a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .84h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.63a16 16 0 006.29 6.29l1.95-1.95a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          Call Now: (555) 678-9012
+        </a>
+      </div>
+
+      <div class="contact-form fade-in" role="region" aria-labelledby="form-heading">
+        <h3 id="form-heading">Request Your FREE Fall Risk Assessment</h3>
+        <p>Fill out the form below and we will call you within one business day to confirm your appointment.</p>
+        <form action="#" method="post" novalidate aria-label="Contact and appointment request form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="first-name">First Name <span aria-label="required">*</span></label>
+              <input type="text" id="first-name" name="first_name" autocomplete="given-name" required placeholder="Margaret" aria-required="true">
+            </div>
+            <div class="form-group">
+              <label for="last-name">Last Name <span aria-label="required">*</span></label>
+              <input type="text" id="last-name" name="last_name" autocomplete="family-name" required placeholder="Johnson" aria-required="true">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">Phone Number <span aria-label="required">*</span></label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel" required placeholder="(555) 000-0000" aria-required="true">
+            </div>
+            <div class="form-group">
+              <label for="age">Age</label>
+              <input type="number" id="age" name="age" min="50" max="110" placeholder="72" aria-label="Your age">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" autocomplete="email" placeholder="margaret@example.com">
+          </div>
+          <div class="form-group">
+            <label for="service">What can we help you with? <span aria-label="required">*</span></label>
+            <select id="service" name="service" required aria-required="true">
+              <option value="" disabled selected>Please select a service...</option>
+              <option value="fall-prevention">Fall Prevention / Balance</option>
+              <option value="post-surgery">Post-Surgery Recovery</option>
+              <option value="hip-knee">Hip or Knee Pain</option>
+              <option value="arthritis">Arthritis / Chronic Pain</option>
+              <option value="parkinsons">Parkinson's Disease</option>
+              <option value="in-home">In-Home Therapy</option>
+              <option value="general">General / Not Sure Yet</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="insurance">Insurance / Coverage</label>
+            <select id="insurance" name="insurance">
+              <option value="" disabled selected>Select your insurance...</option>
+              <option value="medicare-b">Medicare Part B</option>
+              <option value="medicare-advantage">Medicare Advantage</option>
+              <option value="medicaid">Medicaid</option>
+              <option value="humana">Humana</option>
+              <option value="aetna">Aetna</option>
+              <option value="united">UnitedHealthcare</option>
+              <option value="bcbs">Blue Cross Blue Shield</option>
+              <option value="self-pay">Self-Pay / No Insurance</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Tell us about your situation (optional)</label>
+            <textarea id="message" name="message" placeholder="e.g. I had a hip replacement 2 months ago and need help regaining my strength..."></textarea>
+          </div>
+          <button type="submit" class="form-submit">
+            Request My FREE Assessment
+          </button>
+          <p class="form-note">We respect your privacy. Your information is never shared. By submitting you agree to be contacted by our care team.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════ -->
+<footer id="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div style="display:flex; align-items:center; gap:10px;">
+          <div style="width:40px; height:40px; background:var(--taupe); border-radius:8px; display:flex; align-items:center; justify-content:center;" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="13" cy="5" r="3" fill="#2C4A6E"/><path d="M8 10c0-2 2-3 5-3s5 1 5 3v5l2 7H6l2-7V10z" fill="#fff"/></svg>
+          </div>
+          <div>
+            <div style="font-family:'Merriweather',serif; font-weight:900; font-size:1rem; color:#fff;">Mobility First PT</div>
+            <div style="font-size:0.75rem; color:rgba(255,255,255,0.6); text-transform:uppercase; letter-spacing:0.05em;">Senior Specialists</div>
+          </div>
+        </div>
+        <p>Compassionate, specialized physical therapy for seniors. Fall prevention, balance training, and chronic pain management. Medicare accepted.</p>
+        <a href="tel:5556789012" class="footer-phone" aria-label="Call (555) 678-9012">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11.5a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .84h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.63a16 16 0 006.29 6.29l1.95-1.95a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          (555) 678-9012
+        </a>
+      </div>
+
+      <div>
+        <h4 class="footer-heading">Services</h4>
+        <ul class="footer-links">
+          <li><a href="#conditions">Fall Prevention</a></li>
+          <li><a href="#conditions">Balance Training</a></li>
+          <li><a href="#conditions">Post-Surgery Rehab</a></li>
+          <li><a href="#conditions">Arthritis Care</a></li>
+          <li><a href="#conditions">Parkinson's Therapy</a></li>
+          <li><a href="#in-home">In-Home Therapy</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-heading">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="#why-us">Why Choose Us</a></li>
+          <li><a href="#therapists">Our Team</a></li>
+          <li><a href="#medicare">Medicare Info</a></li>
+          <li><a href="#testimonials">Patient Stories</a></li>
+          <li><a href="#contact">Schedule Visit</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-heading">Hours</h4>
+        <ul class="footer-links" style="gap:8px;">
+          <li style="color:rgba(255,255,255,0.7); font-size:0.95rem;">Mon–Fri: 7AM – 6PM</li>
+          <li style="color:rgba(255,255,255,0.7); font-size:0.95rem;">Saturday: 8AM – 1PM</li>
+          <li style="color:rgba(255,255,255,0.7); font-size:0.95rem;">Sunday: Closed</li>
+        </ul>
+        <div style="margin-top:20px;">
+          <h4 class="footer-heading">Location</h4>
+          <p style="font-size:0.9rem; color:rgba(255,255,255,0.7);">1420 Wellness Drive<br>Suite 200<br>Springfield, IL 62701</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Mobility First Physical Therapy. All rights reserved.</p>
+      <p>
+        <a href="#">Privacy Policy</a> &nbsp;|&nbsp;
+        <a href="#">HIPAA Notice</a> &nbsp;|&nbsp;
+        <a href="#">Accessibility</a>
+      </p>
+      <p style="font-size:0.8rem;">Medicare-enrolled provider. Licensed in Illinois.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // ── MOBILE NAV ──
+  const hamburger = document.getElementById('hamburger');
+  const navbar = document.getElementById('navbar');
+  hamburger.addEventListener('click', function() {
+    const isOpen = navbar.classList.toggle('nav-mobile-open');
+    hamburger.setAttribute('aria-expanded', isOpen);
+    hamburger.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+  });
+
+  // Close mobile nav on link click
+  document.querySelectorAll('#nav-links a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      navbar.classList.remove('nav-mobile-open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      hamburger.setAttribute('aria-label', 'Open menu');
+    });
+  });
+
+  // ── INTERSECTION OBSERVER FADE IN ──
+  (function() {
+    const els = document.querySelectorAll('.fade-in');
+    if (!('IntersectionObserver' in window)) {
+      els.forEach(function(el) { el.classList.add('visible'); });
+      return;
+    }
+    const obs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    els.forEach(function(el) { obs.observe(el); });
+  })();
+
+  // ── FORM SUBMISSION ──
+  document.querySelector('form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var btn = this.querySelector('.form-submit');
+    btn.textContent = 'Thank you! We will call you soon.';
+    btn.style.background = '#2C4A6E';
+    btn.disabled = true;
+  });
+
+  // ── STAGGERED CARD ANIMATIONS ──
+  (function() {
+    var grids = document.querySelectorAll('.features-grid, .conditions-grid, .therapists-grid, .testimonials-grid, .steps-grid');
+    grids.forEach(function(grid) {
+      var cards = grid.querySelectorAll('.fade-in');
+      cards.forEach(function(card, i) {
+        card.style.transitionDelay = (i * 0.1) + 's';
+      });
+    });
+  })();
+</script>
+</body>
+</html>

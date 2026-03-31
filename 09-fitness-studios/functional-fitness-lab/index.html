@@ -1,0 +1,2492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Functional Fitness Lab | Community CrossFit Gym | Scalable Workouts for All Levels</title>
+<meta name="description" content="Functional Fitness Lab — community-driven CrossFit-style training, Olympic lifting, mobility, nutrition programs, and open gym. Scalable workouts for every body, every level. Try a free class today.">
+<meta name="keywords" content="functional fitness, CrossFit gym, community gym, Olympic lifting, mobility, nutrition program, open gym, scalable workouts, beginner fitness">
+<meta property="og:title" content="Functional Fitness Lab | Stronger Together">
+<meta property="og:description" content="Community-driven functional fitness gym. CrossFit-style training, mobility, nutrition programs. Scalable for all levels. Join 300+ members.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&q=80">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Functional Fitness Lab",
+  "description": "Community-driven functional fitness gym with CrossFit-style training, mobility work, nutrition programs, and open gym. Scalable workouts for all levels.",
+  "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&q=80",
+  "telephone": "(555) 901-2345",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1247 Industrial Blvd",
+    "addressLocality": "Austin",
+    "addressRegion": "TX",
+    "postalCode": "78701",
+    "addressCountry": "US"
+  },
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification","dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens": "05:30","closes": "21:00"},
+    {"@type": "OpeningHoursSpecification","dayOfWeek": "Saturday","opens": "07:00","closes": "14:00"},
+    {"@type": "OpeningHoursSpecification","dayOfWeek": "Sunday","opens": "08:00","closes": "12:00"}
+  ],
+  "priceRange": "$$",
+  "url": "https://www.functionalfitnesslab.com"
+}
+</script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --cyan: #00BCD4;
+    --near-black: #0A0A0A;
+    --accent: #F0F0F0;
+    --orange: #FF6B00;
+    --bg: #111827;
+    --bg2: #1a2332;
+    --bg3: #0d1520;
+    --text: #e8e8e8;
+    --text-muted: #9ca3af;
+    --card-bg: #1e2d3d;
+    --border: rgba(0,188,212,0.2);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    font-size: 1rem;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* GRID PATTERN BACKGROUND */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-image:
+      linear-gradient(rgba(0,188,212,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,188,212,0.04) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  section, nav, footer { position: relative; z-index: 1; }
+
+  h1, h2, h3, h4 { font-family: 'Russo One', sans-serif; }
+
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+
+  /* ANIMATIONS */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .fade-up.delay-1 { transition-delay: 0.1s; }
+  .fade-up.delay-2 { transition-delay: 0.2s; }
+  .fade-up.delay-3 { transition-delay: 0.3s; }
+  .fade-up.delay-4 { transition-delay: 0.4s; }
+  .fade-up.delay-5 { transition-delay: 0.5s; }
+
+  /* ===== NAV ===== */
+  #navbar {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    background: rgba(10,10,10,0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+    transition: all 0.3s ease;
+  }
+
+  #navbar.scrolled {
+    box-shadow: 0 4px 30px rgba(0,188,212,0.15);
+  }
+
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 66px;
+    padding: 0 2rem;
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+  }
+
+  .nav-logo-icon {
+    width: 38px;
+    height: 38px;
+    background: var(--cyan);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-logo-text {
+    font-family: 'Russo One', sans-serif;
+    font-size: 1.1rem;
+    color: #fff;
+    line-height: 1.1;
+  }
+
+  .nav-logo-text span { color: var(--cyan); }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.75rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--cyan); }
+
+  .btn-nav {
+    background: var(--cyan);
+    color: var(--near-black) !important;
+    padding: 0.5rem 1.25rem;
+    font-size: 0.875rem;
+    border-radius: 4px;
+    font-weight: 700 !important;
+    letter-spacing: 0.5px;
+    transition: background 0.2s, transform 0.2s !important;
+    white-space: nowrap;
+  }
+
+  .btn-nav:hover {
+    background: #00e5ff !important;
+    transform: translateY(-1px);
+    color: var(--near-black) !important;
+  }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 4px;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--accent);
+    transition: all 0.3s;
+  }
+
+  .mobile-menu {
+    display: none;
+    background: rgba(10,10,10,0.98);
+    padding: 20px 24px 24px;
+    border-top: 1px solid var(--border);
+  }
+
+  .mobile-menu.open { display: block; }
+
+  .mobile-menu a {
+    display: block;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    transition: color 0.2s;
+  }
+
+  .mobile-menu a:hover { color: var(--cyan); }
+
+  .mobile-menu .btn-mobile {
+    display: block;
+    margin-top: 16px;
+    background: var(--cyan);
+    color: var(--near-black);
+    text-align: center;
+    padding: 14px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-family: 'Russo One', sans-serif;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    border-bottom: none;
+  }
+
+  /* ===== HERO ===== */
+  #hero {
+    min-height: 88vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding-top: 70px;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background: url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&q=80') center/cover no-repeat;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      135deg,
+      rgba(10,10,10,0.92) 0%,
+      rgba(17,24,39,0.85) 50%,
+      rgba(0,188,212,0.12) 100%
+    );
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 750px;
+    padding: 80px 0;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,107,0,0.15);
+    border: 1px solid rgba(255,107,0,0.4);
+    color: var(--orange);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 7px 14px;
+    border-radius: 3px;
+    margin-bottom: 24px;
+  }
+
+  .hero-badge-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--orange);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.8); }
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 5vw, 3.75rem);
+    line-height: 1.0;
+    color: #fff;
+    letter-spacing: -1px;
+    margin-bottom: 1rem;
+  }
+
+  .hero-title .cyan { color: var(--cyan); }
+
+  .hero-subtitle {
+    font-size: clamp(1rem, 1.5vw, 1.125rem);
+    color: var(--text-muted);
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    max-width: 600px;
+  }
+
+  .hero-ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .btn-primary {
+    display: inline-block;
+    background: var(--cyan);
+    color: var(--near-black);
+    font-family: 'Russo One', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    padding: 0.75rem 1.75rem;
+    max-height: 52px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.2s;
+    white-space: nowrap;
+  }
+
+  .btn-primary:hover {
+    background: #00e5ff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0,188,212,0.4);
+  }
+
+  .btn-secondary {
+    display: inline-block;
+    background: transparent;
+    color: #fff;
+    font-family: 'Russo One', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    padding: 0.75rem 1.75rem;
+    max-height: 52px;
+    border-radius: 4px;
+    border: 1px solid rgba(255,255,255,0.3);
+    text-decoration: none;
+    transition: all 0.2s;
+    white-space: nowrap;
+  }
+
+  .btn-secondary:hover {
+    border-color: var(--cyan);
+    color: var(--cyan);
+    transform: translateY(-2px);
+  }
+
+  .hero-stats {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  .hero-stat { text-align: left; }
+
+  .hero-stat-num {
+    font-family: 'Russo One', sans-serif;
+    font-size: 2rem;
+    color: var(--cyan);
+    line-height: 1;
+  }
+
+  .hero-stat-label {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 3px;
+  }
+
+  /* ===== WOD WIDGET ===== */
+  #wod {
+    background: var(--near-black);
+    border-top: 3px solid var(--orange);
+    border-bottom: 1px solid var(--border);
+    padding: 0;
+  }
+
+  .wod-inner {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    min-height: 240px;
+  }
+
+  .wod-label-col {
+    background: var(--orange);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 24px;
+    text-align: center;
+  }
+
+  .wod-label-tag {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(0,0,0,0.7);
+    margin-bottom: 6px;
+  }
+
+  .wod-label-title {
+    font-family: 'Russo One', sans-serif;
+    font-size: 2rem;
+    color: var(--near-black);
+    line-height: 1;
+  }
+
+  .wod-date {
+    font-size: 0.8rem;
+    color: rgba(0,0,0,0.6);
+    margin-top: 8px;
+  }
+
+  .wod-content-col {
+    padding: 32px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .wod-name {
+    font-family: 'Russo One', sans-serif;
+    font-size: 1.6rem;
+    color: var(--cyan);
+    letter-spacing: 1px;
+  }
+
+  .wod-type {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-top: -12px;
+  }
+
+  .wod-movements {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .wod-movement {
+    background: rgba(255,107,0,0.1);
+    border: 1px solid rgba(255,107,0,0.25);
+    color: var(--accent);
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 6px 14px;
+    border-radius: 3px;
+  }
+
+  .wod-rx {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .wod-scale {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .wod-scale-tag {
+    font-family: 'Russo One', sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 1px;
+    padding: 2px 8px;
+    border-radius: 2px;
+  }
+
+  .tag-rx { background: var(--cyan); color: var(--near-black); }
+  .tag-scaled { background: rgba(0,188,212,0.15); color: var(--cyan); border: 1px solid var(--cyan); }
+  .tag-beginner { background: rgba(255,107,0,0.15); color: var(--orange); border: 1px solid var(--orange); }
+
+  /* ===== WHAT IS FUNCTIONAL FITNESS ===== */
+  #about {
+    padding: 100px 0;
+    background: var(--bg);
+  }
+
+  .section-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--cyan);
+    margin-bottom: 12px;
+  }
+
+  .section-title {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    color: #fff;
+    line-height: 1.1;
+    margin-bottom: 20px;
+  }
+
+  .section-title span { color: var(--cyan); }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+  }
+
+  .about-text {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 24px;
+  }
+
+  .about-img {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .about-img img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .about-img-badge {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(0,0,0,0.85);
+    border: 1px solid var(--border);
+    padding: 12px 18px;
+    border-radius: 6px;
+  }
+
+  .about-img-badge strong {
+    font-family: 'Russo One', sans-serif;
+    color: var(--cyan);
+    font-size: 1.3rem;
+  }
+
+  .about-img-badge p { font-size: 0.78rem; color: var(--text-muted); margin-top: 2px; }
+
+  .benefits-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .benefits-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 0.95rem;
+    color: var(--text);
+    line-height: 1.5;
+  }
+
+  .benefit-icon {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    margin-top: 1px;
+  }
+
+  /* ===== PROGRAMS ===== */
+  #programs {
+    padding: 100px 0;
+    background: var(--bg2);
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 56px;
+  }
+
+  .programs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .program-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 2rem;
+    transition: all 0.3s;
+    cursor: default;
+  }
+
+  .program-card:hover {
+    border-color: var(--cyan);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0,188,212,0.15);
+  }
+
+  .program-icon {
+    width: 52px;
+    height: 52px;
+    background: rgba(0,188,212,0.1);
+    border: 1px solid rgba(0,188,212,0.25);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .program-card.orange .program-icon {
+    background: rgba(255,107,0,0.1);
+    border-color: rgba(255,107,0,0.25);
+  }
+
+  .program-card-title {
+    font-family: 'Russo One', sans-serif;
+    font-size: 1.15rem;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+
+  .program-tag {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 2px;
+    margin-bottom: 14px;
+  }
+
+  .tag-cyan { background: rgba(0,188,212,0.15); color: var(--cyan); }
+  .tag-orange { background: rgba(255,107,0,0.15); color: var(--orange); }
+
+  .program-desc {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+  }
+
+  /* ===== ALL LEVELS ===== */
+  #all-levels {
+    padding: 100px 0;
+    background: var(--bg);
+  }
+
+  .levels-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .levels-img {
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .levels-img img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .levels-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 60%);
+  }
+
+  .levels-content { display: flex; flex-direction: column; gap: 28px; }
+
+  .level-item {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .level-num {
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    background: rgba(0,188,212,0.1);
+    border: 1px solid var(--cyan);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Russo One', sans-serif;
+    font-size: 1rem;
+    color: var(--cyan);
+  }
+
+  .level-item h4 {
+    font-size: 1rem;
+    color: #fff;
+    margin-bottom: 4px;
+  }
+
+  .level-item p {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  /* ===== COMMUNITY ===== */
+  #community {
+    padding: 100px 0;
+    background: var(--bg2);
+  }
+
+  .community-photo-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 200px 200px;
+    gap: 12px;
+    margin: 48px 0;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .cp-item {
+    overflow: hidden;
+    position: relative;
+    background: var(--card-bg);
+  }
+
+  .cp-item:first-child {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  .cp-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    display: block;
+  }
+
+  .cp-item:hover img { transform: scale(1.05); }
+
+  .cp-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.5), transparent);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .cp-item:hover .cp-overlay { opacity: 1; }
+
+  .cp-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--card-bg), var(--bg3));
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .events-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 40px;
+  }
+
+  .event-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.5rem 2rem;
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+    transition: border-color 0.2s;
+  }
+
+  .event-card:hover { border-color: var(--orange); }
+
+  .event-date-box {
+    flex-shrink: 0;
+    width: 54px;
+    background: rgba(255,107,0,0.1);
+    border: 1px solid rgba(255,107,0,0.3);
+    border-radius: 6px;
+    text-align: center;
+    padding: 8px 4px;
+  }
+
+  .event-month {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--orange);
+  }
+
+  .event-day {
+    font-family: 'Russo One', sans-serif;
+    font-size: 1.6rem;
+    color: #fff;
+    line-height: 1.1;
+  }
+
+  .event-info h4 {
+    font-size: 0.95rem;
+    color: #fff;
+    margin-bottom: 4px;
+  }
+
+  .event-info p {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+
+  /* ===== COACHES ===== */
+  #coaches {
+    padding: 100px 0;
+    background: var(--bg);
+  }
+
+  .coaches-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+
+  .coach-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s;
+  }
+
+  .coach-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--cyan);
+    box-shadow: 0 12px 40px rgba(0,188,212,0.12);
+  }
+
+  .coach-img {
+    height: 280px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .coach-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    transition: transform 0.5s;
+    display: block;
+  }
+
+  .coach-card:hover .coach-img img { transform: scale(1.04); }
+
+  .coach-info { padding: 24px; }
+
+  .coach-name {
+    font-family: 'Russo One', sans-serif;
+    font-size: 1.15rem;
+    color: #fff;
+    margin-bottom: 4px;
+  }
+
+  .coach-title {
+    font-size: 0.82rem;
+    color: var(--cyan);
+    font-weight: 500;
+    margin-bottom: 12px;
+  }
+
+  .coach-certs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 14px;
+  }
+
+  .cert-badge {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    background: rgba(0,188,212,0.1);
+    border: 1px solid rgba(0,188,212,0.2);
+    color: var(--cyan);
+    padding: 3px 8px;
+    border-radius: 2px;
+  }
+
+  .coach-bio {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.65;
+  }
+
+  /* ===== MEMBERSHIP ===== */
+  #membership {
+    padding: 100px 0;
+    background: var(--bg2);
+  }
+
+  .membership-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 48px;
+  }
+
+  .membership-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 32px 24px;
+    text-align: center;
+    transition: all 0.3s;
+    position: relative;
+  }
+
+  .membership-card.popular {
+    border-color: var(--cyan);
+    transform: scale(1.02);
+  }
+
+  .popular-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--cyan);
+    color: var(--near-black);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 4px 14px;
+    border-radius: 20px;
+    white-space: nowrap;
+  }
+
+  .membership-card:hover:not(.popular) {
+    border-color: rgba(0,188,212,0.4);
+    transform: translateY(-4px);
+  }
+
+  .membership-name {
+    font-family: 'Russo One', sans-serif;
+    font-size: 1.1rem;
+    color: #fff;
+    margin-bottom: 8px;
+  }
+
+  .membership-price {
+    font-family: 'Russo One', sans-serif;
+    font-size: 2.5rem;
+    color: var(--cyan);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .membership-price span {
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: var(--text-muted);
+  }
+
+  .membership-desc {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+
+  .membership-features {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .membership-features li {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 0.83rem;
+    color: var(--text);
+    line-height: 1.4;
+  }
+
+  .check-icon { flex-shrink: 0; color: var(--cyan); margin-top: 1px; }
+
+  .btn-plan {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border-radius: 4px;
+    font-family: 'Russo One', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s;
+    text-decoration: none;
+    text-align: center;
+  }
+
+  .btn-plan-primary {
+    background: var(--cyan);
+    color: var(--near-black);
+  }
+
+  .btn-plan-primary:hover {
+    background: #00e5ff;
+    box-shadow: 0 6px 20px rgba(0,188,212,0.4);
+  }
+
+  .btn-plan-outline {
+    background: transparent;
+    color: var(--cyan);
+    border: 1px solid var(--cyan);
+  }
+
+  .btn-plan-outline:hover {
+    background: rgba(0,188,212,0.08);
+  }
+
+  /* ===== NUTRITION ===== */
+  #nutrition {
+    padding: 80px 0;
+    background: var(--bg3);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nutrition-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .nutrition-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 28px;
+  }
+
+  .nutrition-feat {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 18px 16px;
+  }
+
+  .nutrition-feat h4 {
+    font-size: 0.9rem;
+    color: #fff;
+    margin-bottom: 4px;
+  }
+
+  .nutrition-feat p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+
+  .nutrition-cta-box {
+    background: linear-gradient(135deg, rgba(0,188,212,0.08), rgba(255,107,0,0.05));
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 40px;
+    text-align: center;
+  }
+
+  .nutrition-price-tag {
+    font-family: 'Russo One', sans-serif;
+    font-size: 0.85rem;
+    color: var(--orange);
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+  }
+
+  .nutrition-cta-box h3 {
+    font-size: 1.6rem;
+    color: #fff;
+    margin-bottom: 12px;
+  }
+
+  .nutrition-cta-box p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 24px;
+  }
+
+  /* ===== TESTIMONIALS ===== */
+  #testimonials {
+    padding: 100px 0;
+    background: var(--bg);
+  }
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 48px;
+  }
+
+  .testimonial-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: all 0.3s;
+  }
+
+  .testimonial-card:hover {
+    border-color: rgba(0,188,212,0.4);
+    transform: translateY(-3px);
+  }
+
+  .stars {
+    display: flex;
+    gap: 3px;
+  }
+
+  .star-icon { color: var(--orange); }
+
+  .testimonial-text {
+    font-size: 0.92rem;
+    color: var(--text);
+    line-height: 1.75;
+    flex: 1;
+    font-style: italic;
+  }
+
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .author-avatar {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--cyan), #0097a7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Russo One', sans-serif;
+    font-size: 1rem;
+    color: var(--near-black);
+    flex-shrink: 0;
+  }
+
+  .author-name {
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #fff;
+  }
+
+  .author-detail {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    margin-top: 2px;
+  }
+
+  .testimonial-tag {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 2px;
+    align-self: flex-start;
+  }
+
+  /* ===== LOCATION + FORM ===== */
+  #location {
+    padding: 100px 0;
+    background: var(--bg2);
+  }
+
+  .location-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+  }
+
+  .hours-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 24px;
+  }
+
+  .hours-table tr {
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .hours-table td {
+    padding: 12px 0;
+    font-size: 0.9rem;
+  }
+
+  .hours-table td:first-child {
+    color: var(--text-muted);
+    width: 150px;
+  }
+
+  .hours-table td:last-child {
+    color: var(--text);
+    font-weight: 500;
+  }
+
+  .contact-info {
+    margin-top: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .contact-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.9rem;
+  }
+
+  .contact-icon {
+    width: 36px;
+    height: 36px;
+    background: rgba(0,188,212,0.1);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .contact-row a {
+    color: var(--cyan);
+    text-decoration: none;
+  }
+
+  .contact-row a:hover { text-decoration: underline; }
+
+  /* FORM */
+  .trial-form {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 40px;
+  }
+
+  .form-title {
+    font-family: 'Russo One', sans-serif;
+    font-size: 1.4rem;
+    color: #fff;
+    margin-bottom: 6px;
+  }
+
+  .form-subtitle {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 28px;
+    line-height: 1.5;
+  }
+
+  .form-group {
+    margin-bottom: 16px;
+  }
+
+  .form-group label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    background: var(--bg3);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: var(--text);
+    padding: 12px 14px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-family: 'Roboto', sans-serif;
+    transition: border-color 0.2s;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus {
+    outline: none;
+    border-color: var(--cyan);
+  }
+
+  .form-group select option { background: var(--bg3); }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+
+  .btn-submit {
+    width: 100%;
+    background: var(--cyan);
+    color: var(--near-black);
+    font-family: 'Russo One', sans-serif;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    padding: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: all 0.2s;
+  }
+
+  .btn-submit:hover {
+    background: #00e5ff;
+    box-shadow: 0 6px 24px rgba(0,188,212,0.4);
+    transform: translateY(-1px);
+  }
+
+  .form-note {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-align: center;
+    margin-top: 12px;
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: var(--near-black);
+    border-top: 1px solid var(--border);
+    padding: 60px 0 30px;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 48px;
+    margin-bottom: 48px;
+  }
+
+  .footer-brand p {
+    font-size: 0.87rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin: 14px 0 20px;
+    max-width: 260px;
+  }
+
+  .footer-social {
+    display: flex;
+    gap: 10px;
+  }
+
+  .social-link {
+    width: 36px;
+    height: 36px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    cursor: pointer;
+  }
+
+  .social-link:hover {
+    background: rgba(0,188,212,0.1);
+    border-color: var(--cyan);
+  }
+
+  .footer-col h5 {
+    font-family: 'Russo One', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    color: #fff;
+    margin-bottom: 16px;
+  }
+
+  .footer-col ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-col ul li a {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .footer-col ul li a:hover { color: var(--cyan); }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .footer-bottom p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+
+  .footer-bottom a {
+    color: var(--cyan);
+    text-decoration: none;
+  }
+
+  /* ===== SUCCESS MESSAGE ===== */
+  .form-success {
+    display: none;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .form-success.show { display: block; }
+
+  .form-success h3 {
+    font-size: 1.4rem;
+    color: var(--cyan);
+    margin: 16px 0 8px;
+  }
+
+  .form-success p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 1024px) {
+    .membership-grid { grid-template-columns: repeat(2, 1fr); }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+
+    .hero-stats { gap: 24px; }
+
+    .wod-inner { grid-template-columns: 1fr; }
+    .wod-label-col { padding: 20px; flex-direction: row; justify-content: flex-start; gap: 16px; }
+    .wod-content-col { padding: 24px; }
+
+    .about-grid,
+    .levels-grid,
+    .nutrition-inner,
+    .location-grid { grid-template-columns: 1fr; }
+
+    .about-img { order: -1; }
+    .about-img img { height: 280px; }
+    .levels-img img { height: 300px; }
+
+    .programs-grid { grid-template-columns: repeat(2, 1fr); }
+    .coaches-grid { grid-template-columns: 1fr; }
+    .testimonials-grid { grid-template-columns: 1fr; }
+    .membership-grid { grid-template-columns: 1fr; }
+    .membership-card.popular { transform: none; }
+    .community-photo-grid { grid-template-columns: repeat(2, 1fr); grid-template-rows: auto; }
+    .cp-item:first-child { grid-column: span 2; grid-row: auto; }
+    .events-grid { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; }
+    .footer-bottom { flex-direction: column; text-align: center; }
+    .form-row { grid-template-columns: 1fr; }
+    .nutrition-features { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 480px) {
+    .programs-grid { grid-template-columns: 1fr; }
+    .hero-ctas { flex-direction: column; }
+    .btn-primary, .btn-secondary { text-align: center; }
+    .community-photo-grid { grid-template-columns: 1fr; }
+    .cp-item:first-child { grid-column: auto; }
+  }</style>
+  <!-- Codex UI Polish: nav readability and one-line links -->
+  <style id="codex-ui-polish-nav">
+    nav a,
+    .nav a,
+    .navbar a,
+    .nav__links a,
+    .nav-links a,
+    .menu a,
+    .menu__link,
+    .fullscreen-menu a {
+      white-space: nowrap;
+    }
+
+    @media (min-width: 1024px) {
+      nav a,
+      .nav a,
+      .navbar a,
+      .nav__links a,
+      .nav-links a,
+      .menu a,
+      .menu__link,
+      .fullscreen-menu a {
+        line-height: 1.1;
+      }
+
+      .nav__links,
+      .nav-links,
+      .navbar-links,
+      .menu-links,
+      nav ul {
+        row-gap: 0.25rem;
+      }
+
+      .nav__links,
+      .nav-links,
+      .navbar-links,
+      .menu-links,
+      nav ul {
+        align-items: center;
+      }
+
+      .nav__links a,
+      .nav-links a,
+      .navbar-links a,
+      .menu-links a,
+      nav ul a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 1.2rem;
+      }
+    }
+
+    /* Cross-page alignment normalization for common grid/card layouts */
+    .services__grid,
+    .service-grid,
+    .cards-grid,
+    .features-grid,
+    .pricing__grid,
+    .plans-grid,
+    .results__grid,
+    .reviews__grid,
+    .events-grid,
+    .coaches__grid,
+    .therapists-grid,
+    .portfolio__grid,
+    .tips-grid,
+    .testimonials-grid,
+    .grid {
+      align-items: stretch;
+    }
+
+    .service-card,
+    .card,
+    .feature-card,
+    .event-card,
+    .plan,
+    .pricing-card,
+    .testimonial,
+    .review,
+    .coach,
+    .therapist-card,
+    .project,
+    .tip-card,
+    .serve-card,
+    .info-card,
+    .stat-card {
+      height: 100%;
+    }
+
+    .service-card img,
+    .project img,
+    .tip-card img,
+    .coach img,
+    .therapist-card img,
+    .feature-card img,
+    .gallery-item img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    /* Improve readability where copy is dense without changing content */
+    section p,
+    .section p,
+    .card p,
+    .service-card p,
+    .feature-card p,
+    .testimonial p,
+    .event-card p,
+    .info-card p {
+      max-width: 66ch;
+      text-wrap: pretty;
+    }
+
+    .section__header p,
+    .hero p,
+    .footer p,
+    .map-overlay-card,
+    .location__item-value {
+      max-width: none;
+    }
+  </style>
+
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">
+        <div class="nav-logo-icon">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+            <path d="M3 11h4M15 11h4M7 7l4 4-4 4M11 11h4" stroke="#0A0A0A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="nav-logo-text">FUNCTIONAL<br><span>FITNESS LAB</span></div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#programs">Programs</a></li>
+        <li><a href="#coaches">Coaches</a></li>
+        <li><a href="#membership">Membership</a></li>
+        <li><a href="#community">Community</a></li>
+        <li><a href="#location">Location</a></li>
+        <li><a href="#location" class="btn-nav">TRY FREE CLASS</a></li>
+      </ul>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#programs">Programs</a>
+    <a href="#coaches">Coaches</a>
+    <a href="#membership">Membership</a>
+    <a href="#community">Community</a>
+    <a href="#location">Location</a>
+    <a href="#location" class="btn-mobile">TRY FREE CLASS</a>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge fade-up">
+        <div class="hero-badge-dot"></div>
+        Now Enrolling — Foundations Class Starting Soon
+      </div>
+      <h1 class="hero-title fade-up delay-1">STRONGER<br><span class="cyan">TOGETHER.</span></h1>
+      <p class="hero-subtitle fade-up delay-2">Functional Fitness for Every Body, Every Level.<br>Real training. Real community. Real results.</p>
+      <div class="hero-ctas fade-up delay-3">
+        <a href="#location" class="btn-primary">FREE FOUNDATIONS CLASS — Perfect for Beginners</a>
+        <a href="tel:5559012345" class="btn-secondary">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="display:inline;vertical-align:middle;margin-right:6px;">
+            <path d="M14 11.3l-2.5-.3c-.6-.1-1.2.2-1.6.6l-1.8 1.8C5.4 12 4 10.6 2.6 7.9L4.4 6.1c.4-.4.6-1 .5-1.6L4.6 2C4.5 1.4 4 1 3.4 1H1.5C.9 1 .4 1.5.5 2.1c.4 4.8 4.6 9 9.4 9.4.6.1 1.1-.4 1.1-1v-1.8c0-.6-.4-1.1-1-1.2z" fill="#fff"/>
+          </svg>
+          (555) 901-2345
+        </a>
+      </div>
+      <div class="hero-stats fade-up delay-4">
+        <div class="hero-stat">
+          <div class="hero-stat-num">300+</div>
+          <div class="hero-stat-label">Active Members</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">6</div>
+          <div class="hero-stat-label">Programs</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">5+</div>
+          <div class="hero-stat-label">Certified Coaches</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">4yr</div>
+          <div class="hero-stat-label">In the Community</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WOD WIDGET ===== -->
+<section id="wod">
+  <div class="container" style="padding:0;">
+    <div class="wod-inner">
+      <div class="wod-label-col">
+        <div>
+          <div class="wod-label-tag">Today's</div>
+          <div class="wod-label-title">WOD</div>
+          <div class="wod-date" id="wodDate"></div>
+        </div>
+      </div>
+      <div class="wod-content-col">
+        <div>
+          <div class="wod-type">For Time — 3 Rounds</div>
+          <div class="wod-name">FIRE &amp; IRON</div>
+        </div>
+        <div class="wod-movements">
+          <div class="wod-movement">21 Wall Balls</div>
+          <div class="wod-movement">15 Box Jumps</div>
+          <div class="wod-movement">9 Power Cleans</div>
+          <div class="wod-movement">400m Run</div>
+        </div>
+        <div class="wod-rx">
+          <div class="wod-scale">
+            <span class="wod-scale-tag tag-rx">RX</span>
+            20/14 lb wall ball · 95/65 lb cleans
+          </div>
+          <div class="wod-scale">
+            <span class="wod-scale-tag tag-scaled">SCALED</span>
+            10/6 lb · step-ups · 65/45 lb
+          </div>
+          <div class="wod-scale">
+            <span class="wod-scale-tag tag-beginner">FOUNDATIONS</span>
+            Coach-guided modification for all movements
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHAT IS FUNCTIONAL FITNESS ===== -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div>
+        <div class="section-label fade-up">What We Do</div>
+        <h2 class="section-title fade-up delay-1">What Is<br><span>Functional Fitness?</span></h2>
+        <p class="about-text fade-up delay-2">Functional fitness trains your body for real-world movement — not just gym machines. Using constantly varied functional movements performed at high intensity, you'll build strength, endurance, flexibility, and mental toughness that transfers into everyday life.</p>
+        <p class="about-text fade-up delay-2">Our programming draws from CrossFit methodology, Olympic weightlifting, gymnastics, and metabolic conditioning. Every workout is infinitely scalable, meaning a 70-year-old grandmother and a competitive athlete can do the same workout — just at different loads and paces.</p>
+        <ul class="benefits-list fade-up delay-3">
+          <li>
+            <svg class="benefit-icon" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="10" stroke="#00BCD4" stroke-width="1.5"/><path d="M7 11l3 3 5-5" stroke="#00BCD4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Build real-world strength, not just aesthetic muscle
+          </li>
+          <li>
+            <svg class="benefit-icon" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="10" stroke="#00BCD4" stroke-width="1.5"/><path d="M7 11l3 3 5-5" stroke="#00BCD4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Improve cardiovascular endurance and metabolic capacity
+          </li>
+          <li>
+            <svg class="benefit-icon" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="10" stroke="#00BCD4" stroke-width="1.5"/><path d="M7 11l3 3 5-5" stroke="#00BCD4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Increase mobility, flexibility, and injury resilience
+          </li>
+          <li>
+            <svg class="benefit-icon" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="10" stroke="#00BCD4" stroke-width="1.5"/><path d="M7 11l3 3 5-5" stroke="#00BCD4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Train alongside a community that holds you accountable
+          </li>
+          <li>
+            <svg class="benefit-icon" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="10" stroke="#00BCD4" stroke-width="1.5"/><path d="M7 11l3 3 5-5" stroke="#00BCD4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Measurable, trackable progress from day one
+          </li>
+          <li>
+            <svg class="benefit-icon" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="10" stroke="#00BCD4" stroke-width="1.5"/><path d="M7 11l3 3 5-5" stroke="#00BCD4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Fun, varied workouts — no two days are ever the same
+          </li>
+        </ul>
+      </div>
+      <div class="about-img fade-up delay-2">
+        <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=1200&q=80" alt="CrossFit functional fitness training at Functional Fitness Lab" loading="lazy">
+        <div class="about-img-badge">
+          <strong>No Experience</strong>
+          <p>Needed — We Scale Everything</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROGRAMS ===== -->
+<section id="programs">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label fade-up">What We Offer</div>
+      <h2 class="section-title fade-up delay-1">Our <span>Programs</span></h2>
+      <p class="fade-up delay-2" style="color:var(--text-muted);max-width:560px;margin:0 auto;font-size:1rem;line-height:1.7;">From your first day to competition day — we have a program designed for exactly where you are.</p>
+    </div>
+    <div class="programs-grid">
+      <div class="program-card fade-up">
+        <div class="program-icon">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M13 3L3 8v10l10 5 10-5V8L13 3z" stroke="#00BCD4" stroke-width="1.8" stroke-linejoin="round"/><path d="M13 23V13M3 8l10 5 10-5" stroke="#00BCD4" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        </div>
+        <span class="program-tag tag-cyan">BEGINNER FRIENDLY</span>
+        <h3 class="program-card-title">Foundations</h3>
+        <p class="program-desc">The perfect entry point. Learn all fundamental movements — squat, hinge, push, pull, carry — in a small group setting with dedicated coach attention. 3-week on-ramp program for complete beginners.</p>
+      </div>
+      <div class="program-card orange fade-up delay-1">
+        <div class="program-icon">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M5 13h16M8 9l-3 4 3 4M18 9l3 4-3 4" stroke="#FF6B00" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <span class="program-tag tag-orange">ALL LEVELS</span>
+        <h3 class="program-card-title">RX Classes</h3>
+        <p class="program-desc">Our signature daily group class — the WOD. High-intensity functional training with constantly varied programming. Coached warm-up, skill work, workout, and cool-down. 5:30am to 7pm daily.</p>
+      </div>
+      <div class="program-card fade-up delay-2">
+        <div class="program-icon">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M4 13h3M19 13h3M7 13v-3a6 6 0 0112 0v3" stroke="#00BCD4" stroke-width="1.8" stroke-linecap="round"/><rect x="5" y="12" width="4" height="6" rx="2" stroke="#00BCD4" stroke-width="1.8"/><rect x="17" y="12" width="4" height="6" rx="2" stroke="#00BCD4" stroke-width="1.8"/></svg>
+        </div>
+        <span class="program-tag tag-cyan">SPECIALTY</span>
+        <h3 class="program-card-title">Olympic Lifting</h3>
+        <p class="program-desc">Master the snatch and clean &amp; jerk with our dedicated Olympic weightlifting class. Technique-focused coaching for members who want to develop efficient, powerful barbell skills.</p>
+      </div>
+      <div class="program-card fade-up delay-1">
+        <div class="program-icon">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><circle cx="13" cy="13" r="8" stroke="#00BCD4" stroke-width="1.8"/><path d="M13 9v8M9 13h8" stroke="#00BCD4" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </div>
+        <span class="program-tag tag-cyan">RECOVERY</span>
+        <h3 class="program-card-title">Mobility &amp; Recovery</h3>
+        <p class="program-desc">Targeted mobility work, stretching protocols, and recovery techniques to keep your body performing at its best. Joint health, flexibility, and longevity — the often neglected side of fitness.</p>
+      </div>
+      <div class="program-card orange fade-up delay-2">
+        <div class="program-icon">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M13 6c-4.4 0-8 3.6-8 8s3.6 8 8 8 8-3.6 8-8" stroke="#FF6B00" stroke-width="1.8" stroke-linecap="round"/><path d="M13 10v4l2.5 2.5" stroke="#FF6B00" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M17 3l3 3-3 3" stroke="#FF6B00" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <span class="program-tag tag-orange">YOUTH PROGRAM</span>
+        <h3 class="program-card-title">Kids Fitness</h3>
+        <p class="program-desc">Age-appropriate functional fitness for youth ages 8–16. Builds athleticism, confidence, and healthy habits through fun, game-based workouts. Saturday mornings and after-school sessions.</p>
+      </div>
+      <div class="program-card fade-up delay-3">
+        <div class="program-icon">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><rect x="3" y="3" width="20" height="20" rx="3" stroke="#00BCD4" stroke-width="1.8"/><path d="M8 13h10M13 8v10" stroke="#00BCD4" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </div>
+        <span class="program-tag tag-cyan">FLEXIBLE</span>
+        <h3 class="program-card-title">Open Gym</h3>
+        <p class="program-desc">Access the full facility during designated open gym hours to work on your own programming, practice skills, or supplement your training. Free access for Unlimited members — add-on for others.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ALL LEVELS ===== -->
+<section id="all-levels">
+  <div class="container">
+    <div class="levels-grid">
+      <div class="levels-img fade-up">
+        <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=1200&q=80" alt="Members of all fitness levels training together at Functional Fitness Lab" loading="lazy">
+        <div class="levels-overlay"></div>
+      </div>
+      <div class="levels-content">
+        <div>
+          <div class="section-label fade-up">Scalability</div>
+          <h2 class="section-title fade-up delay-1">Scale Every<br><span>Workout to You</span></h2>
+          <p class="fade-up delay-2" style="color:var(--text-muted);font-size:0.95rem;line-height:1.75;margin-bottom:8px;">We don't believe in a one-size-fits-all approach to fitness. Every single workout in our gym can be scaled, modified, and adjusted to meet you exactly where you are.</p>
+        </div>
+        <div class="level-item fade-up delay-1">
+          <div class="level-num">01</div>
+          <div>
+            <h4>Foundations Track</h4>
+            <p>Brand new? Start here. Your coach will guide you through every movement with a focus on mechanics and consistency before intensity is ever added.</p>
+          </div>
+        </div>
+        <div class="level-item fade-up delay-2">
+          <div class="level-num">02</div>
+          <div>
+            <h4>Scaled &amp; Intermediate</h4>
+            <p>Comfortable with basics, still building? We'll scale loads, reps, and movements to keep you challenged without overwhelming you.</p>
+          </div>
+        </div>
+        <div class="level-item fade-up delay-3">
+          <div class="level-num">03</div>
+          <div>
+            <h4>RX &amp; Competition</h4>
+            <p>Ready to push? Hit prescribed weights and compete on the leaderboard. Our programming supports competitive athletes looking to advance.</p>
+          </div>
+        </div>
+        <div class="level-item fade-up delay-4">
+          <div class="level-num">04</div>
+          <div>
+            <h4>Masters &amp; Adaptive</h4>
+            <p>Age is just a number. We have dedicated scaling options and coaches trained to work with masters athletes (55+) and adaptive needs.</p>
+          </div>
+        </div>
+        <a href="#location" class="btn-primary fade-up delay-5" style="align-self:flex-start;">No Experience Needed — We Scale Everything</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== COMMUNITY ===== -->
+<section id="community">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label fade-up">Our People</div>
+      <h2 class="section-title fade-up delay-1">The <span>Community</span></h2>
+      <p class="fade-up delay-2" style="color:var(--text-muted);max-width:560px;margin:0 auto;font-size:1rem;line-height:1.7;">Join 300+ members who show up, support each other, and celebrate every PR — big or small. We compete hard, recover together, and make fitness a lifestyle.</p>
+    </div>
+
+    <div class="community-photo-grid fade-up">
+      <div class="cp-item">
+        <img src="https://images.unsplash.com/photo-1549476464-37392f717541?w=1200&q=80" alt="Community members training together" loading="lazy">
+        <div class="cp-overlay"></div>
+      </div>
+      <div class="cp-item">
+        <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=1200&q=80" alt="CrossFit group class in action" loading="lazy">
+        <div class="cp-overlay"></div>
+      </div>
+      <div class="cp-item">
+        <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=1200&q=80" alt="Olympic lifting practice" loading="lazy">
+        <div class="cp-overlay"></div>
+      </div>
+      <div class="cp-item">
+        <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=1200&q=80" alt="Member and coach training session" loading="lazy">
+        <div class="cp-overlay"></div>
+      </div>
+      <div class="cp-item">
+        <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=1200&q=80" alt="Functional Fitness Lab member event and group workout" loading="lazy">
+        <div class="cp-overlay"></div>
+      </div>
+    </div>
+
+    <div>
+      <h3 style="font-size:1.3rem;color:#fff;margin-bottom:8px;" class="fade-up">Upcoming Events &amp; Competitions</h3>
+      <p style="color:var(--text-muted);font-size:0.88rem;margin-bottom:0;" class="fade-up delay-1">Mark your calendar — the fun never stops at FFL.</p>
+      <div class="events-grid">
+        <div class="event-card fade-up delay-1">
+          <div class="event-date-box">
+            <div class="event-month">APR</div>
+            <div class="event-day">12</div>
+          </div>
+          <div class="event-info">
+            <h4>Spring Throwdown</h4>
+            <p>In-house team competition open to all members. Scaled and RX divisions. Post-WOD BBQ included.</p>
+          </div>
+        </div>
+        <div class="event-card fade-up delay-2">
+          <div class="event-date-box">
+            <div class="event-month">APR</div>
+            <div class="event-day">26</div>
+          </div>
+          <div class="event-info">
+            <h4>Foundations Graduation</h4>
+            <p>Celebrate new members completing the 3-week Foundations program. Welcome them to the regular classes.</p>
+          </div>
+        </div>
+        <div class="event-card fade-up delay-3">
+          <div class="event-date-box">
+            <div class="event-month">MAY</div>
+            <div class="event-day">10</div>
+          </div>
+          <div class="event-info">
+            <h4>Community 5K + WOD</h4>
+            <p>Annual charity run followed by a community workout. All fitness levels welcome. Partner-friendly format.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== COACHES ===== -->
+<section id="coaches">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label fade-up">Your Coaches</div>
+      <h2 class="section-title fade-up delay-1">Meet the <span>Team</span></h2>
+      <p class="fade-up delay-2" style="color:var(--text-muted);max-width:560px;margin:0 auto;font-size:1rem;line-height:1.7;">Certified, experienced, and genuinely invested in your progress. Our coaches are practitioners first — they do the work alongside you.</p>
+    </div>
+    <div class="coaches-grid">
+      <div class="coach-card fade-up">
+        <div class="coach-img">
+          <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=1200&q=80" alt="Coach Marcus Rivera — Head Coach at Functional Fitness Lab" loading="lazy">
+        </div>
+        <div class="coach-info">
+          <div class="coach-name">Marcus Rivera</div>
+          <div class="coach-title">Head Coach &amp; Co-Founder</div>
+          <div class="coach-certs">
+            <span class="cert-badge">CF-L3</span>
+            <span class="cert-badge">USAW Level 2</span>
+            <span class="cert-badge">CSCS</span>
+          </div>
+          <p class="coach-bio">10 years in functional fitness coaching. Former competitive CrossFit athlete turned full-time coach. Marcus built FFL from the ground up with a philosophy that everyone belongs on the floor — regardless of age, size, or experience.</p>
+        </div>
+      </div>
+      <div class="coach-card fade-up delay-1">
+        <div class="coach-img">
+          <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=1200&q=80" alt="Coach Priya Nair — Mobility and Olympic Lifting Coach" loading="lazy">
+        </div>
+        <div class="coach-info">
+          <div class="coach-name">Priya Nair</div>
+          <div class="coach-title">Mobility &amp; Olympic Lifting Coach</div>
+          <div class="coach-certs">
+            <span class="cert-badge">CF-L2</span>
+            <span class="cert-badge">USAW Level 1</span>
+            <span class="cert-badge">FMS Certified</span>
+          </div>
+          <p class="coach-bio">A physical therapy background meets elite coaching with Priya. Specializing in movement quality, injury prevention, and Olympic weightlifting technique. If something hurts or isn't moving right, Priya will help you fix it.</p>
+        </div>
+      </div>
+      <div class="coach-card fade-up delay-2">
+        <div class="coach-img">
+          <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=1200&q=80" alt="Coach Devon Okafor — Foundations and Kids Fitness Coach" loading="lazy">
+        </div>
+        <div class="coach-info">
+          <div class="coach-name">Devon Okafor</div>
+          <div class="coach-title">Foundations &amp; Kids Fitness Coach</div>
+          <div class="coach-certs">
+            <span class="cert-badge">CF-L2</span>
+            <span class="cert-badge">CF Kids</span>
+            <span class="cert-badge">Precision Nutrition L1</span>
+          </div>
+          <p class="coach-bio">Devon has a gift for making beginners feel like athletes from their very first class. Infectious energy, deep patience, and a thorough knowledge of foundational movement patterns. Also leads our Youth Fitness program on weekends.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MEMBERSHIP ===== -->
+<section id="membership">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label fade-up">Pricing</div>
+      <h2 class="section-title fade-up delay-1">Choose Your <span>Plan</span></h2>
+      <p class="fade-up delay-2" style="color:var(--text-muted);max-width:520px;margin:0 auto;font-size:1rem;line-height:1.7;">No hidden fees. No contracts. Month-to-month memberships with everything you need to get started.</p>
+    </div>
+    <div class="membership-grid">
+      <div class="membership-card fade-up">
+        <div class="membership-name">Foundations</div>
+        <div class="membership-price">$79<span>/mo</span></div>
+        <div class="membership-desc">Perfect for beginners. Structured entry into functional fitness.</div>
+        <ul class="membership-features">
+          <li><svg class="check-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l4 4 6-6" stroke="#00BCD4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>3x/week group classes</li>
+          <li><svg class="check-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l4 4 6-6" stroke="#00BCD4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>3-week Foundations on-ramp</li>
+          <li><svg class="check-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l4 4 6-6" stroke="#00BCD4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Dedicated beginner coaching</li>
+          <li><svg class="check-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l4 4 6-6" stroke="#00BCD4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Community app access</li>
+          <li><svg class="check-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l4 4 6-6" stroke="#00BCD4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Movement assessment included</li>
+        </ul>
+        <a href="#location" class="btn-plan btn-plan-outline">Get Started</a>
+      </div>
+      <div class="membership-card popular fade-up delay-1">
+        <div class="popular-badge">MOST POPULAR</div>
+        <div class="membership-name">Unlimited</div>
+        <div class="membership-price">$149<span>/mo</span></div>
+        <div class="membership-desc">Everything, unlimited. The full FFL experience.</div>
+        <ul class="membership-features">
+          <li><svg class="check-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l4 4 6-6" stroke="#00BCD4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Unlimited group classes</li>
+          <li><svg class="check-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l4 4 6-6" stroke="#00BCD4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Open gym access included</li>
+          <li><svg class="check-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l4 4 6-6" stroke="#00BCD4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Olympic lifting &amp; specialty classes</li>
+          <li><svg class="check-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l4 4 6-6" stroke="#00BCD4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Mobility &amp; recovery sessions</li>
+          <li><svg class="check-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l4 4 6-6" stroke="#00BCD4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Nutrition app discounts</li>
+          <li><svg class="check-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l4 4 6-6" stroke="#00BCD4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Event &amp; competition priority</li>
+        </ul>
+        <a href="#location" class="btn-plan btn-plan-primary">Join Now</a>
+      </div>
+      <div class="membership-card fade-up delay-2">
+        <div class="membership-name">Open Gym</div>
+        <div class="membership-price">$69<span>/mo</span></div>
+        <div class="membership-desc">Self-directed training with full equipment access.</div>
+        <ul class="membership-features">
+          <li><svg class="check-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l4 4 6-6" stroke="#00BCD4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Open gym hours access</li>
+          <li><svg class="check-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l4 4 6-6" stroke="#00BCD4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Full equipment access</li>
+          <li><svg class="check-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l4 4 6-6" stroke="#00BCD4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Drop-in class credits (2/mo)</li>
+          <li><svg class="check-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l4 4 6-6" stroke="#00BCD4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Community app access</li>
+        </ul>
+        <a href="#location" class="btn-plan btn-plan-outline">Get Started</a>
+      </div>
+      <div class="membership-card fade-up delay-3">
+        <div class="membership-name">Family Plan</div>
+        <div class="membership-price" style="font-size:1.8rem;">Custom<span style="font-size:0.85rem;"> pricing</span></div>
+        <div class="membership-desc">Two or more family members training together — built to fit your household.</div>
+        <ul class="membership-features">
+          <li><svg class="check-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l4 4 6-6" stroke="#00BCD4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>2+ adults at discounted rate</li>
+          <li><svg class="check-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l4 4 6-6" stroke="#00BCD4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Kids fitness classes included</li>
+          <li><svg class="check-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l4 4 6-6" stroke="#00BCD4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Flexible scheduling options</li>
+          <li><svg class="check-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l4 4 6-6" stroke="#00BCD4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Priority event access</li>
+        </ul>
+        <a href="#location" class="btn-plan btn-plan-outline">Inquire Now</a>
+      </div>
+    </div>
+    <p class="fade-up" style="text-align:center;color:var(--text-muted);font-size:0.82rem;margin-top:24px;">All plans are month-to-month with no long-term contracts. First class is always free.</p>
+  </div>
+</section>
+
+<!-- ===== NUTRITION ===== -->
+<section id="nutrition">
+  <div class="container">
+    <div class="nutrition-inner">
+      <div>
+        <div class="section-label fade-up">Add-On Program</div>
+        <h2 class="section-title fade-up delay-1">Nutrition <span>Coaching</span></h2>
+        <p class="fade-up delay-2" style="color:var(--text-muted);font-size:0.95rem;line-height:1.75;margin-bottom:16px;">Training hard is only half the equation. Our nutrition coaching program helps you fuel your performance, recover faster, and see the body composition results your work deserves — without obsessing over every calorie.</p>
+        <div class="nutrition-features fade-up delay-3">
+          <div class="nutrition-feat">
+            <h4>Macro Coaching</h4>
+            <p>Personalized protein, carb, and fat targets aligned with your training volume and goals.</p>
+          </div>
+          <div class="nutrition-feat">
+            <h4>Performance Fueling</h4>
+            <p>Pre/post-WOD nutrition strategies to optimize energy and recovery.</p>
+          </div>
+          <div class="nutrition-feat">
+            <h4>Monthly Check-Ins</h4>
+            <p>Regular progress reviews and plan adjustments with your nutrition coach.</p>
+          </div>
+          <div class="nutrition-feat">
+            <h4>Group Challenges</h4>
+            <p>Quarterly nutrition challenges with the community to build sustainable habits.</p>
+          </div>
+        </div>
+      </div>
+      <div class="nutrition-cta-box fade-up delay-2">
+        <div class="nutrition-price-tag">ADD-ON FROM $49/MONTH</div>
+        <h3>Eat to Perform,<br>Not Just Survive</h3>
+        <p>Available as a standalone add-on to any membership. Includes initial consultation, goal setting, custom macro plan, and ongoing accountability.</p>
+        <a href="#location" class="btn-primary">Ask About Nutrition Coaching</a>
+        <p style="margin-top:14px;font-size:0.78rem;color:var(--text-muted);">Complements any existing membership plan</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section id="testimonials">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label fade-up">Member Stories</div>
+      <h2 class="section-title fade-up delay-1">What Our<br><span>Members Say</span></h2>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card fade-up">
+        <span class="testimonial-tag tag-orange">Beginner Journey</span>
+        <div class="stars">
+          <svg class="star-icon" width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1-3-2.9 4.2-.7L8 1z"/></svg>
+          <svg class="star-icon" width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1-3-2.9 4.2-.7L8 1z"/></svg>
+          <svg class="star-icon" width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1-3-2.9 4.2-.7L8 1z"/></svg>
+          <svg class="star-icon" width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1-3-2.9 4.2-.7L8 1z"/></svg>
+          <svg class="star-icon" width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1-3-2.9 4.2-.7L8 1z"/></svg>
+        </div>
+        <p class="testimonial-text">"I was terrified walking in. I'd never lifted a barbell in my life, and everyone looked like they knew what they were doing. Devon took me under his wing in Foundations and by week two I actually looked forward to coming. Six months in, I've lost 22 pounds and can deadlift my bodyweight. Never thought I'd say that."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">TM</div>
+          <div>
+            <div class="author-name">Traci M.</div>
+            <div class="author-detail">Member since 2024 — Foundations Graduate</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card fade-up delay-1">
+        <span class="testimonial-tag tag-cyan">Competitive Athlete</span>
+        <div class="stars">
+          <svg class="star-icon" width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1-3-2.9 4.2-.7L8 1z"/></svg>
+          <svg class="star-icon" width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1-3-2.9 4.2-.7L8 1z"/></svg>
+          <svg class="star-icon" width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1-3-2.9 4.2-.7L8 1z"/></svg>
+          <svg class="star-icon" width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1-3-2.9 4.2-.7L8 1z"/></svg>
+          <svg class="star-icon" width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1-3-2.9 4.2-.7L8 1z"/></svg>
+        </div>
+        <p class="testimonial-text">"I've trained at 4 different CrossFit gyms across two cities. FFL has the best coaching I've seen — period. Marcus' programming is thoughtful, the Olympic lifting class with Priya has completely transformed my clean technique, and competing in the in-house throwdown is genuinely the highlight of my year. This community is real."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background:linear-gradient(135deg,var(--orange),#cc5500);">JK</div>
+          <div>
+            <div class="author-name">Jake K.</div>
+            <div class="author-detail">3-year Member — RX Division Competitor</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card fade-up delay-2">
+        <span class="testimonial-tag tag-orange">Senior Member</span>
+        <div class="stars">
+          <svg class="star-icon" width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1-3-2.9 4.2-.7L8 1z"/></svg>
+          <svg class="star-icon" width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1-3-2.9 4.2-.7L8 1z"/></svg>
+          <svg class="star-icon" width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1-3-2.9 4.2-.7L8 1z"/></svg>
+          <svg class="star-icon" width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1-3-2.9 4.2-.7L8 1z"/></svg>
+          <svg class="star-icon" width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1-3-2.9 4.2-.7L8 1z"/></svg>
+        </div>
+        <p class="testimonial-text">"I joined at 63, after my doctor told me I needed to build bone density or face real problems down the line. I was embarrassed — assumed everyone would be 25 and staring at me. Not once did I feel out of place. Priya modified every workout for my knees, and a year later my bone density scan showed remarkable improvement. I'm stronger now than I was at 50."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background:linear-gradient(135deg,#4a9eff,#0056cc);">BH</div>
+          <div>
+            <div class="author-name">Barbara H.</div>
+            <div class="author-detail">Member since 2023 — Masters 60+ Athlete</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== LOCATION + FORM ===== -->
+<section id="location">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label fade-up">Find Us</div>
+      <h2 class="section-title fade-up delay-1">Location, Hours<br><span>&amp; Free Trial</span></h2>
+    </div>
+    <div class="location-grid">
+      <div class="fade-up">
+        <h3 style="font-size:1.1rem;color:#fff;margin-bottom:6px;">Functional Fitness Lab</h3>
+        <p style="color:var(--text-muted);font-size:0.9rem;">1247 Industrial Blvd, Austin, TX 78701</p>
+
+        <table class="hours-table">
+          <tr><td>Monday – Friday</td><td>5:30 AM – 9:00 PM</td></tr>
+          <tr><td>Saturday</td><td>7:00 AM – 2:00 PM</td></tr>
+          <tr><td>Sunday</td><td>8:00 AM – 12:00 PM</td></tr>
+          <tr><td>Open Gym</td><td>Daily — check app for times</td></tr>
+        </table>
+
+        <div class="contact-info">
+          <div class="contact-row">
+            <div class="contact-icon">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M14 11.3l-2.5-.3c-.6-.1-1.2.2-1.6.6l-1.8 1.8C5.4 12 4 10.6 2.6 7.9L4.4 6.1c.4-.4.6-1 .5-1.6L4.6 2C4.5 1.4 4 1 3.4 1H1.5C.9 1 .4 1.5.5 2.1c.4 4.8 4.6 9 9.4 9.4.6.1 1.1-.4 1.1-1v-1.8c0-.6-.4-1.1-1-1.2z" fill="#00BCD4"/></svg>
+            </div>
+            <a href="tel:5559012345">(555) 901-2345</a>
+          </div>
+          <div class="contact-row">
+            <div class="contact-icon">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 3h12a1 1 0 011 1v8a1 1 0 01-1 1H2a1 1 0 01-1-1V4a1 1 0 011-1z" stroke="#00BCD4" stroke-width="1.5"/><path d="M1 4l7 5 7-5" stroke="#00BCD4" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <a href="mailto:hello@functionalfitnesslab.com">hello@functionalfitnesslab.com</a>
+          </div>
+          <div class="contact-row">
+            <div class="contact-icon">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1C5.2 1 3 3.2 3 6c0 4 5 9 5 9s5-5 5-9c0-2.8-2.2-5-5-5z" stroke="#00BCD4" stroke-width="1.5"/><circle cx="8" cy="6" r="2" stroke="#00BCD4" stroke-width="1.5"/></svg>
+            </div>
+            <span style="color:var(--text-muted);">1247 Industrial Blvd, Austin TX 78701</span>
+          </div>
+        </div>
+
+        <div style="margin-top:28px;padding:20px;background:rgba(0,188,212,0.06);border:1px solid var(--border);border-radius:8px;">
+          <p style="font-size:0.88rem;color:var(--text-muted);line-height:1.7;"><strong style="color:var(--cyan);">Join 300+ Members</strong> — Your first class is always free, no experience required. Just show up ready to move. We'll handle the rest.</p>
+        </div>
+      </div>
+
+      <div class="trial-form fade-up delay-2">
+        <div id="formContent">
+          <div class="form-title">Claim Your Free Class</div>
+          <p class="form-subtitle">No experience needed. We scale everything. Fill out the form and we'll reach out to schedule your first session.</p>
+          <form id="trialForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" placeholder="Alex" required>
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Johnson" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="alex@email.com" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000">
+            </div>
+            <div class="form-group">
+              <label for="fitnessLevel">Current Fitness Level</label>
+              <select id="fitnessLevel" name="fitnessLevel">
+                <option value="">Select your level...</option>
+                <option value="beginner">Complete Beginner</option>
+                <option value="some">Some Gym Experience</option>
+                <option value="intermediate">Intermediate — Comfortable with Basics</option>
+                <option value="advanced">Advanced / Competitive</option>
+                <option value="masters">Masters Athlete (55+)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="program">Interested Program</label>
+              <select id="program" name="program">
+                <option value="">Select a program...</option>
+                <option value="foundations">Foundations (Beginners)</option>
+                <option value="rx">RX Group Classes</option>
+                <option value="olympic">Olympic Lifting</option>
+                <option value="mobility">Mobility &amp; Recovery</option>
+                <option value="kids">Kids Fitness</option>
+                <option value="open">Open Gym</option>
+              </select>
+            </div>
+            <button type="submit" class="btn-submit">CLAIM MY FREE FOUNDATIONS CLASS</button>
+          </form>
+          <p class="form-note">No credit card required. No commitment. Just show up.</p>
+        </div>
+        <div class="form-success" id="formSuccess">
+          <svg width="56" height="56" viewBox="0 0 56 56" fill="none" style="margin:0 auto;display:block;"><circle cx="28" cy="28" r="27" stroke="#00BCD4" stroke-width="2"/><path d="M16 28l8 8 16-16" stroke="#00BCD4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <h3>You're Booked!</h3>
+          <p>We'll reach out within 24 hours to confirm your free class. See you on the floor.</p>
+          <p style="margin-top:8px;color:var(--cyan);font-size:0.82rem;">Have questions? Call us at <a href="tel:5559012345" style="color:var(--cyan);">(555) 901-2345</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#hero" class="nav-logo" style="display:inline-flex;">
+          <div class="nav-logo-icon">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M3 11h4M15 11h4M7 7l4 4-4 4M11 11h4" stroke="#0A0A0A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="nav-logo-text">FUNCTIONAL<br><span>FITNESS LAB</span></div>
+        </a>
+        <p>Community-driven functional fitness. Scalable workouts for every body, every level. 300+ strong in Austin, TX.</p>
+        <div class="footer-social">
+          <div class="social-link" title="Instagram">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="12" height="12" rx="3" stroke="#9ca3af" stroke-width="1.5"/><circle cx="8" cy="8" r="3" stroke="#9ca3af" stroke-width="1.5"/><circle cx="11.5" cy="4.5" r="0.75" fill="#9ca3af"/></svg>
+          </div>
+          <div class="social-link" title="Facebook">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M12 2h-2a3 3 0 00-3 3v2H5v3h2v4h3V10h2l.5-3H10V5a.5.5 0 01.5-.5H12V2z" stroke="#9ca3af" stroke-width="1.5" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="social-link" title="YouTube">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="1" y="3" width="14" height="10" rx="2" stroke="#9ca3af" stroke-width="1.5"/><path d="M6.5 6l4 2-4 2V6z" fill="#9ca3af"/></svg>
+          </div>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Programs</h5>
+        <ul>
+          <li><a href="#programs">Foundations</a></li>
+          <li><a href="#programs">RX Classes</a></li>
+          <li><a href="#programs">Olympic Lifting</a></li>
+          <li><a href="#programs">Mobility &amp; Recovery</a></li>
+          <li><a href="#programs">Kids Fitness</a></li>
+          <li><a href="#programs">Open Gym</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Membership</h5>
+        <ul>
+          <li><a href="#membership">Foundations — $79/mo</a></li>
+          <li><a href="#membership">Unlimited — $149/mo</a></li>
+          <li><a href="#membership">Open Gym — $69/mo</a></li>
+          <li><a href="#membership">Family Plans</a></li>
+          <li><a href="#nutrition">Nutrition Add-On</a></li>
+          <li><a href="#location">Free Trial Class</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="tel:5559012345">(555) 901-2345</a></li>
+          <li><a href="mailto:hello@functionalfitnesslab.com">hello@functionalfitnesslab.com</a></li>
+          <li><a href="#location">1247 Industrial Blvd</a></li>
+          <li><a href="#location">Austin, TX 78701</a></li>
+          <li><a href="#coaches">Meet the Coaches</a></li>
+          <li><a href="#community">Events Calendar</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Functional Fitness Lab. All rights reserved.</p>
+      <p><a href="#">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="#">Terms of Service</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // WOD Date
+  const wodDateEl = document.getElementById('wodDate');
+  if (wodDateEl) {
+    const today = new Date();
+    const opts = { weekday: 'short', month: 'short', day: 'numeric' };
+    wodDateEl.textContent = today.toLocaleDateString('en-US', opts).toUpperCase();
+  }
+
+  // Navbar scroll
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 30);
+  }, { passive: true });
+
+  // Mobile menu
+  const hamburger = document.getElementById('hamburgerBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => {
+    mobileMenu.classList.toggle('open');
+  });
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => mobileMenu.classList.remove('open'));
+  });
+
+  // Intersection Observer scroll animations
+  const fadeEls = document.querySelectorAll('.fade-up');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  fadeEls.forEach(el => observer.observe(el));
+
+  // Hero elements visible on load
+  document.querySelectorAll('#hero .fade-up').forEach(el => {
+    setTimeout(() => el.classList.add('visible'), 100);
+  });
+
+  // Form submission
+  const trialForm = document.getElementById('trialForm');
+  const formContent = document.getElementById('formContent');
+  const formSuccess = document.getElementById('formSuccess');
+
+  if (trialForm) {
+    trialForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const firstName = document.getElementById('firstName').value.trim();
+      const email = document.getElementById('email').value.trim();
+      if (!firstName || !email) {
+        alert('Please enter your name and email address.');
+        return;
+      }
+      formContent.style.display = 'none';
+      formSuccess.classList.add('show');
+    });
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,1891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Quick Lube & Tire Center — In and out in 15 minutes. No appointment needed. Oil changes from $29.99. Open 7 days a week." />
+  <meta name="keywords" content="oil change, tire rotation, quick lube, no appointment oil change, fast oil change, affordable oil change" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Quick Lube & Tire Center — 15-Minute Oil Change, No Appointment" />
+  <meta property="og:description" content="Fast, affordable oil changes and tire service. In and out in 15 minutes. No appointment needed. From $29.99." />
+  <meta property="og:type" content="website" />
+  <title>Quick Lube & Tire Center | 15-Minute Oil Change — No Appointment Needed</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutoRepair",
+    "name": "Quick Lube & Tire Center",
+    "description": "Fast, affordable oil changes and tire service. No appointment needed. In and out in 15 minutes.",
+    "url": "https://quicklubeandtirecenter.com",
+    "telephone": "+15552345678",
+    "priceRange": "$$",
+    "openingHours": "Mo-Su 07:30-19:00",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "4800 Main Street",
+      "addressLocality": "Anytown",
+      "addressRegion": "TX",
+      "postalCode": "75001",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 32.7767,
+      "longitude": -96.7970
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Quick Service Menu",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {"@type": "Service", "name": "Conventional Oil Change"},
+          "price": "29.99",
+          "priceCurrency": "USD"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {"@type": "Service", "name": "Full Synthetic Oil Change"},
+          "price": "59.99",
+          "priceCurrency": "USD"
+        }
+      ]
+    }
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black: #1A1A1A;
+      --chrome: #C0C0C0;
+      --white: #FFFFFF;
+      --red: #E53935;
+      --red-dark: #C62828;
+      --light-bg: #F5F5F5;
+      --mid-gray: #888888;
+      --border: #2E2E2E;
+      --font-head: 'Rajdhani', sans-serif;
+      --font-body: 'Roboto', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--white);
+      color: var(--black);
+      overflow-x: hidden;
+    }
+
+    /* ===================== TOP BAR ===================== */
+    .top-bar {
+      background: var(--red);
+      color: var(--white);
+      text-align: center;
+      padding: 10px 16px;
+      font-family: var(--font-head);
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      position: relative;
+      z-index: 200;
+    }
+    .top-bar a {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 700;
+      border-bottom: 1px dotted rgba(255,255,255,0.6);
+    }
+    .top-bar__sep {
+      margin: 0 12px;
+      opacity: 0.5;
+    }
+
+    /* ===================== NAV ===================== */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--black);
+      border-bottom: 3px solid var(--red);
+    }
+    .nav__inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 66px;
+    }
+    .nav__logo {
+      font-family: var(--font-head);
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--white);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .nav__logo-icon {
+      width: 32px;
+      height: 32px;
+      flex-shrink: 0;
+    }
+    .nav__logo span { color: var(--red); }
+    .nav__links {
+      display: flex;
+      align-items: center;
+      gap: 1.75rem;
+      list-style: none;
+    }
+    .nav__links a {
+      color: var(--chrome);
+      text-decoration: none;
+      font-family: var(--font-head);
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav__links a:hover { color: var(--white); }
+    .nav__cta {
+      background: var(--red);
+      color: var(--white) !important;
+      padding: 0.5rem 1.25rem;
+      font-family: var(--font-head);
+      font-size: 0.875rem !important;
+      font-weight: 700 !important;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border-radius: 3px;
+      transition: background 0.2s, transform 0.1s !important;
+      max-height: 40px;
+    }
+    .nav__cta:hover { background: var(--red-dark) !important; transform: translateY(-1px); }
+    .nav__hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+    .nav__hamburger span {
+      display: block;
+      width: 26px;
+      height: 2px;
+      background: var(--chrome);
+      transition: all 0.3s;
+    }
+    .nav__mobile-menu {
+      display: none;
+      flex-direction: column;
+      background: #111;
+      padding: 16px 20px;
+      gap: 14px;
+    }
+    .nav__mobile-menu.is-open { display: flex; }
+    .nav__mobile-menu a {
+      color: var(--chrome);
+      text-decoration: none;
+      font-family: var(--font-head);
+      font-size: 1.1rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .nav__mobile-menu a.nav__cta {
+      display: inline-block;
+      background: var(--red);
+      color: var(--white) !important;
+      padding: 12px 24px;
+      border-radius: 3px;
+      text-align: center;
+    }
+
+    /* ===================== HERO ===================== */
+    .hero {
+      position: relative;
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background: var(--black);
+    }
+    .hero__bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=1400&q=80');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.28;
+    }
+    /* Diagonal speed lines overlay */
+    .hero__speed-lines {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+    }
+    .hero__speed-lines::before {
+      content: '';
+      position: absolute;
+      top: -20%;
+      right: -10%;
+      width: 60%;
+      height: 160%;
+      background: repeating-linear-gradient(
+        -70deg,
+        transparent,
+        transparent 28px,
+        rgba(229,57,53,0.06) 28px,
+        rgba(229,57,53,0.06) 30px
+      );
+    }
+    .hero__speed-lines::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        to right,
+        rgba(26,26,26,0.85) 0%,
+        rgba(26,26,26,0.60) 55%,
+        rgba(26,26,26,0.20) 100%
+      );
+    }
+    .hero__content {
+      position: relative;
+      z-index: 2;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 100px 20px 80px;
+      width: 100%;
+    }
+    .hero__badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--red);
+      color: var(--white);
+      font-family: var(--font-head);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 2px;
+      margin-bottom: 24px;
+    }
+    .hero__badge-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--white);
+      border-radius: 50%;
+      animation: pulse 1.6s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.7); }
+    }
+    .hero__headline {
+      font-family: var(--font-head);
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.05;
+      letter-spacing: 0.01em;
+      margin-bottom: 16px;
+      max-width: 680px;
+    }
+    .hero__headline span { color: var(--red); }
+    .hero__sub {
+      font-size: 1rem;
+      color: var(--chrome);
+      margin-bottom: 1.5rem;
+      max-width: 600px;
+      line-height: 1.6;
+    }
+    .hero__price-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.06);
+      border: 2px solid var(--chrome);
+      padding: 16px 28px;
+      border-radius: 4px;
+      margin-bottom: 40px;
+      backdrop-filter: blur(4px);
+    }
+    .hero__price-label {
+      font-family: var(--font-head);
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--chrome);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 4px;
+    }
+    .hero__price-amount {
+      font-family: var(--font-head);
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1;
+      letter-spacing: 0.02em;
+    }
+    .hero__price-amount sup {
+      font-size: 1.4rem;
+      vertical-align: super;
+      color: var(--red);
+    }
+    .hero__price-note {
+      font-size: 0.75rem;
+      color: var(--mid-gray);
+      margin-top: 4px;
+      display: block;
+    }
+    .hero__cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      align-items: center;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 0.75rem 1.75rem;
+      border-radius: 3px;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: all 0.2s;
+      max-height: 52px;
+    }
+    .btn--red {
+      background: var(--red);
+      color: var(--white);
+      border-color: var(--red);
+    }
+    .btn--red:hover { background: var(--red-dark); border-color: var(--red-dark); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(229,57,53,0.35); }
+    .btn--outline {
+      background: transparent;
+      color: var(--white);
+      border-color: rgba(255,255,255,0.4);
+    }
+    .btn--outline:hover { border-color: var(--white); background: rgba(255,255,255,0.06); }
+    .btn svg { width: 18px; height: 18px; }
+
+    /* ===================== WAIT TIME WIDGET ===================== */
+    .wait-bar {
+      background: #111;
+      border-top: 3px solid var(--red);
+      border-bottom: 1px solid var(--border);
+      padding: 18px 20px;
+    }
+    .wait-bar__inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .wait-bar__status {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .wait-bar__dot {
+      width: 14px;
+      height: 14px;
+      background: #00C853;
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+      flex-shrink: 0;
+    }
+    .wait-bar__label {
+      font-family: var(--font-head);
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--chrome);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .wait-bar__time {
+      font-family: var(--font-head);
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: 0.04em;
+    }
+    .wait-bar__time span { color: var(--red); }
+    .wait-bar__slots {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+    }
+    .wait-slot {
+      width: 28px;
+      height: 28px;
+      border-radius: 3px;
+      font-family: var(--font-head);
+      font-size: 0.7rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .wait-slot--open { background: #00C853; color: var(--black); }
+    .wait-slot--taken { background: var(--border); color: var(--mid-gray); }
+    .wait-bar__slots-label {
+      font-family: var(--font-head);
+      font-size: 0.75rem;
+      color: var(--chrome);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-right: 4px;
+    }
+    .wait-bar__note {
+      font-size: 0.8rem;
+      color: var(--mid-gray);
+    }
+    .wait-bar__cta .btn {
+      font-size: 0.85rem;
+      padding: 10px 22px;
+    }
+
+    /* ===================== SERVICES & PRICING ===================== */
+    .section {
+      padding: 4rem 1.5rem;
+    }
+    .section--dark {
+      background: var(--black);
+    }
+    .section--gray {
+      background: var(--light-bg);
+    }
+    .section__inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    .section__tag {
+      font-family: var(--font-head);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .section__tag::before {
+      content: '';
+      display: block;
+      width: 28px;
+      height: 3px;
+      background: var(--red);
+    }
+    .section__heading {
+      font-family: var(--font-head);
+      font-size: clamp(1.5rem, 3vw, 2.25rem);
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 12px;
+      letter-spacing: 0.01em;
+    }
+    .section__heading--light { color: var(--white); }
+    .section__sub {
+      font-size: 1rem;
+      color: #555;
+      max-width: 600px;
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+    .section__sub--light { color: var(--chrome); }
+
+    /* Pricing Table */
+    .pricing-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+    }
+    .pricing-table thead {
+      background: var(--black);
+      color: var(--white);
+    }
+    .pricing-table thead th {
+      padding: 14px 20px;
+      font-family: var(--font-head);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-align: left;
+    }
+    .pricing-table thead th:last-child { text-align: right; }
+    .pricing-table tbody tr {
+      border-bottom: 1px solid #e5e5e5;
+      transition: background 0.2s;
+    }
+    .pricing-table tbody tr:last-child { border-bottom: none; }
+    .pricing-table tbody tr:hover { background: #fafafa; }
+    .pricing-table tbody td {
+      padding: 18px 20px;
+      vertical-align: middle;
+    }
+    .pricing-table__name {
+      font-family: var(--font-head);
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--black);
+      letter-spacing: 0.02em;
+    }
+    .pricing-table__desc {
+      font-size: 0.82rem;
+      color: var(--mid-gray);
+      margin-top: 3px;
+    }
+    .pricing-table__price {
+      font-family: var(--font-head);
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--red);
+      text-align: right;
+      white-space: nowrap;
+    }
+    .pricing-table__badge {
+      display: inline-block;
+      background: var(--red);
+      color: var(--white);
+      font-family: var(--font-head);
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: 2px;
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+    .pricing-note {
+      font-size: 0.82rem;
+      color: var(--mid-gray);
+      margin-top: 14px;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    .pricing-note svg { flex-shrink: 0; margin-top: 1px; }
+
+    /* ===================== WHY QUICK LUBE ===================== */
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin-top: 12px;
+    }
+    .benefit-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      border-top: 4px solid var(--red);
+      padding: 1.75rem 1.5rem;
+      border-radius: 8px;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+    .benefit-card::before {
+      content: '';
+      position: absolute;
+      top: -30px;
+      right: -30px;
+      width: 100px;
+      height: 100px;
+      background: radial-gradient(circle, rgba(229,57,53,0.08) 0%, transparent 70%);
+    }
+    .benefit-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.3); }
+    .benefit-card__icon {
+      width: 48px;
+      height: 48px;
+      background: rgba(229,57,53,0.12);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .benefit-card__icon svg { width: 24px; height: 24px; color: var(--red); }
+    .benefit-card__num {
+      font-family: var(--font-head);
+      font-size: 2.6rem;
+      font-weight: 700;
+      color: var(--red);
+      line-height: 1;
+      letter-spacing: -0.01em;
+      margin-bottom: 4px;
+    }
+    .benefit-card__title {
+      font-family: var(--font-head);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: 0.02em;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+    .benefit-card__desc {
+      font-size: 0.88rem;
+      color: var(--chrome);
+      line-height: 1.6;
+    }
+
+    /* ===================== SERVICES GRID ===================== */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1.5rem;
+    }
+    .service-item {
+      background: var(--white);
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+      transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+      cursor: default;
+    }
+    .service-item:hover {
+      border-color: var(--red);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    }
+    .service-item__icon {
+      width: 44px;
+      height: 44px;
+      background: var(--light-bg);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .service-item__icon svg { width: 22px; height: 22px; color: var(--red); }
+    .service-item__name {
+      font-family: var(--font-head);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--black);
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+    .service-item__note {
+      font-size: 0.78rem;
+      color: var(--mid-gray);
+    }
+
+    /* ===================== SPECIALS / COUPONS ===================== */
+    .coupons-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .coupon {
+      border: 3px dashed var(--chrome);
+      border-radius: 8px;
+      background: var(--white);
+      padding: 1.75rem 1.5rem;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.2s;
+    }
+    .coupon::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 6px;
+      height: 100%;
+      background: var(--red);
+    }
+    .coupon:hover { transform: scale(1.02); }
+    .coupon__tag {
+      font-family: var(--font-head);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 10px;
+    }
+    .coupon__discount {
+      font-family: var(--font-head);
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--black);
+      line-height: 1;
+      margin-bottom: 8px;
+      letter-spacing: -0.01em;
+    }
+    .coupon__title {
+      font-family: var(--font-head);
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--black);
+      margin-bottom: 8px;
+    }
+    .coupon__terms {
+      font-size: 0.76rem;
+      color: var(--mid-gray);
+      border-top: 1px solid #eee;
+      padding-top: 10px;
+      margin-top: 14px;
+    }
+    .coupon__code {
+      display: inline-block;
+      background: var(--black);
+      color: var(--white);
+      font-family: var(--font-head);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      padding: 5px 12px;
+      border-radius: 2px;
+      margin-top: 10px;
+    }
+
+    /* ===================== IMAGE STRIP ===================== */
+    .image-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      height: 280px;
+      overflow: hidden;
+    }
+    .image-strip__item {
+      overflow: hidden;
+      position: relative;
+    }
+    .image-strip__item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+    .image-strip__item:hover img { transform: scale(1.06); }
+    .image-strip__item::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(26,26,26,0.3);
+    }
+
+    /* ===================== TESTIMONIALS ===================== */
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .testimonial {
+      background: var(--white);
+      border-left: 4px solid var(--red);
+      padding: 1.75rem 1.5rem;
+      border-radius: 0 8px 8px 0;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      transition: transform 0.2s;
+    }
+    .testimonial:hover { transform: translateY(-3px); }
+    .testimonial__stars {
+      display: flex;
+      gap: 3px;
+      margin-bottom: 16px;
+    }
+    .testimonial__stars svg { width: 18px; height: 18px; color: #FFC107; }
+    .testimonial__quote {
+      font-size: 0.95rem;
+      color: #333;
+      line-height: 1.7;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+    .testimonial__quote::before { content: '\201C'; }
+    .testimonial__quote::after { content: '\201D'; }
+    .testimonial__author {
+      font-family: var(--font-head);
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--black);
+      letter-spacing: 0.04em;
+    }
+    .testimonial__meta {
+      font-size: 0.78rem;
+      color: var(--mid-gray);
+      margin-top: 2px;
+    }
+
+    /* ===================== LOCATION ===================== */
+    .location-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+    .location-info__address {
+      font-size: 1rem;
+      color: #333;
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+    .location-info__address strong {
+      display: block;
+      font-family: var(--font-head);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--black);
+      margin-bottom: 6px;
+    }
+    .hours-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 28px;
+    }
+    .hours-table td {
+      padding: 8px 0;
+      font-size: 0.92rem;
+      border-bottom: 1px solid #f0f0f0;
+      color: #333;
+    }
+    .hours-table td:first-child {
+      font-weight: 500;
+      color: var(--black);
+      width: 120px;
+    }
+    .hours-table .open { color: #00A040; font-weight: 700; }
+    .location-cta-group {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .location-cta-group .btn {
+      justify-content: center;
+    }
+    .map-placeholder {
+      background: var(--light-bg);
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      height: 340px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      color: var(--mid-gray);
+      font-family: var(--font-head);
+      font-size: 0.9rem;
+      text-align: center;
+      padding: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+    .map-placeholder__icon { width: 48px; height: 48px; color: var(--red); }
+    .map-placeholder__address {
+      font-size: 1rem;
+      color: var(--black);
+      font-weight: 600;
+    }
+    .map-placeholder__link {
+      color: var(--red);
+      font-size: 0.82rem;
+      text-decoration: none;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .map-placeholder__link:hover { text-decoration: underline; }
+    /* Diagonal lines in map placeholder */
+    .map-placeholder::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 20px,
+        rgba(0,0,0,0.02) 20px,
+        rgba(0,0,0,0.02) 22px
+      );
+    }
+
+    /* ===================== FINAL CTA BAND ===================== */
+    .cta-band {
+      background: var(--red);
+      padding: 60px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-band::before {
+      content: '';
+      position: absolute;
+      top: -40px;
+      right: -60px;
+      width: 300px;
+      height: 300px;
+      background: rgba(255,255,255,0.06);
+      transform: rotate(-20deg);
+    }
+    .cta-band::after {
+      content: '';
+      position: absolute;
+      bottom: -60px;
+      left: -40px;
+      width: 250px;
+      height: 250px;
+      background: rgba(0,0,0,0.08);
+      transform: rotate(-20deg);
+    }
+    .cta-band__inner {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+    .cta-band__heading {
+      font-family: var(--font-head);
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.1;
+      letter-spacing: 0.01em;
+      margin-bottom: 12px;
+    }
+    .cta-band__sub {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.8);
+      margin-bottom: 32px;
+    }
+    .cta-band__buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      justify-content: center;
+    }
+    .btn--white {
+      background: var(--white);
+      color: var(--red);
+      border-color: var(--white);
+    }
+    .btn--white:hover { background: #f0f0f0; border-color: #f0f0f0; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.2); }
+    .btn--dark-outline {
+      background: transparent;
+      color: var(--white);
+      border-color: rgba(255,255,255,0.5);
+    }
+    .btn--dark-outline:hover { border-color: var(--white); }
+
+    /* ===================== FOOTER ===================== */
+    .footer {
+      background: #0D0D0D;
+      padding: 48px 20px 24px;
+      border-top: 3px solid var(--red);
+    }
+    .footer__inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .footer__grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+    .footer__brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-head);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 14px;
+    }
+    .footer__brand span { color: var(--red); }
+    .footer__brand-icon { width: 28px; height: 28px; }
+    .footer__tagline {
+      font-size: 0.85rem;
+      color: var(--chrome);
+      line-height: 1.65;
+      margin-bottom: 20px;
+    }
+    .footer__phone {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--white);
+      font-family: var(--font-head);
+      font-size: 1.2rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer__phone:hover { color: var(--red); }
+    .footer__phone svg { width: 18px; height: 18px; }
+    .footer__col-title {
+      font-family: var(--font-head);
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--chrome);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .footer__list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .footer__list a {
+      color: #777;
+      text-decoration: none;
+      font-size: 0.88rem;
+      transition: color 0.2s;
+    }
+    .footer__list a:hover { color: var(--white); }
+    .footer__bottom {
+      border-top: 1px solid var(--border);
+      padding-top: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .footer__copy {
+      font-size: 0.78rem;
+      color: #555;
+    }
+    .footer__legal {
+      display: flex;
+      gap: 20px;
+    }
+    .footer__legal a {
+      font-size: 0.78rem;
+      color: #555;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer__legal a:hover { color: var(--chrome); }
+
+    /* ===================== SCROLL ANIMATIONS ===================== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+    .reveal.is-visible {
+      opacity: 1;
+      transform: none;
+    }
+    .reveal--left {
+      transform: translateX(-28px);
+    }
+    .reveal--left.is-visible { transform: none; }
+    .reveal--right {
+      transform: translateX(28px);
+    }
+    .reveal--right.is-visible { transform: none; }
+    .reveal--delay-1 { transition-delay: 0.1s; }
+    .reveal--delay-2 { transition-delay: 0.2s; }
+    .reveal--delay-3 { transition-delay: 0.3s; }
+    .reveal--delay-4 { transition-delay: 0.4s; }
+
+    /* ===================== RESPONSIVE ===================== */
+    @media (max-width: 900px) {
+      .location-grid { grid-template-columns: 1fr; }
+      .footer__grid { grid-template-columns: 1fr 1fr; }
+      .nav__links { display: none; }
+      .nav__hamburger { display: flex; }
+      .image-strip { grid-template-columns: 1fr 1fr; height: 200px; }
+      .image-strip__item:last-child { display: none; }
+    }
+    @media (max-width: 600px) {
+      .section { padding: 56px 16px; }
+      .wait-bar__inner { flex-direction: column; align-items: flex-start; }
+      .hero__content { padding: 80px 16px 60px; }
+      .footer__grid { grid-template-columns: 1fr; }
+      .image-strip { display: none; }
+      .pricing-table thead th:nth-child(2),
+      .pricing-table tbody td:nth-child(2) { display: none; }
+      .top-bar { font-size: 0.78rem; }
+      .top-bar__sep { margin: 0 6px; }
+    }</style>
+  <!-- Codex UI Polish: nav readability and one-line links -->
+  <style id="codex-ui-polish-nav">
+    nav a,
+    .nav a,
+    .navbar a,
+    .nav__links a,
+    .nav-links a,
+    .menu a,
+    .menu__link,
+    .fullscreen-menu a {
+      white-space: nowrap;
+    }
+
+    @media (min-width: 1024px) {
+      nav a,
+      .nav a,
+      .navbar a,
+      .nav__links a,
+      .nav-links a,
+      .menu a,
+      .menu__link,
+      .fullscreen-menu a {
+        line-height: 1.1;
+      }
+
+      .nav__links,
+      .nav-links,
+      .navbar-links,
+      .menu-links,
+      nav ul {
+        row-gap: 0.25rem;
+      }
+
+      .nav__links,
+      .nav-links,
+      .navbar-links,
+      .menu-links,
+      nav ul {
+        align-items: center;
+      }
+
+      .nav__links a,
+      .nav-links a,
+      .navbar-links a,
+      .menu-links a,
+      nav ul a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 1.2rem;
+      }
+    }
+
+    /* Cross-page alignment normalization for common grid/card layouts */
+    .services__grid,
+    .service-grid,
+    .cards-grid,
+    .features-grid,
+    .pricing__grid,
+    .plans-grid,
+    .results__grid,
+    .reviews__grid,
+    .events-grid,
+    .coaches__grid,
+    .therapists-grid,
+    .portfolio__grid,
+    .tips-grid,
+    .testimonials-grid,
+    .grid {
+      align-items: stretch;
+    }
+
+    .service-card,
+    .card,
+    .feature-card,
+    .event-card,
+    .plan,
+    .pricing-card,
+    .testimonial,
+    .review,
+    .coach,
+    .therapist-card,
+    .project,
+    .tip-card,
+    .serve-card,
+    .info-card,
+    .stat-card {
+      height: 100%;
+    }
+
+    .service-card img,
+    .project img,
+    .tip-card img,
+    .coach img,
+    .therapist-card img,
+    .feature-card img,
+    .gallery-item img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    /* Improve readability where copy is dense without changing content */
+    section p,
+    .section p,
+    .card p,
+    .service-card p,
+    .feature-card p,
+    .testimonial p,
+    .event-card p,
+    .info-card p {
+      max-width: 66ch;
+      text-wrap: pretty;
+    }
+
+    .section__header p,
+    .hero p,
+    .footer p,
+    .map-overlay-card,
+    .location__item-value {
+      max-width: none;
+    }
+  </style>
+
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    NO APPOINTMENT NEEDED
+    <span class="top-bar__sep">&mdash;</span>
+    Open 7 Days a Week
+    <span class="top-bar__sep">&mdash;</span>
+    <a href="tel:+15552345678">(555) 234-5678</a>
+  </div>
+
+  <!-- NAV -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo" aria-label="Quick Lube & Tire Center home">
+        <svg class="nav__logo-icon" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <circle cx="16" cy="16" r="14" stroke="#E53935" stroke-width="2.5"/>
+          <circle cx="16" cy="16" r="6" stroke="#C0C0C0" stroke-width="2"/>
+          <path d="M16 2v4M16 26v4M2 16h4M26 16h4" stroke="#C0C0C0" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="16" cy="16" r="2.5" fill="#E53935"/>
+        </svg>
+        Quick <span>&nbsp;Lube</span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#specials">Specials</a></li>
+        <li><a href="#location">Location</a></li>
+        <li><a href="tel:+15552345678" class="nav__cta">Drive Right In</a></li>
+      </ul>
+      <button class="nav__hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__mobile-menu" id="mobileMenu" role="menu">
+      <a href="#pricing">Pricing</a>
+      <a href="#services">Services</a>
+      <a href="#specials">Specials</a>
+      <a href="#location">Location &amp; Hours</a>
+      <a href="tel:+15552345678" class="nav__cta">Drive Right In — (555) 234-5678</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" aria-label="Hero">
+    <div class="hero__bg" role="img" aria-label="Mechanic performing oil change in service bay"></div>
+    <div class="hero__speed-lines" aria-hidden="true"></div>
+    <div class="hero__content">
+      <div class="hero__badge">
+        <span class="hero__badge-dot"></span>
+        Now Open — Serving You Today
+      </div>
+      <h1 class="hero__headline">
+        In &amp; Out in <span>15 Minutes.</span><br />Guaranteed.
+      </h1>
+      <p class="hero__sub">
+        Fast, affordable oil changes and tire service. No appointment, no hassle. Just drive in.
+      </p>
+      <div class="hero__price-badge">
+        <span class="hero__price-label">Oil Change Starting From</span>
+        <div class="hero__price-amount"><sup>$</sup>29<sup>.99</sup></div>
+        <span class="hero__price-note">Conventional oil. Multi-point inspection included free.</span>
+      </div>
+      <div class="hero__cta-group">
+        <a href="#location" class="btn btn--red">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          Drive In Now
+        </a>
+        <a href="tel:+15552345678" class="btn btn--outline">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          (555) 234-5678
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WAIT TIME WIDGET -->
+  <div class="wait-bar" role="status" aria-live="polite">
+    <div class="wait-bar__inner">
+      <div class="wait-bar__status">
+        <span class="wait-bar__dot"></span>
+        <div>
+          <div class="wait-bar__label">Current Wait Time</div>
+          <div class="wait-bar__time" id="waitTime">~<span id="waitMinutes">10</span> min</div>
+        </div>
+      </div>
+      <div>
+        <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+          <span class="wait-bar__slots-label">Bay Status</span>
+          <div class="wait-bar__slots" aria-label="3 of 5 service bays open">
+            <div class="wait-slot wait-slot--open" title="Bay open">OK</div>
+            <div class="wait-slot wait-slot--open" title="Bay open">OK</div>
+            <div class="wait-slot wait-slot--open" title="Bay open">OK</div>
+            <div class="wait-slot wait-slot--taken" title="Bay occupied">--</div>
+            <div class="wait-slot wait-slot--taken" title="Bay occupied">--</div>
+          </div>
+        </div>
+        <p class="wait-bar__note" style="margin-top:6px;">3 of 5 bays available right now</p>
+      </div>
+      <div class="wait-bar__cta">
+        <a href="#location" class="btn btn--red">No Appointment — Just Pull In</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICES & PRICING -->
+  <section class="section section--gray" id="pricing" aria-labelledby="pricing-heading">
+    <div class="section__inner">
+      <p class="section__tag reveal">Transparent Pricing</p>
+      <h2 class="section__heading reveal reveal--delay-1" id="pricing-heading">What You Pay Is What You See</h2>
+      <p class="section__sub reveal reveal--delay-2">No hidden fees. No upsells. Our prices are posted on the board and they never change — same low price every single day.</p>
+
+      <div class="reveal reveal--delay-3">
+        <table class="pricing-table" aria-label="Service pricing menu">
+          <thead>
+            <tr>
+              <th scope="col">Service</th>
+              <th scope="col">Description</th>
+              <th scope="col">Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="pricing-table__name">Conventional Oil Change <span class="pricing-table__badge">Most Popular</span></div>
+                <div class="pricing-table__desc">Up to 5 qts. Conventional motor oil</div>
+              </td>
+              <td><div class="pricing-table__desc">Drain & refill, new filter, 19-point inspection</div></td>
+              <td class="pricing-table__price">$29.99</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="pricing-table__name">Synthetic Blend Oil Change</div>
+                <div class="pricing-table__desc">Up to 5 qts. Synthetic blend formula</div>
+              </td>
+              <td><div class="pricing-table__desc">Drain & refill, new filter, 19-point inspection</div></td>
+              <td class="pricing-table__price">$44.99</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="pricing-table__name">Full Synthetic Oil Change <span class="pricing-table__badge">Best Protection</span></div>
+                <div class="pricing-table__desc">Up to 5 qts. Full synthetic formula</div>
+              </td>
+              <td><div class="pricing-table__desc">Drain & refill, new filter, 19-point inspection</div></td>
+              <td class="pricing-table__price">$59.99</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="pricing-table__name">Tire Rotation</div>
+                <div class="pricing-table__desc">All 4 tires rotated</div>
+              </td>
+              <td><div class="pricing-table__desc">Extend tire life, free with any oil change this month</div></td>
+              <td class="pricing-table__price">$19.99</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="pricing-table__name">Engine Air Filter</div>
+                <div class="pricing-table__desc">Standard replacement</div>
+              </td>
+              <td><div class="pricing-table__desc">Improves MPG and engine performance</div></td>
+              <td class="pricing-table__price">$19.99</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="pricing-table__name">Wiper Blades</div>
+                <div class="pricing-table__desc">Installed price — pair</div>
+              </td>
+              <td><div class="pricing-table__desc">Blade replacement, installation included</div></td>
+              <td class="pricing-table__price">$24.99</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="pricing-note">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          Prices shown are standard rates. High-mileage vehicles, diesels, and extra quarts billed accordingly. All prices include applicable shop fees. Tax not included.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY QUICK LUBE -->
+  <section class="section section--dark" aria-labelledby="why-heading">
+    <div class="section__inner">
+      <p class="section__tag reveal" style="color:var(--red);">Why Choose Us</p>
+      <h2 class="section__heading section__heading--light reveal reveal--delay-1" id="why-heading">Speed. Value. No Runaround.</h2>
+      <p class="section__sub section__sub--light reveal reveal--delay-2">We built this shop around the reality that your time matters. Every process is designed to get you back on the road fast.</p>
+
+      <div class="benefits-grid">
+        <div class="benefit-card reveal reveal--delay-1">
+          <div class="benefit-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div class="benefit-card__num">15</div>
+          <div class="benefit-card__title">Minute Service</div>
+          <p class="benefit-card__desc">Our trained crew works in a choreographed pit-crew system. Most vehicles are done in 15 minutes or less — guaranteed.</p>
+        </div>
+        <div class="benefit-card reveal reveal--delay-2">
+          <div class="benefit-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <div class="benefit-card__num">0</div>
+          <div class="benefit-card__title">Appointments Needed</div>
+          <p class="benefit-card__desc">Pull straight into a bay any time we're open. No phone calls, no scheduling, no waiting days for a slot. Just drive in.</p>
+        </div>
+        <div class="benefit-card reveal reveal--delay-3">
+          <div class="benefit-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+          </div>
+          <div class="benefit-card__num">$29</div>
+          <div class="benefit-card__title">Same Low Price Daily</div>
+          <p class="benefit-card__desc">No weekend surcharges. No peak pricing. The price you see on the board is the price you pay, every day of the week.</p>
+        </div>
+        <div class="benefit-card reveal reveal--delay-4">
+          <div class="benefit-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+          </div>
+          <div class="benefit-card__num">19</div>
+          <div class="benefit-card__title">Point Inspection Free</div>
+          <p class="benefit-card__desc">Every service includes our 19-point courtesy inspection. We check fluids, filters, belts, brakes, and tires — at no extra charge.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMAGE STRIP -->
+  <div class="image-strip" aria-hidden="true">
+    <div class="image-strip__item">
+      <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Tire service in progress" loading="lazy" />
+    </div>
+    <div class="image-strip__item">
+      <img src="https://images.unsplash.com/photo-1609952543555-fb138db43651?w=600&q=80" alt="Fast car service" loading="lazy" />
+    </div>
+    <div class="image-strip__item">
+      <img src="https://images.unsplash.com/photo-1507136566006-cfc505b114fc?w=600&q=80" alt="Auto shop team" loading="lazy" />
+    </div>
+  </div>
+
+  <!-- SERVICES GRID -->
+  <section class="section section--gray" id="services" aria-labelledby="services-heading">
+    <div class="section__inner">
+      <p class="section__tag reveal">Full Service Menu</p>
+      <h2 class="section__heading reveal reveal--delay-1" id="services-heading">Everything Your Car Needs. Fast.</h2>
+      <p class="section__sub reveal reveal--delay-2">From the oil drain to the tire valve — we handle it while you wait in your car or relax in our clean waiting area.</p>
+
+      <div class="services-grid">
+        <div class="service-item reveal reveal--delay-1">
+          <div class="service-item__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="M12 18v-6M9 15l3 3 3-3"/></svg>
+          </div>
+          <div class="service-item__name">Oil Change</div>
+          <div class="service-item__note">Conventional, Blend & Synthetic</div>
+        </div>
+        <div class="service-item reveal reveal--delay-2">
+          <div class="service-item__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/></svg>
+          </div>
+          <div class="service-item__name">Tire Rotation</div>
+          <div class="service-item__note">Extends tire life significantly</div>
+        </div>
+        <div class="service-item reveal reveal--delay-3">
+          <div class="service-item__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="service-item__name">Fluid Top-Off</div>
+          <div class="service-item__note">Coolant, brake, PS, washer fluid</div>
+        </div>
+        <div class="service-item reveal reveal--delay-4">
+          <div class="service-item__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <div class="service-item__name">Air Filter</div>
+          <div class="service-item__note">Engine air filter replacement</div>
+        </div>
+        <div class="service-item reveal reveal--delay-1">
+          <div class="service-item__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <div class="service-item__name">Cabin Filter</div>
+          <div class="service-item__note">Clean air inside your vehicle</div>
+        </div>
+        <div class="service-item reveal reveal--delay-2">
+          <div class="service-item__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="6" width="22" height="12" rx="2"/><line x1="7" y1="10" x2="7" y2="14"/><line x1="12" y1="10" x2="12" y2="14"/><line x1="17" y1="10" x2="17" y2="14"/></svg>
+          </div>
+          <div class="service-item__name">Battery Check</div>
+          <div class="service-item__note">Free load test, terminals cleaned</div>
+        </div>
+        <div class="service-item reveal reveal--delay-3">
+          <div class="service-item__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+          </div>
+          <div class="service-item__name">Wiper Blades</div>
+          <div class="service-item__note">Replaced & installed on site</div>
+        </div>
+        <div class="service-item reveal reveal--delay-4">
+          <div class="service-item__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          </div>
+          <div class="service-item__name">Tire Pressure</div>
+          <div class="service-item__note">All 4 tires checked & corrected</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CURRENT SPECIALS / COUPONS -->
+  <section class="section" id="specials" aria-labelledby="specials-heading">
+    <div class="section__inner">
+      <p class="section__tag reveal">Limited Time Offers</p>
+      <h2 class="section__heading reveal reveal--delay-1" id="specials-heading">Current Specials</h2>
+      <p class="section__sub reveal reveal--delay-2">Print this page or show your phone at the counter. One coupon per visit. Cannot be combined with other offers.</p>
+
+      <div class="coupons-grid">
+        <div class="coupon reveal reveal--delay-1">
+          <div class="coupon__tag">Special Offer</div>
+          <div class="coupon__discount">$10 OFF</div>
+          <div class="coupon__title">Any Synthetic or Synthetic Blend Oil Change</div>
+          <p style="font-size:0.88rem;color:#555;line-height:1.55;">Upgrade your engine protection and save. Valid on synthetic blend ($44.99) or full synthetic ($59.99) services.</p>
+          <div class="coupon__code">CODE: SYNTH10</div>
+          <div class="coupon__terms">Exp. 04/30/2026. One per customer per visit. Cannot combine with other offers. Valid at this location only.</div>
+        </div>
+        <div class="coupon reveal reveal--delay-2">
+          <div class="coupon__tag">Bundle &amp; Save</div>
+          <div class="coupon__discount">FREE</div>
+          <div class="coupon__title">Tire Rotation with Any Oil Change</div>
+          <p style="font-size:0.88rem;color:#555;line-height:1.55;">Get your tires rotated at no charge when you come in for any oil change service this month. Save $19.99.</p>
+          <div class="coupon__code">CODE: ROTATEFREE</div>
+          <div class="coupon__terms">Exp. 04/30/2026. One per customer. Must present at time of service. All 4 tires must be rotatable.</div>
+        </div>
+        <div class="coupon reveal reveal--delay-3">
+          <div class="coupon__tag">New Customer</div>
+          <div class="coupon__discount">$5 OFF</div>
+          <div class="coupon__title">Your First Visit — Any Service</div>
+          <p style="font-size:0.88rem;color:#555;line-height:1.55;">First time at Quick Lube & Tire Center? Welcome — here's $5 off any service as our thanks for stopping in.</p>
+          <div class="coupon__code">CODE: NEWDRIVER</div>
+          <div class="coupon__terms">Exp. 06/30/2026. First visit only, verified at counter. Minimum $20 service required.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section section--gray" aria-labelledby="testimonials-heading">
+    <div class="section__inner">
+      <p class="section__tag reveal">What Drivers Say</p>
+      <h2 class="section__heading reveal reveal--delay-1" id="testimonials-heading">Fast Service, Real Results</h2>
+      <p class="section__sub reveal reveal--delay-2">Don't just take our word for it — here's what busy drivers are saying about us.</p>
+
+      <div class="testimonials-grid">
+        <div class="testimonial reveal reveal--delay-1">
+          <div class="testimonial__stars" aria-label="5 out of 5 stars">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="testimonial__quote">I pulled in at 8:15 on a Tuesday with zero wait. By 8:29 I was back on the highway. These guys are legitimately fast. Oil change plus they topped off my coolant without being asked.</p>
+          <div class="testimonial__author">Marcus T.</div>
+          <div class="testimonial__meta">Regular Customer &mdash; Drives a 2021 F-150</div>
+        </div>
+        <div class="testimonial reveal reveal--delay-2">
+          <div class="testimonial__stars" aria-label="5 out of 5 stars">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="testimonial__quote">As a nurse who works 12-hour shifts, I don't have time to schedule car stuff weeks out. Quick Lube is the only place I'll go. Fast, honest pricing, and they never try to upsell me on stuff I don't need.</p>
+          <div class="testimonial__author">Danielle R.</div>
+          <div class="testimonial__meta">Customer Since 2023 &mdash; Drives a 2019 Honda CR-V</div>
+        </div>
+        <div class="testimonial reveal reveal--delay-3">
+          <div class="testimonial__stars" aria-label="5 out of 5 stars">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="testimonial__quote">I run a small delivery fleet — 4 vans. I bring them here one by one during the week and they knock out oil changes fast. The price is consistent and I don't have to make any calls ahead of time. Perfect.</p>
+          <div class="testimonial__author">Kevin M.</div>
+          <div class="testimonial__meta">Small Fleet Owner &mdash; 4 Vehicles Serviced Monthly</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATION & HOURS -->
+  <section class="section" id="location" aria-labelledby="location-heading">
+    <div class="section__inner">
+      <p class="section__tag reveal">Find Us</p>
+      <h2 class="section__heading reveal reveal--delay-1" id="location-heading">Hours &amp; Location</h2>
+
+      <div class="location-grid">
+        <div class="reveal reveal--left">
+          <div class="location-info__address">
+            <strong>Quick Lube &amp; Tire Center</strong>
+            4800 Main Street<br />
+            Anytown, TX 75001
+          </div>
+
+          <table class="hours-table" aria-label="Business hours">
+            <tbody>
+              <tr><td>Monday</td><td class="open">7:30 AM &mdash; 7:00 PM</td></tr>
+              <tr><td>Tuesday</td><td class="open">7:30 AM &mdash; 7:00 PM</td></tr>
+              <tr><td>Wednesday</td><td class="open">7:30 AM &mdash; 7:00 PM</td></tr>
+              <tr><td>Thursday</td><td class="open">7:30 AM &mdash; 7:00 PM</td></tr>
+              <tr><td>Friday</td><td class="open">7:30 AM &mdash; 7:00 PM</td></tr>
+              <tr><td>Saturday</td><td class="open">8:00 AM &mdash; 6:00 PM</td></tr>
+              <tr><td>Sunday</td><td class="open">9:00 AM &mdash; 5:00 PM</td></tr>
+            </tbody>
+          </table>
+
+          <div class="location-cta-group">
+            <a href="tel:+15552345678" class="btn btn--red">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              Call (555) 234-5678
+            </a>
+            <a href="https://maps.google.com/?q=4800+Main+Street+Anytown+TX" target="_blank" rel="noopener noreferrer" class="btn btn--outline" style="color:var(--black);border-color:#bbb;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Get Directions
+            </a>
+          </div>
+        </div>
+
+        <div class="reveal reveal--right">
+          <div class="map-placeholder" role="img" aria-label="Map showing Quick Lube & Tire Center at 4800 Main Street, Anytown TX" style="position:relative;overflow:hidden;">
+            <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=1200&q=80" alt="Street view near Quick Lube & Tire Center" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" />
+            <div style="position:relative;z-index:1;background:rgba(255,255,255,0.86);padding:12px;border-radius:10px;">
+              <svg class="map-placeholder__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <div class="map-placeholder__address">4800 Main Street<br />Anytown, TX 75001</div>
+              <p style="font-size:0.82rem;color:#555;text-align:center;line-height:1.5;position:relative;z-index:1;">Conveniently located on Main Street,<br />easy in &amp; easy out — just the way we like it.</p>
+              <a class="map-placeholder__link" href="https://maps.google.com/?q=4800+Main+Street+Anytown+TX" target="_blank" rel="noopener noreferrer">Open in Google Maps &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA BAND -->
+  <div class="cta-band">
+    <div class="cta-band__inner">
+      <h2 class="cta-band__heading">Just Drive In.<br />We'll Handle the Rest.</h2>
+      <p class="cta-band__sub">Open 7 days a week including Sundays. No appointment, no wait, no stress.</p>
+      <div class="cta-band__buttons">
+        <a href="tel:+15552345678" class="btn btn--white">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          (555) 234-5678
+        </a>
+        <a href="#location" class="btn btn--dark-outline">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Get Directions
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__inner">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__brand">
+            <svg class="footer__brand-icon" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <circle cx="16" cy="16" r="14" stroke="#E53935" stroke-width="2.5"/>
+              <circle cx="16" cy="16" r="6" stroke="#C0C0C0" stroke-width="2"/>
+              <path d="M16 2v4M16 26v4M2 16h4M26 16h4" stroke="#C0C0C0" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="16" cy="16" r="2.5" fill="#E53935"/>
+            </svg>
+            Quick <span>&nbsp;Lube</span> &amp; Tire Center
+          </div>
+          <p class="footer__tagline">
+            Fast, affordable oil changes and tire service. No appointment needed. Open 7 days a week including Sundays. In and out in 15 minutes — guaranteed.
+          </p>
+          <a href="tel:+15552345678" class="footer__phone">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            (555) 234-5678
+          </a>
+        </div>
+        <div>
+          <div class="footer__col-title">Services</div>
+          <ul class="footer__list">
+            <li><a href="#pricing">Oil Change</a></li>
+            <li><a href="#pricing">Tire Rotation</a></li>
+            <li><a href="#services">Fluid Top-Off</a></li>
+            <li><a href="#services">Air Filter</a></li>
+            <li><a href="#services">Cabin Filter</a></li>
+            <li><a href="#services">Battery Check</a></li>
+            <li><a href="#services">Wiper Blades</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer__col-title">Quick Links</div>
+          <ul class="footer__list">
+            <li><a href="#pricing">Pricing Menu</a></li>
+            <li><a href="#specials">Current Specials</a></li>
+            <li><a href="#location">Hours &amp; Location</a></li>
+            <li><a href="tel:+15552345678">Call Us</a></li>
+            <li><a href="https://maps.google.com/?q=4800+Main+Street+Anytown+TX" target="_blank" rel="noopener noreferrer">Get Directions</a></li>
+          </ul>
+          <div style="margin-top:24px;">
+            <div class="footer__col-title">Address</div>
+            <p style="font-size:0.85rem;color:#777;line-height:1.65;">
+              4800 Main Street<br />
+              Anytown, TX 75001<br />
+              Mon–Fri: 7:30 AM – 7:00 PM<br />
+              Sat: 8:00 AM – 6:00 PM<br />
+              Sun: 9:00 AM – 5:00 PM
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2026 Quick Lube &amp; Tire Center. All rights reserved.</p>
+        <div class="footer__legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Accessibility</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ===================== MOBILE NAV =====================
+    (function() {
+      var btn = document.getElementById('hamburgerBtn');
+      var menu = document.getElementById('mobileMenu');
+      if (!btn || !menu) return;
+      btn.addEventListener('click', function() {
+        var isOpen = menu.classList.toggle('is-open');
+        btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+      // Close on link click
+      menu.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function() {
+          menu.classList.remove('is-open');
+          btn.setAttribute('aria-expanded', 'false');
+        });
+      });
+    })();
+
+    // ===================== SCROLL REVEAL =====================
+    (function() {
+      var reveals = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window)) {
+        reveals.forEach(function(el) { el.classList.add('is-visible'); });
+        return;
+      }
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      reveals.forEach(function(el) { observer.observe(el); });
+    })();
+
+    // ===================== WAIT TIME WIDGET =====================
+    (function() {
+      var waitEl = document.getElementById('waitMinutes');
+      if (!waitEl) return;
+      // Simulate realistic fluctuating wait times
+      var baseTimes = [5, 7, 8, 10, 10, 12, 7, 9, 6, 10, 11, 8];
+      var currentIndex = Math.floor(Math.random() * baseTimes.length);
+
+      function updateWait() {
+        var minutes = baseTimes[currentIndex % baseTimes.length];
+        // Add slight random variation +/- 2 min
+        var variation = Math.floor(Math.random() * 5) - 2;
+        minutes = Math.max(4, minutes + variation);
+        waitEl.textContent = minutes;
+        currentIndex++;
+      }
+
+      updateWait();
+      // Update every 45 seconds to simulate live feel
+      setInterval(updateWait, 45000);
+    })();
+
+    // ===================== SMOOTH SCROLL =====================
+    document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+      anchor.addEventListener('click', function(e) {
+        var targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        var target = document.querySelector(targetId);
+        if (target) {
+          e.preventDefault();
+          var navHeight = document.querySelector('.nav').offsetHeight;
+          var topBarHeight = document.querySelector('.top-bar').offsetHeight;
+          var offset = target.getBoundingClientRect().top + window.scrollY - navHeight - 8;
+          window.scrollTo({ top: offset, behavior: 'smooth' });
+        }
+      });
+    });
+
+    // ===================== STICKY NAV SHADOW =====================
+    (function() {
+      var nav = document.querySelector('.nav');
+      if (!nav) return;
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 40) {
+          nav.style.boxShadow = '0 4px 20px rgba(0,0,0,0.4)';
+        } else {
+          nav.style.boxShadow = 'none';
+        }
+      }, { passive: true });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,2080 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Peak Performance PT | Athletic Physical Therapy & Sports Rehabilitation</title>
+<meta name="description" content="Peak Performance PT specializes in sports rehab, ACL recovery, post-surgery therapy, and return-to-sport programs. Former athletes as therapists. Free initial evaluation.">
+<meta name="keywords" content="physical therapy, sports rehab, ACL recovery, post-surgery therapy, athletic physical therapy, return to sport">
+<meta property="og:title" content="Peak Performance PT | Athletic Physical Therapy">
+<meta property="og:description" content="From Injury to Peak Performance. 500+ athletes helped. 98% return-to-sport rate. Free initial evaluation worth $175.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Peak Performance PT",
+  "description": "Athletic-focused physical therapy specializing in sports rehab, ACL recovery, post-surgery therapy, and return-to-sport programs.",
+  "url": "https://peakperformancept.com",
+  "telephone": "(555) 567-8901",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1240 Athletic Drive, Suite 100",
+    "addressLocality": "Springfield",
+    "addressRegion": "IL",
+    "postalCode": "62701",
+    "addressCountry": "US"
+  },
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification","dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens": "07:00","closes": "19:00"},
+    {"@type": "OpeningHoursSpecification","dayOfWeek": "Saturday","opens": "08:00","closes": "14:00"}
+  ],
+  "priceRange": "$$",
+  "medicalSpecialty": "PhysicalTherapy"
+}
+</script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --primary: #4682B4;
+    --secondary: #3CB371;
+    --accent: #FFFFFF;
+    --dark: #1B2A3B;
+    --dark2: #243547;
+    --dark3: #2e4460;
+    --gray: #f4f7fb;
+    --gray2: #e8eef5;
+    --text: #2c3e50;
+    --text-light: #5a6a7a;
+    --transition: 0.3s ease;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Barlow', sans-serif;
+    font-size: 1rem;
+    line-height: 1.65;
+    color: var(--text);
+    background: #fff;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5 {
+    font-family: 'Barlow Condensed', sans-serif;
+    letter-spacing: 0.02em;
+  }
+
+  img { max-width: 100%; height: auto; display: block; object-fit: cover; }
+  a { color: inherit; text-decoration: none; }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  .btn {
+    display: inline-block;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.75rem 1.75rem;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+    text-decoration: none;
+    max-height: 52px;
+  }
+
+  .btn-green {
+    background: var(--secondary);
+    color: #fff;
+  }
+  .btn-green:hover { background: #2fa362; transform: translateY(-2px); }
+
+  .btn-outline {
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+  }
+  .btn-outline:hover { background: #fff; color: var(--dark); }
+
+  .btn-primary {
+    background: var(--primary);
+    color: #fff;
+  }
+  .btn-primary:hover { background: #3a70a0; transform: translateY(-2px); }
+
+  .section-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--secondary);
+    margin-bottom: 12px;
+  }
+
+  .section-title {
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+    font-weight: 800;
+    color: var(--dark);
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+    color: var(--text-light);
+    line-height: 1.7;
+    max-width: 600px;
+  }
+
+  /* SCROLL ANIMATION */
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .reveal-left {
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .reveal-left.visible { opacity: 1; transform: translateX(0); }
+  .reveal-right {
+    opacity: 0;
+    transform: translateX(40px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .reveal-right.visible { opacity: 1; transform: translateX(0); }
+
+  /* DIAGONAL DIVIDER */
+  .diagonal-top {
+    clip-path: polygon(0 6%, 100% 0, 100% 100%, 0 100%);
+    margin-top: -40px;
+    padding-top: 80px;
+  }
+  .diagonal-bottom {
+    clip-path: polygon(0 0, 100% 0, 100% 94%, 0 100%);
+    padding-bottom: 80px;
+  }
+
+  /* =================== NAV =================== */
+  #nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    background: var(--dark);
+    transition: box-shadow 0.3s;
+  }
+  #nav.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.4); }
+
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 68px;
+    padding: 0 2rem;
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .nav-logo-icon {
+    width: 36px; height: 36px;
+    background: var(--secondary);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav-logo-text {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: 0.05em;
+  }
+  .nav-logo-text span { color: var(--secondary); }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.75rem;
+    list-style: none;
+  }
+  .nav-links a {
+    font-family: 'Barlow', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: rgba(255,255,255,0.8);
+    transition: var(--transition);
+    letter-spacing: 0.02em;
+  }
+  .nav-links a:hover { color: #fff; }
+
+  .nav-cta { margin-left: 12px; }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 4px;
+  }
+  .hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: #fff;
+    transition: var(--transition);
+  }
+
+  @media (max-width: 900px) {
+    .nav-links, .nav-cta { display: none; }
+    .hamburger { display: flex; }
+    .nav-mobile-open .nav-links {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 68px; left: 0; right: 0;
+      background: var(--dark);
+      padding: 20px 24px;
+      gap: 16px;
+    }
+    .nav-mobile-open .nav-cta {
+      display: block;
+      padding: 0 24px 20px;
+      position: absolute;
+      top: 68px + 180px;
+    }
+  }
+
+  /* =================== HERO =================== */
+  #hero {
+    position: relative;
+    background: var(--dark);
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding-top: 68px;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=1200&q=80');
+    background-size: cover;
+    background-position: center top;
+    opacity: 0.25;
+  }
+
+  .hero-diagonal {
+    position: absolute;
+    bottom: 0; right: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(135deg, transparent 0%, rgba(70,130,180,0.15) 100%);
+    clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  .hero-accent-line {
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 6px;
+    background: linear-gradient(to bottom, var(--secondary), var(--primary));
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+  }
+
+  .hero-eyebrow {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--secondary);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .hero-eyebrow::before {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 2px;
+    background: var(--secondary);
+  }
+
+  .hero-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 900;
+    color: #fff;
+    line-height: 1.0;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+  }
+  .hero-title span { color: var(--secondary); }
+
+  .hero-desc {
+    font-size: 1.125rem;
+    color: rgba(255,255,255,0.8);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    max-width: 600px;
+  }
+
+  .hero-cta-group {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-free-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(60,179,113,0.15);
+    border: 1px solid rgba(60,179,113,0.4);
+    border-radius: 6px;
+    padding: 10px 18px;
+    color: var(--secondary);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .hero-stats {
+    display: flex;
+    gap: 0;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 32px;
+  }
+
+  .hero-stat {
+    flex: 1;
+    padding-right: 32px;
+    border-right: 1px solid rgba(255,255,255,0.1);
+    margin-right: 32px;
+  }
+  .hero-stat:last-child { border-right: none; margin-right: 0; padding-right: 0; }
+
+  .stat-number {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(2.2rem, 4vw, 3rem);
+    font-weight: 900;
+    color: #fff;
+    line-height: 1;
+    display: block;
+  }
+  .stat-number .stat-suffix { color: var(--secondary); }
+
+  .stat-label {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.6);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 500;
+    margin-top: 6px;
+    display: block;
+  }
+
+  /* =================== SPECIALTIES =================== */
+  #specialties {
+    padding: 4rem 0;
+    background: var(--gray);
+  }
+
+  .specialties-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+  .specialties-header .section-subtitle { margin: 0 auto; }
+
+  .specialties-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .specialty-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 1.75rem 1.75rem;
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition);
+    border: 1px solid var(--gray2);
+  }
+  .specialty-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+  }
+  .specialty-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 50px rgba(70,130,180,0.15);
+    border-color: var(--primary);
+  }
+
+  .specialty-icon {
+    width: 52px; height: 52px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .specialty-icon svg { width: 26px; height: 26px; fill: #fff; }
+
+  .specialty-name {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--dark);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+
+  .specialty-desc {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    line-height: 1.6;
+  }
+
+  .specialty-tag {
+    display: inline-block;
+    margin-top: 14px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--secondary);
+  }
+
+  /* =================== THERAPISTS =================== */
+  #therapists {
+    padding: 4rem 0;
+    background: var(--dark);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .therapists-bg-pattern {
+    position: absolute;
+    inset: 0;
+    opacity: 0.03;
+    background-image: repeating-linear-gradient(
+      45deg,
+      #fff 0px, #fff 1px,
+      transparent 1px, transparent 60px
+    );
+  }
+
+  .therapists-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+  .therapists-header .section-title { color: #fff; }
+  .therapists-header .section-subtitle { margin: 0 auto; color: rgba(255,255,255,0.6); }
+
+  .therapists-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .therapist-card {
+    background: var(--dark2);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.06);
+    transition: var(--transition);
+  }
+  .therapist-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--primary);
+    box-shadow: 0 20px 50px rgba(70,130,180,0.2);
+  }
+
+  .therapist-img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  .therapist-img-placeholder {
+    width: 100%;
+    height: 260px;
+    background: linear-gradient(135deg, var(--dark3), var(--primary));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .therapist-img-placeholder svg { width: 80px; height: 80px; fill: rgba(255,255,255,0.2); }
+
+  .therapist-info { padding: 1.5rem; }
+
+  .therapist-sport-badge {
+    display: inline-block;
+    background: var(--secondary);
+    color: #fff;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+  }
+
+  .therapist-name {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+  }
+
+  .therapist-title {
+    font-size: 0.85rem;
+    color: var(--primary);
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+
+  .therapist-bio {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.6;
+    margin-bottom: 18px;
+  }
+
+  .therapist-certs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .cert-pill {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border: 1px solid rgba(70,130,180,0.4);
+    border-radius: 20px;
+    color: rgba(255,255,255,0.5);
+  }
+
+  /* =================== RECOVERY JOURNEY =================== */
+  #journey {
+    padding: 4rem 0;
+    background: #fff;
+  }
+
+  .journey-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  .journey-timeline {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+  }
+
+  .journey-timeline::before {
+    content: '';
+    position: absolute;
+    top: 44px;
+    left: 12.5%;
+    right: 12.5%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--secondary), var(--primary));
+    z-index: 0;
+  }
+
+  .journey-phase {
+    position: relative;
+    text-align: center;
+    padding: 0 16px;
+    z-index: 1;
+  }
+
+  .phase-dot {
+    width: 90px; height: 90px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px;
+    position: relative;
+    box-shadow: 0 8px 30px rgba(70,130,180,0.3);
+    transition: var(--transition);
+  }
+  .journey-phase:hover .phase-dot { transform: scale(1.1); box-shadow: 0 12px 40px rgba(70,130,180,0.4); }
+
+  .phase-dot svg { width: 36px; height: 36px; fill: #fff; }
+
+  .phase-number {
+    position: absolute;
+    top: -8px; right: -8px;
+    width: 28px; height: 28px;
+    background: var(--secondary);
+    border-radius: 50%;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .phase-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--dark);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .phase-weeks {
+    display: inline-block;
+    background: var(--gray);
+    border-radius: 20px;
+    padding: 3px 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 10px;
+  }
+
+  .phase-desc {
+    font-size: 0.88rem;
+    color: var(--text-light);
+    line-height: 1.55;
+  }
+
+  /* Progress bars */
+  .phase-progress {
+    margin-top: 12px;
+    height: 6px;
+    background: var(--gray2);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .phase-progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    border-radius: 3px;
+    width: 0%;
+    transition: width 1.2s ease;
+  }
+
+  /* =================== PARTNER NETWORK =================== */
+  #partners {
+    padding: 4rem 0;
+    background: var(--gray);
+  }
+
+  .partners-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+
+  .partners-header { margin-bottom: 50px; }
+
+  .partner-group h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--dark);
+    letter-spacing: 0.06em;
+    margin-bottom: 18px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--secondary);
+  }
+
+  .partner-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .partner-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.95rem;
+    color: var(--text-light);
+  }
+  .partner-list li::before {
+    content: '';
+    display: block;
+    width: 8px; height: 8px;
+    background: var(--primary);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* =================== TECHNOLOGY =================== */
+  #technology {
+    padding: 4rem 0;
+    background: var(--dark);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .tech-bg-img {
+    position: absolute;
+    inset: 0;
+    background-image: url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1200&q=80');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.08;
+  }
+
+  .tech-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    position: relative;
+    z-index: 1;
+  }
+  .tech-header .section-title { color: #fff; }
+  .tech-header .section-subtitle { margin: 0 auto; color: rgba(255,255,255,0.6); }
+
+  .tech-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .tech-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    padding: 2rem 2rem;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+  }
+  .tech-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0; right: 0;
+    width: 100px; height: 100px;
+    background: linear-gradient(135deg, transparent, rgba(70,130,180,0.1));
+    clip-path: polygon(100% 0, 100% 100%, 0 100%);
+  }
+  .tech-card:hover {
+    background: rgba(70,130,180,0.1);
+    border-color: var(--primary);
+    transform: translateY(-6px);
+  }
+
+  .tech-icon {
+    width: 56px; height: 56px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+  }
+  .tech-icon svg { width: 28px; height: 28px; fill: #fff; }
+
+  .tech-name {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .tech-desc {
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.65;
+  }
+
+  .tech-benefit {
+    margin-top: 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .tech-benefit::before {
+    content: '';
+    display: block;
+    width: 16px; height: 2px;
+    background: var(--secondary);
+  }
+
+  /* =================== TESTIMONIALS =================== */
+  #testimonials {
+    padding: 4rem 0;
+    background: var(--gray);
+  }
+
+  .testimonials-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .testimonial-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1.75rem 1.75rem;
+    border: 1px solid var(--gray2);
+    position: relative;
+    transition: var(--transition);
+  }
+  .testimonial-card:hover {
+    box-shadow: 0 16px 48px rgba(70,130,180,0.12);
+    transform: translateY(-4px);
+    border-color: var(--primary);
+  }
+
+  .quote-mark {
+    width: 42px; height: 42px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .quote-mark svg { width: 22px; height: 22px; fill: #fff; }
+
+  .testimonial-injury-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: linear-gradient(90deg, rgba(70,130,180,0.1), rgba(60,179,113,0.1));
+    border-left: 3px solid var(--primary);
+    border-radius: 0 4px 4px 0;
+    padding: 6px 14px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 18px;
+  }
+
+  .testimonial-text {
+    font-size: 0.98rem;
+    color: var(--text);
+    line-height: 1.7;
+    font-style: italic;
+    margin-bottom: 24px;
+  }
+
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .author-avatar {
+    width: 46px; height: 46px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #fff;
+    flex-shrink: 0;
+  }
+
+  .author-name {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: var(--dark);
+    text-transform: uppercase;
+  }
+
+  .author-sport {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    font-weight: 500;
+  }
+
+  .stars {
+    display: flex;
+    gap: 2px;
+    margin-top: 4px;
+  }
+  .stars svg { width: 14px; height: 14px; fill: #f4c542; }
+
+  /* =================== INSURANCE =================== */
+  #insurance {
+    padding: 4rem 0;
+    background: #fff;
+  }
+
+  .insurance-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .insurance-img-wrap {
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+  }
+  .insurance-img-wrap img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
+  .insurance-img-overlay {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    background: linear-gradient(transparent, rgba(27,42,59,0.9));
+    padding: 28px;
+    color: #fff;
+  }
+  .insurance-free-badge {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--secondary);
+    margin-bottom: 4px;
+  }
+  .insurance-free-sub {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.7);
+  }
+
+  .insurance-list-wrap { }
+
+  .insurance-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 32px;
+  }
+
+  .insurance-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.92rem;
+    color: var(--text);
+    padding: 10px 14px;
+    background: var(--gray);
+    border-radius: 6px;
+    border: 1px solid var(--gray2);
+  }
+  .insurance-item svg { width: 16px; height: 16px; fill: var(--secondary); flex-shrink: 0; }
+
+  .booking-cta-box {
+    background: linear-gradient(135deg, var(--dark), var(--dark3));
+    border-radius: 12px;
+    padding: 32px;
+    text-align: center;
+    border: 1px solid rgba(70,130,180,0.3);
+  }
+  .booking-cta-box h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .booking-cta-box p {
+    color: rgba(255,255,255,0.6);
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+  .booking-cta-group {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* =================== LOCATION =================== */
+  #location {
+    padding: 4rem 0;
+    background: var(--dark);
+  }
+
+  .location-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+  }
+
+  .location-section-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+
+  .location-detail {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+    align-items: flex-start;
+  }
+  .loc-icon {
+    width: 40px; height: 40px;
+    background: rgba(70,130,180,0.2);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .loc-icon svg { width: 20px; height: 20px; fill: var(--secondary); }
+
+  .loc-text-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--secondary);
+    margin-bottom: 4px;
+  }
+  .loc-text-main {
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.8);
+    line-height: 1.5;
+  }
+  .loc-text-main a { color: #fff; text-decoration: underline; }
+
+  .hours-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .hours-table tr { border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .hours-table td {
+    padding: 10px 0;
+    font-size: 0.92rem;
+    color: rgba(255,255,255,0.7);
+  }
+  .hours-table td:first-child { font-weight: 600; color: #fff; }
+  .hours-table td:last-child { text-align: right; }
+  .hours-open { color: var(--secondary) !important; }
+
+  .location-map-placeholder {
+    background: var(--dark2);
+    border-radius: 12px;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255,255,255,0.06);
+    gap: 12px;
+    color: rgba(255,255,255,0.4);
+    font-size: 0.9rem;
+  }
+  .location-map-placeholder svg { width: 48px; height: 48px; fill: rgba(255,255,255,0.15); }
+
+  /* =================== FOOTER =================== */
+  footer {
+    background: #111e2c;
+    padding: 60px 0 30px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .footer-inner {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 50px;
+  }
+
+  .footer-brand p {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.45);
+    line-height: 1.65;
+    margin-top: 16px;
+    max-width: 280px;
+  }
+
+  .footer-col h4 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 18px;
+  }
+
+  .footer-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .footer-links a {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.5);
+    transition: var(--transition);
+  }
+  .footer-links a:hover { color: #fff; }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding-top: 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .footer-copy {
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.3);
+  }
+  .footer-disclaimer {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.25);
+    max-width: 500px;
+    text-align: right;
+  }
+
+  /* =================== RESPONSIVE =================== */
+  @media (max-width: 1024px) {
+    .specialties-grid { grid-template-columns: repeat(2, 1fr); }
+    .therapists-grid { grid-template-columns: repeat(2, 1fr); }
+    .tech-grid { grid-template-columns: repeat(2, 1fr); }
+    .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
+    .footer-inner { grid-template-columns: 1fr 1fr; }
+  }
+
+  @media (max-width: 768px) {
+    .specialties-grid { grid-template-columns: 1fr; }
+    .therapists-grid { grid-template-columns: 1fr; }
+    .journey-timeline {
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+    .journey-timeline::before { display: none; }
+    .tech-grid { grid-template-columns: 1fr; }
+    .testimonials-grid { grid-template-columns: 1fr; }
+    .insurance-inner { grid-template-columns: 1fr; }
+    .location-inner { grid-template-columns: 1fr; }
+    .partners-inner { grid-template-columns: 1fr; }
+    .footer-inner { grid-template-columns: 1fr 1fr; }
+    .hero-stats { flex-direction: column; gap: 20px; }
+    .hero-stat { border-right: none; padding-right: 0; margin-right: 0; padding-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .hero-stat:last-child { border-bottom: none; padding-bottom: 0; }
+    #insurance { padding: 60px 0; }
+  }
+
+  @media (max-width: 520px) {
+    .journey-timeline { grid-template-columns: 1fr; }
+    .hero-cta-group { flex-direction: column; }
+    .footer-inner { grid-template-columns: 1fr; }
+    .footer-bottom { flex-direction: column; align-items: flex-start; }
+    .footer-disclaimer { text-align: left; }
+    .insurance-grid { grid-template-columns: 1fr; }
+  }</style>
+  <!-- Codex UI Polish: nav readability and one-line links -->
+  <style id="codex-ui-polish-nav">
+    nav a,
+    .nav a,
+    .navbar a,
+    .nav__links a,
+    .nav-links a,
+    .menu a,
+    .menu__link,
+    .fullscreen-menu a {
+      white-space: nowrap;
+    }
+
+    @media (min-width: 1024px) {
+      nav a,
+      .nav a,
+      .navbar a,
+      .nav__links a,
+      .nav-links a,
+      .menu a,
+      .menu__link,
+      .fullscreen-menu a {
+        line-height: 1.1;
+      }
+
+      .nav__links,
+      .nav-links,
+      .navbar-links,
+      .menu-links,
+      nav ul {
+        row-gap: 0.25rem;
+      }
+
+      .nav__links,
+      .nav-links,
+      .navbar-links,
+      .menu-links,
+      nav ul {
+        align-items: center;
+      }
+
+      .nav__links a,
+      .nav-links a,
+      .navbar-links a,
+      .menu-links a,
+      nav ul a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 1.2rem;
+      }
+    }
+
+    /* Cross-page alignment normalization for common grid/card layouts */
+    .services__grid,
+    .service-grid,
+    .cards-grid,
+    .features-grid,
+    .pricing__grid,
+    .plans-grid,
+    .results__grid,
+    .reviews__grid,
+    .events-grid,
+    .coaches__grid,
+    .therapists-grid,
+    .portfolio__grid,
+    .tips-grid,
+    .testimonials-grid,
+    .grid {
+      align-items: stretch;
+    }
+
+    .service-card,
+    .card,
+    .feature-card,
+    .event-card,
+    .plan,
+    .pricing-card,
+    .testimonial,
+    .review,
+    .coach,
+    .therapist-card,
+    .project,
+    .tip-card,
+    .serve-card,
+    .info-card,
+    .stat-card {
+      height: 100%;
+    }
+
+    .service-card img,
+    .project img,
+    .tip-card img,
+    .coach img,
+    .therapist-card img,
+    .feature-card img,
+    .gallery-item img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    /* Improve readability where copy is dense without changing content */
+    section p,
+    .section p,
+    .card p,
+    .service-card p,
+    .feature-card p,
+    .testimonial p,
+    .event-card p,
+    .info-card p {
+      max-width: 66ch;
+      text-wrap: pretty;
+    }
+
+    .section__header p,
+    .hero p,
+    .footer p,
+    .map-overlay-card,
+    .location__item-value {
+      max-width: none;
+    }
+  </style>
+
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <div class="nav-logo-icon">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="white">
+            <path d="M13.49 5.48c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm-3.6 13.9l1-4.4 2.1 2v6h2v-7.5l-2.1-2 .6-3c1.3 1.5 3.3 2.5 5.5 2.5v-2c-1.9 0-3.5-1-4.3-2.4l-1-1.6c-.4-.6-1-1-1.7-1-.3 0-.5.1-.8.1l-5.2 2.2v4.7h2v-3.4l1.8-.7-1.6 8.1-4.9-1-.4 2 7 1.4z"/>
+          </svg>
+        </div>
+        <span class="nav-logo-text">Peak<span>PT</span></span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#specialties">Specialties</a></li>
+        <li><a href="#therapists">Our Team</a></li>
+        <li><a href="#journey">Recovery Journey</a></li>
+        <li><a href="#technology">Technology</a></li>
+        <li><a href="#testimonials">Results</a></li>
+        <li><a href="#location">Contact</a></li>
+      </ul>
+
+      <a href="tel:5555678901" class="btn btn-green nav-cta">Start Your Recovery</a>
+
+      <div class="hamburger" id="hamburger" role="button" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-diagonal"></div>
+  <div class="hero-accent-line"></div>
+
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-eyebrow">Athletic Physical Therapy</div>
+      <h1 class="hero-title">From Injury to<br><span>Peak Performance</span></h1>
+      <p class="hero-desc">Expert physical therapy for serious athletes. Former collegiate and professional athletes lead your recovery — so they know exactly what it takes to get you back to competing at your highest level.</p>
+
+      <div class="hero-cta-group">
+        <a href="tel:5555678901" class="btn btn-green">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" style="display:inline;margin-right:6px;vertical-align:-2px"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          (555) 567-8901
+        </a>
+        <a href="#insurance" class="btn btn-outline">FREE Initial Evaluation</a>
+      </div>
+
+      <div class="hero-free-badge">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+        FREE Initial Evaluation — $175 Value &nbsp;|&nbsp; Most Insurance Accepted Including Medicare
+      </div>
+
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="stat-number"><span class="counter" data-target="500" data-suffix="+">0</span></span>
+          <span class="stat-label">Athletes Treated</span>
+        </div>
+        <div class="hero-stat">
+          <span class="stat-number"><span class="counter" data-target="98" data-suffix="%">0</span></span>
+          <span class="stat-label">Return-to-Sport Rate</span>
+        </div>
+        <div class="hero-stat">
+          <span class="stat-number"><span class="counter" data-target="15" data-suffix=" Yrs">0</span></span>
+          <span class="stat-label">Clinical Experience</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPECIALTIES -->
+<section id="specialties">
+  <div class="container">
+    <div class="specialties-header reveal">
+      <div class="section-label">What We Treat</div>
+      <h2 class="section-title">Specialties Built for Athletes</h2>
+      <p class="section-subtitle">Every program is built around your sport, your position, and your performance goals — not a generic rehabilitation protocol.</p>
+    </div>
+
+    <div class="specialties-grid">
+      <div class="specialty-card reveal" style="transition-delay:0.05s">
+        <div class="specialty-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        </div>
+        <div class="specialty-name">ACL Recovery</div>
+        <p class="specialty-desc">Sport-specific ACL rehabilitation programs using the latest evidence-based protocols. Phase-based return-to-sport testing ensures you are truly ready to compete.</p>
+        <span class="specialty-tag">Most Common Referral</span>
+      </div>
+
+      <div class="specialty-card reveal" style="transition-delay:0.1s">
+        <div class="specialty-icon">
+          <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/></svg>
+        </div>
+        <div class="specialty-name">Post-Surgery Rehab</div>
+        <p class="specialty-desc">Coordinated care with your orthopedic surgeon for rotator cuff repair, meniscus surgery, labrum repair, and more. We follow your surgeon's protocol while maximizing your recovery.</p>
+        <span class="specialty-tag">Surgeon Partnership</span>
+      </div>
+
+      <div class="specialty-card reveal" style="transition-delay:0.15s">
+        <div class="specialty-icon">
+          <svg viewBox="0 0 24 24"><path d="M13.49 5.48c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm-3.6 13.9l1-4.4 2.1 2v6h2v-7.5l-2.1-2 .6-3c1.3 1.5 3.3 2.5 5.5 2.5v-2c-1.9 0-3.5-1-4.3-2.4l-1-1.6c-.4-.6-1-1-1.7-1-.3 0-.5.1-.8.1l-5.2 2.2v4.7h2v-3.4l1.8-.7-1.6 8.1-4.9-1-.4 2 7 1.4z"/></svg>
+        </div>
+        <div class="specialty-name">Sports Injuries</div>
+        <p class="specialty-desc">Sprains, strains, stress fractures, tendinopathies, and overuse injuries — treated by therapists who have experienced sports injuries themselves and know the urgency to return.</p>
+        <span class="specialty-tag">All Sports</span>
+      </div>
+
+      <div class="specialty-card reveal" style="transition-delay:0.2s">
+        <div class="specialty-icon">
+          <svg viewBox="0 0 24 24"><path d="M20.57 14.86L22 13.43 20.57 12 17 15.57 8.43 7 12 3.43 10.57 2 9.14 3.43 7.71 2 5.57 4.14 4.14 2.71 2.71 4.14l1.43 1.43L2 7.71l1.43 1.43L2 10.57 3.43 12 7 8.43 15.57 17 12 20.57 13.43 22l1.43-1.43L16.29 22l2.14-2.14 1.43 1.43 1.43-1.43-1.43-1.43L22 16.29z"/></svg>
+        </div>
+        <div class="specialty-name">Strength &amp; Conditioning</div>
+        <p class="specialty-desc">Bridge the gap between rehabilitation and elite performance. Our strength and conditioning programs are designed for athletes who want to return stronger than before injury.</p>
+        <span class="specialty-tag">Performance Focus</span>
+      </div>
+
+      <div class="specialty-card reveal" style="transition-delay:0.25s">
+        <div class="specialty-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg>
+        </div>
+        <div class="specialty-name">Pain Management</div>
+        <p class="specialty-desc">Manual therapy, dry needling, and targeted interventions that address the root cause of athletic pain — not just the symptoms. Get back to training pain-free.</p>
+        <span class="specialty-tag">Non-Surgical</span>
+      </div>
+
+      <div class="specialty-card reveal" style="transition-delay:0.3s">
+        <div class="specialty-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+        </div>
+        <div class="specialty-name">Movement Assessment</div>
+        <p class="specialty-desc">Comprehensive biomechanical analysis using force plates and motion capture technology. Identify imbalances, asymmetries, and faulty movement patterns before they become injuries.</p>
+        <span class="specialty-tag">Injury Prevention</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THERAPISTS -->
+<section id="therapists">
+  <div class="therapists-bg-pattern"></div>
+  <div class="container" style="position:relative;z-index:1">
+    <div class="therapists-header reveal">
+      <div class="section-label">Our Clinical Team</div>
+      <h2 class="section-title">Former Athletes.<br>Expert Therapists.</h2>
+      <p class="section-subtitle">Our therapists have worn the uniform. They understand the mental and physical demands of competitive athletics — because they have lived it.</p>
+    </div>
+
+    <div class="therapists-grid">
+      <div class="therapist-card reveal" style="transition-delay:0.05s">
+        <img class="therapist-img" src="https://images.unsplash.com/photo-1567013127542-490d757e6349?w=900&q=80" alt="Dr. Marcus Webb, sports physical therapist and former linebacker" loading="lazy">
+        <div class="therapist-info">
+          <span class="therapist-sport-badge">Former NCAA Linebacker</span>
+          <div class="therapist-name">Dr. Marcus Webb</div>
+          <div class="therapist-title">DPT, CSCS — Clinical Director</div>
+          <p class="therapist-bio">D1 linebacker at Ohio State before earning his Doctorate in Physical Therapy from Northwestern. Specializes in ACL reconstruction rehab and lower extremity biomechanics. Has treated athletes from NFL, NBA, and MLB programs.</p>
+          <div class="therapist-certs">
+            <span class="cert-pill">DPT</span>
+            <span class="cert-pill">CSCS</span>
+            <span class="cert-pill">OCS</span>
+            <span class="cert-pill">FMS Certified</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="therapist-card reveal" style="transition-delay:0.1s">
+        <img class="therapist-img" src="https://images.unsplash.com/photo-1594381898411-846e7d193883?w=900&q=80" alt="Dr. Sofia Reyes, sports specialist physical therapist" loading="lazy">
+        <div class="therapist-info">
+          <span class="therapist-sport-badge">Former D1 Soccer — Goalkeeper</span>
+          <div class="therapist-name">Dr. Sofia Reyes</div>
+          <div class="therapist-title">DPT, SCS — Sports Specialist</div>
+          <p class="therapist-bio">Played goalkeeper at the University of Florida before a shoulder injury redirected her passion into physical therapy. Specializes in overhead athlete rehab, shoulder instability, and sports-specific return-to-play protocols for female athletes.</p>
+          <div class="therapist-certs">
+            <span class="cert-pill">DPT</span>
+            <span class="cert-pill">SCS</span>
+            <span class="cert-pill">Dry Needling</span>
+            <span class="cert-pill">SFMA</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="therapist-card reveal" style="transition-delay:0.15s">
+        <img class="therapist-img" src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=900&q=80" alt="Dr. James Calloway, manual therapy lead and former cyclist" loading="lazy">
+        <div class="therapist-info">
+          <span class="therapist-sport-badge">Former Pro Cyclist</span>
+          <div class="therapist-name">Dr. James Calloway</div>
+          <div class="therapist-title">DPT, COMT — Manual Therapy Lead</div>
+          <p class="therapist-bio">Raced professionally on the European cycling circuit for four years before transitioning to physical therapy. Expert in pain science, manual therapy, and endurance sport injuries. Certified in blood flow restriction and dry needling techniques.</p>
+          <div class="therapist-certs">
+            <span class="cert-pill">DPT</span>
+            <span class="cert-pill">COMT</span>
+            <span class="cert-pill">BFR Certified</span>
+            <span class="cert-pill">TDN Level 2</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RECOVERY JOURNEY -->
+<section id="journey">
+  <div class="container">
+    <div class="journey-header reveal">
+      <div class="section-label">Your Path Forward</div>
+      <h2 class="section-title">The Recovery Journey</h2>
+      <p class="section-subtitle" style="margin:0 auto">A structured, science-backed four-phase program that gets you from pain and limitation to full competitive performance.</p>
+    </div>
+
+    <div class="journey-timeline">
+      <div class="journey-phase reveal" style="transition-delay:0.0s">
+        <div class="phase-dot">
+          <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"/></svg>
+          <div class="phase-number">1</div>
+        </div>
+        <div class="phase-title">Evaluation</div>
+        <div class="phase-weeks">Week 1</div>
+        <p class="phase-desc">Comprehensive movement screening, strength testing, and functional assessment. We establish your baseline and design your personalized recovery plan.</p>
+        <div class="phase-progress"><div class="phase-progress-bar" data-width="25"></div></div>
+      </div>
+
+      <div class="journey-phase reveal" style="transition-delay:0.1s">
+        <div class="phase-dot">
+          <svg viewBox="0 0 24 24"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg>
+          <div class="phase-number">2</div>
+        </div>
+        <div class="phase-title">Pain Relief</div>
+        <div class="phase-weeks">Weeks 2–4</div>
+        <p class="phase-desc">Manual therapy, dry needling, and targeted modalities reduce pain and inflammation. Gentle mobility work restores range of motion and tissue health.</p>
+        <div class="phase-progress"><div class="phase-progress-bar" data-width="50"></div></div>
+      </div>
+
+      <div class="journey-phase reveal" style="transition-delay:0.2s">
+        <div class="phase-dot">
+          <svg viewBox="0 0 24 24"><path d="M20.57 14.86L22 13.43 20.57 12 17 15.57 8.43 7 12 3.43 10.57 2 9.14 3.43 7.71 2 5.57 4.14 4.14 2.71 2.71 4.14l1.43 1.43L2 7.71l1.43 1.43L2 10.57 3.43 12 7 8.43 15.57 17 12 20.57 13.43 22l1.43-1.43L16.29 22l2.14-2.14 1.43 1.43 1.43-1.43-1.43-1.43L22 16.29z"/></svg>
+          <div class="phase-number">3</div>
+        </div>
+        <div class="phase-title">Rebuilding Strength</div>
+        <div class="phase-weeks">Weeks 4–10</div>
+        <p class="phase-desc">Progressive strength training, neuromuscular re-education, and sport-specific conditioning. Blood flow restriction training accelerates muscle rebuilding.</p>
+        <div class="phase-progress"><div class="phase-progress-bar" data-width="75"></div></div>
+      </div>
+
+      <div class="journey-phase reveal" style="transition-delay:0.3s">
+        <div class="phase-dot">
+          <svg viewBox="0 0 24 24"><path d="M13 2.05v2.02c3.95.49 7 3.85 7 7.93 0 3.21-1.81 6-4.72 7.28L13 17v5l5-1.43V19.1C20.84 17.33 23 14.28 23 12c0-5.18-3.95-9.45-10-9.95zM11 2.05C4.95 2.55 1 6.82 1 12c0 2.28 2.16 5.33 5 7.1V21.6L11 23V2.05z"/></svg>
+          <div class="phase-number">4</div>
+        </div>
+        <div class="phase-title">Return to Sport</div>
+        <div class="phase-weeks">Weeks 10+</div>
+        <p class="phase-desc">Objective performance testing, sport-specific movement drills, and clearance testing. Return to competition with confidence — stronger and more resilient than before.</p>
+        <div class="phase-progress"><div class="phase-progress-bar" data-width="100"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNER NETWORK -->
+<section id="partners">
+  <div class="container">
+    <div class="partners-header reveal">
+      <div class="section-label">Our Network</div>
+      <h2 class="section-title">Partner Network</h2>
+      <p class="section-subtitle">We work closely with a trusted network of orthopedic specialists, sports teams, and performance facilities to provide fully coordinated care.</p>
+    </div>
+
+    <div class="partners-inner">
+      <div class="partner-group reveal" style="transition-delay:0.05s">
+        <h3>Orthopedic Surgeons</h3>
+        <ul class="partner-list">
+          <li>Springfield Orthopedic &amp; Sports Medicine</li>
+          <li>Midwest Joint Reconstruction Center</li>
+          <li>Dr. Alan Torres, MD — Knee &amp; Shoulder</li>
+          <li>Dr. Priya Nair, MD — Spine &amp; Hip</li>
+          <li>Capitol Orthopedic Group</li>
+        </ul>
+      </div>
+
+      <div class="partner-group reveal" style="transition-delay:0.1s">
+        <h3>Sports Teams</h3>
+        <ul class="partner-list">
+          <li>Springfield University Athletics</li>
+          <li>Midwest Premier Soccer Club</li>
+          <li>Elite Track &amp; Field Academy</li>
+          <li>Springfield High School District</li>
+          <li>Regional Triathlon Association</li>
+        </ul>
+      </div>
+
+      <div class="partner-group reveal" style="transition-delay:0.15s">
+        <h3>Gyms &amp; Facilities</h3>
+        <ul class="partner-list">
+          <li>Peak Athletic Performance Center</li>
+          <li>CrossFit Springfield</li>
+          <li>Ironclad Strength &amp; Conditioning</li>
+          <li>Velocity Speed Training</li>
+          <li>Springfield Aquatic Center</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TECHNOLOGY -->
+<section id="technology">
+  <div class="tech-bg-img"></div>
+  <div class="container">
+    <div class="tech-header reveal">
+      <div class="section-label">Advanced Treatment Methods</div>
+      <h2 class="section-title">Technology That Accelerates Recovery</h2>
+      <p class="section-subtitle">We invest in the same techniques used by professional sports organizations to give every athlete access to elite-level treatment.</p>
+    </div>
+
+    <div class="tech-grid">
+      <div class="tech-card reveal" style="transition-delay:0.05s">
+        <div class="tech-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+        </div>
+        <div class="tech-name">Blood Flow Restriction</div>
+        <p class="tech-desc">BFR training allows athletes to build strength and muscle mass at significantly lower loads — critical during early post-surgical phases when heavy loading is not yet safe. Achieve 70% of the strength gains with 20% of the weight.</p>
+        <div class="tech-benefit">Faster Muscle Recovery</div>
+      </div>
+
+      <div class="tech-card reveal" style="transition-delay:0.1s">
+        <div class="tech-icon">
+          <svg viewBox="0 0 24 24"><path d="M7 11H1v2h6v-2zm2.17-3.24L7.05 5.64 5.64 7.05l2.12 2.12 1.41-1.41zM13 1h-2v6h2V1zm5.36 6.05l-1.41-1.41-2.12 2.12 1.41 1.41 2.12-2.12zM17 11v2h6v-2h-6zm-5-2c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3zm2.83 7.24l2.12 2.12 1.41-1.41-2.12-2.12-1.41 1.41zm-9.19.71l1.41 1.41 2.12-2.12-1.41-1.41-2.12 2.12zM11 23h2v-6h-2v6z"/></svg>
+        </div>
+        <div class="tech-name">Dry Needling</div>
+        <p class="tech-desc">Trigger point dry needling targets myofascial pain, breaks down scar tissue, and restores normal muscle function. Particularly effective for chronic sports injuries, post-surgical tightness, and movement pattern dysfunction.</p>
+        <div class="tech-benefit">Pain Relief &amp; Tissue Healing</div>
+      </div>
+
+      <div class="tech-card reveal" style="transition-delay:0.15s">
+        <div class="tech-icon">
+          <svg viewBox="0 0 24 24"><path d="M19.07 4.93l-1.41 1.41C19.1 7.79 20 9.79 20 12c0 4.42-3.58 8-8 8s-8-3.58-8-8c0-4.08 3.05-7.44 7-7.93V6.5L15 3.5 11 .5v2.07C6.39 3.07 2 7.05 2 12c0 5.52 4.48 10 10 10s10-4.48 10-10c0-2.76-1.12-5.26-2.93-7.07z"/></svg>
+        </div>
+        <div class="tech-name">Performance Testing</div>
+        <p class="tech-desc">Force plate analysis, isokinetic strength testing, hop testing protocols, and video biomechanics provide objective data at every stage. We do not guess when you are ready to return — we test it with measurable standards.</p>
+        <div class="tech-benefit">Objective Return-to-Sport Clearance</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="container">
+    <div class="testimonials-header reveal">
+      <div class="section-label">Athlete Results</div>
+      <h2 class="section-title">Recovery Stories</h2>
+      <p class="section-subtitle" style="margin:0 auto">Real athletes, real results. These are the outcomes we work for every single day.</p>
+    </div>
+
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal" style="transition-delay:0.05s">
+        <div class="quote-mark">
+          <svg viewBox="0 0 24 24"><path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"/></svg>
+        </div>
+        <div class="testimonial-injury-tag">ACL Tear — Collegiate Soccer</div>
+        <p class="testimonial-text">"After my ACL reconstruction, I was told I might not play at the collegiate level again. Dr. Webb would not accept that. Eight months later I started every game of my senior season. The testing protocol they use gave me the confidence that I was actually ready — not just guessing."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">KM</div>
+          <div>
+            <div class="author-name">Kayla Morrison</div>
+            <div class="author-sport">D2 Midfielder — University of Illinois Springfield</div>
+            <div class="stars">
+              <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card reveal" style="transition-delay:0.1s">
+        <div class="quote-mark">
+          <svg viewBox="0 0 24 24"><path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"/></svg>
+        </div>
+        <div class="testimonial-injury-tag">Rotator Cuff Repair — Masters Runner</div>
+        <p class="testimonial-text">"I had rotator cuff surgery at 48 and my surgeon referred me to Peak PT. Dr. Reyes designed a plan that addressed my shoulder but also helped me understand why I had compensatory patterns in my running gait. I came back faster and with zero shoulder pain."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">RT</div>
+          <div>
+            <div class="author-name">Robert Tran</div>
+            <div class="author-sport">Masters Distance Runner — Age Group Qualifier</div>
+            <div class="stars">
+              <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card reveal" style="transition-delay:0.15s">
+        <div class="quote-mark">
+          <svg viewBox="0 0 24 24"><path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"/></svg>
+        </div>
+        <div class="testimonial-injury-tag">Chronic Back Pain — CrossFit Competitor</div>
+        <p class="testimonial-text">"Three years of chronic lower back pain and I had seen four different practitioners. Dr. Calloway identified a hip mobility deficit in our first session that no one else had caught. Six weeks of targeted work and I competed at Regionals pain-free for the first time in years."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">AL</div>
+          <div>
+            <div class="author-name">Amanda Larson</div>
+            <div class="author-sport">CrossFit Competitor — Regional Qualifier</div>
+            <div class="stars">
+              <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSURANCE & SCHEDULING -->
+<section id="insurance">
+  <div class="container">
+    <div class="insurance-inner">
+      <div class="insurance-img-wrap reveal-left">
+        <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=1200&q=80" alt="Athlete in physical therapy training session" loading="lazy">
+        <div class="insurance-img-overlay">
+          <div class="insurance-free-badge">FREE Initial Evaluation — $175 Value</div>
+          <div class="insurance-free-sub">No referral required. Most insurance plans accepted.</div>
+        </div>
+      </div>
+
+      <div class="insurance-list-wrap reveal-right">
+        <div class="section-label">Insurance &amp; Scheduling</div>
+        <h2 class="section-title">Access Should Not Be a Barrier</h2>
+        <p style="color:var(--text-light);margin-bottom:28px;line-height:1.7">We work with most major insurance carriers and offer transparent self-pay rates. Our team handles your insurance verification before your first appointment.</p>
+
+        <div class="insurance-grid">
+          <div class="insurance-item">
+            <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+            Medicare
+          </div>
+          <div class="insurance-item">
+            <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+            Blue Cross Blue Shield
+          </div>
+          <div class="insurance-item">
+            <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+            Aetna
+          </div>
+          <div class="insurance-item">
+            <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+            United Healthcare
+          </div>
+          <div class="insurance-item">
+            <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+            Cigna
+          </div>
+          <div class="insurance-item">
+            <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+            Humana
+          </div>
+          <div class="insurance-item">
+            <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+            Workers' Comp
+          </div>
+          <div class="insurance-item">
+            <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+            Self-Pay Available
+          </div>
+        </div>
+
+        <div class="booking-cta-box">
+          <h3>Start Your Recovery Today</h3>
+          <p>Schedule your FREE initial evaluation — no referral required. Most appointments available within 48 hours.</p>
+          <div class="booking-cta-group">
+            <a href="tel:5555678901" class="btn btn-green">Call (555) 567-8901</a>
+            <a href="#location" class="btn btn-outline" style="border-color:rgba(255,255,255,0.3);color:rgba(255,255,255,0.7)">Book Online</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION + HOURS -->
+<section id="location">
+  <div class="container">
+    <div class="location-inner">
+      <div class="reveal-left">
+        <div class="location-section-title">Find Us</div>
+
+        <div class="location-detail">
+          <div class="loc-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          </div>
+          <div>
+            <div class="loc-text-label">Address</div>
+            <div class="loc-text-main">1240 Athletic Drive, Suite 100<br>Springfield, IL 62701<br><small style="opacity:0.6">Free parking available on site</small></div>
+          </div>
+        </div>
+
+        <div class="location-detail">
+          <div class="loc-icon">
+            <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          </div>
+          <div>
+            <div class="loc-text-label">Phone</div>
+            <div class="loc-text-main"><a href="tel:5555678901">(555) 567-8901</a></div>
+          </div>
+        </div>
+
+        <div class="location-detail">
+          <div class="loc-icon">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          </div>
+          <div>
+            <div class="loc-text-label">Email</div>
+            <div class="loc-text-main"><a href="mailto:info@peakperformancept.com">info@peakperformancept.com</a></div>
+          </div>
+        </div>
+
+        <div style="margin-top: 30px;">
+          <div class="loc-text-label" style="color:rgba(255,255,255,0.4);margin-bottom:14px">Hours of Operation</div>
+          <table class="hours-table">
+            <tr><td>Monday – Friday</td><td class="hours-open">7:00 AM – 7:00 PM</td></tr>
+            <tr><td>Saturday</td><td class="hours-open">8:00 AM – 2:00 PM</td></tr>
+            <tr><td>Sunday</td><td>Closed</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="reveal-right">
+        <div class="location-map-placeholder" style="position:relative; overflow:hidden; padding:0;">
+          <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200&q=80" alt="Map-style city view near Peak Performance PT" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          <div style="position:absolute;inset:auto 12px 12px 12px;background:rgba(17,30,44,0.82);border:1px solid rgba(255,255,255,0.15);border-radius:10px;padding:12px;text-align:center;">
+            <span style="display:block;color:#fff;font-weight:700;">1240 Athletic Drive, Suite 100</span>
+            <span style="display:block;color:rgba(255,255,255,0.75);margin-top:4px;">Springfield, IL 62701</span>
+            <a href="https://maps.google.com" target="_blank" rel="noopener" class="btn btn-primary" style="margin-top:10px;font-size:0.85rem;padding:10px 20px">Get Directions</a>
+          </div>
+        </div>
+
+        <div style="margin-top:28px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:28px;">
+          <div class="loc-text-label" style="color:var(--secondary);margin-bottom:12px">Ready to Get Started?</div>
+          <p style="color:rgba(255,255,255,0.6);font-size:0.9rem;line-height:1.6;margin-bottom:20px">Schedule your free initial evaluation today. Our team will review your injury history, run a movement assessment, and build a personalized recovery plan during your first visit.</p>
+          <a href="tel:5555678901" class="btn btn-green" style="width:100%;text-align:center;display:block">
+            Call to Schedule: (555) 567-8901
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="nav-logo">
+          <div class="nav-logo-icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="white"><path d="M13.49 5.48c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm-3.6 13.9l1-4.4 2.1 2v6h2v-7.5l-2.1-2 .6-3c1.3 1.5 3.3 2.5 5.5 2.5v-2c-1.9 0-3.5-1-4.3-2.4l-1-1.6c-.4-.6-1-1-1.7-1-.3 0-.5.1-.8.1l-5.2 2.2v4.7h2v-3.4l1.8-.7-1.6 8.1-4.9-1-.4 2 7 1.4z"/></svg>
+          </div>
+          <span class="nav-logo-text">Peak<span>PT</span></span>
+        </div>
+        <p>Athletic-focused physical therapy for serious athletes. From injury to peak performance — guided by therapists who have been there.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul class="footer-links">
+          <li><a href="#specialties">ACL Recovery</a></li>
+          <li><a href="#specialties">Post-Surgery Rehab</a></li>
+          <li><a href="#specialties">Sports Injuries</a></li>
+          <li><a href="#specialties">Strength &amp; Conditioning</a></li>
+          <li><a href="#specialties">Movement Assessment</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>About</h4>
+        <ul class="footer-links">
+          <li><a href="#therapists">Our Team</a></li>
+          <li><a href="#journey">Recovery Journey</a></li>
+          <li><a href="#technology">Technology</a></li>
+          <li><a href="#partners">Partner Network</a></li>
+          <li><a href="#testimonials">Patient Results</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul class="footer-links">
+          <li><a href="tel:5555678901">(555) 567-8901</a></li>
+          <li><a href="mailto:info@peakperformancept.com">info@peakperformancept.com</a></li>
+          <li><a href="#location">1240 Athletic Drive, Suite 100</a></li>
+          <li><a href="#location">Springfield, IL 62701</a></li>
+          <li><a href="#insurance">Insurance Info</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-copy">&copy; 2026 Peak Performance PT. All rights reserved.</div>
+      <div class="footer-disclaimer">This website is for informational purposes only and does not constitute medical advice. Results vary. Always consult a licensed healthcare professional before beginning any physical therapy program.</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Sticky nav
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+  });
+
+  // Mobile hamburger
+  const hamburger = document.getElementById('hamburger');
+  hamburger.addEventListener('click', () => {
+    nav.classList.toggle('nav-mobile-open');
+  });
+
+  // Intersection Observer for scroll animations
+  const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  revealEls.forEach(el => revealObserver.observe(el));
+
+  // Animated stat counters
+  function animateCounter(el) {
+    const target = parseInt(el.dataset.target, 10);
+    const suffix = el.dataset.suffix || '';
+    const duration = 2000;
+    const start = performance.now();
+
+    function update(now) {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const current = Math.round(eased * target);
+      el.textContent = current + suffix;
+      if (progress < 1) requestAnimationFrame(update);
+    }
+    requestAnimationFrame(update);
+  }
+
+  const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCounter(entry.target);
+        counterObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  document.querySelectorAll('.counter').forEach(el => counterObserver.observe(el));
+
+  // Progress bar animations
+  const progressObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const bar = entry.target.querySelector('.phase-progress-bar');
+        if (bar) {
+          setTimeout(() => {
+            bar.style.width = bar.dataset.width + '%';
+          }, 200);
+        }
+        progressObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  document.querySelectorAll('.journey-phase').forEach(el => progressObserver.observe(el));
+
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const id = a.getAttribute('href');
+      if (id === '#') return;
+      const target = document.querySelector(id);
+      if (target) {
+        e.preventDefault();
+        const offset = 80;
+        const top = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top, behavior: 'smooth' });
+        nav.classList.remove('nav-mobile-open');
+      }
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,2287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iron &amp; Grit Strength Studio | Powerlifting &amp; Olympic Lifting</title>
+  <meta name="description" content="Iron &amp; Grit Strength Studio is a serious strength training facility specializing in powerlifting, Olympic lifting, competition prep, and strength coaching. No gimmicks. No machines. Just Iron." />
+  <meta name="keywords" content="powerlifting gym, Olympic weightlifting, strength training, competition prep, strength coaching, powerlifting coach" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Iron &amp; Grit Strength Studio" />
+  <meta property="og:description" content="Serious strength training. Powerlifting, Olympic lifting, competition prep. No gimmicks. No machines. Just Iron." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&q=80" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Iron & Grit Strength Studio",
+    "description": "Serious strength training facility specializing in powerlifting, Olympic lifting, competition prep, and strength coaching.",
+    "telephone": "(555) 567-8901",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1842 Industrial Blvd",
+      "addressLocality": "Your City",
+      "addressRegion": "ST",
+      "postalCode": "00000"
+    },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "05:00", "closes": "22:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday"], "opens": "07:00", "closes": "20:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Sunday"], "opens": "08:00", "closes": "18:00" }
+    ],
+    "priceRange": "$$",
+    "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&q=80"
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --red: #CC0000;
+      --red-bright: #FF1A1A;
+      --black: #000000;
+      --bg-dark: #111111;
+      --bg-card: #1A1A1A;
+      --bg-card2: #222222;
+      --accent: #F0F0F0;
+      --gold: #FFD700;
+      --text-muted: #999999;
+      --border: #333333;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: var(--bg-dark);
+      color: var(--accent);
+      font-size: 1rem;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ===== TYPOGRAPHY ===== */
+    h1, h2, h3, h4 { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.04em; line-height: 1; }
+    .subhead { font-family: 'Oswald', sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; }
+
+    /* ===== UTILITY ===== */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+    .section-pad { padding: 4rem 0; }
+    .text-red { color: var(--red); }
+    .text-gold { color: var(--gold); }
+    .text-muted { color: var(--text-muted); }
+
+    /* ===== DIAGONAL SLASH ACCENT ===== */
+    .slash-accent {
+      display: inline-block;
+      color: var(--red);
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: inherit;
+    }
+    .section-label {
+      font-family: 'Oswald', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--red);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .section-label::before {
+      content: '';
+      display: inline-block;
+      width: 32px;
+      height: 2px;
+      background: var(--red);
+    }
+
+    /* ===== SCROLL ANIMATIONS ===== */
+    .fade-up { opacity: 0; transform: translateY(40px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+    .fade-in { opacity: 0; transition: opacity 0.8s ease; }
+    .fade-in.visible { opacity: 1; }
+    .stagger-1 { transition-delay: 0.1s; }
+    .stagger-2 { transition-delay: 0.2s; }
+    .stagger-3 { transition-delay: 0.3s; }
+    .stagger-4 { transition-delay: 0.4s; }
+
+    /* ===== NAV ===== */
+    #main-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: var(--black);
+      border-bottom: 2px solid var(--red);
+      transition: box-shadow 0.3s;
+    }
+    #main-nav.scrolled { box-shadow: 0 4px 30px rgba(204,0,0,0.3); }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 66px;
+      padding: 0 2rem;
+      gap: 24px;
+    }
+    .nav-logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 26px;
+      color: var(--accent);
+      text-decoration: none;
+      letter-spacing: 0.05em;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+    }
+    .nav-logo span { color: var(--red); }
+    .nav-logo-icon {
+      width: 32px;
+      height: 32px;
+      flex-shrink: 0;
+    }
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 1.75rem;
+    }
+    .nav-links a {
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+      position: relative;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--red);
+      transition: width 0.2s;
+    }
+    .nav-links a:hover { color: var(--accent); }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-cta {
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.875rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--black);
+      background: var(--red);
+      padding: 0.5rem 1.25rem;
+      text-decoration: none;
+      clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+      transition: background 0.2s;
+      white-space: nowrap;
+    }
+    .nav-cta:hover { background: var(--red-bright); }
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .nav-hamburger span {
+      display: block;
+      width: 26px;
+      height: 2px;
+      background: var(--accent);
+      transition: all 0.3s;
+    }
+    .mobile-menu {
+      display: none;
+      background: var(--black);
+      border-top: 1px solid var(--border);
+      padding: 16px 24px 24px;
+    }
+    .mobile-menu.open { display: block; }
+    .mobile-menu a {
+      display: block;
+      font-family: 'Oswald', sans-serif;
+      font-size: 18px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      text-decoration: none;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .mobile-menu-cta {
+      display: inline-block;
+      margin-top: 16px;
+      font-family: 'Oswald', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--black);
+      background: var(--red);
+      padding: 12px 28px;
+      text-decoration: none;
+    }
+
+    /* ===== HERO ===== */
+    #hero {
+      min-height: 88vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      padding-top: 70px;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&q=80');
+      background-size: cover;
+      background-position: center;
+      filter: brightness(0.25) saturate(0.7);
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(0,0,0,0.85) 0%, rgba(17,17,17,0.6) 50%, rgba(204,0,0,0.15) 100%);
+    }
+    /* Red diagonal slash bar */
+    .hero-slash {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 5px;
+      height: 100%;
+      background: var(--red);
+    }
+    .hero-slash-wide {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+      background: linear-gradient(90deg, var(--red) 0%, transparent 100%);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 900px;
+    }
+    .hero-eyebrow {
+      font-family: 'Oswald', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: var(--red);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .hero-eyebrow::before {
+      content: '';
+      display: inline-block;
+      width: 40px;
+      height: 2px;
+      background: var(--red);
+    }
+    .hero-h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2rem, 5vw, 3.75rem);
+      line-height: 0.95;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+    }
+    .hero-h1 .line-red {
+      color: var(--red);
+      display: block;
+    }
+    .hero-sub {
+      font-family: 'Oswald', sans-serif;
+      font-size: clamp(1rem, 1.5vw, 1.125rem);
+      font-weight: 400;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      max-width: 600px;
+      letter-spacing: 0.05em;
+    }
+    .hero-ctas {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
+    }
+    .btn-primary {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--black);
+      background: var(--red);
+      padding: 0.75rem 1.75rem;
+      max-height: 52px;
+      text-decoration: none;
+      clip-path: polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
+      transition: background 0.2s, transform 0.2s;
+      display: inline-block;
+    }
+    .btn-primary:hover { background: var(--red-bright); transform: translateY(-2px); }
+    .btn-secondary {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--accent);
+      background: transparent;
+      border: 2px solid var(--border);
+      padding: 0.75rem 1.75rem;
+      max-height: 52px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .btn-secondary:hover { border-color: var(--red); color: var(--red); }
+    .hero-stats {
+      display: flex;
+      gap: 48px;
+      flex-wrap: wrap;
+    }
+    .hero-stat { }
+    .hero-stat-number {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 52px;
+      color: var(--red);
+      line-height: 1;
+    }
+    .hero-stat-label {
+      font-family: 'Oswald', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+    .hero-stat-divider {
+      width: 1px;
+      background: var(--border);
+      align-self: stretch;
+    }
+
+    /* ===== SECTION HEADERS ===== */
+    .section-header { margin-bottom: 56px; }
+    .section-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(1.5rem, 3vw, 2.5rem);
+      color: var(--accent);
+      line-height: 1;
+    }
+    .section-title span { color: var(--red); }
+
+    /* ===== PLATFORM ===== */
+    #platform {
+      background: var(--black);
+      position: relative;
+      overflow: hidden;
+    }
+    #platform::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--red) 0%, transparent 80%);
+    }
+    .platform-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      align-items: center;
+    }
+    .platform-image-wrap {
+      position: relative;
+    }
+    .platform-image-wrap img {
+      width: 100%;
+      height: 520px;
+      object-fit: cover;
+      display: block;
+    }
+    .platform-image-wrap::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, transparent 70%, var(--black) 100%);
+    }
+    /* Red diagonal slash overlay on image */
+    .img-slash {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: -4px;
+      width: 6px;
+      background: var(--red);
+      z-index: 1;
+      transform: skewX(-4deg);
+    }
+    .platform-features { display: flex; flex-direction: column; gap: 24px; }
+    .platform-feature {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      padding: 24px;
+      background: var(--bg-card);
+      border-left: 3px solid var(--red);
+      position: relative;
+      overflow: hidden;
+      transition: background 0.2s;
+    }
+    .platform-feature:hover { background: var(--bg-card2); }
+    .platform-feature-icon {
+      width: 44px;
+      height: 44px;
+      background: rgba(204,0,0,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .platform-feature-icon svg { width: 24px; height: 24px; }
+    .platform-feature-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+    .platform-feature-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    .tagline-bar {
+      background: var(--red);
+      padding: 20px 24px;
+      text-align: center;
+      margin-top: 48px;
+    }
+    .tagline-bar p {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(22px, 3vw, 32px);
+      color: var(--black);
+      letter-spacing: 0.1em;
+    }
+
+    /* ===== PROGRAMS ===== */
+    #programs { background: var(--bg-dark); }
+    .programs-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+    .program-card {
+      background: var(--bg-card);
+      padding: 1.5rem 2rem;
+      position: relative;
+      overflow: hidden;
+      border-top: 3px solid transparent;
+      transition: border-color 0.3s, background 0.3s;
+      cursor: default;
+    }
+    .program-card:hover { border-color: var(--red); background: var(--bg-card2); }
+    .program-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 40px 40px 0;
+      border-color: transparent var(--red) transparent transparent;
+    }
+    .program-number {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 64px;
+      color: rgba(204,0,0,0.12);
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+    .program-icon {
+      width: 48px;
+      height: 48px;
+      margin-bottom: 20px;
+    }
+    .program-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 28px;
+      color: var(--accent);
+      margin-bottom: 12px;
+      line-height: 1.1;
+    }
+    .program-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.65;
+      margin-bottom: 20px;
+    }
+    .program-features { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .program-features li {
+      font-family: 'Oswald', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .program-features li::before {
+      content: '';
+      display: inline-block;
+      width: 14px;
+      height: 2px;
+      background: var(--red);
+      flex-shrink: 0;
+    }
+
+    /* ===== COACHES ===== */
+    #coaches {
+      background: var(--black);
+      position: relative;
+    }
+    #coaches::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, transparent, var(--red), transparent);
+    }
+    .coaches-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .coach-card {
+      background: var(--bg-card);
+      overflow: hidden;
+      position: relative;
+      border-radius: 8px;
+    }
+    .coach-img-wrap { position: relative; overflow: hidden; height: 280px; }
+    .coach-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      object-position: top;
+      filter: grayscale(30%) contrast(1.1);
+      transition: transform 0.5s ease;
+    }
+    .coach-card:hover .coach-img-wrap img { transform: scale(1.04); }
+    .coach-img-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 60%;
+      background: linear-gradient(to top, var(--bg-card) 0%, transparent 100%);
+    }
+    .coach-badge {
+      position: absolute;
+      top: 16px;
+      left: 0;
+      background: var(--red);
+      color: var(--black);
+      font-family: 'Oswald', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      padding: 5px 14px;
+      clip-path: polygon(0 0, 100% 0, calc(100% - 8px) 100%, 0 100%);
+    }
+    .coach-body { padding: 24px 28px 28px; }
+    .coach-name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 32px;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+    .coach-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--red);
+      margin-bottom: 14px;
+    }
+    .coach-bio {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.65;
+      margin-bottom: 20px;
+    }
+    .coach-lifts-label {
+      font-family: 'Oswald', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--red);
+      margin-bottom: 10px;
+    }
+    .coach-lifts {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+    }
+    .coach-lift {
+      background: var(--bg-dark);
+      padding: 10px 8px;
+      text-align: center;
+    }
+    .coach-lift-weight {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 22px;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .coach-lift-name {
+      font-family: 'Oswald', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      margin-top: 3px;
+    }
+
+    /* ===== MEMBERSHIP ===== */
+    #membership { background: var(--bg-dark); }
+    .membership-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .membership-card {
+      background: var(--bg-card);
+      border: 2px solid var(--border);
+      border-radius: 8px;
+      padding: 2rem;
+      position: relative;
+      transition: border-color 0.3s;
+    }
+    .membership-card:hover { border-color: var(--border); }
+    .membership-card.featured {
+      border-color: var(--red);
+      background: var(--bg-card2);
+    }
+    .membership-badge {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--red);
+      color: var(--black);
+      font-family: 'Oswald', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      padding: 4px 20px;
+      white-space: nowrap;
+    }
+    .membership-tier {
+      font-family: 'Oswald', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+    .membership-name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 42px;
+      color: var(--accent);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .membership-price {
+      display: flex;
+      align-items: baseline;
+      gap: 4px;
+      margin-bottom: 28px;
+    }
+    .price-currency {
+      font-family: 'Oswald', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--red);
+    }
+    .price-amount {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 64px;
+      color: var(--red);
+      line-height: 1;
+    }
+    .price-period {
+      font-family: 'Oswald', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-muted);
+    }
+    .membership-divider {
+      height: 1px;
+      background: var(--border);
+      margin-bottom: 28px;
+    }
+    .membership-features { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-bottom: 32px; }
+    .membership-features li {
+      font-size: 14px;
+      color: var(--accent);
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      line-height: 1.4;
+    }
+    .membership-features li svg { flex-shrink: 0; margin-top: 2px; }
+    .membership-features li.dimmed { color: var(--text-muted); }
+    .membership-cta {
+      display: block;
+      font-family: 'Oswald', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      text-align: center;
+      text-decoration: none;
+      padding: 0.75rem 1.75rem;
+      max-height: 52px;
+      transition: all 0.2s;
+    }
+    .membership-cta-outline {
+      color: var(--accent);
+      border: 2px solid var(--border);
+    }
+    .membership-cta-outline:hover { border-color: var(--red); color: var(--red); }
+    .membership-cta-filled {
+      color: var(--black);
+      background: var(--red);
+    }
+    .membership-cta-filled:hover { background: var(--red-bright); }
+
+    /* ===== COMPETITION RESULTS ===== */
+    #results {
+      background: var(--black);
+      position: relative;
+      overflow: hidden;
+    }
+    #results::after {
+      content: 'RECORDS';
+      position: absolute;
+      right: -20px;
+      top: 50%;
+      transform: translateY(-50%) rotate(90deg);
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 120px;
+      color: rgba(204,0,0,0.05);
+      letter-spacing: 0.1em;
+      white-space: nowrap;
+      pointer-events: none;
+    }
+    .results-table-wrap { overflow-x: auto; }
+    .results-table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 700px;
+    }
+    .results-table thead tr {
+      background: var(--red);
+    }
+    .results-table thead th {
+      font-family: 'Oswald', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--black);
+      padding: 14px 20px;
+      text-align: left;
+    }
+    .results-table tbody tr {
+      border-bottom: 1px solid var(--border);
+      transition: background 0.2s;
+    }
+    .results-table tbody tr:hover { background: var(--bg-card); }
+    .results-table tbody tr:nth-child(even) { background: rgba(255,255,255,0.02); }
+    .results-table tbody tr:nth-child(even):hover { background: var(--bg-card); }
+    .results-table td {
+      font-size: 14px;
+      color: var(--accent);
+      padding: 16px 20px;
+    }
+    .results-table td:first-child {
+      font-family: 'Oswald', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--accent);
+    }
+    .place-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 16px;
+    }
+    .place-1 { background: var(--gold); color: var(--black); }
+    .place-2 { background: #C0C0C0; color: var(--black); }
+    .place-3 { background: #CD7F32; color: var(--black); }
+    .place-other { background: var(--bg-card2); color: var(--text-muted); }
+    .record-tag {
+      display: inline-block;
+      font-family: 'Oswald', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--black);
+      background: var(--gold);
+      padding: 2px 8px;
+      margin-left: 8px;
+    }
+
+    /* ===== COMMUNITY ===== */
+    #community { background: var(--bg-dark); }
+    .community-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: center; }
+    .community-copy { }
+    .community-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(40px, 5vw, 64px);
+      color: var(--accent);
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+    .community-title span { color: var(--red); }
+    .community-body {
+      font-size: 15px;
+      color: var(--text-muted);
+      line-height: 1.75;
+      margin-bottom: 32px;
+    }
+    .community-stats { display: flex; gap: 32px; flex-wrap: wrap; }
+    .comm-stat-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 44px;
+      color: var(--red);
+      line-height: 1;
+    }
+    .comm-stat-label {
+      font-family: 'Oswald', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+    .community-photos {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 6px;
+      height: 480px;
+    }
+    .community-photos img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(20%) contrast(1.05);
+      transition: filter 0.3s;
+    }
+    .community-photos img:hover { filter: grayscale(0%) contrast(1.1); }
+    .community-photos .span-row { grid-row: span 2; }
+
+    /* ===== TESTIMONIALS ===== */
+    #testimonials {
+      background: var(--black);
+      position: relative;
+    }
+    #testimonials::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--red) 0%, transparent 80%);
+    }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .testimonial-card {
+      background: var(--bg-card);
+      padding: 36px 30px;
+      position: relative;
+      border-bottom: 3px solid transparent;
+      transition: border-color 0.3s;
+    }
+    .testimonial-card:hover { border-color: var(--red); }
+    .testimonial-quote-mark {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 80px;
+      color: rgba(204,0,0,0.2);
+      line-height: 0.8;
+      margin-bottom: 16px;
+      display: block;
+    }
+    .testimonial-text {
+      font-size: 15px;
+      color: var(--accent);
+      line-height: 1.75;
+      margin-bottom: 28px;
+      font-style: italic;
+    }
+    .testimonial-prs { margin-bottom: 24px; }
+    .testimonial-prs-label {
+      font-family: 'Oswald', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+    .pr-row {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .pr-item {
+      display: flex;
+      flex-direction: column;
+    }
+    .pr-lift {
+      font-family: 'Oswald', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+    }
+    .pr-weight {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 24px;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      border-top: 1px solid var(--border);
+      padding-top: 20px;
+    }
+    .testimonial-avatar {
+      width: 44px;
+      height: 44px;
+      background: var(--red);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 20px;
+      color: var(--black);
+      flex-shrink: 0;
+    }
+    .testimonial-name {
+      font-family: 'Oswald', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .testimonial-meta {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    /* ===== LOCATION ===== */
+    #location { background: var(--bg-dark); }
+    .location-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+    .location-info { }
+    .location-address {
+      font-family: 'Oswald', sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      color: var(--text-muted);
+      line-height: 1.8;
+      margin-bottom: 32px;
+    }
+    .location-phone {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 32px;
+      color: var(--accent);
+      text-decoration: none;
+      margin-bottom: 32px;
+      transition: color 0.2s;
+    }
+    .location-phone:hover { color: var(--red); }
+    .hours-table { width: 100%; border-collapse: collapse; }
+    .hours-table tr { border-bottom: 1px solid var(--border); }
+    .hours-table td {
+      font-family: 'Oswald', sans-serif;
+      font-size: 15px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 12px 0;
+      color: var(--text-muted);
+    }
+    .hours-table td:last-child { text-align: right; color: var(--accent); }
+    .hours-table tr.today td { color: var(--red); }
+    .hours-table tr.today td:last-child { color: var(--red); }
+    .trial-box {
+      background: var(--red);
+      padding: 48px 40px;
+      position: relative;
+      overflow: hidden;
+    }
+    .trial-box::before {
+      content: '';
+      position: absolute;
+      bottom: -30px;
+      right: -30px;
+      width: 120px;
+      height: 120px;
+      background: rgba(0,0,0,0.15);
+      transform: rotate(45deg);
+    }
+    .trial-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 42px;
+      color: var(--black);
+      line-height: 1.05;
+      margin-bottom: 16px;
+    }
+    .trial-body {
+      font-size: 15px;
+      color: rgba(0,0,0,0.75);
+      line-height: 1.65;
+      margin-bottom: 28px;
+    }
+    .btn-dark {
+      font-family: 'Oswald', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--accent);
+      background: var(--black);
+      padding: 14px 32px;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.2s;
+    }
+    .btn-dark:hover { background: #222; }
+    .competition-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Oswald', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: rgba(0,0,0,0.7);
+      text-decoration: none;
+      margin-top: 16px;
+    }
+    .competition-link:hover { color: var(--black); }
+
+    /* ===== FOOTER ===== */
+    #footer {
+      background: var(--black);
+      border-top: 3px solid var(--red);
+      padding: 64px 0 32px;
+    }
+    .footer-top {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+    .footer-brand-name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 32px;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+    .footer-brand-name span { color: var(--red); }
+    .footer-tagline {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 24px;
+      max-width: 280px;
+    }
+    .footer-social { display: flex; gap: 12px; }
+    .footer-social a {
+      width: 38px;
+      height: 38px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .footer-social a:hover { border-color: var(--red); color: var(--red); }
+    .footer-col-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--red);
+      margin-bottom: 20px;
+    }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-links a {
+      font-size: 14px;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .footer-links a:hover { color: var(--accent); }
+    .footer-bottom {
+      border-top: 1px solid var(--border);
+      padding-top: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .footer-copy {
+      font-size: 13px;
+      color: var(--text-muted);
+      font-family: 'Oswald', sans-serif;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .footer-bottom-links { display: flex; gap: 24px; }
+    .footer-bottom-links a {
+      font-size: 13px;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      transition: color 0.2s;
+    }
+    .footer-bottom-links a:hover { color: var(--red); }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .programs-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      .section-pad { padding: 72px 0; }
+      .nav-links, .nav-cta { display: none; }
+      .nav-hamburger { display: flex; }
+      .platform-grid { grid-template-columns: 1fr; }
+      .platform-image-wrap { display: none; }
+      .programs-grid { grid-template-columns: 1fr; }
+      .coaches-grid { grid-template-columns: 1fr; }
+      .membership-grid { grid-template-columns: 1fr; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .community-layout { grid-template-columns: 1fr; }
+      .community-photos { height: 300px; }
+      .location-grid { grid-template-columns: 1fr; }
+      .hero-stats { gap: 24px; }
+      .hero-stat-divider { display: none; }
+      .footer-top { grid-template-columns: 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+    }
+    @media (max-width: 480px) {
+      .hero-ctas { flex-direction: column; }
+      .btn-primary, .btn-secondary { text-align: center; justify-content: center; }
+      .coach-lifts { grid-template-columns: repeat(3, 1fr); }
+    }</style>
+  <!-- Codex UI Polish: nav readability and one-line links -->
+  <style id="codex-ui-polish-nav">
+    nav a,
+    .nav a,
+    .navbar a,
+    .nav__links a,
+    .nav-links a,
+    .menu a,
+    .menu__link,
+    .fullscreen-menu a {
+      white-space: nowrap;
+    }
+
+    @media (min-width: 1024px) {
+      nav a,
+      .nav a,
+      .navbar a,
+      .nav__links a,
+      .nav-links a,
+      .menu a,
+      .menu__link,
+      .fullscreen-menu a {
+        line-height: 1.1;
+      }
+
+      .nav__links,
+      .nav-links,
+      .navbar-links,
+      .menu-links,
+      nav ul {
+        row-gap: 0.25rem;
+      }
+
+      .nav__links,
+      .nav-links,
+      .navbar-links,
+      .menu-links,
+      nav ul {
+        align-items: center;
+      }
+
+      .nav__links a,
+      .nav-links a,
+      .navbar-links a,
+      .menu-links a,
+      nav ul a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 1.2rem;
+      }
+    }
+
+    /* Cross-page alignment normalization for common grid/card layouts */
+    .services__grid,
+    .service-grid,
+    .cards-grid,
+    .features-grid,
+    .pricing__grid,
+    .plans-grid,
+    .results__grid,
+    .reviews__grid,
+    .events-grid,
+    .coaches__grid,
+    .therapists-grid,
+    .portfolio__grid,
+    .tips-grid,
+    .testimonials-grid,
+    .grid {
+      align-items: stretch;
+    }
+
+    .service-card,
+    .card,
+    .feature-card,
+    .event-card,
+    .plan,
+    .pricing-card,
+    .testimonial,
+    .review,
+    .coach,
+    .therapist-card,
+    .project,
+    .tip-card,
+    .serve-card,
+    .info-card,
+    .stat-card {
+      height: 100%;
+    }
+
+    .service-card img,
+    .project img,
+    .tip-card img,
+    .coach img,
+    .therapist-card img,
+    .feature-card img,
+    .gallery-item img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    /* Improve readability where copy is dense without changing content */
+    section p,
+    .section p,
+    .card p,
+    .service-card p,
+    .feature-card p,
+    .testimonial p,
+    .event-card p,
+    .info-card p {
+      max-width: 66ch;
+      text-wrap: pretty;
+    }
+
+    .section__header p,
+    .hero p,
+    .footer p,
+    .map-overlay-card,
+    .location__item-value {
+      max-width: none;
+    }
+  </style>
+
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <nav id="main-nav" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="#hero" class="nav-logo" aria-label="Iron and Grit Strength Studio home">
+          <svg class="nav-logo-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="1" y="13" width="6" height="6" fill="#CC0000"/>
+            <rect x="13" y="1" width="6" height="30" fill="#F0F0F0"/>
+            <rect x="25" y="13" width="6" height="6" fill="#CC0000"/>
+            <rect x="7" y="14.5" width="18" height="3" fill="#F0F0F0"/>
+          </svg>
+          IRON <span>&amp;</span> GRIT
+        </a>
+        <ul class="nav-links" role="list">
+          <li><a href="#platform">The Platform</a></li>
+          <li><a href="#programs">Programs</a></li>
+          <li><a href="#coaches">Coaches</a></li>
+          <li><a href="#membership">Membership</a></li>
+          <li><a href="#results">Results</a></li>
+          <li><a href="#location">Location</a></li>
+        </ul>
+        <a href="#location" class="nav-cta">Start Lifting</a>
+        <button class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false" onclick="toggleMenu(this)">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="#platform" onclick="closeMobileMenu()">The Platform</a>
+      <a href="#programs" onclick="closeMobileMenu()">Programs</a>
+      <a href="#coaches" onclick="closeMobileMenu()">Coaches</a>
+      <a href="#membership" onclick="closeMobileMenu()">Membership</a>
+      <a href="#results" onclick="closeMobileMenu()">Results</a>
+      <a href="#location" onclick="closeMobileMenu()">Location</a>
+      <a href="tel:5555678901" onclick="closeMobileMenu()" class="mobile-menu-cta">Start Lifting</a>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero" aria-label="Hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-overlay" aria-hidden="true"></div>
+    <div class="hero-slash" aria-hidden="true"></div>
+    <div class="hero-slash-wide" aria-hidden="true"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-eyebrow fade-up">Serious Strength. Real Results.</div>
+        <h1 class="hero-h1 fade-up stagger-1">
+          BUILT DIFFERENT.
+          <span class="line-red">LIFT DIFFERENT.</span>
+        </h1>
+        <p class="hero-sub fade-up stagger-2">
+          The only gym in the region built from the ground up for serious strength athletes.
+          Powerlifting. Olympic lifting. Competition prep. No gimmicks. No machines. Just Iron.
+        </p>
+        <div class="hero-ctas fade-up stagger-3">
+          <a href="#location" class="btn-primary">FREE Trial Day — Come Lift With Us</a>
+          <a href="tel:5555678901" class="btn-secondary">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M3 1h3l1.5 4L6 6.5a10 10 0 0 0 3.5 3.5L11 8.5l4 1.5v3a1 1 0 0 1-1 1C5.4 14 2 8.6 2 2a1 1 0 0 1 1-1z" fill="#CC0000"/>
+            </svg>
+            (555) 567-8901
+          </a>
+        </div>
+        <div class="hero-stats fade-up stagger-4">
+          <div class="hero-stat">
+            <div class="hero-stat-number">50+</div>
+            <div class="hero-stat-label">Competition Athletes</div>
+          </div>
+          <div class="hero-stat-divider" aria-hidden="true"></div>
+          <div class="hero-stat">
+            <div class="hero-stat-number">12</div>
+            <div class="hero-stat-label">State Records</div>
+          </div>
+          <div class="hero-stat-divider" aria-hidden="true"></div>
+          <div class="hero-stat">
+            <div class="hero-stat-number">8</div>
+            <div class="hero-stat-label">National Competitors</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== THE PLATFORM ===== -->
+  <section id="platform" class="section-pad" aria-labelledby="platform-heading">
+    <div class="container">
+      <div class="platform-grid">
+        <div class="platform-image-wrap fade-in">
+          <div class="img-slash" aria-hidden="true"></div>
+          <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=1200&q=80" alt="Iron and Grit Strength Studio lifting platform with Olympic barbells" loading="lazy" />
+        </div>
+        <div>
+          <div class="section-label fade-up">The Platform</div>
+          <h2 class="section-title fade-up stagger-1" id="platform-heading">
+            BUILT FOR<br /><span>IRON</span>
+          </h2>
+          <p style="font-size:15px;color:var(--text-muted);line-height:1.75;margin-bottom:36px;" class="fade-up stagger-2">
+            We stripped out the treadmills and filled the floor with competition-grade equipment.
+            Every square foot serves one purpose: making you stronger.
+          </p>
+          <div class="platform-features fade-up stagger-3">
+            <div class="platform-feature">
+              <div class="platform-feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#CC0000" stroke-width="2" aria-hidden="true">
+                  <rect x="2" y="10" width="4" height="4" rx="1"/>
+                  <rect x="18" y="10" width="4" height="4" rx="1"/>
+                  <line x1="6" y1="12" x2="18" y2="12"/>
+                  <rect x="10" y="3" width="4" height="18" rx="1"/>
+                </svg>
+              </div>
+              <div>
+                <div class="platform-feature-title">Competition Platforms</div>
+                <p class="platform-feature-desc">Six regulation-size lifting platforms with anti-vibration underlayment. Drop your heaviest sets — that's what they're built for.</p>
+              </div>
+            </div>
+            <div class="platform-feature">
+              <div class="platform-feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#CC0000" stroke-width="2" aria-hidden="true">
+                  <circle cx="5" cy="12" r="3"/>
+                  <circle cx="19" cy="12" r="3"/>
+                  <line x1="8" y1="12" x2="16" y2="12"/>
+                </svg>
+              </div>
+              <div>
+                <div class="platform-feature-title">Olympic Barbells</div>
+                <p class="platform-feature-desc">Eleiko, Rogue, and Werksan bars. Certified squat bars, deadlift bars, power bars, and training bars for every discipline.</p>
+              </div>
+            </div>
+            <div class="platform-feature">
+              <div class="platform-feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#CC0000" stroke-width="2" aria-hidden="true">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                  <polyline points="9 22 9 12 15 12 15 22"/>
+                </svg>
+              </div>
+              <div>
+                <div class="platform-feature-title">Full Powerlifting Equipment</div>
+                <p class="platform-feature-desc">Competition-spec monolift, deadlift platforms, belt squat machines, GHD, reverse hypers, and calibrated plate sets.</p>
+              </div>
+            </div>
+            <div class="platform-feature" style="border-color: var(--gold);">
+              <div class="platform-feature-icon" style="background:rgba(255,215,0,0.1);">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#FFD700" stroke-width="2" aria-hidden="true">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                </svg>
+              </div>
+              <div>
+                <div class="platform-feature-title" style="color:var(--gold);">Strength Only — No Cardio Machines</div>
+                <p class="platform-feature-desc">We made a choice. Zero treadmills. Zero ellipticals. Every dollar invested in equipment that makes you stronger, period.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tagline-bar fade-up">
+        <p>NO GIMMICKS. NO MACHINES. JUST IRON.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROGRAMS ===== -->
+  <section id="programs" class="section-pad" aria-labelledby="programs-heading">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label fade-up">What We Train</div>
+        <h2 class="section-title fade-up stagger-1" id="programs-heading">OUR <span>PROGRAMS</span></h2>
+        <p style="font-size:15px;color:var(--text-muted);max-width:520px;margin-top:16px;" class="fade-up stagger-2">
+          Four focused programs. Every one built around the barbell. No fluff — just structured training that delivers results on the platform.
+        </p>
+      </div>
+      <div class="programs-grid">
+        <!-- Program 1 -->
+        <div class="program-card fade-up stagger-1">
+          <div class="program-number">01</div>
+          <svg class="program-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <rect x="4" y="20" width="8" height="8" rx="2" fill="#CC0000"/>
+            <rect x="36" y="20" width="8" height="8" rx="2" fill="#CC0000"/>
+            <rect x="20" y="4" width="8" height="40" rx="2" fill="#F0F0F0"/>
+            <rect x="12" y="22" width="24" height="4" fill="#F0F0F0"/>
+          </svg>
+          <div class="program-title">Powerlifting Foundations</div>
+          <p class="program-desc">Master the squat, bench, and deadlift from the ground up. Technical coaching meets progressive overload in a structured 12-week block system.</p>
+          <ul class="program-features">
+            <li>Beginner &amp; intermediate levels</li>
+            <li>Technical cue-heavy coaching</li>
+            <li>Meet introduction optional</li>
+            <li>4 days per week programming</li>
+          </ul>
+        </div>
+        <!-- Program 2 -->
+        <div class="program-card fade-up stagger-2">
+          <div class="program-number">02</div>
+          <svg class="program-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <rect x="2" y="22" width="6" height="4" rx="1" fill="#CC0000"/>
+            <rect x="40" y="22" width="6" height="4" rx="1" fill="#CC0000"/>
+            <rect x="21" y="2" width="6" height="44" rx="1" fill="#F0F0F0"/>
+            <rect x="8" y="23" width="32" height="2" fill="#F0F0F0"/>
+            <path d="M16 16 L24 8 L32 16" stroke="#CC0000" stroke-width="2" fill="none"/>
+          </svg>
+          <div class="program-title">Olympic Weightlifting</div>
+          <p class="program-desc">Snatch and clean &amp; jerk technique built from scratch or refined at advanced levels. Coached by nationally-certified weightlifting coaches.</p>
+          <ul class="program-features">
+            <li>Snatch &amp; C&amp;J technique</li>
+            <li>USAW-certified coaching</li>
+            <li>Competition pathway available</li>
+            <li>5 sessions per week access</li>
+          </ul>
+        </div>
+        <!-- Program 3 -->
+        <div class="program-card fade-up stagger-3">
+          <div class="program-number">03</div>
+          <svg class="program-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <polygon points="24,4 44,38 4,38" fill="none" stroke="#CC0000" stroke-width="2"/>
+            <polygon points="24,14 36,36 12,36" fill="#CC0000" opacity="0.3"/>
+            <line x1="24" y1="20" x2="24" y2="34" stroke="#F0F0F0" stroke-width="2"/>
+          </svg>
+          <div class="program-title">Competition Prep</div>
+          <p class="program-desc">Periodized peaking cycles tailored to your meet date. Weight management, opener selection, attempt strategy — total meet-day readiness.</p>
+          <ul class="program-features">
+            <li>Meet-specific peaking cycles</li>
+            <li>Weight class management</li>
+            <li>Attempt selection strategy</li>
+            <li>Coach at meet (optional add-on)</li>
+          </ul>
+        </div>
+        <!-- Program 4 -->
+        <div class="program-card fade-up stagger-4">
+          <div class="program-number">04</div>
+          <svg class="program-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <circle cx="24" cy="16" r="8" fill="none" stroke="#CC0000" stroke-width="2"/>
+            <path d="M14 44 C14 36 34 36 34 44" fill="none" stroke="#CC0000" stroke-width="2"/>
+            <line x1="20" y1="16" x2="28" y2="16" stroke="#F0F0F0" stroke-width="2"/>
+            <line x1="24" y1="12" x2="24" y2="20" stroke="#F0F0F0" stroke-width="2"/>
+          </svg>
+          <div class="program-title">1-on-1 Strength Coaching</div>
+          <p class="program-desc">Direct, personalized coaching from our head strength coaches. Program design, form analysis, and hands-on instruction every session.</p>
+          <ul class="program-features">
+            <li>Fully customized programming</li>
+            <li>Video analysis &amp; feedback</li>
+            <li>Nutrition guidance available</li>
+            <li>Direct coach communication</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COACHES ===== -->
+  <section id="coaches" class="section-pad" aria-labelledby="coaches-heading">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label fade-up">Who Coaches You</div>
+        <h2 class="section-title fade-up stagger-1" id="coaches-heading">THE <span>COACHING STAFF</span></h2>
+        <p style="font-size:15px;color:var(--text-muted);max-width:520px;margin-top:16px;" class="fade-up stagger-2">
+          Every coach here competes. They don't just teach lifting — they live it.
+        </p>
+      </div>
+      <div class="coaches-grid">
+        <!-- Coach 1 -->
+        <div class="coach-card fade-up stagger-1">
+          <div class="coach-img-wrap">
+            <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=800&q=80" alt="Head Coach Marcus Reeves demonstrating squat form" loading="lazy" />
+            <div class="coach-img-overlay" aria-hidden="true"></div>
+            <div class="coach-badge">Head Coach</div>
+          </div>
+          <div class="coach-body">
+            <div class="coach-name">Marcus Reeves</div>
+            <div class="coach-title">Head Strength Coach / IPF Athlete</div>
+            <p class="coach-bio">15 years competitive powerlifting. 3x State Champion, IPF World qualifier. NSCA-CSCS, USAPL-certified. Former collegiate football strength coach turned full-time platform coach.</p>
+            <div class="coach-lifts-label">Competition Best Lifts (274 lb class)</div>
+            <div class="coach-lifts">
+              <div class="coach-lift">
+                <div class="coach-lift-weight">810</div>
+                <div class="coach-lift-name">Squat</div>
+              </div>
+              <div class="coach-lift">
+                <div class="coach-lift-weight">545</div>
+                <div class="coach-lift-name">Bench</div>
+              </div>
+              <div class="coach-lift">
+                <div class="coach-lift-weight">755</div>
+                <div class="coach-lift-name">Deadlift</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Coach 2 -->
+        <div class="coach-card fade-up stagger-2">
+          <div class="coach-img-wrap">
+            <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&q=80" alt="Olympic Lifting Coach Anya Kowalski coaching technique" loading="lazy" />
+            <div class="coach-img-overlay" aria-hidden="true"></div>
+            <div class="coach-badge">Olympic Coach</div>
+          </div>
+          <div class="coach-body">
+            <div class="coach-name">Anya Kowalski</div>
+            <div class="coach-title">Olympic Weightlifting Coach / National Competitor</div>
+            <p class="coach-bio">USAW Level 2 coach with 10 years platform experience. 4x national medalist, Master of Sport background. Technical mastery that has produced 6 national qualifiers.</p>
+            <div class="coach-lifts-label">Competition Best Lifts (75 kg class)</div>
+            <div class="coach-lifts">
+              <div class="coach-lift">
+                <div class="coach-lift-weight">108</div>
+                <div class="coach-lift-name">Snatch</div>
+              </div>
+              <div class="coach-lift">
+                <div class="coach-lift-weight">138</div>
+                <div class="coach-lift-name">Clean &amp; Jerk</div>
+              </div>
+              <div class="coach-lift">
+                <div class="coach-lift-weight">246</div>
+                <div class="coach-lift-name">Total (kg)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Coach 3 -->
+        <div class="coach-card fade-up stagger-3">
+          <div class="coach-img-wrap">
+            <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&q=80" alt="Strength Coach Darius Cole during training session" loading="lazy" />
+            <div class="coach-img-overlay" aria-hidden="true"></div>
+            <div class="coach-badge">Comp Prep Coach</div>
+          </div>
+          <div class="coach-body">
+            <div class="coach-name">Darius Cole</div>
+            <div class="coach-title">Competition Prep Specialist / USAPL Referee</div>
+            <p class="coach-bio">Sports science degree, 8 years competition. USAPL National referee, 2x State Record holder. Specializes in peaking protocols and cut strategies for raw and equipped lifting.</p>
+            <div class="coach-lifts-label">Competition Best Lifts (242 lb class)</div>
+            <div class="coach-lifts">
+              <div class="coach-lift">
+                <div class="coach-lift-weight">716</div>
+                <div class="coach-lift-name">Squat</div>
+              </div>
+              <div class="coach-lift">
+                <div class="coach-lift-weight">468</div>
+                <div class="coach-lift-name">Bench</div>
+              </div>
+              <div class="coach-lift">
+                <div class="coach-lift-weight">672</div>
+                <div class="coach-lift-name">Deadlift</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MEMBERSHIP ===== -->
+  <section id="membership" class="section-pad" aria-labelledby="membership-heading">
+    <div class="container">
+      <div class="section-header" style="text-align:center;">
+        <div class="section-label fade-up" style="justify-content:center;">Membership Plans</div>
+        <h2 class="section-title fade-up stagger-1" id="membership-heading">INVEST IN <span>YOUR IRON</span></h2>
+        <p style="font-size:15px;color:var(--text-muted);max-width:480px;margin:16px auto 0;" class="fade-up stagger-2">
+          Three tiers. Every one built around the barbell. No annual contracts required.
+        </p>
+      </div>
+      <div class="membership-grid">
+        <!-- Single -->
+        <div class="membership-card fade-up stagger-1">
+          <div class="membership-tier">Tier 01</div>
+          <div class="membership-name">SINGLE ACCESS</div>
+          <div class="membership-price">
+            <span class="price-currency">$</span>
+            <span class="price-amount">79</span>
+            <span class="price-period">/month</span>
+          </div>
+          <div class="membership-divider"></div>
+          <ul class="membership-features">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3.5 3.5L13 5" stroke="#CC0000" stroke-width="2" stroke-linecap="round"/></svg>
+              Unlimited open gym access
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3.5 3.5L13 5" stroke="#CC0000" stroke-width="2" stroke-linecap="round"/></svg>
+              All 6 competition platforms
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3.5 3.5L13 5" stroke="#CC0000" stroke-width="2" stroke-linecap="round"/></svg>
+              Full equipment access
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3.5 3.5L13 5" stroke="#CC0000" stroke-width="2" stroke-linecap="round"/></svg>
+              Community events &amp; meets
+            </li>
+            <li class="dimmed">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="#666" stroke-width="1.5" stroke-linecap="round"/></svg>
+              Coaching sessions
+            </li>
+            <li class="dimmed">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="#666" stroke-width="1.5" stroke-linecap="round"/></svg>
+              Personalized programming
+            </li>
+          </ul>
+          <a href="#location" class="membership-cta membership-cta-outline">Get Started</a>
+        </div>
+        <!-- Coaching -->
+        <div class="membership-card featured fade-up stagger-2">
+          <div class="membership-badge">Most Popular</div>
+          <div class="membership-tier">Tier 02</div>
+          <div class="membership-name">STRENGTH COACHING</div>
+          <div class="membership-price">
+            <span class="price-currency">$</span>
+            <span class="price-amount">149</span>
+            <span class="price-period">/month</span>
+          </div>
+          <div class="membership-divider"></div>
+          <ul class="membership-features">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3.5 3.5L13 5" stroke="#CC0000" stroke-width="2" stroke-linecap="round"/></svg>
+              Everything in Single Access
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3.5 3.5L13 5" stroke="#CC0000" stroke-width="2" stroke-linecap="round"/></svg>
+              2 group coaching sessions/week
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3.5 3.5L13 5" stroke="#CC0000" stroke-width="2" stroke-linecap="round"/></svg>
+              Monthly programming design
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3.5 3.5L13 5" stroke="#CC0000" stroke-width="2" stroke-linecap="round"/></svg>
+              Form video review (2/mo)
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3.5 3.5L13 5" stroke="#CC0000" stroke-width="2" stroke-linecap="round"/></svg>
+              Priority platform booking
+            </li>
+            <li class="dimmed">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="#666" stroke-width="1.5" stroke-linecap="round"/></svg>
+              1-on-1 dedicated coach sessions
+            </li>
+          </ul>
+          <a href="#location" class="membership-cta membership-cta-filled">Start Coaching</a>
+        </div>
+        <!-- Elite -->
+        <div class="membership-card fade-up stagger-3">
+          <div class="membership-tier">Tier 03</div>
+          <div class="membership-name">ELITE ATHLETE</div>
+          <div class="membership-price">
+            <span class="price-currency">$</span>
+            <span class="price-amount">249</span>
+            <span class="price-period">/month</span>
+          </div>
+          <div class="membership-divider"></div>
+          <ul class="membership-features">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3.5 3.5L13 5" stroke="#FFD700" stroke-width="2" stroke-linecap="round"/></svg>
+              Everything in Strength Coaching
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3.5 3.5L13 5" stroke="#FFD700" stroke-width="2" stroke-linecap="round"/></svg>
+              4 x 1-on-1 sessions/month
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3.5 3.5L13 5" stroke="#FFD700" stroke-width="2" stroke-linecap="round"/></svg>
+              Full competition prep support
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3.5 3.5L13 5" stroke="#FFD700" stroke-width="2" stroke-linecap="round"/></svg>
+              Coach at meet (2 meets/yr)
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3.5 3.5L13 5" stroke="#FFD700" stroke-width="2" stroke-linecap="round"/></svg>
+              Nutrition consultation
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3.5 3.5L13 5" stroke="#FFD700" stroke-width="2" stroke-linecap="round"/></svg>
+              24/7 coach messaging access
+            </li>
+          </ul>
+          <a href="#location" class="membership-cta membership-cta-outline" style="border-color:var(--gold);color:var(--gold);" onmouseover="this.style.borderColor='var(--gold)';this.style.color='var(--black)';this.style.background='var(--gold)';" onmouseout="this.style.borderColor='var(--gold)';this.style.color='var(--gold)';this.style.background='transparent';">Go Elite</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COMPETITION RESULTS ===== -->
+  <section id="results" class="section-pad" aria-labelledby="results-heading">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label fade-up">Proof on the Platform</div>
+        <h2 class="section-title fade-up stagger-1" id="results-heading">RECENT <span>MEET RESULTS</span></h2>
+        <p style="font-size:15px;color:var(--text-muted);max-width:520px;margin-top:16px;" class="fade-up stagger-2">
+          Our athletes don't just train — they compete and win. Here's what happened at recent meets.
+        </p>
+      </div>
+      <div class="results-table-wrap fade-up stagger-3">
+        <table class="results-table" aria-label="Recent competition meet results">
+          <thead>
+            <tr>
+              <th>Athlete</th>
+              <th>Meet</th>
+              <th>Division / Weight</th>
+              <th>Total</th>
+              <th>Place</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Marcus Reeves</td>
+              <td>USAPL State Championships</td>
+              <td>Open Raw / 274</td>
+              <td>2,110 lbs</td>
+              <td><span class="place-badge place-1" aria-label="1st place">1</span></td>
+              <td><span class="record-tag">State Record</span></td>
+            </tr>
+            <tr>
+              <td>Jordan Hale</td>
+              <td>RPS Spring Showdown</td>
+              <td>Open Raw / 198</td>
+              <td>1,705 lbs</td>
+              <td><span class="place-badge place-1" aria-label="1st place">1</span></td>
+              <td><span class="record-tag">State Record</span></td>
+            </tr>
+            <tr>
+              <td>Anya Kowalski</td>
+              <td>USAW National Open</td>
+              <td>Senior / 75kg</td>
+              <td>246 kg</td>
+              <td><span class="place-badge place-2" aria-label="2nd place">2</span></td>
+              <td>National Qualifier</td>
+            </tr>
+            <tr>
+              <td>Darius Cole</td>
+              <td>USAPL Regional</td>
+              <td>Open Raw / 242</td>
+              <td>1,856 lbs</td>
+              <td><span class="place-badge place-1" aria-label="1st place">1</span></td>
+              <td><span class="record-tag">State Record</span></td>
+            </tr>
+            <tr>
+              <td>Priya Nanda</td>
+              <td>USAPL State Championships</td>
+              <td>Open Raw / 148</td>
+              <td>790 lbs</td>
+              <td><span class="place-badge place-2" aria-label="2nd place">2</span></td>
+              <td>3 White Lights on All Lifts</td>
+            </tr>
+            <tr>
+              <td>Tyrell Brooks</td>
+              <td>CPU Powerlifting Open</td>
+              <td>Juniors / 220</td>
+              <td>1,630 lbs</td>
+              <td><span class="place-badge place-1" aria-label="1st place">1</span></td>
+              <td>Junior State Record</td>
+            </tr>
+            <tr>
+              <td>Sara Kim</td>
+              <td>USAW Junior Nationals</td>
+              <td>Junior / 59kg</td>
+              <td>185 kg</td>
+              <td><span class="place-badge place-3" aria-label="3rd place">3</span></td>
+              <td>Personal Best Total</td>
+            </tr>
+            <tr>
+              <td>Devon Clarke</td>
+              <td>RPS Iron State</td>
+              <td>Open Raw / 181</td>
+              <td>1,512 lbs</td>
+              <td><span class="place-badge place-2" aria-label="2nd place">2</span></td>
+              <td>Competed 4 Months In</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="text-align:center;margin-top:36px;" class="fade-up">
+        <a href="#location" class="btn-secondary" style="display:inline-flex;">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <rect x="2" y="2" width="12" height="12" rx="1" stroke="#CC0000" stroke-width="1.5"/>
+            <path d="M5 8h6M8 5l3 3-3 3" stroke="#CC0000" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+          View Full Competition Calendar
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COMMUNITY ===== -->
+  <section id="community" class="section-pad" aria-labelledby="community-heading">
+    <div class="container">
+      <div class="community-layout">
+        <div class="community-copy">
+          <div class="section-label fade-up">Gym Culture</div>
+          <h2 class="community-title fade-up stagger-1" id="community-heading">
+            NOT A GYM.<br />
+            A <span>COMMUNITY</span><br />
+            OF ATHLETES.
+          </h2>
+          <p class="community-body fade-up stagger-2">
+            Walk in here on a Saturday morning and you'll see 30 people warming up at the same time.
+            Sharing plates, calling depth, celebrating PRs out loud. That's what this place is.
+            Serious lifters who push each other — on the platform and off it.
+          </p>
+          <p class="community-body fade-up stagger-2" style="margin-bottom:36px;">
+            We've built a culture where a first-time competitor and a national-level athlete train
+            in the same room, and both leave better than when they walked in.
+          </p>
+          <div class="community-stats fade-up stagger-3">
+            <div>
+              <div class="comm-stat-num">200+</div>
+              <div class="comm-stat-label">Active Members</div>
+            </div>
+            <div>
+              <div class="comm-stat-num">6</div>
+              <div class="comm-stat-label">Years Running</div>
+            </div>
+            <div>
+              <div class="comm-stat-num">40+</div>
+              <div class="comm-stat-label">Meets Competed</div>
+            </div>
+          </div>
+        </div>
+        <div class="community-photos fade-in stagger-2">
+          <img src="https://images.unsplash.com/photo-1549476464-37392f717541?w=800&q=80" alt="Athletes training together at Iron and Grit Strength Studio" loading="lazy" class="span-row" />
+          <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&q=80" alt="Barbell training on platform" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&q=80" alt="Strength training session" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section id="testimonials" class="section-pad" aria-labelledby="testimonials-heading">
+    <div class="container">
+      <div class="section-header" style="text-align:center;">
+        <div class="section-label fade-up" style="justify-content:center;">Athlete Voices</div>
+        <h2 class="section-title fade-up stagger-1" id="testimonials-heading">FROM THE <span>PLATFORM</span></h2>
+      </div>
+      <div class="testimonials-grid">
+        <!-- T1 -->
+        <div class="testimonial-card fade-up stagger-1">
+          <span class="testimonial-quote-mark" aria-hidden="true">"</span>
+          <p class="testimonial-text">
+            "I'd been lifting recreationally for 4 years with no direction. Six months with Marcus at Iron &amp; Grit and I stepped on the platform for the first time, hit all nine attempts, and placed second in my class. This gym changed the trajectory of my training completely."
+          </p>
+          <div class="testimonial-prs">
+            <div class="testimonial-prs-label">Competition PRs</div>
+            <div class="pr-row">
+              <div class="pr-item"><span class="pr-lift">Squat</span><span class="pr-weight">475 lbs</span></div>
+              <div class="pr-item"><span class="pr-lift">Bench</span><span class="pr-weight">315 lbs</span></div>
+              <div class="pr-item"><span class="pr-lift">Deadlift</span><span class="pr-weight">520 lbs</span></div>
+            </div>
+          </div>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar" aria-hidden="true">JT</div>
+            <div>
+              <div class="testimonial-name">Jason Torres</div>
+              <div class="testimonial-meta">Open Raw / 220 lb class — Member 2 years</div>
+            </div>
+          </div>
+        </div>
+        <!-- T2 -->
+        <div class="testimonial-card fade-up stagger-2">
+          <span class="testimonial-quote-mark" aria-hidden="true">"</span>
+          <p class="testimonial-text">
+            "Anya's coaching broke down my snatch technique faster than years of YouTube tutorials ever could. Within three months my snatch went up 18kg and I qualified for Junior Nationals. This is what real coaching looks like."
+          </p>
+          <div class="testimonial-prs">
+            <div class="testimonial-prs-label">Competition PRs</div>
+            <div class="pr-row">
+              <div class="pr-item"><span class="pr-lift">Snatch</span><span class="pr-weight">95 kg</span></div>
+              <div class="pr-item"><span class="pr-lift">Clean &amp; Jerk</span><span class="pr-weight">118 kg</span></div>
+              <div class="pr-item"><span class="pr-lift">Total</span><span class="pr-weight">213 kg</span></div>
+            </div>
+          </div>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar" aria-hidden="true">SW</div>
+            <div>
+              <div class="testimonial-name">Sofia Whitmore</div>
+              <div class="testimonial-meta">Junior Olympic Lifter / 81 kg class — Member 18 months</div>
+            </div>
+          </div>
+        </div>
+        <!-- T3 -->
+        <div class="testimonial-card fade-up stagger-3">
+          <span class="testimonial-quote-mark" aria-hidden="true">"</span>
+          <p class="testimonial-text">
+            "I'd competed at three other gyms before this. Iron &amp; Grit is different. Darius built my entire 16-week peak, cut my weight right, and I hit a 2,100 lb total at 48 years old. The equipment here is the best I've ever trained on. Full stop."
+          </p>
+          <div class="testimonial-prs">
+            <div class="testimonial-prs-label">Competition PRs (Master 1)</div>
+            <div class="pr-row">
+              <div class="pr-item"><span class="pr-lift">Squat</span><span class="pr-weight">705 lbs</span></div>
+              <div class="pr-item"><span class="pr-lift">Bench</span><span class="pr-weight">462 lbs</span></div>
+              <div class="pr-item"><span class="pr-lift">Deadlift</span><span class="pr-weight">635 lbs</span></div>
+            </div>
+          </div>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar" aria-hidden="true">RM</div>
+            <div>
+              <div class="testimonial-name">Robert Malone</div>
+              <div class="testimonial-meta">Master 1 Raw / 242 lb class — Member 3 years</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LOCATION + HOURS ===== -->
+  <section id="location" class="section-pad" aria-labelledby="location-heading">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label fade-up">Find Us</div>
+        <h2 class="section-title fade-up stagger-1" id="location-heading">LOCATION <span>&amp; HOURS</span></h2>
+      </div>
+      <div class="location-grid">
+        <div class="location-info fade-up stagger-1">
+          <p class="location-address">
+            1842 Industrial Blvd, Suite 100<br />
+            Your City, ST 00000
+          </p>
+          <a href="tel:5555678901" class="location-phone" aria-label="Call Iron and Grit at (555) 567-8901">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+              <path d="M5.25 1.75H10.5L13.125 7L10.0625 8.9688A17.5 17.5 0 0 0 19.0313 17.9375L21 14.875L26.25 17.5v5.25A2.625 2.625 0 0 1 23.625 25.375C9.8 25.375 2.625 14.875 2.625 4.375A2.625 2.625 0 0 1 5.25 1.75z" fill="#CC0000"/>
+            </svg>
+            (555) 567-8901
+          </a>
+          <table class="hours-table" aria-label="Gym hours">
+            <tbody>
+              <tr>
+                <td>Monday – Friday</td>
+                <td>5:00 AM – 10:00 PM</td>
+              </tr>
+              <tr>
+                <td>Saturday</td>
+                <td>7:00 AM – 8:00 PM</td>
+              </tr>
+              <tr>
+                <td>Sunday</td>
+                <td>8:00 AM – 6:00 PM</td>
+              </tr>
+              <tr>
+                <td>Holiday Hours</td>
+                <td>Check Social Media</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="trial-box fade-up stagger-2">
+          <div class="trial-title">FREE TRIAL DAY — COME LIFT WITH US</div>
+          <p class="trial-body">
+            No sales pitch. No pressure. Come in, warm up, load the bar, and train.
+            One free session — everything included. See what serious strength training actually looks like.
+          </p>
+          <a href="tel:5555678901" class="btn-dark">Call to Book Your Trial Day</a>
+          <br />
+          <a href="#results" class="competition-link">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <path d="M7 1L7 13M7 13L12 8M7 13L2 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            View Competition Calendar
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer id="footer" aria-label="Site footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <div class="footer-brand-name">IRON <span>&amp;</span> GRIT</div>
+          <p class="footer-tagline">
+            Serious strength training for serious athletes. Powerlifting, Olympic lifting, competition prep.
+            No gimmicks. No machines. Just Iron.
+          </p>
+          <div class="footer-social" aria-label="Social media links">
+            <a href="#" aria-label="Iron and Grit on Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/>
+              </svg>
+            </a>
+            <a href="#" aria-label="Iron and Grit on Facebook">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+            </a>
+            <a href="#" aria-label="Iron and Grit on YouTube">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.97C18.88 4 12 4 12 4s-6.88 0-8.59.45A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.97C5.12 20 12 20 12 20s6.88 0 8.59-.45a2.78 2.78 0 0 0 1.95-1.97A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/>
+                <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" stroke="none" fill="currentColor"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title">Training</div>
+          <ul class="footer-links">
+            <li><a href="#programs">Powerlifting Foundations</a></li>
+            <li><a href="#programs">Olympic Weightlifting</a></li>
+            <li><a href="#programs">Competition Prep</a></li>
+            <li><a href="#programs">1-on-1 Coaching</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Membership</div>
+          <ul class="footer-links">
+            <li><a href="#membership">Single Access — $79</a></li>
+            <li><a href="#membership">Strength Coaching — $149</a></li>
+            <li><a href="#membership">Elite Athlete — $249</a></li>
+            <li><a href="#location">Free Trial Day</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Contact</div>
+          <ul class="footer-links">
+            <li><a href="tel:5555678901">(555) 567-8901</a></li>
+            <li><a href="#location">1842 Industrial Blvd</a></li>
+            <li><a href="#results">Competition Calendar</a></li>
+            <li><a href="#coaches">Meet Our Coaches</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copy">
+          &copy; 2026 Iron &amp; Grit Strength Studio. All rights reserved.
+        </div>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Liability Waiver</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ===== NAV SCROLL EFFECT =====
+    const nav = document.getElementById('main-nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+    }, { passive: true });
+
+    // ===== MOBILE MENU TOGGLE =====
+    function toggleMenu(btn) {
+      const menu = document.getElementById('mobile-menu');
+      const isOpen = menu.classList.toggle('open');
+      btn.setAttribute('aria-expanded', isOpen);
+      const spans = btn.querySelectorAll('span');
+      if (isOpen) {
+        spans[0].style.transform = 'translateY(7px) rotate(45deg)';
+        spans[1].style.opacity = '0';
+        spans[2].style.transform = 'translateY(-7px) rotate(-45deg)';
+      } else {
+        spans[0].style.transform = '';
+        spans[1].style.opacity = '';
+        spans[2].style.transform = '';
+      }
+    }
+    function closeMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      const btn = document.querySelector('.nav-hamburger');
+      menu.classList.remove('open');
+      if (btn) {
+        btn.setAttribute('aria-expanded', 'false');
+        const spans = btn.querySelectorAll('span');
+        spans[0].style.transform = '';
+        spans[1].style.opacity = '';
+        spans[2].style.transform = '';
+      }
+    }
+
+    // ===== INTERSECTION OBSERVER SCROLL ANIMATIONS =====
+    const observerConfig = {
+      threshold: 0.12,
+      rootMargin: '0px 0px -48px 0px'
+    };
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerConfig);
+
+    document.querySelectorAll('.fade-up, .fade-in').forEach(el => {
+      observer.observe(el);
+    });
+
+    // ===== SMOOTH CLOSE NAV ON ANCHOR CLICK =====
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', (e) => {
+        const target = document.querySelector(link.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          const navHeight = nav.offsetHeight;
+          const top = target.getBoundingClientRect().top + window.scrollY - navHeight;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

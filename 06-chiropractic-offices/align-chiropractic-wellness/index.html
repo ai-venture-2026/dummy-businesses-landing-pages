@@ -1,0 +1,2067 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Align Chiropractic Wellness — Holistic chiropractic care in your community. Spinal adjustments, corrective care, wellness plans, and nutritional counseling. Family-oriented, membership plans available. Book your FREE consultation today.">
+  <meta name="keywords" content="chiropractor, chiropractic, spinal adjustment, back pain, neck pain, sciatica, wellness, family chiropractic">
+  <meta property="og:title" content="Align Chiropractic Wellness | Holistic Chiropractic Care">
+  <meta property="og:description" content="Align Your Body. Reclaim Your Life. 15+ years of holistic chiropractic care. Book your FREE initial consultation today.">
+  <meta property="og:type" content="website">
+  <title>Align Chiropractic Wellness | Holistic Chiropractic Care</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Align Chiropractic Wellness",
+    "description": "Holistic chiropractic practice offering spinal adjustments, corrective care, wellness plans, and nutritional counseling.",
+    "telephone": "(555) 234-5678",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1240 Wellness Blvd, Suite 101",
+      "addressLocality": "Springfield",
+      "addressRegion": "IL",
+      "postalCode": "62701",
+      "addressCountry": "US"
+    },
+    "openingHoursSpecification": [
+      {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Wednesday","Friday"], "opens": "08:00", "closes": "18:00"},
+      {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Thursday"], "opens": "10:00", "closes": "19:00"},
+      {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday"], "opens": "09:00", "closes": "14:00"}
+    ],
+    "image": "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=1200&q=80",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Chiropractic Services",
+      "itemListElement": [
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Basic Membership"}, "price": "49", "priceCurrency": "USD"},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Family Membership"}, "price": "89", "priceCurrency": "USD"},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Premium Membership"}, "price": "129", "priceCurrency": "USD"}
+      ]
+    }
+  }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --primary: #0077BE;
+      --primary-dark: #005f99;
+      --secondary: #2E8B57;
+      --secondary-dark: #236b43;
+      --accent: #FFFFFF;
+      --bg-light: #F0F8FF;
+      --text-dark: #1a2332;
+      --text-mid: #4a5568;
+      --text-light: #718096;
+      --border: #d1e8f5;
+      --shadow-sm: 0 2px 8px rgba(0,119,190,0.10);
+      --shadow-md: 0 6px 24px rgba(0,119,190,0.13);
+      --shadow-lg: 0 16px 48px rgba(0,119,190,0.16);
+      --radius: 12px;
+      --radius-lg: 20px;
+      --transition: 0.35s cubic-bezier(0.4,0,0.2,1);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      color: var(--text-dark);
+      background: #fff;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, h5 {
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.2;
+    }
+
+    img { max-width: 100%; display: block; object-fit: cover; }
+
+    a { text-decoration: none; color: inherit; }
+
+    /* ── UTILITY ── */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .section-label {
+      display: inline-block;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--secondary);
+      background: rgba(46,139,87,0.10);
+      padding: 6px 14px;
+      border-radius: 40px;
+      margin-bottom: 14px;
+    }
+
+    .section-title {
+      font-size: clamp(1.5rem, 3vw, 2.25rem);
+      font-weight: 800;
+      color: var(--text-dark);
+      margin-bottom: 16px;
+    }
+
+    .section-subtitle {
+      font-size: 1.05rem;
+      color: var(--text-mid);
+      max-width: 600px;
+      line-height: 1.7;
+    }
+
+    .section-header { margin-bottom: 48px; }
+    .section-header--center { text-align: center; }
+    .section-header--center .section-subtitle { margin: 0 auto; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 0.75rem 1.75rem;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: var(--transition);
+      border: none;
+      white-space: nowrap;
+      max-height: 52px;
+    }
+
+    .btn--primary {
+      background: var(--primary);
+      color: #fff;
+    }
+    .btn--primary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0,119,190,0.35);
+    }
+
+    .btn--secondary {
+      background: var(--secondary);
+      color: #fff;
+    }
+    .btn--secondary:hover {
+      background: var(--secondary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(46,139,87,0.35);
+    }
+
+    .btn--outline {
+      background: transparent;
+      color: var(--primary);
+      border: 2px solid var(--primary);
+    }
+    .btn--outline:hover {
+      background: var(--primary);
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    .btn--white {
+      background: #fff;
+      color: var(--primary);
+    }
+    .btn--white:hover {
+      background: var(--bg-light);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(255,255,255,0.3);
+    }
+
+    /* ── SCROLL ANIMATIONS ── */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .fade-in--left {
+      opacity: 0;
+      transform: translateX(-40px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade-in--left.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    .fade-in--right {
+      opacity: 0;
+      transform: translateX(40px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade-in--right.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    /* ── NAV ── */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,0.97);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      transition: box-shadow var(--transition);
+    }
+    .nav.scrolled {
+      box-shadow: var(--shadow-md);
+    }
+    .nav__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+    }
+    .nav__logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .nav__logo-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--primary);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .nav__logo-text {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 1.05rem;
+      color: var(--text-dark);
+      line-height: 1.1;
+    }
+    .nav__logo-text span {
+      display: block;
+      font-weight: 400;
+      font-size: 0.72rem;
+      color: var(--text-light);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .nav__links {
+      display: flex;
+      align-items: center;
+      gap: 1.75rem;
+      list-style: none;
+    }
+    .nav__links a {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 0.875rem;
+      color: var(--text-mid);
+      transition: color var(--transition);
+    }
+    .nav__links a:hover { color: var(--primary); }
+    .nav__cta { display: flex; align-items: center; gap: 12px; }
+    .nav__phone {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--secondary);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .nav__hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+    .nav__hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--text-dark);
+      border-radius: 2px;
+      transition: var(--transition);
+    }
+    .nav__mobile {
+      display: none;
+      background: #fff;
+      border-top: 1px solid var(--border);
+      padding: 20px;
+    }
+    .nav__mobile.open { display: block; }
+    .nav__mobile ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+    .nav__mobile ul a {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--text-dark);
+    }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      padding-top: 72px;
+    }
+    .hero__bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=1200&q=80');
+      background-size: cover;
+      background-position: center;
+      will-change: transform;
+    }
+    .hero__overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(110deg, rgba(0,60,100,0.88) 0%, rgba(0,119,190,0.70) 50%, rgba(46,139,87,0.50) 100%);
+    }
+    .hero__content {
+      position: relative;
+      z-index: 2;
+      color: #fff;
+      max-width: 680px;
+      padding: 80px 0;
+    }
+    .hero__badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 40px;
+      padding: 8px 16px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+      backdrop-filter: blur(8px);
+    }
+    .hero__title {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+    .hero__title .highlight {
+      color: #7dd8f8;
+    }
+    .hero__subtitle {
+      font-size: clamp(1rem, 2vw, 1.125rem);
+      opacity: 0.9;
+      margin-bottom: 1.5rem;
+      line-height: 1.7;
+      max-width: 560px;
+    }
+    .hero__actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .hero__stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      padding-top: 36px;
+      border-top: 1px solid rgba(255,255,255,0.2);
+    }
+    .hero__stat-value {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2rem;
+      font-weight: 800;
+      color: #7dd8f8;
+      line-height: 1;
+    }
+    .hero__stat-label {
+      font-size: 0.82rem;
+      opacity: 0.8;
+      margin-top: 4px;
+      font-weight: 500;
+    }
+
+    /* ── CONDITIONS ── */
+    .conditions {
+      padding: 4rem 0;
+      background: #fff;
+    }
+    .conditions__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .condition-card {
+      background: var(--bg-light);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      border: 1px solid var(--border);
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .condition-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      opacity: 0;
+      transition: opacity var(--transition);
+    }
+    .condition-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--primary);
+    }
+    .condition-card:hover::before { opacity: 1; }
+    .condition-card__icon {
+      width: 56px;
+      height: 56px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .condition-card__title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 10px;
+    }
+    .condition-card__desc {
+      font-size: 0.9rem;
+      color: var(--text-mid);
+      line-height: 1.65;
+    }
+
+    /* ── APPROACH ── */
+    .approach {
+      padding: 4rem 0;
+      background: var(--bg-light);
+    }
+    .approach__inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .approach__image {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      position: relative;
+      box-shadow: var(--shadow-lg);
+    }
+    .approach__image img {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+    }
+    .approach__image-badge {
+      position: absolute;
+      bottom: 24px;
+      left: 24px;
+      background: var(--primary);
+      color: #fff;
+      border-radius: var(--radius);
+      padding: 14px 20px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+    }
+    .approach__image-badge span {
+      display: block;
+      font-size: 1.5rem;
+      font-weight: 800;
+      line-height: 1;
+    }
+    .approach__image-badge small {
+      font-size: 0.78rem;
+      font-weight: 500;
+      opacity: 0.85;
+    }
+    .approach__steps { display: flex; flex-direction: column; gap: 0; }
+    .approach__step {
+      display: flex;
+      gap: 20px;
+      position: relative;
+      padding-bottom: 36px;
+    }
+    .approach__step:last-child { padding-bottom: 0; }
+    .approach__step-left {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .approach__step-number {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #fff;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      position: relative;
+      z-index: 1;
+    }
+    .approach__step-line {
+      width: 2px;
+      flex: 1;
+      background: linear-gradient(180deg, var(--primary), var(--secondary));
+      margin-top: 8px;
+      opacity: 0.3;
+    }
+    .approach__step:last-child .approach__step-line { display: none; }
+    .approach__step-body { padding-top: 8px; }
+    .approach__step-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 8px;
+    }
+    .approach__step-desc {
+      font-size: 0.9rem;
+      color: var(--text-mid);
+      line-height: 1.65;
+    }
+
+    /* ── SERVICES / MEMBERSHIP ── */
+    .membership {
+      padding: 4rem 0;
+      background: #fff;
+    }
+    .membership__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      align-items: start;
+    }
+    .membership-card {
+      border-radius: var(--radius);
+      padding: 2rem;
+      border: 2px solid var(--border);
+      position: relative;
+      transition: var(--transition);
+      background: #fff;
+    }
+    .membership-card:hover {
+      border-color: var(--primary);
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-4px);
+    }
+    .membership-card--featured {
+      border-color: var(--primary);
+      background: linear-gradient(160deg, #f0f8ff 0%, #e6f3fb 100%);
+      box-shadow: var(--shadow-lg);
+      transform: scale(1.04);
+    }
+    .membership-card--featured:hover { transform: scale(1.04) translateY(-4px); }
+    .membership-card__badge {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      color: #fff;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 6px 18px;
+      border-radius: 40px;
+      white-space: nowrap;
+    }
+    .membership-card__tier {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+    .membership-card__name {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--text-dark);
+      margin-bottom: 4px;
+    }
+    .membership-card__price {
+      display: flex;
+      align-items: baseline;
+      gap: 4px;
+      margin: 20px 0;
+    }
+    .membership-card__price-amount {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: var(--primary);
+      line-height: 1;
+    }
+    .membership-card__price-period {
+      font-size: 0.85rem;
+      color: var(--text-light);
+    }
+    .membership-card__divider {
+      height: 1px;
+      background: var(--border);
+      margin: 24px 0;
+    }
+    .membership-card__features {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+    .membership-card__feature {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.9rem;
+      color: var(--text-mid);
+    }
+    .membership-card__feature-icon {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+      margin-top: 1px;
+      color: var(--secondary);
+    }
+
+    /* ── DOCTOR ── */
+    .doctor {
+      padding: 4rem 0;
+      background: var(--bg-light);
+    }
+    .doctor__inner {
+      display: grid;
+      grid-template-columns: 420px 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .doctor__image-wrap {
+      position: relative;
+    }
+    .doctor__image {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+    }
+    .doctor__image img {
+      width: 100%;
+      height: 520px;
+      object-fit: cover;
+    }
+    .doctor__credentials {
+      position: absolute;
+      bottom: -20px;
+      right: -20px;
+      background: var(--secondary);
+      color: #fff;
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      text-align: center;
+      box-shadow: var(--shadow-md);
+    }
+    .doctor__credentials-num {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 800;
+      line-height: 1;
+    }
+    .doctor__credentials-label {
+      font-size: 0.75rem;
+      opacity: 0.85;
+      margin-top: 4px;
+    }
+    .doctor__name {
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 800;
+      color: var(--text-dark);
+      margin-bottom: 6px;
+    }
+    .doctor__title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+    .doctor__bio {
+      font-size: 1rem;
+      color: var(--text-mid);
+      line-height: 1.75;
+      margin-bottom: 28px;
+    }
+    .doctor__tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 32px;
+    }
+    .doctor__tag {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 40px;
+      padding: 6px 16px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-mid);
+    }
+
+    /* ── TESTIMONIALS ── */
+    .testimonials {
+      padding: 4rem 0;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .testimonials::before {
+      content: '';
+      position: absolute;
+      top: -60px;
+      right: -60px;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.05);
+    }
+    .testimonials::after {
+      content: '';
+      position: absolute;
+      bottom: -80px;
+      left: -80px;
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.05);
+    }
+    .testimonials .section-title { color: #fff; }
+    .testimonials .section-label { color: #7dd8f8; background: rgba(125,216,248,0.15); }
+    .testimonials .section-subtitle { color: rgba(255,255,255,0.8); }
+    .testimonials__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
+    .testimonial-card {
+      background: rgba(255,255,255,0.10);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      backdrop-filter: blur(12px);
+      transition: var(--transition);
+    }
+    .testimonial-card:hover {
+      background: rgba(255,255,255,0.15);
+      transform: translateY(-4px);
+    }
+    .testimonial-card__stars {
+      display: flex;
+      gap: 4px;
+      margin-bottom: 18px;
+    }
+    .testimonial-card__star {
+      width: 18px;
+      height: 18px;
+      color: #fbbf24;
+    }
+    .testimonial-card__text {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.92);
+      line-height: 1.75;
+      margin-bottom: 24px;
+      font-style: italic;
+    }
+    .testimonial-card__author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .testimonial-card__avatar {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 1rem;
+      color: #fff;
+      flex-shrink: 0;
+    }
+    .testimonial-card__name {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.92rem;
+      color: #fff;
+    }
+    .testimonial-card__detail {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.65);
+      margin-top: 2px;
+    }
+
+    /* ── INSURANCE ── */
+    .insurance {
+      padding: 4rem 0;
+      background: #fff;
+    }
+    .insurance__inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .insurance__logos {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 32px;
+    }
+    .insurance__logo-card {
+      background: var(--bg-light);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px 16px;
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--text-mid);
+      transition: var(--transition);
+    }
+    .insurance__logo-card:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+      box-shadow: var(--shadow-sm);
+    }
+    .insurance__logo-icon {
+      width: 32px;
+      height: 32px;
+      margin: 0 auto 8px;
+      color: var(--primary);
+    }
+    .insurance__special {
+      background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-dark) 100%);
+      border-radius: var(--radius-lg);
+      padding: 48px 40px;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+    .insurance__special::before {
+      content: '';
+      position: absolute;
+      top: -30px;
+      right: -30px;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.08);
+    }
+    .insurance__special-value {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      opacity: 0.8;
+      margin-bottom: 8px;
+    }
+    .insurance__special-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+    .insurance__special-price {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1rem;
+      opacity: 0.85;
+      margin-bottom: 28px;
+      text-decoration: line-through;
+    }
+    .insurance__special-desc {
+      font-size: 0.95rem;
+      opacity: 0.88;
+      line-height: 1.65;
+      margin-bottom: 32px;
+    }
+
+    /* ── LOCATION / CONTACT ── */
+    .contact {
+      padding: 4rem 0;
+      background: var(--bg-light);
+    }
+    .contact__inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+    }
+    .contact__info { display: flex; flex-direction: column; gap: 28px; }
+    .contact__info-item {
+      display: flex;
+      gap: 16px;
+    }
+    .contact__info-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--primary);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: #fff;
+    }
+    .contact__info-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-light);
+      margin-bottom: 4px;
+    }
+    .contact__info-value {
+      font-size: 0.95rem;
+      color: var(--text-dark);
+      line-height: 1.55;
+      font-weight: 500;
+    }
+    .contact__hours {
+      background: #fff;
+      border-radius: var(--radius);
+      padding: 24px;
+      border: 1px solid var(--border);
+    }
+    .contact__hours-title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-light);
+      margin-bottom: 14px;
+    }
+    .contact__hours-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.9rem;
+      padding: 6px 0;
+      border-bottom: 1px solid var(--border);
+      color: var(--text-mid);
+    }
+    .contact__hours-row:last-child { border-bottom: none; }
+    .contact__hours-day { font-weight: 600; color: var(--text-dark); }
+    .contact__form {
+      background: #fff;
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      box-shadow: var(--shadow-md);
+    }
+    .contact__form-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--text-dark);
+      margin-bottom: 6px;
+    }
+    .contact__form-sub {
+      font-size: 0.9rem;
+      color: var(--text-mid);
+      margin-bottom: 28px;
+    }
+    .form__group { margin-bottom: 20px; }
+    .form__label {
+      display: block;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 0.82rem;
+      color: var(--text-dark);
+      margin-bottom: 7px;
+    }
+    .form__input, .form__select, .form__textarea {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1.5px solid var(--border);
+      border-radius: 10px;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 0.92rem;
+      color: var(--text-dark);
+      background: #fff;
+      transition: border-color var(--transition);
+      outline: none;
+    }
+    .form__input:focus, .form__select:focus, .form__textarea:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(0,119,190,0.12);
+    }
+    .form__textarea { resize: vertical; min-height: 100px; }
+    .form__row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    /* ── FOOTER ── */
+    .footer {
+      background: var(--text-dark);
+      color: rgba(255,255,255,0.75);
+      padding: 64px 0 32px;
+    }
+    .footer__grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .footer__brand-name {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+    .footer__brand-tagline {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 16px;
+    }
+    .footer__brand-desc {
+      font-size: 0.88rem;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+    .footer__social {
+      display: flex;
+      gap: 12px;
+    }
+    .footer__social-link {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: rgba(255,255,255,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition);
+      color: rgba(255,255,255,0.7);
+    }
+    .footer__social-link:hover {
+      background: var(--primary);
+      color: #fff;
+    }
+    .footer__col-title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 16px;
+    }
+    .footer__links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .footer__links a {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.65);
+      transition: color var(--transition);
+    }
+    .footer__links a:hover { color: #7dd8f8; }
+    .footer__bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 28px;
+      font-size: 0.82rem;
+    }
+    .footer__bottom-links {
+      display: flex;
+      gap: 20px;
+    }
+    .footer__bottom-links a {
+      color: rgba(255,255,255,0.45);
+      transition: color var(--transition);
+    }
+    .footer__bottom-links a:hover { color: rgba(255,255,255,0.8); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      .membership__grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
+      .membership-card--featured { transform: none; }
+      .membership-card--featured:hover { transform: translateY(-4px); }
+      .doctor__inner { grid-template-columns: 1fr; gap: 48px; }
+      .doctor__image-wrap { max-width: 420px; margin: 0 auto; }
+      .footer__grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .nav__links, .nav__cta .btn { display: none; }
+      .nav__hamburger { display: flex; }
+      .hero__content { padding: 60px 0; }
+      .hero__stats { gap: 20px; }
+      .approach__inner { grid-template-columns: 1fr; }
+      .approach__image img { height: 300px; }
+      .insurance__inner { grid-template-columns: 1fr; }
+      .testimonials__grid { grid-template-columns: 1fr; }
+      .contact__inner { grid-template-columns: 1fr; }
+      .footer__grid { grid-template-columns: 1fr; gap: 32px; }
+      .footer__bottom { flex-direction: column; gap: 12px; text-align: center; }
+      .form__row { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 480px) {
+      .conditions__grid { grid-template-columns: 1fr; }
+      .insurance__logos { grid-template-columns: repeat(2, 1fr); }
+      .hero__actions { flex-direction: column; }
+      .hero__actions .btn { justify-content: center; }
+    }</style>
+  <!-- Codex UI Polish: nav readability and one-line links -->
+  <style id="codex-ui-polish-nav">
+    nav a,
+    .nav a,
+    .navbar a,
+    .nav__links a,
+    .nav-links a,
+    .menu a,
+    .menu__link,
+    .fullscreen-menu a {
+      white-space: nowrap;
+    }
+
+    @media (min-width: 1024px) {
+      nav a,
+      .nav a,
+      .navbar a,
+      .nav__links a,
+      .nav-links a,
+      .menu a,
+      .menu__link,
+      .fullscreen-menu a {
+        line-height: 1.1;
+      }
+
+      .nav__links,
+      .nav-links,
+      .navbar-links,
+      .menu-links,
+      nav ul {
+        row-gap: 0.25rem;
+      }
+
+      .nav__links,
+      .nav-links,
+      .navbar-links,
+      .menu-links,
+      nav ul {
+        align-items: center;
+      }
+
+      .nav__links a,
+      .nav-links a,
+      .navbar-links a,
+      .menu-links a,
+      nav ul a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 1.2rem;
+      }
+    }
+
+    /* Cross-page alignment normalization for common grid/card layouts */
+    .services__grid,
+    .service-grid,
+    .cards-grid,
+    .features-grid,
+    .pricing__grid,
+    .plans-grid,
+    .results__grid,
+    .reviews__grid,
+    .events-grid,
+    .coaches__grid,
+    .therapists-grid,
+    .portfolio__grid,
+    .tips-grid,
+    .testimonials-grid,
+    .grid {
+      align-items: stretch;
+    }
+
+    .service-card,
+    .card,
+    .feature-card,
+    .event-card,
+    .plan,
+    .pricing-card,
+    .testimonial,
+    .review,
+    .coach,
+    .therapist-card,
+    .project,
+    .tip-card,
+    .serve-card,
+    .info-card,
+    .stat-card {
+      height: 100%;
+    }
+
+    .service-card img,
+    .project img,
+    .tip-card img,
+    .coach img,
+    .therapist-card img,
+    .feature-card img,
+    .gallery-item img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    /* Improve readability where copy is dense without changing content */
+    section p,
+    .section p,
+    .card p,
+    .service-card p,
+    .feature-card p,
+    .testimonial p,
+    .event-card p,
+    .info-card p {
+      max-width: 66ch;
+      text-wrap: pretty;
+    }
+
+    .section__header p,
+    .hero p,
+    .footer p,
+    .map-overlay-card,
+    .location__item-value {
+      max-width: none;
+    }
+  </style>
+
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="mainNav" aria-label="Main navigation">
+  <div class="container">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo" aria-label="Align Chiropractic Wellness home">
+        <div class="nav__logo-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2C12 2 8 6 8 10c0 2 1.5 4 4 4s4-2 4-4c0-4-4-8-4-8z"/>
+            <path d="M12 14v8"/>
+            <path d="M9 19h6"/>
+          </svg>
+        </div>
+        <div class="nav__logo-text">
+          Align Chiropractic
+          <span>Wellness Center</span>
+        </div>
+      </a>
+      <ul class="nav__links" role="list">
+        <li><a href="#conditions">Conditions</a></li>
+        <li><a href="#approach">Our Approach</a></li>
+        <li><a href="#membership">Membership</a></li>
+        <li><a href="#doctor">Our Doctor</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav__cta">
+        <a href="tel:5552345678" class="nav__phone" aria-label="Call us at 555-234-5678">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 01.67 2.18 2 2 0 012.63 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.6a16 16 0 006.29 6.29l.96-.96a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          (555) 234-5678
+        </a>
+        <a href="#contact" class="btn btn--primary">Book Free Consultation</a>
+      </div>
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="nav__mobile" id="mobileMenu" role="navigation" aria-label="Mobile navigation">
+    <ul>
+      <li><a href="#conditions">Conditions</a></li>
+      <li><a href="#approach">Our Approach</a></li>
+      <li><a href="#membership">Membership</a></li>
+      <li><a href="#doctor">Our Doctor</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="btn btn--primary" style="width:100%;justify-content:center;">Book Free Consultation</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero" aria-label="Hero section">
+  <div class="hero__bg" id="heroBg" role="img" aria-label="Chiropractor working with patient"></div>
+  <div class="hero__overlay" aria-hidden="true"></div>
+  <div class="container">
+    <div class="hero__content">
+      <div class="hero__badge" aria-label="Family-owned chiropractic practice">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        Family-Owned · Est. 2009
+      </div>
+      <h1 class="hero__title">
+        Align Your Body.<br>
+        <span class="highlight">Reclaim Your Life.</span>
+      </h1>
+      <p class="hero__subtitle">Experience holistic chiropractic care that goes beyond symptom relief — we address root causes and build lasting wellness for your whole family.</p>
+      <div class="hero__actions">
+        <a href="#contact" class="btn btn--white">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Book Free Consultation
+        </a>
+        <a href="tel:5552345678" class="btn btn--outline" style="color:#fff;border-color:rgba(255,255,255,0.5);" onmouseover="this.style.background='rgba(255,255,255,0.15)'" onmouseout="this.style.background='transparent'">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 01.67 2.18 2 2 0 012.63 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.6a16 16 0 006.29 6.29l.96-.96a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          Call (555) 234-5678
+        </a>
+      </div>
+      <div class="hero__stats" role="list" aria-label="Practice statistics">
+        <div role="listitem">
+          <div class="hero__stat-value">15+</div>
+          <div class="hero__stat-label">Years of Experience</div>
+        </div>
+        <div role="listitem">
+          <div class="hero__stat-value">2,000+</div>
+          <div class="hero__stat-label">Patients Helped</div>
+        </div>
+        <div role="listitem">
+          <div class="hero__stat-value">98%</div>
+          <div class="hero__stat-label">Patient Satisfaction</div>
+        </div>
+        <div role="listitem">
+          <div class="hero__stat-value">Family</div>
+          <div class="hero__stat-label">Owned &amp; Operated</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONDITIONS TREATED -->
+<section class="conditions" id="conditions" aria-labelledby="conditions-title">
+  <div class="container">
+    <header class="section-header section-header--center fade-in">
+      <div class="section-label">Conditions We Treat</div>
+      <h2 class="section-title" id="conditions-title">Find Relief From What's Holding You Back</h2>
+      <p class="section-subtitle">Our evidence-based chiropractic care addresses a wide range of musculoskeletal conditions with individualized treatment plans tailored to your needs.</p>
+    </header>
+    <div class="conditions__grid">
+
+      <article class="condition-card fade-in">
+        <div class="condition-card__icon" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
+            <path d="M12 8v4M12 16h.01"/>
+          </svg>
+        </div>
+        <h3 class="condition-card__title">Back Pain</h3>
+        <p class="condition-card__desc">From acute lower back injuries to chronic pain, our spinal adjustments and corrective protocols relieve tension and restore mobility.</p>
+      </article>
+
+      <article class="condition-card fade-in" style="transition-delay:0.1s">
+        <div class="condition-card__icon" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="5" r="3"/>
+            <path d="M12 8v6"/>
+            <path d="M8 14c0 0 1 3 4 3s4-3 4-3"/>
+          </svg>
+        </div>
+        <h3 class="condition-card__title">Neck Pain</h3>
+        <p class="condition-card__desc">Cervical adjustments and soft tissue therapy address stiffness, muscle tension, and restricted range of motion in the neck.</p>
+      </article>
+
+      <article class="condition-card fade-in" style="transition-delay:0.15s">
+        <div class="condition-card__icon" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/>
+          </svg>
+        </div>
+        <h3 class="condition-card__title">Headaches &amp; Migraines</h3>
+        <p class="condition-card__desc">Cervicogenic headaches and tension headaches often stem from spinal misalignment — chiropractic care provides lasting, drug-free relief.</p>
+      </article>
+
+      <article class="condition-card fade-in" style="transition-delay:0.2s">
+        <div class="condition-card__icon" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 3a2.828 2.828 0 114 4L7.5 20.5 2 22l1.5-5.5L17 3z"/>
+          </svg>
+        </div>
+        <h3 class="condition-card__title">Sciatica</h3>
+        <p class="condition-card__desc">Targeted lumbar and sacral adjustments relieve pressure on the sciatic nerve, reducing radiating pain, numbness, and tingling in the leg.</p>
+      </article>
+
+      <article class="condition-card fade-in" style="transition-delay:0.25s">
+        <div class="condition-card__icon" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <polyline points="12 6 12 12 16 14"/>
+          </svg>
+        </div>
+        <h3 class="condition-card__title">Sports Injuries</h3>
+        <p class="condition-card__desc">Athletes recover faster and perform better with chiropractic care addressing sprains, strains, joint dysfunction, and overuse injuries.</p>
+      </article>
+
+      <article class="condition-card fade-in" style="transition-delay:0.3s">
+        <div class="condition-card__icon" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="2" x2="12" y2="22"/>
+            <path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
+          </svg>
+        </div>
+        <h3 class="condition-card__title">Posture Problems</h3>
+        <p class="condition-card__desc">Corrective care protocols and ergonomic guidance address forward head posture, rounded shoulders, and scoliosis for lasting alignment.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- OUR APPROACH -->
+<section class="approach" id="approach" aria-labelledby="approach-title">
+  <div class="container">
+    <div class="approach__inner">
+      <div class="approach__image fade-in--left">
+        <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=1200&q=80" alt="Chiropractic treatment in progress" loading="lazy" width="600" height="480">
+        <div class="approach__image-badge" aria-label="Over 15 years serving families">
+          <span>15+</span>
+          <small>Years Serving Families</small>
+        </div>
+      </div>
+      <div class="fade-in--right">
+        <div class="section-label">Our Approach</div>
+        <h2 class="section-title" id="approach-title">Your Wellness Journey in 3 Steps</h2>
+        <p class="section-subtitle" style="margin-bottom:40px;">We don't just treat pain — we build a roadmap to lifelong health with a structured, patient-centered approach.</p>
+        <div class="approach__steps" role="list">
+          <div class="approach__step" role="listitem">
+            <div class="approach__step-left" aria-hidden="true">
+              <div class="approach__step-number">1</div>
+              <div class="approach__step-line"></div>
+            </div>
+            <div class="approach__step-body">
+              <h3 class="approach__step-title">Comprehensive Assessment</h3>
+              <p class="approach__step-desc">We begin with a thorough intake consultation, postural analysis, digital X-rays (when indicated), and neurological evaluation to identify the root cause of your condition — not just the symptoms.</p>
+            </div>
+          </div>
+          <div class="approach__step" role="listitem">
+            <div class="approach__step-left" aria-hidden="true">
+              <div class="approach__step-number">2</div>
+              <div class="approach__step-line"></div>
+            </div>
+            <div class="approach__step-body">
+              <h3 class="approach__step-title">Personalized Treatment Plan</h3>
+              <p class="approach__step-desc">Based on your assessment, we design a custom care plan combining spinal adjustments, corrective exercises, nutritional guidance, and therapeutic modalities tailored to your goals and lifestyle.</p>
+            </div>
+          </div>
+          <div class="approach__step" role="listitem">
+            <div class="approach__step-left" aria-hidden="true">
+              <div class="approach__step-number">3</div>
+              <div class="approach__step-line"></div>
+            </div>
+            <div class="approach__step-body">
+              <h3 class="approach__step-title">Ongoing Wellness &amp; Maintenance</h3>
+              <p class="approach__step-desc">True health is a journey. Our wellness membership plans keep your spine aligned and your nervous system functioning optimally — preventing problems before they start and supporting lifelong vitality.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MEMBERSHIP -->
+<section class="membership" id="membership" aria-labelledby="membership-title">
+  <div class="container">
+    <header class="section-header section-header--center fade-in">
+      <div class="section-label">Membership Plans</div>
+      <h2 class="section-title" id="membership-title">Invest in Your Long-Term Health</h2>
+      <p class="section-subtitle">Flexible membership plans that make consistent chiropractic care affordable for individuals and families. No hidden fees — just better health.</p>
+    </header>
+    <div class="membership__grid">
+
+      <div class="membership-card fade-in">
+        <div class="membership-card__tier">Individual</div>
+        <div class="membership-card__name">Basic Wellness</div>
+        <div class="membership-card__price">
+          <span class="membership-card__price-amount">$49</span>
+          <span class="membership-card__price-period">/month</span>
+        </div>
+        <div class="membership-card__divider"></div>
+        <ul class="membership-card__features" role="list">
+          <li class="membership-card__feature">
+            <svg class="membership-card__feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            2 spinal adjustments per month
+          </li>
+          <li class="membership-card__feature">
+            <svg class="membership-card__feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Initial health assessment
+          </li>
+          <li class="membership-card__feature">
+            <svg class="membership-card__feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Posture correction guidance
+          </li>
+          <li class="membership-card__feature">
+            <svg class="membership-card__feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            10% off additional services
+          </li>
+          <li class="membership-card__feature">
+            <svg class="membership-card__feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Online patient portal access
+          </li>
+        </ul>
+        <a href="#contact" class="btn btn--outline" style="width:100%;justify-content:center;">Get Started</a>
+      </div>
+
+      <div class="membership-card membership-card--featured fade-in" style="transition-delay:0.1s">
+        <div class="membership-card__badge">Most Popular</div>
+        <div class="membership-card__tier">Family</div>
+        <div class="membership-card__name">Family Care</div>
+        <div class="membership-card__price">
+          <span class="membership-card__price-amount">$89</span>
+          <span class="membership-card__price-period">/month</span>
+        </div>
+        <div class="membership-card__divider"></div>
+        <ul class="membership-card__features" role="list">
+          <li class="membership-card__feature">
+            <svg class="membership-card__feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Up to 4 family members covered
+          </li>
+          <li class="membership-card__feature">
+            <svg class="membership-card__feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            4 adjustments per member/month
+          </li>
+          <li class="membership-card__feature">
+            <svg class="membership-card__feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Nutritional counseling (quarterly)
+          </li>
+          <li class="membership-card__feature">
+            <svg class="membership-card__feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Pediatric chiropractic included
+          </li>
+          <li class="membership-card__feature">
+            <svg class="membership-card__feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            20% off all additional services
+          </li>
+          <li class="membership-card__feature">
+            <svg class="membership-card__feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Priority scheduling
+          </li>
+        </ul>
+        <a href="#contact" class="btn btn--primary" style="width:100%;justify-content:center;">Get Started</a>
+      </div>
+
+      <div class="membership-card fade-in" style="transition-delay:0.2s">
+        <div class="membership-card__tier">Premium</div>
+        <div class="membership-card__name">Total Wellness</div>
+        <div class="membership-card__price">
+          <span class="membership-card__price-amount">$129</span>
+          <span class="membership-card__price-period">/month</span>
+        </div>
+        <div class="membership-card__divider"></div>
+        <ul class="membership-card__features" role="list">
+          <li class="membership-card__feature">
+            <svg class="membership-card__feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Unlimited adjustments
+          </li>
+          <li class="membership-card__feature">
+            <svg class="membership-card__feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Monthly nutritional counseling
+          </li>
+          <li class="membership-card__feature">
+            <svg class="membership-card__feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Corrective care program
+          </li>
+          <li class="membership-card__feature">
+            <svg class="membership-card__feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Massage therapy sessions (2/mo)
+          </li>
+          <li class="membership-card__feature">
+            <svg class="membership-card__feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            30% off all additional services
+          </li>
+          <li class="membership-card__feature">
+            <svg class="membership-card__feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Same-day emergency appointments
+          </li>
+        </ul>
+        <a href="#contact" class="btn btn--secondary" style="width:100%;justify-content:center;">Get Started</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- MEET THE DOCTOR -->
+<section class="doctor" id="doctor" aria-labelledby="doctor-title">
+  <div class="container">
+    <div class="doctor__inner">
+      <div class="doctor__image-wrap fade-in--left">
+        <div class="doctor__image">
+          <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=1200&q=80" alt="Dr. Sarah Mitchell, D.C., founder of Align Chiropractic Wellness" loading="lazy" width="420" height="520">
+        </div>
+        <div class="doctor__credentials" aria-label="15 years in practice">
+          <div class="doctor__credentials-num">15</div>
+          <div class="doctor__credentials-label">Years in Practice</div>
+        </div>
+      </div>
+      <div class="fade-in--right">
+        <div class="section-label">Meet the Doctor</div>
+        <h2 class="section-title" id="doctor-title">Dr. Sarah Mitchell, D.C.</h2>
+        <p class="doctor__title">Doctor of Chiropractic · Founder &amp; Lead Practitioner</p>
+        <p class="doctor__bio">Dr. Mitchell earned her Doctor of Chiropractic degree from National University of Health Sciences and completed advanced training in corrective care and functional nutrition. With over 15 years of clinical experience and more than 2,000 patients helped, she founded Align Chiropractic Wellness on one belief: every person deserves to live free from pain and full of vitality.</p>
+        <p class="doctor__bio">A mother of three and lifelong advocate for family wellness, Dr. Mitchell takes a deeply personal approach to care — treating each patient as a whole person, not just a set of symptoms. She specializes in corrective chiropractic care, pediatric chiropractic, and integrating nutrition into long-term wellness plans.</p>
+        <div class="doctor__tags" role="list" aria-label="Credentials and specializations">
+          <span class="doctor__tag" role="listitem">D.C. — National Univ. of Health Sciences</span>
+          <span class="doctor__tag" role="listitem">Certified Corrective Care</span>
+          <span class="doctor__tag" role="listitem">Pediatric Chiropractic</span>
+          <span class="doctor__tag" role="listitem">Functional Nutrition</span>
+          <span class="doctor__tag" role="listitem">ACA Member</span>
+          <span class="doctor__tag" role="listitem">ICA Member</span>
+        </div>
+        <a href="#contact" class="btn btn--primary">Schedule with Dr. Mitchell</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="testimonials" aria-labelledby="testimonials-title">
+  <div class="container">
+    <header class="section-header section-header--center fade-in">
+      <div class="section-label">Patient Stories</div>
+      <h2 class="section-title" id="testimonials-title">Real Results From Real Patients</h2>
+      <p class="section-subtitle">Don't take our word for it — hear from the patients whose lives have been transformed through chiropractic wellness care.</p>
+    </header>
+    <div class="testimonials__grid">
+
+      <article class="testimonial-card fade-in">
+        <div class="testimonial-card__stars" aria-label="5 out of 5 stars">
+          <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="testimonial-card__text">"I'd suffered from lower back pain for 6 years and tried everything — physical therapy, injections, medication. After just 8 weeks with Dr. Mitchell, I was pain-free for the first time in years. The Family membership is worth every penny for us."</p>
+        <div class="testimonial-card__author">
+          <div class="testimonial-card__avatar" aria-hidden="true">JR</div>
+          <div>
+            <div class="testimonial-card__name">James R.</div>
+            <div class="testimonial-card__detail">Patient for 3 years · Lower Back Pain</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="testimonial-card fade-in" style="transition-delay:0.1s">
+        <div class="testimonial-card__stars" aria-label="5 out of 5 stars">
+          <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="testimonial-card__text">"My chronic migraines were debilitating — up to 15 a month. Dr. Mitchell identified a cervical subluxation as the cause. After corrective care, I went from 15 migraines a month to barely 1. I feel like I got my life back. This place is incredible."</p>
+        <div class="testimonial-card__author">
+          <div class="testimonial-card__avatar" aria-hidden="true">MC</div>
+          <div>
+            <div class="testimonial-card__name">Maria C.</div>
+            <div class="testimonial-card__detail">Patient for 2 years · Chronic Migraines</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="testimonial-card fade-in" style="transition-delay:0.2s">
+        <div class="testimonial-card__stars" aria-label="5 out of 5 stars">
+          <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="testimonial-card__text">"As a runner, I was sidelined with sciatica that nothing seemed to fix. Dr. Mitchell had me back on the road in 6 weeks. Now I'm on the Premium membership and my recovery times have never been better. Best investment in my health I've ever made."</p>
+        <div class="testimonial-card__author">
+          <div class="testimonial-card__avatar" aria-hidden="true">DK</div>
+          <div>
+            <div class="testimonial-card__name">David K.</div>
+            <div class="testimonial-card__detail">Patient for 18 months · Sciatica / Sports</div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- INSURANCE -->
+<section class="insurance" id="insurance" aria-labelledby="insurance-title">
+  <div class="container">
+    <div class="insurance__inner">
+      <div class="fade-in--left">
+        <div class="section-label">Insurance &amp; Billing</div>
+        <h2 class="section-title" id="insurance-title">We Accept Most Major Insurance Plans</h2>
+        <p class="section-subtitle">We work with most major insurance providers to make chiropractic care accessible and affordable. Our billing team handles the paperwork so you can focus on healing.</p>
+        <div class="insurance__logos" role="list" aria-label="Accepted insurance providers">
+          <div class="insurance__logo-card" role="listitem">
+            <svg class="insurance__logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Blue Cross
+          </div>
+          <div class="insurance__logo-card" role="listitem">
+            <svg class="insurance__logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Aetna
+          </div>
+          <div class="insurance__logo-card" role="listitem">
+            <svg class="insurance__logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            United Health
+          </div>
+          <div class="insurance__logo-card" role="listitem">
+            <svg class="insurance__logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Cigna
+          </div>
+          <div class="insurance__logo-card" role="listitem">
+            <svg class="insurance__logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Medicare
+          </div>
+          <div class="insurance__logo-card" role="listitem">
+            <svg class="insurance__logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+            + More
+          </div>
+        </div>
+      </div>
+      <div class="fade-in--right">
+        <div class="insurance__special">
+          <div class="insurance__special-value">New Patient Special</div>
+          <h3 class="insurance__special-title">FREE Initial Consultation</h3>
+          <div class="insurance__special-price">Regularly $150 Value</div>
+          <p class="insurance__special-desc">New to Align Chiropractic Wellness? Your first consultation — including a comprehensive health history, postural assessment, and personalized care recommendations — is completely free. No obligation, no pressure.</p>
+          <a href="#contact" class="btn btn--white">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            Claim Your FREE Consultation
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT / LOCATION -->
+<section class="contact" id="contact" aria-labelledby="contact-title">
+  <div class="container">
+    <header class="section-header section-header--center fade-in">
+      <div class="section-label">Location &amp; Contact</div>
+      <h2 class="section-title" id="contact-title">Visit Us or Book Online</h2>
+      <p class="section-subtitle">We're conveniently located in the heart of Springfield. New patients are always welcome — and your first visit is FREE.</p>
+    </header>
+    <div class="contact__inner">
+      <div>
+        <div class="contact__info fade-in--left">
+          <div class="contact__info-item">
+            <div class="contact__info-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <div class="contact__info-label">Address</div>
+              <div class="contact__info-value">1240 Wellness Blvd, Suite 101<br>Springfield, IL 62701</div>
+            </div>
+          </div>
+          <div class="contact__info-item">
+            <div class="contact__info-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 01.67 2.18 2 2 0 012.63 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.6a16 16 0 006.29 6.29l.96-.96a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            </div>
+            <div>
+              <div class="contact__info-label">Phone</div>
+              <div class="contact__info-value"><a href="tel:5552345678" style="color:var(--primary);font-weight:600;">(555) 234-5678</a></div>
+            </div>
+          </div>
+          <div class="contact__info-item">
+            <div class="contact__info-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <div class="contact__info-label">Email</div>
+              <div class="contact__info-value"><a href="mailto:hello@alignchirowell.com" style="color:var(--primary);font-weight:600;">hello@alignchirowell.com</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="contact__hours fade-in--left" style="margin-top:28px;transition-delay:0.15s;" aria-label="Office hours">
+          <div class="contact__hours-title">Office Hours</div>
+          <div class="contact__hours-row">
+            <span class="contact__hours-day">Monday, Wed, Friday</span>
+            <span>8:00 AM – 6:00 PM</span>
+          </div>
+          <div class="contact__hours-row">
+            <span class="contact__hours-day">Tuesday &amp; Thursday</span>
+            <span>10:00 AM – 7:00 PM</span>
+          </div>
+          <div class="contact__hours-row">
+            <span class="contact__hours-day">Saturday</span>
+            <span>9:00 AM – 2:00 PM</span>
+          </div>
+          <div class="contact__hours-row">
+            <span class="contact__hours-day">Sunday</span>
+            <span>Closed</span>
+          </div>
+        </div>
+        <div style="margin-top:28px;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-md);" class="fade-in--left" aria-label="Map of clinic location">
+          <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=1200&q=80" alt="Align Chiropractic Wellness clinic exterior" loading="lazy" width="600" height="220" style="width:100%;height:220px;object-fit:cover;">
+        </div>
+      </div>
+      <div class="contact__form fade-in--right">
+        <h3 class="contact__form-title">Book Your FREE Consultation</h3>
+        <p class="contact__form-sub">Fill out the form below and we'll confirm your appointment within 24 hours.</p>
+        <form action="#" method="POST" novalidate aria-label="Appointment booking form">
+          <div class="form__row">
+            <div class="form__group">
+              <label class="form__label" for="firstName">First Name <span aria-hidden="true" style="color:var(--primary);">*</span></label>
+              <input class="form__input" type="text" id="firstName" name="firstName" placeholder="Jane" required autocomplete="given-name">
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="lastName">Last Name <span aria-hidden="true" style="color:var(--primary);">*</span></label>
+              <input class="form__input" type="text" id="lastName" name="lastName" placeholder="Smith" required autocomplete="family-name">
+            </div>
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="email">Email Address <span aria-hidden="true" style="color:var(--primary);">*</span></label>
+            <input class="form__input" type="email" id="email" name="email" placeholder="jane@example.com" required autocomplete="email">
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="phone">Phone Number</label>
+            <input class="form__input" type="tel" id="phone" name="phone" placeholder="(555) 000-0000" autocomplete="tel">
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="condition">Primary Concern</label>
+            <select class="form__select" id="condition" name="condition">
+              <option value="">Select a condition...</option>
+              <option>Back Pain</option>
+              <option>Neck Pain</option>
+              <option>Headaches / Migraines</option>
+              <option>Sciatica</option>
+              <option>Sports Injury</option>
+              <option>Posture Problems</option>
+              <option>General Wellness</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="message">Tell Us More (optional)</label>
+            <textarea class="form__textarea" id="message" name="message" placeholder="Briefly describe your symptoms or goals..."></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary" style="width:100%;justify-content:center;padding:16px 28px;font-size:1rem;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            Book My FREE Consultation
+          </button>
+          <p style="font-size:0.78rem;color:var(--text-light);text-align:center;margin-top:12px;">FREE Initial Consultation — $150 Value. No obligation.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer" aria-label="Site footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__brand-name">Align Chiropractic Wellness</div>
+        <div class="footer__brand-tagline">Align Your Body. Reclaim Your Life.</div>
+        <p class="footer__brand-desc">A family-owned holistic chiropractic practice dedicated to helping patients in Springfield live pain-free, healthy, and vibrant lives through evidence-based, whole-body wellness care.</p>
+        <div class="footer__social" aria-label="Social media links">
+          <a href="#" class="footer__social-link" aria-label="Facebook">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+          <a href="#" class="footer__social-link" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" class="footer__social-link" aria-label="Google">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <div class="footer__col-title">Services</div>
+        <ul class="footer__links">
+          <li><a href="#conditions">Spinal Adjustments</a></li>
+          <li><a href="#conditions">Corrective Care</a></li>
+          <li><a href="#conditions">Wellness Plans</a></li>
+          <li><a href="#conditions">Nutritional Counseling</a></li>
+          <li><a href="#conditions">Pediatric Chiropractic</a></li>
+          <li><a href="#conditions">Sports Chiropractic</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer__col-title">Quick Links</div>
+        <ul class="footer__links">
+          <li><a href="#conditions">Conditions Treated</a></li>
+          <li><a href="#approach">Our Approach</a></li>
+          <li><a href="#membership">Membership Plans</a></li>
+          <li><a href="#doctor">Meet the Doctor</a></li>
+          <li><a href="#insurance">Insurance</a></li>
+          <li><a href="#contact">Book Appointment</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer__col-title">Contact</div>
+        <ul class="footer__links">
+          <li>1240 Wellness Blvd, Suite 101</li>
+          <li>Springfield, IL 62701</li>
+          <li><a href="tel:5552345678">(555) 234-5678</a></li>
+          <li><a href="mailto:hello@alignchirowell.com">hello@alignchirowell.com</a></li>
+        </ul>
+        <div style="margin-top:20px;">
+          <a href="#contact" class="btn btn--primary" style="font-size:0.82rem;padding:10px 18px;">Book Free Consult</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div style="color:rgba(255,255,255,0.4);font-size:0.82rem;">
+        &copy; 2026 Align Chiropractic Wellness. All rights reserved.
+      </div>
+      <div class="footer__bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Accessibility</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Nav scroll effect
+  const nav = document.getElementById('mainNav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 20);
+  }, { passive: true });
+
+  // Mobile menu toggle
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', isOpen);
+  });
+
+  // Close mobile menu on link click
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', false);
+    });
+  });
+
+  // Parallax hero
+  const heroBg = document.getElementById('heroBg');
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        const scrollY = window.scrollY;
+        if (scrollY < window.innerHeight * 1.5) {
+          heroBg.style.transform = `translateY(${scrollY * 0.35}px)`;
+        }
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }, { passive: true });
+
+  // Intersection Observer for scroll animations
+  const animatedEls = document.querySelectorAll('.fade-in, .fade-in--left, .fade-in--right');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  animatedEls.forEach(el => observer.observe(el));
+
+  // Form submission
+  const form = document.querySelector('form');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const btn = form.querySelector('button[type="submit"]');
+    const original = btn.innerHTML;
+    btn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Request Sent!';
+    btn.style.background = 'var(--secondary)';
+    btn.disabled = true;
+    setTimeout(() => {
+      btn.innerHTML = original;
+      btn.style.background = '';
+      btn.disabled = false;
+      form.reset();
+    }, 3500);
+  });
+
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        const offset = 80;
+        const top = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
+    });
+  });
+</script>
+</body>
+</html>

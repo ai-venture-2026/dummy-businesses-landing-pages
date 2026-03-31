@@ -1,0 +1,2274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pediatric &amp; Family Chiropractic | Gentle Care for Every Stage of Life</title>
+  <meta name="description" content="Gentle, family-focused chiropractic care for infants, children, expecting mothers, and adults. Webster Technique certified. Accepting new patients. FREE Initial Exam for new families." />
+  <meta name="keywords" content="pediatric chiropractic, family chiropractic, Webster technique, pregnancy chiropractic, infant chiropractic, gentle chiropractic, prenatal chiropractic" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Pediatric &amp; Family Chiropractic | Gentle Care for Every Stage of Life" />
+  <meta property="og:description" content="Gentle, family-focused chiropractic care for infants, children, expecting mothers, and adults. Webster Technique certified." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Pediatric & Family Chiropractic",
+    "description": "Gentle, family-focused chiropractic care for infants, children, expecting mothers, and adults. Webster Technique certified.",
+    "telephone": "(555) 345-6789",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "4820 Willow Creek Blvd, Suite 110",
+      "addressLocality": "Springfield",
+      "addressRegion": "IL",
+      "postalCode": "62704",
+      "addressCountry": "US"
+    },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Wednesday","Friday"], "opens": "08:00", "closes": "18:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Thursday"], "opens": "10:00", "closes": "20:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "14:00" }
+    ],
+    "priceRange": "$$",
+    "medicalSpecialty": "Chiropractic"
+  }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --blue: #4169E1;
+      --blue-dark: #2f52c8;
+      --blue-light: #eef1fc;
+      --green: #32CD32;
+      --green-dark: #28a428;
+      --green-light: #e8fde8;
+      --white: #FFFFFF;
+      --bg: #F8FFF8;
+      --text: #1a2744;
+      --text-muted: #5a6a8a;
+      --border: #d6e8d6;
+      --radius: 16px;
+      --radius-sm: 10px;
+      --shadow: 0 4px 24px rgba(65,105,225,0.10);
+      --shadow-lg: 0 8px 40px rgba(65,105,225,0.16);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Nunito', sans-serif;
+      line-height: 1.2;
+    }
+
+    img { max-width: 100%; display: block; object-fit: cover; }
+
+    a { text-decoration: none; color: inherit; }
+
+    .container {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ===== NAV ===== */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: var(--white);
+      box-shadow: 0 2px 16px rgba(65,105,225,0.08);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 70px;
+      gap: 24px;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Nunito', sans-serif;
+      font-weight: 900;
+      font-size: 1.15rem;
+      color: var(--blue);
+      white-space: nowrap;
+    }
+
+    .nav-logo svg { flex-shrink: 0; }
+
+    .nav-links {
+      display: flex;
+      gap: 1.75rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--blue); }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .nav-phone {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--blue);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 0.75rem 1.75rem;
+      border-radius: 50px;
+      font-family: 'Nunito', sans-serif;
+      font-weight: 800;
+      font-size: 0.875rem;
+      max-height: 52px;
+      cursor: pointer;
+      border: none;
+      transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+    }
+
+    .btn-green {
+      background: var(--green);
+      color: var(--white);
+      box-shadow: 0 4px 14px rgba(50,205,50,0.35);
+    }
+
+    .btn-green:hover {
+      background: var(--green-dark);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(50,205,50,0.45);
+    }
+
+    .btn-blue {
+      background: var(--blue);
+      color: var(--white);
+      box-shadow: 0 4px 14px rgba(65,105,225,0.35);
+    }
+
+    .btn-blue:hover {
+      background: var(--blue-dark);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(65,105,225,0.45);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--blue);
+      border: 2px solid var(--blue);
+    }
+
+    .btn-outline:hover {
+      background: var(--blue);
+      color: var(--white);
+    }
+
+    .btn-lg { padding: 0.75rem 1.75rem; font-size: 1rem; }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+      background: none;
+      border: none;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2.5px;
+      background: var(--blue);
+      border-radius: 2px;
+      transition: transform 0.3s;
+    }
+
+    /* ===== WAVES ===== */
+    .wave-top, .wave-bottom {
+      display: block;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+    }
+
+    .wave-top svg, .wave-bottom svg { display: block; width: 100%; }
+
+    /* ===== HERO ===== */
+    .hero {
+      background: linear-gradient(135deg, #eef3ff 0%, #f0fff0 100%);
+      padding: 80px 0 0;
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--green-light);
+      color: var(--green-dark);
+      border: 1.5px solid #b6edb6;
+      border-radius: 50px;
+      padding: 6px 16px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      font-family: 'Nunito', sans-serif;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 900;
+      color: var(--text);
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span { color: var(--blue); }
+
+    .hero-sub {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+      max-width: 480px;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+
+    .stat {
+      text-align: center;
+    }
+
+    .stat-num {
+      font-family: 'Nunito', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: var(--blue);
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-top: 4px;
+    }
+
+    .hero-img-wrap {
+      position: relative;
+    }
+
+    .hero-img-wrap img {
+      width: 100%;
+      height: 520px;
+      object-fit: cover;
+      border-radius: 24px 24px 0 0;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .hero-float-badge {
+      position: absolute;
+      top: 24px;
+      left: -20px;
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 14px 18px;
+      box-shadow: var(--shadow);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 800;
+    }
+
+    .hero-float-badge .dot {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      background: var(--green);
+      flex-shrink: 0;
+    }
+
+    .hero-float-badge2 {
+      position: absolute;
+      bottom: 40px;
+      right: -16px;
+      background: var(--blue);
+      color: var(--white);
+      border-radius: var(--radius);
+      padding: 14px 18px;
+      box-shadow: 0 8px 24px rgba(65,105,225,0.35);
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 800;
+      text-align: center;
+    }
+
+    /* ===== SECTION COMMONS ===== */
+    section { position: relative; }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 52px;
+    }
+
+    .section-tag {
+      display: inline-block;
+      background: var(--blue-light);
+      color: var(--blue);
+      border-radius: 50px;
+      padding: 5px 16px;
+      font-size: 0.78rem;
+      font-weight: 800;
+      font-family: 'Nunito', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+    }
+
+    .section-tag.green {
+      background: var(--green-light);
+      color: var(--green-dark);
+    }
+
+    .section-header h2 {
+      font-size: clamp(1.5rem, 3vw, 2.25rem);
+      font-weight: 900;
+      color: var(--text);
+      margin-bottom: 14px;
+    }
+
+    .section-header p {
+      font-size: 1rem;
+      color: var(--text-muted);
+      max-width: 580px;
+      margin: 0 auto;
+    }
+
+    /* ===== WHO WE CARE FOR ===== */
+    .care-section {
+      padding: 4rem 0;
+      background: var(--white);
+    }
+
+    .care-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .care-card {
+      background: var(--bg);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.75rem 1.5rem;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    }
+
+    .care-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--blue);
+    }
+
+    .care-card .icon-wrap {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 18px;
+    }
+
+    .care-card h3 {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 10px;
+    }
+
+    .care-card p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .care-card .img-wrap {
+      width: 100%;
+      height: 150px;
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      margin-bottom: 18px;
+    }
+
+    .care-card .img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* ===== WHY GENTLE ===== */
+    .why-section {
+      padding: 4rem 0;
+      background: var(--bg);
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .why-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .why-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .why-card-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
+    .why-icon {
+      width: 54px;
+      height: 54px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .why-card h3 {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--text);
+    }
+
+    .why-card h3 span {
+      display: block;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .why-list {
+      list-style: none;
+    }
+
+    .why-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      padding: 7px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .why-list li:last-child { border-bottom: none; }
+
+    .why-list li svg { flex-shrink: 0; margin-top: 3px; }
+
+    /* ===== WEBSTER ===== */
+    .webster-section {
+      padding: 0 0 0;
+      background: var(--white);
+    }
+
+    .webster-inner {
+      background: linear-gradient(135deg, var(--blue) 0%, #2f52c8 100%);
+      border-radius: 28px;
+      padding: 64px 60px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      color: var(--white);
+      margin: 0 24px;
+    }
+
+    .webster-tag {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      color: var(--white);
+      border-radius: 50px;
+      padding: 5px 16px;
+      font-size: 0.78rem;
+      font-weight: 800;
+      font-family: 'Nunito', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+    }
+
+    .webster-inner h2 {
+      font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+      font-weight: 900;
+      margin-bottom: 16px;
+    }
+
+    .webster-inner p {
+      font-size: 0.95rem;
+      opacity: 0.88;
+      line-height: 1.7;
+      margin-bottom: 14px;
+    }
+
+    .webster-cert {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255,255,255,0.15);
+      border: 1.5px solid rgba(255,255,255,0.3);
+      border-radius: var(--radius-sm);
+      padding: 10px 18px;
+      font-family: 'Nunito', sans-serif;
+      font-weight: 800;
+      font-size: 0.88rem;
+      margin-top: 10px;
+    }
+
+    .webster-img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+      border-radius: var(--radius);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.25);
+    }
+
+    .webster-benefits {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin: 20px 0;
+    }
+
+    .web-benefit {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.88rem;
+      font-weight: 600;
+    }
+
+    .web-benefit svg { flex-shrink: 0; }
+
+    /* ===== SERVICES ===== */
+    .services-section {
+      padding: 4rem 0;
+      background: var(--bg);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .service-item {
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 20px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .service-item:hover {
+      border-color: var(--blue);
+      box-shadow: var(--shadow);
+    }
+
+    .service-info { flex: 1; }
+
+    .service-info h4 {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 3px;
+    }
+
+    .service-info p {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .service-price {
+      font-family: 'Nunito', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 900;
+      color: var(--blue);
+      white-space: nowrap;
+      margin-left: 16px;
+    }
+
+    .services-note {
+      text-align: center;
+      margin-top: 28px;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    /* ===== DOCTOR ===== */
+    .doctor-section {
+      padding: 4rem 0;
+      background: var(--white);
+    }
+
+    .doctor-grid {
+      display: grid;
+      grid-template-columns: 420px 1fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .doctor-img-wrap {
+      position: relative;
+    }
+
+    .doctor-img-wrap img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+      border-radius: 24px;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .webster-badge {
+      position: absolute;
+      bottom: 24px;
+      right: -20px;
+      background: var(--green);
+      color: var(--white);
+      border-radius: var(--radius);
+      padding: 16px 20px;
+      box-shadow: 0 6px 20px rgba(50,205,50,0.35);
+      font-family: 'Nunito', sans-serif;
+      font-weight: 900;
+      font-size: 0.85rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .webster-badge svg { margin-bottom: 4px; }
+
+    .doctor-tag {
+      display: inline-block;
+      background: var(--green-light);
+      color: var(--green-dark);
+      border-radius: 50px;
+      padding: 5px 16px;
+      font-size: 0.78rem;
+      font-weight: 800;
+      font-family: 'Nunito', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 14px;
+    }
+
+    .doctor-content h2 {
+      font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+      font-weight: 900;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+
+    .doctor-title {
+      font-size: 1rem;
+      color: var(--blue);
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .doctor-bio {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.75;
+      margin-bottom: 24px;
+    }
+
+    .credentials {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+
+    .cred-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--blue-light);
+      color: var(--blue);
+      border-radius: 50px;
+      padding: 6px 14px;
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 800;
+    }
+
+    /* ===== TESTIMONIALS ===== */
+    .testimonials-section {
+      padding: 4rem 0;
+      background: var(--bg);
+    }
+
+    .testi-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .testi-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s, box-shadow 0.3s;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .testi-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .testi-stars {
+      display: flex;
+      gap: 3px;
+    }
+
+    .testi-quote {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      flex: 1;
+      font-style: italic;
+    }
+
+    .testi-quote::before { content: '\201C'; }
+    .testi-quote::after  { content: '\201D'; }
+
+    .testi-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .testi-avatar {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Nunito', sans-serif;
+      font-weight: 900;
+      font-size: 1.1rem;
+      color: var(--white);
+      flex-shrink: 0;
+    }
+
+    .testi-name {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 800;
+      font-size: 0.9rem;
+      color: var(--text);
+    }
+
+    .testi-role {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    /* ===== NEW PATIENT ===== */
+    .newpatient-section {
+      padding: 4rem 0;
+      background: var(--white);
+    }
+
+    .newpatient-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .expect-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .expect-item {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .expect-num {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--blue);
+      color: var(--white);
+      font-family: 'Nunito', sans-serif;
+      font-weight: 900;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .expect-text h4 {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 3px;
+    }
+
+    .expect-text p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    .special-card {
+      background: linear-gradient(135deg, var(--green) 0%, #28a428 100%);
+      border-radius: 24px;
+      padding: 2rem;
+      color: var(--white);
+      text-align: center;
+      box-shadow: 0 12px 40px rgba(50,205,50,0.30);
+    }
+
+    .special-card .special-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.25);
+      border-radius: 50px;
+      padding: 5px 18px;
+      font-size: 0.78rem;
+      font-weight: 800;
+      font-family: 'Nunito', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 18px;
+    }
+
+    .special-card h3 {
+      font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+      font-weight: 900;
+      margin-bottom: 10px;
+    }
+
+    .special-price {
+      font-size: 3.5rem;
+      font-family: 'Nunito', sans-serif;
+      font-weight: 900;
+      line-height: 1;
+      margin: 16px 0 4px;
+    }
+
+    .special-price span {
+      font-size: 1.1rem;
+      text-decoration: line-through;
+      opacity: 0.65;
+      margin-left: 8px;
+      font-weight: 600;
+    }
+
+    .special-card p {
+      opacity: 0.88;
+      font-size: 0.9rem;
+      margin-bottom: 24px;
+    }
+
+    .special-card .btn-white {
+      background: var(--white);
+      color: var(--green-dark);
+      font-family: 'Nunito', sans-serif;
+      font-weight: 900;
+      padding: 0.75rem 1.75rem;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      max-height: 52px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .special-card .btn-white:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    }
+
+    /* ===== LOCATION ===== */
+    .location-section {
+      padding: 4rem 0;
+      background: var(--bg);
+    }
+
+    .location-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 28px;
+    }
+
+    .info-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      box-shadow: var(--shadow);
+    }
+
+    .info-card-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .info-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: var(--radius-sm);
+      background: var(--blue-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .info-card h3 {
+      font-size: 1rem;
+      font-weight: 800;
+      color: var(--text);
+    }
+
+    .info-card address {
+      font-style: normal;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    .hours-list {
+      list-style: none;
+      font-size: 0.9rem;
+    }
+
+    .hours-list li {
+      display: flex;
+      justify-content: space-between;
+      padding: 7px 0;
+      border-bottom: 1px solid var(--border);
+      color: var(--text-muted);
+    }
+
+    .hours-list li:last-child { border-bottom: none; }
+
+    .hours-list li .day { font-weight: 700; color: var(--text); }
+
+    .contact-links { display: flex; flex-direction: column; gap: 14px; }
+
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text);
+      transition: color 0.2s;
+    }
+
+    .contact-link:hover { color: var(--blue); }
+
+    .contact-link .c-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: var(--blue-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: background 0.2s;
+    }
+
+    .contact-link:hover .c-icon { background: var(--blue); }
+    .contact-link:hover .c-icon svg path,
+    .contact-link:hover .c-icon svg rect,
+    .contact-link:hover .c-icon svg circle { stroke: white; }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--text);
+      color: rgba(255,255,255,0.75);
+      padding: 60px 0 28px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+
+    .footer-brand .nav-logo {
+      color: var(--white);
+      margin-bottom: 14px;
+    }
+
+    .footer-brand p {
+      font-size: 0.88rem;
+      line-height: 1.7;
+      margin-bottom: 20px;
+      max-width: 340px;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 10px;
+    }
+
+    .footer-social a {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: rgba(255,255,255,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+    }
+
+    .footer-social a:hover { background: var(--blue); }
+
+    .footer-col h4 {
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .footer-col ul { list-style: none; }
+
+    .footer-col ul li { margin-bottom: 10px; }
+
+    .footer-col ul li a {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.65);
+      transition: color 0.2s;
+    }
+
+    .footer-col ul li a:hover { color: var(--white); }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: gap;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.45);
+    }
+
+    .accepting-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(50,205,50,0.15);
+      border: 1px solid rgba(50,205,50,0.3);
+      color: #7ded7d;
+      border-radius: 50px;
+      padding: 4px 12px;
+      font-size: 0.78rem;
+      font-weight: 700;
+    }
+
+    .accepting-badge .dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: #7ded7d;
+    }
+
+    /* ===== ANIMATIONS ===== */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .fade-up:nth-child(2) { transition-delay: 0.1s; }
+    .fade-up:nth-child(3) { transition-delay: 0.2s; }
+    .fade-up:nth-child(4) { transition-delay: 0.3s; }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .care-grid { grid-template-columns: repeat(2, 1fr); }
+      .why-grid { grid-template-columns: repeat(2, 1fr); }
+      .doctor-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+      .webster-inner { padding: 48px 40px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-phone { display: none; }
+      .hamburger { display: flex; }
+
+      .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        padding: 20px 24px;
+        box-shadow: 0 8px 24px rgba(65,105,225,0.1);
+        gap: 16px;
+        z-index: 999;
+      }
+
+      .hero-grid { grid-template-columns: 1fr; }
+      .hero-img-wrap { display: none; }
+      .hero { padding: 60px 0; }
+
+      .why-grid { grid-template-columns: 1fr; }
+      .care-grid { grid-template-columns: repeat(2, 1fr); }
+      .webster-inner { grid-template-columns: 1fr; padding: 40px 28px; margin: 0 16px; }
+      .webster-img { height: 260px; }
+      .services-grid { grid-template-columns: 1fr; }
+      .doctor-grid { grid-template-columns: 1fr; }
+      .doctor-img-wrap img { height: 350px; }
+      .webster-badge { right: 12px; }
+      .testi-grid { grid-template-columns: 1fr; }
+      .newpatient-grid { grid-template-columns: 1fr; }
+      .location-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+      .hero-float-badge, .hero-float-badge2 { display: none; }
+    }
+
+    @media (max-width: 480px) {
+      .care-grid { grid-template-columns: 1fr; }
+      .hero-ctas { flex-direction: column; }
+      .hero-stats { gap: 20px; }
+    }</style>
+  <!-- Codex UI Polish: nav readability and one-line links -->
+  <style id="codex-ui-polish-nav">
+    nav a,
+    .nav a,
+    .navbar a,
+    .nav__links a,
+    .nav-links a,
+    .menu a,
+    .menu__link,
+    .fullscreen-menu a {
+      white-space: nowrap;
+    }
+
+    @media (min-width: 1024px) {
+      nav a,
+      .nav a,
+      .navbar a,
+      .nav__links a,
+      .nav-links a,
+      .menu a,
+      .menu__link,
+      .fullscreen-menu a {
+        line-height: 1.1;
+      }
+
+      .nav__links,
+      .nav-links,
+      .navbar-links,
+      .menu-links,
+      nav ul {
+        row-gap: 0.25rem;
+      }
+
+      .nav__links,
+      .nav-links,
+      .navbar-links,
+      .menu-links,
+      nav ul {
+        align-items: center;
+      }
+
+      .nav__links a,
+      .nav-links a,
+      .navbar-links a,
+      .menu-links a,
+      nav ul a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 1.2rem;
+      }
+    }
+
+    /* Cross-page alignment normalization for common grid/card layouts */
+    .services__grid,
+    .service-grid,
+    .cards-grid,
+    .features-grid,
+    .pricing__grid,
+    .plans-grid,
+    .results__grid,
+    .reviews__grid,
+    .events-grid,
+    .coaches__grid,
+    .therapists-grid,
+    .portfolio__grid,
+    .tips-grid,
+    .testimonials-grid,
+    .grid {
+      align-items: stretch;
+    }
+
+    .service-card,
+    .card,
+    .feature-card,
+    .event-card,
+    .plan,
+    .pricing-card,
+    .testimonial,
+    .review,
+    .coach,
+    .therapist-card,
+    .project,
+    .tip-card,
+    .serve-card,
+    .info-card,
+    .stat-card {
+      height: 100%;
+    }
+
+    .service-card img,
+    .project img,
+    .tip-card img,
+    .coach img,
+    .therapist-card img,
+    .feature-card img,
+    .gallery-item img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    /* Improve readability where copy is dense without changing content */
+    section p,
+    .section p,
+    .card p,
+    .service-card p,
+    .feature-card p,
+    .testimonial p,
+    .event-card p,
+    .info-card p {
+      max-width: 66ch;
+      text-wrap: pretty;
+    }
+
+    .section__header p,
+    .hero p,
+    .footer p,
+    .map-overlay-card,
+    .location__item-value {
+      max-width: none;
+    }
+  </style>
+
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="#" class="nav-logo">
+          <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="17" cy="17" r="16" fill="#EEF3FF" stroke="#4169E1" stroke-width="1.5"/>
+            <path d="M17 8C17 8 12 11 12 17C12 20.3137 14.6863 23 18 23C21.3137 23 24 20.3137 24 17" stroke="#4169E1" stroke-width="1.8" stroke-linecap="round"/>
+            <path d="M17 8C17 8 22 11 22 17" stroke="#32CD32" stroke-width="1.8" stroke-linecap="round"/>
+            <circle cx="17" cy="8" r="2" fill="#4169E1"/>
+            <path d="M14 19L17 22L20 19" stroke="#4169E1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Pediatric &amp; Family Chiropractic
+        </a>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#who-we-care-for">Who We Help</a></li>
+          <li><a href="#why-gentle">Why Gentle</a></li>
+          <li><a href="#webster">Webster Technique</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#doctor">Our Doctor</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="nav-right">
+          <a href="tel:5553456789" class="nav-phone">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4169E1" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.82 9.81 19.79 19.79 0 01.75 1.18 2 2 0 012.73 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            (555) 345-6789
+          </a>
+          <a href="#new-patient" class="btn btn-green">Book Visit</a>
+        </div>
+
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <div class="dot"></div>
+            Accepting New Patients
+          </div>
+          <h1>Gentle Care for <span>Every Stage</span> of Life</h1>
+          <p class="hero-sub">From newborns to grandparents, we provide gentle, family-focused chiropractic care that nurtures growth, wellness, and whole-body health at every age.</p>
+          <div class="hero-ctas">
+            <a href="#new-patient" class="btn btn-green btn-lg">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4M16 2v4M3 10h18M5 4h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V6a2 2 0 012-2z"/></svg>
+              FREE Initial Exam
+            </a>
+            <a href="tel:5553456789" class="btn btn-outline btn-lg">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.82 9.81 19.79 19.79 0 01.75 1.18 2 2 0 012.73 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              Call Us Now
+            </a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat">
+              <div class="stat-num">15+</div>
+              <div class="stat-label">Years Serving Families</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">3,200+</div>
+              <div class="stat-label">Happy Patients</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">Webster</div>
+              <div class="stat-label">Certified Doctor</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">5.0</div>
+              <div class="stat-label">Star Rating</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-img-wrap">
+          <div class="hero-float-badge">
+            <div class="dot"></div>
+            Webster Technique Certified
+          </div>
+          <img
+            src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=1200&q=80"
+            alt="Family chiropractic care — gentle adjustment"
+            width="600"
+            height="520"
+            loading="eager"
+          />
+          <div class="hero-float-badge2">
+            Infant-Safe<br/>Adjustments
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WAVE DIVIDER -->
+  <div class="wave-bottom" style="background:linear-gradient(135deg,#eef3ff 0%,#f0fff0 100%);">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="#FFFFFF"/>
+    </svg>
+  </div>
+
+  <!-- WHO WE CARE FOR -->
+  <section class="care-section" id="who-we-care-for">
+    <div class="container">
+      <div class="section-header fade-up">
+        <div class="section-tag">Every Family Member Welcome</div>
+        <h2>Who We Care For</h2>
+        <p>From the first days of life through the golden years, our gentle approach is tailored to every age and stage of your family's journey.</p>
+      </div>
+      <div class="care-grid">
+        <div class="care-card fade-up">
+          <div class="img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1555252333-9f8e92e65df9?w=600&q=80"
+              alt="Infant and newborn chiropractic care"
+              loading="lazy"
+            />
+          </div>
+          <div class="icon-wrap" style="background:#eef3ff;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4169E1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2"/><path d="M12 7v5l-3 3M12 12l3 3M8 17h8"/></svg>
+          </div>
+          <h3>Infants &amp; Newborns</h3>
+          <p>Birth is physically demanding for babies too. Gentle adjustments support healthy development, relieve colic, and improve sleep from day one.</p>
+        </div>
+        <div class="care-card fade-up">
+          <div class="img-wrap" style="background:#f0fff0; display:flex; align-items:center; justify-content:center;">
+            <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+              <circle cx="40" cy="22" r="12" fill="#d4edda" stroke="#32CD32" stroke-width="2"/>
+              <path d="M20 70 C20 50 60 50 60 70" fill="#d4edda" stroke="#32CD32" stroke-width="2"/>
+              <circle cx="28" cy="42" r="8" fill="#e8fde8" stroke="#32CD32" stroke-width="1.5"/>
+              <path d="M14 68 C14 55 42 55 42 68" fill="#e8fde8" stroke="#32CD32" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <div class="icon-wrap" style="background:#e8fde8;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#32CD32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+          </div>
+          <h3>Children &amp; Teens</h3>
+          <p>Support healthy spine development, improve posture, enhance immune function, and address growing pains and sports injuries safely.</p>
+        </div>
+        <div class="care-card fade-up">
+          <div class="img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=600&q=80"
+              alt="Pregnancy chiropractic care — prenatal wellness"
+              loading="lazy"
+            />
+          </div>
+          <div class="icon-wrap" style="background:#fff8e7;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 100 20 10 10 0 000-20z"/><path d="M12 8v4l3 3"/></svg>
+          </div>
+          <h3>Expecting Mothers</h3>
+          <p>Webster Technique-certified prenatal care to ease back pain, balance the pelvis, and prepare your body for a smoother, safer birth experience.</p>
+        </div>
+        <div class="care-card fade-up">
+          <div class="img-wrap" style="background:#f0f4ff; display:flex; align-items:center; justify-content:center;">
+            <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+              <circle cx="40" cy="18" r="10" fill="#dde8ff" stroke="#4169E1" stroke-width="2"/>
+              <path d="M22 70 C22 48 58 48 58 70" fill="#dde8ff" stroke="#4169E1" stroke-width="2"/>
+              <line x1="40" y1="36" x2="40" y2="52" stroke="#4169E1" stroke-width="2.5" stroke-linecap="round"/>
+              <line x1="30" y1="42" x2="50" y2="42" stroke="#4169E1" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="icon-wrap" style="background:#f0f4ff;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4169E1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20s0-8 8-8 8 8 8 8"/></svg>
+          </div>
+          <h3>Adults &amp; Seniors</h3>
+          <p>Relief from chronic pain, improved mobility, better balance, and whole-body wellness to help you live actively and comfortably at any age.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WAVE -->
+  <div class="wave-top" style="background:#FFFFFF;">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,0 C480,60 960,0 1440,40 L1440,0 Z" fill="#F8FFF8"/>
+    </svg>
+  </div>
+
+  <!-- WHY GENTLE -->
+  <section class="why-section" id="why-gentle">
+    <div class="container">
+      <div class="section-header fade-up">
+        <div class="section-tag green">Science-Based Benefits</div>
+        <h2>Why Choose Gentle Chiropractic?</h2>
+        <p>Gentle, precise adjustments work with your body's natural healing intelligence — not against it. Here's why it works for every member of your family.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card fade-up">
+          <div class="why-card-header">
+            <div class="why-icon" style="background:#eef3ff;">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#4169E1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2"/><path d="M12 7v5l-3 3M12 12l3 3M8 17h8"/></svg>
+            </div>
+            <h3>For Kids<span>Growth &amp; Development</span></h3>
+          </div>
+          <ul class="why-list">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#32CD32" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Supports healthy neurological development
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#32CD32" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Relieves colic, reflux &amp; ear infections
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#32CD32" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Improves posture &amp; spinal alignment
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#32CD32" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Boosts immune system function
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#32CD32" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Addresses growing pains &amp; sports injuries
+            </li>
+          </ul>
+        </div>
+        <div class="why-card fade-up">
+          <div class="why-card-header">
+            <div class="why-icon" style="background:#fff8e7;">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 100 20 10 10 0 000-20z"/><path d="M8 12s1 2 4 2 4-2 4-2"/></svg>
+            </div>
+            <h3>For Pregnancy<span>Webster Technique</span></h3>
+          </div>
+          <ul class="why-list">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#32CD32" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Relieves low back &amp; sciatic pain
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#32CD32" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Balances pelvis for optimal fetal positioning
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#32CD32" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Reduces uterine constraint &amp; round ligament tension
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#32CD32" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Supports natural labor preparation
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#32CD32" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Safe throughout all trimesters
+            </li>
+          </ul>
+        </div>
+        <div class="why-card fade-up">
+          <div class="why-card-header">
+            <div class="why-icon" style="background:#e8fde8;">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#32CD32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+            </div>
+            <h3>For Adults<span>Pain Relief &amp; Wellness</span></h3>
+          </div>
+          <ul class="why-list">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#32CD32" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Drug-free relief from neck &amp; back pain
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#32CD32" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Reduces headaches &amp; migraines
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#32CD32" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Improves range of motion &amp; flexibility
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#32CD32" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Enhances nerve function &amp; energy
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#32CD32" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Preventive wellness maintenance
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WAVE -->
+  <div class="wave-bottom" style="background:#F8FFF8;">
+    <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,35 C360,70 1080,0 1440,35 L1440,70 L0,70 Z" fill="#FFFFFF"/>
+    </svg>
+  </div>
+
+  <!-- WEBSTER TECHNIQUE -->
+  <section class="webster-section" id="webster" style="padding: 80px 0;">
+    <div class="container" style="padding:0;">
+      <div class="webster-inner">
+        <div class="webster-content">
+          <div class="webster-tag">Specialized Certification</div>
+          <h2>The Webster Technique — Certified Prenatal Chiropractic</h2>
+          <p>The Webster Technique is a specific chiropractic sacral analysis and diversified adjustment developed by Dr. Larry Webster. Our doctor is certified by the International Chiropractic Pediatric Association (ICPA) in this specialized method.</p>
+          <p>This technique focuses on reducing the effects of sacral subluxation and sacroiliac joint dysfunction, restoring proper pelvic balance and function. When the pelvis is balanced, the uterus and surrounding ligaments are better able to support the growing baby and allow for optimal positioning.</p>
+
+          <div class="webster-benefits">
+            <div class="web-benefit">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#a5f3a5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Safe all trimesters
+            </div>
+            <div class="web-benefit">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#a5f3a5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              ICPA certified
+            </div>
+            <div class="web-benefit">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#a5f3a5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Pelvic balance
+            </div>
+            <div class="web-benefit">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#a5f3a5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Optimal fetal position
+            </div>
+            <div class="web-benefit">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#a5f3a5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Reduces back pain
+            </div>
+            <div class="web-benefit">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#a5f3a5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Gentle &amp; precise
+            </div>
+          </div>
+
+          <div class="webster-cert">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+            ICPA Webster Technique Certified Practitioner
+          </div>
+        </div>
+        <div>
+          <img
+            src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=1200&q=80"
+            alt="Prenatal chiropractic care — Webster Technique"
+            class="webster-img"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WAVE -->
+  <div class="wave-top" style="background:#FFFFFF;">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,0 C480,60 960,0 1440,40 L1440,0 Z" fill="#F8FFF8"/>
+    </svg>
+  </div>
+
+  <!-- SERVICES & PRICING -->
+  <section class="services-section" id="services">
+    <div class="container">
+      <div class="section-header fade-up">
+        <div class="section-tag">Transparent Pricing</div>
+        <h2>Services &amp; Pricing</h2>
+        <p>We believe healthcare should be transparent and accessible. All fees are clearly stated with no hidden charges or surprise bills.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-item fade-up">
+          <div class="service-info">
+            <h4>New Patient Exam (Special Offer)</h4>
+            <p>Comprehensive exam, health history, posture analysis</p>
+          </div>
+          <div class="service-price" style="color:#32CD32;">FREE</div>
+        </div>
+        <div class="service-item fade-up">
+          <div class="service-info">
+            <h4>Infant / Newborn Adjustment</h4>
+            <p>Gentle, fingertip pressure — safe from birth</p>
+          </div>
+          <div class="service-price">$55</div>
+        </div>
+        <div class="service-item fade-up">
+          <div class="service-info">
+            <h4>Pediatric Adjustment (Ages 1–12)</h4>
+            <p>Age-appropriate gentle spinal care</p>
+          </div>
+          <div class="service-price">$65</div>
+        </div>
+        <div class="service-item fade-up">
+          <div class="service-info">
+            <h4>Teen / Adolescent Adjustment</h4>
+            <p>Posture, sports performance, growing pains</p>
+          </div>
+          <div class="service-price">$70</div>
+        </div>
+        <div class="service-item fade-up">
+          <div class="service-info">
+            <h4>Adult Chiropractic Adjustment</h4>
+            <p>Full-spine assessment and adjustment</p>
+          </div>
+          <div class="service-price">$80</div>
+        </div>
+        <div class="service-item fade-up">
+          <div class="service-info">
+            <h4>Prenatal Adjustment (Webster)</h4>
+            <p>Specialized Webster Technique for pregnancy</p>
+          </div>
+          <div class="service-price">$90</div>
+        </div>
+        <div class="service-item fade-up">
+          <div class="service-info">
+            <h4>Postnatal / Fourth Trimester Care</h4>
+            <p>Postpartum recovery and realignment</p>
+          </div>
+          <div class="service-price">$80</div>
+        </div>
+        <div class="service-item fade-up">
+          <div class="service-info">
+            <h4>Family Wellness Package (4 visits)</h4>
+            <p>Great for regular maintenance care families</p>
+          </div>
+          <div class="service-price">$280</div>
+        </div>
+        <div class="service-item fade-up">
+          <div class="service-info">
+            <h4>Senior Chiropractic Care</h4>
+            <p>Gentle approach for arthritis, balance, mobility</p>
+          </div>
+          <div class="service-price">$75</div>
+        </div>
+        <div class="service-item fade-up">
+          <div class="service-info">
+            <h4>X-Ray (If Clinically Indicated)</h4>
+            <p>Digital in-office radiographs</p>
+          </div>
+          <div class="service-price">$95</div>
+        </div>
+      </div>
+      <p class="services-note">Most insurance plans accepted, including BCBS, Aetna, Cigna, United Healthcare &amp; more. HSA/FSA eligible. Flexible payment plans available.</p>
+    </div>
+  </section>
+
+  <!-- WAVE -->
+  <div class="wave-bottom" style="background:#F8FFF8;">
+    <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,35 C360,70 1080,0 1440,35 L1440,70 L0,70 Z" fill="#FFFFFF"/>
+    </svg>
+  </div>
+
+  <!-- MEET THE DOCTOR -->
+  <section class="doctor-section" id="doctor">
+    <div class="container">
+      <div class="doctor-grid">
+        <div class="doctor-img-wrap fade-up">
+          <img
+            src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=1200&q=80"
+            alt="Dr. Sarah Mitchell — Pediatric and Family Chiropractor"
+            loading="lazy"
+          />
+          <div class="webster-badge">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+            Webster<br/>Certified<br/>ICPA
+          </div>
+        </div>
+        <div class="doctor-content fade-up">
+          <div class="doctor-tag">Meet Your Doctor</div>
+          <h2>Dr. Sarah Mitchell, D.C.</h2>
+          <p class="doctor-title">Doctor of Chiropractic — Pediatric &amp; Prenatal Specialist</p>
+          <p class="doctor-bio">Dr. Sarah Mitchell has dedicated her 15-year career to the belief that every family deserves access to safe, gentle, and evidence-informed chiropractic care. A mother herself, Dr. Mitchell brings both professional expertise and personal understanding to every patient relationship.</p>
+          <p class="doctor-bio">After completing her Doctorate of Chiropractic at Palmer College of Chiropractic, Dr. Mitchell pursued advanced certification through the International Chiropractic Pediatric Association (ICPA), earning her Webster Technique certification and hundreds of hours of specialized pediatric training. She treats newborns as young as two days old and believes that proactive spinal care during childhood sets the foundation for lifelong health.</p>
+          <div class="credentials">
+            <div class="cred-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4169E1" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+              Webster Certified
+            </div>
+            <div class="cred-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4169E1" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              ICPA Member
+            </div>
+            <div class="cred-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4169E1" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Palmer College D.C.
+            </div>
+            <div class="cred-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4169E1" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Pediatric Diplomat
+            </div>
+            <div class="cred-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4169E1" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              ACA Member
+            </div>
+            <div class="cred-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4169E1" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              15+ Years Experience
+            </div>
+          </div>
+          <a href="tel:5553456789" class="btn btn-blue btn-lg">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.82 9.81 19.79 19.79 0 01.75 1.18 2 2 0 012.73 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            Schedule with Dr. Mitchell
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WAVE -->
+  <div class="wave-top" style="background:#FFFFFF;">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,0 C480,60 960,0 1440,40 L1440,0 Z" fill="#F8FFF8"/>
+    </svg>
+  </div>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials-section" id="testimonials">
+    <div class="container">
+      <div class="section-header fade-up">
+        <div class="section-tag green">Real Family Stories</div>
+        <h2>What Our Families Are Saying</h2>
+        <p>Over 3,200 families trust us with their most precious asset — their health. Here are just a few of their stories.</p>
+      </div>
+      <div class="testi-grid">
+        <div class="testi-card fade-up">
+          <div class="testi-stars">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="testi-quote">I started seeing Dr. Mitchell at 28 weeks for awful hip pain and back aches. The Webster adjustments were so gentle I couldn't believe how much relief I felt after just two visits. My baby was posterior at 36 weeks and turned vertex after just a few more sessions. I genuinely believe her care contributed to my beautiful, intervention-free birth.</p>
+          <div class="testi-author">
+            <div class="testi-avatar" style="background:#4169E1;">JR</div>
+            <div>
+              <div class="testi-name">Jamie R.</div>
+              <div class="testi-role">New Mom — Webster Technique Patient</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card fade-up">
+          <div class="testi-stars">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="testi-quote">Our 2-year-old was dealing with chronic ear infections — four rounds of antibiotics in six months. Our pediatrician mentioned chiropractic as a complementary option. We were skeptical but desperate. Dr. Mitchell was so patient with our nervous toddler, and after consistent care for 8 weeks, we've been ear-infection-free for over a year. She has a true gift with children.</p>
+          <div class="testi-author">
+            <div class="testi-avatar" style="background:#32CD32;">MT</div>
+            <div>
+              <div class="testi-name">Marcus &amp; Tanya L.</div>
+              <div class="testi-role">Parents of Toddler Patient</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card fade-up">
+          <div class="testi-stars">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="testi-quote">I'm 15 and swim competitively — I was having shoulder and neck pain that was affecting my training. My coach suggested chiropractic and it changed everything. Dr. Mitchell identified some postural imbalances from repetitive stroke patterns and designed a care plan just for me. My coach says my stroke mechanics have improved and I shaved three seconds off my best time.</p>
+          <div class="testi-author">
+            <div class="testi-avatar" style="background:#7b68ee;">KP</div>
+            <div>
+              <div class="testi-name">Kayla P.</div>
+              <div class="testi-role">Teen Competitive Swimmer, Age 15</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card fade-up">
+          <div class="testi-stars">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="testi-quote">I spent 20 years managing lower back pain with medication. A friend finally convinced me to try chiropractic at age 58. I wish I hadn't waited. Dr. Mitchell's approach is nothing like what I imagined — it's gentle, thorough, and she actually listens. After 3 months I've reduced my pain meds by half and I'm back to gardening and hiking. My whole family now sees her.</p>
+          <div class="testi-author">
+            <div class="testi-avatar" style="background:#e07b54;">DW</div>
+            <div>
+              <div class="testi-name">David W.</div>
+              <div class="testi-role">Adult Patient, Age 58</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WAVE -->
+  <div class="wave-bottom" style="background:#F8FFF8;">
+    <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,35 C360,70 1080,0 1440,35 L1440,70 L0,70 Z" fill="#FFFFFF"/>
+    </svg>
+  </div>
+
+  <!-- NEW PATIENT -->
+  <section class="newpatient-section" id="new-patient">
+    <div class="container">
+      <div class="section-header fade-up">
+        <div class="section-tag">New Family Welcome</div>
+        <h2>Welcome to the Family</h2>
+        <p>We make starting care easy and stress-free. Here's exactly what to expect on your first visit.</p>
+      </div>
+      <div class="newpatient-grid">
+        <div class="fade-up">
+          <h3 style="font-family:'Nunito',sans-serif; font-size:1.4rem; font-weight:900; color:var(--text); margin-bottom:28px;">What to Expect on Your First Visit</h3>
+          <ul class="expect-list">
+            <li class="expect-item">
+              <div class="expect-num">1</div>
+              <div class="expect-text">
+                <h4>Warm Welcome &amp; Paperwork (10 min)</h4>
+                <p>Arrive 10 minutes early. Paperwork can also be completed online in advance via our patient portal to save time.</p>
+              </div>
+            </li>
+            <li class="expect-item">
+              <div class="expect-num">2</div>
+              <div class="expect-text">
+                <h4>Thorough Health History (15 min)</h4>
+                <p>Dr. Mitchell reviews your full health history, concerns, and goals — for every family member. Nothing is rushed.</p>
+              </div>
+            </li>
+            <li class="expect-item">
+              <div class="expect-num">3</div>
+              <div class="expect-text">
+                <h4>Complete Chiropractic Examination (20 min)</h4>
+                <p>Spinal assessment, posture analysis, range of motion testing, and neurological evaluation appropriate to your age and needs.</p>
+              </div>
+            </li>
+            <li class="expect-item">
+              <div class="expect-num">4</div>
+              <div class="expect-text">
+                <h4>Report of Findings (10 min)</h4>
+                <p>Dr. Mitchell reviews what she found and explains your personalized care recommendations in clear, jargon-free language.</p>
+              </div>
+            </li>
+            <li class="expect-item">
+              <div class="expect-num">5</div>
+              <div class="expect-text">
+                <h4>First Adjustment (If Appropriate)</h4>
+                <p>Many patients receive their first gentle adjustment on day one. You'll leave feeling supported, informed, and at ease.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="fade-up">
+          <div class="special-card">
+            <div class="special-badge">Limited Time Offer</div>
+            <h3>NEW FAMILY SPECIAL</h3>
+            <p>Free initial exam &amp; consultation for your whole family's first visit</p>
+            <div class="special-price">
+              FREE
+              <span>$200 value</span>
+            </div>
+            <p>Includes comprehensive exam, health history, posture analysis, and report of findings. No obligation, no pressure. Just care.</p>
+            <a href="tel:5553456789" class="btn-white">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.82 9.81 19.79 19.79 0 01.75 1.18 2 2 0 012.73 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              Call to Claim: (555) 345-6789
+            </a>
+            <p style="font-size:0.78rem; opacity:0.65; margin-top:16px; margin-bottom:0;">Mention code NEWFAMILY when scheduling. One per household. Cannot be combined with other offers.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WAVE -->
+  <div class="wave-top" style="background:#FFFFFF;">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,0 C480,60 960,0 1440,40 L1440,0 Z" fill="#F8FFF8"/>
+    </svg>
+  </div>
+
+  <!-- LOCATION + HOURS + CONTACT -->
+  <section class="location-section" id="contact">
+    <div class="container">
+      <div class="section-header fade-up">
+        <div class="section-tag green">Find Us</div>
+        <h2>Location, Hours &amp; Contact</h2>
+        <p>Conveniently located in the heart of Springfield with ample free parking. We'd love to meet your family.</p>
+      </div>
+      <div class="location-grid">
+        <div class="info-card fade-up">
+          <div class="info-card-header">
+            <div class="info-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#4169E1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <h3>Our Location</h3>
+          </div>
+          <address>
+            4820 Willow Creek Blvd, Suite 110<br/>
+            Springfield, IL 62704<br/><br/>
+            <strong>Easy parking:</strong> Free lot directly in front<br/>
+            <strong>Accessibility:</strong> Fully ADA compliant<br/>
+            <strong>Nearby:</strong> Willow Creek Shopping Center
+          </address>
+          <div style="margin-top:20px; background:#eef3ff; border-radius:var(--radius-sm); padding:16px; font-size:0.88rem; color:var(--blue); font-weight:600; text-align:center;">
+            Stroller-friendly entrance<br/>Kid's play area in waiting room
+          </div>
+        </div>
+
+        <div class="info-card fade-up">
+          <div class="info-card-header">
+            <div class="info-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#4169E1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <h3>Office Hours</h3>
+          </div>
+          <ul class="hours-list">
+            <li><span class="day">Monday</span><span>8:00 AM – 6:00 PM</span></li>
+            <li><span class="day">Tuesday</span><span>10:00 AM – 8:00 PM</span></li>
+            <li><span class="day">Wednesday</span><span>8:00 AM – 6:00 PM</span></li>
+            <li><span class="day">Thursday</span><span>10:00 AM – 8:00 PM</span></li>
+            <li><span class="day">Friday</span><span>8:00 AM – 6:00 PM</span></li>
+            <li><span class="day">Saturday</span><span>9:00 AM – 2:00 PM</span></li>
+            <li><span class="day">Sunday</span><span style="color:#e07b54;">Closed</span></li>
+          </ul>
+        </div>
+
+        <div class="info-card fade-up">
+          <div class="info-card-header">
+            <div class="info-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#4169E1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.82 9.81 19.79 19.79 0 01.75 1.18 2 2 0 012.73 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            </div>
+            <h3>Get In Touch</h3>
+          </div>
+          <div class="contact-links">
+            <a href="tel:5553456789" class="contact-link">
+              <div class="c-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4169E1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.82 9.81 19.79 19.79 0 01.75 1.18 2 2 0 012.73 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              </div>
+              (555) 345-6789
+            </a>
+            <a href="mailto:hello@pediatricfamilychiro.com" class="contact-link">
+              <div class="c-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4169E1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              hello@pediatricfamilychiro.com
+            </a>
+            <a href="#new-patient" class="contact-link">
+              <div class="c-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4169E1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              </div>
+              Book Appointment Online
+            </a>
+            <a href="#" class="contact-link">
+              <div class="c-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4169E1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              </div>
+              Follow on Instagram
+            </a>
+          </div>
+          <div style="margin-top:20px;">
+            <div class="accepting-badge" style="margin-bottom:10px;">
+              <div class="dot"></div>
+              Accepting New Patients
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="nav-logo">
+            <svg width="30" height="30" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="17" cy="17" r="16" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+              <path d="M17 8C17 8 12 11 12 17C12 20.3137 14.6863 23 18 23C21.3137 23 24 20.3137 24 17" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
+              <path d="M17 8C17 8 22 11 22 17" stroke="#7ded7d" stroke-width="1.8" stroke-linecap="round"/>
+              <circle cx="17" cy="8" r="2" fill="white"/>
+            </svg>
+            Pediatric &amp; Family Chiropractic
+          </div>
+          <p>Gentle, evidence-informed chiropractic care for every member of your family — from newborns to grandparents. Webster Technique certified. Proudly serving Springfield families for over 15 years.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+            <a href="#" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="#" aria-label="Google">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#who-we-care-for">Who We Care For</a></li>
+            <li><a href="#why-gentle">Why Gentle Chiropractic</a></li>
+            <li><a href="#webster">Webster Technique</a></li>
+            <li><a href="#services">Services &amp; Pricing</a></li>
+            <li><a href="#doctor">Meet Dr. Mitchell</a></li>
+            <li><a href="#testimonials">Patient Stories</a></li>
+            <li><a href="#new-patient">New Patient Special</a></li>
+            <li><a href="#contact">Contact &amp; Hours</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>We Specialize In</h4>
+          <ul>
+            <li><a href="#">Infant &amp; Newborn Care</a></li>
+            <li><a href="#">Pediatric Chiropractic</a></li>
+            <li><a href="#">Prenatal Chiropractic</a></li>
+            <li><a href="#">Webster Technique</a></li>
+            <li><a href="#">Colic &amp; Reflux Relief</a></li>
+            <li><a href="#">Teen Sports Injuries</a></li>
+            <li><a href="#">Family Wellness Plans</a></li>
+            <li><a href="#">Senior Chiropractic</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Pediatric &amp; Family Chiropractic. All rights reserved.</span>
+        <span>4820 Willow Creek Blvd, Suite 110, Springfield, IL 62704</span>
+        <a href="tel:5553456789" style="color:rgba(255,255,255,0.65); transition:color 0.2s;">(555) 345-6789</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+
+    // Close nav when a link is clicked
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => navLinks.classList.remove('open'));
+    });
+
+    // Intersection Observer — scroll animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    // Animate stats counter in hero
+    function animateCounters() {
+      const counters = document.querySelectorAll('.stat-num');
+      counters.forEach(counter => {
+        const text = counter.textContent;
+        const num = parseFloat(text.replace(/[^0-9.]/g, ''));
+        if (isNaN(num)) return;
+        const suffix = text.replace(/[0-9.]/g, '');
+        let start = 0;
+        const duration = 1600;
+        const step = 16;
+        const increment = num / (duration / step);
+        const timer = setInterval(() => {
+          start += increment;
+          if (start >= num) {
+            counter.textContent = text;
+            clearInterval(timer);
+          } else {
+            counter.textContent = (Number.isInteger(num) ? Math.floor(start) : start.toFixed(1)) + suffix;
+          }
+        }, step);
+      });
+    }
+
+    const heroObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          setTimeout(animateCounters, 300);
+          heroObserver.disconnect();
+        }
+      });
+    }, { threshold: 0.3 });
+
+    const heroStats = document.querySelector('.hero-stats');
+    if (heroStats) heroObserver.observe(heroStats);
+
+    // Sticky nav shadow on scroll
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 10) {
+        nav.style.boxShadow = '0 2px 20px rgba(65,105,225,0.14)';
+      } else {
+        nav.style.boxShadow = '0 2px 16px rgba(65,105,225,0.08)';
+      }
+    }, { passive: true });
+  </script>
+</body>
+</html>

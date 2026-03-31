@@ -1,0 +1,2343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mobile PT Solutions brings licensed physical therapy directly to your home. Serving post-hospital patients, homebound seniors, and recovering patients. Medicare & Medicaid accepted. Call (555) 901-2345." />
+  <meta name="keywords" content="mobile physical therapy, in-home PT, home physical therapy, senior physical therapy, post-surgery rehab, Medicare physical therapy" />
+  <meta property="og:title" content="Mobile PT Solutions | In-Home Physical Therapy" />
+  <meta property="og:description" content="We bring physical therapy to your home. No transportation needed. Medicare & Medicaid accepted. FREE in-home assessment." />
+  <meta property="og:type" content="website" />
+  <title>Mobile PT Solutions | In-Home Physical Therapy — We Come to You</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Mobile PT Solutions",
+    "description": "Mobile physical therapy practice bringing licensed therapists directly to patients' homes. Specializing in post-hospital care, elder care, and homebound patients.",
+    "url": "https://mobileptsolutions.com",
+    "telephone": "+15559012345",
+    "priceRange": "$$",
+    "openingHours": "Mo-Su 07:00-20:00",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Your City",
+      "addressRegion": "ST",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 0,
+      "longitude": 0
+    },
+    "hasMap": "https://maps.google.com",
+    "medicalSpecialty": "PhysicalTherapy",
+    "availableService": [
+      {"@type": "MedicalTherapy", "name": "Post-Surgery Rehabilitation"},
+      {"@type": "MedicalTherapy", "name": "Balance & Fall Prevention"},
+      {"@type": "MedicalTherapy", "name": "Stroke Recovery"},
+      {"@type": "MedicalTherapy", "name": "Orthopedic Physical Therapy"},
+      {"@type": "MedicalTherapy", "name": "Pain Management"},
+      {"@type": "MedicalTherapy", "name": "Elder Care Physical Therapy"}
+    ]
+  }
+  </script>
+
+  <style>
+    /* =============================================
+       CSS CUSTOM PROPERTIES
+    ============================================= */
+    :root {
+      --primary:     #2C3E50;
+      --secondary:   #E74C3C;
+      --secondary-dark: #C0392B;
+      --accent:      #FFFFFF;
+      --bg:          #F9F9F9;
+      --bg-dark:     #1A252F;
+      --text:        #222222;
+      --text-light:  #555555;
+      --border:      #DDDDDD;
+      --shadow:      0 4px 20px rgba(0,0,0,0.10);
+      --shadow-lg:   0 8px 40px rgba(0,0,0,0.16);
+      --radius:      10px;
+      --radius-lg:   18px;
+      --transition:  0.3s ease;
+      --font:        'Roboto', sans-serif;
+    }
+
+    /* =============================================
+       RESET & BASE
+    ============================================= */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: var(--font);
+      font-size: 1rem;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      object-fit: cover;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    ul { list-style: none; }
+
+    button, input, textarea, select {
+      font-family: var(--font);
+      font-size: inherit;
+    }
+
+    /* =============================================
+       UTILITY CLASSES
+    ============================================= */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .section {
+      padding: 4rem 0;
+    }
+
+    .section--dark {
+      background: var(--primary);
+      color: var(--accent);
+    }
+
+    .section--red {
+      background: var(--secondary);
+      color: var(--accent);
+    }
+
+    .section--gray {
+      background: #EEF0F2;
+    }
+
+    .section__label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--secondary);
+      margin-bottom: 10px;
+    }
+
+    .section--dark .section__label,
+    .section--red .section__label {
+      color: rgba(255,255,255,0.75);
+    }
+
+    .section__title {
+      font-size: clamp(1.5rem, 3vw, 2.25rem);
+      font-weight: 900;
+      line-height: 1.2;
+      margin-bottom: 16px;
+      color: var(--primary);
+    }
+
+    .section--dark .section__title,
+    .section--red .section__title {
+      color: var(--accent);
+    }
+
+    .section__subtitle {
+      font-size: 1rem;
+      color: var(--text-light);
+      max-width: 600px;
+      line-height: 1.7;
+    }
+
+    .section--dark .section__subtitle,
+    .section--red .section__subtitle {
+      color: rgba(255,255,255,0.85);
+    }
+
+    .section__header {
+      margin-bottom: 2.5rem;
+    }
+
+    .section__header--center {
+      text-align: center;
+    }
+
+    .section__header--center .section__subtitle {
+      margin: 0 auto;
+    }
+
+    /* Scroll animation */
+    .animate {
+      opacity: 0;
+      transform: translateY(36px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .animate.visible {
+      opacity: 1;
+      transform: none;
+    }
+    .animate--left {
+      transform: translateX(-36px);
+    }
+    .animate--right {
+      transform: translateX(36px);
+    }
+    .animate--left.visible,
+    .animate--right.visible {
+      transform: none;
+    }
+
+    /* Delay helpers */
+    .delay-1 { transition-delay: 0.1s; }
+    .delay-2 { transition-delay: 0.2s; }
+    .delay-3 { transition-delay: 0.3s; }
+    .delay-4 { transition-delay: 0.4s; }
+    .delay-5 { transition-delay: 0.5s; }
+    .delay-6 { transition-delay: 0.6s; }
+
+    /* =============================================
+       BUTTONS
+    ============================================= */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 0.75rem 1.75rem;
+      border-radius: 50px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: background var(--transition), color var(--transition), transform 0.15s ease, box-shadow var(--transition);
+      white-space: nowrap;
+      max-height: 52px;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+    }
+
+    .btn:active {
+      transform: translateY(0);
+    }
+
+    .btn--primary {
+      background: var(--secondary);
+      color: #fff;
+      border-color: var(--secondary);
+    }
+    .btn--primary:hover {
+      background: var(--secondary-dark);
+      border-color: var(--secondary-dark);
+    }
+
+    .btn--outline-white {
+      background: transparent;
+      color: #fff;
+      border-color: #fff;
+    }
+    .btn--outline-white:hover {
+      background: #fff;
+      color: var(--primary);
+    }
+
+    .btn--outline-red {
+      background: transparent;
+      color: var(--secondary);
+      border-color: var(--secondary);
+    }
+    .btn--outline-red:hover {
+      background: var(--secondary);
+      color: #fff;
+    }
+
+    .btn--lg {
+      font-size: 1rem;
+      padding: 0.75rem 2rem;
+    }
+
+    .btn--block {
+      width: 100%;
+    }
+
+    /* =============================================
+       BADGE / TRUST BAR
+    ============================================= */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(231,76,60,0.12);
+      color: var(--secondary-dark);
+      border: 1.5px solid rgba(231,76,60,0.3);
+      border-radius: 50px;
+      padding: 6px 16px;
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+
+    .badge--white {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border-color: rgba(255,255,255,0.4);
+    }
+
+    /* =============================================
+       NAVIGATION
+    ============================================= */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: var(--primary);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.22);
+    }
+
+    .nav__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+      padding: 0 2rem;
+      gap: 20px;
+    }
+
+    .nav__logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+
+    .nav__logo-icon {
+      width: 42px;
+      height: 42px;
+      background: var(--secondary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .nav__logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.15;
+    }
+
+    .nav__logo-name {
+      font-size: 1rem;
+      font-weight: 900;
+      color: #fff;
+      letter-spacing: 0.01em;
+    }
+
+    .nav__logo-tagline {
+      font-size: 0.68rem;
+      font-weight: 400;
+      color: rgba(255,255,255,0.65);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .nav__links {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    .nav__link {
+      color: rgba(255,255,255,0.80);
+      font-size: 0.9rem;
+      font-weight: 500;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: color var(--transition), background var(--transition);
+    }
+
+    .nav__link:hover {
+      color: #fff;
+      background: rgba(255,255,255,0.08);
+    }
+
+    .nav__cta {
+      flex-shrink: 0;
+    }
+
+    .nav__toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 6px;
+    }
+
+    .nav__mobile-menu {
+      display: none;
+      background: var(--bg-dark);
+      padding: 16px 20px 24px;
+    }
+
+    .nav__mobile-menu.open {
+      display: block;
+    }
+
+    .nav__mobile-link {
+      display: block;
+      color: rgba(255,255,255,0.85);
+      font-size: 1.05rem;
+      font-weight: 500;
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .nav__mobile-link:last-of-type {
+      border-bottom: none;
+      margin-bottom: 12px;
+    }
+
+    /* =============================================
+       HERO
+    ============================================= */
+    .hero {
+      position: relative;
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background: var(--primary);
+    }
+
+    .hero__bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1200&q=80');
+      background-size: cover;
+      background-position: center 30%;
+      opacity: 0.28;
+    }
+
+    .hero__overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(105deg, rgba(44,62,80,0.97) 40%, rgba(44,62,80,0.60) 100%);
+    }
+
+    .hero__content {
+      position: relative;
+      z-index: 2;
+      max-width: 700px;
+      padding: 80px 0 60px;
+    }
+
+    .hero__badge {
+      margin-bottom: 24px;
+    }
+
+    .hero__title {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 900;
+      color: #fff;
+      line-height: 1.12;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero__title span {
+      color: var(--secondary);
+    }
+
+    .hero__subtitle {
+      font-size: 1.125rem;
+      color: rgba(255,255,255,0.88);
+      margin-bottom: 1.5rem;
+      max-width: 600px;
+      font-weight: 300;
+      line-height: 1.7;
+    }
+
+    .hero__actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero__trust {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .hero__trust-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: rgba(255,255,255,0.80);
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    /* =============================================
+       TRUST BAR
+    ============================================= */
+    .trust-bar {
+      background: var(--secondary);
+      padding: 18px 0;
+    }
+
+    .trust-bar__inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 28px 40px;
+    }
+
+    .trust-bar__item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #fff;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    /* =============================================
+       WHY IN-HOME PT
+    ============================================= */
+    .benefits {
+      background: var(--bg);
+    }
+
+    .benefits__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .benefit-card {
+      background: #fff;
+      border-radius: var(--radius-lg);
+      padding: 1.75rem 1.75rem;
+      box-shadow: var(--shadow);
+      border-top: 4px solid var(--secondary);
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+
+    .benefit-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .benefit-card__icon {
+      width: 60px;
+      height: 60px;
+      background: rgba(231,76,60,0.10);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .benefit-card__title {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+
+    .benefit-card__text {
+      font-size: 0.95rem;
+      color: var(--text-light);
+      line-height: 1.65;
+    }
+
+    /* =============================================
+       WHO WE SERVE
+    ============================================= */
+    .serve {
+      background: var(--primary);
+    }
+
+    .serve__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .serve-card {
+      background: rgba(255,255,255,0.06);
+      border: 1.5px solid rgba(255,255,255,0.12);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem 1.5rem;
+      text-align: center;
+      transition: background var(--transition), border-color var(--transition);
+    }
+
+    .serve-card:hover {
+      background: rgba(231,76,60,0.15);
+      border-color: var(--secondary);
+    }
+
+    .serve-card__icon {
+      width: 68px;
+      height: 68px;
+      background: rgba(231,76,60,0.18);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+    }
+
+    .serve-card__title {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .serve-card__text {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.72);
+      line-height: 1.6;
+    }
+
+    /* =============================================
+       SERVICES
+    ============================================= */
+    .services {
+      background: #EEF0F2;
+    }
+
+    .services__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .service-card {
+      background: #fff;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .service-card__img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+    }
+
+    .service-card__img--placeholder {
+      height: 200px;
+      background: linear-gradient(135deg, var(--primary) 0%, #3d5166 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .service-card__body {
+      padding: 1.5rem 1.5rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .service-card__icon {
+      width: 48px;
+      height: 48px;
+      background: rgba(231,76,60,0.10);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+    }
+
+    .service-card__title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .service-card__text {
+      font-size: 0.92rem;
+      color: var(--text-light);
+      line-height: 1.65;
+      flex: 1;
+    }
+
+    /* =============================================
+       HOW IT WORKS
+    ============================================= */
+    .how {
+      background: var(--bg);
+    }
+
+    .how__steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      position: relative;
+    }
+
+    .how__steps::before {
+      content: '';
+      position: absolute;
+      top: 48px;
+      left: 10%;
+      right: 10%;
+      height: 2px;
+      background: linear-gradient(90deg, var(--secondary) 0%, var(--secondary-dark) 100%);
+      opacity: 0.3;
+    }
+
+    .step {
+      text-align: center;
+      padding: 0 16px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .step__number {
+      width: 96px;
+      height: 96px;
+      background: var(--secondary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+      font-size: 2rem;
+      font-weight: 900;
+      color: #fff;
+      box-shadow: 0 6px 24px rgba(231,76,60,0.35);
+    }
+
+    .step__title {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 12px;
+    }
+
+    .step__text {
+      font-size: 0.95rem;
+      color: var(--text-light);
+      line-height: 1.65;
+    }
+
+    /* =============================================
+       SERVICE AREAS
+    ============================================= */
+    .areas {
+      background: var(--primary);
+    }
+
+    .areas__layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .areas__map {
+      background: rgba(255,255,255,0.05);
+      border: 1.5px solid rgba(255,255,255,0.12);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      min-height: 320px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .areas__map-icon {
+      width: 80px;
+      height: 80px;
+      background: rgba(231,76,60,0.2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .areas__map-title {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: #fff;
+      text-align: center;
+    }
+
+    .areas__map-radius {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.65);
+      text-align: center;
+    }
+
+    .areas__list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .areas__list-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: rgba(255,255,255,0.80);
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-size: 0.8rem;
+    }
+
+    .area-tag {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: rgba(255,255,255,0.88);
+      font-size: 1rem;
+      font-weight: 500;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+
+    .area-tag:last-child {
+      border-bottom: none;
+    }
+
+    /* =============================================
+       INSURANCE
+    ============================================= */
+    .insurance {
+      background: #fff;
+    }
+
+    .insurance__layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .insurance__img {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .insurance__img img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+    }
+
+    .insurance__badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+
+    .insurance__badge {
+      background: var(--primary);
+      color: #fff;
+      border-radius: 8px;
+      padding: 14px 20px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .insurance__badge--red {
+      background: var(--secondary);
+    }
+
+    .insurance__note {
+      background: #EEF0F2;
+      border-left: 4px solid var(--secondary);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 20px 24px;
+      font-size: 0.95rem;
+      color: var(--text-light);
+      line-height: 1.7;
+    }
+
+    /* =============================================
+       TESTIMONIALS
+    ============================================= */
+    .testimonials {
+      background: #EEF0F2;
+    }
+
+    .testimonials__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .testimonial-card {
+      background: #fff;
+      border-radius: var(--radius-lg);
+      padding: 1.75rem 1.75rem;
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+
+    .testimonial-card::before {
+      content: '"';
+      position: absolute;
+      top: 16px;
+      left: 24px;
+      font-size: 6rem;
+      line-height: 1;
+      color: rgba(231,76,60,0.15);
+      font-family: Georgia, serif;
+    }
+
+    .testimonial-card__stars {
+      display: flex;
+      gap: 4px;
+      margin-bottom: 16px;
+    }
+
+    .testimonial-card__text {
+      font-size: 1rem;
+      color: var(--text);
+      line-height: 1.7;
+      margin-bottom: 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .testimonial-card__author {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .testimonial-card__avatar {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #fff;
+      flex-shrink: 0;
+    }
+
+    .testimonial-card__name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95rem;
+    }
+
+    .testimonial-card__detail {
+      font-size: 0.82rem;
+      color: var(--text-light);
+    }
+
+    /* =============================================
+       SCHEDULE SECTION
+    ============================================= */
+    .schedule {
+      background: var(--bg);
+    }
+
+    .schedule__layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .schedule__cta-box {
+      background: var(--primary);
+      border-radius: var(--radius-lg);
+      padding: 44px 36px;
+      text-align: center;
+    }
+
+    .schedule__phone {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 900;
+      color: var(--secondary);
+      display: block;
+      margin: 16px 0 8px;
+      letter-spacing: -0.02em;
+    }
+
+    .schedule__phone:hover {
+      color: #fff;
+    }
+
+    .schedule__hours {
+      color: rgba(255,255,255,0.70);
+      font-size: 0.9rem;
+      margin-bottom: 28px;
+    }
+
+    .schedule__divider {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: rgba(255,255,255,0.40);
+      font-size: 0.85rem;
+      margin: 24px 0;
+    }
+
+    .schedule__divider::before,
+    .schedule__divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: rgba(255,255,255,0.15);
+    }
+
+    /* Form */
+    .form {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .form__row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .form__group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .form__label {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .form__input,
+    .form__select,
+    .form__textarea {
+      width: 100%;
+      padding: 14px 16px;
+      border: 2px solid var(--border);
+      border-radius: var(--radius);
+      font-size: 1rem;
+      color: var(--text);
+      background: #fff;
+      transition: border-color var(--transition);
+    }
+
+    .form__input:focus,
+    .form__select:focus,
+    .form__textarea:focus {
+      outline: none;
+      border-color: var(--secondary);
+    }
+
+    .form__textarea {
+      resize: vertical;
+      min-height: 110px;
+    }
+
+    .form__note {
+      font-size: 0.82rem;
+      color: var(--text-light);
+      text-align: center;
+    }
+
+    .form__success {
+      display: none;
+      background: #d4edda;
+      color: #155724;
+      border: 1.5px solid #c3e6cb;
+      border-radius: var(--radius);
+      padding: 18px 22px;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    /* =============================================
+       FOOTER
+    ============================================= */
+    .footer {
+      background: var(--bg-dark);
+      color: rgba(255,255,255,0.75);
+      padding: 64px 0 32px;
+    }
+
+    .footer__grid {
+      display: grid;
+      grid-template-columns: 1.8fr 1fr 1fr 1.2fr;
+      gap: 40px;
+      margin-bottom: 48px;
+    }
+
+    .footer__brand {}
+
+    .footer__logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .footer__logo-icon {
+      width: 42px;
+      height: 42px;
+      background: var(--secondary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .footer__logo-name {
+      font-size: 1.05rem;
+      font-weight: 900;
+      color: #fff;
+    }
+
+    .footer__desc {
+      font-size: 0.9rem;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .footer__col-title {
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #fff;
+      margin-bottom: 18px;
+    }
+
+    .footer__links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer__link {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.65);
+      transition: color var(--transition);
+    }
+
+    .footer__link:hover {
+      color: var(--secondary);
+    }
+
+    .footer__contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.9rem;
+      margin-bottom: 14px;
+    }
+
+    .footer__contact-icon {
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .footer__bottom {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.45);
+    }
+
+    .footer__disclaimer {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.35);
+      margin-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      padding-top: 20px;
+      line-height: 1.6;
+    }
+
+    /* =============================================
+       SKIP LINK (ACCESSIBILITY)
+    ============================================= */
+    .skip-link {
+      position: absolute;
+      top: -60px;
+      left: 20px;
+      background: var(--secondary);
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: var(--radius);
+      font-weight: 700;
+      z-index: 9999;
+      transition: top 0.2s;
+    }
+
+    .skip-link:focus {
+      top: 10px;
+    }
+
+    /* =============================================
+       RESPONSIVE
+    ============================================= */
+    @media (max-width: 1024px) {
+      .footer__grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .areas__layout,
+      .insurance__layout,
+      .schedule__layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .how__steps::before {
+        display: none;
+      }
+    }
+
+    @media (max-width: 768px) {
+      html { font-size: 17px; }
+
+      .section { padding: 60px 0; }
+
+      .nav__links,
+      .nav__cta {
+        display: none;
+      }
+
+      .nav__toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hero__content {
+        padding: 60px 0 48px;
+      }
+
+      .hero__actions {
+        flex-direction: column;
+      }
+
+      .hero__actions .btn {
+        width: 100%;
+        font-size: 1.05rem;
+      }
+
+      .trust-bar__inner {
+        gap: 18px 28px;
+      }
+
+      .form__row {
+        grid-template-columns: 1fr;
+      }
+
+      .footer__grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer__bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .schedule__cta-box {
+        padding: 32px 24px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      html { font-size: 16px; }
+
+      .benefits__grid,
+      .serve__grid,
+      .services__grid,
+      .how__steps,
+      .testimonials__grid {
+        grid-template-columns: 1fr;
+      }
+    }</style>
+  <!-- Codex UI Polish: nav readability and one-line links -->
+  <style id="codex-ui-polish-nav">
+    nav a,
+    .nav a,
+    .navbar a,
+    .nav__links a,
+    .nav-links a,
+    .menu a,
+    .menu__link,
+    .fullscreen-menu a {
+      white-space: nowrap;
+    }
+
+    @media (min-width: 1024px) {
+      nav a,
+      .nav a,
+      .navbar a,
+      .nav__links a,
+      .nav-links a,
+      .menu a,
+      .menu__link,
+      .fullscreen-menu a {
+        line-height: 1.1;
+      }
+
+      .nav__links,
+      .nav-links,
+      .navbar-links,
+      .menu-links,
+      nav ul {
+        row-gap: 0.25rem;
+      }
+
+      .nav__links,
+      .nav-links,
+      .navbar-links,
+      .menu-links,
+      nav ul {
+        align-items: center;
+      }
+
+      .nav__links a,
+      .nav-links a,
+      .navbar-links a,
+      .menu-links a,
+      nav ul a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 1.2rem;
+      }
+    }
+
+    /* Cross-page alignment normalization for common grid/card layouts */
+    .services__grid,
+    .service-grid,
+    .cards-grid,
+    .features-grid,
+    .pricing__grid,
+    .plans-grid,
+    .results__grid,
+    .reviews__grid,
+    .events-grid,
+    .coaches__grid,
+    .therapists-grid,
+    .portfolio__grid,
+    .tips-grid,
+    .testimonials-grid,
+    .grid {
+      align-items: stretch;
+    }
+
+    .service-card,
+    .card,
+    .feature-card,
+    .event-card,
+    .plan,
+    .pricing-card,
+    .testimonial,
+    .review,
+    .coach,
+    .therapist-card,
+    .project,
+    .tip-card,
+    .serve-card,
+    .info-card,
+    .stat-card {
+      height: 100%;
+    }
+
+    .service-card img,
+    .project img,
+    .tip-card img,
+    .coach img,
+    .therapist-card img,
+    .feature-card img,
+    .gallery-item img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    /* Improve readability where copy is dense without changing content */
+    section p,
+    .section p,
+    .card p,
+    .service-card p,
+    .feature-card p,
+    .testimonial p,
+    .event-card p,
+    .info-card p {
+      max-width: 66ch;
+      text-wrap: pretty;
+    }
+
+    .section__header p,
+    .hero p,
+    .footer p,
+    .map-overlay-card,
+    .location__item-value {
+      max-width: none;
+    }
+  </style>
+
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- ============================================================
+       NAVIGATION
+  ============================================================ -->
+  <header class="nav" role="banner">
+    <div class="container">
+      <div class="nav__inner">
+        <!-- Logo -->
+        <a href="#" class="nav__logo" aria-label="Mobile PT Solutions — Home">
+          <div class="nav__logo-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div class="nav__logo-text">
+            <span class="nav__logo-name">Mobile PT Solutions</span>
+            <span class="nav__logo-tagline">In-Home Physical Therapy</span>
+          </div>
+        </a>
+
+        <!-- Desktop links -->
+        <nav class="nav__links" aria-label="Primary navigation">
+          <a href="#benefits" class="nav__link">Why In-Home</a>
+          <a href="#services" class="nav__link">Services</a>
+          <a href="#how-it-works" class="nav__link">How It Works</a>
+          <a href="#areas" class="nav__link">Areas</a>
+          <a href="#insurance" class="nav__link">Insurance</a>
+        </nav>
+
+        <!-- Desktop CTA -->
+        <div class="nav__cta">
+          <a href="#schedule" class="btn btn--primary">Schedule Home Visit</a>
+        </div>
+
+        <!-- Mobile toggle -->
+        <button class="nav__toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round">
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <nav class="nav__mobile-menu" id="mobile-menu" aria-label="Mobile navigation" aria-hidden="true">
+      <a href="#benefits" class="nav__mobile-link">Why In-Home PT</a>
+      <a href="#serve" class="nav__mobile-link">Who We Serve</a>
+      <a href="#services" class="nav__mobile-link">Services</a>
+      <a href="#how-it-works" class="nav__mobile-link">How It Works</a>
+      <a href="#areas" class="nav__mobile-link">Service Areas</a>
+      <a href="#insurance" class="nav__mobile-link">Insurance</a>
+      <a href="#testimonials" class="nav__mobile-link">Testimonials</a>
+      <a href="#schedule" class="btn btn--primary btn--block">Schedule Home Visit</a>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ============================================================
+         HERO
+    ============================================================ -->
+    <section class="hero" aria-label="Hero">
+      <div class="hero__bg" role="img" aria-label="Physical therapist providing in-home care"></div>
+      <div class="hero__overlay"></div>
+      <div class="container">
+        <div class="hero__content">
+
+          <div class="hero__badge animate">
+            <span class="badge badge--white">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              Medicare &amp; Medicaid Accepted
+            </span>
+          </div>
+
+          <h1 class="hero__title animate delay-1">
+            Physical Therapy.<br />
+            <span>In Your Home.</span><br />
+            On Your Schedule.
+          </h1>
+
+          <p class="hero__subtitle animate delay-2">
+            No transportation needed. No waiting rooms. We bring licensed physical therapists directly to your door — wherever you call home.
+          </p>
+
+          <div class="hero__actions animate delay-3">
+            <a href="tel:+15559012345" class="btn btn--primary btn--lg" aria-label="Call us at 555-901-2345">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.38 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.79a16 16 0 0 0 6.29 6.29l.95-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.03z"/></svg>
+              Call (555) 901-2345
+            </a>
+            <a href="#schedule" class="btn btn--outline-white btn--lg">
+              FREE In-Home Assessment
+            </a>
+          </div>
+
+          <div class="hero__trust animate delay-4">
+            <div class="hero__trust-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E74C3C" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Available 7 Days a Week
+            </div>
+            <div class="hero__trust-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E74C3C" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Licensed Therapists
+            </div>
+            <div class="hero__trust-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E74C3C" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Insurance Billing Handled
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         TRUST BAR
+    ============================================================ -->
+    <div class="trust-bar" role="complementary" aria-label="Trust signals">
+      <div class="container">
+        <div class="trust-bar__inner">
+          <div class="trust-bar__item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+            Serving Your City &amp; Surrounding Areas
+          </div>
+          <div class="trust-bar__item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            Available 7 Days a Week
+          </div>
+          <div class="trust-bar__item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            Medicare &amp; Medicaid Accepted
+          </div>
+          <div class="trust-bar__item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            FREE Initial Assessment
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================================================
+         WHY IN-HOME PT
+    ============================================================ -->
+    <section class="section benefits" id="benefits" aria-labelledby="benefits-title">
+      <div class="container">
+        <div class="section__header section__header--center animate">
+          <p class="section__label">The Difference</p>
+          <h2 class="section__title" id="benefits-title">Why Choose In-Home Physical Therapy?</h2>
+          <p class="section__subtitle">Traditional PT clinics require transportation, waiting rooms, and rigid schedules. We remove every barrier between you and recovery.</p>
+        </div>
+
+        <div class="benefits__grid">
+          <div class="benefit-card animate delay-1">
+            <div class="benefit-card__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#E74C3C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <h3 class="benefit-card__title">No Travel Required</h3>
+            <p class="benefit-card__text">Skip the stressful commute, parking, and waiting rooms. Your therapist arrives at your front door at the scheduled time — every time.</p>
+          </div>
+
+          <div class="benefit-card animate delay-2">
+            <div class="benefit-card__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#E74C3C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <h3 class="benefit-card__title">Familiar Environment Heals Better</h3>
+            <p class="benefit-card__text">Research shows patients recover faster and more safely when therapy is practiced in their own home — the real-world environment they live in every day.</p>
+          </div>
+
+          <div class="benefit-card animate delay-3">
+            <div class="benefit-card__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#E74C3C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            </div>
+            <h3 class="benefit-card__title">Flexible Scheduling</h3>
+            <p class="benefit-card__text">Morning, evening, weekends — we work around your life. Available 7 days a week to fit treatment sessions into your most convenient time slots.</p>
+          </div>
+
+          <div class="benefit-card animate delay-4">
+            <div class="benefit-card__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#E74C3C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3 class="benefit-card__title">One-on-One Attention</h3>
+            <p class="benefit-card__text">Your entire session is dedicated to you — no sharing a therapist with multiple patients. Personalized, focused care that delivers measurably better outcomes.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         WHO WE SERVE
+    ============================================================ -->
+    <section class="section serve" id="serve" aria-labelledby="serve-title">
+      <div class="container">
+        <div class="section__header section__header--center animate">
+          <p class="section__label">Our Patients</p>
+          <h2 class="section__title" id="serve-title">Who We Serve</h2>
+          <p class="section__subtitle">We specialize in patients who benefit most from receiving care at home.</p>
+        </div>
+
+        <div class="serve__grid">
+          <div class="serve-card animate delay-1">
+            <div class="serve-card__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#E74C3C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><line x1="12" y1="22" x2="12" y2="12"/></svg>
+            </div>
+            <h3 class="serve-card__title">Post-Hospital Patients</h3>
+            <p class="serve-card__text">Recovering from a hospital stay? Our therapists provide seamless continuity of care from discharge to full recovery — in the comfort of your home.</p>
+          </div>
+
+          <div class="serve-card animate delay-2">
+            <div class="serve-card__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#E74C3C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a6 6 0 0 1 12 0v2"/><line x1="12" y1="16" x2="12" y2="20"/></svg>
+            </div>
+            <h3 class="serve-card__title">Homebound Seniors</h3>
+            <p class="serve-card__text">Mobility challenges shouldn't prevent access to quality care. We bring gentle, effective therapy to seniors in their own homes, assisted living, or adult family homes.</p>
+          </div>
+
+          <div class="serve-card animate delay-3">
+            <div class="serve-card__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#E74C3C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <h3 class="serve-card__title">Busy Professionals</h3>
+            <p class="serve-card__text">Can't fit clinic visits into your schedule? We come to you at home, your office, or wherever works best — before work, after work, or on weekends.</p>
+          </div>
+
+          <div class="serve-card animate delay-4">
+            <div class="serve-card__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#E74C3C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l3 3 7-7"/><circle cx="12" cy="12" r="10"/></svg>
+            </div>
+            <h3 class="serve-card__title">Recovering Surgery Patients</h3>
+            <p class="serve-card__text">Post-surgical rehab is critical. We provide expert, evidence-based therapy during the weeks when driving is impossible — keeping your recovery on track.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SERVICES
+    ============================================================ -->
+    <section class="section services" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section__header section__header--center animate">
+          <p class="section__label">What We Treat</p>
+          <h2 class="section__title" id="services-title">In-Home Physical Therapy Services</h2>
+          <p class="section__subtitle">Every service is delivered by licensed therapists in the privacy and comfort of your own home.</p>
+        </div>
+
+        <div class="services__grid">
+
+          <article class="service-card animate delay-1">
+            <img class="service-card__img" src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1200&q=80" alt="Physical therapist guiding patient through post-surgery rehabilitation at home" loading="lazy" />
+            <div class="service-card__body">
+              <div class="service-card__icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E74C3C" stroke-width="2" stroke-linecap="round"><path d="M4.5 12.5l3 3 7-7"/><circle cx="12" cy="12" r="10"/></svg>
+              </div>
+              <h3 class="service-card__title">Post-Surgery Rehabilitation</h3>
+              <p class="service-card__text">Structured recovery programs after joint replacement, spine surgery, or other procedures. We work alongside your surgical team's protocols to optimize healing and restore function.</p>
+            </div>
+          </article>
+
+          <article class="service-card animate delay-2">
+            <img class="service-card__img" src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&q=80" alt="Senior patient practicing balance and fall prevention exercises with therapist" loading="lazy" />
+            <div class="service-card__body">
+              <div class="service-card__icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E74C3C" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a6 6 0 0 1 12 0v2"/></svg>
+              </div>
+              <h3 class="service-card__title">Balance &amp; Fall Prevention</h3>
+              <p class="service-card__text">Personalized balance training and fall risk assessment right in your living environment. We identify hazards and build the strength and coordination to keep you safe at home.</p>
+            </div>
+          </article>
+
+          <article class="service-card animate delay-3">
+            <img class="service-card__img" src="https://images.unsplash.com/photo-1584515933487-779824d29309?w=1200&q=80" alt="Stroke recovery therapy session focused on mobility and coordination" loading="lazy" />
+            <div class="service-card__body">
+              <div class="service-card__icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E74C3C" stroke-width="2" stroke-linecap="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              </div>
+              <h3 class="service-card__title">Stroke Recovery</h3>
+              <p class="service-card__text">Neurological rehabilitation designed to rebuild movement, strength, and independence. Home-based therapy means practicing functional tasks in the actual environment where they matter most.</p>
+            </div>
+          </article>
+
+          <article class="service-card animate delay-1">
+            <img class="service-card__img" src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=1200&q=80" alt="Orthopedic physical therapy home visit for strength and movement training" loading="lazy" />
+            <div class="service-card__body">
+              <div class="service-card__icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E74C3C" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              </div>
+              <h3 class="service-card__title">Orthopedic Physical Therapy</h3>
+              <p class="service-card__text">Treatment for joint pain, muscle injuries, back and neck conditions, and sports injuries. Evidence-based manual therapy and therapeutic exercise — all at home.</p>
+            </div>
+          </article>
+
+          <article class="service-card animate delay-2">
+            <img class="service-card__img" src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?w=1200&q=80" alt="Hands-on pain management and manual therapy treatment at home" loading="lazy" />
+            <div class="service-card__body">
+              <div class="service-card__icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E74C3C" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="8" y1="15" x2="16" y2="15"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+              </div>
+              <h3 class="service-card__title">Pain Management</h3>
+              <p class="service-card__text">Drug-free, hands-on pain relief for chronic conditions, arthritis, and injury recovery. Manual therapy, therapeutic modalities, and individualized home exercise programs.</p>
+            </div>
+          </article>
+
+          <article class="service-card animate delay-3">
+            <img class="service-card__img" src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=1200&q=80" alt="Compassionate elder care physical therapy session in a home setting" loading="lazy" />
+            <div class="service-card__body">
+              <div class="service-card__icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E74C3C" stroke-width="2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+              </div>
+              <h3 class="service-card__title">Elder Care Physical Therapy</h3>
+              <p class="service-card__text">Compassionate, patient-centered care for older adults. We address mobility, strength, endurance, and independence — with the patience and respect seniors deserve.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         HOW IT WORKS
+    ============================================================ -->
+    <section class="section how" id="how-it-works" aria-labelledby="how-title">
+      <div class="container">
+        <div class="section__header section__header--center animate">
+          <p class="section__label">Simple Process</p>
+          <h2 class="section__title" id="how-title">Getting Started Is Easy</h2>
+          <p class="section__subtitle">Three simple steps from your first call to ongoing recovery at home.</p>
+        </div>
+
+        <div class="how__steps" role="list">
+
+          <div class="step animate delay-1" role="listitem">
+            <div class="step__number" aria-hidden="true">1</div>
+            <h3 class="step__title">Schedule a Call</h3>
+            <p class="step__text">Call us or fill out our quick form. A care coordinator will discuss your needs, confirm insurance coverage, and schedule your FREE in-home assessment — often within 24–48 hours.</p>
+          </div>
+
+          <div class="step animate delay-2" role="listitem">
+            <div class="step__number" aria-hidden="true">2</div>
+            <h3 class="step__title">We Come to You</h3>
+            <p class="step__text">Your licensed physical therapist arrives at your home at the agreed time with all necessary equipment. Your first visit includes a full assessment and your personalized treatment plan.</p>
+          </div>
+
+          <div class="step animate delay-3" role="listitem">
+            <div class="step__number" aria-hidden="true">3</div>
+            <h3 class="step__title">Ongoing In-Home Care</h3>
+            <p class="step__text">Regular sessions scheduled at your convenience. Your therapist tracks progress, adjusts your plan, and coordinates with your doctors — while you recover from the comfort of home.</p>
+          </div>
+
+        </div>
+
+        <div class="animate delay-4" style="text-align:center; margin-top:52px;">
+          <a href="#schedule" class="btn btn--primary btn--lg">
+            Schedule My FREE Assessment
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SERVICE AREAS
+    ============================================================ -->
+    <section class="section areas" id="areas" aria-labelledby="areas-title">
+      <div class="container">
+        <div class="section__header animate">
+          <p class="section__label">Where We Work</p>
+          <h2 class="section__title" id="areas-title">We Come to Your Neighborhood</h2>
+          <p class="section__subtitle">Proudly serving Your City and all surrounding communities. Not sure if we cover your area? Call us — chances are we do.</p>
+        </div>
+
+        <div class="areas__layout">
+
+          <div class="areas__map animate animate--left">
+            <div class="areas__map-icon" aria-hidden="true">
+              <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="#E74C3C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <p class="areas__map-title">Your City &amp; Surrounding Areas</p>
+            <p class="areas__map-radius">We travel up to 30 miles from our central location to bring therapy directly to you.</p>
+            <a href="tel:+15559012345" class="btn btn--primary" aria-label="Call to confirm service in your area">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.38 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.79a16 16 0 0 0 6.29 6.29l.95-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.03z"/></svg>
+              Confirm My Area
+            </a>
+          </div>
+
+          <div class="areas__list animate animate--right">
+            <p class="areas__list-title">Areas We Serve</p>
+            <div class="area-tag">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E74C3C" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+              Downtown / City Center
+            </div>
+            <div class="area-tag">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E74C3C" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+              North Side &amp; North Hills
+            </div>
+            <div class="area-tag">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E74C3C" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+              East District &amp; Eastside
+            </div>
+            <div class="area-tag">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E74C3C" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+              West End &amp; Westview
+            </div>
+            <div class="area-tag">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E74C3C" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+              South Park &amp; Southbrook
+            </div>
+            <div class="area-tag">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E74C3C" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+              Riverside &amp; Waterfront
+            </div>
+            <div class="area-tag">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E74C3C" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+              Oakwood &amp; Maplewood
+            </div>
+            <div class="area-tag">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E74C3C" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+              Assisted Living &amp; Memory Care Facilities
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         INSURANCE
+    ============================================================ -->
+    <section class="section insurance" id="insurance" aria-labelledby="insurance-title">
+      <div class="container">
+        <div class="insurance__layout">
+
+          <div class="insurance__img animate animate--left">
+            <img
+              src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=800&q=80"
+              alt="A caring physical therapist working with a senior patient at home"
+              width="800"
+              height="400"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="animate animate--right">
+            <p class="section__label">Billing Made Easy</p>
+            <h2 class="section__title" id="insurance-title">We Handle All Your Insurance Paperwork</h2>
+            <p class="section__subtitle" style="margin-bottom:28px;">Don't let billing confusion stop you from getting the care you need. Our team manages every step of the insurance process so you can focus on recovering.</p>
+
+            <div class="insurance__badges">
+              <div class="insurance__badge">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Medicare
+              </div>
+              <div class="insurance__badge">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Medicaid
+              </div>
+              <div class="insurance__badge insurance__badge--red">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Most Private Plans
+              </div>
+              <div class="insurance__badge">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Workers' Comp
+              </div>
+              <div class="insurance__badge">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Self-Pay Options
+              </div>
+            </div>
+
+            <div class="insurance__note">
+              <strong>We verify your benefits before your first visit.</strong> Our billing team contacts your insurance provider, confirms coverage, and explains your out-of-pocket costs upfront — no surprises. If you're unsure about your coverage, call us and we'll check for you.
+            </div>
+
+            <div style="margin-top:28px;">
+              <a href="tel:+15559012345" class="btn btn--primary">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.38 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.79a16 16 0 0 0 6.29 6.29l.95-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.03z"/></svg>
+                Check My Coverage: (555) 901-2345
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         TESTIMONIALS
+    ============================================================ -->
+    <section class="section testimonials" id="testimonials" aria-labelledby="testimonials-title">
+      <div class="container">
+        <div class="section__header section__header--center animate">
+          <p class="section__label">Patient Stories</p>
+          <h2 class="section__title" id="testimonials-title">What Our Patients Say</h2>
+          <p class="section__subtitle">Real results from real patients who recovered at home with Mobile PT Solutions.</p>
+        </div>
+
+        <div class="testimonials__grid" role="list">
+
+          <div class="testimonial-card animate delay-1" role="listitem">
+            <div class="testimonial-card__stars" aria-label="5 out of 5 stars">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="#E74C3C" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="#E74C3C" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="#E74C3C" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="#E74C3C" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="#E74C3C" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <p class="testimonial-card__text">"After my hip replacement, I couldn't drive myself anywhere. Mobile PT Solutions came to my home three times a week. My therapist was incredibly patient and knowledgeable. I was walking without a cane two months ahead of my doctor's prediction. I can't recommend them enough."</p>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar" aria-hidden="true">MJ</div>
+              <div>
+                <p class="testimonial-card__name">Margaret J., 74</p>
+                <p class="testimonial-card__detail">Hip Replacement Recovery, Medicare Patient</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card animate delay-2" role="listitem">
+            <div class="testimonial-card__stars" aria-label="5 out of 5 stars">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="#E74C3C" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="#E74C3C" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="#E74C3C" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="#E74C3C" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="#E74C3C" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <p class="testimonial-card__text">"My father had a stroke and was discharged from the hospital needing intensive rehab. The team from Mobile PT came within 48 hours of discharge. Having therapy at home meant Dad was practicing in his actual bedroom and kitchen — exactly where he needs to be independent. His progress has been remarkable."</p>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar" aria-hidden="true">DR</div>
+              <div>
+                <p class="testimonial-card__name">David R., 51</p>
+                <p class="testimonial-card__detail">Son of Stroke Recovery Patient, Medicaid</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card animate delay-3" role="listitem">
+            <div class="testimonial-card__stars" aria-label="5 out of 5 stars">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="#E74C3C" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="#E74C3C" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="#E74C3C" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="#E74C3C" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="#E74C3C" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <p class="testimonial-card__text">"I was worried about falling — I'd already had two falls in six months. My therapist not only worked on my balance and strength but actually walked through my home and helped me identify trip hazards I never noticed. I feel so much safer now. The billing team handled all my Medicare paperwork without me lifting a finger."</p>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar" aria-hidden="true">EW</div>
+              <div>
+                <p class="testimonial-card__name">Eleanor W., 81</p>
+                <p class="testimonial-card__detail">Balance &amp; Fall Prevention, Medicare Patient</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SCHEDULE
+    ============================================================ -->
+    <section class="section schedule" id="schedule" aria-labelledby="schedule-title">
+      <div class="container">
+        <div class="section__header section__header--center animate">
+          <p class="section__label">Get Started Today</p>
+          <h2 class="section__title" id="schedule-title">Schedule Your FREE In-Home Assessment</h2>
+          <p class="section__subtitle">Contact us today and we'll have a therapist at your door — often within 24 to 48 hours.</p>
+        </div>
+
+        <div class="schedule__layout">
+
+          <!-- Call CTA box -->
+          <div class="schedule__cta-box animate animate--left">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin:0 auto 16px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.38 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.79a16 16 0 0 0 6.29 6.29l.95-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.03z"/></svg>
+            <p style="color:rgba(255,255,255,0.75); font-size:0.9rem; font-weight:500; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:4px;">Call Us Directly</p>
+            <a href="tel:+15559012345" class="schedule__phone" aria-label="Call Mobile PT Solutions at 555-901-2345">
+              (555) 901-2345
+            </a>
+            <p class="schedule__hours">Available 7 Days a Week, 7am – 8pm</p>
+
+            <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:20px;">
+              <div class="hero__trust-item" style="justify-content:center;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E74C3C" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span style="color:rgba(255,255,255,0.80);">FREE In-Home Assessment</span>
+              </div>
+              <div class="hero__trust-item" style="justify-content:center;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E74C3C" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span style="color:rgba(255,255,255,0.80);">Benefits Verified Before First Visit</span>
+              </div>
+              <div class="hero__trust-item" style="justify-content:center;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E74C3C" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span style="color:rgba(255,255,255,0.80);">Often Available Within 24–48 Hours</span>
+              </div>
+            </div>
+
+            <div class="schedule__divider">or</div>
+
+            <p style="color:rgba(255,255,255,0.55); font-size:0.88rem;">Fill out the form and we'll call you back within one business hour.</p>
+          </div>
+
+          <!-- Contact form -->
+          <div class="animate animate--right">
+            <div id="form-success" class="form__success" role="alert" aria-live="polite">
+              Thank you! We received your request and will call you within one business hour to confirm your appointment.
+            </div>
+            <form class="form" id="contact-form" novalidate aria-label="Schedule a home visit request form">
+              <div class="form__row">
+                <div class="form__group">
+                  <label class="form__label" for="first-name">First Name <span aria-hidden="true">*</span></label>
+                  <input type="text" id="first-name" name="first-name" class="form__input" placeholder="Margaret" required autocomplete="given-name" />
+                </div>
+                <div class="form__group">
+                  <label class="form__label" for="last-name">Last Name <span aria-hidden="true">*</span></label>
+                  <input type="text" id="last-name" name="last-name" class="form__input" placeholder="Johnson" required autocomplete="family-name" />
+                </div>
+              </div>
+
+              <div class="form__group">
+                <label class="form__label" for="phone">Phone Number <span aria-hidden="true">*</span></label>
+                <input type="tel" id="phone" name="phone" class="form__input" placeholder="(555) 000-0000" required autocomplete="tel" />
+              </div>
+
+              <div class="form__group">
+                <label class="form__label" for="email">Email Address</label>
+                <input type="email" id="email" name="email" class="form__input" placeholder="your@email.com" autocomplete="email" />
+              </div>
+
+              <div class="form__group">
+                <label class="form__label" for="zip">Zip Code <span aria-hidden="true">*</span></label>
+                <input type="text" id="zip" name="zip" class="form__input" placeholder="00000" required autocomplete="postal-code" inputmode="numeric" maxlength="10" />
+              </div>
+
+              <div class="form__group">
+                <label class="form__label" for="service">What type of care are you looking for?</label>
+                <select id="service" name="service" class="form__select">
+                  <option value="">-- Select a service --</option>
+                  <option value="post-surgery">Post-Surgery Rehabilitation</option>
+                  <option value="balance">Balance &amp; Fall Prevention</option>
+                  <option value="stroke">Stroke Recovery</option>
+                  <option value="orthopedic">Orthopedic Physical Therapy</option>
+                  <option value="pain">Pain Management</option>
+                  <option value="elder">Elder Care Physical Therapy</option>
+                  <option value="other">Other / Not Sure</option>
+                </select>
+              </div>
+
+              <div class="form__group">
+                <label class="form__label" for="insurance">Insurance</label>
+                <select id="insurance-select" name="insurance" class="form__select">
+                  <option value="">-- Select your insurance --</option>
+                  <option value="medicare">Medicare</option>
+                  <option value="medicaid">Medicaid</option>
+                  <option value="private">Private / Commercial Insurance</option>
+                  <option value="workers-comp">Workers' Compensation</option>
+                  <option value="self-pay">Self-Pay</option>
+                  <option value="other">Other / Not Sure</option>
+                </select>
+              </div>
+
+              <div class="form__group">
+                <label class="form__label" for="message">Tell us more (optional)</label>
+                <textarea id="message" name="message" class="form__textarea" placeholder="Briefly describe the condition or situation. The more detail you share, the better we can prepare for your visit."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn--primary btn--lg btn--block">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                Request My FREE In-Home Assessment
+              </button>
+
+              <p class="form__note">By submitting this form you agree to be contacted by our team. We respect your privacy and never sell your information.</p>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+
+        <!-- Brand -->
+        <div class="footer__brand">
+          <div class="footer__logo">
+            <div class="footer__logo-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <span class="footer__logo-name">Mobile PT Solutions</span>
+          </div>
+          <p class="footer__desc">Licensed physical therapists bringing expert, personalized care directly to your home. Because recovery should never be limited by transportation.</p>
+          <div style="display:flex; flex-direction:column; gap:8px;">
+            <span class="badge badge--white" style="width:fit-content;">Medicare &amp; Medicaid Accepted</span>
+            <span class="badge badge--white" style="width:fit-content;">Available 7 Days a Week</span>
+          </div>
+        </div>
+
+        <!-- Services -->
+        <div>
+          <p class="footer__col-title">Services</p>
+          <ul class="footer__links">
+            <li><a href="#services" class="footer__link">Post-Surgery Rehab</a></li>
+            <li><a href="#services" class="footer__link">Balance &amp; Fall Prevention</a></li>
+            <li><a href="#services" class="footer__link">Stroke Recovery</a></li>
+            <li><a href="#services" class="footer__link">Orthopedic PT</a></li>
+            <li><a href="#services" class="footer__link">Pain Management</a></li>
+            <li><a href="#services" class="footer__link">Elder Care PT</a></li>
+          </ul>
+        </div>
+
+        <!-- Company -->
+        <div>
+          <p class="footer__col-title">Company</p>
+          <ul class="footer__links">
+            <li><a href="#benefits" class="footer__link">Why In-Home PT</a></li>
+            <li><a href="#serve" class="footer__link">Who We Serve</a></li>
+            <li><a href="#how-it-works" class="footer__link">How It Works</a></li>
+            <li><a href="#areas" class="footer__link">Service Areas</a></li>
+            <li><a href="#insurance" class="footer__link">Insurance &amp; Billing</a></li>
+            <li><a href="#schedule" class="footer__link">Schedule a Visit</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <p class="footer__col-title">Contact Us</p>
+          <div class="footer__contact-item">
+            <svg class="footer__contact-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E74C3C" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.38 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.79a16 16 0 0 0 6.29 6.29l.95-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.03z"/></svg>
+            <div>
+              <a href="tel:+15559012345" style="color:rgba(255,255,255,0.85); font-weight:600; font-size:1.05rem;">(555) 901-2345</a>
+              <p style="font-size:0.8rem; color:rgba(255,255,255,0.45);">Call or text, 7am – 8pm daily</p>
+            </div>
+          </div>
+          <div class="footer__contact-item">
+            <svg class="footer__contact-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E74C3C" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:info@mobileptsolutions.com" style="color:rgba(255,255,255,0.65);">info@mobileptsolutions.com</a>
+          </div>
+          <div class="footer__contact-item">
+            <svg class="footer__contact-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E74C3C" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Serving Your City &amp; Surrounding Areas</span>
+          </div>
+          <div style="margin-top:20px;">
+            <a href="#schedule" class="btn btn--primary">Schedule Home Visit</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer__bottom">
+        <span>© 2026 Mobile PT Solutions. All rights reserved.</span>
+        <div style="display:flex; gap:20px; flex-wrap:wrap;">
+          <a href="#" class="footer__link" style="color:rgba(255,255,255,0.45);">Privacy Policy</a>
+          <a href="#" class="footer__link" style="color:rgba(255,255,255,0.45);">Terms of Service</a>
+          <a href="#" class="footer__link" style="color:rgba(255,255,255,0.45);">Accessibility</a>
+          <a href="#" class="footer__link" style="color:rgba(255,255,255,0.45);">HIPAA Notice</a>
+        </div>
+      </div>
+
+      <p class="footer__disclaimer">
+        Mobile PT Solutions is a licensed physical therapy practice. Services are provided by licensed physical therapists. This website is for informational purposes only and does not constitute medical advice. Medicare, Medicaid, and insurance coverage vary by plan and individual circumstances — coverage verification is conducted prior to your first visit. Phone number (555) 901-2345 is listed for inquiries and appointment scheduling.
+      </p>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       JAVASCRIPT
+  ============================================================ -->
+  <script>
+    'use strict';
+
+    // ——— Mobile Navigation Toggle ———
+    (function () {
+      const toggle = document.querySelector('.nav__toggle');
+      const menu   = document.getElementById('mobile-menu');
+      if (!toggle || !menu) return;
+
+      toggle.addEventListener('click', function () {
+        const isOpen = menu.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', isOpen);
+        menu.setAttribute('aria-hidden', !isOpen);
+      });
+
+      // Close on mobile link click
+      menu.querySelectorAll('.nav__mobile-link, .btn').forEach(function (link) {
+        link.addEventListener('click', function () {
+          menu.classList.remove('open');
+          toggle.setAttribute('aria-expanded', 'false');
+          menu.setAttribute('aria-hidden', 'true');
+        });
+      });
+    })();
+
+    // ——— Scroll Animations (IntersectionObserver) ———
+    (function () {
+      if (!window.IntersectionObserver) {
+        // Fallback: show all elements
+        document.querySelectorAll('.animate').forEach(function (el) {
+          el.classList.add('visible');
+        });
+        return;
+      }
+
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.12,
+        rootMargin: '0px 0px -40px 0px'
+      });
+
+      document.querySelectorAll('.animate').forEach(function (el) {
+        observer.observe(el);
+      });
+    })();
+
+    // ——— Contact Form Handling ———
+    (function () {
+      var form    = document.getElementById('contact-form');
+      var success = document.getElementById('form-success');
+      if (!form) return;
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        var valid = true;
+
+        // Simple client-side validation
+        var required = form.querySelectorAll('[required]');
+        required.forEach(function (field) {
+          field.style.borderColor = '';
+          if (!field.value.trim()) {
+            field.style.borderColor = '#C0392B';
+            valid = false;
+          }
+        });
+
+        if (!valid) {
+          var firstInvalid = form.querySelector('[required][style*="border-color: rgb(192, 57, 43)"]');
+          if (firstInvalid) firstInvalid.focus();
+          return;
+        }
+
+        // Simulate submission
+        var btn = form.querySelector('button[type="submit"]');
+        btn.disabled = true;
+        btn.textContent = 'Sending...';
+
+        setTimeout(function () {
+          form.style.display = 'none';
+          success.style.display = 'block';
+          success.focus();
+        }, 900);
+      });
+
+      // Live validation feedback
+      form.querySelectorAll('[required]').forEach(function (field) {
+        field.addEventListener('blur', function () {
+          if (field.value.trim()) {
+            field.style.borderColor = '#27AE60';
+          } else {
+            field.style.borderColor = '#C0392B';
+          }
+        });
+        field.addEventListener('input', function () {
+          if (field.value.trim()) {
+            field.style.borderColor = '#27AE60';
+          }
+        });
+      });
+    })();
+
+    // ——— Smooth scroll for anchor links (older browser fallback) ———
+    (function () {
+      if ('scrollBehavior' in document.documentElement.style) return; // native smooth scroll
+      document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+        anchor.addEventListener('click', function (e) {
+          var target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>

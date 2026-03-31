@@ -1,0 +1,2864 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Executive Spine Center | Premium Chiropractic for Business Professionals</title>
+  <meta name="description" content="Executive Spine Center offers concierge chiropractic care tailored for business professionals. Corporate wellness programs, ergonomic consultations, and executive health packages. Board Certified. 500+ Executive Clients." />
+  <meta name="keywords" content="executive chiropractic, corporate wellness, ergonomic consultation, spine care, business professionals, posture correction, concierge chiropractic" />
+  <meta property="og:title" content="Executive Spine Center | Where Peak Performance Begins" />
+  <meta property="og:description" content="Premium concierge chiropractic care for executives and corporate professionals. Same-day appointments, private treatment suites, dedicated care coordinators." />
+  <meta property="og:type" content="website" />
+  <meta name="robots" content="index, follow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "name": "Executive Spine Center",
+    "description": "Premium concierge chiropractic care for business professionals and executives. Corporate wellness programs, ergonomic consultations, and executive health packages.",
+    "url": "https://executivespinecenter.com",
+    "telephone": "(555) 456-7890",
+    "priceRange": "$$$",
+    "medicalSpecialty": "Chiropractic",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1 Financial Plaza, Suite 2800",
+      "addressLocality": "Downtown",
+      "addressRegion": "CA",
+      "postalCode": "90071",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 34.0522,
+      "longitude": -118.2437
+    },
+    "openingHours": [
+      "Mo-Fr 06:00-20:00",
+      "Sa 08:00-14:00"
+    ],
+    "hasMap": "https://maps.google.com",
+    "sameAs": [
+      "https://www.linkedin.com/company/executivespinecenter"
+    ]
+  }
+  </script>
+
+  <style>
+    /* ============================================================
+       CSS CUSTOM PROPERTIES
+    ============================================================ */
+    :root {
+      --primary: #0047AB;
+      --primary-dark: #003080;
+      --primary-light: #1a5fc8;
+      --secondary: #FFBF00;
+      --secondary-dark: #e6a800;
+      --secondary-light: #ffd040;
+      --accent: #F5F5F5;
+      --dark-bg: #0A0A2E;
+      --dark-bg-2: #0d0d3a;
+      --dark-bg-3: #111147;
+      --text-dark: #1a1a2e;
+      --text-mid: #3a3a5c;
+      --text-light: #8888aa;
+      --white: #ffffff;
+      --border-light: rgba(255, 191, 0, 0.2);
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --gold-glow: 0 0 24px rgba(255, 191, 0, 0.35);
+      --gold-glow-soft: 0 0 12px rgba(255, 191, 0, 0.2);
+      --shadow-card: 0 8px 40px rgba(0, 0, 0, 0.18);
+      --shadow-deep: 0 20px 60px rgba(0, 0, 0, 0.3);
+      --radius: 4px;
+      --radius-lg: 8px;
+      --transition: all 0.3s ease;
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-sans: 'Lato', Helvetica, sans-serif;
+    }
+
+    /* ============================================================
+       RESET & BASE
+    ============================================================ */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      font-weight: 400;
+      color: var(--text-dark);
+      background: var(--white);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: var(--transition);
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    /* ============================================================
+       TYPOGRAPHY
+    ============================================================ */
+    h1, h2, h3, h4 {
+      font-family: var(--font-serif);
+      line-height: 1.2;
+    }
+
+    .section-label {
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--secondary);
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+    .section-title {
+      font-size: clamp(1.5rem, 3vw, 2.25rem);
+      font-weight: 600;
+      line-height: 1.15;
+    }
+
+    .section-subtitle {
+      font-size: 1.05rem;
+      font-weight: 300;
+      line-height: 1.75;
+      color: var(--text-mid);
+      max-width: 52ch;
+    }
+
+    /* ============================================================
+       UTILITY
+    ============================================================ */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .hr-gold {
+      border: none;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--secondary), transparent);
+      opacity: 0.45;
+      margin: 0 auto;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.75rem 1.75rem;
+      max-height: 52px;
+      border-radius: var(--radius);
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+
+    .btn--gold {
+      background: var(--secondary);
+      color: var(--dark-bg);
+      border-color: var(--secondary);
+    }
+
+    .btn--gold:hover {
+      background: var(--secondary-light);
+      border-color: var(--secondary-light);
+      box-shadow: var(--gold-glow);
+      transform: translateY(-1px);
+    }
+
+    .btn--outline-gold {
+      background: transparent;
+      color: var(--secondary);
+      border-color: var(--secondary);
+    }
+
+    .btn--outline-gold:hover {
+      background: var(--secondary);
+      color: var(--dark-bg);
+      box-shadow: var(--gold-glow);
+      transform: translateY(-1px);
+    }
+
+    .btn--outline-white {
+      background: transparent;
+      color: var(--white);
+      border-color: rgba(255,255,255,0.5);
+    }
+
+    .btn--outline-white:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: var(--white);
+    }
+
+    .btn--primary {
+      background: var(--primary);
+      color: var(--white);
+      border-color: var(--primary);
+    }
+
+    .btn--primary:hover {
+      background: var(--primary-dark);
+      border-color: var(--primary-dark);
+      transform: translateY(-1px);
+      box-shadow: 0 8px 24px rgba(0, 71, 171, 0.35);
+    }
+
+    /* ============================================================
+       SCROLL FADE ANIMATION
+    ============================================================ */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .fade-in--delay-1 { transition-delay: 0.1s; }
+    .fade-in--delay-2 { transition-delay: 0.2s; }
+    .fade-in--delay-3 { transition-delay: 0.3s; }
+    .fade-in--delay-4 { transition-delay: 0.4s; }
+    .fade-in--delay-5 { transition-delay: 0.5s; }
+
+    /* ============================================================
+       NAVIGATION
+    ============================================================ */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(10, 10, 46, 0.97);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-light);
+      transition: var(--transition);
+    }
+
+    .nav.scrolled {
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .nav__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+      gap: 2rem;
+    }
+
+    .nav__logo {
+      display: flex;
+      flex-direction: column;
+      gap: 0.1rem;
+      flex-shrink: 0;
+    }
+
+    .nav__logo-name {
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1;
+    }
+
+    .nav__logo-tagline {
+      font-size: 0.62rem;
+      font-weight: 400;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--secondary);
+    }
+
+    .nav__links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .nav__link {
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.75);
+    }
+
+    .nav__link:hover {
+      color: var(--secondary);
+    }
+
+    .nav__cta {
+      font-size: 0.75rem;
+      padding: 0.65rem 1.4rem;
+      flex-shrink: 0;
+    }
+
+    .nav__phone {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--secondary);
+      letter-spacing: 0.04em;
+      flex-shrink: 0;
+    }
+
+    .nav__phone:hover {
+      color: var(--secondary-light);
+    }
+
+    .nav__toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+      background: none;
+      border: none;
+    }
+
+    .nav__toggle span {
+      width: 24px;
+      height: 2px;
+      background: var(--white);
+      border-radius: 2px;
+      transition: var(--transition);
+      display: block;
+    }
+
+    .nav__mobile {
+      display: none;
+      background: var(--dark-bg);
+      border-top: 1px solid var(--border-light);
+      padding: 1.5rem;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .nav__mobile.open {
+      display: flex;
+    }
+
+    .nav__mobile .nav__link {
+      font-size: 0.9rem;
+    }
+
+    /* ============================================================
+       HERO
+    ============================================================ */
+    .hero {
+      position: relative;
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .hero__bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=80');
+      background-size: cover;
+      background-position: center top;
+      z-index: 0;
+    }
+
+    .hero__overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        135deg,
+        rgba(10, 10, 46, 0.92) 0%,
+        rgba(10, 10, 46, 0.75) 50%,
+        rgba(0, 71, 171, 0.55) 100%
+      );
+      z-index: 1;
+    }
+
+    .hero__content {
+      position: relative;
+      z-index: 2;
+      padding: 10rem 0 6rem;
+      max-width: 680px;
+    }
+
+    .hero__eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .hero__eyebrow-line {
+      width: 40px;
+      height: 1px;
+      background: var(--secondary);
+    }
+
+    .hero__eyebrow-text {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--secondary);
+    }
+
+    .hero__title {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero__title em {
+      font-style: italic;
+      color: var(--secondary);
+    }
+
+    .hero__subtitle {
+      font-size: 1.125rem;
+      font-weight: 300;
+      color: rgba(255,255,255,0.82);
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+      max-width: 600px;
+    }
+
+    .hero__actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+      margin-bottom: 3rem;
+    }
+
+    .hero__phone-link {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      color: rgba(255,255,255,0.85);
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
+    .hero__phone-link:hover {
+      color: var(--secondary);
+    }
+
+    .hero__phone-icon {
+      width: 18px;
+      height: 18px;
+      fill: var(--secondary);
+    }
+
+    .hero__trust {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .hero__trust-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+
+    .hero__trust-num {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--secondary);
+      line-height: 1;
+    }
+
+    .hero__trust-label {
+      font-size: 0.72rem;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      color: rgba(255,255,255,0.6);
+      text-transform: uppercase;
+    }
+
+    /* ============================================================
+       EXECUTIVE EXPERIENCE
+    ============================================================ */
+    .experience {
+      background: var(--dark-bg);
+      padding: 4rem 0;
+    }
+
+    .experience__header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .experience__header .section-title {
+      color: var(--white);
+    }
+
+    .experience__header .section-subtitle {
+      color: rgba(255,255,255,0.6);
+      margin: 1rem auto 0;
+    }
+
+    .experience__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2px;
+      border: 1px solid var(--border-light);
+    }
+
+    .experience__card {
+      padding: 2rem;
+      background: var(--dark-bg-2);
+      border-right: 1px solid var(--border-light);
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .experience__card:last-child {
+      border-right: none;
+    }
+
+    .experience__card::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--secondary);
+      transform: scaleX(0);
+      transition: transform 0.4s ease;
+    }
+
+    .experience__card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .experience__card:hover {
+      background: var(--dark-bg-3);
+      box-shadow: inset 0 0 40px rgba(255, 191, 0, 0.05);
+    }
+
+    .experience__icon {
+      width: 48px;
+      height: 48px;
+      margin-bottom: 1.5rem;
+      color: var(--secondary);
+    }
+
+    .experience__title {
+      font-family: var(--font-serif);
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 0.75rem;
+    }
+
+    .experience__text {
+      font-size: 0.95rem;
+      font-weight: 300;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.6);
+    }
+
+    /* ============================================================
+       SERVICES
+    ============================================================ */
+    .services {
+      padding: 4rem 0;
+      background: var(--accent);
+    }
+
+    .services__header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 2rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .services__header-left .section-title {
+      color: var(--text-dark);
+    }
+
+    .services__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .service-card {
+      background: var(--white);
+      border: 1px solid rgba(0,0,0,0.07);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-card);
+      border-color: rgba(255, 191, 0, 0.4);
+    }
+
+    .service-card:hover .service-card__icon {
+      box-shadow: var(--gold-glow-soft);
+    }
+
+    .service-card__body {
+      padding: 2rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .service-card__icon {
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+      flex-shrink: 0;
+      transition: var(--transition);
+    }
+
+    .service-card__icon svg {
+      width: 24px;
+      height: 24px;
+      color: var(--white);
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.8;
+    }
+
+    .service-card__tag {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--secondary-dark);
+      margin-bottom: 0.5rem;
+    }
+
+    .service-card__title {
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      margin-bottom: 0.75rem;
+      line-height: 1.3;
+    }
+
+    .service-card__desc {
+      font-size: 0.9rem;
+      line-height: 1.7;
+      color: var(--text-mid);
+      margin-bottom: 1.25rem;
+      flex: 1;
+    }
+
+    .service-card__link {
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .service-card__link:hover {
+      color: var(--secondary-dark);
+      gap: 0.7rem;
+    }
+
+    /* ============================================================
+       CORPORATE WELLNESS
+    ============================================================ */
+    .corporate {
+      background: var(--dark-bg);
+      padding: 4rem 0;
+    }
+
+    .corporate__inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    .corporate__image-wrap {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+
+    .corporate__image-wrap::before {
+      content: '';
+      position: absolute;
+      inset: -2px;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(135deg, var(--secondary), transparent, var(--primary));
+      z-index: -1;
+      padding: 2px;
+    }
+
+    .corporate__image {
+      width: 100%;
+      height: 440px;
+      object-fit: cover;
+      border-radius: var(--radius-lg);
+      display: block;
+    }
+
+    .corporate__badge {
+      position: absolute;
+      top: 1.5rem;
+      left: 1.5rem;
+      background: var(--secondary);
+      color: var(--dark-bg);
+      font-size: 0.7rem;
+      font-weight: 900;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 0.4rem 0.9rem;
+      border-radius: 2px;
+    }
+
+    .corporate__content .section-title {
+      color: var(--white);
+      margin-bottom: 1rem;
+    }
+
+    .corporate__content .section-subtitle {
+      color: rgba(255,255,255,0.65);
+      margin-bottom: 2.5rem;
+    }
+
+    .corporate__stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .corporate__stat {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+    }
+
+    .corporate__stat-num {
+      font-family: var(--font-serif);
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--secondary);
+      line-height: 1;
+      margin-bottom: 0.35rem;
+    }
+
+    .corporate__stat-label {
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.4;
+    }
+
+    /* FORM */
+    .quote-form {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+    }
+
+    .quote-form__title {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 1.25rem;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .form-group label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.6);
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: var(--radius);
+      color: var(--white);
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      padding: 0.7rem 1rem;
+      transition: var(--transition);
+      outline: none;
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: rgba(255,255,255,0.3);
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--secondary);
+      box-shadow: 0 0 0 3px rgba(255, 191, 0, 0.1);
+    }
+
+    .form-group select option {
+      background: var(--dark-bg-2);
+      color: var(--white);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    /* ============================================================
+       CONDITIONS
+    ============================================================ */
+    .conditions {
+      padding: 4rem 0;
+      background: var(--white);
+    }
+
+    .conditions__header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+
+    .conditions__header .section-title {
+      color: var(--text-dark);
+    }
+
+    .conditions__header .section-subtitle {
+      margin: 1rem auto 0;
+    }
+
+    .conditions__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+
+    .condition-card {
+      border: 1px solid rgba(0,0,0,0.08);
+      border-radius: var(--radius-lg);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      transition: var(--transition);
+      background: var(--white);
+    }
+
+    .condition-card:hover {
+      border-color: var(--secondary);
+      box-shadow: var(--gold-glow-soft), var(--shadow-card);
+      transform: translateY(-3px);
+    }
+
+    .condition-card__icon {
+      width: 52px;
+      height: 52px;
+      background: linear-gradient(135deg, rgba(0,71,171,0.08), rgba(0,71,171,0.15));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+      transition: var(--transition);
+    }
+
+    .condition-card:hover .condition-card__icon {
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    }
+
+    .condition-card:hover .condition-card__icon svg {
+      color: var(--white);
+    }
+
+    .condition-card__icon svg {
+      width: 24px;
+      height: 24px;
+      color: var(--primary);
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.8;
+      transition: var(--transition);
+    }
+
+    .condition-card__name {
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      margin-bottom: 0.5rem;
+    }
+
+    .condition-card__desc {
+      font-size: 0.82rem;
+      line-height: 1.6;
+      color: var(--text-light);
+    }
+
+    /* ============================================================
+       DOCTOR
+    ============================================================ */
+    .doctor {
+      padding: 4rem 0;
+      background: var(--accent);
+    }
+
+    .doctor__inner {
+      display: grid;
+      grid-template-columns: 420px 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    .doctor__image-wrap {
+      position: relative;
+    }
+
+    .doctor__image {
+      width: 100%;
+      height: 540px;
+      object-fit: cover;
+      border-radius: var(--radius-lg);
+      display: block;
+    }
+
+    .doctor__credentials {
+      position: absolute;
+      bottom: 2rem;
+      left: 2rem;
+      right: 2rem;
+      background: rgba(10, 10, 46, 0.92);
+      backdrop-filter: blur(8px);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+    }
+
+    .doctor__cred-title {
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 0.5rem;
+    }
+
+    .doctor__cred-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .doctor__cred-tag {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--secondary);
+      background: rgba(255, 191, 0, 0.1);
+      border: 1px solid rgba(255, 191, 0, 0.25);
+      border-radius: 2px;
+      padding: 0.2rem 0.6rem;
+    }
+
+    .doctor__content .section-title {
+      color: var(--text-dark);
+      margin-bottom: 0.35rem;
+    }
+
+    .doctor__subtitle {
+      font-size: 1rem;
+      font-weight: 400;
+      color: var(--primary);
+      letter-spacing: 0.04em;
+      margin-bottom: 1.5rem;
+    }
+
+    .doctor__bio {
+      font-size: 0.97rem;
+      line-height: 1.8;
+      color: var(--text-mid);
+      margin-bottom: 1.25rem;
+    }
+
+    .doctor__highlights {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+    }
+
+    .doctor__highlight {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+
+    .doctor__highlight-dot {
+      width: 6px;
+      height: 6px;
+      background: var(--secondary);
+      border-radius: 50%;
+      margin-top: 0.55rem;
+      flex-shrink: 0;
+    }
+
+    .doctor__highlight-text {
+      font-size: 0.92rem;
+      line-height: 1.6;
+      color: var(--text-mid);
+    }
+
+    /* ============================================================
+       TESTIMONIALS
+    ============================================================ */
+    .testimonials {
+      padding: 4rem 0;
+      background: var(--dark-bg);
+    }
+
+    .testimonials__header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .testimonials__header .section-title {
+      color: var(--white);
+    }
+
+    .testimonials__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .testimonial-card {
+      background: var(--dark-bg-2);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .testimonial-card:hover {
+      border-color: var(--secondary);
+      box-shadow: var(--gold-glow-soft);
+      transform: translateY(-3px);
+    }
+
+    .testimonial-card__quote-mark {
+      font-family: var(--font-serif);
+      font-size: 4rem;
+      line-height: 0.8;
+      color: var(--secondary);
+      opacity: 0.35;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    .testimonial-card__text {
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+      font-style: italic;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.82);
+      margin-bottom: 1.75rem;
+    }
+
+    .testimonial-card__stars {
+      display: flex;
+      gap: 0.2rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .testimonial-card__stars svg {
+      width: 16px;
+      height: 16px;
+      fill: var(--secondary);
+    }
+
+    .testimonial-card__divider {
+      width: 40px;
+      height: 1px;
+      background: var(--secondary);
+      opacity: 0.4;
+      margin-bottom: 1.25rem;
+    }
+
+    .testimonial-card__author {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .testimonial-card__avatar {
+      width: 46px;
+      height: 46px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--white);
+      flex-shrink: 0;
+    }
+
+    .testimonial-card__name {
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--white);
+      line-height: 1.2;
+    }
+
+    .testimonial-card__title {
+      font-size: 0.78rem;
+      font-weight: 400;
+      color: var(--secondary);
+      letter-spacing: 0.05em;
+      margin-top: 0.2rem;
+    }
+
+    /* ============================================================
+       MEMBERSHIP
+    ============================================================ */
+    .membership {
+      padding: 4rem 0;
+      background: var(--white);
+    }
+
+    .membership__header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .membership__header .section-title {
+      color: var(--text-dark);
+    }
+
+    .membership__header .section-subtitle {
+      margin: 1rem auto 0;
+    }
+
+    .membership__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      align-items: start;
+    }
+
+    .plan-card {
+      border: 1px solid rgba(0,0,0,0.1);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      transition: var(--transition);
+      background: var(--white);
+    }
+
+    .plan-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-card);
+    }
+
+    .plan-card--featured {
+      border-color: var(--secondary);
+      box-shadow: 0 0 0 1px var(--secondary), var(--shadow-card);
+      transform: scale(1.02);
+      position: relative;
+    }
+
+    .plan-card--featured:hover {
+      transform: scale(1.02) translateY(-4px);
+    }
+
+    .plan-card__badge {
+      background: var(--secondary);
+      color: var(--dark-bg);
+      font-size: 0.68rem;
+      font-weight: 900;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 0.4rem;
+    }
+
+    .plan-card__header {
+      padding: 2rem 2rem 1.5rem;
+      background: var(--dark-bg);
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .plan-card--featured .plan-card__header {
+      background: linear-gradient(135deg, var(--dark-bg), var(--primary-dark));
+    }
+
+    .plan-card__name {
+      font-family: var(--font-serif);
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 0.5rem;
+    }
+
+    .plan-card__price {
+      display: flex;
+      align-items: baseline;
+      gap: 0.3rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .plan-card__price-amount {
+      font-size: 2.2rem;
+      font-weight: 900;
+      color: var(--secondary);
+      line-height: 1;
+    }
+
+    .plan-card__price-period {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.5);
+    }
+
+    .plan-card__price-note {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.45);
+      font-style: italic;
+    }
+
+    .plan-card__body {
+      padding: 2rem;
+    }
+
+    .plan-card__features {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+    }
+
+    .plan-card__feature {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-size: 0.9rem;
+      color: var(--text-mid);
+      line-height: 1.4;
+    }
+
+    .plan-card__feature-check {
+      width: 18px;
+      height: 18px;
+      background: rgba(0, 71, 171, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+
+    .plan-card--featured .plan-card__feature-check {
+      background: rgba(255, 191, 0, 0.15);
+    }
+
+    .plan-card__feature-check svg {
+      width: 10px;
+      height: 10px;
+      stroke: var(--primary);
+      fill: none;
+      stroke-width: 2.5;
+    }
+
+    .plan-card--featured .plan-card__feature-check svg {
+      stroke: var(--secondary-dark);
+    }
+
+    /* ============================================================
+       LOCATION
+    ============================================================ */
+    .location {
+      padding: 4rem 0;
+      background: var(--accent);
+    }
+
+    .location__inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .location__content .section-title {
+      color: var(--text-dark);
+      margin-bottom: 0.75rem;
+    }
+
+    .location__content .section-subtitle {
+      margin-bottom: 2.5rem;
+    }
+
+    .location__details {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .location__detail {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .location__detail-icon {
+      width: 42px;
+      height: 42px;
+      background: var(--primary);
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .location__detail-icon svg {
+      width: 20px;
+      height: 20px;
+      color: var(--white);
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.8;
+    }
+
+    .location__detail-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-light);
+      margin-bottom: 0.25rem;
+    }
+
+    .location__detail-value {
+      font-size: 0.97rem;
+      font-weight: 400;
+      color: var(--text-dark);
+      line-height: 1.5;
+    }
+
+    .location__detail-value a {
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    .location__detail-value a:hover {
+      color: var(--secondary-dark);
+    }
+
+    .location__private-note {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: linear-gradient(135deg, rgba(0,71,171,0.07), rgba(255,191,0,0.06));
+      border: 1px solid rgba(0,71,171,0.15);
+      border-left: 3px solid var(--secondary);
+      border-radius: var(--radius);
+      padding: 1rem 1.25rem;
+      margin-top: 1.5rem;
+    }
+
+    .location__private-note svg {
+      width: 20px;
+      height: 20px;
+      color: var(--secondary-dark);
+      flex-shrink: 0;
+    }
+
+    .location__private-note-text {
+      font-size: 0.88rem;
+      color: var(--text-mid);
+      line-height: 1.5;
+    }
+
+    .location__private-note-text strong {
+      color: var(--text-dark);
+    }
+
+    .location__contact-card {
+      background: var(--dark-bg);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+    }
+
+    .location__contact-title {
+      font-family: var(--font-serif);
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 0.5rem;
+    }
+
+    .location__contact-sub {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.55);
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+
+    .contact-form .form-group label {
+      color: rgba(255,255,255,0.6);
+    }
+
+    /* ============================================================
+       FOOTER
+    ============================================================ */
+    .footer {
+      background: #060618;
+      border-top: 1px solid rgba(255, 191, 0, 0.15);
+      padding: 4rem 0 2rem;
+    }
+
+    .footer__grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .footer__brand-name {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 0.25rem;
+    }
+
+    .footer__brand-tagline {
+      font-size: 0.7rem;
+      font-weight: 400;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--secondary);
+      margin-bottom: 1rem;
+    }
+
+    .footer__brand-desc {
+      font-size: 0.88rem;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.45);
+      max-width: 30ch;
+      margin-bottom: 1.5rem;
+    }
+
+    .footer__social {
+      display: flex;
+      gap: 0.75rem;
+    }
+
+    .footer__social-link {
+      width: 36px;
+      height: 36px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.5);
+      transition: var(--transition);
+    }
+
+    .footer__social-link:hover {
+      background: var(--secondary);
+      border-color: var(--secondary);
+      color: var(--dark-bg);
+      box-shadow: var(--gold-glow-soft);
+    }
+
+    .footer__social-link svg {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+    }
+
+    .footer__col-title {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--secondary);
+      margin-bottom: 1.25rem;
+    }
+
+    .footer__links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .footer__link {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.45);
+      transition: var(--transition);
+    }
+
+    .footer__link:hover {
+      color: var(--white);
+      padding-left: 4px;
+    }
+
+    .footer__hr {
+      border: none;
+      height: 1px;
+      background: rgba(255,255,255,0.06);
+      margin-bottom: 2rem;
+    }
+
+    .footer__bottom {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .footer__copyright {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.3);
+    }
+
+    .footer__disclaimer {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.25);
+      max-width: 50ch;
+      text-align: right;
+      line-height: 1.5;
+    }
+
+    /* ============================================================
+       SECTIONS: IMAGE BLOCK
+    ============================================================ */
+    .services__image-block {
+      margin-bottom: 3rem;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      position: relative;
+      height: 240px;
+    }
+
+    .services__image-block img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .services__image-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, rgba(10,10,46,0.7), transparent);
+      display: flex;
+      align-items: center;
+      padding: 2.5rem;
+    }
+
+    .services__image-text {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      font-style: italic;
+      color: var(--white);
+      max-width: 30ch;
+      line-height: 1.4;
+    }
+
+    .services__image-text span {
+      color: var(--secondary);
+    }
+
+    /* ============================================================
+       RESPONSIVE
+    ============================================================ */
+    @media (max-width: 1024px) {
+      .corporate__inner,
+      .doctor__inner {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+
+      .doctor__inner {
+        grid-template-columns: 1fr;
+      }
+
+      .doctor__image-wrap {
+        max-width: 420px;
+      }
+
+      .footer__grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav__links,
+      .nav__cta,
+      .nav__phone {
+        display: none;
+      }
+
+      .nav__toggle {
+        display: flex;
+      }
+
+      .hero__content {
+        padding: 8rem 0 4rem;
+      }
+
+      .hero__trust {
+        gap: 1.25rem;
+      }
+
+      .location__inner {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+
+      .footer__grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .footer__disclaimer {
+        text-align: left;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .corporate__stats {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .services__image-block {
+        height: 180px;
+      }
+
+      .services__image-text {
+        font-size: 1.1rem;
+      }
+
+      .plan-card--featured {
+        transform: none;
+      }
+
+      .plan-card--featured:hover {
+        transform: translateY(-4px);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero__title {
+        font-size: 2rem;
+      }
+
+      .btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.78rem;
+      }
+
+      .corporate__stats {
+        grid-template-columns: 1fr;
+      }
+    }</style>
+  <!-- Codex UI Polish: nav readability and one-line links -->
+  <style id="codex-ui-polish-nav">
+    nav a,
+    .nav a,
+    .navbar a,
+    .nav__links a,
+    .nav-links a,
+    .menu a,
+    .menu__link,
+    .fullscreen-menu a {
+      white-space: nowrap;
+    }
+
+    @media (min-width: 1024px) {
+      nav a,
+      .nav a,
+      .navbar a,
+      .nav__links a,
+      .nav-links a,
+      .menu a,
+      .menu__link,
+      .fullscreen-menu a {
+        line-height: 1.1;
+      }
+
+      .nav__links,
+      .nav-links,
+      .navbar-links,
+      .menu-links,
+      nav ul {
+        row-gap: 0.25rem;
+      }
+
+      .nav__links,
+      .nav-links,
+      .navbar-links,
+      .menu-links,
+      nav ul {
+        align-items: center;
+      }
+
+      .nav__links a,
+      .nav-links a,
+      .navbar-links a,
+      .menu-links a,
+      nav ul a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 1.2rem;
+      }
+    }
+
+    /* Cross-page alignment normalization for common grid/card layouts */
+    .services__grid,
+    .service-grid,
+    .cards-grid,
+    .features-grid,
+    .pricing__grid,
+    .plans-grid,
+    .results__grid,
+    .reviews__grid,
+    .events-grid,
+    .coaches__grid,
+    .therapists-grid,
+    .portfolio__grid,
+    .tips-grid,
+    .testimonials-grid,
+    .grid {
+      align-items: stretch;
+    }
+
+    .service-card,
+    .card,
+    .feature-card,
+    .event-card,
+    .plan,
+    .pricing-card,
+    .testimonial,
+    .review,
+    .coach,
+    .therapist-card,
+    .project,
+    .tip-card,
+    .serve-card,
+    .info-card,
+    .stat-card {
+      height: 100%;
+    }
+
+    .service-card img,
+    .project img,
+    .tip-card img,
+    .coach img,
+    .therapist-card img,
+    .feature-card img,
+    .gallery-item img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    /* Improve readability where copy is dense without changing content */
+    section p,
+    .section p,
+    .card p,
+    .service-card p,
+    .feature-card p,
+    .testimonial p,
+    .event-card p,
+    .info-card p {
+      max-width: 66ch;
+      text-wrap: pretty;
+    }
+
+    .section__header p,
+    .hero p,
+    .footer p,
+    .map-overlay-card,
+    .location__item-value {
+      max-width: none;
+    }
+  </style>
+
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVIGATION
+  ============================================================ -->
+  <header>
+    <nav class="nav" id="main-nav" role="navigation" aria-label="Main navigation">
+      <div class="container">
+        <div class="nav__inner">
+          <a href="#" class="nav__logo" aria-label="Executive Spine Center home">
+            <span class="nav__logo-name">Executive Spine Center</span>
+            <span class="nav__logo-tagline">Concierge Chiropractic Care</span>
+          </a>
+
+          <ul class="nav__links" role="list">
+            <li><a href="#experience" class="nav__link">Experience</a></li>
+            <li><a href="#services" class="nav__link">Services</a></li>
+            <li><a href="#corporate" class="nav__link">Corporate</a></li>
+            <li><a href="#doctor" class="nav__link">Our Doctor</a></li>
+            <li><a href="#membership" class="nav__link">Membership</a></li>
+          </ul>
+
+          <a href="tel:5554567890" class="nav__phone" aria-label="Call us at 555-456-7890">(555) 456-7890</a>
+          <a href="#location" class="btn btn--gold nav__cta">Schedule Executive Consultation</a>
+
+          <button class="nav__toggle" id="nav-toggle" aria-label="Open navigation menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+      <div class="nav__mobile" id="nav-mobile" role="menu">
+        <a href="#experience" class="nav__link" role="menuitem">Experience</a>
+        <a href="#services" class="nav__link" role="menuitem">Services</a>
+        <a href="#corporate" class="nav__link" role="menuitem">Corporate</a>
+        <a href="#doctor" class="nav__link" role="menuitem">Our Doctor</a>
+        <a href="#membership" class="nav__link" role="menuitem">Membership</a>
+        <a href="tel:5554567890" class="nav__link" role="menuitem">(555) 456-7890</a>
+        <a href="#location" class="btn btn--gold" role="menuitem">Schedule Consultation</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ============================================================
+         HERO
+    ============================================================ -->
+    <section class="hero" id="hero" aria-label="Hero section">
+      <div class="hero__bg" role="img" aria-label="Executive professional office environment"></div>
+      <div class="hero__overlay"></div>
+
+      <div class="container">
+        <div class="hero__content">
+          <div class="hero__eyebrow fade-in">
+            <span class="hero__eyebrow-line"></span>
+            <span class="hero__eyebrow-text">Board Certified Chiropractic Care</span>
+          </div>
+
+          <h1 class="hero__title fade-in fade-in--delay-1">
+            Where <em>Peak Performance</em><br>Begins
+          </h1>
+
+          <p class="hero__subtitle fade-in fade-in--delay-2">
+            Concierge chiropractic care engineered for executives and business professionals. Reclaim your edge — without disrupting your schedule.
+          </p>
+
+          <div class="hero__actions fade-in fade-in--delay-3">
+            <a href="#location" class="btn btn--gold">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/>
+              </svg>
+              Complimentary Executive Assessment
+            </a>
+            <a href="tel:5554567890" class="hero__phone-link" aria-label="Call us at 555-456-7890">
+              <svg class="hero__phone-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.1 6.1l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.02z"/>
+              </svg>
+              (555) 456-7890
+            </a>
+          </div>
+
+          <div class="hero__trust fade-in fade-in--delay-4">
+            <div class="hero__trust-item">
+              <span class="hero__trust-num">18</span>
+              <span class="hero__trust-label">Years Experience</span>
+            </div>
+            <div class="hero__trust-item">
+              <span class="hero__trust-num">500+</span>
+              <span class="hero__trust-label">Executive Clients</span>
+            </div>
+            <div class="hero__trust-item">
+              <span class="hero__trust-num">Board</span>
+              <span class="hero__trust-label">Certified</span>
+            </div>
+            <div class="hero__trust-item">
+              <span class="hero__trust-num">Same-Day</span>
+              <span class="hero__trust-label">Availability</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="hr-gold" />
+
+    <!-- ============================================================
+         THE EXECUTIVE EXPERIENCE
+    ============================================================ -->
+    <section class="experience" id="experience" aria-labelledby="experience-title">
+      <div class="container">
+        <div class="experience__header fade-in">
+          <span class="section-label">The Executive Difference</span>
+          <h2 class="section-title" id="experience-title">A Practice Built Around Your Schedule</h2>
+          <p class="section-subtitle">We designed every aspect of our care model for one person: the high-performing professional who cannot afford downtime.</p>
+        </div>
+
+        <div class="experience__grid">
+          <article class="experience__card fade-in fade-in--delay-1">
+            <svg class="experience__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+            <h3 class="experience__title">Concierge Scheduling</h3>
+            <p class="experience__text">Same-day, early morning, evening, and weekend appointments available. Your treatment fits your calendar — not the other way around. Extended session windows mean zero waiting room time.</p>
+          </article>
+
+          <article class="experience__card fade-in fade-in--delay-2">
+            <svg class="experience__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+              <polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+            <h3 class="experience__title">Private Treatment Suites</h3>
+            <p class="experience__text">Quiet, individually appointed suites designed for discretion and comfort. Step in from a high-pressure boardroom into an environment engineered for total recovery and focus.</p>
+          </article>
+
+          <article class="experience__card fade-in fade-in--delay-3">
+            <svg class="experience__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+              <circle cx="12" cy="7" r="4"/>
+            </svg>
+            <h3 class="experience__title">Dedicated Care Coordinator</h3>
+            <p class="experience__text">Your personal coordinator manages scheduling, treatment plans, insurance liaison, and progress tracking. One point of contact for everything. Seamless, proactive, and confidential.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <hr class="hr-gold" />
+
+    <!-- ============================================================
+         SERVICES
+    ============================================================ -->
+    <section class="services" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <div class="services__header">
+          <div class="services__header-left fade-in">
+            <span class="section-label">Premium Services</span>
+            <h2 class="section-title" id="services-title">Precision Care for<br>High-Performance Professionals</h2>
+          </div>
+          <a href="#location" class="btn btn--primary fade-in fade-in--delay-1">View All Services</a>
+        </div>
+
+        <div class="services__image-block fade-in">
+          <img
+            src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=1200&q=80"
+            alt="Professional chiropractic treatment in a clinical suite"
+            loading="lazy"
+          />
+          <div class="services__image-overlay">
+            <p class="services__image-text">
+              "Restoring function, <span>eliminating pain,</span> and optimizing performance for those who lead."
+            </p>
+          </div>
+        </div>
+
+        <div class="services__grid">
+          <article class="service-card fade-in fade-in--delay-1">
+            <div class="service-card__body">
+              <div class="service-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </div>
+              <span class="service-card__tag">Flagship Program</span>
+              <h3 class="service-card__title">Executive Health Package</h3>
+              <p class="service-card__desc">A comprehensive annual care program including bi-weekly adjustments, monthly wellness reviews, ergonomic audits, and priority access to all services. Your complete spinal health solution.</p>
+              <a href="#location" class="service-card__link" aria-label="Learn more about Executive Health Package">
+                Learn More
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="service-card fade-in fade-in--delay-2">
+            <div class="service-card__body">
+              <div class="service-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+              </div>
+              <span class="service-card__tag">Workplace Wellness</span>
+              <h3 class="service-card__title">Ergonomic Assessment</h3>
+              <p class="service-card__desc">A clinical analysis of your workstation setup, posture patterns, and movement habits. Receive a detailed corrective report with actionable adjustments to prevent chronic injury and optimize daily output.</p>
+              <a href="#location" class="service-card__link" aria-label="Learn more about Ergonomic Assessment">
+                Learn More
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="service-card fade-in fade-in--delay-3">
+            <div class="service-card__body">
+              <div class="service-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <span class="service-card__tag">Enterprise</span>
+              <h3 class="service-card__title">Corporate Wellness Program</h3>
+              <p class="service-card__desc">Scalable wellness solutions for companies of all sizes. On-site or in-office visits, group ergonomic seminars, and per-employee membership pricing. Demonstrate your investment in human capital.</p>
+              <a href="#corporate" class="service-card__link" aria-label="Learn more about Corporate Wellness Program">
+                Learn More
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="service-card fade-in fade-in--delay-1">
+            <div class="service-card__body">
+              <div class="service-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="3"/><line x1="12" y1="8" x2="12" y2="16"/><path d="M9 14l-3 4h12l-3-4"/></svg>
+              </div>
+              <span class="service-card__tag">Corrective Care</span>
+              <h3 class="service-card__title">Posture Correction Protocol</h3>
+              <p class="service-card__desc">A structured, evidence-based program using spinal manipulation, targeted exercises, and postural re-training. Addresses forward head posture, rounded shoulders, and anterior pelvic tilt.</p>
+              <a href="#location" class="service-card__link" aria-label="Learn more about Posture Correction Protocol">
+                Learn More
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="service-card fade-in fade-in--delay-2">
+            <div class="service-card__body">
+              <div class="service-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><line x1="9" y1="22" x2="9" y2="12"/><line x1="15" y1="22" x2="15" y2="12"/></svg>
+              </div>
+              <span class="service-card__tag">Concierge Service</span>
+              <h3 class="service-card__title">On-Site Office Visits</h3>
+              <p class="service-card__desc">Bring the expertise directly to your workplace. Scheduled visits to your office for executive team wellness sessions, ergonomic checks, and spot treatments — without leaving the building.</p>
+              <a href="#location" class="service-card__link" aria-label="Learn more about On-Site Office Visits">
+                Learn More
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <hr class="hr-gold" />
+
+    <!-- ============================================================
+         CORPORATE WELLNESS
+    ============================================================ -->
+    <section class="corporate" id="corporate" aria-labelledby="corporate-title">
+      <div class="container">
+        <div class="corporate__inner">
+          <div class="corporate__image-wrap fade-in">
+            <img
+              class="corporate__image"
+              src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=80"
+              alt="Corporate wellness meeting with professional team"
+              loading="lazy"
+            />
+            <span class="corporate__badge">Corporate Program</span>
+          </div>
+
+          <div class="corporate__content fade-in fade-in--delay-1">
+            <span class="section-label">B2B Wellness Solutions</span>
+            <h2 class="section-title" id="corporate-title">Bring Wellness to<br>Your Office</h2>
+            <p class="section-subtitle">Musculoskeletal conditions are the leading cause of workplace absenteeism. Our corporate programs deliver measurable ROI — healthier teams, lower insurance costs, and higher productivity.</p>
+
+            <div class="corporate__stats">
+              <div class="corporate__stat fade-in fade-in--delay-1">
+                <div class="corporate__stat-num">28%</div>
+                <div class="corporate__stat-label">Reduction in sick days reported by corporate clients</div>
+              </div>
+              <div class="corporate__stat fade-in fade-in--delay-2">
+                <div class="corporate__stat-num">4.2x</div>
+                <div class="corporate__stat-label">Average ROI on corporate wellness investment</div>
+              </div>
+              <div class="corporate__stat fade-in fade-in--delay-3">
+                <div class="corporate__stat-num">91%</div>
+                <div class="corporate__stat-label">Employee satisfaction rating in program surveys</div>
+              </div>
+              <div class="corporate__stat fade-in fade-in--delay-4">
+                <div class="corporate__stat-num">60+</div>
+                <div class="corporate__stat-label">Corporate accounts currently under program care</div>
+              </div>
+            </div>
+
+            <div class="quote-form fade-in fade-in--delay-2">
+              <h3 class="quote-form__title">Request a Corporate Wellness Quote</h3>
+              <form id="corporate-form" novalidate aria-label="Corporate wellness quote request form">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="corp-name">Your Name</label>
+                    <input type="text" id="corp-name" name="name" placeholder="Jane Smith" autocomplete="name" />
+                  </div>
+                  <div class="form-group">
+                    <label for="corp-company">Company Name</label>
+                    <input type="text" id="corp-company" name="company" placeholder="Acme Corp" autocomplete="organization" />
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="corp-email">Work Email</label>
+                    <input type="email" id="corp-email" name="email" placeholder="jane@company.com" autocomplete="email" />
+                  </div>
+                  <div class="form-group">
+                    <label for="corp-size">Company Size</label>
+                    <select id="corp-size" name="size">
+                      <option value="">Select size</option>
+                      <option value="1-25">1–25 employees</option>
+                      <option value="26-100">26–100 employees</option>
+                      <option value="101-500">101–500 employees</option>
+                      <option value="500+">500+ employees</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="corp-message">Program Interests</label>
+                  <textarea id="corp-message" name="message" placeholder="Tell us about your team's wellness goals..."></textarea>
+                </div>
+                <button type="submit" class="btn btn--gold" style="width:100%; justify-content:center;">
+                  Request Corporate Quote
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="hr-gold" />
+
+    <!-- ============================================================
+         CONDITIONS
+    ============================================================ -->
+    <section class="conditions" id="conditions" aria-labelledby="conditions-title">
+      <div class="container">
+        <div class="conditions__header fade-in">
+          <span class="section-label">What We Treat</span>
+          <h2 class="section-title" id="conditions-title">Conditions We Address</h2>
+          <p class="section-subtitle">Modern professional life creates predictable injury patterns. We specialize in diagnosing and resolving the conditions most common to office and executive lifestyles.</p>
+        </div>
+
+        <div class="conditions__grid">
+          <article class="condition-card fade-in fade-in--delay-1">
+            <div class="condition-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <circle cx="12" cy="5" r="3"/>
+                <path d="M12 8v4M10 20h4M12 12l-2 8M12 12l2 8"/>
+              </svg>
+            </div>
+            <h3 class="condition-card__name">Text Neck</h3>
+            <p class="condition-card__desc">Cervical strain from prolonged screen use — relieved through targeted soft tissue work and spinal realignment.</p>
+          </article>
+
+          <article class="condition-card fade-in fade-in--delay-2">
+            <div class="condition-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2c0 6-6 8-6 14a6 6 0 0 0 12 0c0-6-6-8-6-14z"/>
+                <path d="M9 12h6M9 16h6"/>
+              </svg>
+            </div>
+            <h3 class="condition-card__name">Lower Back Pain</h3>
+            <p class="condition-card__desc">The leading cause of lost productivity. Our lumbar protocols restore mobility and eliminate chronic discomfort fast.</p>
+          </article>
+
+          <article class="condition-card fade-in fade-in--delay-3">
+            <div class="condition-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 5a7 7 0 0 0-7 7h2a5 5 0 0 1 5-5V5z"/>
+                <path d="M5 12H3a9 9 0 0 0 18 0h-2"/>
+                <circle cx="12" cy="12" r="2"/>
+              </svg>
+            </div>
+            <h3 class="condition-card__name">Carpal Tunnel</h3>
+            <p class="condition-card__desc">Wrist and hand nerve compression from repetitive typing — treated with soft tissue therapy and nerve mobilization techniques.</p>
+          </article>
+
+          <article class="condition-card fade-in fade-in--delay-4">
+            <div class="condition-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 8v4M12 16h.01"/>
+              </svg>
+            </div>
+            <h3 class="condition-card__name">Tension Headaches</h3>
+            <p class="condition-card__desc">Cervicogenic and stress-driven headaches resolved through upper cervical adjustments and muscle release therapy.</p>
+          </article>
+
+          <article class="condition-card fade-in fade-in--delay-5">
+            <div class="condition-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2L8 8H3l4.5 4L6 18l6-3.5L18 18l-1.5-6L21 8h-5L12 2z"/>
+              </svg>
+            </div>
+            <h3 class="condition-card__name">Poor Posture</h3>
+            <p class="condition-card__desc">Structural and habitual postural dysfunction corrected through our evidence-based Posture Correction Protocol.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <hr class="hr-gold" />
+
+    <!-- ============================================================
+         DOCTOR
+    ============================================================ -->
+    <section class="doctor" id="doctor" aria-labelledby="doctor-title">
+      <div class="container">
+        <div class="doctor__inner">
+          <div class="doctor__image-wrap fade-in">
+            <img
+              class="doctor__image"
+              src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=1200&q=80"
+              alt="Dr. Jonathan Hale, Board Certified Chiropractor"
+              loading="lazy"
+            />
+            <div class="doctor__credentials" aria-label="Doctor credentials">
+              <div class="doctor__cred-title">Dr. Jonathan R. Hale, D.C.</div>
+              <div class="doctor__cred-list">
+                <span class="doctor__cred-tag">Board Certified</span>
+                <span class="doctor__cred-tag">D.C., CCSP</span>
+                <span class="doctor__cred-tag">18 Yrs Experience</span>
+                <span class="doctor__cred-tag">500+ Exec Clients</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="doctor__content fade-in fade-in--delay-1">
+            <span class="section-label">Your Doctor</span>
+            <h2 class="section-title" id="doctor-title">Dr. Jonathan R. Hale</h2>
+            <p class="doctor__subtitle">Doctor of Chiropractic, Certified Chiropractic Sports Physician</p>
+
+            <p class="doctor__bio">Dr. Hale established Executive Spine Center after observing a gap in the market: highly capable professionals suffering from chronic, preventable musculoskeletal conditions — and receiving generic care that failed to meet their standards or schedules.</p>
+
+            <p class="doctor__bio">A graduate of the Los Angeles College of Chiropractic with postgraduate training in clinical biomechanics, he has been the preferred provider for C-suite executives, trial attorneys, financial professionals, and private equity partners for nearly two decades.</p>
+
+            <div class="doctor__highlights">
+              <div class="doctor__highlight">
+                <div class="doctor__highlight-dot"></div>
+                <p class="doctor__highlight-text"><strong>Fellow, American Chiropractic Association</strong> — recognized for clinical excellence and contributions to corporate wellness research.</p>
+              </div>
+              <div class="doctor__highlight">
+                <div class="doctor__highlight-dot"></div>
+                <p class="doctor__highlight-text"><strong>Corporate Wellness Architect</strong> — designed programs currently deployed at over 60 Los Angeles-based enterprises.</p>
+              </div>
+              <div class="doctor__highlight">
+                <div class="doctor__highlight-dot"></div>
+                <p class="doctor__highlight-text"><strong>Published researcher</strong> on ergonomic intervention outcomes in professional work environments.</p>
+              </div>
+              <div class="doctor__highlight">
+                <div class="doctor__highlight-dot"></div>
+                <p class="doctor__highlight-text"><strong>Flexible availability</strong> — offers 6 AM and 7 PM appointment slots to accommodate demanding executive schedules.</p>
+              </div>
+            </div>
+
+            <a href="#location" class="btn btn--primary">Schedule with Dr. Hale</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="hr-gold" />
+
+    <!-- ============================================================
+         TESTIMONIALS
+    ============================================================ -->
+    <section class="testimonials" id="testimonials" aria-labelledby="testimonials-title">
+      <div class="container">
+        <div class="testimonials__header fade-in">
+          <span class="section-label">Client Testimonials</span>
+          <h2 class="section-title" id="testimonials-title">Trusted by Those Who Lead</h2>
+        </div>
+
+        <div class="testimonials__grid">
+          <article class="testimonial-card fade-in fade-in--delay-1">
+            <div class="testimonial-card__quote-mark" aria-hidden="true">"</div>
+            <p class="testimonial-card__text">I've tried numerous chiropractors over the years, but Executive Spine Center operates on a different level entirely. Dr. Hale identified the root of my chronic lower back issue within the first visit. The private suite, the coordinator, the scheduling — it's the first healthcare experience that feels like it was designed for how I actually live.</p>
+            <div class="testimonial-card__stars" aria-label="5 star rating">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <div class="testimonial-card__divider"></div>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar" aria-hidden="true">R</div>
+              <div>
+                <div class="testimonial-card__name">Robert C.</div>
+                <div class="testimonial-card__title">Chief Executive Officer, Pacific Capital Advisors</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card fade-in fade-in--delay-2">
+            <div class="testimonial-card__quote-mark" aria-hidden="true">"</div>
+            <p class="testimonial-card__text">As a VP who travels three weeks out of four, finding consistent, high-quality care has always been a challenge. Executive Spine Center's concierge model is the answer. Same-day appointments when I'm in town, a care plan I can follow remotely, and a coordinator who actually follows up. The ergonomic assessment alone changed how I set up hotel workstations.</p>
+            <div class="testimonial-card__stars" aria-label="5 star rating">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <div class="testimonial-card__divider"></div>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar" aria-hidden="true">M</div>
+              <div>
+                <div class="testimonial-card__name">Michelle T.</div>
+                <div class="testimonial-card__title">VP of Operations, Meridian Financial Group</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card fade-in fade-in--delay-3">
+            <div class="testimonial-card__quote-mark" aria-hidden="true">"</div>
+            <p class="testimonial-card__text">Trial prep is brutal on the body — 14-hour days hunched over case files. Dr. Hale has been my secret weapon for the past four years. The tension headaches that used to derail my focus are essentially gone. The Executive Plus membership gives me the access I need without the scheduling friction. I've referred six colleagues already.</p>
+            <div class="testimonial-card__stars" aria-label="5 star rating">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <div class="testimonial-card__divider"></div>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar" aria-hidden="true">D</div>
+              <div>
+                <div class="testimonial-card__name">David L.</div>
+                <div class="testimonial-card__title">Partner, Blackwell &amp; Langford LLP</div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <hr class="hr-gold" />
+
+    <!-- ============================================================
+         MEMBERSHIP
+    ============================================================ -->
+    <section class="membership" id="membership" aria-labelledby="membership-title">
+      <div class="container">
+        <div class="membership__header fade-in">
+          <span class="section-label">Membership Plans</span>
+          <h2 class="section-title" id="membership-title">Invest in Your Performance</h2>
+          <p class="section-subtitle">Predictable, concierge-level care at a fixed monthly investment. No surprise bills. No insurance hassle. Just results.</p>
+        </div>
+
+        <div class="membership__grid">
+          <!-- Executive Basic -->
+          <div class="plan-card fade-in fade-in--delay-1">
+            <div class="plan-card__header">
+              <h3 class="plan-card__name">Executive Basic</h3>
+              <div class="plan-card__price">
+                <span class="plan-card__price-amount">$249</span>
+                <span class="plan-card__price-period">/ month</span>
+              </div>
+              <p class="plan-card__price-note">Billed monthly, cancel anytime</p>
+            </div>
+            <div class="plan-card__body">
+              <ul class="plan-card__features" role="list">
+                <li class="plan-card__feature">
+                  <span class="plan-card__feature-check" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+                  2 adjustments per month
+                </li>
+                <li class="plan-card__feature">
+                  <span class="plan-card__feature-check" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+                  Annual ergonomic assessment
+                </li>
+                <li class="plan-card__feature">
+                  <span class="plan-card__feature-check" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+                  Online scheduling portal access
+                </li>
+                <li class="plan-card__feature">
+                  <span class="plan-card__feature-check" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+                  10% off additional services
+                </li>
+                <li class="plan-card__feature">
+                  <span class="plan-card__feature-check" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+                  Flexible scheduling windows
+                </li>
+              </ul>
+              <a href="#location" class="btn btn--outline-gold" style="width:100%; justify-content:center;">Get Started</a>
+            </div>
+          </div>
+
+          <!-- Executive Plus (Featured) -->
+          <div class="plan-card plan-card--featured fade-in fade-in--delay-2">
+            <div class="plan-card__badge">Most Popular</div>
+            <div class="plan-card__header">
+              <h3 class="plan-card__name">Executive Plus</h3>
+              <div class="plan-card__price">
+                <span class="plan-card__price-amount">$449</span>
+                <span class="plan-card__price-period">/ month</span>
+              </div>
+              <p class="plan-card__price-note">Billed monthly, cancel anytime</p>
+            </div>
+            <div class="plan-card__body">
+              <ul class="plan-card__features" role="list">
+                <li class="plan-card__feature">
+                  <span class="plan-card__feature-check" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+                  Unlimited adjustments per month
+                </li>
+                <li class="plan-card__feature">
+                  <span class="plan-card__feature-check" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+                  Quarterly ergonomic assessments
+                </li>
+                <li class="plan-card__feature">
+                  <span class="plan-card__feature-check" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+                  Dedicated care coordinator
+                </li>
+                <li class="plan-card__feature">
+                  <span class="plan-card__feature-check" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+                  Same-day priority appointments
+                </li>
+                <li class="plan-card__feature">
+                  <span class="plan-card__feature-check" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+                  Private suite guaranteed
+                </li>
+                <li class="plan-card__feature">
+                  <span class="plan-card__feature-check" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+                  20% off all additional services
+                </li>
+                <li class="plan-card__feature">
+                  <span class="plan-card__feature-check" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+                  Early morning &amp; evening slots
+                </li>
+              </ul>
+              <a href="#location" class="btn btn--gold" style="width:100%; justify-content:center;">Select This Plan</a>
+            </div>
+          </div>
+
+          <!-- Corporate -->
+          <div class="plan-card fade-in fade-in--delay-3">
+            <div class="plan-card__header">
+              <h3 class="plan-card__name">Corporate</h3>
+              <div class="plan-card__price">
+                <span class="plan-card__price-amount">$89</span>
+                <span class="plan-card__price-period">/ employee / mo</span>
+              </div>
+              <p class="plan-card__price-note">Minimum 10 employees — volume discounts available</p>
+            </div>
+            <div class="plan-card__body">
+              <ul class="plan-card__features" role="list">
+                <li class="plan-card__feature">
+                  <span class="plan-card__feature-check" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+                  4 adjustments per employee / month
+                </li>
+                <li class="plan-card__feature">
+                  <span class="plan-card__feature-check" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+                  Annual company-wide ergonomic audit
+                </li>
+                <li class="plan-card__feature">
+                  <span class="plan-card__feature-check" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+                  On-site quarterly wellness visits
+                </li>
+                <li class="plan-card__feature">
+                  <span class="plan-card__feature-check" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+                  HR wellness reporting dashboard
+                </li>
+                <li class="plan-card__feature">
+                  <span class="plan-card__feature-check" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+                  Dedicated corporate account manager
+                </li>
+                <li class="plan-card__feature">
+                  <span class="plan-card__feature-check" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+                  Group posture &amp; wellness seminars
+                </li>
+              </ul>
+              <a href="#corporate" class="btn btn--outline-gold" style="width:100%; justify-content:center;">Request Quote</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="hr-gold" />
+
+    <!-- ============================================================
+         LOCATION + CONTACT
+    ============================================================ -->
+    <section class="location" id="location" aria-labelledby="location-title">
+      <div class="container">
+        <div class="location__inner">
+          <div class="location__content fade-in">
+            <span class="section-label">Find Us</span>
+            <h2 class="section-title" id="location-title">Location &amp; Concierge Contact</h2>
+            <p class="section-subtitle">Situated in the heart of the financial district for maximum accessibility to the professionals we serve.</p>
+
+            <div class="location__details">
+              <div class="location__detail">
+                <div class="location__detail-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div>
+                  <div class="location__detail-label">Address</div>
+                  <div class="location__detail-value">1 Financial Plaza, Suite 2800<br>Downtown District, CA 90071</div>
+                </div>
+              </div>
+
+              <div class="location__detail">
+                <div class="location__detail-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.1 6.1l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.02z"/></svg>
+                </div>
+                <div>
+                  <div class="location__detail-label">Phone</div>
+                  <div class="location__detail-value"><a href="tel:5554567890">(555) 456-7890</a></div>
+                </div>
+              </div>
+
+              <div class="location__detail">
+                <div class="location__detail-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <div>
+                  <div class="location__detail-label">Hours</div>
+                  <div class="location__detail-value">
+                    Monday – Friday: 6:00 AM – 8:00 PM<br>
+                    Saturday: 8:00 AM – 2:00 PM<br>
+                    <span style="color: var(--primary); font-size:0.85rem; font-weight:700;">Flexible scheduling — early morning, evening &amp; weekend appointments</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="location__private-note" role="note" aria-label="Private entrance information">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+              </svg>
+              <p class="location__private-note-text"><strong>Private Entrance Available:</strong> Access Suite 2800 directly via the express elevator bank at the rear lobby — discreet and separate from the main office corridors.</p>
+            </div>
+          </div>
+
+          <div class="location__contact-card fade-in fade-in--delay-1">
+            <h3 class="location__contact-title">Request Your Complimentary Executive Health Assessment</h3>
+            <p class="location__contact-sub">Complete the form below and your dedicated care coordinator will be in touch within one business hour.</p>
+            <form id="contact-form" class="contact-form" novalidate aria-label="Executive consultation request form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contact-first">First Name</label>
+                  <input type="text" id="contact-first" name="first_name" placeholder="James" autocomplete="given-name" />
+                </div>
+                <div class="form-group">
+                  <label for="contact-last">Last Name</label>
+                  <input type="text" id="contact-last" name="last_name" placeholder="Richardson" autocomplete="family-name" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="contact-email">Email Address</label>
+                <input type="email" id="contact-email" name="email" placeholder="james@company.com" autocomplete="email" />
+              </div>
+              <div class="form-group">
+                <label for="contact-phone">Phone Number</label>
+                <input type="tel" id="contact-phone" name="phone" placeholder="(555) 000-0000" autocomplete="tel" />
+              </div>
+              <div class="form-group">
+                <label for="contact-service">Primary Concern</label>
+                <select id="contact-service" name="service">
+                  <option value="">Select your primary concern</option>
+                  <option value="lower-back">Lower Back Pain</option>
+                  <option value="neck">Neck / Text Neck</option>
+                  <option value="headaches">Tension Headaches</option>
+                  <option value="posture">Posture Correction</option>
+                  <option value="carpal">Carpal Tunnel</option>
+                  <option value="ergonomic">Ergonomic Assessment</option>
+                  <option value="corporate">Corporate Wellness Program</option>
+                  <option value="general">General Wellness</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="contact-time">Preferred Appointment Time</label>
+                <select id="contact-time" name="time_preference">
+                  <option value="">Select preference</option>
+                  <option value="early">Early Morning (6–8 AM)</option>
+                  <option value="morning">Morning (8 AM–12 PM)</option>
+                  <option value="afternoon">Afternoon (12–5 PM)</option>
+                  <option value="evening">Evening (5–8 PM)</option>
+                  <option value="weekend">Weekend</option>
+                </select>
+              </div>
+              <button type="submit" class="btn btn--gold" style="width:100%; justify-content:center; margin-top:0.5rem;">
+                Schedule My Executive Assessment
+              </button>
+              <p style="font-size:0.75rem; color:rgba(255,255,255,0.35); text-align:center; margin-top:0.75rem; line-height:1.5;">
+                Your information is held in strict confidence. We will never share your data.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__brand-name">Executive Spine Center</div>
+          <div class="footer__brand-tagline">Concierge Chiropractic Care</div>
+          <p class="footer__brand-desc">Premium chiropractic care for business professionals who demand the same excellence from their healthcare provider that they deliver in the boardroom.</p>
+          <div class="footer__social" role="list" aria-label="Social media links">
+            <a href="#" class="footer__social-link" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="Twitter / X">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer__col-title">Services</div>
+          <ul class="footer__links" role="list">
+            <li><a href="#services" class="footer__link">Executive Health Package</a></li>
+            <li><a href="#services" class="footer__link">Ergonomic Assessment</a></li>
+            <li><a href="#corporate" class="footer__link">Corporate Wellness</a></li>
+            <li><a href="#services" class="footer__link">Posture Correction</a></li>
+            <li><a href="#services" class="footer__link">On-Site Office Visits</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer__col-title">Conditions</div>
+          <ul class="footer__links" role="list">
+            <li><a href="#conditions" class="footer__link">Text Neck</a></li>
+            <li><a href="#conditions" class="footer__link">Lower Back Pain</a></li>
+            <li><a href="#conditions" class="footer__link">Carpal Tunnel</a></li>
+            <li><a href="#conditions" class="footer__link">Tension Headaches</a></li>
+            <li><a href="#conditions" class="footer__link">Poor Posture</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer__col-title">Contact</div>
+          <ul class="footer__links" role="list">
+            <li><a href="tel:5554567890" class="footer__link">(555) 456-7890</a></li>
+            <li><span class="footer__link" style="cursor:default;">1 Financial Plaza, Suite 2800</span></li>
+            <li><span class="footer__link" style="cursor:default;">Downtown, CA 90071</span></li>
+            <li><a href="#location" class="footer__link">Schedule Online</a></li>
+            <li><a href="#membership" class="footer__link">Membership Plans</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <hr class="footer__hr" />
+
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; 2026 Executive Spine Center. All rights reserved.</p>
+        <p class="footer__disclaimer">The information on this site is for educational purposes only and does not constitute medical advice. Results may vary. Individual outcomes depend on condition severity and treatment adherence.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       JAVASCRIPT
+  ============================================================ -->
+  <script>
+    (function() {
+      'use strict';
+
+      /* ---- Sticky nav scroll class ---- */
+      var nav = document.getElementById('main-nav');
+      function onScroll() {
+        if (window.scrollY > 20) {
+          nav.classList.add('scrolled');
+        } else {
+          nav.classList.remove('scrolled');
+        }
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+
+      /* ---- Mobile nav toggle ---- */
+      var toggle = document.getElementById('nav-toggle');
+      var mobileMenu = document.getElementById('nav-mobile');
+      toggle.addEventListener('click', function() {
+        var isOpen = mobileMenu.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', isOpen.toString());
+      });
+
+      /* Close mobile menu on link click */
+      mobileMenu.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function() {
+          mobileMenu.classList.remove('open');
+          toggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+
+      /* ---- Smooth scroll for anchor links ---- */
+      document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+        anchor.addEventListener('click', function(e) {
+          var targetId = this.getAttribute('href');
+          if (targetId === '#') return;
+          var target = document.querySelector(targetId);
+          if (target) {
+            e.preventDefault();
+            var navHeight = nav.offsetHeight;
+            var targetTop = target.getBoundingClientRect().top + window.scrollY - navHeight - 16;
+            window.scrollTo({ top: targetTop, behavior: 'smooth' });
+          }
+        });
+      });
+
+      /* ---- Scroll fade-in observer ---- */
+      var fadeEls = document.querySelectorAll('.fade-in');
+
+      if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.12,
+          rootMargin: '0px 0px -40px 0px'
+        });
+
+        fadeEls.forEach(function(el) {
+          observer.observe(el);
+        });
+      } else {
+        /* Fallback: show all */
+        fadeEls.forEach(function(el) {
+          el.classList.add('visible');
+        });
+      }
+
+      /* ---- Form submission handlers ---- */
+      function handleFormSubmit(formId, successMsg) {
+        var form = document.getElementById(formId);
+        if (!form) return;
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+          var submitBtn = form.querySelector('[type="submit"]');
+          var originalText = submitBtn.textContent.trim();
+          submitBtn.textContent = 'Sending...';
+          submitBtn.disabled = true;
+          /* Simulate async submission */
+          setTimeout(function() {
+            submitBtn.textContent = successMsg;
+            submitBtn.style.background = '#16a34a';
+            submitBtn.style.borderColor = '#16a34a';
+            form.reset();
+            setTimeout(function() {
+              submitBtn.textContent = originalText;
+              submitBtn.style.background = '';
+              submitBtn.style.borderColor = '';
+              submitBtn.disabled = false;
+            }, 4000);
+          }, 900);
+        });
+      }
+
+      handleFormSubmit('contact-form', 'Request Sent — We will contact you shortly');
+      handleFormSubmit('corporate-form', 'Quote Requested — Expect our call today');
+
+    }());
+  </script>
+
+</body>
+</html>
