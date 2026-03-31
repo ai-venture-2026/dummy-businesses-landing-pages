@@ -12,7 +12,45 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            teal: {
+              50: '#F0FDFA',
+              100: '#CCFBF1',
+              200: '#99F6E4',
+              300: '#5EEAD4',
+              400: '#2DD4BF',
+              500: '#14B8A6',
+              600: '#0D9488',
+              700: '#0F766E',
+              800: '#115E59',
+              900: '#134E4A',
+            },
+            coral: {
+              400: '#F97066',
+              500: '#EF6351',
+              600: '#E04D3D',
+            },
+            slate: {
+              750: '#293548',
+              850: '#172033',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Playfair Display', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
 
   <script type="application/ld+json">
   {
@@ -49,169 +87,21 @@
   </script>
 
   <style>
-    /* =============================================
-       CSS CUSTOM PROPERTIES
-    ============================================= */
-    :root {
-      --primary:     #2C3E50;
-      --secondary:   #E74C3C;
-      --secondary-dark: #C0392B;
-      --accent:      #FFFFFF;
-      --bg:          #F9F9F9;
-      --bg-dark:     #1A252F;
-      --text:        #222222;
-      --text-light:  #555555;
-      --border:      #DDDDDD;
-      --shadow:      0 4px 20px rgba(0,0,0,0.10);
-      --shadow-lg:   0 8px 40px rgba(0,0,0,0.16);
-      --radius:      10px;
-      --radius-lg:   18px;
-      --transition:  0.3s ease;
-      --font:        'Roboto', sans-serif;
-    }
+    html { scroll-behavior: smooth; }
 
-    /* =============================================
-       RESET & BASE
-    ============================================= */
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      font-size: 16px;
-    }
-
-    body {
-      font-family: var(--font);
-      font-size: 1rem;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.65;
-      overflow-x: hidden;
-    }
-
-    img {
-      display: block;
-      max-width: 100%;
-      object-fit: cover;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    ul { list-style: none; }
-
-    button, input, textarea, select {
-      font-family: var(--font);
-      font-size: inherit;
-    }
-
-    /* =============================================
-       UTILITY CLASSES
-    ============================================= */
-    .container {
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
-    }
-
-    .section {
-      padding: 4rem 0;
-    }
-
-    .section--dark {
-      background: var(--primary);
-      color: var(--accent);
-    }
-
-    .section--red {
-      background: var(--secondary);
-      color: var(--accent);
-    }
-
-    .section--gray {
-      background: #EEF0F2;
-    }
-
-    .section__label {
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--secondary);
-      margin-bottom: 10px;
-    }
-
-    .section--dark .section__label,
-    .section--red .section__label {
-      color: rgba(255,255,255,0.75);
-    }
-
-    .section__title {
-      font-size: clamp(1.5rem, 3vw, 2.25rem);
-      font-weight: 900;
-      line-height: 1.2;
-      margin-bottom: 16px;
-      color: var(--primary);
-    }
-
-    .section--dark .section__title,
-    .section--red .section__title {
-      color: var(--accent);
-    }
-
-    .section__subtitle {
-      font-size: 1rem;
-      color: var(--text-light);
-      max-width: 600px;
-      line-height: 1.7;
-    }
-
-    .section--dark .section__subtitle,
-    .section--red .section__subtitle {
-      color: rgba(255,255,255,0.85);
-    }
-
-    .section__header {
-      margin-bottom: 2.5rem;
-    }
-
-    .section__header--center {
-      text-align: center;
-    }
-
-    .section__header--center .section__subtitle {
-      margin: 0 auto;
-    }
-
-    /* Scroll animation */
     .animate {
       opacity: 0;
-      transform: translateY(36px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
     }
     .animate.visible {
       opacity: 1;
       transform: none;
     }
-    .animate--left {
-      transform: translateX(-36px);
-    }
-    .animate--right {
-      transform: translateX(36px);
-    }
+    .animate--left { transform: translateX(-30px); }
+    .animate--right { transform: translateX(30px); }
     .animate--left.visible,
-    .animate--right.visible {
-      transform: none;
-    }
-
-    /* Delay helpers */
+    .animate--right.visible { transform: none; }
     .delay-1 { transition-delay: 0.1s; }
     .delay-2 { transition-delay: 0.2s; }
     .delay-3 { transition-delay: 0.3s; }
@@ -219,1288 +109,82 @@
     .delay-5 { transition-delay: 0.5s; }
     .delay-6 { transition-delay: 0.6s; }
 
-    /* =============================================
-       BUTTONS
-    ============================================= */
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      padding: 0.75rem 1.75rem;
-      border-radius: 50px;
-      font-size: 1rem;
-      font-weight: 700;
-      cursor: pointer;
-      border: 2px solid transparent;
-      transition: background var(--transition), color var(--transition), transform 0.15s ease, box-shadow var(--transition);
-      white-space: nowrap;
-      max-height: 52px;
+    .hero-gradient {
+      background: linear-gradient(135deg, #115E59 0%, #0F766E 35%, #0D9488 70%, #14B8A6 100%);
     }
 
-    .btn:hover {
-      transform: translateY(-2px);
-      box-shadow: var(--shadow);
-    }
-
-    .btn:active {
-      transform: translateY(0);
-    }
-
-    .btn--primary {
-      background: var(--secondary);
-      color: #fff;
-      border-color: var(--secondary);
-    }
-    .btn--primary:hover {
-      background: var(--secondary-dark);
-      border-color: var(--secondary-dark);
-    }
-
-    .btn--outline-white {
-      background: transparent;
-      color: #fff;
-      border-color: #fff;
-    }
-    .btn--outline-white:hover {
-      background: #fff;
-      color: var(--primary);
-    }
-
-    .btn--outline-red {
-      background: transparent;
-      color: var(--secondary);
-      border-color: var(--secondary);
-    }
-    .btn--outline-red:hover {
-      background: var(--secondary);
-      color: #fff;
-    }
-
-    .btn--lg {
-      font-size: 1rem;
-      padding: 0.75rem 2rem;
-    }
-
-    .btn--block {
-      width: 100%;
-    }
-
-    /* =============================================
-       BADGE / TRUST BAR
-    ============================================= */
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(231,76,60,0.12);
-      color: var(--secondary-dark);
-      border: 1.5px solid rgba(231,76,60,0.3);
-      border-radius: 50px;
-      padding: 6px 16px;
-      font-size: 0.85rem;
-      font-weight: 700;
-    }
-
-    .badge--white {
-      background: rgba(255,255,255,0.15);
-      color: #fff;
-      border-color: rgba(255,255,255,0.4);
-    }
-
-    /* =============================================
-       NAVIGATION
-    ============================================= */
-    .nav {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: var(--primary);
-      box-shadow: 0 2px 12px rgba(0,0,0,0.22);
-    }
-
-    .nav__inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 68px;
-      padding: 0 2rem;
-      gap: 20px;
-    }
-
-    .nav__logo {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      flex-shrink: 0;
-    }
-
-    .nav__logo-icon {
-      width: 42px;
-      height: 42px;
-      background: var(--secondary);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-
-    .nav__logo-text {
-      display: flex;
-      flex-direction: column;
-      line-height: 1.15;
-    }
-
-    .nav__logo-name {
-      font-size: 1rem;
-      font-weight: 900;
-      color: #fff;
-      letter-spacing: 0.01em;
-    }
-
-    .nav__logo-tagline {
-      font-size: 0.68rem;
-      font-weight: 400;
-      color: rgba(255,255,255,0.65);
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-    }
-
-    .nav__links {
-      display: flex;
-      align-items: center;
-      gap: 0.25rem;
-    }
-
-    .nav__link {
-      color: rgba(255,255,255,0.80);
-      font-size: 0.9rem;
-      font-weight: 500;
-      padding: 6px 12px;
-      border-radius: 6px;
-      transition: color var(--transition), background var(--transition);
-    }
-
-    .nav__link:hover {
-      color: #fff;
-      background: rgba(255,255,255,0.08);
-    }
-
-    .nav__cta {
-      flex-shrink: 0;
-    }
-
-    .nav__toggle {
-      display: none;
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 6px;
-    }
-
-    .nav__mobile-menu {
-      display: none;
-      background: var(--bg-dark);
-      padding: 16px 20px 24px;
-    }
-
-    .nav__mobile-menu.open {
-      display: block;
-    }
-
-    .nav__mobile-link {
-      display: block;
-      color: rgba(255,255,255,0.85);
-      font-size: 1.05rem;
-      font-weight: 500;
-      padding: 14px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .nav__mobile-link:last-of-type {
-      border-bottom: none;
-      margin-bottom: 12px;
-    }
-
-    /* =============================================
-       HERO
-    ============================================= */
-    .hero {
-      position: relative;
-      min-height: 85vh;
-      display: flex;
-      align-items: center;
-      overflow: hidden;
-      background: var(--primary);
-    }
-
-    .hero__bg {
-      position: absolute;
-      inset: 0;
-      background-image: url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1200&q=80');
-      background-size: cover;
-      background-position: center 30%;
-      opacity: 0.28;
-    }
-
-    .hero__overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(105deg, rgba(44,62,80,0.97) 40%, rgba(44,62,80,0.60) 100%);
-    }
-
-    .hero__content {
-      position: relative;
-      z-index: 2;
-      max-width: 700px;
-      padding: 80px 0 60px;
-    }
-
-    .hero__badge {
-      margin-bottom: 24px;
-    }
-
-    .hero__title {
-      font-size: clamp(2rem, 5vw, 3.5rem);
-      font-weight: 900;
-      color: #fff;
-      line-height: 1.12;
-      margin-bottom: 1.5rem;
-    }
-
-    .hero__title span {
-      color: var(--secondary);
-    }
-
-    .hero__subtitle {
-      font-size: 1.125rem;
-      color: rgba(255,255,255,0.88);
-      margin-bottom: 1.5rem;
-      max-width: 600px;
-      font-weight: 300;
-      line-height: 1.7;
-    }
-
-    .hero__actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .hero__trust {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .hero__trust-item {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      color: rgba(255,255,255,0.80);
-      font-size: 0.9rem;
-      font-weight: 500;
-    }
-
-    /* =============================================
-       TRUST BAR
-    ============================================= */
-    .trust-bar {
-      background: var(--secondary);
-      padding: 18px 0;
-    }
-
-    .trust-bar__inner {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 28px 40px;
-    }
-
-    .trust-bar__item {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      color: #fff;
-      font-size: 0.95rem;
-      font-weight: 600;
-    }
-
-    /* =============================================
-       WHY IN-HOME PT
-    ============================================= */
-    .benefits {
-      background: var(--bg);
-    }
-
-    .benefits__grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .benefit-card {
-      background: #fff;
-      border-radius: var(--radius-lg);
-      padding: 1.75rem 1.75rem;
-      box-shadow: var(--shadow);
-      border-top: 4px solid var(--secondary);
-      transition: transform var(--transition), box-shadow var(--transition);
-    }
-
-    .benefit-card:hover {
-      transform: translateY(-6px);
-      box-shadow: var(--shadow-lg);
-    }
-
-    .benefit-card__icon {
-      width: 60px;
-      height: 60px;
-      background: rgba(231,76,60,0.10);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 20px;
-    }
-
-    .benefit-card__title {
-      font-size: 1.2rem;
-      font-weight: 800;
-      color: var(--primary);
-      margin-bottom: 10px;
-      line-height: 1.3;
-    }
-
-    .benefit-card__text {
-      font-size: 0.95rem;
-      color: var(--text-light);
-      line-height: 1.65;
-    }
-
-    /* =============================================
-       WHO WE SERVE
-    ============================================= */
-    .serve {
-      background: var(--primary);
-    }
-
-    .serve__grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .serve-card {
-      background: rgba(255,255,255,0.06);
-      border: 1.5px solid rgba(255,255,255,0.12);
-      border-radius: var(--radius-lg);
-      padding: 1.75rem 1.5rem;
-      text-align: center;
-      transition: background var(--transition), border-color var(--transition);
-    }
-
-    .serve-card:hover {
-      background: rgba(231,76,60,0.15);
-      border-color: var(--secondary);
-    }
-
-    .serve-card__icon {
-      width: 68px;
-      height: 68px;
-      background: rgba(231,76,60,0.18);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 20px;
-    }
-
-    .serve-card__title {
-      font-size: 1.1rem;
-      font-weight: 800;
-      color: #fff;
-      margin-bottom: 10px;
-    }
-
-    .serve-card__text {
-      font-size: 0.9rem;
-      color: rgba(255,255,255,0.72);
-      line-height: 1.6;
-    }
-
-    /* =============================================
-       SERVICES
-    ============================================= */
-    .services {
-      background: #EEF0F2;
-    }
-
-    .services__grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .service-card {
-      background: #fff;
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      box-shadow: var(--shadow);
-      display: flex;
-      flex-direction: column;
-      transition: transform var(--transition), box-shadow var(--transition);
-    }
-
-    .service-card:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow-lg);
-    }
-
-    .service-card__img {
-      width: 100%;
-      height: 260px;
-      object-fit: cover;
-    }
-
-    .service-card__img--placeholder {
-      height: 200px;
-      background: linear-gradient(135deg, var(--primary) 0%, #3d5166 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .service-card__body {
-      padding: 1.5rem 1.5rem;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .service-card__icon {
-      width: 48px;
-      height: 48px;
-      background: rgba(231,76,60,0.10);
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 16px;
-    }
-
-    .service-card__title {
-      font-size: 1.15rem;
-      font-weight: 800;
-      color: var(--primary);
-      margin-bottom: 10px;
-    }
-
-    .service-card__text {
-      font-size: 0.92rem;
-      color: var(--text-light);
-      line-height: 1.65;
-      flex: 1;
-    }
-
-    /* =============================================
-       HOW IT WORKS
-    ============================================= */
-    .how {
-      background: var(--bg);
-    }
-
-    .how__steps {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.5rem;
-      position: relative;
-    }
-
-    .how__steps::before {
-      content: '';
-      position: absolute;
-      top: 48px;
-      left: 10%;
-      right: 10%;
-      height: 2px;
-      background: linear-gradient(90deg, var(--secondary) 0%, var(--secondary-dark) 100%);
-      opacity: 0.3;
-    }
-
-    .step {
-      text-align: center;
-      padding: 0 16px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .step__number {
-      width: 96px;
-      height: 96px;
-      background: var(--secondary);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 24px;
-      font-size: 2rem;
-      font-weight: 900;
-      color: #fff;
-      box-shadow: 0 6px 24px rgba(231,76,60,0.35);
-    }
-
-    .step__title {
-      font-size: 1.2rem;
-      font-weight: 800;
-      color: var(--primary);
-      margin-bottom: 12px;
-    }
-
-    .step__text {
-      font-size: 0.95rem;
-      color: var(--text-light);
-      line-height: 1.65;
-    }
-
-    /* =============================================
-       SERVICE AREAS
-    ============================================= */
-    .areas {
-      background: var(--primary);
-    }
-
-    .areas__layout {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: start;
-    }
-
-    .areas__map {
-      background: rgba(255,255,255,0.05);
-      border: 1.5px solid rgba(255,255,255,0.12);
-      border-radius: var(--radius-lg);
-      padding: 32px;
-      min-height: 320px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 20px;
-    }
-
-    .areas__map-icon {
-      width: 80px;
-      height: 80px;
-      background: rgba(231,76,60,0.2);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .areas__map-title {
-      font-size: 1.3rem;
-      font-weight: 800;
-      color: #fff;
-      text-align: center;
-    }
-
-    .areas__map-radius {
-      font-size: 0.9rem;
-      color: rgba(255,255,255,0.65);
-      text-align: center;
-    }
-
-    .areas__list {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .areas__list-title {
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: rgba(255,255,255,0.80);
-      margin-bottom: 6px;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      font-size: 0.8rem;
-    }
-
-    .area-tag {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      color: rgba(255,255,255,0.88);
-      font-size: 1rem;
-      font-weight: 500;
-      padding: 10px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.07);
-    }
-
-    .area-tag:last-child {
-      border-bottom: none;
-    }
-
-    /* =============================================
-       INSURANCE
-    ============================================= */
-    .insurance {
-      background: #fff;
-    }
-
-    .insurance__layout {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: center;
-    }
-
-    .insurance__img {
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      box-shadow: var(--shadow-lg);
-    }
-
-    .insurance__img img {
-      width: 100%;
-      height: 400px;
-      object-fit: cover;
-    }
-
-    .insurance__badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-bottom: 32px;
-    }
-
-    .insurance__badge {
-      background: var(--primary);
-      color: #fff;
-      border-radius: 8px;
-      padding: 14px 20px;
-      font-size: 0.95rem;
-      font-weight: 700;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .insurance__badge--red {
-      background: var(--secondary);
-    }
-
-    .insurance__note {
-      background: #EEF0F2;
-      border-left: 4px solid var(--secondary);
-      border-radius: 0 var(--radius) var(--radius) 0;
-      padding: 20px 24px;
-      font-size: 0.95rem;
-      color: var(--text-light);
-      line-height: 1.7;
-    }
-
-    /* =============================================
-       TESTIMONIALS
-    ============================================= */
-    .testimonials {
-      background: #EEF0F2;
-    }
-
-    .testimonials__grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .testimonial-card {
-      background: #fff;
-      border-radius: var(--radius-lg);
-      padding: 1.75rem 1.75rem;
-      box-shadow: var(--shadow);
-      position: relative;
-    }
-
-    .testimonial-card::before {
-      content: '"';
-      position: absolute;
-      top: 16px;
-      left: 24px;
-      font-size: 6rem;
-      line-height: 1;
-      color: rgba(231,76,60,0.15);
-      font-family: Georgia, serif;
-    }
-
-    .testimonial-card__stars {
-      display: flex;
-      gap: 4px;
-      margin-bottom: 16px;
-    }
-
-    .testimonial-card__text {
-      font-size: 1rem;
-      color: var(--text);
-      line-height: 1.7;
-      margin-bottom: 24px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .testimonial-card__author {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-
-    .testimonial-card__avatar {
-      width: 52px;
-      height: 52px;
-      border-radius: 50%;
-      background: var(--primary);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: #fff;
-      flex-shrink: 0;
-    }
-
-    .testimonial-card__name {
-      font-weight: 700;
-      color: var(--primary);
-      font-size: 0.95rem;
-    }
-
-    .testimonial-card__detail {
-      font-size: 0.82rem;
-      color: var(--text-light);
-    }
-
-    /* =============================================
-       SCHEDULE SECTION
-    ============================================= */
-    .schedule {
-      background: var(--bg);
-    }
-
-    .schedule__layout {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: start;
-    }
-
-    .schedule__cta-box {
-      background: var(--primary);
-      border-radius: var(--radius-lg);
-      padding: 44px 36px;
-      text-align: center;
-    }
-
-    .schedule__phone {
-      font-size: clamp(1.8rem, 4vw, 2.8rem);
-      font-weight: 900;
-      color: var(--secondary);
-      display: block;
-      margin: 16px 0 8px;
-      letter-spacing: -0.02em;
-    }
-
-    .schedule__phone:hover {
-      color: #fff;
-    }
-
-    .schedule__hours {
-      color: rgba(255,255,255,0.70);
-      font-size: 0.9rem;
-      margin-bottom: 28px;
-    }
-
-    .schedule__divider {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      color: rgba(255,255,255,0.40);
-      font-size: 0.85rem;
-      margin: 24px 0;
-    }
-
-    .schedule__divider::before,
-    .schedule__divider::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: rgba(255,255,255,0.15);
-    }
-
-    /* Form */
-    .form {
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
-    }
-
-    .form__row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-    }
-
-    .form__group {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-
-    .form__label {
-      font-size: 0.88rem;
-      font-weight: 600;
-      color: var(--text);
-    }
-
-    .form__input,
-    .form__select,
-    .form__textarea {
-      width: 100%;
-      padding: 14px 16px;
-      border: 2px solid var(--border);
-      border-radius: var(--radius);
-      font-size: 1rem;
-      color: var(--text);
-      background: #fff;
-      transition: border-color var(--transition);
-    }
-
-    .form__input:focus,
-    .form__select:focus,
-    .form__textarea:focus {
-      outline: none;
-      border-color: var(--secondary);
-    }
-
-    .form__textarea {
-      resize: vertical;
-      min-height: 110px;
-    }
-
-    .form__note {
-      font-size: 0.82rem;
-      color: var(--text-light);
-      text-align: center;
-    }
-
-    .form__success {
-      display: none;
-      background: #d4edda;
-      color: #155724;
-      border: 1.5px solid #c3e6cb;
-      border-radius: var(--radius);
-      padding: 18px 22px;
-      font-weight: 600;
-      font-size: 1rem;
-    }
-
-    /* =============================================
-       FOOTER
-    ============================================= */
-    .footer {
-      background: var(--bg-dark);
-      color: rgba(255,255,255,0.75);
-      padding: 64px 0 32px;
-    }
-
-    .footer__grid {
-      display: grid;
-      grid-template-columns: 1.8fr 1fr 1fr 1.2fr;
-      gap: 40px;
-      margin-bottom: 48px;
-    }
-
-    .footer__brand {}
-
-    .footer__logo {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 16px;
-    }
-
-    .footer__logo-icon {
-      width: 42px;
-      height: 42px;
-      background: var(--secondary);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .footer__logo-name {
-      font-size: 1.05rem;
-      font-weight: 900;
-      color: #fff;
-    }
-
-    .footer__desc {
-      font-size: 0.9rem;
-      line-height: 1.7;
-      margin-bottom: 20px;
-    }
-
-    .footer__col-title {
-      font-size: 0.8rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: #fff;
-      margin-bottom: 18px;
-    }
-
-    .footer__links {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .footer__link {
-      font-size: 0.9rem;
-      color: rgba(255,255,255,0.65);
-      transition: color var(--transition);
-    }
-
-    .footer__link:hover {
-      color: var(--secondary);
-    }
-
-    .footer__contact-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      font-size: 0.9rem;
-      margin-bottom: 14px;
-    }
-
-    .footer__contact-icon {
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
-
-    .footer__bottom {
-      border-top: 1px solid rgba(255,255,255,0.08);
-      padding-top: 28px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 12px;
-      font-size: 0.82rem;
-      color: rgba(255,255,255,0.45);
-    }
-
-    .footer__disclaimer {
-      font-size: 0.78rem;
-      color: rgba(255,255,255,0.35);
-      margin-top: 24px;
-      border-top: 1px solid rgba(255,255,255,0.05);
-      padding-top: 20px;
-      line-height: 1.6;
-    }
-
-    /* =============================================
-       SKIP LINK (ACCESSIBILITY)
-    ============================================= */
     .skip-link {
       position: absolute;
       top: -60px;
       left: 20px;
-      background: var(--secondary);
+      background: #0D9488;
       color: #fff;
       padding: 10px 20px;
-      border-radius: var(--radius);
+      border-radius: 8px;
       font-weight: 700;
       z-index: 9999;
       transition: top 0.2s;
     }
-
-    .skip-link:focus {
-      top: 10px;
-    }
-
-    /* =============================================
-       RESPONSIVE
-    ============================================= */
-    @media (max-width: 1024px) {
-      .footer__grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .areas__layout,
-      .insurance__layout,
-      .schedule__layout {
-        grid-template-columns: 1fr;
-        gap: 40px;
-      }
-
-      .how__steps::before {
-        display: none;
-      }
-    }
-
-    @media (max-width: 768px) {
-      html { font-size: 17px; }
-
-      .section { padding: 60px 0; }
-
-      .nav__links,
-      .nav__cta {
-        display: none;
-      }
-
-      .nav__toggle {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .hero {
-        min-height: auto;
-      }
-
-      .hero__content {
-        padding: 60px 0 48px;
-      }
-
-      .hero__actions {
-        flex-direction: column;
-      }
-
-      .hero__actions .btn {
-        width: 100%;
-        font-size: 1.05rem;
-      }
-
-      .trust-bar__inner {
-        gap: 18px 28px;
-      }
-
-      .form__row {
-        grid-template-columns: 1fr;
-      }
-
-      .footer__grid {
-        grid-template-columns: 1fr;
-      }
-
-      .footer__bottom {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .schedule__cta-box {
-        padding: 32px 24px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      html { font-size: 16px; }
-
-      .benefits__grid,
-      .serve__grid,
-      .services__grid,
-      .how__steps,
-      .testimonials__grid {
-        grid-template-columns: 1fr;
-      }
-    }</style>
-  <!-- Codex UI Polish: nav readability and one-line links -->
-  <style id="codex-ui-polish-nav">
-    nav a,
-    .nav a,
-    .navbar a,
-    .nav__links a,
-    .nav-links a,
-    .menu a,
-    .menu__link,
-    .fullscreen-menu a {
-      white-space: nowrap;
-    }
-
-    @media (min-width: 1024px) {
-      nav a,
-      .nav a,
-      .navbar a,
-      .nav__links a,
-      .nav-links a,
-      .menu a,
-      .menu__link,
-      .fullscreen-menu a {
-        line-height: 1.1;
-      }
-
-      .nav__links,
-      .nav-links,
-      .navbar-links,
-      .menu-links,
-      nav ul {
-        row-gap: 0.25rem;
-      }
-
-      .nav__links,
-      .nav-links,
-      .navbar-links,
-      .menu-links,
-      nav ul {
-        align-items: center;
-      }
-
-      .nav__links a,
-      .nav-links a,
-      .navbar-links a,
-      .menu-links a,
-      nav ul a {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 1.2rem;
-      }
-    }
-
-    /* Cross-page alignment normalization for common grid/card layouts */
-    .services__grid,
-    .service-grid,
-    .cards-grid,
-    .features-grid,
-    .pricing__grid,
-    .plans-grid,
-    .results__grid,
-    .reviews__grid,
-    .events-grid,
-    .coaches__grid,
-    .therapists-grid,
-    .portfolio__grid,
-    .tips-grid,
-    .testimonials-grid,
-    .grid {
-      align-items: stretch;
-    }
-
-    .service-card,
-    .card,
-    .feature-card,
-    .event-card,
-    .plan,
-    .pricing-card,
-    .testimonial,
-    .review,
-    .coach,
-    .therapist-card,
-    .project,
-    .tip-card,
-    .serve-card,
-    .info-card,
-    .stat-card {
-      height: 100%;
-    }
-
-    .service-card img,
-    .project img,
-    .tip-card img,
-    .coach img,
-    .therapist-card img,
-    .feature-card img,
-    .gallery-item img {
-      width: 100%;
-      display: block;
-      object-fit: cover;
-    }
-
-    /* Improve readability where copy is dense without changing content */
-    section p,
-    .section p,
-    .card p,
-    .service-card p,
-    .feature-card p,
-    .testimonial p,
-    .event-card p,
-    .info-card p {
-      max-width: 66ch;
-      text-wrap: pretty;
-    }
-
-    .section__header p,
-    .hero p,
-    .footer p,
-    .map-overlay-card,
-    .location__item-value {
-      max-width: none;
-    }
+    .skip-link:focus { top: 10px; }
   </style>
-
 </head>
-<body>
+<body class="font-sans text-gray-800 bg-white antialiased">
 
   <a href="#main" class="skip-link">Skip to main content</a>
 
   <!-- ============================================================
        NAVIGATION
   ============================================================ -->
-  <header class="nav" role="banner">
-    <div class="container">
-      <div class="nav__inner">
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100" role="banner">
+    <div class="max-w-7xl mx-auto px-5">
+      <div class="flex items-center justify-between h-[70px]">
         <!-- Logo -->
-        <a href="#" class="nav__logo" aria-label="Mobile PT Solutions — Home">
-          <div class="nav__logo-icon" aria-hidden="true">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+        <a href="#" class="flex items-center gap-3 flex-shrink-0" aria-label="Mobile PT Solutions - Home">
+          <div class="w-10 h-10 bg-teal-600 rounded-xl flex items-center justify-center flex-shrink-0">
+            <i class="fa-solid fa-house-medical-circle-check text-white text-lg"></i>
           </div>
-          <div class="nav__logo-text">
-            <span class="nav__logo-name">Mobile PT Solutions</span>
-            <span class="nav__logo-tagline">In-Home Physical Therapy</span>
+          <div class="flex flex-col leading-tight">
+            <span class="text-[0.95rem] font-extrabold text-teal-900 tracking-tight">Mobile PT Solutions</span>
+            <span class="text-[0.65rem] font-medium text-teal-600 uppercase tracking-widest">In-Home Physical Therapy</span>
           </div>
         </a>
 
         <!-- Desktop links -->
-        <nav class="nav__links" aria-label="Primary navigation">
-          <a href="#benefits" class="nav__link">Why In-Home</a>
-          <a href="#services" class="nav__link">Services</a>
-          <a href="#how-it-works" class="nav__link">How It Works</a>
-          <a href="#areas" class="nav__link">Areas</a>
-          <a href="#insurance" class="nav__link">Insurance</a>
+        <nav class="hidden lg:flex items-center gap-1" aria-label="Primary navigation">
+          <a href="#benefits" class="text-sm font-medium text-gray-600 hover:text-teal-700 px-3 py-2 rounded-lg hover:bg-teal-50 transition-all whitespace-nowrap">Why In-Home</a>
+          <a href="#services" class="text-sm font-medium text-gray-600 hover:text-teal-700 px-3 py-2 rounded-lg hover:bg-teal-50 transition-all whitespace-nowrap">Services</a>
+          <a href="#process" class="text-sm font-medium text-gray-600 hover:text-teal-700 px-3 py-2 rounded-lg hover:bg-teal-50 transition-all whitespace-nowrap">How It Works</a>
+          <a href="#team" class="text-sm font-medium text-gray-600 hover:text-teal-700 px-3 py-2 rounded-lg hover:bg-teal-50 transition-all whitespace-nowrap">Our Team</a>
+          <a href="#insurance" class="text-sm font-medium text-gray-600 hover:text-teal-700 px-3 py-2 rounded-lg hover:bg-teal-50 transition-all whitespace-nowrap">Insurance</a>
         </nav>
 
         <!-- Desktop CTA -->
-        <div class="nav__cta">
-          <a href="#schedule" class="btn btn--primary">Schedule Home Visit</a>
+        <div class="hidden lg:block flex-shrink-0">
+          <a href="#schedule" class="inline-flex items-center gap-2 bg-coral-500 hover:bg-coral-600 text-white font-bold text-sm px-5 py-2.5 rounded-full transition-all hover:-translate-y-0.5 shadow-md hover:shadow-lg">
+            <i class="fa-solid fa-calendar-check"></i>
+            Schedule Home Visit
+          </a>
         </div>
 
         <!-- Mobile toggle -->
-        <button class="nav__toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round">
-            <line x1="3" y1="6" x2="21" y2="6"/>
-            <line x1="3" y1="12" x2="21" y2="12"/>
-            <line x1="3" y1="18" x2="21" y2="18"/>
-          </svg>
+        <button class="lg:hidden p-2 text-gray-700" id="nav-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+          <i class="fa-solid fa-bars text-xl"></i>
         </button>
       </div>
     </div>
 
     <!-- Mobile menu -->
-    <nav class="nav__mobile-menu" id="mobile-menu" aria-label="Mobile navigation" aria-hidden="true">
-      <a href="#benefits" class="nav__mobile-link">Why In-Home PT</a>
-      <a href="#serve" class="nav__mobile-link">Who We Serve</a>
-      <a href="#services" class="nav__mobile-link">Services</a>
-      <a href="#how-it-works" class="nav__mobile-link">How It Works</a>
-      <a href="#areas" class="nav__mobile-link">Service Areas</a>
-      <a href="#insurance" class="nav__mobile-link">Insurance</a>
-      <a href="#testimonials" class="nav__mobile-link">Testimonials</a>
-      <a href="#schedule" class="btn btn--primary btn--block">Schedule Home Visit</a>
+    <nav class="hidden bg-white border-t border-gray-100 shadow-lg lg:hidden" id="mobile-menu" aria-label="Mobile navigation" aria-hidden="true">
+      <div class="px-5 py-4 space-y-1">
+        <a href="#benefits" class="block text-gray-700 font-medium py-3 border-b border-gray-100 nav-mobile-link">Why In-Home PT</a>
+        <a href="#serve" class="block text-gray-700 font-medium py-3 border-b border-gray-100 nav-mobile-link">Who We Serve</a>
+        <a href="#services" class="block text-gray-700 font-medium py-3 border-b border-gray-100 nav-mobile-link">Services</a>
+        <a href="#process" class="block text-gray-700 font-medium py-3 border-b border-gray-100 nav-mobile-link">How It Works</a>
+        <a href="#team" class="block text-gray-700 font-medium py-3 border-b border-gray-100 nav-mobile-link">Our Team</a>
+        <a href="#insurance" class="block text-gray-700 font-medium py-3 border-b border-gray-100 nav-mobile-link">Insurance</a>
+        <a href="#testimonials" class="block text-gray-700 font-medium py-3 border-b border-gray-100 nav-mobile-link">Testimonials</a>
+        <a href="#schedule" class="block mt-3 text-center bg-coral-500 text-white font-bold py-3 rounded-full nav-mobile-link">Schedule Home Visit</a>
+      </div>
     </nav>
   </header>
 
@@ -1509,78 +193,74 @@
     <!-- ============================================================
          HERO
     ============================================================ -->
-    <section class="hero" aria-label="Hero">
-      <div class="hero__bg" role="img" aria-label="Physical therapist providing in-home care"></div>
-      <div class="hero__overlay"></div>
-      <div class="container">
-        <div class="hero__content">
-
-          <div class="hero__badge animate">
-            <span class="badge badge--white">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-              Medicare &amp; Medicaid Accepted
-            </span>
-          </div>
-
-          <h1 class="hero__title animate delay-1">
-            Physical Therapy.<br />
-            <span>In Your Home.</span><br />
+    <section class="hero-gradient relative overflow-hidden" aria-label="Hero">
+      <div class="absolute inset-0 opacity-10">
+        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1400&q=80" alt="" class="w-full h-full object-cover" aria-hidden="true" />
+      </div>
+      <div class="relative z-10 max-w-7xl mx-auto px-5 py-24 md:py-32 lg:py-36">
+        <div class="max-w-2xl">
+          <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-[1.1] mb-6 animate">
+            Physical Therapy<br />
+            <span class="text-teal-200">In Your Home.</span><br />
             On Your Schedule.
           </h1>
 
-          <p class="hero__subtitle animate delay-2">
-            No transportation needed. No waiting rooms. We bring licensed physical therapists directly to your door — wherever you call home.
+          <p class="text-lg text-teal-100 mb-8 max-w-xl leading-relaxed font-light animate delay-1">
+            No transportation needed. No waiting rooms. We bring licensed physical therapists directly to your door -- wherever you call home.
           </p>
 
-          <div class="hero__actions animate delay-3">
-            <a href="tel:+15559012345" class="btn btn--primary btn--lg" aria-label="Call us at 555-901-2345">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.38 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.79a16 16 0 0 0 6.29 6.29l.95-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.03z"/></svg>
+          <div class="flex flex-col sm:flex-row gap-4 mb-10 animate delay-2">
+            <a href="tel:+15559012345" class="inline-flex items-center justify-center gap-2.5 bg-coral-500 hover:bg-coral-600 text-white font-bold text-base px-7 py-3.5 rounded-full transition-all hover:-translate-y-0.5 shadow-lg hover:shadow-xl" aria-label="Call us at 555-901-2345">
+              <i class="fa-solid fa-phone"></i>
               Call (555) 901-2345
             </a>
-            <a href="#schedule" class="btn btn--outline-white btn--lg">
+            <a href="#schedule" class="inline-flex items-center justify-center gap-2.5 bg-white/15 hover:bg-white/25 text-white font-bold text-base px-7 py-3.5 rounded-full border-2 border-white/40 hover:border-white/60 transition-all backdrop-blur-sm">
               FREE In-Home Assessment
             </a>
           </div>
 
-          <div class="hero__trust animate delay-4">
-            <div class="hero__trust-item">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E74C3C" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          <div class="flex flex-wrap gap-x-6 gap-y-3 animate delay-3">
+            <div class="flex items-center gap-2 text-teal-100 text-sm font-medium">
+              <i class="fa-solid fa-circle-check text-teal-300"></i>
               Available 7 Days a Week
             </div>
-            <div class="hero__trust-item">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E74C3C" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <div class="flex items-center gap-2 text-teal-100 text-sm font-medium">
+              <i class="fa-solid fa-circle-check text-teal-300"></i>
               Licensed Therapists
             </div>
-            <div class="hero__trust-item">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E74C3C" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <div class="flex items-center gap-2 text-teal-100 text-sm font-medium">
+              <i class="fa-solid fa-circle-check text-teal-300"></i>
               Insurance Billing Handled
             </div>
           </div>
-
         </div>
+      </div>
+      <!-- Decorative bottom wave -->
+      <div class="absolute bottom-0 left-0 right-0">
+        <svg viewBox="0 0 1440 80" fill="none" class="w-full"><path d="M0 40C360 80 720 0 1080 40C1260 60 1380 55 1440 50V80H0V40Z" fill="white"/></svg>
       </div>
     </section>
 
     <!-- ============================================================
          TRUST BAR
     ============================================================ -->
-    <div class="trust-bar" role="complementary" aria-label="Trust signals">
-      <div class="container">
-        <div class="trust-bar__inner">
-          <div class="trust-bar__item">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+    <div class="bg-white py-6 border-b border-gray-100" role="complementary" aria-label="Trust signals">
+      <div class="max-w-7xl mx-auto px-5">
+        <div class="flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
+          <div class="flex items-center gap-2.5 text-teal-800 text-sm font-semibold">
+            <i class="fa-solid fa-location-dot text-teal-500"></i>
             Serving Your City &amp; Surrounding Areas
           </div>
-          <div class="trust-bar__item">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <div class="flex items-center gap-2.5 text-teal-800 text-sm font-semibold">
+            <i class="fa-solid fa-calendar-days text-teal-500"></i>
             Available 7 Days a Week
           </div>
-          <div class="trust-bar__item">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          <div class="flex items-center gap-2.5 text-teal-800 text-sm font-semibold">
+            <i class="fa-solid fa-shield-halved text-teal-500"></i>
             Medicare &amp; Medicaid Accepted
           </div>
-          <div class="trust-bar__item">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <div class="flex items-center gap-2.5 text-teal-800 text-sm font-semibold">
+            <i class="fa-solid fa-clock text-teal-500"></i>
             FREE Initial Assessment
           </div>
         </div>
@@ -1590,45 +270,45 @@
     <!-- ============================================================
          WHY IN-HOME PT
     ============================================================ -->
-    <section class="section benefits" id="benefits" aria-labelledby="benefits-title">
-      <div class="container">
-        <div class="section__header section__header--center animate">
-          <p class="section__label">The Difference</p>
-          <h2 class="section__title" id="benefits-title">Why Choose In-Home Physical Therapy?</h2>
-          <p class="section__subtitle">Traditional PT clinics require transportation, waiting rooms, and rigid schedules. We remove every barrier between you and recovery.</p>
+    <section class="py-20 bg-gray-50" id="benefits" aria-labelledby="benefits-title">
+      <div class="max-w-7xl mx-auto px-5">
+        <div class="text-center max-w-2xl mx-auto mb-14 animate">
+          <p class="text-sm font-bold uppercase tracking-widest text-teal-600 mb-3">The Difference</p>
+          <h2 class="font-display text-3xl md:text-4xl font-extrabold text-gray-900 mb-4" id="benefits-title">Why Choose In-Home Physical Therapy?</h2>
+          <p class="text-gray-500 leading-relaxed">Traditional PT clinics require transportation, waiting rooms, and rigid schedules. We remove every barrier between you and recovery.</p>
         </div>
 
-        <div class="benefits__grid">
-          <div class="benefit-card animate delay-1">
-            <div class="benefit-card__icon" aria-hidden="true">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#E74C3C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="group bg-white rounded-2xl p-7 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 animate delay-1">
+            <div class="w-14 h-14 bg-teal-50 rounded-2xl flex items-center justify-center mb-5 group-hover:bg-teal-100 transition-colors">
+              <i class="fa-solid fa-house text-teal-600 text-xl"></i>
             </div>
-            <h3 class="benefit-card__title">No Travel Required</h3>
-            <p class="benefit-card__text">Skip the stressful commute, parking, and waiting rooms. Your therapist arrives at your front door at the scheduled time — every time.</p>
+            <h3 class="text-lg font-bold text-gray-900 mb-2">No Travel Required</h3>
+            <p class="text-sm text-gray-500 leading-relaxed">Skip the stressful commute, parking, and waiting rooms. Your therapist arrives at your front door at the scheduled time.</p>
           </div>
 
-          <div class="benefit-card animate delay-2">
-            <div class="benefit-card__icon" aria-hidden="true">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#E74C3C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          <div class="group bg-white rounded-2xl p-7 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 animate delay-2">
+            <div class="w-14 h-14 bg-teal-50 rounded-2xl flex items-center justify-center mb-5 group-hover:bg-teal-100 transition-colors">
+              <i class="fa-solid fa-heart-pulse text-teal-600 text-xl"></i>
             </div>
-            <h3 class="benefit-card__title">Familiar Environment Heals Better</h3>
-            <p class="benefit-card__text">Research shows patients recover faster and more safely when therapy is practiced in their own home — the real-world environment they live in every day.</p>
+            <h3 class="text-lg font-bold text-gray-900 mb-2">Familiar Environment Heals Better</h3>
+            <p class="text-sm text-gray-500 leading-relaxed">Research shows patients recover faster when therapy is practiced in their own home -- the real-world environment they live in every day.</p>
           </div>
 
-          <div class="benefit-card animate delay-3">
-            <div class="benefit-card__icon" aria-hidden="true">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#E74C3C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <div class="group bg-white rounded-2xl p-7 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 animate delay-3">
+            <div class="w-14 h-14 bg-teal-50 rounded-2xl flex items-center justify-center mb-5 group-hover:bg-teal-100 transition-colors">
+              <i class="fa-solid fa-calendar-check text-teal-600 text-xl"></i>
             </div>
-            <h3 class="benefit-card__title">Flexible Scheduling</h3>
-            <p class="benefit-card__text">Morning, evening, weekends — we work around your life. Available 7 days a week to fit treatment sessions into your most convenient time slots.</p>
+            <h3 class="text-lg font-bold text-gray-900 mb-2">Flexible Scheduling</h3>
+            <p class="text-sm text-gray-500 leading-relaxed">Morning, evening, weekends -- we work around your life. Available 7 days a week to fit into your most convenient time slots.</p>
           </div>
 
-          <div class="benefit-card animate delay-4">
-            <div class="benefit-card__icon" aria-hidden="true">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#E74C3C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <div class="group bg-white rounded-2xl p-7 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 animate delay-4">
+            <div class="w-14 h-14 bg-teal-50 rounded-2xl flex items-center justify-center mb-5 group-hover:bg-teal-100 transition-colors">
+              <i class="fa-solid fa-user-check text-teal-600 text-xl"></i>
             </div>
-            <h3 class="benefit-card__title">One-on-One Attention</h3>
-            <p class="benefit-card__text">Your entire session is dedicated to you — no sharing a therapist with multiple patients. Personalized, focused care that delivers measurably better outcomes.</p>
+            <h3 class="text-lg font-bold text-gray-900 mb-2">One-on-One Attention</h3>
+            <p class="text-sm text-gray-500 leading-relaxed">Your entire session is dedicated to you -- no sharing a therapist with multiple patients. Personalized, focused care every visit.</p>
           </div>
         </div>
       </div>
@@ -1637,45 +317,45 @@
     <!-- ============================================================
          WHO WE SERVE
     ============================================================ -->
-    <section class="section serve" id="serve" aria-labelledby="serve-title">
-      <div class="container">
-        <div class="section__header section__header--center animate">
-          <p class="section__label">Our Patients</p>
-          <h2 class="section__title" id="serve-title">Who We Serve</h2>
-          <p class="section__subtitle">We specialize in patients who benefit most from receiving care at home.</p>
+    <section class="py-20 bg-teal-800" id="serve" aria-labelledby="serve-title">
+      <div class="max-w-7xl mx-auto px-5">
+        <div class="text-center max-w-2xl mx-auto mb-14 animate">
+          <p class="text-sm font-bold uppercase tracking-widest text-teal-300 mb-3">Our Patients</p>
+          <h2 class="font-display text-3xl md:text-4xl font-extrabold text-white mb-4" id="serve-title">Who We Serve</h2>
+          <p class="text-teal-200/80 leading-relaxed">We specialize in patients who benefit most from receiving care at home.</p>
         </div>
 
-        <div class="serve__grid">
-          <div class="serve-card animate delay-1">
-            <div class="serve-card__icon" aria-hidden="true">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#E74C3C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><line x1="12" y1="22" x2="12" y2="12"/></svg>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 text-center hover:bg-white/10 hover:border-teal-400/30 transition-all duration-300 animate delay-1">
+            <div class="w-16 h-16 bg-teal-600/30 rounded-full flex items-center justify-center mx-auto mb-5">
+              <i class="fa-solid fa-hospital text-teal-300 text-2xl"></i>
             </div>
-            <h3 class="serve-card__title">Post-Hospital Patients</h3>
-            <p class="serve-card__text">Recovering from a hospital stay? Our therapists provide seamless continuity of care from discharge to full recovery — in the comfort of your home.</p>
+            <h3 class="text-base font-bold text-white mb-2">Post-Hospital Patients</h3>
+            <p class="text-sm text-teal-200/70 leading-relaxed">Seamless continuity of care from discharge to full recovery -- in the comfort of your home.</p>
           </div>
 
-          <div class="serve-card animate delay-2">
-            <div class="serve-card__icon" aria-hidden="true">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#E74C3C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a6 6 0 0 1 12 0v2"/><line x1="12" y1="16" x2="12" y2="20"/></svg>
+          <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 text-center hover:bg-white/10 hover:border-teal-400/30 transition-all duration-300 animate delay-2">
+            <div class="w-16 h-16 bg-teal-600/30 rounded-full flex items-center justify-center mx-auto mb-5">
+              <i class="fa-solid fa-person-cane text-teal-300 text-2xl"></i>
             </div>
-            <h3 class="serve-card__title">Homebound Seniors</h3>
-            <p class="serve-card__text">Mobility challenges shouldn't prevent access to quality care. We bring gentle, effective therapy to seniors in their own homes, assisted living, or adult family homes.</p>
+            <h3 class="text-base font-bold text-white mb-2">Homebound Seniors</h3>
+            <p class="text-sm text-teal-200/70 leading-relaxed">Gentle, effective therapy for seniors in their own homes, assisted living, or adult family homes.</p>
           </div>
 
-          <div class="serve-card animate delay-3">
-            <div class="serve-card__icon" aria-hidden="true">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#E74C3C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 text-center hover:bg-white/10 hover:border-teal-400/30 transition-all duration-300 animate delay-3">
+            <div class="w-16 h-16 bg-teal-600/30 rounded-full flex items-center justify-center mx-auto mb-5">
+              <i class="fa-solid fa-briefcase text-teal-300 text-2xl"></i>
             </div>
-            <h3 class="serve-card__title">Busy Professionals</h3>
-            <p class="serve-card__text">Can't fit clinic visits into your schedule? We come to you at home, your office, or wherever works best — before work, after work, or on weekends.</p>
+            <h3 class="text-base font-bold text-white mb-2">Busy Professionals</h3>
+            <p class="text-sm text-teal-200/70 leading-relaxed">We come to you at home or office -- before work, after work, or on weekends.</p>
           </div>
 
-          <div class="serve-card animate delay-4">
-            <div class="serve-card__icon" aria-hidden="true">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#E74C3C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l3 3 7-7"/><circle cx="12" cy="12" r="10"/></svg>
+          <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 text-center hover:bg-white/10 hover:border-teal-400/30 transition-all duration-300 animate delay-4">
+            <div class="w-16 h-16 bg-teal-600/30 rounded-full flex items-center justify-center mx-auto mb-5">
+              <i class="fa-solid fa-bandage text-teal-300 text-2xl"></i>
             </div>
-            <h3 class="serve-card__title">Recovering Surgery Patients</h3>
-            <p class="serve-card__text">Post-surgical rehab is critical. We provide expert, evidence-based therapy during the weeks when driving is impossible — keeping your recovery on track.</p>
+            <h3 class="text-base font-bold text-white mb-2">Recovering Surgery Patients</h3>
+            <p class="text-sm text-teal-200/70 leading-relaxed">Expert rehab during the weeks when driving is impossible -- keeping your recovery on track.</p>
           </div>
         </div>
       </div>
@@ -1684,402 +364,534 @@
     <!-- ============================================================
          SERVICES
     ============================================================ -->
-    <section class="section services" id="services" aria-labelledby="services-title">
-      <div class="container">
-        <div class="section__header section__header--center animate">
-          <p class="section__label">What We Treat</p>
-          <h2 class="section__title" id="services-title">In-Home Physical Therapy Services</h2>
-          <p class="section__subtitle">Every service is delivered by licensed therapists in the privacy and comfort of your own home.</p>
+    <section class="py-20 bg-white" id="services" aria-labelledby="services-title">
+      <div class="max-w-7xl mx-auto px-5">
+        <div class="text-center max-w-2xl mx-auto mb-14 animate">
+          <p class="text-sm font-bold uppercase tracking-widest text-teal-600 mb-3">What We Treat</p>
+          <h2 class="font-display text-3xl md:text-4xl font-extrabold text-gray-900 mb-4" id="services-title">In-Home Physical Therapy Services</h2>
+          <p class="text-gray-500 leading-relaxed">Every service is delivered by licensed therapists in the privacy and comfort of your own home.</p>
         </div>
 
-        <div class="services__grid">
-
-          <article class="service-card animate delay-1">
-            <img class="service-card__img" src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1200&q=80" alt="Physical therapist guiding patient through post-surgery rehabilitation at home" loading="lazy" />
-            <div class="service-card__body">
-              <div class="service-card__icon" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E74C3C" stroke-width="2" stroke-linecap="round"><path d="M4.5 12.5l3 3 7-7"/><circle cx="12" cy="12" r="10"/></svg>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-7">
+          <article class="group rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 animate delay-1">
+            <div class="h-52 overflow-hidden">
+              <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80" alt="Post-surgery rehabilitation at home" loading="lazy" />
+            </div>
+            <div class="p-6">
+              <div class="w-10 h-10 bg-teal-50 rounded-xl flex items-center justify-center mb-4">
+                <i class="fa-solid fa-kit-medical text-teal-600"></i>
               </div>
-              <h3 class="service-card__title">Post-Surgery Rehabilitation</h3>
-              <p class="service-card__text">Structured recovery programs after joint replacement, spine surgery, or other procedures. We work alongside your surgical team's protocols to optimize healing and restore function.</p>
+              <h3 class="text-lg font-bold text-gray-900 mb-2">Post-Surgery Rehabilitation</h3>
+              <p class="text-sm text-gray-500 leading-relaxed">Structured recovery programs after joint replacement, spine surgery, or other procedures. We optimize healing and restore function.</p>
             </div>
           </article>
 
-          <article class="service-card animate delay-2">
-            <img class="service-card__img" src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&q=80" alt="Senior patient practicing balance and fall prevention exercises with therapist" loading="lazy" />
-            <div class="service-card__body">
-              <div class="service-card__icon" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E74C3C" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a6 6 0 0 1 12 0v2"/></svg>
+          <article class="group rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 animate delay-2">
+            <div class="h-52 overflow-hidden">
+              <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80" alt="Balance and fall prevention exercises" loading="lazy" />
+            </div>
+            <div class="p-6">
+              <div class="w-10 h-10 bg-teal-50 rounded-xl flex items-center justify-center mb-4">
+                <i class="fa-solid fa-shield-heart text-teal-600"></i>
               </div>
-              <h3 class="service-card__title">Balance &amp; Fall Prevention</h3>
-              <p class="service-card__text">Personalized balance training and fall risk assessment right in your living environment. We identify hazards and build the strength and coordination to keep you safe at home.</p>
+              <h3 class="text-lg font-bold text-gray-900 mb-2">Balance &amp; Fall Prevention</h3>
+              <p class="text-sm text-gray-500 leading-relaxed">Personalized balance training and fall risk assessment right in your living environment. We identify hazards and build strength.</p>
             </div>
           </article>
 
-          <article class="service-card animate delay-3">
-            <img class="service-card__img" src="https://images.unsplash.com/photo-1584515933487-779824d29309?w=1200&q=80" alt="Stroke recovery therapy session focused on mobility and coordination" loading="lazy" />
-            <div class="service-card__body">
-              <div class="service-card__icon" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E74C3C" stroke-width="2" stroke-linecap="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          <article class="group rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 animate delay-3">
+            <div class="h-52 overflow-hidden">
+              <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://images.unsplash.com/photo-1584515933487-779824d29309?w=800&q=80" alt="Stroke recovery therapy" loading="lazy" />
+            </div>
+            <div class="p-6">
+              <div class="w-10 h-10 bg-teal-50 rounded-xl flex items-center justify-center mb-4">
+                <i class="fa-solid fa-brain text-teal-600"></i>
               </div>
-              <h3 class="service-card__title">Stroke Recovery</h3>
-              <p class="service-card__text">Neurological rehabilitation designed to rebuild movement, strength, and independence. Home-based therapy means practicing functional tasks in the actual environment where they matter most.</p>
+              <h3 class="text-lg font-bold text-gray-900 mb-2">Stroke Recovery</h3>
+              <p class="text-sm text-gray-500 leading-relaxed">Neurological rehabilitation to rebuild movement, strength, and independence in the actual environment where it matters most.</p>
             </div>
           </article>
 
-          <article class="service-card animate delay-1">
-            <img class="service-card__img" src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=1200&q=80" alt="Orthopedic physical therapy home visit for strength and movement training" loading="lazy" />
-            <div class="service-card__body">
-              <div class="service-card__icon" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E74C3C" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <article class="group rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 animate delay-1">
+            <div class="h-52 overflow-hidden">
+              <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&q=80" alt="Orthopedic physical therapy" loading="lazy" />
+            </div>
+            <div class="p-6">
+              <div class="w-10 h-10 bg-teal-50 rounded-xl flex items-center justify-center mb-4">
+                <i class="fa-solid fa-bone text-teal-600"></i>
               </div>
-              <h3 class="service-card__title">Orthopedic Physical Therapy</h3>
-              <p class="service-card__text">Treatment for joint pain, muscle injuries, back and neck conditions, and sports injuries. Evidence-based manual therapy and therapeutic exercise — all at home.</p>
+              <h3 class="text-lg font-bold text-gray-900 mb-2">Orthopedic Physical Therapy</h3>
+              <p class="text-sm text-gray-500 leading-relaxed">Treatment for joint pain, muscle injuries, back and neck conditions. Evidence-based manual therapy and therapeutic exercise.</p>
             </div>
           </article>
 
-          <article class="service-card animate delay-2">
-            <img class="service-card__img" src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?w=1200&q=80" alt="Hands-on pain management and manual therapy treatment at home" loading="lazy" />
-            <div class="service-card__body">
-              <div class="service-card__icon" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E74C3C" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="8" y1="15" x2="16" y2="15"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+          <article class="group rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 animate delay-2">
+            <div class="h-52 overflow-hidden">
+              <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&q=80" alt="Pain management therapy" loading="lazy" />
+            </div>
+            <div class="p-6">
+              <div class="w-10 h-10 bg-teal-50 rounded-xl flex items-center justify-center mb-4">
+                <i class="fa-solid fa-hand-holding-medical text-teal-600"></i>
               </div>
-              <h3 class="service-card__title">Pain Management</h3>
-              <p class="service-card__text">Drug-free, hands-on pain relief for chronic conditions, arthritis, and injury recovery. Manual therapy, therapeutic modalities, and individualized home exercise programs.</p>
+              <h3 class="text-lg font-bold text-gray-900 mb-2">Pain Management</h3>
+              <p class="text-sm text-gray-500 leading-relaxed">Drug-free, hands-on pain relief for chronic conditions, arthritis, and injury recovery. Manual therapy and individualized exercise programs.</p>
             </div>
           </article>
 
-          <article class="service-card animate delay-3">
-            <img class="service-card__img" src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=1200&q=80" alt="Compassionate elder care physical therapy session in a home setting" loading="lazy" />
-            <div class="service-card__body">
-              <div class="service-card__icon" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E74C3C" stroke-width="2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+          <article class="group rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 animate delay-3">
+            <div class="h-52 overflow-hidden">
+              <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://images.unsplash.com/photo-1516549655169-df83a0774514?w=800&q=80" alt="Elder care physical therapy" loading="lazy" />
+            </div>
+            <div class="p-6">
+              <div class="w-10 h-10 bg-teal-50 rounded-xl flex items-center justify-center mb-4">
+                <i class="fa-solid fa-user-nurse text-teal-600"></i>
               </div>
-              <h3 class="service-card__title">Elder Care Physical Therapy</h3>
-              <p class="service-card__text">Compassionate, patient-centered care for older adults. We address mobility, strength, endurance, and independence — with the patience and respect seniors deserve.</p>
+              <h3 class="text-lg font-bold text-gray-900 mb-2">Elder Care Physical Therapy</h3>
+              <p class="text-sm text-gray-500 leading-relaxed">Compassionate, patient-centered care for older adults. We address mobility, strength, endurance, and independence.</p>
             </div>
           </article>
-
         </div>
       </div>
     </section>
 
     <!-- ============================================================
-         HOW IT WORKS
+         OUR PROCESS (How It Works)
     ============================================================ -->
-    <section class="section how" id="how-it-works" aria-labelledby="how-title">
-      <div class="container">
-        <div class="section__header section__header--center animate">
-          <p class="section__label">Simple Process</p>
-          <h2 class="section__title" id="how-title">Getting Started Is Easy</h2>
-          <p class="section__subtitle">Three simple steps from your first call to ongoing recovery at home.</p>
+    <section class="py-20 bg-gray-50" id="process" aria-labelledby="process-title">
+      <div class="max-w-7xl mx-auto px-5">
+        <div class="text-center max-w-2xl mx-auto mb-14 animate">
+          <p class="text-sm font-bold uppercase tracking-widest text-teal-600 mb-3">Simple Process</p>
+          <h2 class="font-display text-3xl md:text-4xl font-extrabold text-gray-900 mb-4" id="process-title">Getting Started Is Easy</h2>
+          <p class="text-gray-500 leading-relaxed">Three simple steps from your first call to ongoing recovery at home.</p>
         </div>
 
-        <div class="how__steps" role="list">
+        <div class="grid md:grid-cols-3 gap-8 relative">
+          <!-- Connecting line (desktop only) -->
+          <div class="hidden md:block absolute top-16 left-[16%] right-[16%] h-[2px] bg-gradient-to-r from-teal-300 via-teal-400 to-teal-300 opacity-40"></div>
 
-          <div class="step animate delay-1" role="listitem">
-            <div class="step__number" aria-hidden="true">1</div>
-            <h3 class="step__title">Schedule a Call</h3>
-            <p class="step__text">Call us or fill out our quick form. A care coordinator will discuss your needs, confirm insurance coverage, and schedule your FREE in-home assessment — often within 24–48 hours.</p>
+          <div class="text-center relative z-10 animate delay-1">
+            <div class="w-[80px] h-[80px] bg-teal-600 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-extrabold shadow-lg shadow-teal-600/30">
+              1
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 mb-3">Schedule a Call</h3>
+            <p class="text-sm text-gray-500 leading-relaxed max-w-xs mx-auto">Call us or fill out our quick form. A care coordinator will discuss your needs, confirm insurance, and schedule your FREE assessment -- often within 24-48 hours.</p>
           </div>
 
-          <div class="step animate delay-2" role="listitem">
-            <div class="step__number" aria-hidden="true">2</div>
-            <h3 class="step__title">We Come to You</h3>
-            <p class="step__text">Your licensed physical therapist arrives at your home at the agreed time with all necessary equipment. Your first visit includes a full assessment and your personalized treatment plan.</p>
+          <div class="text-center relative z-10 animate delay-2">
+            <div class="w-[80px] h-[80px] bg-teal-600 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-extrabold shadow-lg shadow-teal-600/30">
+              2
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 mb-3">We Come to You</h3>
+            <p class="text-sm text-gray-500 leading-relaxed max-w-xs mx-auto">Your licensed therapist arrives at your home with all necessary equipment. Your first visit includes a full assessment and personalized treatment plan.</p>
           </div>
 
-          <div class="step animate delay-3" role="listitem">
-            <div class="step__number" aria-hidden="true">3</div>
-            <h3 class="step__title">Ongoing In-Home Care</h3>
-            <p class="step__text">Regular sessions scheduled at your convenience. Your therapist tracks progress, adjusts your plan, and coordinates with your doctors — while you recover from the comfort of home.</p>
+          <div class="text-center relative z-10 animate delay-3">
+            <div class="w-[80px] h-[80px] bg-teal-600 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-extrabold shadow-lg shadow-teal-600/30">
+              3
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 mb-3">Ongoing In-Home Care</h3>
+            <p class="text-sm text-gray-500 leading-relaxed max-w-xs mx-auto">Regular sessions at your convenience. Your therapist tracks progress, adjusts your plan, and coordinates with your doctors.</p>
           </div>
-
         </div>
 
-        <div class="animate delay-4" style="text-align:center; margin-top:52px;">
-          <a href="#schedule" class="btn btn--primary btn--lg">
+        <div class="text-center mt-14 animate delay-4">
+          <a href="#schedule" class="inline-flex items-center gap-2.5 bg-coral-500 hover:bg-coral-600 text-white font-bold px-8 py-3.5 rounded-full transition-all hover:-translate-y-0.5 shadow-md hover:shadow-lg">
             Schedule My FREE Assessment
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            <i class="fa-solid fa-arrow-right"></i>
           </a>
         </div>
       </div>
     </section>
 
     <!-- ============================================================
-         SERVICE AREAS
+         IN-HOME PHYSICAL THERAPY (Split section)
     ============================================================ -->
-    <section class="section areas" id="areas" aria-labelledby="areas-title">
-      <div class="container">
-        <div class="section__header animate">
-          <p class="section__label">Where We Work</p>
-          <h2 class="section__title" id="areas-title">We Come to Your Neighborhood</h2>
-          <p class="section__subtitle">Proudly serving Your City and all surrounding communities. Not sure if we cover your area? Call us — chances are we do.</p>
+    <section class="py-20 bg-white" aria-labelledby="inhome-title">
+      <div class="max-w-7xl mx-auto px-5">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div class="animate animate--left">
+            <div class="rounded-2xl overflow-hidden shadow-xl aspect-[4/3]">
+              <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80" alt="Physical therapist helping patient with exercises at home" class="w-full h-full object-cover" loading="lazy" />
+            </div>
+          </div>
+          <div class="animate animate--right">
+            <p class="text-sm font-bold uppercase tracking-widest text-teal-600 mb-3">Personalized Care</p>
+            <h2 class="font-display text-3xl md:text-4xl font-extrabold text-gray-900 mb-5" id="inhome-title">In-Home Physical Therapy That Works</h2>
+            <p class="text-gray-500 leading-relaxed mb-6">When therapy happens in your own space, you practice the exact movements you need for daily life. Our therapists assess your home environment, identify risks, and create treatment plans that translate directly to real-world independence.</p>
+            <ul class="space-y-4 mb-8">
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-circle-check text-teal-500 mt-1 flex-shrink-0"></i>
+                <span class="text-gray-600 text-sm leading-relaxed">Exercises tailored to your actual living space and daily routines</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-circle-check text-teal-500 mt-1 flex-shrink-0"></i>
+                <span class="text-gray-600 text-sm leading-relaxed">Home safety assessments to prevent falls and injuries</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-circle-check text-teal-500 mt-1 flex-shrink-0"></i>
+                <span class="text-gray-600 text-sm leading-relaxed">Family and caregiver education so support continues between visits</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-circle-check text-teal-500 mt-1 flex-shrink-0"></i>
+                <span class="text-gray-600 text-sm leading-relaxed">Progress tracking and regular communication with your doctors</span>
+              </li>
+            </ul>
+            <a href="#schedule" class="inline-flex items-center gap-2 bg-teal-600 hover:bg-teal-700 text-white font-bold px-6 py-3 rounded-full transition-all hover:-translate-y-0.5 shadow-md">
+              <i class="fa-solid fa-calendar-plus"></i>
+              Book Your Home Visit
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         OUR TEAM
+    ============================================================ -->
+    <section class="py-20 bg-gray-50" id="team" aria-labelledby="team-title">
+      <div class="max-w-7xl mx-auto px-5">
+        <div class="text-center max-w-2xl mx-auto mb-14 animate">
+          <p class="text-sm font-bold uppercase tracking-widest text-teal-600 mb-3">Expert Care</p>
+          <h2 class="font-display text-3xl md:text-4xl font-extrabold text-gray-900 mb-4" id="team-title">Our Team</h2>
+          <p class="text-gray-500 leading-relaxed">Every therapist on our team is licensed, experienced, and passionate about bringing quality care to your home.</p>
         </div>
 
-        <div class="areas__layout">
-
-          <div class="areas__map animate animate--left">
-            <div class="areas__map-icon" aria-hidden="true">
-              <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="#E74C3C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Dr. Sarah Mitchell - Female -->
+          <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 animate delay-1">
+            <div class="h-64 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=600&q=80" alt="Dr. Sarah Mitchell, DPT - Lead Physical Therapist" class="w-full h-full object-cover" loading="lazy" />
             </div>
-            <p class="areas__map-title">Your City &amp; Surrounding Areas</p>
-            <p class="areas__map-radius">We travel up to 30 miles from our central location to bring therapy directly to you.</p>
-            <a href="tel:+15559012345" class="btn btn--primary" aria-label="Call to confirm service in your area">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.38 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.79a16 16 0 0 0 6.29 6.29l.95-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.03z"/></svg>
+            <div class="p-6 text-center">
+              <h3 class="text-lg font-bold text-gray-900">Dr. Sarah Mitchell, DPT</h3>
+              <p class="text-teal-600 font-semibold text-sm mb-3">Lead Physical Therapist</p>
+              <p class="text-sm text-gray-500 leading-relaxed">Board-certified with 12+ years specializing in geriatric and post-surgical rehabilitation. Passionate about restoring independence at home.</p>
+            </div>
+          </div>
+
+          <!-- Dr. James Chen - Male -->
+          <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 animate delay-2">
+            <div class="h-64 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=600&q=80" alt="Dr. James Chen, DPT - Neurological Specialist" class="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <div class="p-6 text-center">
+              <h3 class="text-lg font-bold text-gray-900">Dr. James Chen, DPT</h3>
+              <p class="text-teal-600 font-semibold text-sm mb-3">Neurological Specialist</p>
+              <p class="text-sm text-gray-500 leading-relaxed">Expert in stroke recovery and neurological rehabilitation. 10 years of experience helping patients regain movement and confidence.</p>
+            </div>
+          </div>
+
+          <!-- Dr. Maria Gonzalez - Female -->
+          <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 animate delay-3">
+            <div class="h-64 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=600&q=80" alt="Dr. Maria Gonzalez, DPT - Orthopedic Specialist" class="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <div class="p-6 text-center">
+              <h3 class="text-lg font-bold text-gray-900">Dr. Maria Gonzalez, DPT</h3>
+              <p class="text-teal-600 font-semibold text-sm mb-3">Orthopedic Specialist</p>
+              <p class="text-sm text-gray-500 leading-relaxed">Specializes in orthopedic injuries and pain management. Certified in manual therapy with a focus on functional movement patterns.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         INSURANCE & BILLING
+    ============================================================ -->
+    <section class="py-20 bg-white" id="insurance" aria-labelledby="insurance-title">
+      <div class="max-w-7xl mx-auto px-5">
+        <div class="grid lg:grid-cols-5 gap-12 items-center">
+          <!-- Image - 2 columns -->
+          <div class="lg:col-span-2 animate animate--left">
+            <div class="rounded-2xl overflow-hidden shadow-lg">
+              <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80" alt="Healthcare billing paperwork and insurance documentation" class="w-full h-[380px] object-cover" loading="lazy" />
+            </div>
+          </div>
+
+          <!-- Content - 3 columns -->
+          <div class="lg:col-span-3 animate animate--right">
+            <p class="text-sm font-bold uppercase tracking-widest text-teal-600 mb-3">Billing Made Easy</p>
+            <h2 class="font-display text-3xl md:text-4xl font-extrabold text-gray-900 mb-4" id="insurance-title">We Handle All Your Insurance Paperwork</h2>
+            <p class="text-gray-500 leading-relaxed mb-8">Don't let billing confusion stop you from getting the care you need. Our team manages every step of the insurance process so you can focus on recovering.</p>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-8">
+              <div class="flex items-center gap-2.5 bg-teal-50 rounded-xl px-4 py-3">
+                <i class="fa-solid fa-check-circle text-teal-600 text-sm"></i>
+                <span class="text-sm font-semibold text-teal-800">Medicare</span>
+              </div>
+              <div class="flex items-center gap-2.5 bg-teal-50 rounded-xl px-4 py-3">
+                <i class="fa-solid fa-check-circle text-teal-600 text-sm"></i>
+                <span class="text-sm font-semibold text-teal-800">Medicaid</span>
+              </div>
+              <div class="flex items-center gap-2.5 bg-coral-500/10 rounded-xl px-4 py-3">
+                <i class="fa-solid fa-check-circle text-coral-500 text-sm"></i>
+                <span class="text-sm font-semibold text-coral-600">Most Private Plans</span>
+              </div>
+              <div class="flex items-center gap-2.5 bg-teal-50 rounded-xl px-4 py-3">
+                <i class="fa-solid fa-check-circle text-teal-600 text-sm"></i>
+                <span class="text-sm font-semibold text-teal-800">Workers' Comp</span>
+              </div>
+              <div class="flex items-center gap-2.5 bg-teal-50 rounded-xl px-4 py-3">
+                <i class="fa-solid fa-check-circle text-teal-600 text-sm"></i>
+                <span class="text-sm font-semibold text-teal-800">Self-Pay Options</span>
+              </div>
+            </div>
+
+            <div class="bg-teal-50 border-l-4 border-teal-500 rounded-r-xl p-5 mb-8">
+              <p class="text-sm text-teal-800 leading-relaxed"><strong>We verify your benefits before your first visit.</strong> Our billing team contacts your insurance provider, confirms coverage, and explains your out-of-pocket costs upfront -- no surprises.</p>
+            </div>
+
+            <a href="tel:+15559012345" class="inline-flex items-center gap-2.5 bg-coral-500 hover:bg-coral-600 text-white font-bold px-6 py-3 rounded-full transition-all hover:-translate-y-0.5 shadow-md">
+              <i class="fa-solid fa-phone"></i>
+              Check My Coverage: (555) 901-2345
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SUCCESS STORIES / TESTIMONIALS
+    ============================================================ -->
+    <section class="py-20 bg-gray-50" id="testimonials" aria-labelledby="testimonials-title">
+      <div class="max-w-7xl mx-auto px-5">
+        <div class="text-center max-w-2xl mx-auto mb-14 animate">
+          <p class="text-sm font-bold uppercase tracking-widest text-teal-600 mb-3">Success Stories</p>
+          <h2 class="font-display text-3xl md:text-4xl font-extrabold text-gray-900 mb-4" id="testimonials-title">What Our Patients Say</h2>
+          <p class="text-gray-500 leading-relaxed">Real results from real patients who recovered at home with Mobile PT Solutions.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-7" role="list">
+          <div class="bg-white rounded-2xl p-7 shadow-sm border border-gray-100 relative flex flex-col animate delay-1" role="listitem">
+            <div class="text-5xl text-teal-100 font-serif absolute top-4 left-6 leading-none select-none" aria-hidden="true">"</div>
+            <div class="flex gap-1 mb-4 relative z-10" aria-label="5 out of 5 stars">
+              <i class="fa-solid fa-star text-amber-400 text-sm"></i>
+              <i class="fa-solid fa-star text-amber-400 text-sm"></i>
+              <i class="fa-solid fa-star text-amber-400 text-sm"></i>
+              <i class="fa-solid fa-star text-amber-400 text-sm"></i>
+              <i class="fa-solid fa-star text-amber-400 text-sm"></i>
+            </div>
+            <p class="text-sm text-gray-600 leading-relaxed mb-6 flex-1 relative z-10">"After my hip replacement, I couldn't drive myself anywhere. Mobile PT Solutions came to my home three times a week. I was walking without a cane two months ahead of my doctor's prediction."</p>
+            <div class="flex items-center gap-3 pt-4 border-t border-gray-100">
+              <div class="w-11 h-11 rounded-full bg-teal-600 flex items-center justify-center text-white font-bold text-sm flex-shrink-0">MJ</div>
+              <div>
+                <p class="font-bold text-gray-900 text-sm">Margaret J., 74</p>
+                <p class="text-xs text-gray-400">Hip Replacement Recovery, Medicare</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-2xl p-7 shadow-sm border border-gray-100 relative flex flex-col animate delay-2" role="listitem">
+            <div class="text-5xl text-teal-100 font-serif absolute top-4 left-6 leading-none select-none" aria-hidden="true">"</div>
+            <div class="flex gap-1 mb-4 relative z-10" aria-label="5 out of 5 stars">
+              <i class="fa-solid fa-star text-amber-400 text-sm"></i>
+              <i class="fa-solid fa-star text-amber-400 text-sm"></i>
+              <i class="fa-solid fa-star text-amber-400 text-sm"></i>
+              <i class="fa-solid fa-star text-amber-400 text-sm"></i>
+              <i class="fa-solid fa-star text-amber-400 text-sm"></i>
+            </div>
+            <p class="text-sm text-gray-600 leading-relaxed mb-6 flex-1 relative z-10">"My father had a stroke and was discharged needing intensive rehab. The team came within 48 hours. Having therapy at home meant Dad was practicing in his actual bedroom and kitchen. His progress has been remarkable."</p>
+            <div class="flex items-center gap-3 pt-4 border-t border-gray-100">
+              <div class="w-11 h-11 rounded-full bg-teal-700 flex items-center justify-center text-white font-bold text-sm flex-shrink-0">DR</div>
+              <div>
+                <p class="font-bold text-gray-900 text-sm">David R., 51</p>
+                <p class="text-xs text-gray-400">Son of Stroke Recovery Patient, Medicaid</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-2xl p-7 shadow-sm border border-gray-100 relative flex flex-col animate delay-3" role="listitem">
+            <div class="text-5xl text-teal-100 font-serif absolute top-4 left-6 leading-none select-none" aria-hidden="true">"</div>
+            <div class="flex gap-1 mb-4 relative z-10" aria-label="5 out of 5 stars">
+              <i class="fa-solid fa-star text-amber-400 text-sm"></i>
+              <i class="fa-solid fa-star text-amber-400 text-sm"></i>
+              <i class="fa-solid fa-star text-amber-400 text-sm"></i>
+              <i class="fa-solid fa-star text-amber-400 text-sm"></i>
+              <i class="fa-solid fa-star text-amber-400 text-sm"></i>
+            </div>
+            <p class="text-sm text-gray-600 leading-relaxed mb-6 flex-1 relative z-10">"I was worried about falling -- I'd already had two falls in six months. My therapist not only worked on my balance but walked through my home and helped me identify trip hazards. I feel so much safer now."</p>
+            <div class="flex items-center gap-3 pt-4 border-t border-gray-100">
+              <div class="w-11 h-11 rounded-full bg-teal-800 flex items-center justify-center text-white font-bold text-sm flex-shrink-0">EW</div>
+              <div>
+                <p class="font-bold text-gray-900 text-sm">Eleanor W., 81</p>
+                <p class="text-xs text-gray-400">Balance &amp; Fall Prevention, Medicare</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         WHERE WE WORK / LOCATION & CONTACT
+    ============================================================ -->
+    <section class="py-20 bg-teal-900" id="areas" aria-labelledby="areas-title">
+      <div class="max-w-7xl mx-auto px-5">
+        <div class="text-center max-w-2xl mx-auto mb-14 animate">
+          <p class="text-sm font-bold uppercase tracking-widest text-teal-300 mb-3">Where We Work</p>
+          <h2 class="font-display text-3xl md:text-4xl font-extrabold text-white mb-4" id="areas-title">We Come to Your Neighborhood</h2>
+          <p class="text-teal-200/70 leading-relaxed">Proudly serving Your City and all surrounding communities. Not sure if we cover your area? Call us -- chances are we do.</p>
+        </div>
+
+        <div class="grid lg:grid-cols-3 gap-6">
+          <!-- Map / Radius Card -->
+          <div class="lg:col-span-1 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 flex flex-col items-center justify-center text-center animate delay-1">
+            <div class="w-20 h-20 bg-teal-600/30 rounded-full flex items-center justify-center mb-5">
+              <i class="fa-solid fa-map-location-dot text-teal-300 text-3xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Your City &amp; Surrounding Areas</h3>
+            <p class="text-sm text-teal-200/60 mb-6">We travel up to 30 miles from our central location to bring therapy directly to you.</p>
+            <a href="tel:+15559012345" class="inline-flex items-center gap-2 bg-coral-500 hover:bg-coral-600 text-white font-bold text-sm px-6 py-2.5 rounded-full transition-all" aria-label="Call to confirm service in your area">
+              <i class="fa-solid fa-phone text-xs"></i>
               Confirm My Area
             </a>
           </div>
 
-          <div class="areas__list animate animate--right">
-            <p class="areas__list-title">Areas We Serve</p>
-            <div class="area-tag">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E74C3C" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
-              Downtown / City Center
+          <!-- Service Areas Grid -->
+          <div class="lg:col-span-2 grid sm:grid-cols-2 gap-3 animate delay-2">
+            <div class="flex items-center gap-3 bg-white/5 border border-white/10 rounded-xl px-5 py-4 hover:bg-white/10 transition-colors">
+              <i class="fa-solid fa-location-dot text-teal-400 text-sm"></i>
+              <span class="text-white/90 text-sm font-medium">Downtown / City Center</span>
             </div>
-            <div class="area-tag">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E74C3C" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
-              North Side &amp; North Hills
+            <div class="flex items-center gap-3 bg-white/5 border border-white/10 rounded-xl px-5 py-4 hover:bg-white/10 transition-colors">
+              <i class="fa-solid fa-location-dot text-teal-400 text-sm"></i>
+              <span class="text-white/90 text-sm font-medium">North Side &amp; North Hills</span>
             </div>
-            <div class="area-tag">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E74C3C" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
-              East District &amp; Eastside
+            <div class="flex items-center gap-3 bg-white/5 border border-white/10 rounded-xl px-5 py-4 hover:bg-white/10 transition-colors">
+              <i class="fa-solid fa-location-dot text-teal-400 text-sm"></i>
+              <span class="text-white/90 text-sm font-medium">East District &amp; Eastside</span>
             </div>
-            <div class="area-tag">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E74C3C" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
-              West End &amp; Westview
+            <div class="flex items-center gap-3 bg-white/5 border border-white/10 rounded-xl px-5 py-4 hover:bg-white/10 transition-colors">
+              <i class="fa-solid fa-location-dot text-teal-400 text-sm"></i>
+              <span class="text-white/90 text-sm font-medium">West End &amp; Westview</span>
             </div>
-            <div class="area-tag">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E74C3C" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
-              South Park &amp; Southbrook
+            <div class="flex items-center gap-3 bg-white/5 border border-white/10 rounded-xl px-5 py-4 hover:bg-white/10 transition-colors">
+              <i class="fa-solid fa-location-dot text-teal-400 text-sm"></i>
+              <span class="text-white/90 text-sm font-medium">South Park &amp; Southbrook</span>
             </div>
-            <div class="area-tag">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E74C3C" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
-              Riverside &amp; Waterfront
+            <div class="flex items-center gap-3 bg-white/5 border border-white/10 rounded-xl px-5 py-4 hover:bg-white/10 transition-colors">
+              <i class="fa-solid fa-location-dot text-teal-400 text-sm"></i>
+              <span class="text-white/90 text-sm font-medium">Riverside &amp; Waterfront</span>
             </div>
-            <div class="area-tag">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E74C3C" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
-              Oakwood &amp; Maplewood
+            <div class="flex items-center gap-3 bg-white/5 border border-white/10 rounded-xl px-5 py-4 hover:bg-white/10 transition-colors">
+              <i class="fa-solid fa-location-dot text-teal-400 text-sm"></i>
+              <span class="text-white/90 text-sm font-medium">Oakwood &amp; Maplewood</span>
             </div>
-            <div class="area-tag">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E74C3C" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
-              Assisted Living &amp; Memory Care Facilities
+            <div class="flex items-center gap-3 bg-white/5 border border-white/10 rounded-xl px-5 py-4 hover:bg-white/10 transition-colors">
+              <i class="fa-solid fa-location-dot text-teal-400 text-sm"></i>
+              <span class="text-white/90 text-sm font-medium">Assisted Living Facilities</span>
             </div>
           </div>
+        </div>
 
+        <!-- Contact strip -->
+        <div class="mt-10 bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-6 animate delay-3">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 bg-teal-600/30 rounded-full flex items-center justify-center flex-shrink-0">
+              <i class="fa-solid fa-phone text-teal-300"></i>
+            </div>
+            <div>
+              <p class="text-white font-bold text-lg">(555) 901-2345</p>
+              <p class="text-teal-200/60 text-sm">Available 7 Days a Week, 7am - 8pm</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 bg-teal-600/30 rounded-full flex items-center justify-center flex-shrink-0">
+              <i class="fa-solid fa-envelope text-teal-300"></i>
+            </div>
+            <div>
+              <p class="text-white font-bold">info@mobileptsolutions.com</p>
+              <p class="text-teal-200/60 text-sm">We respond within 1 business hour</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- ============================================================
-         INSURANCE
+         GET STARTED TODAY / SCHEDULE
     ============================================================ -->
-    <section class="section insurance" id="insurance" aria-labelledby="insurance-title">
-      <div class="container">
-        <div class="insurance__layout">
+    <section class="py-20 bg-white" id="schedule" aria-labelledby="schedule-title">
+      <div class="max-w-7xl mx-auto px-5">
+        <div class="text-center max-w-2xl mx-auto mb-14 animate">
+          <p class="text-sm font-bold uppercase tracking-widest text-teal-600 mb-3">Get Started Today</p>
+          <h2 class="font-display text-3xl md:text-4xl font-extrabold text-gray-900 mb-4" id="schedule-title">Schedule Your FREE In-Home Assessment</h2>
+          <p class="text-gray-500 leading-relaxed">Contact us today and we'll have a therapist at your door -- often within 24 to 48 hours.</p>
+        </div>
 
-          <div class="insurance__img animate animate--left">
-            <img
-              src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=800&q=80"
-              alt="A caring physical therapist working with a senior patient at home"
-              width="800"
-              height="400"
-              loading="lazy"
-            />
-          </div>
-
-          <div class="animate animate--right">
-            <p class="section__label">Billing Made Easy</p>
-            <h2 class="section__title" id="insurance-title">We Handle All Your Insurance Paperwork</h2>
-            <p class="section__subtitle" style="margin-bottom:28px;">Don't let billing confusion stop you from getting the care you need. Our team manages every step of the insurance process so you can focus on recovering.</p>
-
-            <div class="insurance__badges">
-              <div class="insurance__badge">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Medicare
-              </div>
-              <div class="insurance__badge">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Medicaid
-              </div>
-              <div class="insurance__badge insurance__badge--red">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Most Private Plans
-              </div>
-              <div class="insurance__badge">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Workers' Comp
-              </div>
-              <div class="insurance__badge">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Self-Pay Options
-              </div>
-            </div>
-
-            <div class="insurance__note">
-              <strong>We verify your benefits before your first visit.</strong> Our billing team contacts your insurance provider, confirms coverage, and explains your out-of-pocket costs upfront — no surprises. If you're unsure about your coverage, call us and we'll check for you.
-            </div>
-
-            <div style="margin-top:28px;">
-              <a href="tel:+15559012345" class="btn btn--primary">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.38 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.79a16 16 0 0 0 6.29 6.29l.95-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.03z"/></svg>
-                Check My Coverage: (555) 901-2345
+        <div class="max-w-5xl mx-auto grid lg:grid-cols-5 gap-10">
+          <!-- Left: Phone CTA -->
+          <div class="lg:col-span-2 animate animate--left">
+            <div class="bg-teal-800 rounded-2xl p-8 text-center">
+              <i class="fa-solid fa-phone-volume text-teal-300/50 text-4xl mb-5"></i>
+              <p class="text-xs font-bold text-teal-300/80 uppercase tracking-widest mb-2">Call Us Directly</p>
+              <a href="tel:+15559012345" class="block text-3xl md:text-4xl font-extrabold text-coral-400 hover:text-white transition-colors mb-2" aria-label="Call Mobile PT Solutions at 555-901-2345">
+                (555) 901-2345
               </a>
+              <p class="text-teal-200/60 text-sm mb-8">Available 7 Days a Week, 7am - 8pm</p>
+
+              <div class="space-y-3 text-left mb-6">
+                <div class="flex items-center gap-2.5">
+                  <i class="fa-solid fa-check text-teal-400 text-xs"></i>
+                  <span class="text-white/80 text-sm">FREE In-Home Assessment</span>
+                </div>
+                <div class="flex items-center gap-2.5">
+                  <i class="fa-solid fa-check text-teal-400 text-xs"></i>
+                  <span class="text-white/80 text-sm">Benefits Verified Before First Visit</span>
+                </div>
+                <div class="flex items-center gap-2.5">
+                  <i class="fa-solid fa-check text-teal-400 text-xs"></i>
+                  <span class="text-white/80 text-sm">Often Available Within 24-48 Hours</span>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-3 text-teal-200/40 text-xs my-6">
+                <div class="flex-1 h-px bg-white/10"></div>
+                <span>or fill out the form</span>
+                <div class="flex-1 h-px bg-white/10"></div>
+              </div>
+
+              <p class="text-teal-200/50 text-xs">We'll call you back within one business hour.</p>
             </div>
           </div>
 
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         TESTIMONIALS
-    ============================================================ -->
-    <section class="section testimonials" id="testimonials" aria-labelledby="testimonials-title">
-      <div class="container">
-        <div class="section__header section__header--center animate">
-          <p class="section__label">Patient Stories</p>
-          <h2 class="section__title" id="testimonials-title">What Our Patients Say</h2>
-          <p class="section__subtitle">Real results from real patients who recovered at home with Mobile PT Solutions.</p>
-        </div>
-
-        <div class="testimonials__grid" role="list">
-
-          <div class="testimonial-card animate delay-1" role="listitem">
-            <div class="testimonial-card__stars" aria-label="5 out of 5 stars">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="#E74C3C" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="#E74C3C" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="#E74C3C" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="#E74C3C" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="#E74C3C" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            </div>
-            <p class="testimonial-card__text">"After my hip replacement, I couldn't drive myself anywhere. Mobile PT Solutions came to my home three times a week. My therapist was incredibly patient and knowledgeable. I was walking without a cane two months ahead of my doctor's prediction. I can't recommend them enough."</p>
-            <div class="testimonial-card__author">
-              <div class="testimonial-card__avatar" aria-hidden="true">MJ</div>
-              <div>
-                <p class="testimonial-card__name">Margaret J., 74</p>
-                <p class="testimonial-card__detail">Hip Replacement Recovery, Medicare Patient</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-card animate delay-2" role="listitem">
-            <div class="testimonial-card__stars" aria-label="5 out of 5 stars">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="#E74C3C" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="#E74C3C" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="#E74C3C" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="#E74C3C" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="#E74C3C" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            </div>
-            <p class="testimonial-card__text">"My father had a stroke and was discharged from the hospital needing intensive rehab. The team from Mobile PT came within 48 hours of discharge. Having therapy at home meant Dad was practicing in his actual bedroom and kitchen — exactly where he needs to be independent. His progress has been remarkable."</p>
-            <div class="testimonial-card__author">
-              <div class="testimonial-card__avatar" aria-hidden="true">DR</div>
-              <div>
-                <p class="testimonial-card__name">David R., 51</p>
-                <p class="testimonial-card__detail">Son of Stroke Recovery Patient, Medicaid</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-card animate delay-3" role="listitem">
-            <div class="testimonial-card__stars" aria-label="5 out of 5 stars">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="#E74C3C" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="#E74C3C" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="#E74C3C" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="#E74C3C" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="#E74C3C" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            </div>
-            <p class="testimonial-card__text">"I was worried about falling — I'd already had two falls in six months. My therapist not only worked on my balance and strength but actually walked through my home and helped me identify trip hazards I never noticed. I feel so much safer now. The billing team handled all my Medicare paperwork without me lifting a finger."</p>
-            <div class="testimonial-card__author">
-              <div class="testimonial-card__avatar" aria-hidden="true">EW</div>
-              <div>
-                <p class="testimonial-card__name">Eleanor W., 81</p>
-                <p class="testimonial-card__detail">Balance &amp; Fall Prevention, Medicare Patient</p>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         SCHEDULE
-    ============================================================ -->
-    <section class="section schedule" id="schedule" aria-labelledby="schedule-title">
-      <div class="container">
-        <div class="section__header section__header--center animate">
-          <p class="section__label">Get Started Today</p>
-          <h2 class="section__title" id="schedule-title">Schedule Your FREE In-Home Assessment</h2>
-          <p class="section__subtitle">Contact us today and we'll have a therapist at your door — often within 24 to 48 hours.</p>
-        </div>
-
-        <div class="schedule__layout">
-
-          <!-- Call CTA box -->
-          <div class="schedule__cta-box animate animate--left">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin:0 auto 16px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.38 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.79a16 16 0 0 0 6.29 6.29l.95-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.03z"/></svg>
-            <p style="color:rgba(255,255,255,0.75); font-size:0.9rem; font-weight:500; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:4px;">Call Us Directly</p>
-            <a href="tel:+15559012345" class="schedule__phone" aria-label="Call Mobile PT Solutions at 555-901-2345">
-              (555) 901-2345
-            </a>
-            <p class="schedule__hours">Available 7 Days a Week, 7am – 8pm</p>
-
-            <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:20px;">
-              <div class="hero__trust-item" style="justify-content:center;">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E74C3C" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                <span style="color:rgba(255,255,255,0.80);">FREE In-Home Assessment</span>
-              </div>
-              <div class="hero__trust-item" style="justify-content:center;">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E74C3C" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                <span style="color:rgba(255,255,255,0.80);">Benefits Verified Before First Visit</span>
-              </div>
-              <div class="hero__trust-item" style="justify-content:center;">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E74C3C" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                <span style="color:rgba(255,255,255,0.80);">Often Available Within 24–48 Hours</span>
-              </div>
-            </div>
-
-            <div class="schedule__divider">or</div>
-
-            <p style="color:rgba(255,255,255,0.55); font-size:0.88rem;">Fill out the form and we'll call you back within one business hour.</p>
-          </div>
-
-          <!-- Contact form -->
-          <div class="animate animate--right">
-            <div id="form-success" class="form__success" role="alert" aria-live="polite">
+          <!-- Right: Form -->
+          <div class="lg:col-span-3 animate animate--right">
+            <div id="form-success" class="hidden bg-green-50 border border-green-200 text-green-800 rounded-xl p-5 font-semibold mb-4" role="alert" aria-live="polite">
+              <i class="fa-solid fa-circle-check mr-2"></i>
               Thank you! We received your request and will call you within one business hour to confirm your appointment.
             </div>
-            <form class="form" id="contact-form" novalidate aria-label="Schedule a home visit request form">
-              <div class="form__row">
-                <div class="form__group">
-                  <label class="form__label" for="first-name">First Name <span aria-hidden="true">*</span></label>
-                  <input type="text" id="first-name" name="first-name" class="form__input" placeholder="Margaret" required autocomplete="given-name" />
+            <form class="space-y-5" id="contact-form" novalidate aria-label="Schedule a home visit request form">
+              <div class="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-sm font-semibold text-gray-700 mb-1.5" for="first-name">First Name <span class="text-coral-500">*</span></label>
+                  <input type="text" id="first-name" name="first-name" class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl text-sm focus:border-teal-500 focus:outline-none transition-colors" placeholder="Margaret" required autocomplete="given-name" />
                 </div>
-                <div class="form__group">
-                  <label class="form__label" for="last-name">Last Name <span aria-hidden="true">*</span></label>
-                  <input type="text" id="last-name" name="last-name" class="form__input" placeholder="Johnson" required autocomplete="family-name" />
+                <div>
+                  <label class="block text-sm font-semibold text-gray-700 mb-1.5" for="last-name">Last Name <span class="text-coral-500">*</span></label>
+                  <input type="text" id="last-name" name="last-name" class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl text-sm focus:border-teal-500 focus:outline-none transition-colors" placeholder="Johnson" required autocomplete="family-name" />
                 </div>
               </div>
 
-              <div class="form__group">
-                <label class="form__label" for="phone">Phone Number <span aria-hidden="true">*</span></label>
-                <input type="tel" id="phone" name="phone" class="form__input" placeholder="(555) 000-0000" required autocomplete="tel" />
+              <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-1.5" for="phone">Phone Number <span class="text-coral-500">*</span></label>
+                <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl text-sm focus:border-teal-500 focus:outline-none transition-colors" placeholder="(555) 000-0000" required autocomplete="tel" />
               </div>
 
-              <div class="form__group">
-                <label class="form__label" for="email">Email Address</label>
-                <input type="email" id="email" name="email" class="form__input" placeholder="your@email.com" autocomplete="email" />
+              <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-1.5" for="email">Email Address</label>
+                <input type="email" id="email" name="email" class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl text-sm focus:border-teal-500 focus:outline-none transition-colors" placeholder="your@email.com" autocomplete="email" />
               </div>
 
-              <div class="form__group">
-                <label class="form__label" for="zip">Zip Code <span aria-hidden="true">*</span></label>
-                <input type="text" id="zip" name="zip" class="form__input" placeholder="00000" required autocomplete="postal-code" inputmode="numeric" maxlength="10" />
+              <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-1.5" for="zip">Zip Code <span class="text-coral-500">*</span></label>
+                <input type="text" id="zip" name="zip" class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl text-sm focus:border-teal-500 focus:outline-none transition-colors" placeholder="00000" required autocomplete="postal-code" inputmode="numeric" maxlength="10" />
               </div>
 
-              <div class="form__group">
-                <label class="form__label" for="service">What type of care are you looking for?</label>
-                <select id="service" name="service" class="form__select">
+              <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-1.5" for="service">What type of care are you looking for?</label>
+                <select id="service" name="service" class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl text-sm focus:border-teal-500 focus:outline-none transition-colors bg-white">
                   <option value="">-- Select a service --</option>
                   <option value="post-surgery">Post-Surgery Rehabilitation</option>
                   <option value="balance">Balance &amp; Fall Prevention</option>
@@ -2091,9 +903,9 @@
                 </select>
               </div>
 
-              <div class="form__group">
-                <label class="form__label" for="insurance">Insurance</label>
-                <select id="insurance-select" name="insurance" class="form__select">
+              <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-1.5" for="insurance-select">Insurance</label>
+                <select id="insurance-select" name="insurance" class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl text-sm focus:border-teal-500 focus:outline-none transition-colors bg-white">
                   <option value="">-- Select your insurance --</option>
                   <option value="medicare">Medicare</option>
                   <option value="medicaid">Medicaid</option>
@@ -2104,20 +916,19 @@
                 </select>
               </div>
 
-              <div class="form__group">
-                <label class="form__label" for="message">Tell us more (optional)</label>
-                <textarea id="message" name="message" class="form__textarea" placeholder="Briefly describe the condition or situation. The more detail you share, the better we can prepare for your visit."></textarea>
+              <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-1.5" for="message">Tell us more (optional)</label>
+                <textarea id="message" name="message" class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl text-sm focus:border-teal-500 focus:outline-none transition-colors resize-y min-h-[100px]" rows="3" placeholder="Briefly describe the condition or situation."></textarea>
               </div>
 
-              <button type="submit" class="btn btn--primary btn--lg btn--block">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              <button type="submit" class="w-full flex items-center justify-center gap-2.5 bg-coral-500 hover:bg-coral-600 text-white font-bold py-3.5 rounded-full transition-all hover:-translate-y-0.5 shadow-md hover:shadow-lg">
+                <i class="fa-solid fa-calendar-check"></i>
                 Request My FREE In-Home Assessment
               </button>
 
-              <p class="form__note">By submitting this form you agree to be contacted by our team. We respect your privacy and never sell your information.</p>
+              <p class="text-xs text-gray-400 text-center">By submitting this form you agree to be contacted by our team. We respect your privacy and never sell your information.</p>
             </form>
           </div>
-
         </div>
       </div>
     </section>
@@ -2127,88 +938,98 @@
   <!-- ============================================================
        FOOTER
   ============================================================ -->
-  <footer class="footer" role="contentinfo">
-    <div class="container">
-      <div class="footer__grid">
-
+  <footer class="bg-gray-900 text-gray-400 pt-16 pb-8" role="contentinfo">
+    <div class="max-w-7xl mx-auto px-5">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
         <!-- Brand -->
-        <div class="footer__brand">
-          <div class="footer__logo">
-            <div class="footer__logo-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 bg-teal-600 rounded-xl flex items-center justify-center flex-shrink-0">
+              <i class="fa-solid fa-house-medical-circle-check text-white"></i>
             </div>
-            <span class="footer__logo-name">Mobile PT Solutions</span>
+            <span class="text-white font-extrabold text-base">Mobile PT Solutions</span>
           </div>
-          <p class="footer__desc">Licensed physical therapists bringing expert, personalized care directly to your home. Because recovery should never be limited by transportation.</p>
-          <div style="display:flex; flex-direction:column; gap:8px;">
-            <span class="badge badge--white" style="width:fit-content;">Medicare &amp; Medicaid Accepted</span>
-            <span class="badge badge--white" style="width:fit-content;">Available 7 Days a Week</span>
+          <p class="text-sm leading-relaxed mb-5">Licensed physical therapists bringing expert, personalized care directly to your home. Because recovery should never be limited by transportation.</p>
+          <div class="flex flex-col gap-2">
+            <span class="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-lg px-3 py-1.5 text-xs font-semibold text-teal-300 w-fit">
+              <i class="fa-solid fa-shield-halved text-[10px]"></i>
+              Medicare &amp; Medicaid Accepted
+            </span>
+            <span class="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-lg px-3 py-1.5 text-xs font-semibold text-teal-300 w-fit">
+              <i class="fa-solid fa-calendar-days text-[10px]"></i>
+              Available 7 Days a Week
+            </span>
           </div>
         </div>
 
         <!-- Services -->
         <div>
-          <p class="footer__col-title">Services</p>
-          <ul class="footer__links">
-            <li><a href="#services" class="footer__link">Post-Surgery Rehab</a></li>
-            <li><a href="#services" class="footer__link">Balance &amp; Fall Prevention</a></li>
-            <li><a href="#services" class="footer__link">Stroke Recovery</a></li>
-            <li><a href="#services" class="footer__link">Orthopedic PT</a></li>
-            <li><a href="#services" class="footer__link">Pain Management</a></li>
-            <li><a href="#services" class="footer__link">Elder Care PT</a></li>
+          <p class="text-xs font-bold uppercase tracking-widest text-white mb-5">Services</p>
+          <ul class="space-y-2.5">
+            <li><a href="#services" class="text-sm hover:text-teal-400 transition-colors">Post-Surgery Rehab</a></li>
+            <li><a href="#services" class="text-sm hover:text-teal-400 transition-colors">Balance &amp; Fall Prevention</a></li>
+            <li><a href="#services" class="text-sm hover:text-teal-400 transition-colors">Stroke Recovery</a></li>
+            <li><a href="#services" class="text-sm hover:text-teal-400 transition-colors">Orthopedic PT</a></li>
+            <li><a href="#services" class="text-sm hover:text-teal-400 transition-colors">Pain Management</a></li>
+            <li><a href="#services" class="text-sm hover:text-teal-400 transition-colors">Elder Care PT</a></li>
           </ul>
         </div>
 
         <!-- Company -->
         <div>
-          <p class="footer__col-title">Company</p>
-          <ul class="footer__links">
-            <li><a href="#benefits" class="footer__link">Why In-Home PT</a></li>
-            <li><a href="#serve" class="footer__link">Who We Serve</a></li>
-            <li><a href="#how-it-works" class="footer__link">How It Works</a></li>
-            <li><a href="#areas" class="footer__link">Service Areas</a></li>
-            <li><a href="#insurance" class="footer__link">Insurance &amp; Billing</a></li>
-            <li><a href="#schedule" class="footer__link">Schedule a Visit</a></li>
+          <p class="text-xs font-bold uppercase tracking-widest text-white mb-5">Company</p>
+          <ul class="space-y-2.5">
+            <li><a href="#benefits" class="text-sm hover:text-teal-400 transition-colors">Why In-Home PT</a></li>
+            <li><a href="#serve" class="text-sm hover:text-teal-400 transition-colors">Who We Serve</a></li>
+            <li><a href="#process" class="text-sm hover:text-teal-400 transition-colors">How It Works</a></li>
+            <li><a href="#team" class="text-sm hover:text-teal-400 transition-colors">Our Team</a></li>
+            <li><a href="#areas" class="text-sm hover:text-teal-400 transition-colors">Service Areas</a></li>
+            <li><a href="#insurance" class="text-sm hover:text-teal-400 transition-colors">Insurance &amp; Billing</a></li>
           </ul>
         </div>
 
         <!-- Contact -->
         <div>
-          <p class="footer__col-title">Contact Us</p>
-          <div class="footer__contact-item">
-            <svg class="footer__contact-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E74C3C" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.38 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.79a16 16 0 0 0 6.29 6.29l.95-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.03z"/></svg>
-            <div>
-              <a href="tel:+15559012345" style="color:rgba(255,255,255,0.85); font-weight:600; font-size:1.05rem;">(555) 901-2345</a>
-              <p style="font-size:0.8rem; color:rgba(255,255,255,0.45);">Call or text, 7am – 8pm daily</p>
+          <p class="text-xs font-bold uppercase tracking-widest text-white mb-5">Contact Us</p>
+          <div class="space-y-4">
+            <div class="flex items-start gap-3">
+              <i class="fa-solid fa-phone text-teal-500 mt-0.5 text-sm"></i>
+              <div>
+                <a href="tel:+15559012345" class="text-white font-semibold text-base hover:text-teal-400 transition-colors">(555) 901-2345</a>
+                <p class="text-xs text-gray-500">Call or text, 7am - 8pm daily</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <i class="fa-solid fa-envelope text-teal-500 mt-0.5 text-sm"></i>
+              <a href="mailto:info@mobileptsolutions.com" class="text-sm hover:text-teal-400 transition-colors">info@mobileptsolutions.com</a>
+            </div>
+            <div class="flex items-start gap-3">
+              <i class="fa-solid fa-location-dot text-teal-500 mt-0.5 text-sm"></i>
+              <span class="text-sm">Serving Your City &amp; Surrounding Areas</span>
             </div>
           </div>
-          <div class="footer__contact-item">
-            <svg class="footer__contact-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E74C3C" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            <a href="mailto:info@mobileptsolutions.com" style="color:rgba(255,255,255,0.65);">info@mobileptsolutions.com</a>
+          <div class="mt-5">
+            <a href="#schedule" class="inline-flex items-center gap-2 bg-coral-500 hover:bg-coral-600 text-white font-bold text-sm px-5 py-2.5 rounded-full transition-all">
+              <i class="fa-solid fa-calendar-check text-xs"></i>
+              Schedule Home Visit
+            </a>
           </div>
-          <div class="footer__contact-item">
-            <svg class="footer__contact-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E74C3C" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>Serving Your City &amp; Surrounding Areas</span>
-          </div>
-          <div style="margin-top:20px;">
-            <a href="#schedule" class="btn btn--primary">Schedule Home Visit</a>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="footer__bottom">
-        <span>© 2026 Mobile PT Solutions. All rights reserved.</span>
-        <div style="display:flex; gap:20px; flex-wrap:wrap;">
-          <a href="#" class="footer__link" style="color:rgba(255,255,255,0.45);">Privacy Policy</a>
-          <a href="#" class="footer__link" style="color:rgba(255,255,255,0.45);">Terms of Service</a>
-          <a href="#" class="footer__link" style="color:rgba(255,255,255,0.45);">Accessibility</a>
-          <a href="#" class="footer__link" style="color:rgba(255,255,255,0.45);">HIPAA Notice</a>
         </div>
       </div>
 
-      <p class="footer__disclaimer">
-        Mobile PT Solutions is a licensed physical therapy practice. Services are provided by licensed physical therapists. This website is for informational purposes only and does not constitute medical advice. Medicare, Medicaid, and insurance coverage vary by plan and individual circumstances — coverage verification is conducted prior to your first visit. Phone number (555) 901-2345 is listed for inquiries and appointment scheduling.
+      <!-- Bottom bar -->
+      <div class="border-t border-white/10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-gray-500">
+        <span>&copy; 2026 Mobile PT Solutions. All rights reserved.</span>
+        <div class="flex flex-wrap justify-center gap-5">
+          <a href="#" class="hover:text-teal-400 transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-teal-400 transition-colors">Terms of Service</a>
+          <a href="#" class="hover:text-teal-400 transition-colors">Accessibility</a>
+          <a href="#" class="hover:text-teal-400 transition-colors">HIPAA Notice</a>
+        </div>
+      </div>
+
+      <p class="text-[11px] text-gray-600 mt-6 pt-5 border-t border-white/5 leading-relaxed">
+        Mobile PT Solutions is a licensed physical therapy practice. Services are provided by licensed physical therapists. This website is for informational purposes only and does not constitute medical advice. Medicare, Medicaid, and insurance coverage vary by plan and individual circumstances -- coverage verification is conducted prior to your first visit. Phone number (555) 901-2345 is listed for inquiries and appointment scheduling.
       </p>
     </div>
   </footer>
@@ -2219,32 +1040,33 @@
   <script>
     'use strict';
 
-    // ——— Mobile Navigation Toggle ———
+    // Mobile Navigation Toggle
     (function () {
-      const toggle = document.querySelector('.nav__toggle');
-      const menu   = document.getElementById('mobile-menu');
+      var toggle = document.getElementById('nav-toggle');
+      var menu = document.getElementById('mobile-menu');
       if (!toggle || !menu) return;
 
       toggle.addEventListener('click', function () {
-        const isOpen = menu.classList.toggle('open');
-        toggle.setAttribute('aria-expanded', isOpen);
-        menu.setAttribute('aria-hidden', !isOpen);
+        var isOpen = menu.classList.toggle('hidden');
+        // classList.toggle returns true if class was added (now hidden), so we invert
+        var isVisible = !menu.classList.contains('hidden');
+        toggle.setAttribute('aria-expanded', isVisible);
+        menu.setAttribute('aria-hidden', !isVisible);
       });
 
       // Close on mobile link click
-      menu.querySelectorAll('.nav__mobile-link, .btn').forEach(function (link) {
+      menu.querySelectorAll('.nav-mobile-link').forEach(function (link) {
         link.addEventListener('click', function () {
-          menu.classList.remove('open');
+          menu.classList.add('hidden');
           toggle.setAttribute('aria-expanded', 'false');
           menu.setAttribute('aria-hidden', 'true');
         });
       });
     })();
 
-    // ——— Scroll Animations (IntersectionObserver) ———
+    // Scroll Animations
     (function () {
       if (!window.IntersectionObserver) {
-        // Fallback: show all elements
         document.querySelectorAll('.animate').forEach(function (el) {
           el.classList.add('visible');
         });
@@ -2259,7 +1081,7 @@
           }
         });
       }, {
-        threshold: 0.12,
+        threshold: 0.1,
         rootMargin: '0px 0px -40px 0px'
       });
 
@@ -2268,9 +1090,9 @@
       });
     })();
 
-    // ——— Contact Form Handling ———
+    // Contact Form Handling
     (function () {
-      var form    = document.getElementById('contact-form');
+      var form = document.getElementById('contact-form');
       var success = document.getElementById('form-success');
       if (!form) return;
 
@@ -2278,30 +1100,28 @@
         e.preventDefault();
 
         var valid = true;
-
-        // Simple client-side validation
         var required = form.querySelectorAll('[required]');
         required.forEach(function (field) {
           field.style.borderColor = '';
           if (!field.value.trim()) {
-            field.style.borderColor = '#C0392B';
+            field.style.borderColor = '#E04D3D';
             valid = false;
           }
         });
 
         if (!valid) {
-          var firstInvalid = form.querySelector('[required][style*="border-color: rgb(192, 57, 43)"]');
+          var firstInvalid = form.querySelector('[required][style*="border-color"]');
           if (firstInvalid) firstInvalid.focus();
           return;
         }
 
-        // Simulate submission
         var btn = form.querySelector('button[type="submit"]');
         btn.disabled = true;
         btn.textContent = 'Sending...';
 
         setTimeout(function () {
           form.style.display = 'none';
+          success.classList.remove('hidden');
           success.style.display = 'block';
           success.focus();
         }, 900);
@@ -2311,22 +1131,22 @@
       form.querySelectorAll('[required]').forEach(function (field) {
         field.addEventListener('blur', function () {
           if (field.value.trim()) {
-            field.style.borderColor = '#27AE60';
+            field.style.borderColor = '#0D9488';
           } else {
-            field.style.borderColor = '#C0392B';
+            field.style.borderColor = '#E04D3D';
           }
         });
         field.addEventListener('input', function () {
           if (field.value.trim()) {
-            field.style.borderColor = '#27AE60';
+            field.style.borderColor = '#0D9488';
           }
         });
       });
     })();
 
-    // ——— Smooth scroll for anchor links (older browser fallback) ———
+    // Smooth scroll fallback for older browsers
     (function () {
-      if ('scrollBehavior' in document.documentElement.style) return; // native smooth scroll
+      if ('scrollBehavior' in document.documentElement.style) return;
       document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
         anchor.addEventListener('click', function (e) {
           var target = document.querySelector(this.getAttribute('href'));
