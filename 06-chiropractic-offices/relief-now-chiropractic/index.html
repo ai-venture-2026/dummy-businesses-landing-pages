@@ -19,7 +19,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
   <!-- JSON-LD Schema -->
   <script type="application/ld+json">
@@ -80,27 +80,32 @@
        CSS CUSTOM PROPERTIES
     ========================================= */
     :root {
-      --color-primary: #004D4D;
-      --color-primary-dark: #003838;
-      --color-primary-light: #006666;
-      --color-secondary: #C0C0C0;
-      --color-accent: #F8F8F8;
-      --color-emergency: #DC143C;
-      --color-emergency-dark: #A50E2D;
+      --color-primary: #0D9488;
+      --color-primary-dark: #0F766E;
+      --color-primary-light: #5EEAD4;
+      --color-secondary: #F0FDFA;
+      --color-accent: #F8FAFB;
+      --color-coral: #F97066;
+      --color-coral-dark: #E04D42;
+      --color-warm-white: #FAFAF9;
       --color-white: #FFFFFF;
-      --color-text: #1A1A1A;
-      --color-text-light: #555555;
-      --color-border: #E0E0E0;
-      --font-family: 'Roboto', sans-serif;
-      --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
-      --shadow-md: 0 4px 20px rgba(0,0,0,0.12);
-      --shadow-lg: 0 8px 40px rgba(0,0,0,0.16);
-      --radius-sm: 6px;
-      --radius-md: 12px;
-      --radius-lg: 20px;
-      --transition: 0.3s ease;
-      --nav-height: 70px;
-      --emergency-bar-height: 48px;
+      --color-text: #1C1917;
+      --color-text-light: #57534E;
+      --color-text-muted: #A8A29E;
+      --color-border: #E7E5E4;
+      --font-heading: 'Work Sans', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+      --shadow-md: 0 4px 16px rgba(0,0,0,0.08);
+      --shadow-lg: 0 10px 40px rgba(0,0,0,0.1);
+      --shadow-glow: 0 0 0 4px rgba(13, 148, 136, 0.12);
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 22px;
+      --radius-xl: 32px;
+      --transition: 0.25s ease;
+      --nav-height: 64px;
+      --banner-height: 40px;
     }
 
     /* =========================================
@@ -118,7 +123,7 @@
     }
 
     body {
-      font-family: var(--font-family);
+      font-family: var(--font-body);
       color: var(--color-text);
       background-color: var(--color-white);
       line-height: 1.6;
@@ -145,7 +150,7 @@
       cursor: pointer;
       border: none;
       background: none;
-      font-family: var(--font-family);
+      font-family: var(--font-body);
     }
 
     /* =========================================
@@ -153,17 +158,22 @@
     ========================================= */
     .section-label {
       display: inline-block;
+      font-family: var(--font-heading);
       font-size: 0.75rem;
       font-weight: 700;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
       color: var(--color-primary);
       margin-bottom: 0.75rem;
+      background: var(--color-secondary);
+      padding: 0.3rem 0.875rem;
+      border-radius: 100px;
     }
 
     .section-title {
+      font-family: var(--font-heading);
       font-size: clamp(1.5rem, 3vw, 2.25rem);
-      font-weight: 900;
+      font-weight: 800;
       line-height: 1.2;
       color: var(--color-text);
       margin-bottom: 1rem;
@@ -172,7 +182,7 @@
     .section-subtitle {
       font-size: 1.05rem;
       color: var(--color-text-light);
-      max-width: 640px;
+      max-width: 620px;
       line-height: 1.7;
     }
 
@@ -196,7 +206,7 @@
     }
 
     .section {
-      padding: 4rem 0;
+      padding: 5rem 0;
     }
 
     .section--gray {
@@ -204,13 +214,25 @@
     }
 
     .section--teal {
-      background-color: var(--color-primary);
+      background: linear-gradient(135deg, #0F766E 0%, #0D9488 50%, #14B8A6 100%);
       color: var(--color-white);
     }
 
-    .section--dark {
-      background-color: var(--color-primary-dark);
-      color: var(--color-white);
+    .section--warm {
+      background-color: var(--color-warm-white);
+    }
+
+    /* Subtle dot pattern overlay */
+    .section--pattern {
+      position: relative;
+    }
+    .section--pattern::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(13,148,136,0.04) 1px, transparent 1px);
+      background-size: 24px 24px;
+      pointer-events: none;
     }
 
     /* =========================================
@@ -219,28 +241,29 @@
     .btn {
       display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
-      padding: 0.75rem 1.75rem;
+      justify-content: center;
+      gap: 0.4rem;
+      padding: 0.6rem 1.35rem;
       border-radius: var(--radius-sm);
-      font-weight: 700;
-      font-size: 1rem;
-      max-height: 52px;
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.9rem;
       transition: all var(--transition);
       cursor: pointer;
       text-align: center;
       white-space: nowrap;
     }
 
-    .btn--emergency {
-      background-color: var(--color-emergency);
+    .btn--coral {
+      background-color: var(--color-coral);
       color: var(--color-white);
-      box-shadow: 0 4px 15px rgba(220, 20, 60, 0.4);
+      box-shadow: 0 2px 10px rgba(249, 112, 102, 0.3);
     }
 
-    .btn--emergency:hover {
-      background-color: var(--color-emergency-dark);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(220, 20, 60, 0.5);
+    .btn--coral:hover {
+      background-color: var(--color-coral-dark);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 16px rgba(249, 112, 102, 0.4);
     }
 
     .btn--primary {
@@ -251,84 +274,81 @@
 
     .btn--primary:hover {
       background-color: var(--color-primary-dark);
-      transform: translateY(-2px);
+      transform: translateY(-1px);
       box-shadow: var(--shadow-md);
     }
 
-    .btn--outline {
-      background-color: transparent;
+    .btn--outline-light {
+      background-color: rgba(255,255,255,0.12);
       color: var(--color-white);
-      border: 2px solid var(--color-white);
+      border: 1.5px solid rgba(255,255,255,0.35);
+      backdrop-filter: blur(4px);
     }
 
-    .btn--outline:hover {
+    .btn--outline-light:hover {
       background-color: var(--color-white);
-      color: var(--color-primary);
-      transform: translateY(-2px);
-    }
-
-    .btn--lg {
-      padding: 0.75rem 1.75rem;
-      font-size: 1rem;
+      color: var(--color-primary-dark);
+      border-color: var(--color-white);
+      transform: translateY(-1px);
     }
 
     /* =========================================
-       EMERGENCY BAR
+       TOP BANNER (toned down)
     ========================================= */
-    .emergency-bar {
+    .top-banner {
       position: fixed;
       top: 0;
       left: 0;
       right: 0;
       z-index: 1000;
-      background-color: var(--color-emergency);
-      height: var(--emergency-bar-height);
+      background: linear-gradient(90deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+      height: var(--banner-height);
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 2px 10px rgba(220, 20, 60, 0.3);
     }
 
-    .emergency-bar__inner {
+    .top-banner__inner {
       display: flex;
       align-items: center;
-      gap: 1rem;
+      gap: 0.75rem;
       flex-wrap: wrap;
       justify-content: center;
       text-align: center;
     }
 
-    .emergency-bar__pulse {
-      width: 10px;
-      height: 10px;
-      background-color: var(--color-white);
+    .top-banner__dot {
+      width: 7px;
+      height: 7px;
+      background-color: var(--color-primary-light);
       border-radius: 50%;
-      animation: pulse 1.5s ease-in-out infinite;
+      animation: pulse 2s ease-in-out infinite;
       flex-shrink: 0;
     }
 
     @keyframes pulse {
       0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.5; transform: scale(1.3); }
+      50% { opacity: 0.5; transform: scale(1.4); }
     }
 
-    .emergency-bar__text {
-      color: var(--color-white);
-      font-weight: 700;
-      font-size: 0.9rem;
+    .top-banner__text {
+      color: rgba(255,255,255,0.9);
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.8rem;
       letter-spacing: 0.03em;
     }
 
-    .emergency-bar__phone {
+    .top-banner__link {
       color: var(--color-white);
-      font-weight: 900;
-      font-size: 1rem;
-      letter-spacing: 0.04em;
-      border-bottom: 2px solid rgba(255,255,255,0.6);
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.8rem;
+      border-bottom: 1px solid rgba(255,255,255,0.5);
       transition: border-color var(--transition);
     }
 
-    .emergency-bar__phone:hover {
+    .top-banner__link:hover {
       border-color: var(--color-white);
     }
 
@@ -337,11 +357,11 @@
     ========================================= */
     .nav {
       position: sticky;
-      top: var(--emergency-bar-height);
+      top: var(--banner-height);
       z-index: 900;
-      background-color: var(--color-primary);
+      background-color: var(--color-white);
       height: var(--nav-height);
-      box-shadow: var(--shadow-md);
+      box-shadow: 0 1px 0 var(--color-border);
     }
 
     .nav__inner {
@@ -354,15 +374,14 @@
     .nav__logo {
       display: flex;
       align-items: center;
-      gap: 0.75rem;
-      color: var(--color-white);
+      gap: 0.625rem;
     }
 
     .nav__logo-icon {
-      width: 36px;
-      height: 36px;
-      background-color: var(--color-white);
-      border-radius: 50%;
+      width: 34px;
+      height: 34px;
+      background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+      border-radius: 10px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -370,63 +389,74 @@
     }
 
     .nav__logo-icon svg {
-      width: 20px;
-      height: 20px;
+      width: 18px;
+      height: 18px;
+      color: var(--color-white);
     }
 
     .nav__logo-text {
       display: flex;
       flex-direction: column;
-      line-height: 1.2;
+      line-height: 1.15;
     }
 
     .nav__logo-name {
-      font-size: 1.05rem;
-      font-weight: 900;
-      color: var(--color-white);
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      font-weight: 800;
+      color: var(--color-text);
     }
 
     .nav__logo-tagline {
-      font-size: 0.65rem;
-      font-weight: 400;
-      color: rgba(255,255,255,0.75);
-      letter-spacing: 0.08em;
+      font-size: 0.625rem;
+      font-weight: 500;
+      color: var(--color-primary);
+      letter-spacing: 0.06em;
       text-transform: uppercase;
     }
 
-    .nav__links {
+    .nav__center {
       display: flex;
       align-items: center;
-      gap: 1.5rem;
+      gap: 0.25rem;
     }
 
     .nav__link {
-      color: rgba(255,255,255,0.85);
-      font-size: 0.875rem;
+      color: var(--color-text-light);
+      font-family: var(--font-heading);
+      font-size: 0.85rem;
       font-weight: 500;
-      padding: 0.5rem 0.875rem;
+      padding: 0.4rem 0.75rem;
       border-radius: var(--radius-sm);
       transition: all var(--transition);
     }
 
     .nav__link:hover {
-      color: var(--color-white);
-      background-color: rgba(255,255,255,0.12);
+      color: var(--color-primary);
+      background-color: var(--color-secondary);
     }
 
     .nav__cta {
-      background-color: var(--color-emergency);
+      background-color: var(--color-coral);
       color: var(--color-white);
-      font-size: 0.875rem;
-      font-weight: 700;
-      padding: 0.5rem 1.25rem;
+      font-family: var(--font-heading);
+      font-size: 0.825rem;
+      font-weight: 600;
+      padding: 0.45rem 1rem;
       border-radius: var(--radius-sm);
       transition: all var(--transition);
-      margin-left: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .nav__cta svg {
+      width: 14px;
+      height: 14px;
     }
 
     .nav__cta:hover {
-      background-color: var(--color-emergency-dark);
+      background-color: var(--color-coral-dark);
       transform: translateY(-1px);
     }
 
@@ -440,9 +470,9 @@
 
     .nav__hamburger span {
       display: block;
-      width: 24px;
+      width: 22px;
       height: 2px;
-      background-color: var(--color-white);
+      background-color: var(--color-text);
       border-radius: 2px;
       transition: all var(--transition);
     }
@@ -453,11 +483,12 @@
       top: 100%;
       left: 0;
       right: 0;
-      background-color: var(--color-primary-dark);
+      background-color: var(--color-white);
       padding: 1rem 1.5rem;
       flex-direction: column;
       gap: 0.25rem;
       box-shadow: var(--shadow-md);
+      border-top: 1px solid var(--color-border);
     }
 
     .nav__mobile-menu.is-open {
@@ -471,10 +502,10 @@
     }
 
     .nav__mobile-menu .nav__cta {
-      margin-left: 0;
       margin-top: 0.5rem;
       text-align: center;
-      padding: 0.875rem;
+      padding: 0.75rem;
+      justify-content: center;
     }
 
     /* =========================================
@@ -482,11 +513,11 @@
     ========================================= */
     .hero {
       position: relative;
-      min-height: calc(100vh - var(--emergency-bar-height) - var(--nav-height));
+      min-height: min(85vh, 700px);
       display: flex;
       align-items: center;
       overflow: hidden;
-      padding: 5rem 0;
+      padding: 4rem 0;
     }
 
     .hero__bg {
@@ -502,10 +533,10 @@
       position: absolute;
       inset: 0;
       background: linear-gradient(
-        105deg,
-        rgba(0, 38, 38, 0.92) 0%,
-        rgba(0, 77, 77, 0.80) 50%,
-        rgba(0, 38, 38, 0.65) 100%
+        115deg,
+        rgba(12, 74, 68, 0.92) 0%,
+        rgba(13, 148, 136, 0.78) 55%,
+        rgba(15, 118, 110, 0.65) 100%
       );
       z-index: 1;
     }
@@ -513,117 +544,141 @@
     .hero__content {
       position: relative;
       z-index: 2;
-      max-width: 700px;
+      max-width: 640px;
     }
 
     .hero__badge {
       display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
-      background-color: var(--color-emergency);
+      gap: 0.45rem;
+      background-color: rgba(255,255,255,0.15);
+      backdrop-filter: blur(8px);
       color: var(--color-white);
-      font-size: 0.8rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
+      font-family: var(--font-heading);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
-      padding: 0.4rem 1rem;
+      padding: 0.35rem 0.9rem;
       border-radius: 100px;
       margin-bottom: 1.5rem;
+      border: 1px solid rgba(255,255,255,0.2);
     }
 
     .hero__badge-dot {
-      width: 8px;
-      height: 8px;
-      background-color: var(--color-white);
+      width: 7px;
+      height: 7px;
+      background-color: var(--color-primary-light);
       border-radius: 50%;
-      animation: pulse 1.5s ease-in-out infinite;
+      animation: pulse 2s ease-in-out infinite;
     }
 
     .hero__title {
-      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-family: var(--font-heading);
+      font-size: clamp(2.5rem, 6vw, 4rem);
       font-weight: 900;
       color: var(--color-white);
-      line-height: 1.1;
-      margin-bottom: 1.5rem;
+      line-height: 1.05;
+      margin-bottom: 1.25rem;
+      letter-spacing: -0.02em;
     }
 
     .hero__title em {
       font-style: normal;
-      color: #7FFFDF;
+      color: var(--color-primary-light);
     }
 
     .hero__subtitle {
-      font-size: 1.125rem;
-      color: rgba(255,255,255,0.88);
-      margin-bottom: 1.5rem;
-      line-height: 1.7;
-      max-width: 600px;
-    }
-
-    .hero__phone-block {
-      display: flex;
-      flex-direction: column;
-      gap: 0.25rem;
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.85);
       margin-bottom: 2rem;
-    }
-
-    .hero__phone-label {
-      font-size: 0.8rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.65);
-    }
-
-    .hero__phone {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      color: var(--color-white);
-      font-size: clamp(2rem, 5vw, 3.25rem);
-      font-weight: 900;
-      letter-spacing: -0.02em;
-      transition: color var(--transition);
-    }
-
-    .hero__phone:hover {
-      color: #7FFFDF;
-    }
-
-    .hero__phone svg {
-      width: clamp(1.5rem, 3vw, 2rem);
-      height: clamp(1.5rem, 3vw, 2rem);
-      flex-shrink: 0;
+      line-height: 1.7;
+      max-width: 520px;
     }
 
     .hero__ctas {
       display: flex;
-      gap: 1rem;
+      gap: 0.75rem;
       flex-wrap: wrap;
     }
 
     .hero__trust {
       display: flex;
       align-items: center;
-      gap: 2rem;
-      margin-top: 3rem;
+      gap: 1.5rem;
+      margin-top: 2.5rem;
       flex-wrap: wrap;
     }
 
     .hero__trust-item {
       display: flex;
       align-items: center;
-      gap: 0.5rem;
-      color: rgba(255,255,255,0.85);
-      font-size: 0.875rem;
+      gap: 0.4rem;
+      color: rgba(255,255,255,0.8);
+      font-size: 0.825rem;
       font-weight: 500;
     }
 
     .hero__trust-item svg {
-      width: 18px;
-      height: 18px;
-      color: #7FFFDF;
+      width: 16px;
+      height: 16px;
+      color: var(--color-primary-light);
       flex-shrink: 0;
+    }
+
+    /* =========================================
+       HOW IT WORKS (moved up, icons removed)
+    ========================================= */
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      counter-reset: step-counter;
+    }
+
+    .step-card {
+      position: relative;
+      background: var(--color-white);
+      border-radius: var(--radius-md);
+      padding: 2rem 1.75rem 1.75rem;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--color-border);
+      transition: all var(--transition);
+    }
+
+    .step-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--color-primary);
+    }
+
+    .step-card__number {
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+      color: var(--color-white);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      font-weight: 800;
+      margin-bottom: 1.25rem;
+    }
+
+    .step-card__title {
+      font-family: var(--font-heading);
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: var(--color-text);
+      margin-bottom: 0.5rem;
+    }
+
+    .step-card__desc {
+      font-size: 0.9rem;
+      color: var(--color-text-light);
+      line-height: 1.65;
     }
 
     /* =========================================
@@ -638,13 +693,16 @@
     .who-card {
       background-color: var(--color-white);
       border-radius: var(--radius-md);
-      padding: 1.75rem 1.5rem;
+      padding: 2rem 1.75rem;
       text-align: center;
       box-shadow: var(--shadow-sm);
       border: 1px solid var(--color-border);
       transition: all var(--transition);
       position: relative;
       overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     .who-card::before {
@@ -653,15 +711,15 @@
       top: 0;
       left: 0;
       right: 0;
-      height: 4px;
-      background-color: var(--color-primary);
+      height: 3px;
+      background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
       transform: scaleX(0);
       transition: transform var(--transition);
       transform-origin: left;
     }
 
     .who-card:hover {
-      transform: translateY(-6px);
+      transform: translateY(-5px);
       box-shadow: var(--shadow-lg);
     }
 
@@ -670,51 +728,55 @@
     }
 
     .who-card__icon {
-      width: 72px;
-      height: 72px;
-      background-color: rgba(0, 77, 77, 0.1);
-      border-radius: 50%;
+      width: 64px;
+      height: 64px;
+      background-color: var(--color-secondary);
+      border-radius: 16px;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 0 auto 1.5rem;
+      margin-bottom: 1.25rem;
     }
 
     .who-card__icon svg {
-      width: 36px;
-      height: 36px;
+      width: 30px;
+      height: 30px;
       color: var(--color-primary);
     }
 
     .who-card__title {
-      font-size: 1.25rem;
-      font-weight: 800;
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      font-weight: 700;
       color: var(--color-text);
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.625rem;
     }
 
     .who-card__desc {
-      font-size: 0.9375rem;
+      font-size: 0.9rem;
       color: var(--color-text-light);
       line-height: 1.65;
       margin-bottom: 1.25rem;
+      flex-grow: 1;
     }
 
     .who-card__tag {
       display: inline-flex;
       align-items: center;
-      gap: 0.4rem;
-      background-color: rgba(0, 77, 77, 0.08);
+      gap: 0.35rem;
+      background-color: var(--color-secondary);
       color: var(--color-primary);
-      font-size: 0.8rem;
-      font-weight: 700;
-      padding: 0.35rem 0.875rem;
+      font-family: var(--font-heading);
+      font-size: 0.775rem;
+      font-weight: 600;
+      padding: 0.3rem 0.75rem;
       border-radius: 100px;
+      margin-top: auto;
     }
 
     .who-card__tag svg {
-      width: 14px;
-      height: 14px;
+      width: 13px;
+      height: 13px;
     }
 
     /* =========================================
@@ -723,53 +785,58 @@
     .stats__grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 2rem;
+      gap: 1.5rem;
     }
 
     .stat-card {
       text-align: center;
-      padding: 2.5rem 1.5rem;
+      padding: 2rem 1.25rem;
+      background: rgba(255,255,255,0.08);
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(255,255,255,0.1);
     }
 
     .stat-card__icon {
-      width: 60px;
-      height: 60px;
+      width: 52px;
+      height: 52px;
       background-color: rgba(255,255,255,0.12);
-      border-radius: 50%;
+      border-radius: 14px;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 0 auto 1.25rem;
+      margin: 0 auto 1rem;
     }
 
     .stat-card__icon svg {
-      width: 28px;
-      height: 28px;
-      color: var(--color-white);
+      width: 24px;
+      height: 24px;
+      color: var(--color-primary-light);
     }
 
     .stat-card__number {
-      font-size: clamp(2rem, 4vw, 3rem);
+      font-family: var(--font-heading);
+      font-size: clamp(1.75rem, 3.5vw, 2.5rem);
       font-weight: 900;
       color: var(--color-white);
       line-height: 1;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.4rem;
     }
 
     .stat-card__number span {
-      color: #7FFFDF;
+      color: var(--color-primary-light);
     }
 
     .stat-card__label {
-      font-size: 1rem;
-      font-weight: 700;
-      color: rgba(255,255,255,0.9);
-      margin-bottom: 0.5rem;
+      font-family: var(--font-heading);
+      font-size: 0.925rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.92);
+      margin-bottom: 0.4rem;
     }
 
     .stat-card__sub {
       font-size: 0.8rem;
-      color: rgba(255,255,255,0.65);
+      color: rgba(255,255,255,0.6);
       line-height: 1.5;
     }
 
@@ -785,28 +852,28 @@
     .service-card {
       background-color: var(--color-white);
       border-radius: var(--radius-md);
-      padding: 2rem;
+      padding: 1.75rem;
       box-shadow: var(--shadow-sm);
       border: 1px solid var(--color-border);
       transition: all var(--transition);
     }
 
     .service-card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-4px);
       box-shadow: var(--shadow-md);
       border-color: var(--color-primary);
     }
 
     .service-card__icon {
-      width: 56px;
-      height: 56px;
-      background-color: rgba(0, 77, 77, 0.08);
-      border-radius: var(--radius-sm);
+      width: 48px;
+      height: 48px;
+      background-color: var(--color-secondary);
+      border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 1.25rem;
-      transition: background-color var(--transition);
+      margin-bottom: 1.125rem;
+      transition: all var(--transition);
     }
 
     .service-card:hover .service-card__icon {
@@ -814,8 +881,8 @@
     }
 
     .service-card__icon svg {
-      width: 28px;
-      height: 28px;
+      width: 24px;
+      height: 24px;
       color: var(--color-primary);
       transition: color var(--transition);
     }
@@ -825,14 +892,15 @@
     }
 
     .service-card__title {
-      font-size: 1.125rem;
-      font-weight: 800;
+      font-family: var(--font-heading);
+      font-size: 1.05rem;
+      font-weight: 700;
       color: var(--color-text);
-      margin-bottom: 0.625rem;
+      margin-bottom: 0.5rem;
     }
 
     .service-card__desc {
-      font-size: 0.9rem;
+      font-size: 0.875rem;
       color: var(--color-text-light);
       line-height: 1.65;
     }
@@ -847,47 +915,46 @@
       align-items: center;
     }
 
-    .insurance__content {}
-
     .insurance__list {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 0.75rem;
-      margin: 1.75rem 0;
+      gap: 0.625rem;
+      margin: 1.5rem 0;
     }
 
     .insurance__item {
       display: flex;
       align-items: center;
       gap: 0.5rem;
-      font-size: 0.9375rem;
+      font-size: 0.9rem;
       font-weight: 500;
       color: var(--color-text);
     }
 
     .insurance__item svg {
-      width: 18px;
-      height: 18px;
+      width: 17px;
+      height: 17px;
       color: var(--color-primary);
       flex-shrink: 0;
     }
 
     .insurance__legal-box {
-      background-color: var(--color-primary);
+      background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
       color: var(--color-white);
       border-radius: var(--radius-md);
-      padding: 2rem;
-      margin-top: 1.5rem;
+      padding: 1.75rem;
+      margin-top: 1.25rem;
     }
 
     .insurance__legal-box h3 {
-      font-size: 1.1rem;
-      font-weight: 800;
-      margin-bottom: 0.75rem;
+      font-family: var(--font-heading);
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 0.625rem;
     }
 
     .insurance__legal-box p {
-      font-size: 0.9rem;
+      font-size: 0.875rem;
       color: rgba(255,255,255,0.85);
       line-height: 1.65;
     }
@@ -903,79 +970,6 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-    }
-
-    /* =========================================
-       PATIENT PROCESS
-    ========================================= */
-    .process__steps {
-      display: grid;
-      grid-template-columns: 1fr auto 1fr auto 1fr;
-      align-items: start;
-      gap: 0;
-    }
-
-    .process__step {
-      text-align: center;
-      padding: 0 1rem;
-    }
-
-    .process__step-number {
-      width: 72px;
-      height: 72px;
-      background-color: var(--color-primary);
-      color: var(--color-white);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.75rem;
-      font-weight: 900;
-      margin: 0 auto 1.5rem;
-      box-shadow: 0 4px 16px rgba(0, 77, 77, 0.35);
-      position: relative;
-    }
-
-    .process__step-icon-wrap {
-      width: 56px;
-      height: 56px;
-      background-color: rgba(0, 77, 77, 0.1);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 1.25rem;
-    }
-
-    .process__step-icon-wrap svg {
-      width: 28px;
-      height: 28px;
-      color: var(--color-primary);
-    }
-
-    .process__step-title {
-      font-size: 1.2rem;
-      font-weight: 800;
-      color: var(--color-text);
-      margin-bottom: 0.625rem;
-    }
-
-    .process__step-desc {
-      font-size: 0.9rem;
-      color: var(--color-text-light);
-      line-height: 1.65;
-    }
-
-    .process__connector {
-      padding-top: 2.25rem;
-      color: var(--color-secondary);
-    }
-
-    .process__connector svg {
-      width: 40px;
-      height: 40px;
-      color: var(--color-primary);
-      opacity: 0.4;
     }
 
     /* =========================================
@@ -1002,144 +996,244 @@
 
     .testimonial-card__stars {
       display: flex;
-      gap: 3px;
-      margin-bottom: 1.25rem;
+      gap: 2px;
+      margin-bottom: 1rem;
     }
 
     .testimonial-card__stars svg {
-      width: 20px;
-      height: 20px;
+      width: 18px;
+      height: 18px;
       color: #F59E0B;
     }
 
     .testimonial-card__quote {
-      font-size: 0.9875rem;
+      font-size: 0.9375rem;
       color: var(--color-text);
       line-height: 1.7;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.25rem;
       font-style: italic;
     }
 
     .testimonial-card__divider {
       height: 1px;
       background-color: var(--color-border);
-      margin-bottom: 1.25rem;
+      margin-bottom: 1rem;
     }
 
     .testimonial-card__author {
       display: flex;
       align-items: center;
-      gap: 0.875rem;
+      gap: 0.75rem;
     }
 
     .testimonial-card__avatar {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      background-color: var(--color-primary);
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-weight: 800;
-      font-size: 1rem;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.875rem;
       color: var(--color-white);
       flex-shrink: 0;
     }
 
     .testimonial-card__name {
-      font-size: 0.9375rem;
-      font-weight: 700;
+      font-family: var(--font-heading);
+      font-size: 0.9rem;
+      font-weight: 600;
       color: var(--color-text);
-      margin-bottom: 0.2rem;
+      margin-bottom: 0.15rem;
     }
 
     .testimonial-card__type {
-      font-size: 0.8rem;
-      color: var(--color-text-light);
+      font-size: 0.775rem;
+      color: var(--color-text-muted);
     }
 
     /* =========================================
-       LOCATION & CONTACT
+       FREE OFFER BANNER (toned down)
     ========================================= */
-    .location__inner {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3.5rem;
-      align-items: start;
+    .offer-banner {
+      background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 50%, #14B8A6 100%);
+      padding: 3rem 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
     }
 
-    .location__info h3 {
-      font-size: 1.5rem;
+    .offer-banner::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px);
+      background-size: 20px 20px;
+      pointer-events: none;
+    }
+
+    .offer-banner__inner {
+      max-width: 640px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .offer-banner__badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background-color: rgba(255,255,255,0.12);
+      color: var(--color-white);
+      font-family: var(--font-heading);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.875rem;
+      border-radius: 100px;
+      margin-bottom: 1rem;
+    }
+
+    .offer-banner__title {
+      font-family: var(--font-heading);
+      font-size: clamp(1.35rem, 3vw, 2rem);
       font-weight: 800;
+      color: var(--color-white);
+      margin-bottom: 0.75rem;
+      line-height: 1.2;
+    }
+
+    .offer-banner__subtitle {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 1.5rem;
+      line-height: 1.65;
+    }
+
+    /* =========================================
+       LOCATION & CONTACT (unique layout)
+    ========================================= */
+    .contact-section {
+      position: relative;
+    }
+
+    .contact-top {
+      background: linear-gradient(135deg, #0C4A44 0%, var(--color-primary-dark) 50%, var(--color-primary) 100%);
+      padding: 4rem 0 8rem;
+      text-align: center;
+      color: var(--color-white);
+    }
+
+    .contact-top .section-label {
+      background: rgba(255,255,255,0.12);
+      color: rgba(255,255,255,0.9);
+    }
+
+    .contact-top .section-title {
+      color: var(--color-white);
+    }
+
+    .contact-top .section-subtitle {
+      color: rgba(255,255,255,0.75);
+    }
+
+    .contact-cards {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 2rem;
+      margin-top: -5rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .contact-info-card {
+      background: var(--color-white);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .contact-info-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      font-weight: 700;
       color: var(--color-text);
       margin-bottom: 1.5rem;
     }
 
-    .location__detail {
+    .contact-detail {
       display: flex;
       align-items: flex-start;
-      gap: 1rem;
-      margin-bottom: 1.5rem;
+      gap: 0.875rem;
+      margin-bottom: 1.25rem;
     }
 
-    .location__detail-icon {
-      width: 42px;
-      height: 42px;
-      background-color: rgba(0, 77, 77, 0.1);
-      border-radius: var(--radius-sm);
+    .contact-detail__icon {
+      width: 40px;
+      height: 40px;
+      background-color: var(--color-secondary);
+      border-radius: 10px;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
     }
 
-    .location__detail-icon svg {
-      width: 20px;
-      height: 20px;
+    .contact-detail__icon svg {
+      width: 18px;
+      height: 18px;
       color: var(--color-primary);
     }
 
-    .location__detail-content strong {
+    .contact-detail__content strong {
       display: block;
-      font-size: 0.875rem;
-      font-weight: 700;
+      font-family: var(--font-heading);
+      font-size: 0.825rem;
+      font-weight: 600;
       color: var(--color-text);
-      margin-bottom: 0.2rem;
+      margin-bottom: 0.15rem;
     }
 
-    .location__detail-content span,
-    .location__detail-content a {
-      font-size: 0.9375rem;
+    .contact-detail__content span,
+    .contact-detail__content a {
+      font-size: 0.9rem;
       color: var(--color-text-light);
       line-height: 1.5;
     }
 
-    .location__detail-content a:hover {
+    .contact-detail__content a:hover {
       color: var(--color-primary);
     }
 
-    .location__hours {
-      margin-top: 2rem;
+    .contact-hours {
+      margin-top: 1.5rem;
+      background: var(--color-accent);
+      border-radius: var(--radius-md);
+      padding: 1.25rem 1.5rem;
     }
 
-    .location__hours h4 {
-      font-size: 1rem;
-      font-weight: 800;
+    .contact-hours h4 {
+      font-family: var(--font-heading);
+      font-size: 0.9rem;
+      font-weight: 700;
       color: var(--color-text);
-      margin-bottom: 0.875rem;
+      margin-bottom: 0.75rem;
     }
 
     .hours-grid {
       display: grid;
-      gap: 0.4rem;
+      gap: 0.35rem;
     }
 
     .hours-row {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      font-size: 0.9rem;
-      padding: 0.4rem 0;
+      font-size: 0.85rem;
+      padding: 0.35rem 0;
       border-bottom: 1px solid var(--color-border);
     }
 
@@ -1157,11 +1251,12 @@
     }
 
     .hours-row__badge {
-      background-color: rgba(0, 77, 77, 0.1);
+      background-color: var(--color-secondary);
       color: var(--color-primary);
-      font-size: 0.7rem;
+      font-family: var(--font-heading);
+      font-size: 0.65rem;
       font-weight: 700;
-      padding: 0.15rem 0.5rem;
+      padding: 0.15rem 0.45rem;
       border-radius: 100px;
       text-transform: uppercase;
       letter-spacing: 0.06em;
@@ -1170,49 +1265,50 @@
     /* Contact Form */
     .contact-form {
       background-color: var(--color-white);
-      border-radius: var(--radius-md);
+      border-radius: var(--radius-lg);
       padding: 2.5rem;
-      box-shadow: var(--shadow-md);
-      border: 1px solid var(--color-border);
+      box-shadow: var(--shadow-lg);
     }
 
     .contact-form h3 {
-      font-size: 1.375rem;
-      font-weight: 800;
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      font-weight: 700;
       color: var(--color-text);
-      margin-bottom: 0.375rem;
+      margin-bottom: 0.3rem;
     }
 
     .contact-form__subtitle {
-      font-size: 0.9rem;
+      font-size: 0.875rem;
       color: var(--color-text-light);
-      margin-bottom: 1.75rem;
+      margin-bottom: 1.5rem;
     }
 
     .form-group {
-      margin-bottom: 1.25rem;
+      margin-bottom: 1rem;
     }
 
     .form-group label {
       display: block;
-      font-size: 0.875rem;
+      font-family: var(--font-heading);
+      font-size: 0.825rem;
       font-weight: 600;
       color: var(--color-text);
-      margin-bottom: 0.375rem;
+      margin-bottom: 0.3rem;
     }
 
     .form-group input,
     .form-group select,
     .form-group textarea {
       width: 100%;
-      padding: 0.75rem 1rem;
+      padding: 0.65rem 0.875rem;
       border: 1.5px solid var(--color-border);
       border-radius: var(--radius-sm);
-      font-family: var(--font-family);
-      font-size: 0.9375rem;
+      font-family: var(--font-body);
+      font-size: 0.9rem;
       color: var(--color-text);
       background-color: var(--color-accent);
-      transition: border-color var(--transition);
+      transition: all var(--transition);
       outline: none;
     }
 
@@ -1221,123 +1317,82 @@
     .form-group textarea:focus {
       border-color: var(--color-primary);
       background-color: var(--color-white);
+      box-shadow: var(--shadow-glow);
     }
 
     .form-group textarea {
       resize: vertical;
-      min-height: 100px;
+      min-height: 90px;
     }
 
     .form-row {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 1rem;
+      gap: 0.75rem;
     }
 
     .form-submit {
       width: 100%;
-      padding: 1rem;
-      background-color: var(--color-emergency);
+      padding: 0.75rem;
+      background: linear-gradient(135deg, var(--color-coral) 0%, var(--color-coral-dark) 100%);
       color: var(--color-white);
-      font-family: var(--font-family);
-      font-size: 1rem;
-      font-weight: 700;
+      font-family: var(--font-heading);
+      font-size: 0.9rem;
+      font-weight: 600;
       border: none;
       border-radius: var(--radius-sm);
       cursor: pointer;
       transition: all var(--transition);
-      margin-top: 0.5rem;
+      margin-top: 0.25rem;
     }
 
     .form-submit:hover {
-      background-color: var(--color-emergency-dark);
-      transform: translateY(-2px);
-      box-shadow: 0 4px 15px rgba(220, 20, 60, 0.35);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 15px rgba(249, 112, 102, 0.35);
     }
 
     .form-note {
-      font-size: 0.775rem;
-      color: var(--color-text-light);
+      font-size: 0.725rem;
+      color: var(--color-text-muted);
       text-align: center;
-      margin-top: 0.75rem;
-    }
-
-    /* =========================================
-       FREE OFFER BANNER
-    ========================================= */
-    .offer-banner {
-      background: linear-gradient(135deg, var(--color-emergency) 0%, #A50E2D 100%);
-      padding: 3.5rem 0;
-      text-align: center;
-    }
-
-    .offer-banner__inner {
-      max-width: 700px;
-      margin: 0 auto;
-    }
-
-    .offer-banner__badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background-color: rgba(255,255,255,0.15);
-      color: var(--color-white);
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 0.35rem 1rem;
-      border-radius: 100px;
-      margin-bottom: 1.25rem;
-    }
-
-    .offer-banner__title {
-      font-size: clamp(1.5rem, 3.5vw, 2.25rem);
-      font-weight: 900;
-      color: var(--color-white);
-      margin-bottom: 0.875rem;
-      line-height: 1.2;
-    }
-
-    .offer-banner__subtitle {
-      font-size: 1.05rem;
-      color: rgba(255,255,255,0.88);
-      margin-bottom: 2rem;
-      line-height: 1.65;
+      margin-top: 0.625rem;
     }
 
     /* =========================================
        FOOTER
     ========================================= */
     .footer {
-      background-color: #0A1A1A;
-      color: rgba(255,255,255,0.75);
-      padding: 4rem 0 0;
+      background-color: #111827;
+      color: rgba(255,255,255,0.7);
+      padding: 3.5rem 0 0;
     }
 
-    .footer__grid {
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    .footer__top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
       gap: 3rem;
-      padding-bottom: 3rem;
+      padding-bottom: 2.5rem;
       border-bottom: 1px solid rgba(255,255,255,0.08);
+      flex-wrap: wrap;
     }
 
-    .footer__brand {}
+    .footer__brand {
+      max-width: 300px;
+    }
 
     .footer__logo {
       display: flex;
       align-items: center;
-      gap: 0.75rem;
-      color: var(--color-white);
-      margin-bottom: 1rem;
+      gap: 0.625rem;
+      margin-bottom: 0.875rem;
     }
 
     .footer__logo-icon {
-      width: 36px;
-      height: 36px;
-      background-color: var(--color-primary);
-      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+      border-radius: 9px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -1345,60 +1400,70 @@
     }
 
     .footer__logo-icon svg {
-      width: 20px;
-      height: 20px;
+      width: 17px;
+      height: 17px;
       color: var(--color-white);
     }
 
     .footer__logo-name {
-      font-size: 1rem;
-      font-weight: 900;
+      font-family: var(--font-heading);
+      font-size: 0.95rem;
+      font-weight: 800;
       color: var(--color-white);
     }
 
     .footer__brand p {
-      font-size: 0.9rem;
-      line-height: 1.7;
-      margin-bottom: 1.5rem;
+      font-size: 0.85rem;
+      line-height: 1.65;
+      margin-bottom: 1rem;
     }
 
     .footer__phone {
-      display: flex;
+      display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 0.4rem;
       color: var(--color-white);
-      font-size: 1.2rem;
-      font-weight: 800;
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      font-weight: 700;
       transition: color var(--transition);
     }
 
     .footer__phone:hover {
-      color: #7FFFDF;
+      color: var(--color-primary-light);
     }
 
     .footer__phone svg {
-      width: 18px;
-      height: 18px;
+      width: 16px;
+      height: 16px;
     }
 
+    .footer__nav {
+      display: flex;
+      gap: 4rem;
+    }
+
+    .footer__col {}
+
     .footer__heading {
-      font-size: 0.8rem;
+      font-family: var(--font-heading);
+      font-size: 0.75rem;
       font-weight: 700;
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--color-white);
-      margin-bottom: 1.25rem;
+      margin-bottom: 1rem;
     }
 
     .footer__links {
       display: flex;
       flex-direction: column;
-      gap: 0.6rem;
+      gap: 0.5rem;
     }
 
     .footer__links a {
-      font-size: 0.9rem;
-      color: rgba(255,255,255,0.65);
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.55);
       transition: color var(--transition);
     }
 
@@ -1406,66 +1471,33 @@
       color: var(--color-white);
     }
 
-    .footer__emergency-box {
-      background-color: var(--color-emergency);
-      border-radius: var(--radius-md);
-      padding: 1.5rem;
-    }
-
-    .footer__emergency-box h4 {
-      color: var(--color-white);
-      font-size: 0.9rem;
-      font-weight: 800;
-      margin-bottom: 0.5rem;
-    }
-
-    .footer__emergency-box p {
-      color: rgba(255,255,255,0.85);
-      font-size: 0.8rem;
-      line-height: 1.5;
-      margin-bottom: 1rem;
-    }
-
-    .footer__emergency-phone {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      color: var(--color-white);
-      font-size: 1.1rem;
-      font-weight: 900;
-    }
-
-    .footer__emergency-phone svg {
-      width: 16px;
-      height: 16px;
-    }
-
     .footer__bottom {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 1.5rem 0;
+      padding: 1.25rem 0;
       flex-wrap: wrap;
-      gap: 1rem;
+      gap: 0.75rem;
     }
 
     .footer__bottom p {
-      font-size: 0.825rem;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.4);
     }
 
     .footer__bottom-links {
       display: flex;
-      gap: 1.5rem;
+      gap: 1.25rem;
     }
 
     .footer__bottom-links a {
-      font-size: 0.825rem;
-      color: rgba(255,255,255,0.55);
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.4);
       transition: color var(--transition);
     }
 
     .footer__bottom-links a:hover {
-      color: var(--color-white);
+      color: rgba(255,255,255,0.8);
     }
 
     /* =========================================
@@ -1473,8 +1505,8 @@
     ========================================= */
     .animate-on-scroll {
       opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.65s ease, transform 0.65s ease;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
     }
 
     .animate-on-scroll.is-visible {
@@ -1482,12 +1514,12 @@
       transform: translateY(0);
     }
 
-    .animate-on-scroll--delay-1 { transition-delay: 0.1s; }
-    .animate-on-scroll--delay-2 { transition-delay: 0.2s; }
-    .animate-on-scroll--delay-3 { transition-delay: 0.3s; }
-    .animate-on-scroll--delay-4 { transition-delay: 0.4s; }
-    .animate-on-scroll--delay-5 { transition-delay: 0.5s; }
-    .animate-on-scroll--delay-6 { transition-delay: 0.6s; }
+    .animate-on-scroll--delay-1 { transition-delay: 0.08s; }
+    .animate-on-scroll--delay-2 { transition-delay: 0.16s; }
+    .animate-on-scroll--delay-3 { transition-delay: 0.24s; }
+    .animate-on-scroll--delay-4 { transition-delay: 0.32s; }
+    .animate-on-scroll--delay-5 { transition-delay: 0.4s; }
+    .animate-on-scroll--delay-6 { transition-delay: 0.48s; }
 
     /* =========================================
        RESPONSIVE
@@ -1497,20 +1529,15 @@
         grid-template-columns: repeat(2, 1fr);
       }
 
-      .footer__grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 2rem;
-      }
-
-      .footer__brand {
-        grid-column: 1 / -1;
+      .footer__nav {
+        gap: 2.5rem;
       }
     }
 
     @media (max-width: 900px) {
       .who-we-help__grid {
         grid-template-columns: 1fr;
-        max-width: 480px;
+        max-width: 440px;
         margin: 0 auto;
       }
 
@@ -1527,22 +1554,10 @@
         order: -1;
       }
 
-      .insurance__list {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .process__steps {
+      .steps {
         grid-template-columns: 1fr;
-        max-width: 400px;
+        max-width: 440px;
         margin: 0 auto;
-        gap: 1rem;
-      }
-
-      .process__connector {
-        display: flex;
-        justify-content: center;
-        padding-top: 0;
-        transform: rotate(90deg);
       }
 
       .testimonials__grid {
@@ -1551,18 +1566,26 @@
         margin: 0 auto;
       }
 
-      .location__inner {
+      .contact-cards {
         grid-template-columns: 1fr;
+      }
+
+      .footer__top {
+        flex-direction: column;
+      }
+
+      .footer__brand {
+        max-width: 100%;
       }
     }
 
     @media (max-width: 768px) {
       :root {
-        --emergency-bar-height: 44px;
-        --nav-height: 60px;
+        --banner-height: 36px;
+        --nav-height: 56px;
       }
 
-      .nav__links,
+      .nav__center,
       .nav__cta {
         display: none;
       }
@@ -1599,13 +1622,9 @@
         padding: 3.5rem 0;
       }
 
-      .footer__grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-      }
-
-      .footer__brand {
-        grid-column: auto;
+      .footer__nav {
+        flex-direction: column;
+        gap: 1.5rem;
       }
 
       .footer__bottom {
@@ -1617,12 +1636,16 @@
         justify-content: center;
       }
 
-      .emergency-bar__text {
-        font-size: 0.775rem;
+      .top-banner__text {
+        font-size: 0.725rem;
       }
 
-      .emergency-bar__phone {
-        font-size: 0.875rem;
+      .top-banner__link {
+        font-size: 0.725rem;
+      }
+
+      .contact-top {
+        padding: 3rem 0 7rem;
       }
     }
 
@@ -1635,131 +1658,11 @@
         grid-template-columns: 1fr;
       }
 
-      .hero__phone {
-        font-size: 1.75rem;
+      .hero__trust {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
       }
-    }</style>
-  <!-- Codex UI Polish: nav readability and one-line links -->
-  <style id="codex-ui-polish-nav">
-    nav a,
-    .nav a,
-    .navbar a,
-    .nav__links a,
-    .nav-links a,
-    .menu a,
-    .menu__link,
-    .fullscreen-menu a {
-      white-space: nowrap;
-    }
-
-    @media (min-width: 1024px) {
-      nav a,
-      .nav a,
-      .navbar a,
-      .nav__links a,
-      .nav-links a,
-      .menu a,
-      .menu__link,
-      .fullscreen-menu a {
-        line-height: 1.1;
-      }
-
-      .nav__links,
-      .nav-links,
-      .navbar-links,
-      .menu-links,
-      nav ul {
-        row-gap: 0.25rem;
-      }
-
-      .nav__links,
-      .nav-links,
-      .navbar-links,
-      .menu-links,
-      nav ul {
-        align-items: center;
-      }
-
-      .nav__links a,
-      .nav-links a,
-      .navbar-links a,
-      .menu-links a,
-      nav ul a {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 1.2rem;
-      }
-    }
-
-    /* Cross-page alignment normalization for common grid/card layouts */
-    .services__grid,
-    .service-grid,
-    .cards-grid,
-    .features-grid,
-    .pricing__grid,
-    .plans-grid,
-    .results__grid,
-    .reviews__grid,
-    .events-grid,
-    .coaches__grid,
-    .therapists-grid,
-    .portfolio__grid,
-    .tips-grid,
-    .testimonials-grid,
-    .grid {
-      align-items: stretch;
-    }
-
-    .service-card,
-    .card,
-    .feature-card,
-    .event-card,
-    .plan,
-    .pricing-card,
-    .testimonial,
-    .review,
-    .coach,
-    .therapist-card,
-    .project,
-    .tip-card,
-    .serve-card,
-    .info-card,
-    .stat-card {
-      height: 100%;
-    }
-
-    .service-card img,
-    .project img,
-    .tip-card img,
-    .coach img,
-    .therapist-card img,
-    .feature-card img,
-    .gallery-item img {
-      width: 100%;
-      display: block;
-      object-fit: cover;
-    }
-
-    /* Improve readability where copy is dense without changing content */
-    section p,
-    .section p,
-    .card p,
-    .service-card p,
-    .feature-card p,
-    .testimonial p,
-    .event-card p,
-    .info-card p {
-      max-width: 66ch;
-      text-wrap: pretty;
-    }
-
-    .section__header p,
-    .hero p,
-    .footer p,
-    .map-overlay-card,
-    .location__item-value {
-      max-width: none;
     }
   </style>
 
@@ -1767,13 +1670,13 @@
 <body>
 
   <!-- =============================================
-       EMERGENCY BAR
+       TOP BANNER (toned down)
   ============================================== -->
-  <div class="emergency-bar" role="banner" aria-label="Emergency contact information">
-    <div class="emergency-bar__inner">
-      <div class="emergency-bar__pulse" aria-hidden="true"></div>
-      <span class="emergency-bar__text">SAME-DAY APPOINTMENTS AVAILABLE &mdash; Call Now:</span>
-      <a href="tel:+15559112345" class="emergency-bar__phone" aria-label="Call (555) 911-2345 now">(555) 911-2345</a>
+  <div class="top-banner" role="banner" aria-label="Same-day appointments available">
+    <div class="top-banner__inner">
+      <div class="top-banner__dot" aria-hidden="true"></div>
+      <span class="top-banner__text">Same-Day Appointments Available</span>
+      <a href="tel:+15559112345" class="top-banner__link" aria-label="Call (555) 911-2345">(555) 911-2345</a>
     </div>
   </div>
 
@@ -1785,7 +1688,7 @@
       <nav class="nav__inner">
         <a href="#" class="nav__logo" aria-label="Relief Now Chiropractic home">
           <div class="nav__logo-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-primary);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
               <path d="M12 8v4l3 3"/>
             </svg>
@@ -1796,7 +1699,7 @@
           </div>
         </a>
 
-        <ul class="nav__links" role="list">
+        <ul class="nav__center" role="list">
           <li><a href="#services" class="nav__link">Services</a></li>
           <li><a href="#insurance" class="nav__link">Insurance</a></li>
           <li><a href="#process" class="nav__link">How It Works</a></li>
@@ -1804,7 +1707,12 @@
           <li><a href="#contact" class="nav__link">Contact</a></li>
         </ul>
 
-        <a href="tel:+15559112345" class="nav__cta" aria-label="Call now (555) 911-2345">Call Now: (555) 911-2345</a>
+        <a href="tel:+15559112345" class="nav__cta" aria-label="Call now">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.07 9.8a19.79 19.79 0 01-3.07-8.67A2 2 0 013 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+          </svg>
+          Call Now
+        </a>
 
         <button class="nav__hamburger" aria-label="Open menu" aria-expanded="false" id="hamburger">
           <span></span>
@@ -1834,40 +1742,29 @@
       <div class="hero__overlay" aria-hidden="true"></div>
       <div class="container">
         <div class="hero__content">
-          <div class="hero__badge" aria-label="Same-day appointments available">
+          <div class="hero__badge" aria-label="Walk-ins welcome">
             <div class="hero__badge-dot" aria-hidden="true"></div>
-            Same-Day Appointments Available
+            Walk-Ins Welcome Today
           </div>
 
           <h1 class="hero__title">
-            Pain Relief.<br />
-            <em>Today.</em><br />
-            Not Tomorrow.
+            Pain Relief <em>Today,</em><br />
+            Not Tomorrow
           </h1>
 
           <p class="hero__subtitle">
-            Specialized emergency chiropractic care for auto accident injuries, work injuries, and chronic pain. We handle all insurance and legal paperwork so you can focus on healing.
+            Same-day chiropractic care for auto accidents, work injuries, and chronic pain. We handle all insurance and legal paperwork so you can focus on healing.
           </p>
 
-          <div class="hero__phone-block">
-            <span class="hero__phone-label">Call or click for immediate care</span>
-            <a href="tel:+15559112345" class="hero__phone" aria-label="Call (555) 911-2345">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.07 9.8a19.79 19.79 0 01-3.07-8.67A2 2 0 013 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
-              </svg>
-              (555) 911-2345
-            </a>
-          </div>
-
           <div class="hero__ctas">
-            <a href="tel:+15559112345" class="btn btn--emergency btn--lg" aria-label="Call for same-day appointment">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <a href="tel:+15559112345" class="btn btn--coral" aria-label="Call for same-day appointment">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.07 9.8a19.79 19.79 0 01-3.07-8.67A2 2 0 013 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
               </svg>
-              Book Same-Day Appointment
+              Call Now
             </a>
-            <a href="#contact" class="btn btn--outline btn--lg">
-              Request Appointment Online
+            <a href="#contact" class="btn btn--outline-light">
+              Request Appointment
             </a>
           </div>
 
@@ -1877,7 +1774,7 @@
                 <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
                 <polyline points="22 4 12 14.01 9 11.01"/>
               </svg>
-              No Upfront Payment Needed
+              No Upfront Payment
             </div>
             <div class="hero__trust-item">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -1899,14 +1796,49 @@
     </section>
 
     <!-- =============================================
+         HOW IT WORKS (moved after hero)
+    ============================================== -->
+    <section class="section section--pattern" id="process" aria-labelledby="process-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">How It Works</span>
+          <h2 class="section-title" id="process-title">From Pain to Relief in 3 Simple Steps</h2>
+          <p class="section-subtitle">Getting the care you need should be fast and effortless.</p>
+        </div>
+
+        <div class="steps" role="list">
+
+          <div class="step-card animate-on-scroll animate-on-scroll--delay-1" role="listitem">
+            <div class="step-card__number">1</div>
+            <h3 class="step-card__title">Call Us Now</h3>
+            <p class="step-card__desc">Call (555) 911-2345 or submit our online form. Tell us about your injury and we will get you in as fast as possible, often the same day.</p>
+          </div>
+
+          <div class="step-card animate-on-scroll animate-on-scroll--delay-2" role="listitem">
+            <div class="step-card__number">2</div>
+            <h3 class="step-card__title">Same-Day Visit</h3>
+            <p class="step-card__desc">Come in for a thorough evaluation. We assess your injuries, review imaging, and build a personalized treatment plan during your first visit.</p>
+          </div>
+
+          <div class="step-card animate-on-scroll animate-on-scroll--delay-3" role="listitem">
+            <div class="step-card__number">3</div>
+            <h3 class="step-card__title">Immediate Relief</h3>
+            <p class="step-card__desc">Begin treatment on day one. We provide ongoing care until you are fully recovered, handling all paperwork along the way.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================
          WHO WE HELP
     ============================================== -->
-    <section class="section" id="who-we-help" aria-labelledby="who-we-help-title">
+    <section class="section section--warm" id="who-we-help" aria-labelledby="who-we-help-title">
       <div class="container">
         <div class="section-header">
           <span class="section-label">Who We Help</span>
           <h2 class="section-title" id="who-we-help-title">Specialized Care for Every Injury</h2>
-          <p class="section-subtitle">From sudden accidents to chronic conditions, we provide targeted chiropractic treatment and handle all the paperwork on your behalf.</p>
+          <p class="section-subtitle">From sudden accidents to chronic conditions, we provide targeted treatment and handle all the paperwork on your behalf.</p>
         </div>
 
         <div class="who-we-help__grid">
@@ -1977,12 +1909,12 @@
     </section>
 
     <!-- =============================================
-         WHY CHOOSE US — STATS
+         WHY CHOOSE US -- STATS
     ============================================== -->
     <section class="section section--teal" id="why-us" aria-labelledby="why-us-title">
       <div class="container">
         <div class="section-header">
-          <span class="section-label" style="color: rgba(255,255,255,0.65);">Why Patients Choose Us</span>
+          <span class="section-label" style="background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.8);">Why Patients Choose Us</span>
           <h2 class="section-title" id="why-us-title" style="color: var(--color-white);">Trusted. Experienced. Available Now.</h2>
         </div>
 
@@ -1997,7 +1929,7 @@
             </div>
             <div class="stat-card__number"><span>Same</span> Day</div>
             <div class="stat-card__label">Appointments</div>
-            <div class="stat-card__sub">No waiting weeks for treatment. Call today, be seen today.</div>
+            <div class="stat-card__sub">Call today, be seen today. No waiting weeks.</div>
           </div>
 
           <div class="stat-card animate-on-scroll animate-on-scroll--delay-2">
@@ -2010,7 +1942,7 @@
             </div>
             <div class="stat-card__number">20<span>+</span></div>
             <div class="stat-card__label">Years Experience</div>
-            <div class="stat-card__sub">Two decades of expert chiropractic and accident injury care.</div>
+            <div class="stat-card__sub">Two decades of expert chiropractic care.</div>
           </div>
 
           <div class="stat-card animate-on-scroll animate-on-scroll--delay-3">
@@ -2021,7 +1953,7 @@
             </div>
             <div class="stat-card__number"><span>All</span></div>
             <div class="stat-card__label">Insurance Accepted</div>
-            <div class="stat-card__sub">We accept all major carriers including auto and workers comp.</div>
+            <div class="stat-card__sub">All major carriers, auto, and workers comp.</div>
           </div>
 
           <div class="stat-card animate-on-scroll animate-on-scroll--delay-4">
@@ -2035,8 +1967,8 @@
               </svg>
             </div>
             <div class="stat-card__number"><span>Full</span></div>
-            <div class="stat-card__label">Legal Paperwork Handled</div>
-            <div class="stat-card__sub">We work directly with personal injury attorneys on your case.</div>
+            <div class="stat-card__label">Paperwork Handled</div>
+            <div class="stat-card__sub">We work directly with your attorney.</div>
           </div>
 
         </div>
@@ -2150,12 +2082,12 @@
           <p class="offer-banner__subtitle">
             Were you recently in a car accident? Come in for a complimentary injury evaluation, X-rays review, and personalized treatment plan at no cost to you.
           </p>
-          <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
-            <a href="tel:+15559112345" class="btn btn--outline btn--lg" aria-label="Call to claim free first visit">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <div style="display:flex; gap:0.75rem; justify-content:center; flex-wrap:wrap;">
+            <a href="tel:+15559112345" class="btn btn--outline-light" aria-label="Call to claim free first visit">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.07 9.8a19.79 19.79 0 01-3.07-8.67A2 2 0 013 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
               </svg>
-              Claim Your Free Visit: (555) 911-2345
+              Claim Your Free Visit
             </a>
           </div>
         </div>
@@ -2169,7 +2101,7 @@
       <div class="container">
         <div class="insurance__inner">
 
-          <div class="insurance__content animate-on-scroll">
+          <div class="animate-on-scroll">
             <span class="section-label">Insurance &amp; Legal</span>
             <h2 class="section-title" id="insurance-title">We Handle All the Paperwork</h2>
             <p class="section-subtitle">
@@ -2258,76 +2190,9 @@
     </section>
 
     <!-- =============================================
-         PATIENT PROCESS
-    ============================================== -->
-    <section class="section" id="process" aria-labelledby="process-title">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-label">How It Works</span>
-          <h2 class="section-title" id="process-title">From Pain to Relief in 3 Simple Steps</h2>
-          <p class="section-subtitle">Getting the care you need should be fast and effortless. Here is exactly what to expect.</p>
-        </div>
-
-        <div class="process__steps" role="list">
-
-          <div class="process__step animate-on-scroll animate-on-scroll--delay-1" role="listitem">
-            <div class="process__step-number" aria-hidden="true">1</div>
-            <div class="process__step-icon-wrap" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.07 9.8a19.79 19.79 0 01-3.07-8.67A2 2 0 013 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
-              </svg>
-            </div>
-            <h3 class="process__step-title">Call Us Now</h3>
-            <p class="process__step-desc">Call (555) 911-2345 or submit our online form. Tell us about your injury and we will get you in as fast as possible, often the same day.</p>
-          </div>
-
-          <div class="process__connector" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M5 12h14"/>
-              <path d="M12 5l7 7-7 7"/>
-            </svg>
-          </div>
-
-          <div class="process__step animate-on-scroll animate-on-scroll--delay-2" role="listitem">
-            <div class="process__step-number" aria-hidden="true">2</div>
-            <div class="process__step-icon-wrap" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
-                <line x1="16" y1="2" x2="16" y2="6"/>
-                <line x1="8" y1="2" x2="8" y2="6"/>
-                <line x1="3" y1="10" x2="21" y2="10"/>
-              </svg>
-            </div>
-            <h3 class="process__step-title">Same-Day Appointment</h3>
-            <p class="process__step-desc">Come into our clinic for a thorough evaluation. We assess your injuries, review imaging, and build a personalized treatment plan during your first visit.</p>
-          </div>
-
-          <div class="process__connector" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M5 12h14"/>
-              <path d="M12 5l7 7-7 7"/>
-            </svg>
-          </div>
-
-          <div class="process__step animate-on-scroll animate-on-scroll--delay-3" role="listitem">
-            <div class="process__step-number" aria-hidden="true">3</div>
-            <div class="process__step-icon-wrap" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
-              </svg>
-            </div>
-            <h3 class="process__step-title">Immediate Relief</h3>
-            <p class="process__step-desc">Begin treatment on day one and feel relief from your very first adjustment. We provide ongoing care until you are fully recovered, handling all paperwork along the way.</p>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- =============================================
          TESTIMONIALS
     ============================================== -->
-    <section class="section section--gray" id="testimonials" aria-labelledby="testimonials-title">
+    <section class="section" id="testimonials" aria-labelledby="testimonials-title">
       <div class="container">
         <div class="section-header">
           <span class="section-label">Patient Reviews</span>
@@ -2405,60 +2270,63 @@
     </section>
 
     <!-- =============================================
-         LOCATION & CONTACT
+         LOCATION & CONTACT (unique split layout)
     ============================================== -->
-    <section class="section" id="contact" aria-labelledby="contact-title">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-label">Location &amp; Contact</span>
-          <h2 class="section-title" id="contact-title">Visit Us or Request an Appointment</h2>
-          <p class="section-subtitle">Extended hours mean you can always get the care you need. Walk-ins welcome for urgent cases.</p>
+    <section class="contact-section" id="contact" aria-labelledby="contact-title">
+      <div class="contact-top">
+        <div class="container">
+          <div class="section-header" style="margin-bottom: 0;">
+            <span class="section-label">Location &amp; Contact</span>
+            <h2 class="section-title" id="contact-title">Visit Us or Request an Appointment</h2>
+            <p class="section-subtitle">Extended hours and walk-ins welcome for urgent cases.</p>
+          </div>
         </div>
+      </div>
+      <div class="container">
+        <div class="contact-cards">
 
-        <div class="location__inner">
-
-          <div>
+          <div class="contact-info-card animate-on-scroll animate-on-scroll--delay-1">
             <h3>Find Us</h3>
 
-            <div class="location__detail animate-on-scroll animate-on-scroll--delay-1">
-              <div class="location__detail-icon" aria-hidden="true">
+            <div class="contact-detail">
+              <div class="contact-detail__icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
                   <circle cx="12" cy="10" r="3"/>
                 </svg>
               </div>
-              <div class="location__detail-content">
+              <div class="contact-detail__content">
                 <strong>Address</strong>
                 <span>1234 Main Street, Suite 100<br />Springfield, IL 62701</span>
               </div>
             </div>
 
-            <div class="location__detail animate-on-scroll animate-on-scroll--delay-2">
-              <div class="location__detail-icon" aria-hidden="true">
+            <div class="contact-detail">
+              <div class="contact-detail__icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.07 9.8a19.79 19.79 0 01-3.07-8.67A2 2 0 013 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
                 </svg>
               </div>
-              <div class="location__detail-content">
+              <div class="contact-detail__content">
                 <strong>Phone</strong>
                 <a href="tel:+15559112345">(555) 911-2345</a>
               </div>
             </div>
 
-            <div class="location__detail animate-on-scroll animate-on-scroll--delay-3">
-              <div class="location__detail-icon" aria-hidden="true">
+            <div class="contact-detail">
+              <div class="contact-detail__icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
                   <polyline points="22,6 12,13 2,6"/>
                 </svg>
               </div>
-              <div class="location__detail-content">
+              <div class="contact-detail__content">
                 <strong>Email</strong>
                 <a href="mailto:info@reliefnowchiropractic.com">info@reliefnowchiropractic.com</a>
               </div>
             </div>
 
-            <div class="location__hours animate-on-scroll animate-on-scroll--delay-4">
+            <div class="contact-hours">
               <h4>Office Hours</h4>
               <div class="hours-grid" aria-label="Office hours">
                 <div class="hours-row">
@@ -2476,9 +2344,9 @@
                   <span class="hours-row__time">10:00 AM &ndash; 2:00 PM</span>
                   <span class="hours-row__badge">Open</span>
                 </div>
-                <div class="hours-row" style="padding-top: 0.75rem;">
-                  <span class="hours-row__day" style="color: var(--color-emergency); font-weight: 700;">Urgent / Emergency</span>
-                  <span class="hours-row__time" style="color: var(--color-emergency); font-weight: 700;">Call Anytime</span>
+                <div class="hours-row" style="border-bottom: none;">
+                  <span class="hours-row__day" style="color: var(--color-coral); font-weight: 700;">Urgent / Emergency</span>
+                  <span class="hours-row__time" style="color: var(--color-coral); font-weight: 700;">Call Anytime</span>
                 </div>
               </div>
             </div>
@@ -2527,7 +2395,7 @@
 
               <div class="form-group">
                 <label for="message">Tell Us About Your Symptoms</label>
-                <textarea id="message" name="message" placeholder="Briefly describe your pain, when it started, and any relevant accident details..." rows="4"></textarea>
+                <textarea id="message" name="message" placeholder="Briefly describe your pain, when it started, and any relevant details..." rows="3"></textarea>
               </div>
 
               <button type="submit" class="form-submit" aria-label="Submit appointment request">
@@ -2539,6 +2407,7 @@
 
         </div>
       </div>
+      <div style="height: 4rem;"></div>
     </section>
 
   </main>
@@ -2548,19 +2417,19 @@
   ============================================== -->
   <footer class="footer" aria-label="Site footer">
     <div class="container">
-      <div class="footer__grid">
+      <div class="footer__top">
 
         <div class="footer__brand">
           <a href="#" class="footer__logo" aria-label="Relief Now Chiropractic home">
             <div class="footer__logo-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
-                <polyline points="22 4 12 14.01 9 11.01"/>
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
+                <path d="M12 8v4l3 3"/>
               </svg>
             </div>
             <span class="footer__logo-name">Relief Now Chiropractic</span>
           </a>
-          <p>Emergency-focused chiropractic care with same-day appointments. Specializing in auto accident injuries, personal injury cases, and pain relief. Your recovery starts today.</p>
+          <p>Same-day chiropractic care specializing in auto accident injuries, personal injury cases, and pain relief. Your recovery starts today.</p>
           <a href="tel:+15559112345" class="footer__phone" aria-label="Call (555) 911-2345">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.07 9.8a19.79 19.79 0 01-3.07-8.67A2 2 0 013 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
@@ -2569,43 +2438,31 @@
           </a>
         </div>
 
-        <div>
-          <p class="footer__heading">Services</p>
-          <ul class="footer__links">
-            <li><a href="#services">Spinal Adjustment</a></li>
-            <li><a href="#services">Pain Relief Therapy</a></li>
-            <li><a href="#services">Accident Injury Care</a></li>
-            <li><a href="#services">Whiplash Treatment</a></li>
-            <li><a href="#services">Back Pain Relief</a></li>
-            <li><a href="#services">Neck Pain Treatment</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <p class="footer__heading">Quick Links</p>
-          <ul class="footer__links">
-            <li><a href="#who-we-help">Who We Help</a></li>
-            <li><a href="#why-us">Why Choose Us</a></li>
-            <li><a href="#insurance">Insurance &amp; Legal</a></li>
-            <li><a href="#process">How It Works</a></li>
-            <li><a href="#testimonials">Patient Reviews</a></li>
-            <li><a href="#contact">Contact &amp; Hours</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <p class="footer__heading">Same-Day Care</p>
-          <div class="footer__emergency-box">
-            <h4>Need Immediate Care?</h4>
-            <p>Same-day appointments available. Call now and be seen today.</p>
-            <a href="tel:+15559112345" class="footer__emergency-phone" aria-label="Call for emergency care (555) 911-2345">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.07 9.8a19.79 19.79 0 01-3.07-8.67A2 2 0 013 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
-              </svg>
-              (555) 911-2345
-            </a>
+        <nav class="footer__nav" aria-label="Footer navigation">
+          <div class="footer__col">
+            <p class="footer__heading">Services</p>
+            <ul class="footer__links">
+              <li><a href="#services">Spinal Adjustment</a></li>
+              <li><a href="#services">Pain Relief Therapy</a></li>
+              <li><a href="#services">Accident Injury Care</a></li>
+              <li><a href="#services">Whiplash Treatment</a></li>
+              <li><a href="#services">Back Pain Relief</a></li>
+              <li><a href="#services">Neck Pain Treatment</a></li>
+            </ul>
           </div>
-        </div>
+
+          <div class="footer__col">
+            <p class="footer__heading">Quick Links</p>
+            <ul class="footer__links">
+              <li><a href="#who-we-help">Who We Help</a></li>
+              <li><a href="#why-us">Why Choose Us</a></li>
+              <li><a href="#insurance">Insurance &amp; Legal</a></li>
+              <li><a href="#process">How It Works</a></li>
+              <li><a href="#testimonials">Patient Reviews</a></li>
+              <li><a href="#contact">Contact &amp; Hours</a></li>
+            </ul>
+          </div>
+        </nav>
 
       </div>
 
@@ -2688,12 +2545,6 @@
       });
     }());
 
-    // ===== Animated Stat Numbers =====
-    (function () {
-      // Stats are text-based in this design, no numeric animation needed
-      // but we keep scroll-reveal via the IntersectionObserver above
-    }());
-
     // ===== Contact Form Handling =====
     (function () {
       var form = document.getElementById('contactForm');
@@ -2711,7 +2562,7 @@
             ? form.querySelector('#firstName')
             : (!phone ? form.querySelector('#phone') : form.querySelector('#injuryType'));
           firstEmpty.focus();
-          firstEmpty.style.borderColor = 'var(--color-emergency)';
+          firstEmpty.style.borderColor = 'var(--color-coral)';
           setTimeout(function () {
             firstEmpty.style.borderColor = '';
           }, 2500);
@@ -2725,12 +2576,12 @@
 
         setTimeout(function () {
           btn.textContent = 'Request Sent! We Will Call You Shortly.';
-          btn.style.backgroundColor = 'var(--color-primary)';
+          btn.style.background = 'var(--color-primary)';
           form.reset();
 
           setTimeout(function () {
             btn.textContent = original;
-            btn.style.backgroundColor = '';
+            btn.style.background = '';
             btn.disabled = false;
           }, 5000);
         }, 1200);
@@ -2747,9 +2598,9 @@
     // ===== Smooth scroll offset for fixed bars =====
     (function () {
       var offset = parseInt(
-        getComputedStyle(document.documentElement).getPropertyValue('--emergency-bar-height') || '48'
+        getComputedStyle(document.documentElement).getPropertyValue('--banner-height') || '40'
       ) + parseInt(
-        getComputedStyle(document.documentElement).getPropertyValue('--nav-height') || '70'
+        getComputedStyle(document.documentElement).getPropertyValue('--nav-height') || '64'
       );
 
       document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {

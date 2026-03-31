@@ -12,7 +12,7 @@
   <meta name="robots" content="index, follow" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
   <script type="application/ld+json">
   {
@@ -50,34 +50,37 @@
 
   <style>
     /* ============================================================
-       CSS CUSTOM PROPERTIES
+       CSS CUSTOM PROPERTIES - LIGHT, CALMING PALETTE
     ============================================================ */
     :root {
-      --primary: #0047AB;
-      --primary-dark: #003080;
-      --primary-light: #1a5fc8;
-      --secondary: #FFBF00;
-      --secondary-dark: #e6a800;
-      --secondary-light: #ffd040;
-      --accent: #F5F5F5;
-      --dark-bg: #0A0A2E;
-      --dark-bg-2: #0d0d3a;
-      --dark-bg-3: #111147;
-      --text-dark: #1a1a2e;
-      --text-mid: #3a3a5c;
-      --text-light: #8888aa;
+      --primary: #4A7C9B;
+      --primary-dark: #3A6580;
+      --primary-light: #6A9DBD;
+      --secondary: #B08D57;
+      --secondary-dark: #9A7A4A;
+      --secondary-light: #C9A76C;
+      --accent: #F7F9FB;
+      --accent-warm: #FBF8F4;
+      --light-bg: #FFFFFF;
+      --light-bg-2: #F2F5F8;
+      --light-bg-3: #E8EDF2;
+      --text-dark: #2C3E50;
+      --text-mid: #5A6B7D;
+      --text-light: #8A99A8;
       --white: #ffffff;
-      --border-light: rgba(255, 191, 0, 0.2);
-      --border-subtle: rgba(255, 255, 255, 0.08);
-      --gold-glow: 0 0 24px rgba(255, 191, 0, 0.35);
-      --gold-glow-soft: 0 0 12px rgba(255, 191, 0, 0.2);
-      --shadow-card: 0 8px 40px rgba(0, 0, 0, 0.18);
-      --shadow-deep: 0 20px 60px rgba(0, 0, 0, 0.3);
-      --radius: 4px;
-      --radius-lg: 8px;
+      --border-light: rgba(74, 124, 155, 0.12);
+      --border-subtle: rgba(0, 0, 0, 0.06);
+      --accent-glow: 0 0 24px rgba(176, 141, 87, 0.15);
+      --accent-glow-soft: 0 0 12px rgba(176, 141, 87, 0.1);
+      --shadow-card: 0 8px 32px rgba(44, 62, 80, 0.08);
+      --shadow-deep: 0 20px 48px rgba(44, 62, 80, 0.12);
+      --shadow-soft: 0 2px 12px rgba(44, 62, 80, 0.06);
+      --radius: 6px;
+      --radius-lg: 12px;
+      --radius-xl: 16px;
       --transition: all 0.3s ease;
-      --font-serif: 'Playfair Display', Georgia, serif;
-      --font-sans: 'Lato', Helvetica, sans-serif;
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'Inter', -apple-system, Helvetica, sans-serif;
     }
 
     /* ============================================================
@@ -131,8 +134,8 @@
     .section-label {
       font-family: var(--font-sans);
       font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.25em;
+      font-weight: 600;
+      letter-spacing: 0.22em;
       text-transform: uppercase;
       color: var(--secondary);
       display: block;
@@ -140,14 +143,15 @@
     }
 
     .section-title {
-      font-size: clamp(1.5rem, 3vw, 2.25rem);
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
       font-weight: 600;
       line-height: 1.15;
+      color: var(--text-dark);
     }
 
     .section-subtitle {
       font-size: 1.05rem;
-      font-weight: 300;
+      font-weight: 400;
       line-height: 1.75;
       color: var(--text-mid);
       max-width: 52ch;
@@ -163,12 +167,12 @@
       padding: 0 1.5rem;
     }
 
-    .hr-gold {
+    .hr-accent {
       border: none;
       height: 1px;
-      background: linear-gradient(90deg, transparent, var(--secondary), transparent);
-      opacity: 0.45;
+      background: linear-gradient(90deg, transparent, var(--border-light), transparent);
       margin: 0 auto;
+      max-width: 1200px;
     }
 
     .btn {
@@ -176,54 +180,16 @@
       align-items: center;
       gap: 0.5rem;
       font-family: var(--font-sans);
-      font-size: 0.85rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
-      padding: 0.75rem 1.75rem;
-      max-height: 52px;
+      padding: 0.65rem 1.5rem;
       border-radius: var(--radius);
       border: 2px solid transparent;
       cursor: pointer;
       transition: var(--transition);
       white-space: nowrap;
-    }
-
-    .btn--gold {
-      background: var(--secondary);
-      color: var(--dark-bg);
-      border-color: var(--secondary);
-    }
-
-    .btn--gold:hover {
-      background: var(--secondary-light);
-      border-color: var(--secondary-light);
-      box-shadow: var(--gold-glow);
-      transform: translateY(-1px);
-    }
-
-    .btn--outline-gold {
-      background: transparent;
-      color: var(--secondary);
-      border-color: var(--secondary);
-    }
-
-    .btn--outline-gold:hover {
-      background: var(--secondary);
-      color: var(--dark-bg);
-      box-shadow: var(--gold-glow);
-      transform: translateY(-1px);
-    }
-
-    .btn--outline-white {
-      background: transparent;
-      color: var(--white);
-      border-color: rgba(255,255,255,0.5);
-    }
-
-    .btn--outline-white:hover {
-      background: rgba(255,255,255,0.1);
-      border-color: var(--white);
     }
 
     .btn--primary {
@@ -236,7 +202,68 @@
       background: var(--primary-dark);
       border-color: var(--primary-dark);
       transform: translateY(-1px);
-      box-shadow: 0 8px 24px rgba(0, 71, 171, 0.35);
+      box-shadow: 0 6px 20px rgba(74, 124, 155, 0.25);
+    }
+
+    .btn--secondary {
+      background: var(--secondary);
+      color: var(--white);
+      border-color: var(--secondary);
+    }
+
+    .btn--secondary:hover {
+      background: var(--secondary-dark);
+      border-color: var(--secondary-dark);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(176, 141, 87, 0.25);
+    }
+
+    .btn--outline {
+      background: transparent;
+      color: var(--primary);
+      border-color: var(--primary);
+    }
+
+    .btn--outline:hover {
+      background: var(--primary);
+      color: var(--white);
+      transform: translateY(-1px);
+    }
+
+    .btn--outline-secondary {
+      background: transparent;
+      color: var(--secondary);
+      border-color: var(--secondary);
+    }
+
+    .btn--outline-secondary:hover {
+      background: var(--secondary);
+      color: var(--white);
+      transform: translateY(-1px);
+    }
+
+    .btn--ghost {
+      background: transparent;
+      color: var(--white);
+      border-color: rgba(255,255,255,0.4);
+    }
+
+    .btn--ghost:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: rgba(255,255,255,0.7);
+    }
+
+    .btn--text {
+      background: transparent;
+      border: none;
+      padding: 0.65rem 0;
+      color: var(--primary);
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+
+    .btn--text:hover {
+      color: var(--secondary);
     }
 
     /* ============================================================
@@ -244,7 +271,7 @@
     ============================================================ */
     .fade-in {
       opacity: 0;
-      transform: translateY(32px);
+      transform: translateY(24px);
       transition: opacity 0.7s ease, transform 0.7s ease;
     }
 
@@ -268,23 +295,23 @@
       left: 0;
       right: 0;
       z-index: 1000;
-      background: rgba(10, 10, 46, 0.97);
+      background: rgba(255, 255, 255, 0.97);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border-light);
+      border-bottom: 1px solid var(--border-subtle);
       transition: var(--transition);
     }
 
     .nav.scrolled {
-      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 2px 20px rgba(44, 62, 80, 0.08);
     }
 
     .nav__inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 68px;
-      gap: 2rem;
+      height: 64px;
+      gap: 1.5rem;
     }
 
     .nav__logo {
@@ -296,16 +323,16 @@
 
     .nav__logo-name {
       font-family: var(--font-serif);
-      font-size: 1.2rem;
+      font-size: 1.15rem;
       font-weight: 700;
-      color: var(--white);
+      color: var(--text-dark);
       line-height: 1;
     }
 
     .nav__logo-tagline {
-      font-size: 0.62rem;
-      font-weight: 400;
-      letter-spacing: 0.18em;
+      font-size: 0.6rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
       text-transform: uppercase;
       color: var(--secondary);
     }
@@ -313,37 +340,36 @@
     .nav__links {
       display: flex;
       align-items: center;
-      gap: 2rem;
+      gap: 1.5rem;
     }
 
     .nav__link {
-      font-size: 0.82rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.75);
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      color: var(--text-mid);
     }
 
     .nav__link:hover {
-      color: var(--secondary);
+      color: var(--primary);
     }
 
     .nav__cta {
       font-size: 0.75rem;
-      padding: 0.65rem 1.4rem;
+      padding: 0.5rem 1.1rem;
       flex-shrink: 0;
     }
 
     .nav__phone {
       font-size: 0.82rem;
-      font-weight: 700;
-      color: var(--secondary);
-      letter-spacing: 0.04em;
+      font-weight: 600;
+      color: var(--primary);
+      letter-spacing: 0.02em;
       flex-shrink: 0;
     }
 
     .nav__phone:hover {
-      color: var(--secondary-light);
+      color: var(--secondary);
     }
 
     .nav__toggle {
@@ -357,9 +383,9 @@
     }
 
     .nav__toggle span {
-      width: 24px;
+      width: 22px;
       height: 2px;
-      background: var(--white);
+      background: var(--text-dark);
       border-radius: 2px;
       transition: var(--transition);
       display: block;
@@ -367,8 +393,8 @@
 
     .nav__mobile {
       display: none;
-      background: var(--dark-bg);
-      border-top: 1px solid var(--border-light);
+      background: var(--white);
+      border-top: 1px solid var(--border-subtle);
       padding: 1.5rem;
       flex-direction: column;
       gap: 1.25rem;
@@ -407,9 +433,9 @@
       inset: 0;
       background: linear-gradient(
         135deg,
-        rgba(10, 10, 46, 0.92) 0%,
-        rgba(10, 10, 46, 0.75) 50%,
-        rgba(0, 71, 171, 0.55) 100%
+        rgba(44, 62, 80, 0.88) 0%,
+        rgba(74, 124, 155, 0.65) 50%,
+        rgba(176, 141, 87, 0.35) 100%
       );
       z-index: 1;
     }
@@ -431,15 +457,15 @@
     .hero__eyebrow-line {
       width: 40px;
       height: 1px;
-      background: var(--secondary);
+      background: var(--secondary-light);
     }
 
     .hero__eyebrow-text {
       font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.3em;
+      font-weight: 600;
+      letter-spacing: 0.25em;
       text-transform: uppercase;
-      color: var(--secondary);
+      color: var(--secondary-light);
     }
 
     .hero__title {
@@ -452,22 +478,22 @@
 
     .hero__title em {
       font-style: italic;
-      color: var(--secondary);
+      color: var(--secondary-light);
     }
 
     .hero__subtitle {
-      font-size: 1.125rem;
+      font-size: 1.1rem;
       font-weight: 300;
-      color: rgba(255,255,255,0.82);
+      color: rgba(255,255,255,0.85);
       line-height: 1.7;
-      margin-bottom: 1.5rem;
-      max-width: 600px;
+      margin-bottom: 1.75rem;
+      max-width: 580px;
     }
 
     .hero__actions {
       display: flex;
       flex-wrap: wrap;
-      gap: 1rem;
+      gap: 0.75rem;
       align-items: center;
       margin-bottom: 3rem;
     }
@@ -475,21 +501,21 @@
     .hero__phone-link {
       display: flex;
       align-items: center;
-      gap: 0.6rem;
+      gap: 0.5rem;
       color: rgba(255,255,255,0.85);
-      font-size: 1rem;
-      font-weight: 700;
-      letter-spacing: 0.04em;
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
     }
 
     .hero__phone-link:hover {
-      color: var(--secondary);
+      color: var(--secondary-light);
     }
 
     .hero__phone-icon {
-      width: 18px;
-      height: 18px;
-      fill: var(--secondary);
+      width: 16px;
+      height: 16px;
+      fill: var(--secondary-light);
     }
 
     .hero__trust {
@@ -508,14 +534,14 @@
       font-family: var(--font-serif);
       font-size: 1.5rem;
       font-weight: 700;
-      color: var(--secondary);
+      color: var(--secondary-light);
       line-height: 1;
     }
 
     .hero__trust-label {
       font-size: 0.72rem;
       font-weight: 400;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.06em;
       color: rgba(255,255,255,0.6);
       text-transform: uppercase;
     }
@@ -524,8 +550,8 @@
        EXECUTIVE EXPERIENCE
     ============================================================ */
     .experience {
-      background: var(--dark-bg);
-      padding: 4rem 0;
+      background: var(--accent);
+      padding: 5rem 0;
     }
 
     .experience__header {
@@ -533,45 +559,36 @@
       margin-bottom: 4rem;
     }
 
-    .experience__header .section-title {
-      color: var(--white);
-    }
-
     .experience__header .section-subtitle {
-      color: rgba(255,255,255,0.6);
       margin: 1rem auto 0;
     }
 
     .experience__grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2px;
-      border: 1px solid var(--border-light);
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
     }
 
     .experience__card {
-      padding: 2rem;
-      background: var(--dark-bg-2);
-      border-right: 1px solid var(--border-light);
+      padding: 2.5rem 2rem;
+      background: var(--white);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
       transition: var(--transition);
       position: relative;
-      overflow: hidden;
-    }
-
-    .experience__card:last-child {
-      border-right: none;
     }
 
     .experience__card::before {
       content: '';
       position: absolute;
       bottom: 0;
-      left: 0;
-      right: 0;
+      left: 1.5rem;
+      right: 1.5rem;
       height: 2px;
       background: var(--secondary);
       transform: scaleX(0);
       transition: transform 0.4s ease;
+      border-radius: 1px;
     }
 
     .experience__card:hover::before {
@@ -579,38 +596,38 @@
     }
 
     .experience__card:hover {
-      background: var(--dark-bg-3);
-      box-shadow: inset 0 0 40px rgba(255, 191, 0, 0.05);
+      box-shadow: var(--shadow-card);
+      transform: translateY(-2px);
     }
 
     .experience__icon {
-      width: 48px;
-      height: 48px;
+      width: 44px;
+      height: 44px;
       margin-bottom: 1.5rem;
-      color: var(--secondary);
+      color: var(--primary);
     }
 
     .experience__title {
       font-family: var(--font-serif);
-      font-size: 1.3rem;
+      font-size: 1.35rem;
       font-weight: 600;
-      color: var(--white);
+      color: var(--text-dark);
       margin-bottom: 0.75rem;
     }
 
     .experience__text {
-      font-size: 0.95rem;
-      font-weight: 300;
+      font-size: 0.92rem;
+      font-weight: 400;
       line-height: 1.7;
-      color: rgba(255,255,255,0.6);
+      color: var(--text-mid);
     }
 
     /* ============================================================
        SERVICES
     ============================================================ */
     .services {
-      padding: 4rem 0;
-      background: var(--accent);
+      padding: 5rem 0;
+      background: var(--white);
     }
 
     .services__header {
@@ -619,37 +636,66 @@
       align-items: flex-end;
       justify-content: space-between;
       gap: 2rem;
-      margin-bottom: 3.5rem;
+      margin-bottom: 3rem;
     }
 
-    .services__header-left .section-title {
-      color: var(--text-dark);
+    .services__image-block {
+      margin-bottom: 3rem;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      position: relative;
+      height: 240px;
+    }
+
+    .services__image-block img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .services__image-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, rgba(44, 62, 80, 0.75), transparent);
+      display: flex;
+      align-items: center;
+      padding: 2.5rem;
+    }
+
+    .services__image-text {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      font-style: italic;
+      color: var(--white);
+      max-width: 30ch;
+      line-height: 1.4;
+    }
+
+    .services__image-text span {
+      color: var(--secondary-light);
     }
 
     .services__grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       gap: 1.5rem;
     }
 
     .service-card {
       background: var(--white);
-      border: 1px solid rgba(0,0,0,0.07);
+      border: 1px solid var(--border-subtle);
       border-radius: var(--radius-lg);
       overflow: hidden;
       transition: var(--transition);
       display: flex;
       flex-direction: column;
+      height: 100%;
     }
 
     .service-card:hover {
       transform: translateY(-4px);
       box-shadow: var(--shadow-card);
-      border-color: rgba(255, 191, 0, 0.4);
-    }
-
-    .service-card:hover .service-card__icon {
-      box-shadow: var(--gold-glow-soft);
+      border-color: var(--primary-light);
     }
 
     .service-card__body {
@@ -660,9 +706,9 @@
     }
 
     .service-card__icon {
-      width: 50px;
-      height: 50px;
-      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(135deg, rgba(74, 124, 155, 0.1), rgba(74, 124, 155, 0.18));
       border-radius: var(--radius);
       display: flex;
       align-items: center;
@@ -672,27 +718,36 @@
       transition: var(--transition);
     }
 
+    .service-card:hover .service-card__icon {
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    }
+
     .service-card__icon svg {
-      width: 24px;
-      height: 24px;
-      color: var(--white);
+      width: 22px;
+      height: 22px;
+      color: var(--primary);
       fill: none;
       stroke: currentColor;
       stroke-width: 1.8;
+      transition: var(--transition);
+    }
+
+    .service-card:hover .service-card__icon svg {
+      color: var(--white);
     }
 
     .service-card__tag {
       font-size: 0.65rem;
-      font-weight: 700;
-      letter-spacing: 0.2em;
+      font-weight: 600;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
-      color: var(--secondary-dark);
+      color: var(--secondary);
       margin-bottom: 0.5rem;
     }
 
     .service-card__title {
       font-family: var(--font-serif);
-      font-size: 1.2rem;
+      font-size: 1.25rem;
       font-weight: 600;
       color: var(--text-dark);
       margin-bottom: 0.75rem;
@@ -709,8 +764,8 @@
 
     .service-card__link {
       font-size: 0.8rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
+      font-weight: 600;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
       color: var(--primary);
       display: flex;
@@ -719,7 +774,7 @@
     }
 
     .service-card__link:hover {
-      color: var(--secondary-dark);
+      color: var(--secondary);
       gap: 0.7rem;
     }
 
@@ -727,38 +782,28 @@
        CORPORATE WELLNESS
     ============================================================ */
     .corporate {
-      background: var(--dark-bg);
-      padding: 4rem 0;
+      background: var(--accent-warm);
+      padding: 5rem 0;
     }
 
     .corporate__inner {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 5rem;
-      align-items: center;
+      gap: 4rem;
+      align-items: start;
     }
 
     .corporate__image-wrap {
       position: relative;
-      border-radius: var(--radius-lg);
+      border-radius: var(--radius-xl);
       overflow: hidden;
-    }
-
-    .corporate__image-wrap::before {
-      content: '';
-      position: absolute;
-      inset: -2px;
-      border-radius: var(--radius-lg);
-      background: linear-gradient(135deg, var(--secondary), transparent, var(--primary));
-      z-index: -1;
-      padding: 2px;
     }
 
     .corporate__image {
       width: 100%;
       height: 440px;
       object-fit: cover;
-      border-radius: var(--radius-lg);
+      border-radius: var(--radius-xl);
       display: block;
     }
 
@@ -767,36 +812,34 @@
       top: 1.5rem;
       left: 1.5rem;
       background: var(--secondary);
-      color: var(--dark-bg);
-      font-size: 0.7rem;
-      font-weight: 900;
+      color: var(--white);
+      font-size: 0.68rem;
+      font-weight: 700;
       letter-spacing: 0.15em;
       text-transform: uppercase;
       padding: 0.4rem 0.9rem;
-      border-radius: 2px;
+      border-radius: var(--radius);
     }
 
     .corporate__content .section-title {
-      color: var(--white);
       margin-bottom: 1rem;
     }
 
     .corporate__content .section-subtitle {
-      color: rgba(255,255,255,0.65);
-      margin-bottom: 2.5rem;
+      margin-bottom: 2rem;
     }
 
     .corporate__stats {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 1rem;
-      margin-bottom: 2.5rem;
+      margin-bottom: 2rem;
     }
 
     .corporate__stat {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid var(--border-light);
-      border-radius: var(--radius);
+      background: var(--white);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
       padding: 1.25rem;
     }
 
@@ -804,7 +847,7 @@
       font-family: var(--font-serif);
       font-size: 1.8rem;
       font-weight: 700;
-      color: var(--secondary);
+      color: var(--primary);
       line-height: 1;
       margin-bottom: 0.35rem;
     }
@@ -812,23 +855,24 @@
     .corporate__stat-label {
       font-size: 0.8rem;
       font-weight: 400;
-      color: rgba(255,255,255,0.55);
+      color: var(--text-mid);
       line-height: 1.4;
     }
 
     /* FORM */
     .quote-form {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid var(--border-light);
-      border-radius: var(--radius-lg);
+      background: var(--white);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-xl);
       padding: 2rem;
+      box-shadow: var(--shadow-soft);
     }
 
     .quote-form__title {
       font-family: var(--font-serif);
-      font-size: 1.15rem;
+      font-size: 1.2rem;
       font-weight: 600;
-      color: var(--white);
+      color: var(--text-dark);
       margin-bottom: 1.25rem;
     }
 
@@ -848,19 +892,19 @@
 
     .form-group label {
       font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
+      font-weight: 600;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: rgba(255,255,255,0.6);
+      color: var(--text-mid);
     }
 
     .form-group input,
     .form-group select,
     .form-group textarea {
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.12);
+      background: var(--accent);
+      border: 1px solid var(--border-subtle);
       border-radius: var(--radius);
-      color: var(--white);
+      color: var(--text-dark);
       font-family: var(--font-sans);
       font-size: 0.9rem;
       padding: 0.7rem 1rem;
@@ -870,19 +914,19 @@
 
     .form-group input::placeholder,
     .form-group textarea::placeholder {
-      color: rgba(255,255,255,0.3);
+      color: var(--text-light);
     }
 
     .form-group input:focus,
     .form-group select:focus,
     .form-group textarea:focus {
-      border-color: var(--secondary);
-      box-shadow: 0 0 0 3px rgba(255, 191, 0, 0.1);
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(74, 124, 155, 0.1);
     }
 
     .form-group select option {
-      background: var(--dark-bg-2);
-      color: var(--white);
+      background: var(--white);
+      color: var(--text-dark);
     }
 
     .form-group textarea {
@@ -894,7 +938,7 @@
        CONDITIONS
     ============================================================ */
     .conditions {
-      padding: 4rem 0;
+      padding: 5rem 0;
       background: var(--white);
     }
 
@@ -903,39 +947,35 @@
       margin-bottom: 3.5rem;
     }
 
-    .conditions__header .section-title {
-      color: var(--text-dark);
-    }
-
     .conditions__header .section-subtitle {
       margin: 1rem auto 0;
     }
 
     .conditions__grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(5, 1fr);
       gap: 1rem;
     }
 
     .condition-card {
-      border: 1px solid rgba(0,0,0,0.08);
+      border: 1px solid var(--border-subtle);
       border-radius: var(--radius-lg);
-      padding: 2rem 1.5rem;
+      padding: 2rem 1.25rem;
       text-align: center;
       transition: var(--transition);
       background: var(--white);
     }
 
     .condition-card:hover {
-      border-color: var(--secondary);
-      box-shadow: var(--gold-glow-soft), var(--shadow-card);
+      border-color: var(--primary-light);
+      box-shadow: var(--shadow-card);
       transform: translateY(-3px);
     }
 
     .condition-card__icon {
       width: 52px;
       height: 52px;
-      background: linear-gradient(135deg, rgba(0,71,171,0.08), rgba(0,71,171,0.15));
+      background: linear-gradient(135deg, rgba(74, 124, 155, 0.08), rgba(74, 124, 155, 0.15));
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -964,7 +1004,7 @@
 
     .condition-card__name {
       font-family: var(--font-serif);
-      font-size: 1.05rem;
+      font-size: 1.1rem;
       font-weight: 600;
       color: var(--text-dark);
       margin-bottom: 0.5rem;
@@ -980,15 +1020,15 @@
        DOCTOR
     ============================================================ */
     .doctor {
-      padding: 4rem 0;
+      padding: 5rem 0;
       background: var(--accent);
     }
 
     .doctor__inner {
       display: grid;
-      grid-template-columns: 420px 1fr;
-      gap: 5rem;
-      align-items: center;
+      grid-template-columns: 380px 1fr;
+      gap: 4rem;
+      align-items: start;
     }
 
     .doctor__image-wrap {
@@ -997,65 +1037,26 @@
 
     .doctor__image {
       width: 100%;
-      height: 540px;
+      height: 480px;
       object-fit: cover;
-      border-radius: var(--radius-lg);
+      border-radius: var(--radius-xl);
       display: block;
     }
 
-    .doctor__credentials {
-      position: absolute;
-      bottom: 2rem;
-      left: 2rem;
-      right: 2rem;
-      background: rgba(10, 10, 46, 0.92);
-      backdrop-filter: blur(8px);
-      border: 1px solid var(--border-light);
-      border-radius: var(--radius);
-      padding: 1.25rem 1.5rem;
-    }
-
-    .doctor__cred-title {
-      font-family: var(--font-serif);
-      font-size: 1rem;
-      font-weight: 600;
-      color: var(--white);
-      margin-bottom: 0.5rem;
-    }
-
-    .doctor__cred-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
-
-    .doctor__cred-tag {
-      font-size: 0.68rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--secondary);
-      background: rgba(255, 191, 0, 0.1);
-      border: 1px solid rgba(255, 191, 0, 0.25);
-      border-radius: 2px;
-      padding: 0.2rem 0.6rem;
-    }
-
     .doctor__content .section-title {
-      color: var(--text-dark);
       margin-bottom: 0.35rem;
     }
 
     .doctor__subtitle {
       font-size: 1rem;
-      font-weight: 400;
+      font-weight: 500;
       color: var(--primary);
-      letter-spacing: 0.04em;
+      letter-spacing: 0.02em;
       margin-bottom: 1.5rem;
     }
 
     .doctor__bio {
-      font-size: 0.97rem;
+      font-size: 0.95rem;
       line-height: 1.8;
       color: var(--text-mid);
       margin-bottom: 1.25rem;
@@ -1089,67 +1090,85 @@
       color: var(--text-mid);
     }
 
+    .doctor__credentials-inline {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .doctor__cred-tag {
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--primary);
+      background: rgba(74, 124, 155, 0.1);
+      border: 1px solid rgba(74, 124, 155, 0.2);
+      border-radius: var(--radius);
+      padding: 0.25rem 0.65rem;
+    }
+
     /* ============================================================
        TESTIMONIALS
     ============================================================ */
     .testimonials {
-      padding: 4rem 0;
-      background: var(--dark-bg);
+      padding: 5rem 0;
+      background: var(--light-bg-2);
     }
 
     .testimonials__header {
       text-align: center;
-      margin-bottom: 4rem;
-    }
-
-    .testimonials__header .section-title {
-      color: var(--white);
+      margin-bottom: 3.5rem;
     }
 
     .testimonials__grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       gap: 1.5rem;
     }
 
     .testimonial-card {
-      background: var(--dark-bg-2);
-      border: 1px solid var(--border-light);
-      border-radius: var(--radius-lg);
-      padding: 1.75rem;
+      background: var(--white);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-xl);
+      padding: 2rem;
       transition: var(--transition);
-      position: relative;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
     }
 
     .testimonial-card:hover {
-      border-color: var(--secondary);
-      box-shadow: var(--gold-glow-soft);
+      border-color: var(--primary-light);
+      box-shadow: var(--shadow-card);
       transform: translateY(-3px);
     }
 
     .testimonial-card__quote-mark {
       font-family: var(--font-serif);
-      font-size: 4rem;
+      font-size: 3.5rem;
       line-height: 0.8;
       color: var(--secondary);
-      opacity: 0.35;
-      margin-bottom: 1rem;
+      opacity: 0.4;
+      margin-bottom: 0.75rem;
       font-weight: 700;
     }
 
     .testimonial-card__text {
       font-family: var(--font-serif);
-      font-size: 1.05rem;
+      font-size: 1.02rem;
       font-style: italic;
       line-height: 1.75;
-      color: rgba(255,255,255,0.82);
-      margin-bottom: 1.75rem;
+      color: var(--text-mid);
+      margin-bottom: 1.5rem;
+      flex: 1;
     }
 
     .testimonial-card__stars {
       display: flex;
       gap: 0.2rem;
-      margin-bottom: 1.25rem;
+      margin-bottom: 1rem;
     }
 
     .testimonial-card__stars svg {
@@ -1162,8 +1181,8 @@
       width: 40px;
       height: 1px;
       background: var(--secondary);
-      opacity: 0.4;
-      margin-bottom: 1.25rem;
+      opacity: 0.3;
+      margin-bottom: 1rem;
     }
 
     .testimonial-card__author {
@@ -1173,9 +1192,9 @@
     }
 
     .testimonial-card__avatar {
-      width: 46px;
-      height: 46px;
-      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, var(--primary-light), var(--primary));
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -1191,7 +1210,7 @@
       font-family: var(--font-serif);
       font-size: 1rem;
       font-weight: 600;
-      color: var(--white);
+      color: var(--text-dark);
       line-height: 1.2;
     }
 
@@ -1199,7 +1218,7 @@
       font-size: 0.78rem;
       font-weight: 400;
       color: var(--secondary);
-      letter-spacing: 0.05em;
+      letter-spacing: 0.02em;
       margin-top: 0.2rem;
     }
 
@@ -1207,17 +1226,13 @@
        MEMBERSHIP
     ============================================================ */
     .membership {
-      padding: 4rem 0;
+      padding: 5rem 0;
       background: var(--white);
     }
 
     .membership__header {
       text-align: center;
-      margin-bottom: 4rem;
-    }
-
-    .membership__header .section-title {
-      color: var(--text-dark);
+      margin-bottom: 3.5rem;
     }
 
     .membership__header .section-subtitle {
@@ -1226,17 +1241,20 @@
 
     .membership__grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       gap: 1.5rem;
-      align-items: start;
+      align-items: stretch;
     }
 
     .plan-card {
-      border: 1px solid rgba(0,0,0,0.1);
-      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-xl);
       overflow: hidden;
       transition: var(--transition);
       background: var(--white);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
     }
 
     .plan-card:hover {
@@ -1245,22 +1263,21 @@
     }
 
     .plan-card--featured {
-      border-color: var(--secondary);
-      box-shadow: 0 0 0 1px var(--secondary), var(--shadow-card);
-      transform: scale(1.02);
+      border-color: var(--primary);
+      box-shadow: 0 0 0 1px var(--primary), var(--shadow-card);
       position: relative;
     }
 
     .plan-card--featured:hover {
-      transform: scale(1.02) translateY(-4px);
+      transform: translateY(-4px);
     }
 
     .plan-card__badge {
-      background: var(--secondary);
-      color: var(--dark-bg);
+      background: var(--primary);
+      color: var(--white);
       font-size: 0.68rem;
-      font-weight: 900;
-      letter-spacing: 0.2em;
+      font-weight: 700;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
       text-align: center;
       padding: 0.4rem;
@@ -1268,19 +1285,19 @@
 
     .plan-card__header {
       padding: 2rem 2rem 1.5rem;
-      background: var(--dark-bg);
-      border-bottom: 1px solid var(--border-light);
+      background: var(--accent);
+      border-bottom: 1px solid var(--border-subtle);
     }
 
     .plan-card--featured .plan-card__header {
-      background: linear-gradient(135deg, var(--dark-bg), var(--primary-dark));
+      background: linear-gradient(135deg, var(--light-bg-2), rgba(74, 124, 155, 0.08));
     }
 
     .plan-card__name {
       font-family: var(--font-serif);
-      font-size: 1.3rem;
+      font-size: 1.35rem;
       font-weight: 600;
-      color: var(--white);
+      color: var(--text-dark);
       margin-bottom: 0.5rem;
     }
 
@@ -1293,24 +1310,27 @@
 
     .plan-card__price-amount {
       font-size: 2.2rem;
-      font-weight: 900;
-      color: var(--secondary);
+      font-weight: 700;
+      color: var(--primary);
       line-height: 1;
     }
 
     .plan-card__price-period {
-      font-size: 0.82rem;
-      color: rgba(255,255,255,0.5);
+      font-size: 0.85rem;
+      color: var(--text-light);
     }
 
     .plan-card__price-note {
       font-size: 0.78rem;
-      color: rgba(255,255,255,0.45);
+      color: var(--text-light);
       font-style: italic;
     }
 
     .plan-card__body {
       padding: 2rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
     }
 
     .plan-card__features {
@@ -1318,6 +1338,7 @@
       flex-direction: column;
       gap: 0.75rem;
       margin-bottom: 2rem;
+      flex: 1;
     }
 
     .plan-card__feature {
@@ -1332,7 +1353,7 @@
     .plan-card__feature-check {
       width: 18px;
       height: 18px;
-      background: rgba(0, 71, 171, 0.1);
+      background: rgba(74, 124, 155, 0.1);
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -1342,7 +1363,7 @@
     }
 
     .plan-card--featured .plan-card__feature-check {
-      background: rgba(255, 191, 0, 0.15);
+      background: rgba(74, 124, 155, 0.15);
     }
 
     .plan-card__feature-check svg {
@@ -1353,32 +1374,43 @@
       stroke-width: 2.5;
     }
 
-    .plan-card--featured .plan-card__feature-check svg {
-      stroke: var(--secondary-dark);
-    }
-
     /* ============================================================
        LOCATION
     ============================================================ */
     .location {
-      padding: 4rem 0;
+      padding: 5rem 0;
       background: var(--accent);
     }
 
-    .location__inner {
+    .location__header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+
+    .location__header .section-subtitle {
+      margin: 1rem auto 0;
+    }
+
+    .location__grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      align-items: start;
+      gap: 2rem;
     }
 
-    .location__content .section-title {
+    .location__info-card {
+      background: var(--white);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-xl);
+      padding: 2.5rem;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .location__info-title {
+      font-family: var(--font-serif);
+      font-size: 1.3rem;
+      font-weight: 600;
       color: var(--text-dark);
-      margin-bottom: 0.75rem;
-    }
-
-    .location__content .section-subtitle {
-      margin-bottom: 2.5rem;
+      margin-bottom: 2rem;
     }
 
     .location__details {
@@ -1394,9 +1426,9 @@
     }
 
     .location__detail-icon {
-      width: 42px;
-      height: 42px;
-      background: var(--primary);
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, rgba(74, 124, 155, 0.1), rgba(74, 124, 155, 0.18));
       border-radius: var(--radius);
       display: flex;
       align-items: center;
@@ -1405,9 +1437,9 @@
     }
 
     .location__detail-icon svg {
-      width: 20px;
-      height: 20px;
-      color: var(--white);
+      width: 18px;
+      height: 18px;
+      color: var(--primary);
       fill: none;
       stroke: currentColor;
       stroke-width: 1.8;
@@ -1415,15 +1447,15 @@
 
     .location__detail-label {
       font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.15em;
+      font-weight: 600;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--text-light);
       margin-bottom: 0.25rem;
     }
 
     .location__detail-value {
-      font-size: 0.97rem;
+      font-size: 0.95rem;
       font-weight: 400;
       color: var(--text-dark);
       line-height: 1.5;
@@ -1431,20 +1463,20 @@
 
     .location__detail-value a {
       color: var(--primary);
-      font-weight: 700;
+      font-weight: 600;
     }
 
     .location__detail-value a:hover {
-      color: var(--secondary-dark);
+      color: var(--secondary);
     }
 
     .location__private-note {
       display: flex;
       align-items: center;
       gap: 0.75rem;
-      background: linear-gradient(135deg, rgba(0,71,171,0.07), rgba(255,191,0,0.06));
-      border: 1px solid rgba(0,71,171,0.15);
-      border-left: 3px solid var(--secondary);
+      background: rgba(74, 124, 155, 0.06);
+      border: 1px solid rgba(74, 124, 155, 0.12);
+      border-left: 3px solid var(--primary);
       border-radius: var(--radius);
       padding: 1rem 1.25rem;
       margin-top: 1.5rem;
@@ -1453,12 +1485,12 @@
     .location__private-note svg {
       width: 20px;
       height: 20px;
-      color: var(--secondary-dark);
+      color: var(--primary);
       flex-shrink: 0;
     }
 
     .location__private-note-text {
-      font-size: 0.88rem;
+      font-size: 0.86rem;
       color: var(--text-mid);
       line-height: 1.5;
     }
@@ -1468,37 +1500,34 @@
     }
 
     .location__contact-card {
-      background: var(--dark-bg);
-      border: 1px solid var(--border-light);
-      border-radius: var(--radius-lg);
+      background: var(--white);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-xl);
       padding: 2.5rem;
+      box-shadow: var(--shadow-soft);
     }
 
     .location__contact-title {
       font-family: var(--font-serif);
-      font-size: 1.4rem;
+      font-size: 1.3rem;
       font-weight: 600;
-      color: var(--white);
+      color: var(--text-dark);
       margin-bottom: 0.5rem;
     }
 
     .location__contact-sub {
       font-size: 0.9rem;
-      color: rgba(255,255,255,0.55);
+      color: var(--text-mid);
       margin-bottom: 2rem;
       line-height: 1.6;
-    }
-
-    .contact-form .form-group label {
-      color: rgba(255,255,255,0.6);
     }
 
     /* ============================================================
        FOOTER
     ============================================================ */
     .footer {
-      background: #060618;
-      border-top: 1px solid rgba(255, 191, 0, 0.15);
+      background: var(--text-dark);
+      border-top: 1px solid rgba(74, 124, 155, 0.2);
       padding: 4rem 0 2rem;
     }
 
@@ -1519,17 +1548,17 @@
 
     .footer__brand-tagline {
       font-size: 0.7rem;
-      font-weight: 400;
-      letter-spacing: 0.2em;
+      font-weight: 500;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
-      color: var(--secondary);
+      color: var(--secondary-light);
       margin-bottom: 1rem;
     }
 
     .footer__brand-desc {
       font-size: 0.88rem;
       line-height: 1.7;
-      color: rgba(255,255,255,0.45);
+      color: rgba(255,255,255,0.5);
       max-width: 30ch;
       margin-bottom: 1.5rem;
     }
@@ -1542,8 +1571,8 @@
     .footer__social-link {
       width: 36px;
       height: 36px;
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
       border-radius: var(--radius);
       display: flex;
       align-items: center;
@@ -1553,10 +1582,9 @@
     }
 
     .footer__social-link:hover {
-      background: var(--secondary);
-      border-color: var(--secondary);
-      color: var(--dark-bg);
-      box-shadow: var(--gold-glow-soft);
+      background: var(--primary);
+      border-color: var(--primary);
+      color: var(--white);
     }
 
     .footer__social-link svg {
@@ -1567,10 +1595,10 @@
 
     .footer__col-title {
       font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.2em;
+      font-weight: 600;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
-      color: var(--secondary);
+      color: var(--secondary-light);
       margin-bottom: 1.25rem;
     }
 
@@ -1582,7 +1610,7 @@
 
     .footer__link {
       font-size: 0.88rem;
-      color: rgba(255,255,255,0.45);
+      color: rgba(255,255,255,0.5);
       transition: var(--transition);
     }
 
@@ -1594,7 +1622,7 @@
     .footer__hr {
       border: none;
       height: 1px;
-      background: rgba(255,255,255,0.06);
+      background: rgba(255,255,255,0.08);
       margin-bottom: 2rem;
     }
 
@@ -1608,7 +1636,7 @@
 
     .footer__copyright {
       font-size: 0.8rem;
-      color: rgba(255,255,255,0.3);
+      color: rgba(255,255,255,0.35);
     }
 
     .footer__disclaimer {
@@ -1617,45 +1645,6 @@
       max-width: 50ch;
       text-align: right;
       line-height: 1.5;
-    }
-
-    /* ============================================================
-       SECTIONS: IMAGE BLOCK
-    ============================================================ */
-    .services__image-block {
-      margin-bottom: 3rem;
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      position: relative;
-      height: 240px;
-    }
-
-    .services__image-block img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .services__image-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to right, rgba(10,10,46,0.7), transparent);
-      display: flex;
-      align-items: center;
-      padding: 2.5rem;
-    }
-
-    .services__image-text {
-      font-family: var(--font-serif);
-      font-size: 1.5rem;
-      font-style: italic;
-      color: var(--white);
-      max-width: 30ch;
-      line-height: 1.4;
-    }
-
-    .services__image-text span {
-      color: var(--secondary);
     }
 
     /* ============================================================
@@ -1668,12 +1657,32 @@
         gap: 3rem;
       }
 
-      .doctor__inner {
-        grid-template-columns: 1fr;
+      .doctor__image-wrap {
+        max-width: 380px;
       }
 
-      .doctor__image-wrap {
-        max-width: 420px;
+      .services__grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .experience__grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .testimonials__grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .membership__grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .conditions__grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .location__grid {
+        grid-template-columns: 1fr;
       }
 
       .footer__grid {
@@ -1700,9 +1709,15 @@
         gap: 1.25rem;
       }
 
-      .location__inner {
+      .services__grid,
+      .experience__grid,
+      .testimonials__grid,
+      .membership__grid {
         grid-template-columns: 1fr;
-        gap: 2.5rem;
+      }
+
+      .conditions__grid {
+        grid-template-columns: repeat(2, 1fr);
       }
 
       .footer__grid {
@@ -1729,14 +1744,6 @@
       .services__image-text {
         font-size: 1.1rem;
       }
-
-      .plan-card--featured {
-        transform: none;
-      }
-
-      .plan-card--featured:hover {
-        transform: translateY(-4px);
-      }
     }
 
     @media (max-width: 480px) {
@@ -1745,138 +1752,19 @@
       }
 
       .btn {
-        padding: 0.8rem 1.5rem;
+        padding: 0.65rem 1.25rem;
         font-size: 0.78rem;
       }
 
       .corporate__stats {
         grid-template-columns: 1fr;
       }
-    }</style>
-  <!-- Codex UI Polish: nav readability and one-line links -->
-  <style id="codex-ui-polish-nav">
-    nav a,
-    .nav a,
-    .navbar a,
-    .nav__links a,
-    .nav-links a,
-    .menu a,
-    .menu__link,
-    .fullscreen-menu a {
-      white-space: nowrap;
-    }
 
-    @media (min-width: 1024px) {
-      nav a,
-      .nav a,
-      .navbar a,
-      .nav__links a,
-      .nav-links a,
-      .menu a,
-      .menu__link,
-      .fullscreen-menu a {
-        line-height: 1.1;
+      .conditions__grid {
+        grid-template-columns: 1fr;
       }
-
-      .nav__links,
-      .nav-links,
-      .navbar-links,
-      .menu-links,
-      nav ul {
-        row-gap: 0.25rem;
-      }
-
-      .nav__links,
-      .nav-links,
-      .navbar-links,
-      .menu-links,
-      nav ul {
-        align-items: center;
-      }
-
-      .nav__links a,
-      .nav-links a,
-      .navbar-links a,
-      .menu-links a,
-      nav ul a {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 1.2rem;
-      }
-    }
-
-    /* Cross-page alignment normalization for common grid/card layouts */
-    .services__grid,
-    .service-grid,
-    .cards-grid,
-    .features-grid,
-    .pricing__grid,
-    .plans-grid,
-    .results__grid,
-    .reviews__grid,
-    .events-grid,
-    .coaches__grid,
-    .therapists-grid,
-    .portfolio__grid,
-    .tips-grid,
-    .testimonials-grid,
-    .grid {
-      align-items: stretch;
-    }
-
-    .service-card,
-    .card,
-    .feature-card,
-    .event-card,
-    .plan,
-    .pricing-card,
-    .testimonial,
-    .review,
-    .coach,
-    .therapist-card,
-    .project,
-    .tip-card,
-    .serve-card,
-    .info-card,
-    .stat-card {
-      height: 100%;
-    }
-
-    .service-card img,
-    .project img,
-    .tip-card img,
-    .coach img,
-    .therapist-card img,
-    .feature-card img,
-    .gallery-item img {
-      width: 100%;
-      display: block;
-      object-fit: cover;
-    }
-
-    /* Improve readability where copy is dense without changing content */
-    section p,
-    .section p,
-    .card p,
-    .service-card p,
-    .feature-card p,
-    .testimonial p,
-    .event-card p,
-    .info-card p {
-      max-width: 66ch;
-      text-wrap: pretty;
-    }
-
-    .section__header p,
-    .hero p,
-    .footer p,
-    .map-overlay-card,
-    .location__item-value {
-      max-width: none;
     }
   </style>
-
 </head>
 <body>
 
@@ -1901,7 +1789,7 @@
           </ul>
 
           <a href="tel:5554567890" class="nav__phone" aria-label="Call us at 555-456-7890">(555) 456-7890</a>
-          <a href="#location" class="btn btn--gold nav__cta">Schedule Executive Consultation</a>
+          <a href="#location" class="btn btn--primary nav__cta">Schedule Consultation</a>
 
           <button class="nav__toggle" id="nav-toggle" aria-label="Open navigation menu" aria-expanded="false">
             <span></span>
@@ -1917,7 +1805,7 @@
         <a href="#doctor" class="nav__link" role="menuitem">Our Doctor</a>
         <a href="#membership" class="nav__link" role="menuitem">Membership</a>
         <a href="tel:5554567890" class="nav__link" role="menuitem">(555) 456-7890</a>
-        <a href="#location" class="btn btn--gold" role="menuitem">Schedule Consultation</a>
+        <a href="#location" class="btn btn--primary" role="menuitem">Schedule Consultation</a>
       </div>
     </nav>
   </header>
@@ -1947,11 +1835,11 @@
           </p>
 
           <div class="hero__actions fade-in fade-in--delay-3">
-            <a href="#location" class="btn btn--gold">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/>
+            <a href="#location" class="btn btn--secondary">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
               </svg>
-              Complimentary Executive Assessment
+              Schedule Your Consultation
             </a>
             <a href="tel:5554567890" class="hero__phone-link" aria-label="Call us at 555-456-7890">
               <svg class="hero__phone-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -1959,6 +1847,7 @@
               </svg>
               (555) 456-7890
             </a>
+            <a href="#services" class="btn btn--ghost">Explore Services</a>
           </div>
 
           <div class="hero__trust fade-in fade-in--delay-4">
@@ -1983,7 +1872,7 @@
       </div>
     </section>
 
-    <hr class="hr-gold" />
+    <hr class="hr-accent" />
 
     <!-- ============================================================
          THE EXECUTIVE EXPERIENCE
@@ -2027,7 +1916,7 @@
       </div>
     </section>
 
-    <hr class="hr-gold" />
+    <hr class="hr-accent" />
 
     <!-- ============================================================
          SERVICES
@@ -2039,13 +1928,13 @@
             <span class="section-label">Premium Services</span>
             <h2 class="section-title" id="services-title">Precision Care for<br>High-Performance Professionals</h2>
           </div>
-          <a href="#location" class="btn btn--primary fade-in fade-in--delay-1">View All Services</a>
+          <a href="#location" class="btn btn--outline fade-in fade-in--delay-1">View All Services</a>
         </div>
 
         <div class="services__image-block fade-in">
           <img
-            src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=1200&q=80"
-            alt="Professional chiropractic treatment in a clinical suite"
+            src="https://images.unsplash.com/photo-1519824145371-296894a0daa9?w=1200&q=80"
+            alt="Professional chiropractic spine treatment in a modern clinical suite"
             loading="lazy"
           />
           <div class="services__image-overlay">
@@ -2063,7 +1952,7 @@
               </div>
               <span class="service-card__tag">Flagship Program</span>
               <h3 class="service-card__title">Executive Health Package</h3>
-              <p class="service-card__desc">A comprehensive annual care program including bi-weekly adjustments, monthly wellness reviews, ergonomic audits, and priority access to all services. Your complete spinal health solution.</p>
+              <p class="service-card__desc">A comprehensive annual care program including bi-weekly adjustments, monthly wellness reviews, ergonomic audits, and priority access to all services.</p>
               <a href="#location" class="service-card__link" aria-label="Learn more about Executive Health Package">
                 Learn More
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -2078,7 +1967,7 @@
               </div>
               <span class="service-card__tag">Workplace Wellness</span>
               <h3 class="service-card__title">Ergonomic Assessment</h3>
-              <p class="service-card__desc">A clinical analysis of your workstation setup, posture patterns, and movement habits. Receive a detailed corrective report with actionable adjustments to prevent chronic injury and optimize daily output.</p>
+              <p class="service-card__desc">A clinical analysis of your workstation setup, posture patterns, and movement habits with actionable corrections to prevent chronic injury.</p>
               <a href="#location" class="service-card__link" aria-label="Learn more about Ergonomic Assessment">
                 Learn More
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -2093,7 +1982,7 @@
               </div>
               <span class="service-card__tag">Enterprise</span>
               <h3 class="service-card__title">Corporate Wellness Program</h3>
-              <p class="service-card__desc">Scalable wellness solutions for companies of all sizes. On-site or in-office visits, group ergonomic seminars, and per-employee membership pricing. Demonstrate your investment in human capital.</p>
+              <p class="service-card__desc">Scalable wellness solutions for companies of all sizes. On-site visits, group ergonomic seminars, and per-employee membership pricing.</p>
               <a href="#corporate" class="service-card__link" aria-label="Learn more about Corporate Wellness Program">
                 Learn More
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -2108,7 +1997,7 @@
               </div>
               <span class="service-card__tag">Corrective Care</span>
               <h3 class="service-card__title">Posture Correction Protocol</h3>
-              <p class="service-card__desc">A structured, evidence-based program using spinal manipulation, targeted exercises, and postural re-training. Addresses forward head posture, rounded shoulders, and anterior pelvic tilt.</p>
+              <p class="service-card__desc">A structured, evidence-based program using spinal manipulation, targeted exercises, and postural re-training for lasting results.</p>
               <a href="#location" class="service-card__link" aria-label="Learn more about Posture Correction Protocol">
                 Learn More
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -2123,8 +2012,23 @@
               </div>
               <span class="service-card__tag">Concierge Service</span>
               <h3 class="service-card__title">On-Site Office Visits</h3>
-              <p class="service-card__desc">Bring the expertise directly to your workplace. Scheduled visits to your office for executive team wellness sessions, ergonomic checks, and spot treatments — without leaving the building.</p>
+              <p class="service-card__desc">Bring the expertise directly to your workplace. Scheduled visits for executive wellness sessions, ergonomic checks, and spot treatments.</p>
               <a href="#location" class="service-card__link" aria-label="Learn more about On-Site Office Visits">
+                Learn More
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="service-card fade-in fade-in--delay-3">
+            <div class="service-card__body">
+              <div class="service-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+              </div>
+              <span class="service-card__tag">Recovery</span>
+              <h3 class="service-card__title">Stress Recovery Therapy</h3>
+              <p class="service-card__desc">Targeted soft tissue therapy combined with spinal decompression to release chronic tension from high-pressure executive lifestyles.</p>
+              <a href="#location" class="service-card__link" aria-label="Learn more about Stress Recovery Therapy">
                 Learn More
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </a>
@@ -2134,7 +2038,7 @@
       </div>
     </section>
 
-    <hr class="hr-gold" />
+    <hr class="hr-accent" />
 
     <!-- ============================================================
          CORPORATE WELLNESS
@@ -2145,8 +2049,8 @@
           <div class="corporate__image-wrap fade-in">
             <img
               class="corporate__image"
-              src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=80"
-              alt="Corporate wellness meeting with professional team"
+              src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1200&q=80"
+              alt="Corporate team wellness session in a modern office environment"
               loading="lazy"
             />
             <span class="corporate__badge">Corporate Program</span>
@@ -2209,7 +2113,7 @@
                   <label for="corp-message">Program Interests</label>
                   <textarea id="corp-message" name="message" placeholder="Tell us about your team's wellness goals..."></textarea>
                 </div>
-                <button type="submit" class="btn btn--gold" style="width:100%; justify-content:center;">
+                <button type="submit" class="btn btn--primary" style="width:100%; justify-content:center;">
                   Request Corporate Quote
                 </button>
               </form>
@@ -2219,7 +2123,7 @@
       </div>
     </section>
 
-    <hr class="hr-gold" />
+    <hr class="hr-accent" />
 
     <!-- ============================================================
          CONDITIONS
@@ -2264,7 +2168,7 @@
               </svg>
             </div>
             <h3 class="condition-card__name">Carpal Tunnel</h3>
-            <p class="condition-card__desc">Wrist and hand nerve compression from repetitive typing — treated with soft tissue therapy and nerve mobilization techniques.</p>
+            <p class="condition-card__desc">Wrist and hand nerve compression from repetitive typing — treated with soft tissue therapy and nerve mobilization.</p>
           </article>
 
           <article class="condition-card fade-in fade-in--delay-4">
@@ -2291,7 +2195,7 @@
       </div>
     </section>
 
-    <hr class="hr-gold" />
+    <hr class="hr-accent" />
 
     <!-- ============================================================
          DOCTOR
@@ -2306,15 +2210,6 @@
               alt="Dr. Jonathan Hale, Board Certified Chiropractor"
               loading="lazy"
             />
-            <div class="doctor__credentials" aria-label="Doctor credentials">
-              <div class="doctor__cred-title">Dr. Jonathan R. Hale, D.C.</div>
-              <div class="doctor__cred-list">
-                <span class="doctor__cred-tag">Board Certified</span>
-                <span class="doctor__cred-tag">D.C., CCSP</span>
-                <span class="doctor__cred-tag">18 Yrs Experience</span>
-                <span class="doctor__cred-tag">500+ Exec Clients</span>
-              </div>
-            </div>
           </div>
 
           <div class="doctor__content fade-in fade-in--delay-1">
@@ -2345,13 +2240,22 @@
               </div>
             </div>
 
-            <a href="#location" class="btn btn--primary">Schedule with Dr. Hale</a>
+            <div class="doctor__credentials-inline">
+              <span class="doctor__cred-tag">Board Certified</span>
+              <span class="doctor__cred-tag">D.C., CCSP</span>
+              <span class="doctor__cred-tag">18 Yrs Experience</span>
+              <span class="doctor__cred-tag">500+ Exec Clients</span>
+            </div>
+
+            <div style="margin-top: 2rem;">
+              <a href="#location" class="btn btn--primary">Schedule with Dr. Hale</a>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <hr class="hr-gold" />
+    <hr class="hr-accent" />
 
     <!-- ============================================================
          TESTIMONIALS
@@ -2427,7 +2331,7 @@
       </div>
     </section>
 
-    <hr class="hr-gold" />
+    <hr class="hr-accent" />
 
     <!-- ============================================================
          MEMBERSHIP
@@ -2474,7 +2378,7 @@
                   Flexible scheduling windows
                 </li>
               </ul>
-              <a href="#location" class="btn btn--outline-gold" style="width:100%; justify-content:center;">Get Started</a>
+              <a href="#location" class="btn btn--outline" style="width:100%; justify-content:center;">Get Started</a>
             </div>
           </div>
 
@@ -2520,7 +2424,7 @@
                   Early morning &amp; evening slots
                 </li>
               </ul>
-              <a href="#location" class="btn btn--gold" style="width:100%; justify-content:center;">Select This Plan</a>
+              <a href="#location" class="btn btn--primary" style="width:100%; justify-content:center;">Select This Plan</a>
             </div>
           </div>
 
@@ -2561,25 +2465,29 @@
                   Group posture &amp; wellness seminars
                 </li>
               </ul>
-              <a href="#corporate" class="btn btn--outline-gold" style="width:100%; justify-content:center;">Request Quote</a>
+              <a href="#corporate" class="btn btn--outline" style="width:100%; justify-content:center;">Request Quote</a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <hr class="hr-gold" />
+    <hr class="hr-accent" />
 
     <!-- ============================================================
          LOCATION + CONTACT
     ============================================================ -->
     <section class="location" id="location" aria-labelledby="location-title">
       <div class="container">
-        <div class="location__inner">
-          <div class="location__content fade-in">
-            <span class="section-label">Find Us</span>
-            <h2 class="section-title" id="location-title">Location &amp; Concierge Contact</h2>
-            <p class="section-subtitle">Situated in the heart of the financial district for maximum accessibility to the professionals we serve.</p>
+        <div class="location__header fade-in">
+          <span class="section-label">Find Us</span>
+          <h2 class="section-title" id="location-title">Location &amp; Concierge Contact</h2>
+          <p class="section-subtitle">Situated in the heart of the financial district for maximum accessibility to the professionals we serve.</p>
+        </div>
+
+        <div class="location__grid">
+          <div class="location__info-card fade-in">
+            <h3 class="location__info-title">Visit Our Practice</h3>
 
             <div class="location__details">
               <div class="location__detail">
@@ -2611,7 +2519,7 @@
                   <div class="location__detail-value">
                     Monday – Friday: 6:00 AM – 8:00 PM<br>
                     Saturday: 8:00 AM – 2:00 PM<br>
-                    <span style="color: var(--primary); font-size:0.85rem; font-weight:700;">Flexible scheduling — early morning, evening &amp; weekend appointments</span>
+                    <span style="color: var(--primary); font-size:0.85rem; font-weight:600;">Flexible scheduling — early morning, evening &amp; weekend appointments</span>
                   </div>
                 </div>
               </div>
@@ -2673,10 +2581,10 @@
                   <option value="weekend">Weekend</option>
                 </select>
               </div>
-              <button type="submit" class="btn btn--gold" style="width:100%; justify-content:center; margin-top:0.5rem;">
+              <button type="submit" class="btn btn--primary" style="width:100%; justify-content:center; margin-top:0.5rem;">
                 Schedule My Executive Assessment
               </button>
-              <p style="font-size:0.75rem; color:rgba(255,255,255,0.35); text-align:center; margin-top:0.75rem; line-height:1.5;">
+              <p style="font-size:0.75rem; color:var(--text-light); text-align:center; margin-top:0.75rem; line-height:1.5;">
                 Your information is held in strict confidence. We will never share your data.
               </p>
             </form>
