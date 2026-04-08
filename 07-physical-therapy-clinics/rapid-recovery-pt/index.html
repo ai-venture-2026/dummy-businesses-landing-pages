@@ -3,18 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rapid Recovery PT | Physical Therapy – Faster Recovery, Proven Results</title>
-  <meta name="description" content="Rapid Recovery PT delivers efficient, results-focused physical therapy. Post-op rehab, manual therapy, injury recovery, and personalized exercise programs with one-on-one attention and app-based progress tracking." />
-  <meta name="keywords" content="physical therapy, post-surgery rehab, manual therapy, injury recovery, orthopedic PT, sports rehab, work injury, physical therapist" />
-  <meta property="og:title" content="Rapid Recovery PT | Faster Recovery. Proven Results." />
+  <title>Rapid Recovery PT | Physical Therapy Austin TX — Faster Recovery, Proven Results</title>
+  <meta name="description" content="Rapid Recovery PT delivers efficient, results-focused physical therapy in Austin, TX. Post-op rehab, manual therapy, sports rehab, and chronic pain management with 1-on-1 attention and tech-driven progress tracking." />
+  <meta name="keywords" content="physical therapy Austin TX, post-surgical rehab, manual therapy, sports rehabilitation, chronic pain, physical therapist near me" />
+  <meta property="og:title" content="Rapid Recovery PT | Physical Therapy Austin TX — Faster Recovery, Proven Results" />
   <meta property="og:description" content="One-on-one physical therapy with technology-driven progress tracking. Same-week appointments available." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1200&q=80" />
   <link rel="canonical" href="https://rapidrecoverypt.com/" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;500;600;700;800&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
   <script type="application/ld+json">
@@ -22,9 +21,10 @@
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Rapid Recovery PT",
-    "description": "Efficient, results-focused physical therapy with one-on-one attention.",
+    "description": "Efficient, results-focused physical therapy with one-on-one attention and tech-driven progress tracking in Austin, TX.",
     "url": "https://rapidrecoverypt.com",
     "telephone": "(555) 789-0123",
+    "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1200&q=80",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "1420 Medical Center Drive, Suite 300",
@@ -33,189 +33,1372 @@
       "postalCode": "78701",
       "addressCountry": "US"
     },
-    "geo": { "@type": "GeoCoordinates", "latitude": 30.2672, "longitude": -97.7431 },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 30.2672,
+      "longitude": -97.7431
+    },
     "openingHoursSpecification": [
-      {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "07:00", "closes": "19:00"},
-      {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "14:00"}
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "07:00",
+        "closes": "19:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "08:00",
+        "closes": "14:00"
+      }
     ],
-    "priceRange": "$$"
+    "priceRange": "$$",
+    "sameAs": []
   }
   </script>
 
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            emerald: {
-              50: '#ecfdf5',
-              100: '#d1fae5',
-              200: '#a7f3d0',
-              300: '#6ee7b7',
-              400: '#34d399',
-              500: '#10b981',
-              600: '#059669',
-              700: '#047857',
-              800: '#065f46',
-              900: '#064e3b',
-              950: '#022c22',
-            },
-            gold: {
-              50: '#fefce8',
-              100: '#fef9c3',
-              200: '#fef08a',
-              300: '#fde047',
-              400: '#facc15',
-              500: '#c8a415',
-            },
-            warm: {
-              50: '#fafaf9',
-              100: '#f5f5f4',
-              200: '#e7e5e4',
-              300: '#d6d3d1',
-              400: '#a8a29e',
-              500: '#78716c',
-              600: '#57534e',
-              700: '#44403c',
-              800: '#292524',
-              900: '#1c1917',
-            }
-          },
-          fontFamily: {
-            sans: ['DM Sans', 'sans-serif'],
-            serif: ['Playfair Display', 'serif'],
-          }
-        }
+  <style>
+    /* ========================================
+       TOKENS & RESET
+    ======================================== */
+    :root {
+      --bg: #FAFAF9;
+      --surface: #FFFFFF;
+      --text: #1C1917;
+      --text-muted: #78716C;
+      --accent: #059669;
+      --accent-hover: #047857;
+      --border: #E7E5E4;
+      --amber: #F59E0B;
+      --charcoal: #292524;
+
+      --font-display: 'Fraunces', serif;
+      --font-body: 'Instrument Sans', sans-serif;
+
+      --space-1: 8px;
+      --space-2: 16px;
+      --space-3: 24px;
+      --space-4: 32px;
+      --space-5: 40px;
+      --space-6: 48px;
+      --space-8: 64px;
+      --space-10: 80px;
+      --space-12: 96px;
+      --space-16: 128px;
+
+      /* Type scale 1.25 */
+      --text-xs: 0.64rem;
+      --text-sm: 0.8rem;
+      --text-base: 1rem;
+      --text-md: 1.25rem;
+      --text-lg: 1.563rem;
+      --text-xl: 1.953rem;
+      --text-2xl: 2.441rem;
+      --text-3xl: 3.052rem;
+      --text-4xl: 3.815rem;
+      --text-5xl: 4.768rem;
+
+      --radius: 4px;
+      --radius-md: 8px;
+      --transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: 16px;
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--text);
+      background-color: var(--bg);
+      line-height: 1.6;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Swiss grid overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(to right, rgba(28, 25, 23, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(28, 25, 23, 0.03) 1px, transparent 1px);
+      background-size: 80px 80px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    body > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    ul, ol {
+      list-style: none;
+    }
+
+    button, input, textarea, select {
+      font: inherit;
+      color: inherit;
+      border: none;
+      background: none;
+      outline: none;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--font-display);
+      font-weight: 700;
+      line-height: 1.15;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 var(--space-3);
+    }
+
+    /* ========================================
+       SECTION CLIP-PATH REVEAL
+    ======================================== */
+    .clip-reveal {
+      clip-path: inset(50% 50% 50% 50%);
+      will-change: clip-path;
+    }
+
+    /* ========================================
+       BUTTONS
+    ======================================== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-1);
+      padding: 14px 28px;
+      font-family: var(--font-body);
+      font-size: var(--text-sm);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: all var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: var(--surface);
+      border: 2px solid var(--accent);
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-hover);
+      border-color: var(--accent-hover);
+      transform: scale(1.02);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--charcoal);
+      border: 2px solid var(--charcoal);
+    }
+
+    .btn-outline:hover {
+      background: var(--charcoal);
+      color: var(--surface);
+      transform: scale(1.02);
+    }
+
+    .btn-white {
+      background: var(--surface);
+      color: var(--accent);
+      border: 2px solid var(--surface);
+    }
+
+    .btn-white:hover {
+      background: transparent;
+      color: var(--surface);
+      transform: scale(1.02);
+    }
+
+    .btn-white-outline {
+      background: transparent;
+      color: var(--surface);
+      border: 2px solid var(--surface);
+    }
+
+    .btn-white-outline:hover {
+      background: var(--surface);
+      color: var(--accent);
+      transform: scale(1.02);
+    }
+
+    /* ========================================
+       LABEL
+    ======================================== */
+    .section-label {
+      font-family: var(--font-body);
+      font-size: var(--text-xs);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      gap: var(--space-1);
+      margin-bottom: var(--space-2);
+    }
+
+    .section-label::before {
+      content: '';
+      display: inline-block;
+      width: 2px;
+      height: 16px;
+      background: var(--accent);
+    }
+
+    /* ========================================
+       NAV
+    ======================================== */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(250, 250, 249, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: var(--space-2) 0;
+    }
+
+    .nav .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: var(--space-1);
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: var(--text-md);
+      color: var(--text);
+    }
+
+    .nav-brand i {
+      color: var(--accent);
+      font-size: var(--text-lg);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+    }
+
+    .nav-cta {
+      padding: 10px 24px;
+      font-size: var(--text-xs);
+    }
+
+    .hamburger {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: var(--space-1);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      transition: border-color var(--transition);
+    }
+
+    .hamburger:hover {
+      border-color: var(--accent);
+    }
+
+    .hamburger span {
+      display: block;
+      width: 18px;
+      height: 2px;
+      background: var(--text);
+      transition: all var(--transition);
+    }
+
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    /* Mobile menu */
+    .mobile-menu {
+      position: fixed;
+      top: 57px;
+      left: 0;
+      right: 0;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: var(--space-4);
+      transform: translateY(-120%);
+      transition: transform var(--transition);
+      z-index: 999;
+    }
+
+    .mobile-menu.open {
+      transform: translateY(0);
+    }
+
+    .mobile-menu a {
+      display: block;
+      padding: var(--space-2) 0;
+      font-size: var(--text-base);
+      font-weight: 500;
+      color: var(--text);
+      border-bottom: 1px solid var(--border);
+      transition: color var(--transition);
+    }
+
+    .mobile-menu a:last-child {
+      border-bottom: none;
+    }
+
+    .mobile-menu a:hover {
+      color: var(--accent);
+    }
+
+    /* ========================================
+       HERO
+    ======================================== */
+    .hero {
+      padding: calc(var(--space-16) + 57px) 0 var(--space-12);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-8);
+      align-items: center;
+    }
+
+    .hero-content {
+      max-width: 560px;
+    }
+
+    .hero-accent-line {
+      width: 2px;
+      height: 40px;
+      background: var(--accent);
+      margin-bottom: var(--space-3);
+    }
+
+    .hero-label {
+      font-size: var(--text-xs);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--accent);
+      margin-bottom: var(--space-3);
+    }
+
+    .hero h1 {
+      font-size: clamp(2.4rem, 5vw, var(--text-5xl));
+      line-height: 1.05;
+      margin-bottom: var(--space-3);
+      overflow: hidden;
+    }
+
+    .hero h1 .line-wrap {
+      overflow: hidden;
+      display: block;
+    }
+
+    .hero h1 .line {
+      display: block;
+    }
+
+    .hero-body {
+      font-size: var(--text-md);
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: var(--space-5);
+      max-width: 480px;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: var(--space-2);
+      margin-bottom: var(--space-8);
+      flex-wrap: wrap;
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-4);
+      border-top: 1px solid var(--border);
+      padding-top: var(--space-4);
+    }
+
+    .hero-stat {
+      text-align: left;
+    }
+
+    .hero-stat-number {
+      font-family: var(--font-display);
+      font-size: var(--text-2xl);
+      font-weight: 800;
+      color: var(--text);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .hero-stat-label {
+      font-size: var(--text-xs);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .hero-image-wrapper {
+      position: relative;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .hero-image {
+      width: 100%;
+      max-width: 520px;
+      aspect-ratio: 4/5;
+      object-fit: cover;
+      border: 1px solid var(--accent);
+      border-radius: var(--radius);
+    }
+
+    /* ========================================
+       SERVICES — HORIZONTAL SCROLL
+    ======================================== */
+    .services {
+      padding: var(--space-12) 0;
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .services-header {
+      text-align: left;
+      margin-bottom: var(--space-8);
+    }
+
+    .services-header h2 {
+      font-size: clamp(2rem, 4vw, var(--text-3xl));
+      margin-bottom: var(--space-2);
+    }
+
+    .services-header p {
+      font-size: var(--text-md);
+      color: var(--text-muted);
+      max-width: 500px;
+    }
+
+    .services-scroll-wrapper {
+      overflow: hidden;
+    }
+
+    .services-track {
+      display: flex;
+      gap: var(--space-3);
+      will-change: transform;
+    }
+
+    .service-card {
+      flex: 0 0 380px;
+      height: 480px;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+      border: 1px solid var(--border);
+      transition: border-color var(--transition);
+    }
+
+    .service-card:hover {
+      border-color: var(--accent);
+    }
+
+    .service-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .service-card:hover img {
+      transform: scale(1.03);
+    }
+
+    .service-card-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(28, 25, 23, 0.85) 0%, rgba(28, 25, 23, 0.2) 50%, transparent 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: var(--space-4);
+    }
+
+    .service-card-overlay h3 {
+      font-size: var(--text-lg);
+      color: var(--surface);
+      margin-bottom: var(--space-1);
+    }
+
+    .service-card-overlay p {
+      font-size: var(--text-sm);
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.6;
+    }
+
+    .services-additional {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--space-3);
+      margin-top: var(--space-8);
+      padding-top: var(--space-6);
+      border-top: 1px solid var(--border);
+    }
+
+    .additional-service {
+      padding: var(--space-3);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      transition: all var(--transition);
+    }
+
+    .additional-service:hover {
+      border-color: var(--accent);
+      transform: scale(1.02);
+    }
+
+    .additional-service h4 {
+      font-family: var(--font-body);
+      font-size: var(--text-base);
+      font-weight: 600;
+      margin-bottom: var(--space-1);
+    }
+
+    .additional-service p {
+      font-size: var(--text-sm);
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* ========================================
+       WHY CHOOSE US
+    ======================================== */
+    .why-us {
+      padding: var(--space-16) 0;
+    }
+
+    .why-us .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-10);
+      align-items: center;
+    }
+
+    .why-us-image-wrapper {
+      position: relative;
+    }
+
+    .why-us-image-wrapper img {
+      width: 100%;
+      aspect-ratio: 4/5;
+      object-fit: cover;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+    }
+
+    .why-us-stat-overlay {
+      position: absolute;
+      bottom: var(--space-4);
+      right: calc(-1 * var(--space-6));
+      background: var(--accent);
+      color: var(--surface);
+      padding: var(--space-4);
+      border-radius: var(--radius);
+      min-width: 200px;
+    }
+
+    .why-us-stat-overlay .stat-num {
+      font-family: var(--font-display);
+      font-size: var(--text-3xl);
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .why-us-stat-overlay .stat-txt {
+      font-size: var(--text-sm);
+      opacity: 0.9;
+      margin-top: 4px;
+    }
+
+    .why-us-content h2 {
+      font-size: clamp(2rem, 4vw, var(--text-3xl));
+      margin-bottom: var(--space-6);
+    }
+
+    .why-us-features {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-5);
+    }
+
+    .why-us-feature {
+      display: grid;
+      grid-template-columns: 56px 1fr;
+      gap: var(--space-3);
+      align-items: start;
+    }
+
+    .why-us-feature-num {
+      font-family: var(--font-display);
+      font-size: var(--text-2xl);
+      font-weight: 800;
+      color: var(--border);
+      line-height: 1;
+    }
+
+    .why-us-feature h4 {
+      font-family: var(--font-body);
+      font-size: var(--text-base);
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .why-us-feature p {
+      font-size: var(--text-sm);
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* ========================================
+       TEAM
+    ======================================== */
+    .team {
+      padding: var(--space-12) 0;
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .team-header {
+      text-align: center;
+      margin-bottom: var(--space-8);
+    }
+
+    .team-header h2 {
+      font-size: clamp(2rem, 4vw, var(--text-3xl));
+      margin-bottom: var(--space-2);
+    }
+
+    .team-header p {
+      font-size: var(--text-md);
+      color: var(--text-muted);
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--space-3);
+    }
+
+    .team-member {
+      text-align: center;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: border-color var(--transition);
+    }
+
+    .team-member:hover {
+      border-color: var(--accent);
+    }
+
+    .team-member img {
+      width: 100%;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      filter: grayscale(20%);
+      transition: filter var(--transition);
+    }
+
+    .team-member:hover img {
+      filter: grayscale(0%);
+    }
+
+    .team-member-info {
+      padding: var(--space-3);
+    }
+
+    .team-member-info h4 {
+      font-family: var(--font-body);
+      font-size: var(--text-base);
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+
+    .team-member-info span {
+      font-size: var(--text-sm);
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    .team-member-info p {
+      font-size: var(--text-xs);
+      color: var(--text-muted);
+      margin-top: var(--space-1);
+      line-height: 1.5;
+    }
+
+    /* ========================================
+       TESTIMONIALS
+    ======================================== */
+    .testimonials {
+      padding: var(--space-16) 0;
+    }
+
+    .testimonials-header {
+      text-align: center;
+      margin-bottom: var(--space-8);
+    }
+
+    .testimonials-header h2 {
+      font-size: clamp(2rem, 4vw, var(--text-3xl));
+      margin-bottom: var(--space-2);
+    }
+
+    .testimonials-header p {
+      font-size: var(--text-md);
+      color: var(--text-muted);
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-3);
+    }
+
+    .testimonial-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-top: 2px solid var(--accent);
+      border-radius: var(--radius);
+      padding: var(--space-4);
+      transition: border-color var(--transition);
+    }
+
+    .testimonial-card:hover {
+      border-color: var(--accent);
+    }
+
+    .testimonial-stars {
+      color: var(--amber);
+      font-size: var(--text-sm);
+      margin-bottom: var(--space-2);
+    }
+
+    .testimonial-text {
+      font-size: var(--text-base);
+      color: var(--text);
+      line-height: 1.7;
+      margin-bottom: var(--space-3);
+      font-style: italic;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+    }
+
+    .testimonial-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: var(--surface);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: var(--text-md);
+    }
+
+    .testimonial-author-name {
+      font-weight: 600;
+      font-size: var(--text-sm);
+    }
+
+    .testimonial-author-detail {
+      font-size: var(--text-xs);
+      color: var(--text-muted);
+    }
+
+    /* ========================================
+       CTA BANNER
+    ======================================== */
+    .cta-banner {
+      background: var(--accent);
+      padding: var(--space-12) 0;
+    }
+
+    .cta-banner .container {
+      text-align: center;
+    }
+
+    .cta-banner h2 {
+      font-size: clamp(2rem, 4vw, var(--text-3xl));
+      color: var(--surface);
+      margin-bottom: var(--space-2);
+    }
+
+    .cta-banner p {
+      font-size: var(--text-md);
+      color: rgba(255, 255, 255, 0.85);
+      margin-bottom: var(--space-5);
+      max-width: 560px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-banner-buttons {
+      display: flex;
+      justify-content: center;
+      gap: var(--space-2);
+      flex-wrap: wrap;
+    }
+
+    /* ========================================
+       CONTACT
+    ======================================== */
+    .contact {
+      padding: var(--space-12) 0;
+      background: var(--bg);
+    }
+
+    .contact-header {
+      text-align: center;
+      margin-bottom: var(--space-8);
+    }
+
+    .contact-header h2 {
+      font-size: clamp(2rem, 4vw, var(--text-3xl));
+      margin-bottom: var(--space-2);
+    }
+
+    .contact-header p {
+      font-size: var(--text-md);
+      color: var(--text-muted);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-8);
+      margin-bottom: var(--space-8);
+    }
+
+    .contact-info-block {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-5);
+    }
+
+    .contact-item label {
+      display: block;
+      font-size: var(--text-xs);
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--text-muted);
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .contact-item p,
+    .contact-item a {
+      font-size: var(--text-base);
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    .contact-item a:hover {
+      color: var(--accent);
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-3);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-3);
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group label {
+      font-size: var(--text-xs);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-bottom: var(--space-1);
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      padding: 12px var(--space-2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+      font-size: var(--text-base);
+      transition: border-color var(--transition);
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--accent);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .contact-map {
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      height: 320px;
+    }
+
+    .contact-map iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* ========================================
+       FOOTER
+    ======================================== */
+    .footer {
+      background: var(--charcoal);
+      color: rgba(255, 255, 255, 0.7);
+      padding: var(--space-10) 0 var(--space-5);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: var(--space-6);
+      margin-bottom: var(--space-8);
+    }
+
+    .footer-brand h3 {
+      font-family: var(--font-display);
+      font-size: var(--text-lg);
+      color: var(--surface);
+      margin-bottom: var(--space-2);
+      display: flex;
+      align-items: center;
+      gap: var(--space-1);
+    }
+
+    .footer-brand h3 i {
+      color: var(--accent);
+    }
+
+    .footer-brand p {
+      font-size: var(--text-sm);
+      line-height: 1.7;
+      max-width: 300px;
+    }
+
+    .footer h4 {
+      font-family: var(--font-body);
+      font-size: var(--text-xs);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--accent);
+      margin-bottom: var(--space-3);
+    }
+
+    .footer ul li {
+      margin-bottom: var(--space-1);
+    }
+
+    .footer ul li a {
+      font-size: var(--text-sm);
+      transition: color var(--transition);
+    }
+
+    .footer ul li a:hover {
+      color: var(--surface);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: var(--space-4);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: var(--text-xs);
+    }
+
+    .footer-socials {
+      display: flex;
+      gap: var(--space-2);
+    }
+
+    .footer-socials a {
+      width: 36px;
+      height: 36px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: var(--text-sm);
+      transition: all var(--transition);
+    }
+
+    .footer-socials a:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    /* ========================================
+       RESPONSIVE
+    ======================================== */
+    @media (max-width: 1024px) {
+      .hero .container {
+        grid-template-columns: 1fr;
+        gap: var(--space-6);
+      }
+
+      .hero-image-wrapper {
+        justify-content: center;
+      }
+
+      .hero-image {
+        max-width: 400px;
+      }
+
+      .why-us .container {
+        grid-template-columns: 1fr;
+        gap: var(--space-6);
+      }
+
+      .why-us-stat-overlay {
+        right: var(--space-3);
+      }
+
+      .services-additional {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-5);
       }
     }
-  </script>
 
-  <style>
-    html { scroll-behavior: smooth; }
-    body { font-family: 'DM Sans', sans-serif; }
-    .hero-gradient { background: linear-gradient(135deg, #022c22 0%, #064e3b 40%, #047857 100%); }
-    .glass { background: rgba(255,255,255,0.08); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.12); }
-    .stat-glow { box-shadow: 0 0 40px rgba(16,185,129,0.15); }
-    .gold-line { width: 40px; height: 3px; background: linear-gradient(90deg, #facc15, #c8a415); border-radius: 2px; }
-    .img-clip { clip-path: polygon(0 0, 100% 0, 100% 85%, 85% 100%, 0 100%); }
-    .fade-up { opacity: 0; transform: translateY(30px); transition: all 0.7s ease; }
-    .fade-up.visible { opacity: 1; transform: translateY(0); }
-    .service-line { position: relative; }
-    .service-line::before { content: ''; position: absolute; left: 0; top: 0; width: 3px; height: 100%; background: linear-gradient(to bottom, #10b981, transparent); border-radius: 2px; }
+    @media (max-width: 768px) {
+      .hero-stats {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-2);
+      }
+
+      .service-card {
+        flex: 0 0 300px;
+        height: 400px;
+      }
+
+      .services-additional {
+        grid-template-columns: 1fr;
+      }
+
+      .team-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: var(--space-2);
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero-stats {
+        grid-template-columns: 1fr;
+        gap: var(--space-3);
+      }
+
+      .hero-ctas {
+        flex-direction: column;
+      }
+
+      .hero-ctas .btn {
+        text-align: center;
+        justify-content: center;
+      }
+
+      .team-grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
-<body class="bg-white text-warm-800 antialiased">
 
-  <!-- ==================== NAVBAR ==================== -->
-  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8">
-      <div class="flex items-center justify-between h-20">
-        <!-- Logo -->
-        <a href="#" class="flex items-center gap-3 group">
-          <div class="w-10 h-10 rounded-lg bg-emerald-500 flex items-center justify-center">
-            <i class="fa-solid fa-bolt text-white text-lg"></i>
-          </div>
-          <div>
-            <span class="text-lg font-bold text-white group-hover:text-emerald-300 transition-colors" id="logo-text">Rapid Recovery</span>
-            <span class="block text-[10px] uppercase tracking-[0.2em] text-emerald-300/70 font-medium" id="logo-sub">Physical Therapy</span>
-          </div>
-        </a>
+<body>
 
-        <!-- Desktop Nav -->
-        <div class="hidden md:flex items-center gap-8">
-          <a href="#services" class="text-sm font-medium text-white/80 hover:text-emerald-300 transition-colors nav-link">Services</a>
-          <a href="#about" class="text-sm font-medium text-white/80 hover:text-emerald-300 transition-colors nav-link">About</a>
-          <a href="#team" class="text-sm font-medium text-white/80 hover:text-emerald-300 transition-colors nav-link">Team</a>
-          <a href="#results" class="text-sm font-medium text-white/80 hover:text-emerald-300 transition-colors nav-link">Results</a>
-          <a href="#contact" class="px-5 py-2.5 bg-emerald-500 hover:bg-emerald-400 text-white text-sm font-semibold rounded-lg transition-all duration-200 shadow-lg shadow-emerald-500/25">
-            Book Now
-          </a>
-        </div>
-
-        <!-- Mobile Toggle -->
-        <button id="mobile-toggle" class="md:hidden text-white text-xl">
-          <i class="fa-solid fa-bars"></i>
+  <!-- ========== NAV ========== -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <a href="#" class="nav-brand" aria-label="Rapid Recovery PT Home">
+        <i class="fas fa-bolt"></i>
+        Rapid Recovery PT
+      </a>
+      <div class="nav-actions">
+        <a href="#contact" class="btn btn-primary nav-cta">Book Appointment</a>
+        <button class="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
-      </div>
-    </div>
-
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-emerald-950/95 backdrop-blur-lg border-t border-emerald-800/50">
-      <div class="px-6 py-6 space-y-4">
-        <a href="#services" class="block text-white/80 hover:text-emerald-300 font-medium mobile-link">Services</a>
-        <a href="#about" class="block text-white/80 hover:text-emerald-300 font-medium mobile-link">About</a>
-        <a href="#team" class="block text-white/80 hover:text-emerald-300 font-medium mobile-link">Team</a>
-        <a href="#results" class="block text-white/80 hover:text-emerald-300 font-medium mobile-link">Results</a>
-        <a href="#contact" class="block w-full text-center px-5 py-3 bg-emerald-500 text-white font-semibold rounded-lg mobile-link">Book Now</a>
       </div>
     </div>
   </nav>
 
-  <!-- ==================== HERO ==================== -->
-  <section class="hero-gradient relative min-h-screen flex items-center overflow-hidden">
-    <!-- Decorative elements -->
-    <div class="absolute top-20 right-0 w-96 h-96 bg-emerald-400/10 rounded-full blur-3xl"></div>
-    <div class="absolute bottom-0 left-0 w-80 h-80 bg-emerald-600/10 rounded-full blur-3xl"></div>
-    <div class="absolute top-1/2 left-1/3 w-1 h-32 bg-gradient-to-b from-emerald-400/30 to-transparent"></div>
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" role="navigation" aria-label="Mobile navigation">
+    <a href="#services">Services</a>
+    <a href="#why-us">Why Us</a>
+    <a href="#team">Our Team</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#contact">Contact</a>
+    <a href="tel:5557890123">Call (555) 789-0123</a>
+  </div>
 
-    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-32 w-full">
-      <div class="grid lg:grid-cols-2 gap-16 items-center">
-        <!-- Left Content -->
-        <div class="relative z-10">
-          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-emerald-300 text-sm font-medium mb-8">
-            <span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
-            Same-week appointments available
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-accent-line"></div>
+        <p class="hero-label">Physical Therapy &mdash; Austin, TX</p>
+        <h1>
+          <span class="line-wrap"><span class="line">Recover Faster.</span></span>
+          <span class="line-wrap"><span class="line">Move Better.</span></span>
+        </h1>
+        <p class="hero-body">Results-focused physical therapy with one-on-one attention and tech-driven progress tracking. Get back to the life you love &mdash; on an accelerated timeline.</p>
+        <div class="hero-ctas">
+          <a href="#contact" class="btn btn-primary">Schedule Today <i class="fas fa-arrow-right" style="font-size: 0.75rem;"></i></a>
+          <a href="#services" class="btn btn-outline">View Services</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="hero-stat-number" data-count="15">0</div>
+            <div class="hero-stat-label">Years Experience</div>
           </div>
-          <h1 class="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] mb-6">
-            Get Back to<br>
-            <span class="text-emerald-300">Living</span> Faster
-          </h1>
-          <p class="text-lg text-emerald-100/70 max-w-lg mb-10 leading-relaxed">
-            Evidence-based physical therapy with one-on-one attention. We combine expert manual therapy with technology-driven progress tracking to accelerate your recovery.
-          </p>
-          <div class="flex flex-col sm:flex-row gap-4">
-            <a href="#contact" class="px-8 py-4 bg-emerald-400 hover:bg-emerald-300 text-emerald-950 font-bold rounded-lg transition-all duration-200 text-center shadow-xl shadow-emerald-400/20">
-              Schedule Your Evaluation
-            </a>
-            <a href="tel:5557890123" class="px-8 py-4 border border-emerald-400/30 text-emerald-300 hover:bg-emerald-400/10 font-semibold rounded-lg transition-all duration-200 text-center flex items-center justify-center gap-2">
-              <i class="fa-solid fa-phone text-sm"></i>
-              (555) 789-0123
-            </a>
+          <div class="hero-stat">
+            <div class="hero-stat-number" data-count="4000">0</div>
+            <div class="hero-stat-label">Patients Treated</div>
           </div>
+          <div class="hero-stat">
+            <div class="hero-stat-number" data-count="5">0</div>
+            <div class="hero-stat-label">Day Avg. Wait</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-image-wrapper">
+        <img class="hero-image" src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&q=80" alt="Physical therapist working with patient at Rapid Recovery PT in Austin, TX" width="600" height="750" loading="eager" />
+      </div>
+    </div>
+  </section>
 
-          <!-- Stats Row -->
-          <div class="flex gap-10 mt-14 pt-10 border-t border-emerald-700/30">
+  <!-- ========== SERVICES ========== -->
+  <section class="services clip-reveal" id="services">
+    <div class="container">
+      <div class="services-header">
+        <div class="section-label">Our Services</div>
+        <h2>Specialized Care for Every Recovery</h2>
+        <p>Evidence-based treatments tailored to your unique needs and recovery timeline.</p>
+      </div>
+    </div>
+    <div class="services-scroll-wrapper">
+      <div class="services-track" style="padding-left: max(24px, calc((100vw - 1200px) / 2 + 24px));">
+        <article class="service-card">
+          <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&q=80" alt="Post-surgical rehabilitation therapy session" width="600" height="480" loading="lazy" />
+          <div class="service-card-overlay">
+            <h3>Post-Surgical Rehab</h3>
+            <p>Accelerated recovery protocols for joint replacements, ACL repairs, rotator cuff surgery, and more. Guided from day one.</p>
+          </div>
+        </article>
+        <article class="service-card">
+          <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&q=80" alt="Manual therapy and hands-on treatment" width="600" height="480" loading="lazy" />
+          <div class="service-card-overlay">
+            <h3>Manual Therapy</h3>
+            <p>Hands-on techniques including joint mobilization, soft tissue work, and myofascial release to restore mobility and reduce pain.</p>
+          </div>
+        </article>
+        <article class="service-card">
+          <img src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=600&q=80" alt="Sports rehabilitation and athletic recovery" width="600" height="480" loading="lazy" />
+          <div class="service-card-overlay">
+            <h3>Sports Rehab</h3>
+            <p>Return-to-sport programming with sport-specific movement analysis, strength building, and performance benchmarks.</p>
+          </div>
+        </article>
+        <article class="service-card">
+          <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&q=80" alt="Chronic pain management therapy" width="600" height="480" loading="lazy" />
+          <div class="service-card-overlay">
+            <h3>Chronic Pain Management</h3>
+            <p>Multidisciplinary approach combining movement therapy, education, and graded exposure to break the cycle of persistent pain.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+    <div class="container">
+      <div class="services-additional">
+        <div class="additional-service">
+          <h4>Dry Needling</h4>
+          <p>Trigger point therapy using thin needles to relieve muscular tension and improve range of motion.</p>
+        </div>
+        <div class="additional-service">
+          <h4>Balance &amp; Fall Prevention</h4>
+          <p>Vestibular rehab and stability training to reduce fall risk and improve confidence in movement.</p>
+        </div>
+        <div class="additional-service">
+          <h4>Work Injury Recovery</h4>
+          <p>Functional capacity evaluations and work-conditioning programs to get you back on the job safely.</p>
+        </div>
+        <div class="additional-service">
+          <h4>Telehealth PT</h4>
+          <p>Virtual sessions for exercise guidance, progress check-ins, and home program management.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== WHY CHOOSE US ========== -->
+  <section class="why-us clip-reveal" id="why-us">
+    <div class="container">
+      <div class="why-us-image-wrapper">
+        <img src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=600&q=80" alt="Modern physical therapy clinic interior at Rapid Recovery PT" width="600" height="750" loading="lazy" />
+        <div class="why-us-stat-overlay">
+          <div class="stat-num">96%</div>
+          <div class="stat-txt">Patient Satisfaction Rate</div>
+        </div>
+      </div>
+      <div class="why-us-content">
+        <div class="section-label">Why Rapid Recovery</div>
+        <h2>Built for Results, Not Just Visits</h2>
+        <div class="why-us-features">
+          <div class="why-us-feature">
+            <div class="why-us-feature-num">01</div>
             <div>
-              <div class="text-3xl font-bold text-white">12k<span class="text-emerald-400">+</span></div>
-              <div class="text-sm text-emerald-200/50 mt-1">Patients Recovered</div>
+              <h4>One-on-One Care</h4>
+              <p>Every session is 100% dedicated to you. No shared appointments, no distractions. Just focused, expert-level attention from start to finish.</p>
             </div>
+          </div>
+          <div class="why-us-feature">
+            <div class="why-us-feature-num">02</div>
             <div>
-              <div class="text-3xl font-bold text-white">96<span class="text-emerald-400">%</span></div>
-              <div class="text-sm text-emerald-200/50 mt-1">Return to Activity</div>
+              <h4>Progress Tracking</h4>
+              <p>Real-time digital dashboards let you and your therapist monitor improvements in strength, mobility, and pain levels at every visit.</p>
             </div>
+          </div>
+          <div class="why-us-feature">
+            <div class="why-us-feature-num">03</div>
             <div>
-              <div class="text-3xl font-bold text-white">4.9<span class="text-emerald-400">★</span></div>
-              <div class="text-sm text-emerald-200/50 mt-1">Patient Rating</div>
+              <h4>Same-Week Scheduling</h4>
+              <p>We keep our calendar flexible so you can start treatment within days of your first call. No long wait times, no excuses.</p>
             </div>
           </div>
-        </div>
-
-        <!-- Right Image -->
-        <div class="relative hidden lg:block">
-          <div class="relative rounded-2xl overflow-hidden shadow-2xl">
-            <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80" alt="Physical therapist helping patient with rehabilitation exercises" class="w-full h-[600px] object-cover img-clip" />
-            <div class="absolute inset-0 bg-gradient-to-t from-emerald-950/40 to-transparent"></div>
-          </div>
-          <!-- Floating Card -->
-          <div class="absolute -bottom-6 -left-6 glass rounded-xl p-5 shadow-2xl">
-            <div class="flex items-center gap-3">
-              <div class="w-12 h-12 rounded-full bg-emerald-500/20 flex items-center justify-center">
-                <i class="fa-solid fa-shield-halved text-emerald-400 text-lg"></i>
-              </div>
-              <div>
-                <div class="text-white font-bold text-sm">Insurance Accepted</div>
-                <div class="text-emerald-300/60 text-xs">Most major plans covered</div>
-              </div>
+          <div class="why-us-feature">
+            <div class="why-us-feature-num">04</div>
+            <div>
+              <h4>Evidence-Based Methods</h4>
+              <p>Our protocols are grounded in the latest research. We measure what works and continuously refine your treatment plan for optimal outcomes.</p>
             </div>
           </div>
         </div>
@@ -223,632 +1406,401 @@
     </div>
   </section>
 
-  <!-- ==================== SERVICES ==================== -->
-  <section id="services" class="py-24 lg:py-32 bg-warm-50">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8">
-      <!-- Section Header -->
-      <div class="max-w-2xl mb-20 fade-up">
-        <div class="gold-line mb-4"></div>
-        <span class="text-sm font-semibold uppercase tracking-[0.15em] text-emerald-600">Our Specialties</span>
-        <h2 class="font-serif text-4xl md:text-5xl font-bold text-warm-900 mt-3 leading-tight">
-          Comprehensive Care for<br>Every Stage of Recovery
-        </h2>
+  <!-- ========== TEAM ========== -->
+  <section class="team clip-reveal" id="team">
+    <div class="container">
+      <div class="team-header">
+        <div class="section-label" style="justify-content: center;">Our Therapists</div>
+        <h2>Expert Care, Every Session</h2>
+        <p>Board-certified physical therapists with specialized training and a shared commitment to your recovery.</p>
       </div>
-
-      <!-- Services - Asymmetric Grid -->
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 fade-up">
-        <!-- Service 1 - Large -->
-        <div class="lg:col-span-2 group relative rounded-2xl overflow-hidden min-h-[340px]">
-          <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=900&q=80" alt="Post-surgical rehabilitation therapy session" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-          <div class="absolute inset-0 bg-gradient-to-t from-emerald-950/90 via-emerald-950/40 to-transparent"></div>
-          <div class="relative h-full flex flex-col justify-end p-8">
-            <div class="w-12 h-12 rounded-lg bg-emerald-500/20 backdrop-blur-sm flex items-center justify-center mb-4">
-              <i class="fa-solid fa-bone text-emerald-300 text-xl"></i>
-            </div>
-            <h3 class="text-2xl font-bold text-white mb-2">Post-Surgical Rehabilitation</h3>
-            <p class="text-emerald-100/70 max-w-md">ACL, rotator cuff, joint replacement, and spinal surgery recovery. We work closely with your surgeon to follow post-op protocols precisely.</p>
+      <div class="team-grid">
+        <article class="team-member">
+          <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=500&q=80" alt="Dr. Sarah Mitchell, DPT, Clinic Director" width="500" height="667" loading="lazy" />
+          <div class="team-member-info">
+            <h4>Dr. Sarah Mitchell</h4>
+            <span>DPT, OCS &mdash; Clinic Director</span>
+            <p>Orthopedic specialist with 12+ years leading post-surgical rehab programs.</p>
           </div>
-        </div>
-
-        <!-- Service 2 -->
-        <div class="group relative rounded-2xl overflow-hidden min-h-[340px]">
-          <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&q=80" alt="Manual therapy and hands-on treatment" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-          <div class="absolute inset-0 bg-gradient-to-t from-emerald-950/90 via-emerald-950/40 to-transparent"></div>
-          <div class="relative h-full flex flex-col justify-end p-8">
-            <div class="w-12 h-12 rounded-lg bg-emerald-500/20 backdrop-blur-sm flex items-center justify-center mb-4">
-              <i class="fa-solid fa-hands text-emerald-300 text-xl"></i>
-            </div>
-            <h3 class="text-xl font-bold text-white mb-2">Manual Therapy</h3>
-            <p class="text-emerald-100/70 text-sm">Hands-on joint mobilization, soft tissue work, and myofascial release to restore mobility.</p>
+        </article>
+        <article class="team-member">
+          <img src="https://images.unsplash.com/photo-1622253692010-aa3091dc83f1?w=500&q=80" alt="Dr. Marcus Rivera, DPT, Sports Rehab Lead" width="500" height="667" loading="lazy" />
+          <div class="team-member-info">
+            <h4>Dr. Marcus Rivera</h4>
+            <span>DPT, SCS &mdash; Sports Rehab Lead</span>
+            <p>Former collegiate athlete specializing in return-to-sport programming and athletic performance.</p>
           </div>
-        </div>
-
-        <!-- Service 3 -->
-        <div class="group relative rounded-2xl overflow-hidden min-h-[340px]">
-          <img src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=600&q=80" alt="Sports injury rehabilitation and athletic performance" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-          <div class="absolute inset-0 bg-gradient-to-t from-emerald-950/90 via-emerald-950/40 to-transparent"></div>
-          <div class="relative h-full flex flex-col justify-end p-8">
-            <div class="w-12 h-12 rounded-lg bg-emerald-500/20 backdrop-blur-sm flex items-center justify-center mb-4">
-              <i class="fa-solid fa-person-running text-emerald-300 text-xl"></i>
-            </div>
-            <h3 class="text-xl font-bold text-white mb-2">Sports Rehab</h3>
-            <p class="text-emerald-100/70 text-sm">Return-to-sport programs with performance testing and sport-specific conditioning.</p>
+        </article>
+        <article class="team-member">
+          <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=500&q=80" alt="Dr. Emily Chen, DPT, Manual Therapy Specialist" width="500" height="667" loading="lazy" />
+          <div class="team-member-info">
+            <h4>Dr. Emily Chen</h4>
+            <span>DPT, FAAOMPT &mdash; Manual Therapy</span>
+            <p>Fellowship-trained in manual therapy with expertise in spine and chronic pain management.</p>
           </div>
-        </div>
-
-        <!-- Service 4 - Large -->
-        <div class="lg:col-span-2 group relative rounded-2xl overflow-hidden min-h-[340px]">
-          <img src="https://images.unsplash.com/photo-1609902726285-00668009f004?w=900&q=80" alt="Chronic pain management and therapeutic exercise" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-          <div class="absolute inset-0 bg-gradient-to-t from-emerald-950/90 via-emerald-950/40 to-transparent"></div>
-          <div class="relative h-full flex flex-col justify-end p-8">
-            <div class="w-12 h-12 rounded-lg bg-emerald-500/20 backdrop-blur-sm flex items-center justify-center mb-4">
-              <i class="fa-solid fa-heart-pulse text-emerald-300 text-xl"></i>
-            </div>
-            <h3 class="text-2xl font-bold text-white mb-2">Chronic Pain & Injury Prevention</h3>
-            <p class="text-emerald-100/70 max-w-md">Comprehensive assessment and targeted treatment for persistent pain. We identify root causes and build sustainable movement strategies.</p>
+        </article>
+        <article class="team-member">
+          <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=500&q=80" alt="Dr. James Okafor, DPT, Neurological Rehab" width="500" height="667" loading="lazy" />
+          <div class="team-member-info">
+            <h4>Dr. James Okafor</h4>
+            <span>DPT, NCS &mdash; Neuro Rehab</span>
+            <p>Neurological certified specialist focused on balance, vestibular, and post-stroke recovery.</p>
           </div>
-        </div>
-      </div>
-
-      <!-- Additional Services - Text List -->
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-16 pt-16 border-t border-warm-200 fade-up">
-        <div class="service-line pl-5">
-          <h4 class="font-bold text-warm-800 mb-1">Work Injury Rehab</h4>
-          <p class="text-sm text-warm-500">Workers' comp cases with return-to-work planning</p>
-        </div>
-        <div class="service-line pl-5">
-          <h4 class="font-bold text-warm-800 mb-1">Dry Needling</h4>
-          <p class="text-sm text-warm-500">Trigger point therapy for deep muscle relief</p>
-        </div>
-        <div class="service-line pl-5">
-          <h4 class="font-bold text-warm-800 mb-1">Balance Training</h4>
-          <p class="text-sm text-warm-500">Fall prevention and vestibular rehabilitation</p>
-        </div>
-        <div class="service-line pl-5">
-          <h4 class="font-bold text-warm-800 mb-1">TMJ Therapy</h4>
-          <p class="text-sm text-warm-500">Jaw pain and headache relief programs</p>
-        </div>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- ==================== ABOUT / WHY CHOOSE US ==================== -->
-  <section id="about" class="py-24 lg:py-32 bg-white">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8">
-      <div class="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-        <!-- Image Side -->
-        <div class="relative fade-up">
-          <div class="rounded-2xl overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=800&q=80" alt="Modern physical therapy clinic interior with treatment equipment" class="w-full h-[520px] object-cover" />
+  <!-- ========== TESTIMONIALS ========== -->
+  <section class="testimonials clip-reveal" id="testimonials">
+    <div class="container">
+      <div class="testimonials-header">
+        <div class="section-label" style="justify-content: center;">Patient Stories</div>
+        <h2>Real Results, Real People</h2>
+        <p>Hear from patients who recovered faster than they thought possible.</p>
+      </div>
+      <div class="testimonials-grid">
+        <article class="testimonial-card">
+          <div class="testimonial-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
           </div>
-          <!-- Accent Block -->
-          <div class="absolute -bottom-8 -right-8 bg-emerald-600 rounded-xl p-6 shadow-xl max-w-[220px] hidden md:block">
-            <div class="text-4xl font-bold text-white font-serif">15+</div>
-            <div class="text-emerald-200 text-sm mt-1">Years serving the Austin community</div>
-          </div>
-        </div>
-
-        <!-- Content Side -->
-        <div class="fade-up">
-          <div class="gold-line mb-4"></div>
-          <span class="text-sm font-semibold uppercase tracking-[0.15em] text-emerald-600">Why Rapid Recovery</span>
-          <h2 class="font-serif text-4xl md:text-5xl font-bold text-warm-900 mt-3 mb-8 leading-tight">
-            Your Recovery,<br>Our Priority
-          </h2>
-          <p class="text-warm-500 text-lg leading-relaxed mb-10">
-            At Rapid Recovery PT, we believe every minute of your treatment should count. No waiting in crowded gyms, no cookie-cutter exercise sheets. You get a licensed therapist's undivided attention for your entire session.
-          </p>
-
-          <!-- Feature List -->
-          <div class="space-y-6">
-            <div class="flex gap-4">
-              <div class="w-10 h-10 rounded-lg bg-emerald-50 flex items-center justify-center flex-shrink-0 mt-1">
-                <i class="fa-solid fa-user-check text-emerald-600"></i>
-              </div>
-              <div>
-                <h4 class="font-bold text-warm-800 mb-1">True One-on-One Care</h4>
-                <p class="text-warm-500 text-sm">Your therapist works exclusively with you for the full session. No aides, no double-booking.</p>
-              </div>
-            </div>
-            <div class="flex gap-4">
-              <div class="w-10 h-10 rounded-lg bg-emerald-50 flex items-center justify-center flex-shrink-0 mt-1">
-                <i class="fa-solid fa-chart-line text-emerald-600"></i>
-              </div>
-              <div>
-                <h4 class="font-bold text-warm-800 mb-1">Progress You Can See</h4>
-                <p class="text-warm-500 text-sm">Our app-based tracking shows measurable improvement in range of motion, strength, and function.</p>
-              </div>
-            </div>
-            <div class="flex gap-4">
-              <div class="w-10 h-10 rounded-lg bg-emerald-50 flex items-center justify-center flex-shrink-0 mt-1">
-                <i class="fa-solid fa-clock text-emerald-600"></i>
-              </div>
-              <div>
-                <h4 class="font-bold text-warm-800 mb-1">Efficient Scheduling</h4>
-                <p class="text-warm-500 text-sm">Same-week evaluations, early morning and evening slots, and minimal wait times.</p>
-              </div>
-            </div>
-            <div class="flex gap-4">
-              <div class="w-10 h-10 rounded-lg bg-emerald-50 flex items-center justify-center flex-shrink-0 mt-1">
-                <i class="fa-solid fa-graduation-cap text-emerald-600"></i>
-              </div>
-              <div>
-                <h4 class="font-bold text-warm-800 mb-1">Advanced Certifications</h4>
-                <p class="text-warm-500 text-sm">Board-certified specialists in orthopedics, sports, and manual therapy with ongoing education.</p>
-              </div>
+          <p class="testimonial-text">"After my ACL surgery, I was terrified of a long recovery. Dr. Rivera had me back on the field in half the time my surgeon predicted. The progress tracking app kept me motivated every step of the way."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">M</div>
+            <div>
+              <div class="testimonial-author-name">Michael T.</div>
+              <div class="testimonial-author-detail">ACL Reconstruction Recovery</div>
             </div>
           </div>
-        </div>
+        </article>
+        <article class="testimonial-card">
+          <div class="testimonial-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-text">"I tried three other PT clinics before finding Rapid Recovery. The one-on-one attention makes all the difference. Dr. Chen's manual therapy techniques finally resolved my chronic back pain after years of suffering."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">L</div>
+            <div>
+              <div class="testimonial-author-name">Laura S.</div>
+              <div class="testimonial-author-detail">Chronic Back Pain Management</div>
+            </div>
+          </div>
+        </article>
+        <article class="testimonial-card">
+          <div class="testimonial-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-text">"Same-week appointment was a game changer. I called on Monday after my hip replacement and was in the clinic by Wednesday. The systematic approach here is unlike any PT I've experienced."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">R</div>
+            <div>
+              <div class="testimonial-author-name">Robert K.</div>
+              <div class="testimonial-author-detail">Total Hip Replacement Rehab</div>
+            </div>
+          </div>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- ==================== TEAM ==================== -->
-  <section id="team" class="py-24 lg:py-32 bg-emerald-950">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8">
-      <div class="text-center mb-16 fade-up">
-        <div class="gold-line mx-auto mb-4"></div>
-        <span class="text-sm font-semibold uppercase tracking-[0.15em] text-emerald-400">Our Therapists</span>
-        <h2 class="font-serif text-4xl md:text-5xl font-bold text-white mt-3">
-          Meet the Team Behind<br>Your Recovery
-        </h2>
-      </div>
-
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 fade-up">
-        <!-- Team Member 1 -->
-        <div class="group">
-          <div class="relative rounded-xl overflow-hidden mb-5">
-            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=500&q=80" alt="Dr. Sarah Mitchell, DPT - Clinic Director" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105" />
-            <div class="absolute inset-0 bg-gradient-to-t from-emerald-950/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-          </div>
-          <h3 class="text-lg font-bold text-white">Dr. Sarah Mitchell</h3>
-          <p class="text-emerald-400 text-sm font-medium">DPT, OCS — Clinic Director</p>
-          <p class="text-emerald-200/40 text-sm mt-2">Orthopedic specialist with 12 years of post-surgical rehabilitation experience.</p>
-        </div>
-
-        <!-- Team Member 2 -->
-        <div class="group">
-          <div class="relative rounded-xl overflow-hidden mb-5">
-            <img src="https://images.unsplash.com/photo-1622253694242-abeb37a33e97?w=500&q=80" alt="Dr. Marcus Rivera, DPT - Sports Rehab Lead" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105" />
-            <div class="absolute inset-0 bg-gradient-to-t from-emerald-950/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-          </div>
-          <h3 class="text-lg font-bold text-white">Dr. Marcus Rivera</h3>
-          <p class="text-emerald-400 text-sm font-medium">DPT, SCS — Sports Rehab Lead</p>
-          <p class="text-emerald-200/40 text-sm mt-2">Former athletic trainer turned PT. Specializes in ACL and shoulder return-to-sport programs.</p>
-        </div>
-
-        <!-- Team Member 3 -->
-        <div class="group">
-          <div class="relative rounded-xl overflow-hidden mb-5">
-            <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=500&q=80" alt="Dr. Emily Chen, DPT - Manual Therapy Specialist" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105" />
-            <div class="absolute inset-0 bg-gradient-to-t from-emerald-950/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-          </div>
-          <h3 class="text-lg font-bold text-white">Dr. Emily Chen</h3>
-          <p class="text-emerald-400 text-sm font-medium">DPT, COMT — Manual Therapy</p>
-          <p class="text-emerald-200/40 text-sm mt-2">Certified in orthopedic manual therapy. Treats chronic pain, TMJ, and cervical conditions.</p>
-        </div>
-
-        <!-- Team Member 4 -->
-        <div class="group">
-          <div class="relative rounded-xl overflow-hidden mb-5">
-            <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=500&q=80" alt="Dr. James Okafor, DPT - Balance and Neuro Specialist" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105" />
-            <div class="absolute inset-0 bg-gradient-to-t from-emerald-950/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-          </div>
-          <h3 class="text-lg font-bold text-white">Dr. James Okafor</h3>
-          <p class="text-emerald-400 text-sm font-medium">DPT, NCS — Neuro & Balance</p>
-          <p class="text-emerald-200/40 text-sm mt-2">Neurological rehab and vestibular specialist. Expert in fall prevention and concussion recovery.</p>
-        </div>
+  <!-- ========== CTA BANNER ========== -->
+  <section class="cta-banner clip-reveal">
+    <div class="container">
+      <h2>Start Your Recovery This Week</h2>
+      <p>Same-week appointments available. No referral needed in Texas. Call or book online to begin your personalized treatment plan.</p>
+      <div class="cta-banner-buttons">
+        <a href="#contact" class="btn btn-white">Book Appointment</a>
+        <a href="tel:5557890123" class="btn btn-white-outline"><i class="fas fa-phone" style="font-size: 0.75rem;"></i> (555) 789-0123</a>
       </div>
     </div>
   </section>
 
-  <!-- ==================== RESULTS / TESTIMONIALS ==================== -->
-  <section id="results" class="py-24 lg:py-32 bg-warm-50">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8">
-      <div class="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
-        <!-- Left - Results -->
-        <div class="fade-up">
-          <div class="gold-line mb-4"></div>
-          <span class="text-sm font-semibold uppercase tracking-[0.15em] text-emerald-600">Patient Outcomes</span>
-          <h2 class="font-serif text-4xl md:text-5xl font-bold text-warm-900 mt-3 mb-6 leading-tight">
-            Results That<br>Speak for Themselves
-          </h2>
-          <p class="text-warm-500 text-lg mb-12">
-            We measure every outcome. Our data-driven approach means your progress is tracked, visualized, and used to optimize your treatment in real time.
-          </p>
-
-          <!-- Outcome Stats -->
-          <div class="grid grid-cols-2 gap-6">
-            <div class="bg-white rounded-xl p-6 stat-glow">
-              <div class="text-3xl font-bold text-emerald-600 font-serif">93%</div>
-              <div class="text-sm text-warm-500 mt-1">of patients meet their recovery goals</div>
-            </div>
-            <div class="bg-white rounded-xl p-6 stat-glow">
-              <div class="text-3xl font-bold text-emerald-600 font-serif">2.4x</div>
-              <div class="text-sm text-warm-500 mt-1">faster than national average recovery</div>
-            </div>
-            <div class="bg-white rounded-xl p-6 stat-glow">
-              <div class="text-3xl font-bold text-emerald-600 font-serif">87%</div>
-              <div class="text-sm text-warm-500 mt-1">reduce or eliminate pain medication</div>
-            </div>
-            <div class="bg-white rounded-xl p-6 stat-glow">
-              <div class="text-3xl font-bold text-emerald-600 font-serif">98%</div>
-              <div class="text-sm text-warm-500 mt-1">would recommend to family or friends</div>
-            </div>
+  <!-- ========== CONTACT ========== -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-header">
+        <div class="section-label" style="justify-content: center;">Get in Touch</div>
+        <h2>Schedule Your First Visit</h2>
+        <p>Most patients are seen within 5 business days. Walk-ins welcome for consultations.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info-block">
+          <div class="contact-item">
+            <label>Address</label>
+            <p>1420 Medical Center Drive, Suite 300<br />Austin, TX 78701</p>
+          </div>
+          <div class="contact-item">
+            <label>Phone</label>
+            <a href="tel:5557890123">(555) 789-0123</a>
+          </div>
+          <div class="contact-item">
+            <label>Email</label>
+            <a href="mailto:info@rapidrecoverypt.com">info@rapidrecoverypt.com</a>
+          </div>
+          <div class="contact-item">
+            <label>Hours</label>
+            <p>Monday &ndash; Friday: 7:00 AM &ndash; 7:00 PM<br />Saturday: 8:00 AM &ndash; 2:00 PM<br />Sunday: Closed</p>
+          </div>
+          <div class="contact-item">
+            <label>Insurance</label>
+            <p>We accept most major insurance plans including Blue Cross Blue Shield, Aetna, Cigna, United Healthcare, and Medicare.</p>
           </div>
         </div>
-
-        <!-- Right - Testimonials -->
-        <div class="space-y-6 fade-up">
-          <!-- Testimonial 1 -->
-          <div class="bg-white rounded-xl p-8 shadow-sm border border-warm-100">
-            <div class="flex gap-1 text-gold-400 mb-4">
-              <i class="fa-solid fa-star text-sm"></i>
-              <i class="fa-solid fa-star text-sm"></i>
-              <i class="fa-solid fa-star text-sm"></i>
-              <i class="fa-solid fa-star text-sm"></i>
-              <i class="fa-solid fa-star text-sm"></i>
+        <form class="contact-form" action="#" method="POST" aria-label="Appointment request form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="first-name">First Name</label>
+              <input type="text" id="first-name" name="first_name" required placeholder="Jane" />
             </div>
-            <p class="text-warm-700 leading-relaxed mb-6">
-              "After my ACL surgery, I was told recovery would take 9-12 months. Dr. Rivera had me back on the field in 7 months with better strength than before. The progress tracking app kept me motivated every single day."
-            </p>
-            <div class="flex items-center gap-3">
-              <div class="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center">
-                <span class="text-emerald-700 font-bold text-sm">AK</span>
-              </div>
-              <div>
-                <div class="font-bold text-warm-800 text-sm">Alex Kowalski</div>
-                <div class="text-warm-400 text-xs">ACL Reconstruction Recovery</div>
-              </div>
+            <div class="form-group">
+              <label for="last-name">Last Name</label>
+              <input type="text" id="last-name" name="last_name" required placeholder="Doe" />
             </div>
           </div>
-
-          <!-- Testimonial 2 -->
-          <div class="bg-white rounded-xl p-8 shadow-sm border border-warm-100">
-            <div class="flex gap-1 text-gold-400 mb-4">
-              <i class="fa-solid fa-star text-sm"></i>
-              <i class="fa-solid fa-star text-sm"></i>
-              <i class="fa-solid fa-star text-sm"></i>
-              <i class="fa-solid fa-star text-sm"></i>
-              <i class="fa-solid fa-star text-sm"></i>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required placeholder="jane@example.com" />
             </div>
-            <p class="text-warm-700 leading-relaxed mb-6">
-              "I'd been dealing with chronic shoulder pain for 3 years and seen multiple doctors. Dr. Chen identified the issue in our first session. After 8 weeks of manual therapy, I'm pain-free for the first time in years."
-            </p>
-            <div class="flex items-center gap-3">
-              <div class="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center">
-                <span class="text-emerald-700 font-bold text-sm">DP</span>
-              </div>
-              <div>
-                <div class="font-bold text-warm-800 text-sm">Diana Perez</div>
-                <div class="text-warm-400 text-xs">Chronic Shoulder Pain</div>
-              </div>
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000" />
             </div>
           </div>
-
-          <!-- Testimonial 3 -->
-          <div class="bg-white rounded-xl p-8 shadow-sm border border-warm-100">
-            <div class="flex gap-1 text-gold-400 mb-4">
-              <i class="fa-solid fa-star text-sm"></i>
-              <i class="fa-solid fa-star text-sm"></i>
-              <i class="fa-solid fa-star text-sm"></i>
-              <i class="fa-solid fa-star text-sm"></i>
-              <i class="fa-solid fa-star text-sm"></i>
-            </div>
-            <p class="text-warm-700 leading-relaxed mb-6">
-              "The difference between Rapid Recovery and other PT clinics is night and day. You actually get your therapist's full attention. My knee replacement recovery was smooth and ahead of schedule."
-            </p>
-            <div class="flex items-center gap-3">
-              <div class="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center">
-                <span class="text-emerald-700 font-bold text-sm">RH</span>
-              </div>
-              <div>
-                <div class="font-bold text-warm-800 text-sm">Robert Huang</div>
-                <div class="text-warm-400 text-xs">Total Knee Replacement</div>
-              </div>
-            </div>
+          <div class="form-group">
+            <label for="service">Service Needed</label>
+            <select id="service" name="service">
+              <option value="">Select a service</option>
+              <option value="post-surgical">Post-Surgical Rehab</option>
+              <option value="manual-therapy">Manual Therapy</option>
+              <option value="sports-rehab">Sports Rehab</option>
+              <option value="chronic-pain">Chronic Pain Management</option>
+              <option value="dry-needling">Dry Needling</option>
+              <option value="balance">Balance &amp; Fall Prevention</option>
+              <option value="work-injury">Work Injury Recovery</option>
+              <option value="telehealth">Telehealth PT</option>
+              <option value="other">Other</option>
+            </select>
           </div>
-        </div>
+          <div class="form-group">
+            <label for="message">Tell Us About Your Condition</label>
+            <textarea id="message" name="message" placeholder="Briefly describe your injury, surgery, or symptoms..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">Request Appointment</button>
+        </form>
+      </div>
+      <div class="contact-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3445.7!2d-97.7431!3d30.2672!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzDCsDE2JzAyLjAiTiA5N8KwNDQnMzUuMiJX!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Rapid Recovery PT location on Google Maps"></iframe>
       </div>
     </div>
   </section>
 
-  <!-- ==================== CTA BANNER ==================== -->
-  <section class="relative py-20 overflow-hidden">
-    <img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=1400&q=80" alt="Patient successfully completing physical therapy milestones" class="absolute inset-0 w-full h-full object-cover" />
-    <div class="absolute inset-0 bg-emerald-900/85"></div>
-    <div class="relative max-w-4xl mx-auto px-6 lg:px-8 text-center fade-up">
-      <h2 class="font-serif text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
-        Ready to Start Your Recovery Journey?
-      </h2>
-      <p class="text-emerald-100/70 text-lg max-w-2xl mx-auto mb-10">
-        Don't let pain hold you back. Schedule your initial evaluation and take the first step toward getting back to the life you love.
-      </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="#contact" class="px-8 py-4 bg-emerald-400 hover:bg-emerald-300 text-emerald-950 font-bold rounded-lg transition-all duration-200 shadow-xl">
-          Book Your Evaluation
-        </a>
-        <a href="tel:5557890123" class="px-8 py-4 border border-white/30 text-white hover:bg-white/10 font-semibold rounded-lg transition-all duration-200">
-          Call (555) 789-0123
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== CONTACT / LOCATION ==================== -->
-  <section id="contact" class="py-24 lg:py-32 bg-white">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8">
-      <div class="grid lg:grid-cols-5 gap-16">
-        <!-- Left - Info (2 cols) -->
-        <div class="lg:col-span-2 fade-up">
-          <div class="gold-line mb-4"></div>
-          <span class="text-sm font-semibold uppercase tracking-[0.15em] text-emerald-600">Get in Touch</span>
-          <h2 class="font-serif text-4xl font-bold text-warm-900 mt-3 mb-8 leading-tight">
-            Visit Our Clinic
-          </h2>
-
-          <div class="space-y-6">
-            <div class="flex gap-4">
-              <div class="w-10 h-10 rounded-lg bg-emerald-50 flex items-center justify-center flex-shrink-0">
-                <i class="fa-solid fa-location-dot text-emerald-600"></i>
-              </div>
-              <div>
-                <h4 class="font-bold text-warm-800 text-sm">Location</h4>
-                <p class="text-warm-500 text-sm">1420 Medical Center Drive, Suite 300<br>Austin, TX 78701</p>
-              </div>
-            </div>
-
-            <div class="flex gap-4">
-              <div class="w-10 h-10 rounded-lg bg-emerald-50 flex items-center justify-center flex-shrink-0">
-                <i class="fa-solid fa-phone text-emerald-600"></i>
-              </div>
-              <div>
-                <h4 class="font-bold text-warm-800 text-sm">Phone</h4>
-                <p class="text-warm-500 text-sm"><a href="tel:5557890123" class="hover:text-emerald-600 transition-colors">(555) 789-0123</a></p>
-              </div>
-            </div>
-
-            <div class="flex gap-4">
-              <div class="w-10 h-10 rounded-lg bg-emerald-50 flex items-center justify-center flex-shrink-0">
-                <i class="fa-solid fa-envelope text-emerald-600"></i>
-              </div>
-              <div>
-                <h4 class="font-bold text-warm-800 text-sm">Email</h4>
-                <p class="text-warm-500 text-sm"><a href="mailto:info@rapidrecoverypt.com" class="hover:text-emerald-600 transition-colors">info@rapidrecoverypt.com</a></p>
-              </div>
-            </div>
-
-            <div class="flex gap-4">
-              <div class="w-10 h-10 rounded-lg bg-emerald-50 flex items-center justify-center flex-shrink-0">
-                <i class="fa-solid fa-clock text-emerald-600"></i>
-              </div>
-              <div>
-                <h4 class="font-bold text-warm-800 text-sm">Hours</h4>
-                <p class="text-warm-500 text-sm">
-                  Mon – Fri: 7:00 AM – 7:00 PM<br>
-                  Saturday: 8:00 AM – 2:00 PM<br>
-                  Sunday: Closed
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Insurance -->
-          <div class="mt-10 pt-8 border-t border-warm-200">
-            <h4 class="font-bold text-warm-800 text-sm mb-3">Insurance Accepted</h4>
-            <div class="flex flex-wrap gap-2">
-              <span class="px-3 py-1 bg-warm-100 text-warm-600 text-xs font-medium rounded-full">Blue Cross</span>
-              <span class="px-3 py-1 bg-warm-100 text-warm-600 text-xs font-medium rounded-full">Aetna</span>
-              <span class="px-3 py-1 bg-warm-100 text-warm-600 text-xs font-medium rounded-full">United</span>
-              <span class="px-3 py-1 bg-warm-100 text-warm-600 text-xs font-medium rounded-full">Cigna</span>
-              <span class="px-3 py-1 bg-warm-100 text-warm-600 text-xs font-medium rounded-full">Medicare</span>
-              <span class="px-3 py-1 bg-warm-100 text-warm-600 text-xs font-medium rounded-full">Tricare</span>
-            </div>
-          </div>
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3><i class="fas fa-bolt"></i> Rapid Recovery PT</h3>
+          <p>Results-focused physical therapy in Austin, TX. Faster recovery through one-on-one care, evidence-based protocols, and tech-driven progress tracking.</p>
         </div>
-
-        <!-- Right - Form (3 cols) -->
-        <div class="lg:col-span-3 fade-up">
-          <div class="bg-warm-50 rounded-2xl p-8 lg:p-10">
-            <h3 class="text-xl font-bold text-warm-900 mb-2">Request an Appointment</h3>
-            <p class="text-warm-500 text-sm mb-8">Fill out the form and we'll get back to you within one business day.</p>
-
-            <form class="space-y-5" onsubmit="event.preventDefault(); this.innerHTML='<div class=\'text-center py-12\'><div class=\'w-16 h-16 rounded-full bg-emerald-100 flex items-center justify-center mx-auto mb-4\'><i class=\'fa-solid fa-check text-emerald-600 text-2xl\'></i></div><h3 class=\'text-xl font-bold text-warm-900 mb-2\'>Request Received!</h3><p class=\'text-warm-500\'>We\'ll contact you within 24 hours to confirm your appointment.</p></div>';">
-              <div class="grid sm:grid-cols-2 gap-5">
-                <div>
-                  <label class="block text-sm font-medium text-warm-700 mb-1.5">First Name</label>
-                  <input type="text" required class="w-full px-4 py-3 rounded-lg border border-warm-200 bg-white focus:outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 text-sm transition-all" />
-                </div>
-                <div>
-                  <label class="block text-sm font-medium text-warm-700 mb-1.5">Last Name</label>
-                  <input type="text" required class="w-full px-4 py-3 rounded-lg border border-warm-200 bg-white focus:outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 text-sm transition-all" />
-                </div>
-              </div>
-              <div class="grid sm:grid-cols-2 gap-5">
-                <div>
-                  <label class="block text-sm font-medium text-warm-700 mb-1.5">Email</label>
-                  <input type="email" required class="w-full px-4 py-3 rounded-lg border border-warm-200 bg-white focus:outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 text-sm transition-all" />
-                </div>
-                <div>
-                  <label class="block text-sm font-medium text-warm-700 mb-1.5">Phone</label>
-                  <input type="tel" class="w-full px-4 py-3 rounded-lg border border-warm-200 bg-white focus:outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 text-sm transition-all" />
-                </div>
-              </div>
-              <div>
-                <label class="block text-sm font-medium text-warm-700 mb-1.5">Reason for Visit</label>
-                <select class="w-full px-4 py-3 rounded-lg border border-warm-200 bg-white focus:outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 text-sm transition-all text-warm-500">
-                  <option value="">Select a service...</option>
-                  <option>Post-Surgical Rehabilitation</option>
-                  <option>Sports Injury</option>
-                  <option>Chronic Pain</option>
-                  <option>Manual Therapy</option>
-                  <option>Work Injury</option>
-                  <option>Balance / Fall Prevention</option>
-                  <option>Other</option>
-                </select>
-              </div>
-              <div>
-                <label class="block text-sm font-medium text-warm-700 mb-1.5">Additional Details</label>
-                <textarea rows="4" class="w-full px-4 py-3 rounded-lg border border-warm-200 bg-white focus:outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 text-sm transition-all resize-none" placeholder="Tell us about your condition or any questions you have..."></textarea>
-              </div>
-              <button type="submit" class="w-full py-4 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-lg transition-all duration-200 shadow-lg shadow-emerald-600/20">
-                Request Appointment
-              </button>
-              <p class="text-xs text-warm-400 text-center">By submitting, you agree to our privacy policy. We'll never share your information.</p>
-            </form>
-          </div>
-        </div>
-      </div>
-
-      <!-- Map -->
-      <div class="mt-16 rounded-2xl overflow-hidden h-80 fade-up">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3445.5!2d-97.7431!3d30.2672!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzDCsDE2JzAyLjAiTiA5N8KwNDQnMzUuMiJX!5e0!3m2!1sen!2sus!4v1" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Rapid Recovery PT Location"></iframe>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== FOOTER ==================== -->
-  <footer class="bg-emerald-950 pt-16 pb-8">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8">
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-emerald-800/50">
-        <!-- Brand -->
-        <div class="sm:col-span-2 lg:col-span-1">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-9 h-9 rounded-lg bg-emerald-500 flex items-center justify-center">
-              <i class="fa-solid fa-bolt text-white"></i>
-            </div>
-            <span class="text-lg font-bold text-white">Rapid Recovery PT</span>
-          </div>
-          <p class="text-emerald-200/40 text-sm leading-relaxed max-w-xs">
-            Evidence-based physical therapy with one-on-one attention and technology-driven progress tracking.
-          </p>
-        </div>
-
-        <!-- Quick Links -->
         <div>
-          <h4 class="font-bold text-white text-sm mb-4">Quick Links</h4>
-          <ul class="space-y-2.5">
-            <li><a href="#services" class="text-emerald-200/50 hover:text-emerald-300 text-sm transition-colors">Services</a></li>
-            <li><a href="#about" class="text-emerald-200/50 hover:text-emerald-300 text-sm transition-colors">About Us</a></li>
-            <li><a href="#team" class="text-emerald-200/50 hover:text-emerald-300 text-sm transition-colors">Our Team</a></li>
-            <li><a href="#results" class="text-emerald-200/50 hover:text-emerald-300 text-sm transition-colors">Patient Results</a></li>
-            <li><a href="#contact" class="text-emerald-200/50 hover:text-emerald-300 text-sm transition-colors">Contact</a></li>
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Post-Surgical Rehab</a></li>
+            <li><a href="#services">Manual Therapy</a></li>
+            <li><a href="#services">Sports Rehab</a></li>
+            <li><a href="#services">Chronic Pain</a></li>
+            <li><a href="#services">Dry Needling</a></li>
           </ul>
         </div>
-
-        <!-- Services -->
         <div>
-          <h4 class="font-bold text-white text-sm mb-4">Services</h4>
-          <ul class="space-y-2.5">
-            <li><a href="#services" class="text-emerald-200/50 hover:text-emerald-300 text-sm transition-colors">Post-Surgical Rehab</a></li>
-            <li><a href="#services" class="text-emerald-200/50 hover:text-emerald-300 text-sm transition-colors">Sports Rehabilitation</a></li>
-            <li><a href="#services" class="text-emerald-200/50 hover:text-emerald-300 text-sm transition-colors">Manual Therapy</a></li>
-            <li><a href="#services" class="text-emerald-200/50 hover:text-emerald-300 text-sm transition-colors">Chronic Pain</a></li>
-            <li><a href="#services" class="text-emerald-200/50 hover:text-emerald-300 text-sm transition-colors">Dry Needling</a></li>
+          <h4>Clinic</h4>
+          <ul>
+            <li><a href="#why-us">Why Choose Us</a></li>
+            <li><a href="#team">Our Team</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
-
-        <!-- Contact -->
         <div>
-          <h4 class="font-bold text-white text-sm mb-4">Contact</h4>
-          <ul class="space-y-2.5">
-            <li class="text-emerald-200/50 text-sm">1420 Medical Center Dr, Ste 300</li>
-            <li class="text-emerald-200/50 text-sm">Austin, TX 78701</li>
-            <li><a href="tel:5557890123" class="text-emerald-200/50 hover:text-emerald-300 text-sm transition-colors">(555) 789-0123</a></li>
-            <li><a href="mailto:info@rapidrecoverypt.com" class="text-emerald-200/50 hover:text-emerald-300 text-sm transition-colors">info@rapidrecoverypt.com</a></li>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:5557890123">(555) 789-0123</a></li>
+            <li><a href="mailto:info@rapidrecoverypt.com">info@rapidrecoverypt.com</a></li>
+            <li><a href="#">1420 Medical Center Dr<br />Suite 300, Austin TX</a></li>
           </ul>
-          <!-- Social -->
-          <div class="flex gap-3 mt-5">
-            <a href="#" class="w-9 h-9 rounded-lg bg-emerald-800/40 hover:bg-emerald-700/50 flex items-center justify-center transition-colors">
-              <i class="fa-brands fa-facebook-f text-emerald-300 text-sm"></i>
-            </a>
-            <a href="#" class="w-9 h-9 rounded-lg bg-emerald-800/40 hover:bg-emerald-700/50 flex items-center justify-center transition-colors">
-              <i class="fa-brands fa-instagram text-emerald-300 text-sm"></i>
-            </a>
-            <a href="#" class="w-9 h-9 rounded-lg bg-emerald-800/40 hover:bg-emerald-700/50 flex items-center justify-center transition-colors">
-              <i class="fa-brands fa-linkedin-in text-emerald-300 text-sm"></i>
-            </a>
-            <a href="#" class="w-9 h-9 rounded-lg bg-emerald-800/40 hover:bg-emerald-700/50 flex items-center justify-center transition-colors">
-              <i class="fa-brands fa-google text-emerald-300 text-sm"></i>
-            </a>
-          </div>
         </div>
       </div>
-
-      <!-- Bottom Bar -->
-      <div class="flex flex-col sm:flex-row justify-between items-center pt-8 gap-4">
-        <p class="text-emerald-200/30 text-sm">&copy; 2026 Rapid Recovery PT. All rights reserved.</p>
-        <div class="flex gap-6">
-          <a href="#" class="text-emerald-200/30 hover:text-emerald-300 text-sm transition-colors">Privacy Policy</a>
-          <a href="#" class="text-emerald-200/30 hover:text-emerald-300 text-sm transition-colors">Terms of Service</a>
-          <a href="#" class="text-emerald-200/30 hover:text-emerald-300 text-sm transition-colors">Accessibility</a>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Rapid Recovery PT. All rights reserved.</p>
+        <div class="footer-socials">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- ==================== SCRIPTS ==================== -->
-  <script>
-    // Navbar scroll effect
-    const navbar = document.getElementById('navbar');
-    const logoText = document.getElementById('logo-text');
-    const logoSub = document.getElementById('logo-sub');
-    const navLinks = document.querySelectorAll('.nav-link');
+  <!-- ========== GSAP ========== -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13/dist/SplitText.min.js"></script>
 
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 80) {
-        navbar.classList.add('bg-white', 'shadow-lg', 'shadow-warm-900/5');
-        navbar.classList.remove('bg-transparent');
-        logoText.classList.remove('text-white');
-        logoText.classList.add('text-warm-900');
-        logoSub.classList.remove('text-emerald-300/70');
-        logoSub.classList.add('text-emerald-600');
-        navLinks.forEach(link => {
-          link.classList.remove('text-white/80');
-          link.classList.add('text-warm-600', 'hover:text-emerald-600');
-          link.classList.remove('hover:text-emerald-300');
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+      gsap.registerPlugin(ScrollTrigger, SplitText);
+
+      /* ---- Hamburger ---- */
+      const hamburger = document.querySelector('.hamburger');
+      const mobileMenu = document.querySelector('.mobile-menu');
+
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        mobileMenu.classList.toggle('open');
+        hamburger.setAttribute('aria-expanded', mobileMenu.classList.contains('open'));
+      });
+
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          hamburger.classList.remove('active');
+          mobileMenu.classList.remove('open');
+          hamburger.setAttribute('aria-expanded', 'false');
         });
-      } else {
-        navbar.classList.remove('bg-white', 'shadow-lg', 'shadow-warm-900/5');
-        navbar.classList.add('bg-transparent');
-        logoText.classList.add('text-white');
-        logoText.classList.remove('text-warm-900');
-        logoSub.classList.add('text-emerald-300/70');
-        logoSub.classList.remove('text-emerald-600');
-        navLinks.forEach(link => {
-          link.classList.add('text-white/80');
-          link.classList.remove('text-warm-600', 'hover:text-emerald-600');
-          link.classList.add('hover:text-emerald-300');
+      });
+
+      /* ---- Hero SplitText ---- */
+      const heroLines = document.querySelectorAll('.hero h1 .line');
+      heroLines.forEach((line, i) => {
+        const split = new SplitText(line, { type: 'lines', linesClass: 'split-line' });
+        gsap.from(split.lines, {
+          yPercent: 100,
+          opacity: 0,
+          duration: 1,
+          ease: 'power4.out',
+          stagger: 0.15,
+          delay: 0.3 + (i * 0.2)
+        });
+      });
+
+      /* ---- Hero fade-ins ---- */
+      gsap.from('.hero-accent-line', { scaleY: 0, transformOrigin: 'top', duration: 0.6, delay: 0.1 });
+      gsap.from('.hero-label', { opacity: 0, y: 12, duration: 0.6, delay: 0.2 });
+      gsap.from('.hero-body', { opacity: 0, y: 20, duration: 0.8, delay: 0.7 });
+      gsap.from('.hero-ctas', { opacity: 0, y: 20, duration: 0.8, delay: 0.9 });
+      gsap.from('.hero-stats', { opacity: 0, y: 20, duration: 0.8, delay: 1.1 });
+      gsap.from('.hero-image', { opacity: 0, scale: 0.95, duration: 1, delay: 0.5, ease: 'power2.out' });
+
+      /* ---- Stat counter ---- */
+      document.querySelectorAll('.hero-stat-number').forEach(el => {
+        const target = parseInt(el.dataset.count);
+        const suffix = target === 5 ? '' : '+';
+        const obj = { val: 0 };
+        gsap.to(obj, {
+          val: target,
+          duration: 2,
+          delay: 1.3,
+          ease: 'power2.out',
+          onUpdate: () => {
+            el.textContent = Math.round(obj.val).toLocaleString() + suffix;
+          }
+        });
+      });
+
+      /* ---- Clip-path reveals ---- */
+      document.querySelectorAll('.clip-reveal').forEach(section => {
+        gsap.to(section, {
+          clipPath: 'inset(0% 0% 0% 0%)',
+          duration: 1.2,
+          ease: 'power3.inOut',
+          scrollTrigger: {
+            trigger: section,
+            start: 'top 85%',
+            end: 'top 30%',
+            toggleActions: 'play none none none'
+          }
+        });
+      });
+
+      /* ---- Services horizontal scroll ---- */
+      const servicesSection = document.querySelector('.services');
+      const servicesTrack = document.querySelector('.services-track');
+
+      if (servicesTrack && window.innerWidth > 768) {
+        const totalScroll = servicesTrack.scrollWidth - window.innerWidth;
+
+        ScrollTrigger.create({
+          trigger: servicesSection,
+          start: 'top top',
+          end: () => '+=' + totalScroll,
+          pin: true,
+          scrub: 1,
+          invalidateOnRefresh: true,
+          onUpdate: self => {
+            gsap.set(servicesTrack, { x: -totalScroll * self.progress });
+          }
         });
       }
-    });
 
-    // Mobile menu toggle
-    const mobileToggle = document.getElementById('mobile-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const mobileLinks = document.querySelectorAll('.mobile-link');
-
-    mobileToggle.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-
-    mobileLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-      });
-    });
-
-    // Fade-up on scroll
-    const fadeElements = document.querySelectorAll('.fade-up');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
+      /* ---- Why-Us features stagger ---- */
+      gsap.from('.why-us-feature', {
+        opacity: 0,
+        x: 30,
+        duration: 0.6,
+        stagger: 0.15,
+        scrollTrigger: {
+          trigger: '.why-us-features',
+          start: 'top 80%'
         }
       });
-    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-    fadeElements.forEach(el => observer.observe(el));
+      /* ---- Team members stagger ---- */
+      gsap.from('.team-member', {
+        opacity: 0,
+        y: 40,
+        duration: 0.7,
+        stagger: 0.12,
+        scrollTrigger: {
+          trigger: '.team-grid',
+          start: 'top 80%'
+        }
+      });
+
+      /* ---- Testimonial cards stagger ---- */
+      gsap.from('.testimonial-card', {
+        opacity: 0,
+        y: 30,
+        duration: 0.6,
+        stagger: 0.15,
+        scrollTrigger: {
+          trigger: '.testimonials-grid',
+          start: 'top 80%'
+        }
+      });
+
+      /* ---- Additional services stagger ---- */
+      gsap.from('.additional-service', {
+        opacity: 0,
+        y: 20,
+        duration: 0.5,
+        stagger: 0.1,
+        scrollTrigger: {
+          trigger: '.services-additional',
+          start: 'top 85%'
+        }
+      });
+
+      /* ---- Nav scroll style ---- */
+      ScrollTrigger.create({
+        start: 100,
+        onEnter: () => document.querySelector('.nav').style.boxShadow = '0 1px 8px rgba(0,0,0,0.06)',
+        onLeaveBack: () => document.querySelector('.nav').style.boxShadow = 'none'
+      });
+
+    });
   </script>
+
 </body>
 </html>
